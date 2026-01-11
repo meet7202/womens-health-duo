@@ -41,12 +41,12 @@ export const HeroSection = () => {
               <span className="text-sm font-semibold text-primary">Two Sisters, One Mission</span>
             </motion.div>
 
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight mb-6" style={{ color: 'hsl(20 15% 12%)' }}>
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6" style={{ color: 'hsl(20 20% 8%)' }}>
               A Holistic Approach to{" "}
-              <span className="text-primary italic font-bold">Women's Health</span>
+              <span className="text-primary italic font-extrabold">Women's Health</span>
             </h1>
 
-            <p className="text-lg sm:text-xl max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed font-medium" style={{ color: 'hsl(20 10% 35%)' }}>
+            <p className="text-lg sm:text-xl max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed font-semibold" style={{ color: 'hsl(20 15% 25%)' }}>
               Comprehensive care from pregnancy to postpartum, fertility to pelvic health. 
               We combine medical expertise with physiotherapy and pilates for complete wellness.
             </p>
@@ -77,16 +77,16 @@ export const HeroSection = () => {
               className="flex justify-center lg:justify-start gap-8 mt-12 pt-8 border-t border-border/50"
             >
               <div className="text-center">
-                <p className="font-heading text-3xl font-semibold text-primary">4.9★</p>
-                <p className="text-sm text-muted-foreground">Google Rating</p>
+                <p className="font-heading text-3xl font-bold text-primary">4.9★</p>
+                <p className="text-sm font-medium" style={{ color: 'hsl(20 15% 35%)' }}>Google Rating</p>
               </div>
               <div className="text-center">
-                <p className="font-heading text-3xl font-semibold text-primary">5000+</p>
-                <p className="text-sm text-muted-foreground">Patients Treated</p>
+                <p className="font-heading text-3xl font-bold text-primary">5000+</p>
+                <p className="text-sm font-medium" style={{ color: 'hsl(20 15% 35%)' }}>Patients Treated</p>
               </div>
               <div className="text-center">
-                <p className="font-heading text-3xl font-semibold text-primary">10+</p>
-                <p className="text-sm text-muted-foreground">Years Experience</p>
+                <p className="font-heading text-3xl font-bold text-primary">10+</p>
+                <p className="text-sm font-medium" style={{ color: 'hsl(20 15% 35%)' }}>Years Experience</p>
               </div>
             </motion.div>
           </motion.div>
