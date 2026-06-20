@@ -36,6 +36,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -50,6 +53,14 @@ jobs:
         env:
           # Canonical URL for meta, sitemap, robots (must match your live domain)
           VITE_SITE_URL: https://womenshealthduo.com
+
+      - name: Verify build output
+        run: |
+          test -f dist/index.html
+          test -s dist/index.html
+          test -f dist/404.html
+          test -d dist/assets
+          test -f dist/.nojekyll
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
