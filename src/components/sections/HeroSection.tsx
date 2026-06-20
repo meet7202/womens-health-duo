@@ -1,20 +1,21 @@
 import { motion } from "framer-motion";
 import { Heart, ArrowDown } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { ROUTES } from "@/config/routes";
 import heroImage from "@/assets/hero-doctors.jpg";
 
 export const HeroSection = () => {
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const navigate = useNavigate();
+
+  const goToHomeSection = (hash: string) => {
+    void navigate({ pathname: ROUTES.home, hash }, { replace: true });
   };
 
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center gradient-hero overflow-hidden"
+      className="relative flex min-h-screen items-start gradient-hero overflow-hidden md:items-center"
     >
       {/* Decorative elements — keep low opacity so headline stays crisp */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
@@ -24,13 +25,13 @@ export const HeroSection = () => {
       </div>
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Content */}
+        <div className="grid gap-10 md:grid-cols-2 md:gap-12 lg:gap-16 items-center">
+          {/* Copy — second on mobile so the photo is above the fold */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-center lg:text-left"
+            className="order-2 text-center md:order-1 md:text-left"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -40,7 +41,7 @@ export const HeroSection = () => {
             >
               <Heart className="w-4 h-4 text-terracotta" />
               <span className="text-sm font-semibold text-terracotta">
-                Two Sisters, One Mission
+                OB-GYN · IVF · Physio · STOTT Pilates
               </span>
             </motion.div>
 
@@ -51,26 +52,26 @@ export const HeroSection = () => {
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed font-semibold text-[hsl(20_22%_18%)]">
+            <p className="text-lg sm:text-xl max-w-xl mx-auto md:mx-0 mb-8 leading-relaxed font-semibold text-[hsl(20_22%_18%)]">
               Comprehensive care from pregnancy to postpartum, fertility to pelvic health. We
-              combine medical expertise with physiotherapy and pilates for complete wellness.
+              combine medical expertise with physiotherapy and STOTT Pilates for complete wellness.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start max-w-xl mx-auto md:mx-0">
               <Button
                 size="lg"
-                onClick={() => scrollToSection("#contact")}
-                className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-elevated text-base px-8 py-6"
+                onClick={() => goToHomeSection("contact")}
+                className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-elevated text-base px-8 py-6 min-h-[3.25rem] sm:min-w-[12rem]"
               >
-                Book Online Consultation
+                Book consultation
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                onClick={() => scrollToSection("#about")}
-                className="border-primary/30 text-foreground hover:bg-primary/5 text-base px-8 py-6"
+                onClick={() => goToHomeSection("about")}
+                className="border-primary/35 text-foreground hover:bg-primary/5 text-base px-8 py-6 min-h-[3.25rem] sm:min-w-[12rem]"
               >
-                Meet the Doctors
+                Meet the Sisters
               </Button>
             </div>
 
@@ -79,7 +80,7 @@ export const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
-              className="flex justify-center lg:justify-start gap-8 mt-12 pt-8 border-t border-border/50"
+              className="flex justify-center md:justify-start gap-8 mt-12 pt-8 border-t border-border/50"
             >
               <div className="text-center">
                 <p className="font-heading text-3xl font-bold text-primary">4.9★</p>
@@ -96,12 +97,12 @@ export const HeroSection = () => {
             </motion.div>
           </motion.div>
 
-          {/* Image/Visual */}
+          {/* Image — first on mobile so it shows without scrolling */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="relative hidden lg:block"
+            transition={{ delay: 0, duration: 0.55 }}
+            className="relative order-1 mx-auto w-full max-w-md md:order-2 md:mx-0 md:max-w-none"
           >
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-elevated">
               <img
@@ -110,9 +111,10 @@ export const HeroSection = () => {
                 className="h-full w-full object-cover"
                 width={640}
                 height={800}
-                sizes="(min-width: 1024px) 42vw, 0px"
+                sizes="(min-width: 768px) 45vw, 100vw"
                 decoding="async"
-                loading="lazy"
+                fetchPriority="high"
+                loading="eager"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-foreground/10 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-white">
@@ -163,7 +165,7 @@ export const HeroSection = () => {
         <motion.button
           type="button"
           aria-label="Scroll to About section"
-          onClick={() => scrollToSection("#about")}
+          onClick={() => goToHomeSection("about")}
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
           className="p-2 text-muted-foreground hover:text-primary transition-colors"

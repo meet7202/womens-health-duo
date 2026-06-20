@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Baby,
   Flower2,
@@ -9,13 +10,15 @@ import {
   Activity,
   Sparkles,
   Users,
-  Video,
   Scissors,
   HeartPulse,
   Move,
   Zap,
   ShieldCheck,
+  Video,
 } from "lucide-react";
+import { PRACTICE_BOTH_DOCTORS_IN_PERSON } from "@/config/practiceLocations";
+import { ROUTES } from "@/config/routes";
 
 const services = [
   {
@@ -27,7 +30,7 @@ const services = [
         icon: Baby,
         title: "Pregnancy & High-Risk Obstetrics",
         description:
-          "Comprehensive antenatal care, high-risk pregnancy management, and safe delivery support.",
+          "Comprehensive prenatal care, high-risk pregnancy management, and safe delivery support.",
       },
       {
         icon: Flower2,
@@ -74,15 +77,21 @@ const services = [
       },
       {
         icon: Baby,
-        title: "Antenatal & Postnatal Care",
+        title: "Prenatal and postnatal care",
         description:
-          "Pregnancy exercises, birth preparation, diastasis recti treatment, and postpartum recovery programs.",
+          "Exercise and education from pregnancy through postpartum, birth preparation, diastasis recti care, and recovery—including programs you can continue online when you travel or live abroad.",
+      },
+      {
+        icon: Video,
+        title: "Mat Pilates online",
+        description:
+          "Live and structured STOTT Mat Pilates–based sessions and coaching for patients anywhere—pairs with in-person Mat & Reformer work in Bangalore and Ahmedabad.",
       },
       {
         icon: Dumbbell,
-        title: "STOTT Pilates",
+        title: "STOTT Pilates (Mat & Reformer)",
         description:
-          "Certified Pilates instruction for core strength, flexibility, posture correction, and overall fitness.",
+          "Certified instruction for core strength, flexibility, posture, and women-focused goals on Mat and Reformer equipment in studio, plus Mat-based follow-along options online.",
       },
       {
         icon: Move,
@@ -109,6 +118,7 @@ const services = [
 export const ServicesSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const navigate = useNavigate();
 
   return (
     <section id="services" className="py-24 bg-secondary/30" ref={ref}>
@@ -127,27 +137,9 @@ export const ServicesSection = () => {
             Comprehensive <span className="text-primary italic">Care</span> for Every Woman
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            From fertility and pregnancy to postpartum recovery and beyond, we offer integrated
-            healthcare solutions tailored to your unique needs.
-          </p>
-        </motion.div>
-
-        {/* Online Consultation Banner */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="bg-primary/10 rounded-2xl p-6 mb-12 text-center border border-primary/20"
-        >
-          <div className="flex items-center justify-center gap-3 mb-2">
-            <Video className="w-6 h-6 text-primary" />
-            <h3 className="font-heading text-xl font-semibold text-foreground">
-              Online Consultations Available
-            </h3>
-          </div>
-          <p className="text-muted-foreground">
-            Can't visit in person? Book a video consultation from the comfort of your home. Get
-            expert advice from both our specialists remotely.
+            Obstetrics, gynecology, IVF, laparoscopy, pelvic and postpartum physio, and STOTT
+            Pilates—built around what you need, delivered by video from anywhere.{" "}
+            {PRACTICE_BOTH_DOCTORS_IN_PERSON}
           </p>
         </motion.div>
 
@@ -208,9 +200,10 @@ export const ServicesSection = () => {
         >
           <p className="text-muted-foreground mb-4">Not sure which service you need?</p>
           <button
-            onClick={() =>
-              document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })
-            }
+            type="button"
+            onClick={() => {
+              void navigate({ pathname: ROUTES.home, hash: "contact" }, { replace: true });
+            }}
             className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
           >
             Book a consultation to discuss your needs

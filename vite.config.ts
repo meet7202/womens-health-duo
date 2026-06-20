@@ -11,6 +11,7 @@ import {
   OG_IMAGE_PATH,
   SITE_NAME,
 } from "./src/config/site.defaults.ts";
+import { SITEMAP_PATHS } from "./src/config/routes.ts";
 
 const rootDir = path.dirname(fileURLToPath(import.meta.url));
 
@@ -27,6 +28,7 @@ function htmlSeoReplacements(siteUrl: string) {
     DEFAULT_DESCRIPTION,
     KEYWORDS,
     OG_IMAGE_PATH,
+    SITEMAP_URL: `${siteUrl}/sitemap.xml`,
   };
 }
 
@@ -38,7 +40,31 @@ function applyHtmlReplacements(html: string, siteUrl: string) {
   );
 }
 
+function escapeXml(text: string): string {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
+/** Rough priority by path depth / template (static hub pages rank above long-tail service×city). */
+function sitemapPriority(pathname: string): string {
+  const segs = pathname.split("/").filter(Boolean);
+  if (segs.length === 0) return "1.0";
+  if (segs[0] === "online-consultation") {
+    if (segs.length === 1) return "0.95";
+    if (segs[1] === "country") return "0.88";
+    if (segs.length === 2) return "0.82";
+    return "0.72";
+  }
+  return "0.9";
+}
+
 function writeSeoFiles(siteUrl: string, outDir: string) {
+  const lastmod = new Date().toISOString().slice(0, 10);
+
   const robots = `# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
@@ -74,13 +100,21 @@ Allow: /
 Sitemap: ${siteUrl}/sitemap.xml
 `;
 
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>${siteUrl}/</loc>
+  const sitemapUrls = SITEMAP_PATHS.map((p) => {
+    const loc = p === "/" ? `${siteUrl}/` : `${siteUrl}${p}`;
+    const priority = sitemapPriority(p);
+    return `  <url>
+    <loc>${escapeXml(loc)}</loc>
+    <lastmod>${lastmod}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+    <priority>${priority}</priority>
+  </url>`;
+  }).join("\n");
+
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated at build; edit SITEMAP_PATHS in src/config/routes.ts -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapUrls}
 </urlset>
 `;
 

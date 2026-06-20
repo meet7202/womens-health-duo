@@ -7,6 +7,15 @@ import {
   OG_IMAGE_PATH,
 } from "@/config/site";
 
+export type SeoHeadProps = {
+  /** Full `<title>` text */
+  title?: string;
+  metaDescription?: string;
+  /** Path beginning with `/` (e.g. `/faq`). Home is `/`. */
+  path?: string;
+  metaKeywords?: string;
+};
+
 function upsertMeta(attr: "name" | "property", key: string, content: string) {
   let el = document.querySelector(`meta[${attr}="${key}"]`);
   if (!el) {
@@ -27,17 +36,27 @@ function upsertLink(rel: string, href: string) {
   el.setAttribute("href", href);
 }
 
+function canonicalUrlForPath(path: string | undefined) {
+  const p = !path || path === "/" ? "/" : path.startsWith("/") ? path : `/${path}`;
+  return p === "/" ? `${SITE_URL}/` : `${SITE_URL}${p}`;
+}
+
 /**
- * Syncs canonical URL and Open Graph / Twitter tags with `SITE_URL` (from VITE_SITE_URL at build time).
+ * Syncs canonical URL and Open Graph / Twitter tags with `SITE_URL` (from `VITE_SITE_URL` at build time).
+ * Omit props on the homepage to use defaults from `site.defaults`.
  */
-export function SeoHead() {
+export function SeoHead({ title, metaDescription, path, metaKeywords }: SeoHeadProps = {}) {
+  const resolvedTitle = title ?? DEFAULT_TITLE;
+  const resolvedDescription = metaDescription ?? DEFAULT_DESCRIPTION;
+  const resolvedKeywords = metaKeywords ?? KEYWORDS;
+  const pageUrl = canonicalUrlForPath(path);
+
   useLayoutEffect(() => {
-    const pageUrl = `${SITE_URL}/`;
     const ogImage = `${SITE_URL}${OG_IMAGE_PATH}`;
 
-    document.title = DEFAULT_TITLE;
-    upsertMeta("name", "description", DEFAULT_DESCRIPTION);
-    upsertMeta("name", "keywords", KEYWORDS);
+    document.title = resolvedTitle;
+    upsertMeta("name", "description", resolvedDescription);
+    upsertMeta("name", "keywords", resolvedKeywords);
     upsertMeta(
       "name",
       "robots",
@@ -50,18 +69,18 @@ export function SeoHead() {
     upsertMeta("property", "og:type", "website");
     upsertMeta("property", "og:site_name", "Women's Health Duo");
     upsertMeta("property", "og:url", pageUrl);
-    upsertMeta("property", "og:title", DEFAULT_TITLE);
-    upsertMeta("property", "og:description", DEFAULT_DESCRIPTION);
+    upsertMeta("property", "og:title", resolvedTitle);
+    upsertMeta("property", "og:description", resolvedDescription);
     upsertMeta("property", "og:image", ogImage);
     upsertMeta("property", "og:image:alt", "Women's Health Duo — holistic women's healthcare");
     upsertMeta("property", "og:locale", "en_IN");
 
     upsertMeta("name", "twitter:card", "summary_large_image");
     document.querySelector('meta[name="twitter:site"]')?.remove();
-    upsertMeta("name", "twitter:title", DEFAULT_TITLE);
-    upsertMeta("name", "twitter:description", DEFAULT_DESCRIPTION);
+    upsertMeta("name", "twitter:title", resolvedTitle);
+    upsertMeta("name", "twitter:description", resolvedDescription);
     upsertMeta("name", "twitter:image", ogImage);
-  }, []);
+  }, [resolvedTitle, resolvedDescription, resolvedKeywords, pageUrl]);
 
   return null;
 }

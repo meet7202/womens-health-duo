@@ -1,0 +1,3002 @@
+[
+  {
+    "slug": "mumbai-in",
+    "city": "Mumbai",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "delhi-in",
+    "city": "Delhi",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "bengaluru-in",
+    "city": "Bengaluru",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "hyderabad-in",
+    "city": "Hyderabad",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "ahmedabad-in",
+    "city": "Ahmedabad",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "chennai-in",
+    "city": "Chennai",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "kolkata-in",
+    "city": "Kolkata",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "pune-in",
+    "city": "Pune",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "jaipur-in",
+    "city": "Jaipur",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "surat-in",
+    "city": "Surat",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "lucknow-in",
+    "city": "Lucknow",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "kanpur-in",
+    "city": "Kanpur",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "nagpur-in",
+    "city": "Nagpur",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "indore-in",
+    "city": "Indore",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "thane-in",
+    "city": "Thane",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "bhopal-in",
+    "city": "Bhopal",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "visakhapatnam-in",
+    "city": "Visakhapatnam",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "patna-in",
+    "city": "Patna",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "vadodara-in",
+    "city": "Vadodara",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "ghaziabad-in",
+    "city": "Ghaziabad",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "ludhiana-in",
+    "city": "Ludhiana",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "agra-in",
+    "city": "Agra",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "nashik-in",
+    "city": "Nashik",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "faridabad-in",
+    "city": "Faridabad",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "meerut-in",
+    "city": "Meerut",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "rajkot-in",
+    "city": "Rajkot",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "varanasi-in",
+    "city": "Varanasi",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "srinagar-in",
+    "city": "Srinagar",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "amritsar-in",
+    "city": "Amritsar",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "chandigarh-in",
+    "city": "Chandigarh",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "jodhpur-in",
+    "city": "Jodhpur",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "coimbatore-in",
+    "city": "Coimbatore",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "kochi-in",
+    "city": "Kochi",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "mysuru-in",
+    "city": "Mysuru",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "mangaluru-in",
+    "city": "Mangaluru",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "thiruvananthapuram-in",
+    "city": "Thiruvananthapuram",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "goa-in",
+    "city": "Goa",
+    "country": "India",
+    "countryCode": "IN"
+  },
+  {
+    "slug": "dubai-ae",
+    "city": "Dubai",
+    "country": "United Arab Emirates",
+    "countryCode": "AE"
+  },
+  {
+    "slug": "abu-dhabi-ae",
+    "city": "Abu Dhabi",
+    "country": "United Arab Emirates",
+    "countryCode": "AE"
+  },
+  {
+    "slug": "sharjah-ae",
+    "city": "Sharjah",
+    "country": "United Arab Emirates",
+    "countryCode": "AE"
+  },
+  {
+    "slug": "ajman-ae",
+    "city": "Ajman",
+    "country": "United Arab Emirates",
+    "countryCode": "AE"
+  },
+  {
+    "slug": "ras-al-khaimah-ae",
+    "city": "Ras Al Khaimah",
+    "country": "United Arab Emirates",
+    "countryCode": "AE"
+  },
+  {
+    "slug": "doha-qa",
+    "city": "Doha",
+    "country": "Qatar",
+    "countryCode": "QA"
+  },
+  {
+    "slug": "al-rayyan-qa",
+    "city": "Al Rayyan",
+    "country": "Qatar",
+    "countryCode": "QA"
+  },
+  {
+    "slug": "riyadh-sa",
+    "city": "Riyadh",
+    "country": "Saudi Arabia",
+    "countryCode": "SA"
+  },
+  {
+    "slug": "jeddah-sa",
+    "city": "Jeddah",
+    "country": "Saudi Arabia",
+    "countryCode": "SA"
+  },
+  {
+    "slug": "mecca-sa",
+    "city": "Mecca",
+    "country": "Saudi Arabia",
+    "countryCode": "SA"
+  },
+  {
+    "slug": "medina-sa",
+    "city": "Medina",
+    "country": "Saudi Arabia",
+    "countryCode": "SA"
+  },
+  {
+    "slug": "dammam-sa",
+    "city": "Dammam",
+    "country": "Saudi Arabia",
+    "countryCode": "SA"
+  },
+  {
+    "slug": "khobar-sa",
+    "city": "Khobar",
+    "country": "Saudi Arabia",
+    "countryCode": "SA"
+  },
+  {
+    "slug": "manama-bh",
+    "city": "Manama",
+    "country": "Bahrain",
+    "countryCode": "BH"
+  },
+  {
+    "slug": "kuwait-city-kw",
+    "city": "Kuwait City",
+    "country": "Kuwait",
+    "countryCode": "KW"
+  },
+  {
+    "slug": "muscat-om",
+    "city": "Muscat",
+    "country": "Oman",
+    "countryCode": "OM"
+  },
+  {
+    "slug": "tel-aviv-il",
+    "city": "Tel Aviv",
+    "country": "Israel",
+    "countryCode": "IL"
+  },
+  {
+    "slug": "jerusalem-il",
+    "city": "Jerusalem",
+    "country": "Israel",
+    "countryCode": "IL"
+  },
+  {
+    "slug": "beirut-lb",
+    "city": "Beirut",
+    "country": "Lebanon",
+    "countryCode": "LB"
+  },
+  {
+    "slug": "amman-jo",
+    "city": "Amman",
+    "country": "Jordan",
+    "countryCode": "JO"
+  },
+  {
+    "slug": "singapore-sg",
+    "city": "Singapore",
+    "country": "Singapore",
+    "countryCode": "SG"
+  },
+  {
+    "slug": "kuala-lumpur-my",
+    "city": "Kuala Lumpur",
+    "country": "Malaysia",
+    "countryCode": "MY"
+  },
+  {
+    "slug": "penang-my",
+    "city": "Penang",
+    "country": "Malaysia",
+    "countryCode": "MY"
+  },
+  {
+    "slug": "johor-bahru-my",
+    "city": "Johor Bahru",
+    "country": "Malaysia",
+    "countryCode": "MY"
+  },
+  {
+    "slug": "bangkok-th",
+    "city": "Bangkok",
+    "country": "Thailand",
+    "countryCode": "TH"
+  },
+  {
+    "slug": "phuket-th",
+    "city": "Phuket",
+    "country": "Thailand",
+    "countryCode": "TH"
+  },
+  {
+    "slug": "jakarta-id",
+    "city": "Jakarta",
+    "country": "Indonesia",
+    "countryCode": "ID"
+  },
+  {
+    "slug": "bali-id",
+    "city": "Bali",
+    "country": "Indonesia",
+    "countryCode": "ID"
+  },
+  {
+    "slug": "manila-ph",
+    "city": "Manila",
+    "country": "Philippines",
+    "countryCode": "PH"
+  },
+  {
+    "slug": "cebu-ph",
+    "city": "Cebu",
+    "country": "Philippines",
+    "countryCode": "PH"
+  },
+  {
+    "slug": "ho-chi-minh-city-vn",
+    "city": "Ho Chi Minh City",
+    "country": "Vietnam",
+    "countryCode": "VN"
+  },
+  {
+    "slug": "hanoi-vn",
+    "city": "Hanoi",
+    "country": "Vietnam",
+    "countryCode": "VN"
+  },
+  {
+    "slug": "hong-kong-hk",
+    "city": "Hong Kong",
+    "country": "Hong Kong SAR",
+    "countryCode": "HK"
+  },
+  {
+    "slug": "taipei-tw",
+    "city": "Taipei",
+    "country": "Taiwan",
+    "countryCode": "TW"
+  },
+  {
+    "slug": "kaohsiung-tw",
+    "city": "Kaohsiung",
+    "country": "Taiwan",
+    "countryCode": "TW"
+  },
+  {
+    "slug": "tokyo-jp",
+    "city": "Tokyo",
+    "country": "Japan",
+    "countryCode": "JP"
+  },
+  {
+    "slug": "osaka-jp",
+    "city": "Osaka",
+    "country": "Japan",
+    "countryCode": "JP"
+  },
+  {
+    "slug": "yokohama-jp",
+    "city": "Yokohama",
+    "country": "Japan",
+    "countryCode": "JP"
+  },
+  {
+    "slug": "nagoya-jp",
+    "city": "Nagoya",
+    "country": "Japan",
+    "countryCode": "JP"
+  },
+  {
+    "slug": "seoul-kr",
+    "city": "Seoul",
+    "country": "South Korea",
+    "countryCode": "KR"
+  },
+  {
+    "slug": "busan-kr",
+    "city": "Busan",
+    "country": "South Korea",
+    "countryCode": "KR"
+  },
+  {
+    "slug": "shanghai-cn",
+    "city": "Shanghai",
+    "country": "China",
+    "countryCode": "CN"
+  },
+  {
+    "slug": "beijing-cn",
+    "city": "Beijing",
+    "country": "China",
+    "countryCode": "CN"
+  },
+  {
+    "slug": "shenzhen-cn",
+    "city": "Shenzhen",
+    "country": "China",
+    "countryCode": "CN"
+  },
+  {
+    "slug": "guangzhou-cn",
+    "city": "Guangzhou",
+    "country": "China",
+    "countryCode": "CN"
+  },
+  {
+    "slug": "karachi-pk",
+    "city": "Karachi",
+    "country": "Pakistan",
+    "countryCode": "PK"
+  },
+  {
+    "slug": "lahore-pk",
+    "city": "Lahore",
+    "country": "Pakistan",
+    "countryCode": "PK"
+  },
+  {
+    "slug": "islamabad-pk",
+    "city": "Islamabad",
+    "country": "Pakistan",
+    "countryCode": "PK"
+  },
+  {
+    "slug": "dhaka-bd",
+    "city": "Dhaka",
+    "country": "Bangladesh",
+    "countryCode": "BD"
+  },
+  {
+    "slug": "chittagong-bd",
+    "city": "Chittagong",
+    "country": "Bangladesh",
+    "countryCode": "BD"
+  },
+  {
+    "slug": "colombo-lk",
+    "city": "Colombo",
+    "country": "Sri Lanka",
+    "countryCode": "LK"
+  },
+  {
+    "slug": "kathmandu-np",
+    "city": "Kathmandu",
+    "country": "Nepal",
+    "countryCode": "NP"
+  },
+  {
+    "slug": "sydney-au",
+    "city": "Sydney",
+    "country": "Australia",
+    "countryCode": "AU"
+  },
+  {
+    "slug": "melbourne-au",
+    "city": "Melbourne",
+    "country": "Australia",
+    "countryCode": "AU"
+  },
+  {
+    "slug": "brisbane-au",
+    "city": "Brisbane",
+    "country": "Australia",
+    "countryCode": "AU"
+  },
+  {
+    "slug": "perth-au",
+    "city": "Perth",
+    "country": "Australia",
+    "countryCode": "AU"
+  },
+  {
+    "slug": "adelaide-au",
+    "city": "Adelaide",
+    "country": "Australia",
+    "countryCode": "AU"
+  },
+  {
+    "slug": "canberra-au",
+    "city": "Canberra",
+    "country": "Australia",
+    "countryCode": "AU"
+  },
+  {
+    "slug": "gold-coast-au",
+    "city": "Gold Coast",
+    "country": "Australia",
+    "countryCode": "AU"
+  },
+  {
+    "slug": "auckland-nz",
+    "city": "Auckland",
+    "country": "New Zealand",
+    "countryCode": "NZ"
+  },
+  {
+    "slug": "wellington-nz",
+    "city": "Wellington",
+    "country": "New Zealand",
+    "countryCode": "NZ"
+  },
+  {
+    "slug": "christchurch-nz",
+    "city": "Christchurch",
+    "country": "New Zealand",
+    "countryCode": "NZ"
+  },
+  {
+    "slug": "london-gb",
+    "city": "London",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "manchester-gb",
+    "city": "Manchester",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "birmingham-gb",
+    "city": "Birmingham",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "leeds-gb",
+    "city": "Leeds",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "glasgow-gb",
+    "city": "Glasgow",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "liverpool-gb",
+    "city": "Liverpool",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "edinburgh-gb",
+    "city": "Edinburgh",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "bristol-gb",
+    "city": "Bristol",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "cardiff-gb",
+    "city": "Cardiff",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "belfast-gb",
+    "city": "Belfast",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "leicester-gb",
+    "city": "Leicester",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "coventry-gb",
+    "city": "Coventry",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "nottingham-gb",
+    "city": "Nottingham",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "southampton-gb",
+    "city": "Southampton",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "reading-gb",
+    "city": "Reading",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "newcastle-gb",
+    "city": "Newcastle",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "sheffield-gb",
+    "city": "Sheffield",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "brighton-gb",
+    "city": "Brighton",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "oxford-gb",
+    "city": "Oxford",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "cambridge-gb",
+    "city": "Cambridge",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "dublin-ie",
+    "city": "Dublin",
+    "country": "Ireland",
+    "countryCode": "IE"
+  },
+  {
+    "slug": "cork-ie",
+    "city": "Cork",
+    "country": "Ireland",
+    "countryCode": "IE"
+  },
+  {
+    "slug": "paris-fr",
+    "city": "Paris",
+    "country": "France",
+    "countryCode": "FR"
+  },
+  {
+    "slug": "lyon-fr",
+    "city": "Lyon",
+    "country": "France",
+    "countryCode": "FR"
+  },
+  {
+    "slug": "marseille-fr",
+    "city": "Marseille",
+    "country": "France",
+    "countryCode": "FR"
+  },
+  {
+    "slug": "berlin-de",
+    "city": "Berlin",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  {
+    "slug": "munich-de",
+    "city": "Munich",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  {
+    "slug": "frankfurt-de",
+    "city": "Frankfurt",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  {
+    "slug": "hamburg-de",
+    "city": "Hamburg",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  {
+    "slug": "cologne-de",
+    "city": "Cologne",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  {
+    "slug": "stuttgart-de",
+    "city": "Stuttgart",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  {
+    "slug": "dusseldorf-de",
+    "city": "Dusseldorf",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  {
+    "slug": "amsterdam-nl",
+    "city": "Amsterdam",
+    "country": "Netherlands",
+    "countryCode": "NL"
+  },
+  {
+    "slug": "rotterdam-nl",
+    "city": "Rotterdam",
+    "country": "Netherlands",
+    "countryCode": "NL"
+  },
+  {
+    "slug": "the-hague-nl",
+    "city": "The Hague",
+    "country": "Netherlands",
+    "countryCode": "NL"
+  },
+  {
+    "slug": "brussels-be",
+    "city": "Brussels",
+    "country": "Belgium",
+    "countryCode": "BE"
+  },
+  {
+    "slug": "antwerp-be",
+    "city": "Antwerp",
+    "country": "Belgium",
+    "countryCode": "BE"
+  },
+  {
+    "slug": "zurich-ch",
+    "city": "Zurich",
+    "country": "Switzerland",
+    "countryCode": "CH"
+  },
+  {
+    "slug": "geneva-ch",
+    "city": "Geneva",
+    "country": "Switzerland",
+    "countryCode": "CH"
+  },
+  {
+    "slug": "vienna-at",
+    "city": "Vienna",
+    "country": "Austria",
+    "countryCode": "AT"
+  },
+  {
+    "slug": "madrid-es",
+    "city": "Madrid",
+    "country": "Spain",
+    "countryCode": "ES"
+  },
+  {
+    "slug": "barcelona-es",
+    "city": "Barcelona",
+    "country": "Spain",
+    "countryCode": "ES"
+  },
+  {
+    "slug": "valencia-es",
+    "city": "Valencia",
+    "country": "Spain",
+    "countryCode": "ES"
+  },
+  {
+    "slug": "lisbon-pt",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "countryCode": "PT"
+  },
+  {
+    "slug": "porto-pt",
+    "city": "Porto",
+    "country": "Portugal",
+    "countryCode": "PT"
+  },
+  {
+    "slug": "rome-it",
+    "city": "Rome",
+    "country": "Italy",
+    "countryCode": "IT"
+  },
+  {
+    "slug": "milan-it",
+    "city": "Milan",
+    "country": "Italy",
+    "countryCode": "IT"
+  },
+  {
+    "slug": "turin-it",
+    "city": "Turin",
+    "country": "Italy",
+    "countryCode": "IT"
+  },
+  {
+    "slug": "florence-it",
+    "city": "Florence",
+    "country": "Italy",
+    "countryCode": "IT"
+  },
+  {
+    "slug": "naples-it",
+    "city": "Naples",
+    "country": "Italy",
+    "countryCode": "IT"
+  },
+  {
+    "slug": "stockholm-se",
+    "city": "Stockholm",
+    "country": "Sweden",
+    "countryCode": "SE"
+  },
+  {
+    "slug": "gothenburg-se",
+    "city": "Gothenburg",
+    "country": "Sweden",
+    "countryCode": "SE"
+  },
+  {
+    "slug": "oslo-no",
+    "city": "Oslo",
+    "country": "Norway",
+    "countryCode": "NO"
+  },
+  {
+    "slug": "copenhagen-dk",
+    "city": "Copenhagen",
+    "country": "Denmark",
+    "countryCode": "DK"
+  },
+  {
+    "slug": "helsinki-fi",
+    "city": "Helsinki",
+    "country": "Finland",
+    "countryCode": "FI"
+  },
+  {
+    "slug": "warsaw-pl",
+    "city": "Warsaw",
+    "country": "Poland",
+    "countryCode": "PL"
+  },
+  {
+    "slug": "krakow-pl",
+    "city": "Krakow",
+    "country": "Poland",
+    "countryCode": "PL"
+  },
+  {
+    "slug": "prague-cz",
+    "city": "Prague",
+    "country": "Czech Republic",
+    "countryCode": "CZ"
+  },
+  {
+    "slug": "budapest-hu",
+    "city": "Budapest",
+    "country": "Hungary",
+    "countryCode": "HU"
+  },
+  {
+    "slug": "athens-gr",
+    "city": "Athens",
+    "country": "Greece",
+    "countryCode": "GR"
+  },
+  {
+    "slug": "bucharest-ro",
+    "city": "Bucharest",
+    "country": "Romania",
+    "countryCode": "RO"
+  },
+  {
+    "slug": "sofia-bg",
+    "city": "Sofia",
+    "country": "Bulgaria",
+    "countryCode": "BG"
+  },
+  {
+    "slug": "zagreb-hr",
+    "city": "Zagreb",
+    "country": "Croatia",
+    "countryCode": "HR"
+  },
+  {
+    "slug": "toronto-ca",
+    "city": "Toronto",
+    "country": "Canada",
+    "countryCode": "CA"
+  },
+  {
+    "slug": "vancouver-ca",
+    "city": "Vancouver",
+    "country": "Canada",
+    "countryCode": "CA"
+  },
+  {
+    "slug": "montreal-ca",
+    "city": "Montreal",
+    "country": "Canada",
+    "countryCode": "CA"
+  },
+  {
+    "slug": "calgary-ca",
+    "city": "Calgary",
+    "country": "Canada",
+    "countryCode": "CA"
+  },
+  {
+    "slug": "edmonton-ca",
+    "city": "Edmonton",
+    "country": "Canada",
+    "countryCode": "CA"
+  },
+  {
+    "slug": "ottawa-ca",
+    "city": "Ottawa",
+    "country": "Canada",
+    "countryCode": "CA"
+  },
+  {
+    "slug": "winnipeg-ca",
+    "city": "Winnipeg",
+    "country": "Canada",
+    "countryCode": "CA"
+  },
+  {
+    "slug": "quebec-city-ca",
+    "city": "Quebec City",
+    "country": "Canada",
+    "countryCode": "CA"
+  },
+  {
+    "slug": "hamilton-ca",
+    "city": "Hamilton",
+    "country": "Canada",
+    "countryCode": "CA"
+  },
+  {
+    "slug": "mississauga-ca",
+    "city": "Mississauga",
+    "country": "Canada",
+    "countryCode": "CA"
+  },
+  {
+    "slug": "surrey-ca",
+    "city": "Surrey",
+    "country": "Canada",
+    "countryCode": "CA"
+  },
+  {
+    "slug": "brampton-ca",
+    "city": "Brampton",
+    "country": "Canada",
+    "countryCode": "CA"
+  },
+  {
+    "slug": "new-york-us",
+    "city": "New York",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "los-angeles-us",
+    "city": "Los Angeles",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "chicago-us",
+    "city": "Chicago",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "houston-us",
+    "city": "Houston",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "phoenix-us",
+    "city": "Phoenix",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "philadelphia-us",
+    "city": "Philadelphia",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "san-antonio-us",
+    "city": "San Antonio",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "san-diego-us",
+    "city": "San Diego",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "dallas-us",
+    "city": "Dallas",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "san-jose-us",
+    "city": "San Jose",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "austin-us",
+    "city": "Austin",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "jacksonville-us",
+    "city": "Jacksonville",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "fort-worth-us",
+    "city": "Fort Worth",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "columbus-us",
+    "city": "Columbus",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "charlotte-us",
+    "city": "Charlotte",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "san-francisco-us",
+    "city": "San Francisco",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "indianapolis-us",
+    "city": "Indianapolis",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "seattle-us",
+    "city": "Seattle",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "denver-us",
+    "city": "Denver",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "washington-us",
+    "city": "Washington",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "boston-us",
+    "city": "Boston",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "nashville-us",
+    "city": "Nashville",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "el-paso-us",
+    "city": "El Paso",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "detroit-us",
+    "city": "Detroit",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "portland-us",
+    "city": "Portland",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "las-vegas-us",
+    "city": "Las Vegas",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "memphis-us",
+    "city": "Memphis",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "louisville-us",
+    "city": "Louisville",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "baltimore-us",
+    "city": "Baltimore",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "milwaukee-us",
+    "city": "Milwaukee",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "albuquerque-us",
+    "city": "Albuquerque",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "tucson-us",
+    "city": "Tucson",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "fresno-us",
+    "city": "Fresno",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "sacramento-us",
+    "city": "Sacramento",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "kansas-city-us",
+    "city": "Kansas City",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "mesa-us",
+    "city": "Mesa",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "atlanta-us",
+    "city": "Atlanta",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "omaha-us",
+    "city": "Omaha",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "colorado-springs-us",
+    "city": "Colorado Springs",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "raleigh-us",
+    "city": "Raleigh",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "miami-us",
+    "city": "Miami",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "oakland-us",
+    "city": "Oakland",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "minneapolis-us",
+    "city": "Minneapolis",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "tampa-us",
+    "city": "Tampa",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "tulsa-us",
+    "city": "Tulsa",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "cleveland-us",
+    "city": "Cleveland",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "wichita-us",
+    "city": "Wichita",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "arlington-us",
+    "city": "Arlington",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "new-orleans-us",
+    "city": "New Orleans",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "bakersfield-us",
+    "city": "Bakersfield",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "honolulu-us",
+    "city": "Honolulu",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "anaheim-us",
+    "city": "Anaheim",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "santa-ana-us",
+    "city": "Santa Ana",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "riverside-us",
+    "city": "Riverside",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "corpus-christi-us",
+    "city": "Corpus Christi",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "lexington-us",
+    "city": "Lexington",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "stockton-us",
+    "city": "Stockton",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "henderson-us",
+    "city": "Henderson",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "saint-paul-us",
+    "city": "Saint Paul",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "st-louis-us",
+    "city": "St Louis",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "cincinnati-us",
+    "city": "Cincinnati",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "pittsburgh-us",
+    "city": "Pittsburgh",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "greensboro-us",
+    "city": "Greensboro",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "anchorage-us",
+    "city": "Anchorage",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "plano-us",
+    "city": "Plano",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "lincoln-us",
+    "city": "Lincoln",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "orlando-us",
+    "city": "Orlando",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "irvine-us",
+    "city": "Irvine",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "newark-us",
+    "city": "Newark",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "durham-us",
+    "city": "Durham",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "chula-vista-us",
+    "city": "Chula Vista",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "toledo-us",
+    "city": "Toledo",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "fort-wayne-us",
+    "city": "Fort Wayne",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "st-petersburg-us",
+    "city": "St Petersburg",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "laredo-us",
+    "city": "Laredo",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "jersey-city-us",
+    "city": "Jersey City",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "chandler-us",
+    "city": "Chandler",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "madison-us",
+    "city": "Madison",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "lubbock-us",
+    "city": "Lubbock",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "scottsdale-us",
+    "city": "Scottsdale",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "reno-us",
+    "city": "Reno",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "buffalo-us",
+    "city": "Buffalo",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "gilbert-us",
+    "city": "Gilbert",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "glendale-us",
+    "city": "Glendale",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "north-las-vegas-us",
+    "city": "North Las Vegas",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "winston-salem-us",
+    "city": "Winston-Salem",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "chesapeake-us",
+    "city": "Chesapeake",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "norfolk-us",
+    "city": "Norfolk",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "fremont-us",
+    "city": "Fremont",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "garland-us",
+    "city": "Garland",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "irving-us",
+    "city": "Irving",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "hialeah-us",
+    "city": "Hialeah",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "richmond-us",
+    "city": "Richmond",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "boise-us",
+    "city": "Boise",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "spokane-us",
+    "city": "Spokane",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "baton-rouge-us",
+    "city": "Baton Rouge",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "tacoma-us",
+    "city": "Tacoma",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "san-bernardino-us",
+    "city": "San Bernardino",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "modesto-us",
+    "city": "Modesto",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "fontana-us",
+    "city": "Fontana",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "des-moines-us",
+    "city": "Des Moines",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "moreno-valley-us",
+    "city": "Moreno Valley",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "santa-clarita-us",
+    "city": "Santa Clarita",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "fayetteville-us",
+    "city": "Fayetteville",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "birmingham-us",
+    "city": "Birmingham",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "oxnard-us",
+    "city": "Oxnard",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "rochester-us",
+    "city": "Rochester",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "port-st-lucie-us",
+    "city": "Port St Lucie",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "grand-rapids-us",
+    "city": "Grand Rapids",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "huntsville-us",
+    "city": "Huntsville",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "salt-lake-city-us",
+    "city": "Salt Lake City",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "frisco-us",
+    "city": "Frisco",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "yonkers-us",
+    "city": "Yonkers",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "amarillo-us",
+    "city": "Amarillo",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "huntington-beach-us",
+    "city": "Huntington Beach",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "mckinney-us",
+    "city": "McKinney",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "montgomery-us",
+    "city": "Montgomery",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "augusta-us",
+    "city": "Augusta",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "aurora-us",
+    "city": "Aurora",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "little-rock-us",
+    "city": "Little Rock",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "akron-us",
+    "city": "Akron",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "shreveport-us",
+    "city": "Shreveport",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "grand-prairie-us",
+    "city": "Grand Prairie",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "mobile-us",
+    "city": "Mobile",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "tallahassee-us",
+    "city": "Tallahassee",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "overland-park-us",
+    "city": "Overland Park",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "tempe-us",
+    "city": "Tempe",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "cape-coral-us",
+    "city": "Cape Coral",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "knoxville-us",
+    "city": "Knoxville",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "fort-lauderdale-us",
+    "city": "Fort Lauderdale",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "worcester-us",
+    "city": "Worcester",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "brownsville-us",
+    "city": "Brownsville",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "newport-news-us",
+    "city": "Newport News",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "santa-rosa-us",
+    "city": "Santa Rosa",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "rancho-cucamonga-us",
+    "city": "Rancho Cucamonga",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "eugene-us",
+    "city": "Eugene",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "oceanside-us",
+    "city": "Oceanside",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "elk-grove-us",
+    "city": "Elk Grove",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "garden-grove-us",
+    "city": "Garden Grove",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "pembroke-pines-us",
+    "city": "Pembroke Pines",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "salem-us",
+    "city": "Salem",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "springfield-us",
+    "city": "Springfield",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "corona-us",
+    "city": "Corona",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "jackson-us",
+    "city": "Jackson",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "paterson-us",
+    "city": "Paterson",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "rockford-us",
+    "city": "Rockford",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "joliet-us",
+    "city": "Joliet",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "carrollton-us",
+    "city": "Carrollton",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "clarksville-us",
+    "city": "Clarksville",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "fort-collins-us",
+    "city": "Fort Collins",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "visalia-us",
+    "city": "Visalia",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "ontario-us",
+    "city": "Ontario",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "hollywood-us",
+    "city": "Hollywood",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "hayward-us",
+    "city": "Hayward",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "torrance-us",
+    "city": "Torrance",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "sunnyvale-us",
+    "city": "Sunnyvale",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "bridgeport-us",
+    "city": "Bridgeport",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "lakewood-us",
+    "city": "Lakewood",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "escondido-us",
+    "city": "Escondido",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "savannah-us",
+    "city": "Savannah",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "syracuse-us",
+    "city": "Syracuse",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "naperville-us",
+    "city": "Naperville",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "dayton-us",
+    "city": "Dayton",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "mcallen-us",
+    "city": "McAllen",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "bellevue-us",
+    "city": "Bellevue",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "mesquite-us",
+    "city": "Mesquite",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "pasadena-us",
+    "city": "Pasadena",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "fullerton-us",
+    "city": "Fullerton",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "killeen-us",
+    "city": "Killeen",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "hampton-us",
+    "city": "Hampton",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "west-valley-city-us",
+    "city": "West Valley City",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "warren-us",
+    "city": "Warren",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "olathe-us",
+    "city": "Olathe",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "columbia-us",
+    "city": "Columbia",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "sterling-heights-us",
+    "city": "Sterling Heights",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "new-haven-us",
+    "city": "New Haven",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "miramar-us",
+    "city": "Miramar",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "waco-us",
+    "city": "Waco",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "thousand-oaks-us",
+    "city": "Thousand Oaks",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "cedar-rapids-us",
+    "city": "Cedar Rapids",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "charleston-us",
+    "city": "Charleston",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "elizabeth-us",
+    "city": "Elizabeth",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "roseville-us",
+    "city": "Roseville",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "gainesville-us",
+    "city": "Gainesville",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "stamford-us",
+    "city": "Stamford",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "concord-us",
+    "city": "Concord",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "surprise-us",
+    "city": "Surprise",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "lafayette-us",
+    "city": "Lafayette",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "topeka-us",
+    "city": "Topeka",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "kent-us",
+    "city": "Kent",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "simi-valley-us",
+    "city": "Simi Valley",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "santa-clara-us",
+    "city": "Santa Clara",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "murfreesboro-us",
+    "city": "Murfreesboro",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "hartford-us",
+    "city": "Hartford",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "victorville-us",
+    "city": "Victorville",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "abilene-us",
+    "city": "Abilene",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "vallejo-us",
+    "city": "Vallejo",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "berkeley-us",
+    "city": "Berkeley",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "richardson-us",
+    "city": "Richardson",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "round-rock-us",
+    "city": "Round Rock",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "arvada-us",
+    "city": "Arvada",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "ann-arbor-us",
+    "city": "Ann Arbor",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "allentown-us",
+    "city": "Allentown",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "pearland-us",
+    "city": "Pearland",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "clearwater-us",
+    "city": "Clearwater",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "wilmington-us",
+    "city": "Wilmington",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "lakeland-us",
+    "city": "Lakeland",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "thornton-us",
+    "city": "Thornton",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "west-jordan-us",
+    "city": "West Jordan",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "carlsbad-us",
+    "city": "Carlsbad",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "south-bend-us",
+    "city": "South Bend",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "vista-us",
+    "city": "Vista",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "green-bay-us",
+    "city": "Green Bay",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "daly-city-us",
+    "city": "Daly City",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "burbank-us",
+    "city": "Burbank",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "lowell-us",
+    "city": "Lowell",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "elgin-us",
+    "city": "Elgin",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "waterbury-us",
+    "city": "Waterbury",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "broken-arrow-us",
+    "city": "Broken Arrow",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "manchester-us",
+    "city": "Manchester",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "west-palm-beach-us",
+    "city": "West Palm Beach",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "pueblo-us",
+    "city": "Pueblo",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "high-point-us",
+    "city": "High Point",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "west-covina-us",
+    "city": "West Covina",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "murrieta-us",
+    "city": "Murrieta",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "cambridge-us",
+    "city": "Cambridge",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "antioch-us",
+    "city": "Antioch",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "temecula-us",
+    "city": "Temecula",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "norwalk-us",
+    "city": "Norwalk",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "centennial-us",
+    "city": "Centennial",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "everett-us",
+    "city": "Everett",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "palm-bay-us",
+    "city": "Palm Bay",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "wichita-falls-us",
+    "city": "Wichita Falls",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "greenville-us",
+    "city": "Greenville",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "billings-us",
+    "city": "Billings",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "fairfield-us",
+    "city": "Fairfield",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "el-monte-us",
+    "city": "El Monte",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "north-charleston-us",
+    "city": "North Charleston",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "odessa-us",
+    "city": "Odessa",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "midland-us",
+    "city": "Midland",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "miami-gardens-us",
+    "city": "Miami Gardens",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "downey-us",
+    "city": "Downey",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "costa-mesa-us",
+    "city": "Costa Mesa",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "inglewood-us",
+    "city": "Inglewood",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "miami-beach-us",
+    "city": "Miami Beach",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "league-city-us",
+    "city": "League City",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "santa-maria-us",
+    "city": "Santa Maria",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "tyler-us",
+    "city": "Tyler",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "davenport-us",
+    "city": "Davenport",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "sioux-falls-us",
+    "city": "Sioux Falls",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "chico-us",
+    "city": "Chico",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "boulder-us",
+    "city": "Boulder",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "san-mateo-us",
+    "city": "San Mateo",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "lewisville-us",
+    "city": "Lewisville",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "south-fulton-us",
+    "city": "South Fulton",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "edison-us",
+    "city": "Edison",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "woodbridge-us",
+    "city": "Woodbridge",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "sandy-springs-us",
+    "city": "Sandy Springs",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "gresham-us",
+    "city": "Gresham",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "hillsboro-us",
+    "city": "Hillsboro",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "jurupa-valley-us",
+    "city": "Jurupa Valley",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "renton-us",
+    "city": "Renton",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "sparks-us",
+    "city": "Sparks",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "santa-monica-us",
+    "city": "Santa Monica",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "westminster-us",
+    "city": "Westminster",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "federal-way-us",
+    "city": "Federal Way",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "longmont-us",
+    "city": "Longmont",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "lee-s-summit-us",
+    "city": "Lee's Summit",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "spokane-valley-us",
+    "city": "Spokane Valley",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "livonia-us",
+    "city": "Livonia",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "deerfield-beach-us",
+    "city": "Deerfield Beach",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "nampa-us",
+    "city": "Nampa",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "bloomington-us",
+    "city": "Bloomington",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "trenton-us",
+    "city": "Trenton",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "roanoke-us",
+    "city": "Roanoke",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "lynchburg-us",
+    "city": "Lynchburg",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "asheville-us",
+    "city": "Asheville",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "athens-us",
+    "city": "Athens",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "duluth-us",
+    "city": "Duluth",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "mexico-city-mx",
+    "city": "Mexico City",
+    "country": "Mexico",
+    "countryCode": "MX"
+  },
+  {
+    "slug": "guadalajara-mx",
+    "city": "Guadalajara",
+    "country": "Mexico",
+    "countryCode": "MX"
+  },
+  {
+    "slug": "monterrey-mx",
+    "city": "Monterrey",
+    "country": "Mexico",
+    "countryCode": "MX"
+  },
+  {
+    "slug": "sao-paulo-br",
+    "city": "Sao Paulo",
+    "country": "Brazil",
+    "countryCode": "BR"
+  },
+  {
+    "slug": "rio-de-janeiro-br",
+    "city": "Rio de Janeiro",
+    "country": "Brazil",
+    "countryCode": "BR"
+  },
+  {
+    "slug": "brasilia-br",
+    "city": "Brasilia",
+    "country": "Brazil",
+    "countryCode": "BR"
+  },
+  {
+    "slug": "buenos-aires-ar",
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "countryCode": "AR"
+  },
+  {
+    "slug": "santiago-cl",
+    "city": "Santiago",
+    "country": "Chile",
+    "countryCode": "CL"
+  },
+  {
+    "slug": "lima-pe",
+    "city": "Lima",
+    "country": "Peru",
+    "countryCode": "PE"
+  },
+  {
+    "slug": "bogota-co",
+    "city": "Bogota",
+    "country": "Colombia",
+    "countryCode": "CO"
+  },
+  {
+    "slug": "medellin-co",
+    "city": "Medellin",
+    "country": "Colombia",
+    "countryCode": "CO"
+  },
+  {
+    "slug": "caracas-ve",
+    "city": "Caracas",
+    "country": "Venezuela",
+    "countryCode": "VE"
+  },
+  {
+    "slug": "panama-city-pa",
+    "city": "Panama City",
+    "country": "Panama",
+    "countryCode": "PA"
+  },
+  {
+    "slug": "san-juan-pr",
+    "city": "San Juan",
+    "country": "Puerto Rico",
+    "countryCode": "PR"
+  },
+  {
+    "slug": "kingston-jm",
+    "city": "Kingston",
+    "country": "Jamaica",
+    "countryCode": "JM"
+  },
+  {
+    "slug": "port-of-spain-tt",
+    "city": "Port of Spain",
+    "country": "Trinidad and Tobago",
+    "countryCode": "TT"
+  },
+  {
+    "slug": "johannesburg-za",
+    "city": "Johannesburg",
+    "country": "South Africa",
+    "countryCode": "ZA"
+  },
+  {
+    "slug": "cape-town-za",
+    "city": "Cape Town",
+    "country": "South Africa",
+    "countryCode": "ZA"
+  },
+  {
+    "slug": "durban-za",
+    "city": "Durban",
+    "country": "South Africa",
+    "countryCode": "ZA"
+  },
+  {
+    "slug": "pretoria-za",
+    "city": "Pretoria",
+    "country": "South Africa",
+    "countryCode": "ZA"
+  },
+  {
+    "slug": "nairobi-ke",
+    "city": "Nairobi",
+    "country": "Kenya",
+    "countryCode": "KE"
+  },
+  {
+    "slug": "mombasa-ke",
+    "city": "Mombasa",
+    "country": "Kenya",
+    "countryCode": "KE"
+  },
+  {
+    "slug": "lagos-ng",
+    "city": "Lagos",
+    "country": "Nigeria",
+    "countryCode": "NG"
+  },
+  {
+    "slug": "abuja-ng",
+    "city": "Abuja",
+    "country": "Nigeria",
+    "countryCode": "NG"
+  },
+  {
+    "slug": "accra-gh",
+    "city": "Accra",
+    "country": "Ghana",
+    "countryCode": "GH"
+  },
+  {
+    "slug": "addis-ababa-et",
+    "city": "Addis Ababa",
+    "country": "Ethiopia",
+    "countryCode": "ET"
+  },
+  {
+    "slug": "dar-es-salaam-tz",
+    "city": "Dar es Salaam",
+    "country": "Tanzania",
+    "countryCode": "TZ"
+  },
+  {
+    "slug": "kampala-ug",
+    "city": "Kampala",
+    "country": "Uganda",
+    "countryCode": "UG"
+  },
+  {
+    "slug": "kigali-rw",
+    "city": "Kigali",
+    "country": "Rwanda",
+    "countryCode": "RW"
+  },
+  {
+    "slug": "casablanca-ma",
+    "city": "Casablanca",
+    "country": "Morocco",
+    "countryCode": "MA"
+  },
+  {
+    "slug": "cairo-eg",
+    "city": "Cairo",
+    "country": "Egypt",
+    "countryCode": "EG"
+  },
+  {
+    "slug": "alexandria-eg",
+    "city": "Alexandria",
+    "country": "Egypt",
+    "countryCode": "EG"
+  },
+  {
+    "slug": "mauritius-mu",
+    "city": "Mauritius",
+    "country": "Mauritius",
+    "countryCode": "MU"
+  },
+  {
+    "slug": "reunion-re",
+    "city": "Reunion",
+    "country": "Reunion",
+    "countryCode": "RE"
+  },
+  {
+    "slug": "juneau-ak-us",
+    "city": "Juneau (AK)",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "dover-de-us",
+    "city": "Dover (DE)",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "frankfort-ky-us",
+    "city": "Frankfort (KY)",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "annapolis-md-us",
+    "city": "Annapolis (MD)",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "lansing-mi-us",
+    "city": "Lansing (MI)",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "jefferson-city-mo-us",
+    "city": "Jefferson City (MO)",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "helena-mt-us",
+    "city": "Helena (MT)",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "carson-city-nv-us",
+    "city": "Carson City (NV)",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "santa-fe-nm-us",
+    "city": "Santa Fe (NM)",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "albany-ny-us",
+    "city": "Albany (NY)",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "bismarck-nd-us",
+    "city": "Bismarck (ND)",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "oklahoma-city-ok-us",
+    "city": "Oklahoma City (OK)",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  {
+    "slug": "harrisburg-pa-us",
+    "city": "Harrisburg (PA)",
+    "country": "United States",
+    "countryCode": "US"
+  }
+]
