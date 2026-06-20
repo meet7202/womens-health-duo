@@ -115,7 +115,17 @@ export default defineConfig(({ mode }) => {
             if (id.includes("react-router")) return "vendor-router";
             if (id.includes("react-dom") || id.includes("/react/")) return "vendor-react";
             if (id.includes("@radix-ui")) return "vendor-radix";
-            return "vendor";
+            if (id.includes("recharts")) return "vendor-recharts";
+            if (id.includes("sonner")) return "vendor-sonner";
+            if (id.includes("next-themes")) return "vendor-themes";
+            if (id.includes("date-fns")) return "vendor-date-fns";
+            if (id.includes("zod")) return "vendor-zod";
+            if (id.includes("@hookform")) return "vendor-hookform";
+            if (id.includes("embla-carousel")) return "vendor-embla";
+            if (id.includes("cmdk")) return "vendor-cmdk";
+            if (id.includes("vaul")) return "vendor-vaul";
+            // Remaining deps: let Rollup split automatically. A single catch-all `vendor` chunk
+            // caused TDZ errors in production ("Cannot access 'A' before initialization").
           },
         },
       },

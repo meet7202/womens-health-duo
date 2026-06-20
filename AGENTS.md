@@ -50,7 +50,7 @@ Project sites load at **`https://<user>.github.io/<repo>/`**. A Vite default **`
 
 - Below-the-fold sections are **lazy-loaded** where the app already does so; keep heavy dependencies out of the initial chunk when practical.
 - **Large images** in `src/assets/` dominate LCP; prefer compression or modern formats when replacing assets.
-- **`manualChunks`** in `vite.config.ts` groups vendors — avoid collapsing everything into `index` without measuring.
+- **`manualChunks`** in `vite.config.ts` splits large vendors (React, Radix, motion, etc.). **Do not** add a catch-all bucket that merges unrelated `node_modules` into one file — it can cause production TDZ errors (`Cannot access '…' before initialization`). Remaining deps should use Rollup’s default splitting.
 
 ## UI / shadcn
 
