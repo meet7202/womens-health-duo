@@ -1,0 +1,15 @@
+---
+description: Ship changes via pull request to main unless user says otherwise
+alwaysApply: true
+---
+
+# Git — use pull requests to `main`
+
+When work is done and the user has **not** explicitly asked to push or merge **`main`** directly:
+
+1. Use a **feature branch** (`git checkout -b <branch>` if you are on `main` and need a new branch).
+2. Commit when the user asked for commits (or when completing their requested change set).
+3. Push the branch: `git push -u origin HEAD`.
+4. Open a PR to **`main`**: `gh pr create --base main` with a short summary and test plan; return the **PR URL**.
+
+Do **not** `git push origin main` or merge to `main` locally unless the user clearly requests that in the conversation.
