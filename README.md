@@ -83,4 +83,4 @@ This project is a standard static Vite + React site with a self-contained bundle
 
 Updates are expected from **Cursor / Claude** agents. See **[`AGENTS.md`](./AGENTS.md)** for invariants (SEO URLs, GitHub Pages, social links, toast hooks, verification commands). Keep that file in sync when you change deploy or SEO behavior.
 
-**Git:** ship changes through a **pull request into `main`** (see [`.cursor/rules/git-pr-workflow.mdc`](./.cursor/rules/git-pr-workflow.mdc)); avoid pushing directly to `main` unless explicitly requested.
+**Git:** always ship through a **pull request into `main`** (see [`.cursor/rules/git-pr-workflow.mdc`](./.cursor/rules/git-pr-workflow.mdc)); do not push feature work directly to `main`.
