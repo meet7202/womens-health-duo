@@ -4,7 +4,6 @@ import {
   DEFAULT_TITLE,
   DEFAULT_DESCRIPTION,
   KEYWORDS,
-  TWITTER_SITE,
   OG_IMAGE_PATH,
 } from "@/config/site";
 
@@ -39,7 +38,11 @@ export function SeoHead() {
     document.title = DEFAULT_TITLE;
     upsertMeta("name", "description", DEFAULT_DESCRIPTION);
     upsertMeta("name", "keywords", KEYWORDS);
-    upsertMeta("name", "robots", "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1");
+    upsertMeta(
+      "name",
+      "robots",
+      "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    );
     upsertMeta("name", "googlebot", "index, follow");
 
     upsertLink("canonical", pageUrl);
@@ -54,7 +57,7 @@ export function SeoHead() {
     upsertMeta("property", "og:locale", "en_IN");
 
     upsertMeta("name", "twitter:card", "summary_large_image");
-    upsertMeta("name", "twitter:site", TWITTER_SITE);
+    document.querySelector('meta[name="twitter:site"]')?.remove();
     upsertMeta("name", "twitter:title", DEFAULT_TITLE);
     upsertMeta("name", "twitter:description", DEFAULT_DESCRIPTION);
     upsertMeta("name", "twitter:image", ogImage);

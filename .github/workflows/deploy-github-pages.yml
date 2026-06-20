@@ -1,6 +1,16 @@
-# Deploy static site to GitHub Pages (custom domain: womenshealthduo.com).
-# Repo → Settings → Pages → Build and deployment → Source: GitHub Actions.
-# Then add the same hostname under Settings → Pages → Custom domain (optional if CNAME in repo is enough).
+# Deploy static site to GitHub Pages.
+#
+# BEFORE THIS WORKS (one-time per repo):
+# 1. GitHub repo → Settings → Pages
+# 2. Under "Build and deployment", set Source to: "GitHub Actions" (not "Deploy from a branch")
+# 3. Save. The next successful run of this workflow will publish the site.
+#
+# CUSTOM DOMAIN (womenshealthduo.com — you connect DNS at your registrar):
+# - `public/CNAME` is copied into `dist/` at build time so Pages knows the hostname.
+# - After the first deploy: Settings → Pages → Custom domain → enter womenshealthduo.com
+# - Add DNS A/AAAA records GitHub shows for apex domain, then enable "Enforce HTTPS".
+#
+# Docs: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site
 
 name: Deploy to GitHub Pages
 
@@ -20,6 +30,7 @@ concurrency:
 
 jobs:
   build:
+    name: Build site
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -37,15 +48,18 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          # Production canonical / OG / sitemap (matches public/CNAME)
+          # Canonical URL for meta, sitemap, robots (must match your live domain)
           VITE_SITE_URL: https://womenshealthduo.com
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: dist
+          # v4+ excludes dotfiles by default; `.nojekyll` must be included for GitHub Pages
+          include-hidden-files: true
 
   deploy:
+    name: Deploy to Pages
     needs: build
     runs-on: ubuntu-latest
     environment:

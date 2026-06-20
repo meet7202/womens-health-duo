@@ -12,7 +12,10 @@ export const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center gradient-hero overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center gradient-hero overflow-hidden"
+    >
       {/* Decorative elements — keep low opacity so headline stays crisp */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
@@ -36,7 +39,9 @@ export const HeroSection = () => {
               className="inline-flex items-center gap-2 border border-primary/25 bg-primary/15 px-4 py-2 rounded-full mb-6 shadow-sm"
             >
               <Heart className="w-4 h-4 text-terracotta" />
-              <span className="text-sm font-semibold text-terracotta">Two Sisters, One Mission</span>
+              <span className="text-sm font-semibold text-terracotta">
+                Two Sisters, One Mission
+              </span>
             </motion.div>
 
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight mb-6 text-[hsl(20_28%_11%)] [text-shadow:0_1px_0_hsl(30_40%_99%),0_0_24px_hsl(30_40%_98%_/_0.9)]">
@@ -47,8 +52,8 @@ export const HeroSection = () => {
             </h1>
 
             <p className="text-lg sm:text-xl max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed font-semibold text-[hsl(20_22%_18%)]">
-              Comprehensive care from pregnancy to postpartum, fertility to pelvic health. 
-              We combine medical expertise with physiotherapy and pilates for complete wellness.
+              Comprehensive care from pregnancy to postpartum, fertility to pelvic health. We
+              combine medical expertise with physiotherapy and pilates for complete wellness.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -99,10 +104,15 @@ export const HeroSection = () => {
             className="relative hidden lg:block"
           >
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-elevated">
-              <img 
-                src={heroImage} 
-                alt="Dr. Charmi Shah and Dr. Zalak Shah - Women's Health Duo"
-                className="w-full h-full object-cover"
+              <img
+                src={heroImage}
+                alt="Dr. Charmi Shah and Dr. Zalak Shah — Women's Health Duo"
+                className="h-full w-full object-cover"
+                width={640}
+                height={800}
+                sizes="(min-width: 1024px) 42vw, 0px"
+                decoding="async"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-foreground/10 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-white">
@@ -122,7 +132,9 @@ export const HeroSection = () => {
               transition={{ delay: 0.8, duration: 0.5 }}
               className="absolute -right-4 top-1/4 bg-background/95 backdrop-blur-sm rounded-2xl p-4 shadow-card"
             >
-              <p className="font-heading text-lg font-semibold text-foreground">Obstetrician & Gynecologist</p>
+              <p className="font-heading text-lg font-semibold text-foreground">
+                Obstetrician & Gynecologist
+              </p>
               <p className="text-sm text-muted-foreground">IVF Specialist & Laparoscopic Surgeon</p>
             </motion.div>
 
@@ -132,7 +144,9 @@ export const HeroSection = () => {
               transition={{ delay: 1, duration: 0.5 }}
               className="absolute -left-4 bottom-1/4 bg-background/95 backdrop-blur-sm rounded-2xl p-4 shadow-card"
             >
-              <p className="font-heading text-lg font-semibold text-foreground">Women's Health Physiotherapist</p>
+              <p className="font-heading text-lg font-semibold text-foreground">
+                Women's Health Physiotherapist
+              </p>
               <p className="text-sm text-muted-foreground">& Pilates Instructor</p>
             </motion.div>
           </motion.div>

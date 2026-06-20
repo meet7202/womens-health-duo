@@ -1,10 +1,4 @@
-import {
-  SITE_URL,
-  SITE_NAME,
-  DEFAULT_DESCRIPTION,
-  CONTACT,
-  OG_IMAGE_PATH,
-} from "@/config/site";
+import { SITE_URL, SITE_NAME, DEFAULT_DESCRIPTION, CONTACT, OG_IMAGE_PATH } from "@/config/site";
 
 /**
  * Schema.org structured data for search engines and AI crawlers.
@@ -26,12 +20,12 @@ export function JsonLd() {
         "@id": orgId,
         name: SITE_NAME,
         url: SITE_URL,
-        logo: `${SITE_URL}/favicon.ico`,
+        logo: `${SITE_URL}${OG_IMAGE_PATH}`,
         image: ogImage,
         description: DEFAULT_DESCRIPTION,
         email: CONTACT.email,
         telephone: CONTACT.phoneE164,
-        sameAs: [CONTACT.instagram],
+        sameAs: [CONTACT.instagram, CONTACT.youtube, CONTACT.whatsappUrl],
         areaServed: [
           { "@type": "City", name: "Ahmedabad", containedInPlace: india },
           { "@type": "City", name: "Mumbai", containedInPlace: india },
@@ -80,8 +74,7 @@ export function JsonLd() {
         "@id": zalakId,
         name: "Dr. Zalak Shah",
         medicalSpecialty: ["Physiotherapy", "PhysicalTherapy"],
-        jobTitle:
-          "Women's Health Physiotherapist & STOTT Pilates Instructor (Mat & Reformer)",
+        jobTitle: "Women's Health Physiotherapist & STOTT Pilates Instructor (Mat & Reformer)",
         knowsAbout: [
           "Pelvic floor rehabilitation",
           "Antenatal and postnatal physiotherapy",

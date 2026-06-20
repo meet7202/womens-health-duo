@@ -1,6 +1,7 @@
 /**
  * Default SEO values (no `import.meta`). Imported by `site.ts` and `vite.config.ts`.
  * Override the public URL at build/runtime with `VITE_SITE_URL` in `.env`.
+ * Maintainer context for agents: see `AGENTS.md` at the repository root.
  */
 export const SITE_DEFAULT_URL = "https://womenshealthduo.com";
 
@@ -38,14 +39,18 @@ export const KEYWORDS = [
   "Dr Charmi Shah OB-GYN",
   "Dr Zalak Shah physiotherapist Pilates",
   "Women's Health Duo",
+  "WomensHealthDuo YouTube",
+  "womens health duo Instagram",
 ].join(", ");
 
-export const TWITTER_SITE = "@womenshealthduo";
-
+/** Public profiles (no Twitter/X). Used in JSON-LD `sameAs` and docs. */
 export const CONTACT = {
   email: "womenshealthduo@gmail.com",
   phoneE164: "+917990550754",
   instagram: "https://www.instagram.com/womenshealthduo",
+  youtube: "https://www.youtube.com/@WomensHealthDuo",
+  /** Same WhatsApp number as site CTAs (E.164 without + for wa.me). */
+  whatsappUrl: "https://wa.me/917990550754",
 } as const;
 
-export const OG_IMAGE_PATH = "/favicon.ico";
+export const OG_IMAGE_PATH = "/favicon.svg";

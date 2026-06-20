@@ -1,15 +1,15 @@
 # Women's Health Duo
 
-Live site: **[womenshealthduo.com](https://womenshealthduo.com/)**
+Site: [womenshealthduo.com](https://womenshealthduo.com/)
 
-Marketing site for **Women's Health Duo** — Dr. Charmi Shah and Dr. Zalak Shah.
+Marketing site for Dr. Charmi Shah and Dr. Zalak Shah — **Women's Health Duo**.
 
-Stack: [Vite](https://vitejs.dev/), [React](https://react.dev/), [TypeScript](https://www.typescriptlang.org/), [Tailwind CSS](https://tailwindcss.com/), [shadcn/ui](https://ui.shadcn.com/).
+**Stack:** Vite, React, TypeScript, Tailwind CSS, shadcn/ui.
 
-## Prerequisites
+## Requirements
 
-- [Node.js](https://nodejs.org/) (LTS recommended)
-- npm (comes with Node)
+- [Node.js](https://nodejs.org/) (LTS)
+- npm
 
 ## Run locally
 
@@ -19,74 +19,66 @@ npm install
 npm run dev
 ```
 
-The dev server listens on **http://localhost:8080/** by default.
+Dev server: **http://localhost:8080/**
 
-This repo includes a [`.npmrc`](./.npmrc) that uses the public npm registry (`registry.npmjs.org`) so installs behave the same on any machine.
+## Scripts
 
-## Production URL
+| Command                | Description                |
+| ---------------------- | -------------------------- |
+| `npm run dev`          | Development server         |
+| `npm run build`        | Production build → `dist/` |
+| `npm run preview`      | Serve `dist/` locally      |
+| `npm run lint`         | ESLint                     |
+| `npm run lint:fix`     | ESLint with `--fix`        |
+| `npm run format`       | Prettier write             |
+| `npm run format:check` | Prettier check (CI)        |
+| `npm run typecheck`    | TypeScript (`tsc -b`)      |
 
-Canonical site: **`https://womenshealthduo.com`** (no trailing slash in config).
+## Environment & production URL
 
-- Defaults live in [`src/config/site.defaults.ts`](./src/config/site.defaults.ts) (`SITE_DEFAULT_URL`).
-- Override locally with `VITE_SITE_URL` in `.env` (see [`.env.example`](./.env.example)).
-- The GitHub Actions workflow sets `VITE_SITE_URL` for builds so SEO files match production.
+Default public URL: **`https://womenshealthduo.com`** (see [`src/config/site.defaults.ts`](src/config/site.defaults.ts)).
 
-## Other scripts
+- Copy [`.env.example`](./.env.example) to `.env` and set **`VITE_SITE_URL`** if you use another domain (no trailing slash).
+- The [GitHub Actions workflow](.github/workflows/deploy-github-pages.yml) sets `VITE_SITE_URL` for CI builds so HTML meta, `robots.txt`, and `sitemap.xml` match production.
 
-| Command           | Description                        |
-| ----------------- | ---------------------------------- |
-| `npm run build`   | Production build to `dist/`      |
-| `npm run preview` | Serve the production build locally |
-| `npm run lint`    | Run ESLint                         |
+## Performance
 
-## Deploy on GitHub Pages (this project)
+Production build uses code splitting (lazy sections below the fold), shared vendor chunks, trimmed Google Font weights, and image `sizes` / lazy loading where appropriate. After `npm run build`, use `npm run preview` and Chrome DevTools → **Lighthouse** (mobile and desktop) to measure Core Web Vitals.
 
-The repo is set up for **GitHub Actions → GitHub Pages** with custom domain **`womenshealthduo.com`**.
+Large JPEGs in `src/assets/` (hero and doctor photos) dominate payload; compressing or serving WebP/AVIF will improve load scores further.
 
-### What’s already in the repo
+## GitHub Pages
 
-- [`.github/workflows/deploy-github-pages.yml`](./.github/workflows/deploy-github-pages.yml) — builds on push to `main` or `master` and deploys `dist/`.
-- [`public/CNAME`](./public/CNAME) — tells GitHub Pages the custom hostname (`womenshealthduo.com`).
-- [`public/.nojekyll`](./public/.nojekyll) — disables Jekyll so static assets behave predictably.
-- **SPA routing:** after each build, `index.html` is copied to **`404.html`** so direct URLs and refreshes on unknown paths still load the React app (needed for GitHub Pages + `BrowserRouter`).
+### Repo contents
 
-### One-time GitHub setup
+- [`.github/workflows/deploy-github-pages.yml`](.github/workflows/deploy-github-pages.yml) — on push to **`main`** or **`master`**: `npm ci`, `npm run build`, upload `dist/`, deploy to Pages. Uses **`upload-pages-artifact@v5`** with **`include-hidden-files: true`** so **`.nojekyll`** is included.
+- [`public/CNAME`](./public/CNAME) — custom hostname for Pages.
+- [`public/.nojekyll`](./public/.nojekyll) — disables Jekyll for static assets.
+- Build copies **`index.html` → `404.html`** in `dist/` for SPA routing on Pages.
 
-1. **Push** this repository to GitHub (if it isn’t already).
-2. **Settings → Pages**
-   - **Build and deployment → Source:** choose **GitHub Actions** (not “Deploy from a branch” unless you prefer that older flow).
-3. **Settings → Pages → Custom domain**
-   - Enter **`womenshealthduo.com`** and save. GitHub may already detect it from `public/CNAME` after the first successful deploy.
-   - Enable **Enforce HTTPS** once DNS and the certificate are ready.
-4. **DNS at your registrar** (for apex `womenshealthduo.com`), add GitHub’s recommended records. Commonly for the apex you add **A** (and optional **AAAA**) records pointing to GitHub Pages; exact IPs can change — follow the current list under GitHub’s docs: [Configuring an apex domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain).
-5. Wait for DNS + TLS (often minutes to a few hours). Open **https://womenshealthduo.com** and confirm the site loads.
-6. **Optional:** In repository **Settings → Pages**, you can set a branch rename default to `main` if you use `main` only; the workflow triggers on **`main` or `master`**.
+### One-time setup
 
-### After each push
+1. **Settings → Pages → Build and deployment:** set **Source** to **GitHub Actions** (not “Deploy from a branch”).
+2. Push to `main` / `master` or run the workflow manually.
+3. **Custom domain:** **Settings → Pages → Custom domain** → `womenshealthduo.com` (aligned with `public/CNAME`). Add DNS **A / AAAA** records from [GitHub’s apex domain docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain), then enable **Enforce HTTPS** when available.
 
-Workflow runs **`npm ci` → `npm run build`** (with `VITE_SITE_URL=https://womenshealthduo.com`) and publishes **`dist/`** to Pages.
+### `www` instead of apex
 
-### If you use `www` instead of apex
-
-1. Change [`public/CNAME`](./public/CNAME) to `www.womenshealthduo.com`.
-2. Set `SITE_DEFAULT_URL` and CI `VITE_SITE_URL` to **`https://www.womenshealthduo.com`** so canonicals, `sitemap.xml`, and Open Graph stay consistent.
-3. Configure DNS for the `www` name per GitHub’s [www subdomain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain) instructions.
+Update [`public/CNAME`](./public/CNAME), `SITE_DEFAULT_URL` in `site.defaults.ts`, and `VITE_SITE_URL` in the workflow to your `www` URL. Use GitHub’s [www subdomain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain) DNS instructions.
 
 ### Other hosts
 
-`npm run build` still outputs a normal static **`dist/`** folder; you can upload it to Netlify, Cloudflare Pages, S3, etc., if you ever move off GitHub Pages.
+`npm run build` outputs static files in **`dist/`**; you can deploy that folder to Netlify, Cloudflare Pages, S3, etc.
 
-## SEO & discoverability
+## SEO
 
-- **Canonical URL & social previews:** `https://womenshealthduo.com` is the default; CI passes `VITE_SITE_URL` so builds stay aligned. [`src/config/site.defaults.ts`](./src/config/site.defaults.ts) holds titles, descriptions, and keywords.
-- **Structured data:** The home page emits Schema.org JSON-LD (`MedicalOrganization`, `Physician`, `WebSite`) in [`src/components/seo/JsonLd.tsx`](./src/components/seo/JsonLd.tsx).
-- **AI / LLM crawlers:** [`public/llms.txt`](./public/llms.txt) summarizes the practice. `robots.txt` (generated in `dist/` at build) lists a `Sitemap` URL on your domain.
-- **Search Console / Bing:** Submit **`https://womenshealthduo.com/sitemap.xml`** after go-live.
+- **Meta & canonical:** injected at build from `site.defaults` / `VITE_SITE_URL` (see [`index.html`](index.html), [`vite.config.ts`](vite.config.ts)).
+- **Structured data:** Schema.org JSON-LD in [`src/components/seo/JsonLd.tsx`](src/components/seo/JsonLd.tsx) (`MedicalOrganization`, `Physician`, `WebSite`).
+- **Crawlers:** [`public/llms.txt`](./public/llms.txt); `robots.txt` and `sitemap.xml` are written into **`dist/`** on build.
+- After launch, submit **`https://womenshealthduo.com/sitemap.xml`** in [Google Search Console](https://search.google.com/search-console) and Bing Webmaster Tools.
 
-### Lovable / vendor footprint
+This project is a standard static Vite app (no Lovable runtime or vendor scripts in the bundle).
 
-There are **no Lovable domains, scripts, or meta tags** in this codebase (no `lovable-tagger`, no Lovable Open Graph images, no Lovable README workflow). The app is a standard Vite + React static site suitable for GitHub Pages and normal SEO.
+## Maintainer notes (AI-assisted)
 
-## SEO note
-
-Technical SEO helps discovery; it does not guarantee ranking. Keep content accurate and match the real services and locations you offer.
+Updates are expected from **Cursor / Claude** agents. See **[`AGENTS.md`](./AGENTS.md)** for invariants (SEO URLs, GitHub Pages, social links, toast hooks, verification commands). Keep that file in sync when you change deploy or SEO behavior.

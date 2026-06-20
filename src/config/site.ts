@@ -4,7 +4,6 @@ import {
   DEFAULT_TITLE,
   DEFAULT_DESCRIPTION,
   KEYWORDS,
-  TWITTER_SITE,
   CONTACT,
   OG_IMAGE_PATH,
 } from "@/config/site.defaults";
@@ -18,12 +17,4 @@ export const SITE_URL = (
     : SITE_DEFAULT_URL
 ).replace(/\/$/, "");
 
-export {
-  SITE_NAME,
-  DEFAULT_TITLE,
-  DEFAULT_DESCRIPTION,
-  KEYWORDS,
-  TWITTER_SITE,
-  CONTACT,
-  OG_IMAGE_PATH,
-};
+export { SITE_NAME, DEFAULT_TITLE, DEFAULT_DESCRIPTION, KEYWORDS, CONTACT, OG_IMAGE_PATH };

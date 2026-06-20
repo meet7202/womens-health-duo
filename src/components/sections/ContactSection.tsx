@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Phone, MapPin, Clock, Instagram, MessageCircle, Users, Mail } from "lucide-react";
+import { Phone, MapPin, Clock, Instagram, Youtube, MessageCircle, Users, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { CONTACT } from "@/config/site";
 
 const WHATSAPP_NUMBER = "917990550754";
 const WHATSAPP_COMMUNITY_LINK = "https://chat.whatsapp.com/IzlxjOf8wp9GqMdSbCQ3Xj";
@@ -27,11 +28,12 @@ export const ContactSection = () => {
     const doctor = formData.get("doctor") as string;
     const concern = formData.get("concern") as string;
 
-    const doctorName = doctor === "charmi" 
-      ? "Dr. Charmi Shah (OBG & IVF)" 
-      : doctor === "zalak" 
-        ? "Dr. Zalak Shah (Physio & Pilates)" 
-        : "Not sure - Need guidance";
+    const doctorName =
+      doctor === "charmi"
+        ? "Dr. Charmi Shah (OBG & IVF)"
+        : doctor === "zalak"
+          ? "Dr. Zalak Shah (Physio & Pilates)"
+          : "Not sure - Need guidance";
 
     const message = `*New Consultation Request*
 
@@ -63,13 +65,15 @@ Sent from Women's Health Duo Website`;
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="text-primary font-medium text-sm uppercase tracking-wider">Contact Us</span>
+          <span className="text-primary font-medium text-sm uppercase tracking-wider">
+            Contact Us
+          </span>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground mt-4 mb-6">
             Book Your <span className="text-primary italic">Consultation</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Ready to take the next step in your health journey? Fill out the form below 
-            and we'll connect you with the right specialist.
+            Ready to take the next step in your health journey? Fill out the form below and we'll
+            connect you with the right specialist.
           </p>
         </motion.div>
 
@@ -82,16 +86,15 @@ Sent from Women's Health Duo Website`;
         >
           <div className="flex items-center justify-center gap-3 mb-3">
             <Users className="w-6 h-6 text-green-600" />
-            <h3 className="font-heading text-xl font-semibold text-foreground">Join Our WhatsApp Community</h3>
+            <h3 className="font-heading text-xl font-semibold text-foreground">
+              Join Our WhatsApp Community
+            </h3>
           </div>
           <p className="text-muted-foreground mb-4">
-            Get exclusive health tips, updates on workshops, and connect with other women on their wellness journey.
+            Get exclusive health tips, updates on workshops, and connect with other women on their
+            wellness journey.
           </p>
-          <a
-            href={WHATSAPP_COMMUNITY_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={WHATSAPP_COMMUNITY_LINK} target="_blank" rel="noopener noreferrer">
             <Button className="bg-green-600 hover:bg-green-700 text-white shadow-lg">
               <MessageCircle className="w-5 h-5 mr-2" />
               Join WhatsApp Community
@@ -214,7 +217,9 @@ Sent from Women's Health Duo Website`;
               <h3 className="font-heading text-xl font-semibold text-foreground mb-4">
                 Dr. Charmi Shah
               </h3>
-              <p className="text-sm text-primary font-medium mb-3">Obstetrician & Gynecologist, IVF Specialist</p>
+              <p className="text-sm text-primary font-medium mb-3">
+                Obstetrician & Gynecologist, IVF Specialist
+              </p>
               <div className="space-y-3">
                 <a
                   href="tel:+917990550754"
@@ -246,7 +251,9 @@ Sent from Women's Health Duo Website`;
               <h3 className="font-heading text-xl font-semibold text-foreground mb-4">
                 Dr. Zalak Shah (PT)
               </h3>
-              <p className="text-sm text-primary font-medium mb-3">Women's Health Physiotherapist & Pilates Instructor</p>
+              <p className="text-sm text-primary font-medium mb-3">
+                Women's Health Physiotherapist & Pilates Instructor
+              </p>
               <div className="space-y-3">
                 <a
                   href="tel:+917990550754"
@@ -280,21 +287,30 @@ Sent from Women's Health Duo Website`;
               </h3>
               <div className="space-y-3">
                 <a
-                  href="https://www.instagram.com/womenshealthduo"
+                  href={CONTACT.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 text-primary hover:underline"
+                  className="inline-flex items-center gap-3 text-primary hover:underline underline-offset-4"
                 >
-                  <Instagram className="w-6 h-6" />
-                  @womenshealthduo
+                  <Instagram className="w-6 h-6 shrink-0" />
+                  @womenshealthduo on Instagram
+                </a>
+                <a
+                  href={CONTACT.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 text-primary hover:underline underline-offset-4"
+                >
+                  <Youtube className="w-6 h-6 shrink-0" />
+                  Women&apos;s Health Duo on YouTube
                 </a>
                 <p className="text-sm text-muted-foreground">
-                  A holistic approach to women's health! Follow us for tips on pregnancy, fertility, 
+                  A holistic approach to women's health! Follow us for tips on pregnancy, fertility,
                   pelvic health, and wellness.
                 </p>
                 <div className="pt-3">
                   <a
-                    href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                    href={CONTACT.whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors"

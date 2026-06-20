@@ -49,7 +49,12 @@
     --nude: 25 30% 88%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(30 40% 96%) 0%, hsl(12 45% 95%) 50%, hsl(25 30% 94%) 100%);
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(30 40% 96%) 0%,
+      hsl(12 45% 95%) 50%,
+      hsl(25 30% 94%) 100%
+    );
     --gradient-card: linear-gradient(180deg, hsl(30 30% 99%) 0%, hsl(30 25% 97%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(12 45% 55%) 0%, hsl(18 50% 48%) 100%);
 
@@ -59,8 +64,8 @@
     --shadow-elevated: 0 20px 50px -15px hsl(20 15% 15% / 0.15);
 
     /* Typography */
-    --font-heading: 'Cormorant Garamond', serif;
-    --font-body: 'DM Sans', sans-serif;
+    --font-heading: "Cormorant Garamond", serif;
+    --font-body: "DM Sans", sans-serif;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -113,6 +118,16 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
   * {
     @apply border-border;
   }
@@ -121,8 +136,36 @@
     @apply bg-background text-foreground font-body antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading;
+  }
+}
+
+@layer components {
+  /* Accessible skip navigation (visible on keyboard focus) */
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 100;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: var(--shadow-elevated);
+  }
+  .skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
   }
 }
 

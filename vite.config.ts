@@ -8,7 +8,6 @@ import {
   DEFAULT_TITLE,
   DEFAULT_DESCRIPTION,
   KEYWORDS,
-  TWITTER_SITE,
   OG_IMAGE_PATH,
   SITE_NAME,
 } from "./src/config/site.defaults.ts";
@@ -27,7 +26,6 @@ function htmlSeoReplacements(siteUrl: string) {
     DEFAULT_TITLE,
     DEFAULT_DESCRIPTION,
     KEYWORDS,
-    TWITTER_SITE,
     OG_IMAGE_PATH,
   };
 }
@@ -101,6 +99,23 @@ export default defineConfig(({ mode }) => {
     server: {
       host: "::",
       port: 8080,
+    },
+    build: {
+      target: "es2022",
+      cssMinify: true,
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (!id.includes("node_modules")) return;
+            if (id.includes("framer-motion")) return "vendor-motion";
+            if (id.includes("lucide-react")) return "vendor-icons";
+            if (id.includes("react-router")) return "vendor-router";
+            if (id.includes("react-dom") || id.includes("/react/")) return "vendor-react";
+            if (id.includes("@radix-ui")) return "vendor-radix";
+            return "vendor";
+          },
+        },
+      },
     },
     plugins: [
       react(),

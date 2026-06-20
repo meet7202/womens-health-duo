@@ -3,7 +3,6 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import {
   Baby,
-  Heart,
   Flower2,
   Dumbbell,
   Stethoscope,
@@ -27,32 +26,38 @@ const services = [
       {
         icon: Baby,
         title: "Pregnancy & High-Risk Obstetrics",
-        description: "Comprehensive antenatal care, high-risk pregnancy management, and safe delivery support.",
+        description:
+          "Comprehensive antenatal care, high-risk pregnancy management, and safe delivery support.",
       },
       {
         icon: Flower2,
         title: "IVF & Fertility Treatments",
-        description: "Advanced reproductive techniques including IVF, IUI, ovulation induction, and complete infertility workup.",
+        description:
+          "Advanced reproductive techniques including IVF, IUI, ovulation induction, and complete infertility workup.",
       },
       {
         icon: Scissors,
         title: "Laparoscopic Surgery",
-        description: "Minimally invasive surgical procedures for fibroids, ovarian cysts, endometriosis, and hysterectomy.",
+        description:
+          "Minimally invasive surgical procedures for fibroids, ovarian cysts, endometriosis, and hysterectomy.",
       },
       {
         icon: HeartPulse,
         title: "PCOS & Hormonal Disorders",
-        description: "Expert management of polycystic ovarian syndrome, menstrual irregularities, and hormonal imbalances.",
+        description:
+          "Expert management of polycystic ovarian syndrome, menstrual irregularities, and hormonal imbalances.",
       },
       {
         icon: Stethoscope,
         title: "Gynecological Care",
-        description: "Routine check-ups, Pap smears, cervical cancer screening, and treatment of infections.",
+        description:
+          "Routine check-ups, Pap smears, cervical cancer screening, and treatment of infections.",
       },
       {
         icon: ShieldCheck,
         title: "Menopause & Wellness",
-        description: "Compassionate care for menopausal symptoms, osteoporosis prevention, and women's wellness.",
+        description:
+          "Compassionate care for menopausal symptoms, osteoporosis prevention, and women's wellness.",
       },
     ],
   },
@@ -64,32 +69,38 @@ const services = [
       {
         icon: Activity,
         title: "Pelvic Floor Rehabilitation",
-        description: "Specialized treatment for pelvic floor dysfunction, urinary incontinence, pelvic organ prolapse, and pelvic pain.",
+        description:
+          "Specialized treatment for pelvic floor dysfunction, urinary incontinence, pelvic organ prolapse, and pelvic pain.",
       },
       {
         icon: Baby,
         title: "Antenatal & Postnatal Care",
-        description: "Pregnancy exercises, birth preparation, diastasis recti treatment, and postpartum recovery programs.",
+        description:
+          "Pregnancy exercises, birth preparation, diastasis recti treatment, and postpartum recovery programs.",
       },
       {
         icon: Dumbbell,
         title: "STOTT Pilates",
-        description: "Certified Pilates instruction for core strength, flexibility, posture correction, and overall fitness.",
+        description:
+          "Certified Pilates instruction for core strength, flexibility, posture correction, and overall fitness.",
       },
       {
         icon: Move,
         title: "Musculoskeletal Physiotherapy",
-        description: "Treatment for back pain, neck pain, joint issues, and sports injuries specific to women.",
+        description:
+          "Treatment for back pain, neck pain, joint issues, and sports injuries specific to women.",
       },
       {
         icon: Zap,
         title: "Core & Functional Training",
-        description: "Personalized exercise programs for core stability, strength building, and functional movement.",
+        description:
+          "Personalized exercise programs for core stability, strength building, and functional movement.",
       },
       {
         icon: Sparkles,
         title: "Women's Wellness Programs",
-        description: "Holistic rehabilitation combining physiotherapy and Pilates for optimal health outcomes.",
+        description:
+          "Holistic rehabilitation combining physiotherapy and Pilates for optimal health outcomes.",
       },
     ],
   },
@@ -109,12 +120,14 @@ export const ServicesSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="text-primary font-medium text-sm uppercase tracking-wider">Our Services</span>
+          <span className="text-primary font-medium text-sm uppercase tracking-wider">
+            Our Services
+          </span>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground mt-4 mb-6">
             Comprehensive <span className="text-primary italic">Care</span> for Every Woman
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            From fertility and pregnancy to postpartum recovery and beyond, we offer integrated 
+            From fertility and pregnancy to postpartum recovery and beyond, we offer integrated
             healthcare solutions tailored to your unique needs.
           </p>
         </motion.div>
@@ -128,11 +141,13 @@ export const ServicesSection = () => {
         >
           <div className="flex items-center justify-center gap-3 mb-2">
             <Video className="w-6 h-6 text-primary" />
-            <h3 className="font-heading text-xl font-semibold text-foreground">Online Consultations Available</h3>
+            <h3 className="font-heading text-xl font-semibold text-foreground">
+              Online Consultations Available
+            </h3>
           </div>
           <p className="text-muted-foreground">
-            Can't visit in person? Book a video consultation from the comfort of your home. 
-            Get expert advice from both our specialists remotely.
+            Can't visit in person? Book a video consultation from the comfort of your home. Get
+            expert advice from both our specialists remotely.
           </p>
         </motion.div>
 
@@ -191,11 +206,11 @@ export const ServicesSection = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-16 text-center"
         >
-          <p className="text-muted-foreground mb-4">
-            Not sure which service you need?
-          </p>
+          <p className="text-muted-foreground mb-4">Not sure which service you need?</p>
           <button
-            onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() =>
+              document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })
+            }
             className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
           >
             Book a consultation to discuss your needs
