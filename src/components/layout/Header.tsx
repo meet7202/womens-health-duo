@@ -36,9 +36,9 @@ export const Header = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="w-12 h-12 flex-shrink-0">
-              <img 
-                src={whdLogo} 
-                alt="Women's Health Duo Logo" 
+              <img
+                src={whdLogo}
+                alt="Women's Health Duo Logo"
                 className="w-full h-full object-contain"
               />
             </div>
@@ -46,9 +46,7 @@ export const Header = () => {
               <h1 className="font-heading text-xl font-semibold text-foreground">
                 Women's Health Duo
               </h1>
-              <p className="text-xs text-muted-foreground -mt-0.5">
-                Dr. Charmi & Dr. Zalak Shah
-              </p>
+              <p className="text-xs text-muted-foreground -mt-0.5">Dr. Charmi & Dr. Zalak Shah</p>
             </div>
           </motion.a>
 
@@ -56,9 +54,10 @@ export const Header = () => {
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item, index) => (
               <motion.button
+                type="button"
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
@@ -86,8 +85,12 @@ export const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
+            type="button"
+            aria-expanded={isOpen}
+            aria-controls="mobile-nav"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-foreground"
+            className="md:hidden p-2 text-foreground rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -103,12 +106,13 @@ export const Header = () => {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-background border-t border-border/50"
           >
-            <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
+            <nav id="mobile-nav" className="container mx-auto px-4 py-4 flex flex-col gap-2">
               {navItems.map((item) => (
                 <button
+                  type="button"
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-left py-3 px-4 text-foreground hover:bg-accent rounded-lg transition-colors"
+                  className="text-left py-3 px-4 text-foreground hover:bg-accent rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 >
                   {item.label}
                 </button>

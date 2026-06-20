@@ -62,7 +62,9 @@ export const TestimonialsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="text-primary font-medium text-sm uppercase tracking-wider">Testimonials</span>
+          <span className="text-primary font-medium text-sm uppercase tracking-wider">
+            Testimonials
+          </span>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground mt-4 mb-6">
             What Our <span className="text-primary italic">Patients</span> Say
           </h2>
@@ -119,9 +121,7 @@ export const TestimonialsSection = () => {
               className="bg-card rounded-2xl p-6 shadow-soft border border-border/30 hover:shadow-card transition-shadow duration-300"
             >
               <Quote className="w-8 h-8 text-primary/20 mb-4" />
-              <p className="text-foreground leading-relaxed mb-4 text-sm">
-                "{testimonial.text}"
-              </p>
+              <p className="text-foreground leading-relaxed mb-4 text-sm">"{testimonial.text}"</p>
               <div className="flex items-center justify-between pt-4 border-t border-border/50">
                 <div>
                   <p className="font-medium text-foreground">{testimonial.name}</p>

@@ -1,6 +1,5 @@
-import { Heart, Instagram, MessageCircle, Mail, Phone } from "lucide-react";
-
-const WHATSAPP_NUMBER = "917990550754";
+import { Heart, Instagram, Youtube, MessageCircle, Mail, Phone } from "lucide-react";
+import { CONTACT } from "@/config/site";
 
 export const Footer = () => {
   return (
@@ -16,8 +15,8 @@ export const Footer = () => {
               <h3 className="font-heading text-xl font-semibold">Women's Health Duo</h3>
             </div>
             <p className="text-background/70 text-sm leading-relaxed">
-              Two sisters, one mission: comprehensive women's healthcare combining 
-              medical expertise with physiotherapy and wellness.
+              Two sisters, one mission: comprehensive women's healthcare combining medical expertise
+              with physiotherapy and wellness.
             </p>
           </div>
 
@@ -29,7 +28,7 @@ export const Footer = () => {
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase()}`}
-                    className="text-background/70 hover:text-background transition-colors text-sm"
+                    className="text-background/70 hover:text-background transition-colors text-sm underline-offset-4 hover:underline"
                   >
                     {link}
                   </a>
@@ -42,34 +41,43 @@ export const Footer = () => {
           <div>
             <h4 className="font-heading text-lg font-semibold mb-4">Connect</h4>
             <div className="space-y-2 text-sm text-background/70">
-              <a 
-                href="tel:+917990550754" 
-                className="flex items-center gap-2 hover:text-background transition-colors"
+              <a
+                href={`tel:${CONTACT.phoneE164}`}
+                className="flex items-center gap-2 rounded-md hover:text-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background/50"
               >
                 <Phone className="w-4 h-4" />
                 +91-7990550754
               </a>
-              <a 
-                href="mailto:womenshealthduo@gmail.com" 
-                className="flex items-center gap-2 hover:text-background transition-colors"
+              <a
+                href={`mailto:${CONTACT.email}`}
+                className="flex items-center gap-2 rounded-md hover:text-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background/50"
               >
                 <Mail className="w-4 h-4" />
-                womenshealthduo@gmail.com
+                {CONTACT.email}
               </a>
               <a
-                href="https://www.instagram.com/womenshealthduo"
+                href={CONTACT.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-background transition-colors"
+                className="flex items-center gap-2 rounded-md hover:text-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background/50"
               >
                 <Instagram className="w-4 h-4" />
-                @womenshealthduo
+                Instagram
               </a>
               <a
-                href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                href={CONTACT.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-background transition-colors"
+                className="flex items-center gap-2 rounded-md hover:text-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background/50"
+              >
+                <Youtube className="w-4 h-4" />
+                YouTube
+              </a>
+              <a
+                href={CONTACT.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-md hover:text-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background/50"
               >
                 <MessageCircle className="w-4 h-4" />
                 WhatsApp Us

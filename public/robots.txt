@@ -1,14 +1,32 @@
+# Default for local dev; production `npm run build` overwrites robots.txt in dist with the same rules + your VITE_SITE_URL sitemap.
+User-agent: *
+Allow: /
+
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
-User-agent: Twitterbot
+User-agent: GPTBot
 Allow: /
 
-User-agent: facebookexternalhit
+User-agent: ChatGPT-User
 Allow: /
 
-User-agent: *
+User-agent: OAI-SearchBot
 Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://womenshealthduo.com/sitemap.xml

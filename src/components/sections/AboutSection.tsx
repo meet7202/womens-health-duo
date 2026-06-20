@@ -11,7 +11,14 @@ const doctors = [
     title: "Obstetrician & Gynecologist, IVF Specialist & Laparoscopic Surgeon",
     description:
       "Dr. Charmi Shah holds an MBBS and MS in Obstetrics & Gynecology, with specialized fellowship training in Laparoscopy and IVF. With over a decade of clinical experience, she has successfully managed thousands of high-risk pregnancies, complex gynecological surgeries, and fertility treatments. Her expertise spans minimally invasive laparoscopic procedures, advanced reproductive techniques, and comprehensive women's healthcare.",
-    specialties: ["Obstetrics & Gynecology", "IVF & Fertility", "Laparoscopic Surgery", "High-Risk Pregnancy", "PCOS Management", "Menopause Care"],
+    specialties: [
+      "Obstetrics & Gynecology",
+      "IVF & Fertility",
+      "Laparoscopic Surgery",
+      "High-Risk Pregnancy",
+      "PCOS Management",
+      "Menopause Care",
+    ],
     rating: "4.9",
     reviews: "41",
     location: "Mumbai, India",
@@ -24,7 +31,14 @@ const doctors = [
     title: "Women's Health Physiotherapist & Pilates Instructor",
     description:
       "Dr. Zalak Shah is a qualified Physiotherapist with a Bachelor's and Master's degree in Physiotherapy, certified as a STOTT Pilates Instructor. With years of experience across leading hospitals and her fully-equipped Pilates studio, she integrates evidence-based physiotherapy with Pilates methodology to deliver superior patient outcomes. Her holistic approach addresses pelvic health, pre and postnatal care, and musculoskeletal rehabilitation.",
-    specialties: ["Pelvic Floor Rehabilitation", "Antenatal & Postnatal Care", "STOTT Pilates", "Diastasis Recti", "Urinary Incontinence", "Core Strengthening"],
+    specialties: [
+      "Pelvic Floor Rehabilitation",
+      "Antenatal & Postnatal Care",
+      "STOTT Pilates",
+      "Diastasis Recti",
+      "Urinary Incontinence",
+      "Core Strengthening",
+    ],
     rating: "5.0",
     reviews: "23",
     location: "Bangalore, India",
@@ -48,13 +62,15 @@ export const AboutSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="text-primary font-medium text-sm uppercase tracking-wider">About Us</span>
+          <span className="text-primary font-medium text-sm uppercase tracking-wider">
+            About Us
+          </span>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground mt-4 mb-6">
             Meet the <span className="text-primary italic">Sisters</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Two sisters united by their passion for women's health, combining medical expertise 
-            with physiotherapy to provide holistic care at every stage of life.
+            Two sisters united by their passion for women's health, combining medical expertise with
+            physiotherapy to provide holistic care at every stage of life.
           </p>
         </motion.div>
 
@@ -72,8 +88,13 @@ export const AboutSection = () => {
                 <div className="w-40 h-48 rounded-2xl overflow-hidden flex-shrink-0 shadow-lg">
                   <img
                     src={doctor.image}
-                    alt={doctor.name}
-                    className="w-full h-full object-cover object-top"
+                    alt={`${doctor.name} — portrait`}
+                    width={320}
+                    height={384}
+                    sizes="(max-width: 1024px) 160px, 320px"
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover object-top"
                   />
                 </div>
                 <div className="flex-1">
@@ -86,9 +107,7 @@ export const AboutSection = () => {
                     </span>
                   </div>
                   <p className="text-primary font-medium mb-4">{doctor.title}</p>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
-                    {doctor.description}
-                  </p>
+                  <p className="text-muted-foreground leading-relaxed mb-6">{doctor.description}</p>
 
                   {/* Specialties */}
                   <div className="flex flex-wrap justify-center gap-2 mb-6">
@@ -105,11 +124,15 @@ export const AboutSection = () => {
                   {/* Contact Info */}
                   <div className="pt-4 border-t border-border/50 space-y-2">
                     <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
-                      <span className="w-4 h-4 rounded-full bg-sage/20 flex items-center justify-center text-xs">📍</span>
+                      <span className="w-4 h-4 rounded-full bg-sage/20 flex items-center justify-center text-xs">
+                        📍
+                      </span>
                       {doctor.location}
                     </p>
                     <p className="text-sm text-foreground font-medium flex items-center justify-center gap-2">
-                      <span className="w-4 h-4 rounded-full bg-primary/10 flex items-center justify-center text-xs">📞</span>
+                      <span className="w-4 h-4 rounded-full bg-primary/10 flex items-center justify-center text-xs">
+                        📞
+                      </span>
                       {doctor.phone}
                     </p>
                   </div>
@@ -131,7 +154,7 @@ export const AboutSection = () => {
             { icon: Award, label: "Experience", value: "10+ Years Combined" },
             { icon: Users, label: "Patients Treated", value: "5000+" },
             { icon: Stethoscope, label: "Specializations", value: "12+ Areas" },
-          ].map((stat, index) => (
+          ].map((stat) => (
             <div
               key={stat.label}
               className="text-center p-6 rounded-2xl bg-accent/50 border border-border/30"

@@ -1,73 +1,84 @@
-# Welcome to your Lovable project
+# Women's Health Duo
 
-## Project info
+Site: [womenshealthduo.com](https://womenshealthduo.com/)
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Marketing site for Dr. Charmi Shah and Dr. Zalak Shah — **Women's Health Duo**.
 
-## How can I edit this code?
+**Stack:** Vite, React, TypeScript, Tailwind CSS, shadcn/ui.
 
-There are several ways of editing your application.
+## Requirements
 
-**Use Lovable**
+- [Node.js](https://nodejs.org/) (LTS)
+- npm
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Run locally
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+cd womens-health-duo
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Dev server: **http://localhost:8080/**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Scripts
 
-**Use GitHub Codespaces**
+| Command                | Description                |
+| ---------------------- | -------------------------- |
+| `npm run dev`          | Development server         |
+| `npm run build`        | Production build → `dist/` |
+| `npm run preview`      | Serve `dist/` locally      |
+| `npm run lint`         | ESLint                     |
+| `npm run lint:fix`     | ESLint with `--fix`        |
+| `npm run format`       | Prettier write             |
+| `npm run format:check` | Prettier check (CI)        |
+| `npm run typecheck`    | TypeScript (`tsc -b`)      |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Environment & production URL
 
-## What technologies are used for this project?
+Default public URL: **`https://womenshealthduo.com`** (see [`src/config/site.defaults.ts`](src/config/site.defaults.ts)).
 
-This project is built with:
+- Copy [`.env.example`](./.env.example) to `.env` and set **`VITE_SITE_URL`** if you use another domain (no trailing slash).
+- The [GitHub Actions workflow](.github/workflows/deploy-github-pages.yml) sets `VITE_SITE_URL` for CI builds so HTML meta, `robots.txt`, and `sitemap.xml` match production.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Performance
 
-## How can I deploy this project?
+Production build uses code splitting (lazy sections below the fold), shared vendor chunks, trimmed Google Font weights, and image `sizes` / lazy loading where appropriate. After `npm run build`, use `npm run preview` and Chrome DevTools → **Lighthouse** (mobile and desktop) to measure Core Web Vitals.
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Large JPEGs in `src/assets/` (hero and doctor photos) dominate payload; compressing or serving WebP/AVIF will improve load scores further.
 
-## Can I connect a custom domain to my Lovable project?
+## GitHub Pages
 
-Yes, you can!
+### Repo contents
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- [`.github/workflows/deploy-github-pages.yml`](.github/workflows/deploy-github-pages.yml) — on push to **`main`** or **`master`**: `npm ci`, `npm run build`, upload `dist/`, deploy to Pages. Uses **`upload-pages-artifact@v5`** with **`include-hidden-files: true`** so **`.nojekyll`** is included.
+- [`public/CNAME`](./public/CNAME) — custom hostname for Pages.
+- [`public/.nojekyll`](./public/.nojekyll) — disables Jekyll for static assets.
+- Build copies **`index.html` → `404.html`** in `dist/` for SPA routing on Pages.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### One-time setup
+
+1. **Settings → Pages → Build and deployment:** set **Source** to **GitHub Actions** (not “Deploy from a branch”).
+2. Push to `main` / `master` or run the workflow manually.
+3. **Custom domain:** **Settings → Pages → Custom domain** → `womenshealthduo.com` (aligned with `public/CNAME`). Add DNS **A / AAAA** records from [GitHub’s apex domain docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain), then enable **Enforce HTTPS** when available.
+
+### `www` instead of apex
+
+Update [`public/CNAME`](./public/CNAME), `SITE_DEFAULT_URL` in `site.defaults.ts`, and `VITE_SITE_URL` in the workflow to your `www` URL. Use GitHub’s [www subdomain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain) DNS instructions.
+
+### Other hosts
+
+`npm run build` outputs static files in **`dist/`**; you can deploy that folder to Netlify, Cloudflare Pages, S3, etc.
+
+## SEO
+
+- **Meta & canonical:** injected at build from `site.defaults` / `VITE_SITE_URL` (see [`index.html`](index.html), [`vite.config.ts`](vite.config.ts)).
+- **Structured data:** Schema.org JSON-LD in [`src/components/seo/JsonLd.tsx`](src/components/seo/JsonLd.tsx) (`MedicalOrganization`, `Physician`, `WebSite`).
+- **Crawlers:** [`public/llms.txt`](./public/llms.txt); `robots.txt` and `sitemap.xml` are written into **`dist/`** on build.
+- After launch, submit **`https://womenshealthduo.com/sitemap.xml`** in [Google Search Console](https://search.google.com/search-console) and Bing Webmaster Tools.
+
+This project is a standard static Vite app (no Lovable runtime or vendor scripts in the bundle).
+
+## Maintainer notes (AI-assisted)
+
+Updates are expected from **Cursor / Claude** agents. See **[`AGENTS.md`](./AGENTS.md)** for invariants (SEO URLs, GitHub Pages, social links, toast hooks, verification commands). Keep that file in sync when you change deploy or SEO behavior.

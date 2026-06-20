@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-labelledby="whdFaviconTitle">
+  <title id="whdFaviconTitle">Women's Health Duo</title>
+  <defs>
+    <linearGradient id="whdGrad" x1="4" y1="6" x2="28" y2="26" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d47268" />
+      <stop offset="1" stop-color="#a84a3d" />
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="8" fill="#faf6f2" />
+  <!-- Overlapping circles: "duo" / two sisters -->
+  <circle cx="12.5" cy="14" r="7.25" fill="url(#whdGrad)" opacity="0.92" />
+  <circle cx="19.5" cy="14" r="7.25" fill="#a84a3d" opacity="0.88" />
+</svg>
