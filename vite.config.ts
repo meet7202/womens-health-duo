@@ -170,9 +170,7 @@ export default defineConfig(({ mode }) => {
             if (id.includes("react-router")) return "vendor-router";
             if (id.includes("react-dom") || id.includes("/react/")) return "vendor-react";
             if (id.includes("@radix-ui")) return "vendor-radix";
-            if (id.includes("recharts")) return "vendor-recharts";
             if (id.includes("sonner")) return "vendor-sonner";
-            if (id.includes("date-fns")) return "vendor-date-fns";
             if (id.includes("zod")) return "vendor-zod";
             if (id.includes("@hookform")) return "vendor-hookform";
             if (id.includes("embla-carousel")) return "vendor-embla";
