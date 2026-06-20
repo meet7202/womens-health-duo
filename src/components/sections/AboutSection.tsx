@@ -25,6 +25,8 @@ const doctors = [
     phone: "+91-7990550754",
     icon: Stethoscope,
     image: drCharmi,
+    imageWidth: 849,
+    imageHeight: 1024,
   },
   {
     name: "Dr. Zalak Shah (PT)",
@@ -45,6 +47,8 @@ const doctors = [
     phone: "+91-7990550754",
     icon: Heart,
     image: drZalak,
+    imageWidth: 479,
+    imageHeight: 563,
   },
 ];
 
@@ -89,8 +93,8 @@ export const AboutSection = () => {
                   <img
                     src={doctor.image}
                     alt={`${doctor.name} — portrait`}
-                    width={320}
-                    height={384}
+                    width={doctor.imageWidth}
+                    height={doctor.imageHeight}
                     sizes="(max-width: 1024px) 160px, 320px"
                     loading="lazy"
                     decoding="async"
