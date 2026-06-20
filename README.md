@@ -77,7 +77,7 @@ Update [`public/CNAME`](./public/CNAME), `SITE_DEFAULT_URL` in `site.defaults.ts
 - **Crawlers:** [`public/llms.txt`](./public/llms.txt); `robots.txt` and `sitemap.xml` are written into **`dist/`** on build.
 - After launch, submit **`https://womenshealthduo.com/sitemap.xml`** in [Google Search Console](https://search.google.com/search-console) and Bing Webmaster Tools.
 
-This project is a standard static Vite app (no Lovable runtime or vendor scripts in the bundle).
+This project is a standard static Vite app (no third-party hosted builder runtime in the bundle).
 
 ## Maintainer notes (AI-assisted)
 

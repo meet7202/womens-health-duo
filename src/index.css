@@ -206,9 +206,3 @@
     text-wrap: balance;
   }
 }
-
-/* Lovable's preview host injects a fixed "Edit with Lovable" chip (`#lovable-badge`).
-   Self-hosted builds (e.g. GitHub Pages) never include it; this rule is a no-op there. */
-#lovable-badge {
-  display: none !important;
-}
