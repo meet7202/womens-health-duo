@@ -66,4 +66,6 @@ Project sites load at **`https://<user>.github.io/<repo>/`**. A Vite default **`
 
 Do **not** create commits or push unless the user explicitly asked in that conversation. Follow any **commit / PR** user rules they have enabled.
 
+**Ship changes via pull request (default):** Use a **feature branch**, push it, and open a **PR into `main`** (`gh pr create --base main`). Do **not** push to **`main`** directly or merge into **`main` locally** unless the user clearly asks for that in the same conversation. Return the **PR URL** when you open one.
+
 When updating behavior described here, **update `AGENTS.md` in the same change** so the next agent sees current facts.
