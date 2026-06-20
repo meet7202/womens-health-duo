@@ -185,7 +185,7 @@ export function VirtualOnlineConsultationHubPage() {
           </a>{" "}
           ·{" "}
           <Link to={ROUTES.learn} className="text-primary underline underline-offset-4">
-            Learn hub
+            Learn
           </Link>
         </p>
 

@@ -42,7 +42,32 @@ export function DirectoryPresence() {
         >
           Curofy
         </a>
-        . Use the same practice name, phone, and website everywhere you list care.
+        .
+      </p>
+      <h3 className="font-heading text-base font-semibold text-foreground mt-6 mb-2">
+        Google Maps &amp; hours
+      </h3>
+      <p className="text-sm text-muted-foreground leading-relaxed">
+        For Dr. Zalak Shah&apos;s in-person visits, pick the city you plan to see her in—each
+        listing has directions, hours, and phone:{" "}
+        <a
+          href={EXTERNAL.drZalak.googleBusinessAhmedabad}
+          className="text-primary underline underline-offset-4"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ahmedabad
+        </a>{" "}
+        and{" "}
+        <a
+          href={EXTERNAL.drZalak.googleBusinessBangalore}
+          className="text-primary underline underline-offset-4"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Bengaluru (Bangalore)
+        </a>
+        .
       </p>
     </section>
   );

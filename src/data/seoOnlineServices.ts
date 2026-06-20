@@ -76,12 +76,20 @@ export const SEO_ONLINE_SERVICES: readonly SeoOnlineService[] = [
       "Online movement planning from pregnancy through postpartum, birth preparation, recovery, and diastasis-oriented rehab with a women's health physiotherapist and STOTT Pilates–trained clinician.",
   },
   {
+    slug: "mat-pilates-online",
+    title: "Mat Pilates online",
+    shortTitle: "Mat Pilates online",
+    doctor: "zalak",
+    summary:
+      "Live and structured STOTT Mat Pilates–based sessions and coaching for patients anywhere—pairs with in-person Mat & Reformer work in Bangalore and Ahmedabad when you visit India.",
+  },
+  {
     slug: "stott-pilates",
     title: "STOTT Pilates (Mat & Reformer)",
     shortTitle: "STOTT Pilates",
     doctor: "zalak",
     summary:
-      "Mat Pilates online plus remote Reformer-oriented programming and coaching for core, posture, and safe progression—popular with NRIs who want structured women's-health–aware Pilates guidance from India.",
+      "Certified STOTT Pilates on Mat and Reformer—core, posture, and women-focused goals in studio (Bangalore, Ahmedabad) plus remote Reformer-oriented programming and progression coaching for international patients.",
   },
   {
     slug: "musculoskeletal-physiotherapy",

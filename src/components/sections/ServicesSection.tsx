@@ -15,7 +15,6 @@ import {
   Move,
   Zap,
   ShieldCheck,
-  Video,
 } from "lucide-react";
 import { PRACTICE_BOTH_DOCTORS_IN_PERSON } from "@/config/practiceLocations";
 import { ROUTES } from "@/config/routes";
@@ -80,12 +79,6 @@ const services = [
         title: "Prenatal and postnatal care",
         description:
           "Exercise and education from pregnancy through postpartum, birth preparation, diastasis recti care, and recovery—including programs you can continue online when you travel or live abroad.",
-      },
-      {
-        icon: Video,
-        title: "Mat Pilates online",
-        description:
-          "Live and structured STOTT Mat Pilates–based sessions and coaching for patients anywhere—pairs with in-person Mat & Reformer work in Bangalore and Ahmedabad.",
       },
       {
         icon: Dumbbell,

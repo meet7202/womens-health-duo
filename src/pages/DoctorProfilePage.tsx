@@ -13,6 +13,7 @@ import {
   PRACTICE_CHARMI_LOCATIONS_LINE,
   PRACTICE_ZALAK_LOCATIONS_LINE,
 } from "@/config/practiceLocations";
+import { BRAND_ENTITY_LINE } from "@/config/brandLine";
 import drCharmi from "@/assets/dr-charmi.jpeg";
 import drZalak from "@/assets/dr-zalak.jpg";
 
@@ -70,6 +71,9 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
         </h1>
         <p className="text-lg text-primary font-medium mb-1">{d.jobTitle}</p>
         <p className="text-sm text-muted-foreground mb-8">{d.credentials}</p>
+        <p className="text-sm text-foreground/90 border-l-2 border-primary/35 pl-3 mb-8 max-w-2xl">
+          {BRAND_ENTITY_LINE}
+        </p>
 
         <div className="float-none sm:float-right sm:ml-8 sm:mb-4 w-full max-w-[220px] mx-auto sm:mx-0">
           <img
@@ -170,7 +174,7 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
             </a>{" "}
             ·{" "}
             <Link to={ROUTES.learn} className="text-primary underline underline-offset-4">
-              Learn hub
+              Learn
             </Link>
           </p>
           <p className="text-sm text-muted-foreground">
