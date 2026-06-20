@@ -88,14 +88,14 @@ My time zone:
 What I'd like to book:${siteRef(path)}`;
 }
 
-export function whatsappMessageLearn(): string {
+export function whatsappMessageLearn(pagePath: string = ROUTES.learn): string {
   return `Hi Women's Health Duo,
 
-I came from your Learn / YouTube & Instagram hub and would like to book a proper consultation.
+I came from your Learn page and would like to book a proper consultation.
 
 My city & country:
 My time zone:
-Topic:${siteRef(ROUTES.learn)}`;
+Topic:${siteRef(pagePath)}`;
 }
 
 export function whatsappMessageFaq(): string {
@@ -144,7 +144,9 @@ export function whatsappIntentFromPathname(pathname: string): string {
     return whatsappMessageIndiaCityPage("Bangalore", ROUTES.bangalore);
   }
 
-  if (norm === ROUTES.learn) return whatsappMessageLearn();
+  if (norm === ROUTES.learn || norm.startsWith(`${ROUTES.learn}/`)) {
+    return whatsappMessageLearn(norm);
+  }
   if (norm === ROUTES.faq) return whatsappMessageFaq();
 
   if (norm === ROUTES.globalOnline || norm.startsWith(`${ROUTES.globalOnline}/`)) {

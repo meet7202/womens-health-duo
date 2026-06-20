@@ -5,20 +5,32 @@ import { Menu, X, MessageCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import whdLogo from "@/assets/whd-logo.jpg";
 import { ROUTES } from "@/config/routes";
+import { cn } from "@/lib/utils";
 import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 
-const hashNav = [
+const hashNavSections = [
   { label: "About", hash: "about" },
   { label: "Services", hash: "services" },
   { label: "Testimonials", hash: "testimonials" },
   { label: "Contact", hash: "contact" },
 ] as const;
 
+/** Hash links before Learn in the primary nav (About → Services → Testimonials). */
+const HASH_NAV_BEFORE_LEARN = hashNavSections.slice(0, 3);
+/** Hash links after Learn (Contact). */
+const HASH_NAV_AFTER_LEARN = hashNavSections.slice(3);
+
+function normalizePath(p: string) {
+  return p.replace(/\/+$/, "") || "/";
+}
+
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const isHome = location.pathname === "/";
+  const isLearnActive =
+    location.pathname === ROUTES.learn || location.pathname.startsWith(`${ROUTES.learn}/`);
   const whatsappHref = useMemo(
     () => whatsappUrlWithMessage(whatsappIntentFromPathname(location.pathname)),
     [location.pathname],
@@ -56,6 +68,27 @@ export const Header = () => {
     void navigate({ pathname: ROUTES.home, hash }, { replace: isHome });
   };
 
+  /** Learn in the nav: always open the hub and top of page; if already on `/learn`, scroll up (Link alone would not). */
+  const goLearn = (e: React.MouseEvent) => {
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) {
+      return;
+    }
+    e.preventDefault();
+    closeMobile();
+    const path = normalizePath(location.pathname);
+    const learnRoot = normalizePath(ROUTES.learn);
+    if (path === learnRoot) {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+      return;
+    }
+    void navigate(ROUTES.learn);
+    const scrollTop = () => window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    queueMicrotask(scrollTop);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(scrollTop);
+    });
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -91,7 +124,7 @@ export const Header = () => {
             </Link>
           </motion.div>
 
-          <nav className="hidden md:flex items-center gap-5 lg:gap-6" aria-label="Primary">
+          <nav className="hidden md:flex items-center gap-4 lg:gap-6" aria-label="Primary">
             <Link
               to={ROUTES.home}
               onClick={goHome}
@@ -99,7 +132,27 @@ export const Header = () => {
             >
               Home
             </Link>
-            {hashNav.map((item) => (
+            {HASH_NAV_BEFORE_LEARN.map((item) => (
+              <Link
+                key={item.hash}
+                to={{ pathname: ROUTES.home, hash: item.hash }}
+                onClick={(e) => onHashNavClick(e, item.hash)}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              >
+                {item.label}
+              </Link>
+            ))}
+            <Link
+              to={ROUTES.learn}
+              onClick={goLearn}
+              className={cn(
+                "text-sm font-medium transition-colors rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 shrink-0",
+                isLearnActive ? "text-primary" : "text-muted-foreground hover:text-primary",
+              )}
+            >
+              Learn
+            </Link>
+            {HASH_NAV_AFTER_LEARN.map((item) => (
               <Link
                 key={item.hash}
                 to={{ pathname: ROUTES.home, hash: item.hash }}
@@ -170,7 +223,29 @@ export const Header = () => {
               >
                 Home
               </Link>
-              {hashNav.map((item) => (
+              {HASH_NAV_BEFORE_LEARN.map((item) => (
+                <Link
+                  key={item.hash}
+                  to={{ pathname: ROUTES.home, hash: item.hash }}
+                  onClick={(e) => onHashNavClick(e, item.hash)}
+                  className="text-left py-3 px-4 text-foreground hover:bg-accent rounded-lg transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <Link
+                to={ROUTES.learn}
+                onClick={goLearn}
+                className={cn(
+                  "text-left py-3 px-4 rounded-lg transition-colors",
+                  isLearnActive
+                    ? "bg-accent text-primary font-medium"
+                    : "text-foreground hover:bg-accent",
+                )}
+              >
+                Learn
+              </Link>
+              {HASH_NAV_AFTER_LEARN.map((item) => (
                 <Link
                   key={item.hash}
                   to={{ pathname: ROUTES.home, hash: item.hash }}

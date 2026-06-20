@@ -13,7 +13,8 @@
     "format:check": "prettier --check .",
     "typecheck": "tsc -b",
     "preview": "vite preview",
-    "generate:virtual-cities": "node scripts/generate-virtual-consultation-cities.mjs"
+    "generate:virtual-cities": "node scripts/generate-virtual-consultation-cities.mjs",
+    "import:instagram-reels": "node scripts/import-instagram-reel-urls.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

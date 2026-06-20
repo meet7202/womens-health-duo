@@ -1,6 +1,8 @@
 # Women's Health Duo
 
 > Holistic women's healthcare by two sisters: Dr. Charmi Shah (OB-GYN — obstetrics, gynecology, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapist and STOTT Pilates instructor for **Mat** and **Reformer**, including **Mat Pilates online**). **Primary access for international patients is online** (video OB-GYN, online physio / Pilates programs). **In person:** Dr. Charmi in **Mumbai** and **Ahmedabad**; Dr. Zalak in **Bangalore** and **Ahmedabad**—both offer **virtual** visits worldwide.
+>
+> **Entity line (brand ↔ doctors):** Women's Health Duo — Dr. Charmi Shah (OB-GYN / IVF) & Dr. Zalak Shah (women's health physio / STOTT Pilates).
 
 ## Summary
 
@@ -26,7 +28,11 @@
 - [Women's health — Ahmedabad](https://womenshealthduo.com/ahmedabad)
 - [Women's health — Mumbai](https://womenshealthduo.com/mumbai)
 - [Women's health — Bangalore](https://womenshealthduo.com/bangalore)
-- [Learn — YouTube & Instagram hub](https://womenshealthduo.com/learn)
+- [Learn](https://womenshealthduo.com/learn)
+- [Learn — Dr. Charmi clips](https://womenshealthduo.com/learn/dr-charmi)
+- [Learn — Dr. Zalak clips](https://womenshealthduo.com/learn/dr-zalak)
+- [Learn — topic: Fertility](https://womenshealthduo.com/learn/topic/fertility)
+- [Learn — Dr. Zalak · Pregnancy](https://womenshealthduo.com/learn/dr-zalak/topic/pregnancy)
 - [FAQ](https://womenshealthduo.com/faq)
 - [Email — womenshealthduo@gmail.com](mailto:womenshealthduo@gmail.com)
 - [WhatsApp — +91 79905 50754](https://wa.me/917990550754)
@@ -37,8 +43,15 @@
 
 - **Canonical site:** `https://womenshealthduo.com` (no trailing slash in env defaults).
 - **Robots:** [`/robots.txt`](https://womenshealthduo.com/robots.txt) — allows major search and common AI crawlers; references the sitemap URL.
-- **Sitemap:** [`/sitemap.xml`](https://womenshealthduo.com/sitemap.xml) — generated at **`npm run build`** from `SITEMAP_PATHS` in `src/config/routes.ts` (homepage, doctor profiles, India city landings, Learn, FAQ, virtual hub, per-country hubs, every virtual city overview, and every **service × city** URL). Each URL includes **`<lastmod>`** (build date) and a **priority** hint (hub and core pages higher than long-tail service×city pages).
+- **Sitemap:** [`/sitemap.xml`](https://womenshealthduo.com/sitemap.xml) — generated at **`npm run build`** from `SITEMAP_PATHS` in `src/config/routes.ts` (homepage, doctor profiles, India city landings, **Learn hub main + every indexable doctor/topic filter URL**, FAQ, virtual hub, per-country hubs, every virtual city overview, and every **service × city** URL). Each URL includes **`<lastmod>`** (build date) and a **priority** hint (hub and core pages higher than long-tail service×city pages).
 - **HTML head:** root [`index.html`](https://womenshealthduo.com/) receives build-time tokens for title, description, **meta keywords** (comma-separated topics for legacy crawlers), Open Graph, and a **`<link rel="sitemap">`** to the absolute sitemap URL.
+
+## URL patterns (Learn hub — video Shorts & Reels)
+
+- **All clips:** `/learn`
+- **By doctor:** `/learn/dr-charmi`, `/learn/dr-zalak`
+- **By topic:** `/learn/topic/<topicSlug>` (slug from topic label, e.g. `fertility`, `labor-and-delivery`, `pilates`)
+- **Doctor + topic:** `/learn/<doctorSegment>/topic/<topicSlug>` (e.g. `/learn/dr-zalak/topic/pregnancy`)
 
 ## URL patterns (virtual SEO)
 
@@ -50,7 +63,7 @@
 
 ## Online service slugs (`<serviceSlug>`)
 
-These repeat under every virtual city (see `src/data/seoOnlineServices.ts` in the repository): `pregnancy-high-risk-obstetrics`, `ivf-fertility-treatments`, `laparoscopic-surgery`, `pcos-hormonal-disorders`, `gynecological-care`, `menopause-wellness`, `pelvic-floor-rehabilitation`, `antenatal-postnatal-care`, `stott-pilates`, `musculoskeletal-physiotherapy`, `core-functional-training`, `womens-wellness-programs`.
+These repeat under every virtual city (see `src/data/seoOnlineServices.ts` in the repository): `pregnancy-high-risk-obstetrics`, `ivf-fertility-treatments`, `laparoscopic-surgery`, `pcos-hormonal-disorders`, `gynecological-care`, `menopause-wellness`, `pelvic-floor-rehabilitation`, `antenatal-postnatal-care`, `mat-pilates-online`, `stott-pilates`, `musculoskeletal-physiotherapy`, `core-functional-training`, `womens-wellness-programs`.
 
 ## Topics & queries this site is built for
 

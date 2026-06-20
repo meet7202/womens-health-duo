@@ -71,6 +71,11 @@ function escapeXml(text: string): string {
 function sitemapPriority(pathname: string): string {
   const segs = pathname.split("/").filter(Boolean);
   if (segs.length === 0) return "1.0";
+  if (segs[0] === "learn") {
+    if (segs.length === 1) return "0.92";
+    if (segs.length === 2) return "0.88";
+    return "0.86";
+  }
   if (segs[0] === "online-consultation") {
     if (segs.length === 1) return "0.95";
     if (segs[1] === "country") return "0.88";

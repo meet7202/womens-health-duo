@@ -3,6 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ScrollToTop } from "@/components/layout/ScrollToTop";
 import Index from "./pages/Index";
 import { DoctorProfilePage } from "@/pages/DoctorProfilePage";
 import { CityLandingPage } from "@/pages/CityLandingPage";
@@ -39,6 +40,7 @@ const App = () => (
     <Toaster />
     <Sonner />
     <BrowserRouter basename={routerBasename()}>
+      <ScrollToTop />
       <Routes>
         <Route path={ROUTES.home} element={<Index />} />
         <Route path={ROUTES.drCharmi} element={<DoctorProfilePage slug="charmi" />} />
@@ -61,6 +63,9 @@ const App = () => (
         <Route path={ROUTES.onlineConsultation} element={<VirtualOnlineConsultationHubPage />} />
         <Route path={`${ROUTES.globalOnline}/:slug`} element={<LegacyGlobalOnlineCityRedirect />} />
         <Route path={ROUTES.globalOnline} element={<LegacyGlobalOnlineHubRedirect />} />
+        <Route path={`${ROUTES.learn}/topic/:topicSlug`} element={<LearnPage />} />
+        <Route path={`${ROUTES.learn}/:doctorSegment/topic/:topicSlug`} element={<LearnPage />} />
+        <Route path={`${ROUTES.learn}/:doctorSegment`} element={<LearnPage />} />
         <Route path={ROUTES.learn} element={<LearnPage />} />
         <Route path={ROUTES.faq} element={<FaqPage />} />
         <Route

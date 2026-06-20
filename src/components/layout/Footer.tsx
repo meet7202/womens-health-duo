@@ -4,6 +4,7 @@ import { Heart, Instagram, Mail, MessageCircle, Phone, Youtube } from "lucide-re
 import { CONTACT } from "@/config/site";
 import { ROUTES } from "@/config/routes";
 import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsappCta";
+import { BRAND_ENTITY_LINE } from "@/config/brandLine";
 
 const SECTION_LINKS = [
   { label: "About", hash: "about" },
@@ -34,6 +35,9 @@ export const Footer = () => {
             <p className="text-background/70 text-sm leading-relaxed">
               Two sisters, one mission: comprehensive women's healthcare combining medical expertise
               with physiotherapy and wellness.
+            </p>
+            <p className="text-background/85 text-sm leading-relaxed mt-3 border-t border-background/15 pt-3">
+              {BRAND_ENTITY_LINE}
             </p>
           </div>
 
@@ -117,7 +121,7 @@ export const Footer = () => {
                   to={ROUTES.learn}
                   className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
                 >
-                  Learn (YouTube &amp; Instagram)
+                  Learn
                 </Link>
               </li>
               <li>

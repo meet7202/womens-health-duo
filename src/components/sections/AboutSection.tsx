@@ -9,6 +9,7 @@ import {
   PRACTICE_CHARMI_LOCATIONS_SHORT,
   PRACTICE_ZALAK_LOCATIONS_SHORT,
 } from "@/config/practiceLocations";
+import { BRAND_ENTITY_LINE } from "@/config/brandLine";
 import drZalak from "@/assets/dr-zalak.jpg";
 import drCharmi from "@/assets/dr-charmi.jpeg";
 
@@ -85,6 +86,9 @@ export const AboutSection = () => {
           <p className="text-lg text-muted-foreground leading-relaxed">
             Two sisters united by their passion for women's health, combining medical expertise with
             physiotherapy to provide holistic care at every stage of life.
+          </p>
+          <p className="text-base text-foreground/90 leading-relaxed mt-4 max-w-2xl mx-auto border-t border-border/40 pt-4">
+            {BRAND_ENTITY_LINE}
           </p>
         </motion.div>
 

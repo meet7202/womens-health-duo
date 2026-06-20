@@ -1,5 +1,6 @@
 /** Public routes (pathname only; React Router `basename` applies on GitHub Pages). */
 import { SEO_ONLINE_SERVICES } from "../data/seoOnlineServices";
+import { learnHubSitemapPaths, LEARN_HUB_BASE_PATH } from "../lib/learnHubUrls";
 import {
   VIRTUAL_CONSULTATION_HUB_PATH,
   VIRTUAL_CONSULTATION_COUNTRIES,
@@ -24,6 +25,9 @@ export const ROUTES = {
   globalOnline: "/global-online",
 } as const;
 
+const _learnHubPathMatchesRoute: typeof LEARN_HUB_BASE_PATH = ROUTES.learn;
+void _learnHubPathMatchesRoute;
+
 /** Every service × virtual city — for sitemap.xml only (see `VirtualOnlineServiceCityPage`). */
 const VIRTUAL_SERVICE_CITY_SITEMAP_PATHS: readonly string[] = VIRTUAL_CONSULTATION_CITIES.flatMap(
   (c) => SEO_ONLINE_SERVICES.map((s) => virtualServiceCityPath(c, s.slug)),
@@ -40,7 +44,7 @@ export const SITEMAP_PATHS: readonly string[] = [
   ROUTES.ahmedabad,
   ROUTES.mumbai,
   ROUTES.bangalore,
-  ROUTES.learn,
+  ...learnHubSitemapPaths(),
   ROUTES.faq,
   ROUTES.onlineConsultation,
   ...VIRTUAL_COUNTRY_SITEMAP_PATHS,
