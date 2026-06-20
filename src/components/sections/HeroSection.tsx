@@ -2,8 +2,6 @@ import { motion } from "framer-motion";
 import { Heart, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-doctors.jpg";
-import drZalak from "@/assets/dr-zalak.png";
-import drCharmi from "@/assets/dr-charmi.jpeg";
 
 export const HeroSection = () => {
   const scrollToSection = (href: string) => {
@@ -15,14 +13,14 @@ export const HeroSection = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center gradient-hero overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {/* Decorative elements — keep low opacity so headline stays crisp */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-rose-light/50 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cream/50 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-rose-light/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cream/20 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <motion.div
@@ -35,18 +33,20 @@ export const HeroSection = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className="inline-flex items-center gap-2 bg-primary/20 px-4 py-2 rounded-full mb-6 shadow-sm"
+              className="inline-flex items-center gap-2 border border-primary/25 bg-primary/15 px-4 py-2 rounded-full mb-6 shadow-sm"
             >
-              <Heart className="w-4 h-4 text-primary" />
-              <span className="text-sm font-semibold text-primary">Two Sisters, One Mission</span>
+              <Heart className="w-4 h-4 text-terracotta" />
+              <span className="text-sm font-semibold text-terracotta">Two Sisters, One Mission</span>
             </motion.div>
 
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6" style={{ color: 'hsl(20 20% 8%)' }}>
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight mb-6 text-[hsl(20_28%_11%)] [text-shadow:0_1px_0_hsl(30_40%_99%),0_0_24px_hsl(30_40%_98%_/_0.9)]">
               A Holistic Approach to{" "}
-              <span className="text-primary italic font-extrabold">Women's Health</span>
+              <span className="text-[hsl(12_58%_36%)] italic font-extrabold">
+                Women&apos;s Health
+              </span>
             </h1>
 
-            <p className="text-lg sm:text-xl max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed font-semibold" style={{ color: 'hsl(20 15% 25%)' }}>
+            <p className="text-lg sm:text-xl max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed font-semibold text-[hsl(20_22%_18%)]">
               Comprehensive care from pregnancy to postpartum, fertility to pelvic health. 
               We combine medical expertise with physiotherapy and pilates for complete wellness.
             </p>
@@ -78,15 +78,15 @@ export const HeroSection = () => {
             >
               <div className="text-center">
                 <p className="font-heading text-3xl font-bold text-primary">4.9★</p>
-                <p className="text-sm font-medium" style={{ color: 'hsl(20 15% 35%)' }}>Google Rating</p>
+                <p className="text-sm font-medium text-[hsl(20_18%_28%)]">Google Rating</p>
               </div>
               <div className="text-center">
                 <p className="font-heading text-3xl font-bold text-primary">5000+</p>
-                <p className="text-sm font-medium" style={{ color: 'hsl(20 15% 35%)' }}>Patients Treated</p>
+                <p className="text-sm font-medium text-[hsl(20_18%_28%)]">Patients Treated</p>
               </div>
               <div className="text-center">
                 <p className="font-heading text-3xl font-bold text-primary">10+</p>
-                <p className="text-sm font-medium" style={{ color: 'hsl(20 15% 35%)' }}>Years Experience</p>
+                <p className="text-sm font-medium text-[hsl(20_18%_28%)]">Years Experience</p>
               </div>
             </motion.div>
           </motion.div>
@@ -144,7 +144,7 @@ export const HeroSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2"
       >
         <motion.button
           onClick={() => scrollToSection("#about")}

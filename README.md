@@ -1,73 +1,92 @@
-# Welcome to your Lovable project
+# Women's Health Duo
 
-## Project info
+Live site: **[womenshealthduo.com](https://womenshealthduo.com/)**
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Marketing site for **Women's Health Duo** — Dr. Charmi Shah and Dr. Zalak Shah.
 
-## How can I edit this code?
+Stack: [Vite](https://vitejs.dev/), [React](https://react.dev/), [TypeScript](https://www.typescriptlang.org/), [Tailwind CSS](https://tailwindcss.com/), [shadcn/ui](https://ui.shadcn.com/).
 
-There are several ways of editing your application.
+## Prerequisites
 
-**Use Lovable**
+- [Node.js](https://nodejs.org/) (LTS recommended)
+- npm (comes with Node)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Run locally
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+cd womens-health-duo
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The dev server listens on **http://localhost:8080/** by default.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+This repo includes a [`.npmrc`](./.npmrc) that uses the public npm registry (`registry.npmjs.org`) so installs behave the same on any machine.
 
-**Use GitHub Codespaces**
+## Production URL
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Canonical site: **`https://womenshealthduo.com`** (no trailing slash in config).
 
-## What technologies are used for this project?
+- Defaults live in [`src/config/site.defaults.ts`](./src/config/site.defaults.ts) (`SITE_DEFAULT_URL`).
+- Override locally with `VITE_SITE_URL` in `.env` (see [`.env.example`](./.env.example)).
+- The GitHub Actions workflow sets `VITE_SITE_URL` for builds so SEO files match production.
 
-This project is built with:
+## Other scripts
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+| Command           | Description                        |
+| ----------------- | ---------------------------------- |
+| `npm run build`   | Production build to `dist/`      |
+| `npm run preview` | Serve the production build locally |
+| `npm run lint`    | Run ESLint                         |
 
-## How can I deploy this project?
+## Deploy on GitHub Pages (this project)
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+The repo is set up for **GitHub Actions → GitHub Pages** with custom domain **`womenshealthduo.com`**.
 
-## Can I connect a custom domain to my Lovable project?
+### What’s already in the repo
 
-Yes, you can!
+- [`.github/workflows/deploy-github-pages.yml`](./.github/workflows/deploy-github-pages.yml) — builds on push to `main` or `master` and deploys `dist/`.
+- [`public/CNAME`](./public/CNAME) — tells GitHub Pages the custom hostname (`womenshealthduo.com`).
+- [`public/.nojekyll`](./public/.nojekyll) — disables Jekyll so static assets behave predictably.
+- **SPA routing:** after each build, `index.html` is copied to **`404.html`** so direct URLs and refreshes on unknown paths still load the React app (needed for GitHub Pages + `BrowserRouter`).
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### One-time GitHub setup
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+1. **Push** this repository to GitHub (if it isn’t already).
+2. **Settings → Pages**
+   - **Build and deployment → Source:** choose **GitHub Actions** (not “Deploy from a branch” unless you prefer that older flow).
+3. **Settings → Pages → Custom domain**
+   - Enter **`womenshealthduo.com`** and save. GitHub may already detect it from `public/CNAME` after the first successful deploy.
+   - Enable **Enforce HTTPS** once DNS and the certificate are ready.
+4. **DNS at your registrar** (for apex `womenshealthduo.com`), add GitHub’s recommended records. Commonly for the apex you add **A** (and optional **AAAA**) records pointing to GitHub Pages; exact IPs can change — follow the current list under GitHub’s docs: [Configuring an apex domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain).
+5. Wait for DNS + TLS (often minutes to a few hours). Open **https://womenshealthduo.com** and confirm the site loads.
+6. **Optional:** In repository **Settings → Pages**, you can set a branch rename default to `main` if you use `main` only; the workflow triggers on **`main` or `master`**.
+
+### After each push
+
+Workflow runs **`npm ci` → `npm run build`** (with `VITE_SITE_URL=https://womenshealthduo.com`) and publishes **`dist/`** to Pages.
+
+### If you use `www` instead of apex
+
+1. Change [`public/CNAME`](./public/CNAME) to `www.womenshealthduo.com`.
+2. Set `SITE_DEFAULT_URL` and CI `VITE_SITE_URL` to **`https://www.womenshealthduo.com`** so canonicals, `sitemap.xml`, and Open Graph stay consistent.
+3. Configure DNS for the `www` name per GitHub’s [www subdomain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain) instructions.
+
+### Other hosts
+
+`npm run build` still outputs a normal static **`dist/`** folder; you can upload it to Netlify, Cloudflare Pages, S3, etc., if you ever move off GitHub Pages.
+
+## SEO & discoverability
+
+- **Canonical URL & social previews:** `https://womenshealthduo.com` is the default; CI passes `VITE_SITE_URL` so builds stay aligned. [`src/config/site.defaults.ts`](./src/config/site.defaults.ts) holds titles, descriptions, and keywords.
+- **Structured data:** The home page emits Schema.org JSON-LD (`MedicalOrganization`, `Physician`, `WebSite`) in [`src/components/seo/JsonLd.tsx`](./src/components/seo/JsonLd.tsx).
+- **AI / LLM crawlers:** [`public/llms.txt`](./public/llms.txt) summarizes the practice. `robots.txt` (generated in `dist/` at build) lists a `Sitemap` URL on your domain.
+- **Search Console / Bing:** Submit **`https://womenshealthduo.com/sitemap.xml`** after go-live.
+
+### Lovable / vendor footprint
+
+There are **no Lovable domains, scripts, or meta tags** in this codebase (no `lovable-tagger`, no Lovable Open Graph images, no Lovable README workflow). The app is a standard Vite + React static site suitable for GitHub Pages and normal SEO.
+
+## SEO note
+
+Technical SEO helps discovery; it does not guarantee ranking. Keep content accurate and match the real services and locations you offer.

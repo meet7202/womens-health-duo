@@ -1,0 +1,30 @@
+# Women's Health Duo
+
+> Holistic women's healthcare by two sisters: Dr. Charmi Shah (OB-GYN — obstetrics, gynecology, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapist and STOTT Pilates instructor for **Mat** and **Reformer**). They serve **Ahmedabad, Mumbai, and Bangalore (Bengaluru)** in India and offer **global online consultations, classes, and programs** for patients and students worldwide.
+
+## Summary
+
+- **Brand:** Women's Health Duo
+- **Cities (India):** Ahmedabad, Mumbai, Bangalore / Bengaluru — in-person and hybrid care where applicable; strong emphasis on **online** access for people anywhere.
+- **Dr. Charmi Shah (OB-GYN):** Pregnancy and high-risk obstetrics, gynecology, IVF/IUI and fertility workup, laparoscopic surgery, PCOS, endometriosis, menopause, routine women's health — **online OB-GYN consults** available globally.
+- **Dr. Zalak Shah (physio & Pilates):** Women's health physiotherapy, pelvic floor, antenatal/postnatal rehab, musculoskeletal care for women, **STOTT Pilates on Mat and Reformer**, wellness programs — **online classes and guidance** for international clients.
+- **Delivery:** Clinic/studio presence in India (see website contact); **telehealth and virtual Mat/Reformer-aligned programming** for worldwide reach.
+
+## Contact & web presence
+
+- **Website:** https://womenshealthduo.com/
+- **Email:** womenshealthduo@gmail.com
+- **Phone / WhatsApp:** +91-7990550754
+- **Instagram:** https://www.instagram.com/womenshealthduo
+
+## Page anchors (single-page site)
+
+- Home: https://womenshealthduo.com/#home
+- About: https://womenshealthduo.com/#about
+- Services: https://womenshealthduo.com/#services
+- Testimonials: https://womenshealthduo.com/#testimonials
+- Contact: https://womenshealthduo.com/#contact
+
+## Note for site owners
+
+If the live domain differs, update `VITE_SITE_URL` in `.env`, `src/config/site.defaults.ts` (`SITE_DEFAULT_URL`), and this file so links stay accurate.
