@@ -161,12 +161,14 @@ export const HeroSection = () => {
         className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2"
       >
         <motion.button
+          type="button"
+          aria-label="Scroll to About section"
           onClick={() => scrollToSection("#about")}
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
           className="p-2 text-muted-foreground hover:text-primary transition-colors"
         >
-          <ArrowDown className="w-6 h-6" />
+          <ArrowDown className="w-6 h-6" aria-hidden />
         </motion.button>
       </motion.div>
     </section>

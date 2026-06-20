@@ -10,21 +10,21 @@
 - **Dr. Zalak Shah (physio & Pilates):** Women's health physiotherapy, pelvic floor, antenatal/postnatal rehab, musculoskeletal care for women, **STOTT Pilates on Mat and Reformer**, wellness programs — **online classes and guidance** for international clients.
 - **Delivery:** Clinic/studio presence in India (see website contact); **telehealth and virtual Mat/Reformer-aligned programming** for worldwide reach.
 
-## Contact & web presence
+## Primary links
 
-- **Website:** https://womenshealthduo.com/
-- **Email:** womenshealthduo@gmail.com
-- **Phone / WhatsApp:** +91-7990550754 — https://wa.me/917990550754
-- **Instagram:** https://www.instagram.com/womenshealthduo
-- **YouTube:** https://www.youtube.com/@WomensHealthDuo
+- [Women's Health Duo — homepage](https://womenshealthduo.com/)
+- [Email — womenshealthduo@gmail.com](mailto:womenshealthduo@gmail.com)
+- [WhatsApp — +91 79905 50754](https://wa.me/917990550754)
+- [Instagram — @womenshealthduo](https://www.instagram.com/womenshealthduo)
+- [YouTube — @WomensHealthDuo](https://www.youtube.com/@WomensHealthDuo)
 
 ## Page anchors (single-page site)
 
-- Home: https://womenshealthduo.com/#home
-- About: https://womenshealthduo.com/#about
-- Services: https://womenshealthduo.com/#services
-- Testimonials: https://womenshealthduo.com/#testimonials
-- Contact: https://womenshealthduo.com/#contact
+- [Home](https://womenshealthduo.com/#home)
+- [About](https://womenshealthduo.com/#about)
+- [Services](https://womenshealthduo.com/#services)
+- [Testimonials](https://womenshealthduo.com/#testimonials)
+- [Contact](https://womenshealthduo.com/#contact)
 
 ## Note for site owners
 
