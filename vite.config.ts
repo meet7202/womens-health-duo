@@ -20,6 +20,24 @@ function resolveSiteUrl(mode: string) {
   return (env.VITE_SITE_URL || SITE_DEFAULT_URL).replace(/\/$/, "");
 }
 
+/**
+ * Vite `import.meta.env.BASE_URL` and emitted asset paths in `index.html`.
+ * Must be root-relative (`/`) for the custom apex domain so deep links
+ * (e.g. `/online-consultation/.../service`) still load `/assets/...`.
+ * For GitHub project Pages, set `VITE_SITE_URL` to the full Pages origin including
+ * the repo path (e.g. `https://<user>.github.io/womens-health-duo`) so this becomes `/womens-health-duo/`.
+ */
+function vitePublicBase(siteUrl: string): string {
+  try {
+    const { pathname } = new URL(siteUrl);
+    const normalized = pathname.replace(/\/$/, "");
+    if (!normalized) return "/";
+    return `${normalized}/`;
+  } catch {
+    return "/";
+  }
+}
+
 function htmlSeoReplacements(siteUrl: string) {
   return {
     SITE_URL: siteUrl,
@@ -130,9 +148,7 @@ export default defineConfig(({ mode }) => {
   let outDirAbs = path.resolve(rootDir, "dist");
 
   return {
-    // Relative base so one build works on the custom domain (/) and on
-    // GitHub project Pages (…/womens-health-duo/). See AGENTS.md.
-    base: "./",
+    base: vitePublicBase(siteUrl),
     server: {
       host: "::",
       port: 8080,

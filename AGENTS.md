@@ -46,7 +46,9 @@ The Vite plugin copies **`dist/index.html` → `dist/404.html`** so client-side 
 
 ## GitHub Pages: `*.github.io/<repo>/` vs custom domain
 
-Project sites load at **`https://<user>.github.io/<repo>/`**. A Vite default **`base: '/'`** makes the browser request **`/assets/...`** (wrong host path → 404). This repo uses **`base: './'`** in [`vite.config.ts`](vite.config.ts) so script/CSS URLs resolve under both the **repo subpath** and the **custom domain apex**.
+[`vite.config.ts`](vite.config.ts) sets Vite **`base`** from **`VITE_SITE_URL`** (see `vitePublicBase()`): **`/`** when the URL has no pathname (custom apex, e.g. `https://womenshealthduo.com`) so deep client routes still load **`/assets/...`**. A relative **`base: './'`** breaks that: the browser resolves `./assets/...` against the **current** path (e.g. `/online-consultation/seattle/...`), so the bundle 404s and the page stays blank.
+
+For a **GitHub project Pages** preview build, set **`VITE_SITE_URL`** to the full origin **including** the repo path (e.g. `https://<user>.github.io/womens-health-duo`, no trailing slash) so **`base`** becomes **`/womens-health-duo/`** and assets match the host.
 
 [`src/App.tsx`](src/App.tsx) sets **`BrowserRouter`** `basename` to **`/womens-health-duo`** only when `location.pathname` is under that prefix (production). If the GitHub **repository is renamed**, update **`GITHUB_PAGES_REPO_BASE`** in `App.tsx` to match the new path segment.
 

@@ -26,6 +26,27 @@ export const Header = () => {
 
   const closeMobile = () => setIsOpen(false);
 
+  /** Home / logo: SPA `Link` to `/` does not scroll when already on `/`, and RR does not scroll to top by default. */
+  const goHome = (e: React.MouseEvent) => {
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) {
+      return;
+    }
+    e.preventDefault();
+    closeMobile();
+    const alreadyHome = location.pathname === ROUTES.home;
+    const hasHash = Boolean(location.hash.replace(/^#/, "").trim());
+    if (alreadyHome && !hasHash) {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+      return;
+    }
+    void navigate({ pathname: ROUTES.home }, { replace: alreadyHome });
+    const scrollTop = () => window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    queueMicrotask(scrollTop);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(scrollTop);
+    });
+  };
+
   const onHashNavClick = (e: React.MouseEvent, hash: string) => {
     if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) {
       return;
@@ -47,6 +68,7 @@ export const Header = () => {
           >
             <Link
               to={ROUTES.home}
+              onClick={goHome}
               className="flex min-w-0 items-center gap-2 sm:gap-3 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
               <div className="h-10 w-10 shrink-0 sm:h-12 sm:w-12">
@@ -72,6 +94,7 @@ export const Header = () => {
           <nav className="hidden md:flex items-center gap-5 lg:gap-6" aria-label="Primary">
             <Link
               to={ROUTES.home}
+              onClick={goHome}
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
               Home
@@ -142,7 +165,7 @@ export const Header = () => {
             <nav id="mobile-nav" className="container mx-auto px-4 py-4 flex flex-col gap-1">
               <Link
                 to={ROUTES.home}
-                onClick={closeMobile}
+                onClick={goHome}
                 className="text-left py-3 px-4 text-foreground hover:bg-accent rounded-lg transition-colors"
               >
                 Home
