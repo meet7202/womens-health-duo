@@ -17,7 +17,7 @@ Fix failures before handing work back. Prefer **`npm run format`** (or editor fo
 - **Site:** static marketing site for **Women’s Health Duo** — Dr. Charmi Shah (OB-GYN / IVF / laparoscopy) and Dr. Zalak Shah (women’s health physio / STOTT Pilates).
 - **Canonical host:** `https://womenshealthduo.com` (no trailing slash in env and defaults).
 - **Social links in code:** **Instagram, YouTube, WhatsApp only** — do **not** add Twitter/X profile URLs to `CONTACT` or JSON-LD `sameAs`. (HTML may still use generic `twitter:card` meta for link previews; that is not an X account link.)
-- **No Lovable/Uber** vendor scripts or hosted runtime — standard Vite + React bundle only.
+- **No third-party hosted builder runtime** in the bundle — standard static Vite + React only.
 
 ## Where truth lives (edit in the right place)
 

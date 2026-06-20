@@ -2,7 +2,7 @@ import { Toaster as Sonner, toast } from "sonner";
 
 type ToasterProps = React.ComponentProps<typeof Sonner>;
 
-/** Light toasts only — `useTheme()` needs `<ThemeProvider>`; without it React threw and the app went blank. */
+/** Toasts use a fixed light theme (no dynamic theme context). */
 const Toaster = ({ ...props }: ToasterProps) => {
   return (
     <Sonner

@@ -117,7 +117,6 @@ export default defineConfig(({ mode }) => {
             if (id.includes("@radix-ui")) return "vendor-radix";
             if (id.includes("recharts")) return "vendor-recharts";
             if (id.includes("sonner")) return "vendor-sonner";
-            if (id.includes("next-themes")) return "vendor-themes";
             if (id.includes("date-fns")) return "vendor-date-fns";
             if (id.includes("zod")) return "vendor-zod";
             if (id.includes("@hookform")) return "vendor-hookform";

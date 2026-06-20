@@ -23,8 +23,8 @@ export class RootErrorBoundary extends Component<Props, State> {
         <div className="min-h-screen bg-background p-8 font-sans text-foreground">
           <h1 className="text-xl font-semibold mb-2">Something went wrong loading this page</h1>
           <p className="text-muted-foreground mb-4 max-w-prose text-sm leading-relaxed">
-            Try a <strong>hard refresh</strong> (Cmd+Shift+R or Ctrl+Shift+R). If this domain was
-            used on another host (e.g. Lovable), open DevTools → Application →{" "}
+            Try a <strong>hard refresh</strong> (Cmd+Shift+R or Ctrl+Shift+R). If this domain used
+            to point at a different host, open DevTools → Application →{" "}
             <strong>Service Workers</strong> → unregister, then <strong>Clear site data</strong> and
             reload.
           </p>
