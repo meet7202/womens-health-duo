@@ -40,6 +40,12 @@ Fix failures before handing work back. Prefer **`npm run format`** (or editor fo
 
 The Vite plugin copies **`dist/index.html` → `dist/404.html`** so client-side routes work on Pages. If you change `build.outDir` or remove that step, update this file and the README.
 
+## GitHub Pages: `*.github.io/<repo>/` vs custom domain
+
+Project sites load at **`https://<user>.github.io/<repo>/`**. A Vite default **`base: '/'`** makes the browser request **`/assets/...`** (wrong host path → 404). This repo uses **`base: './'`** in [`vite.config.ts`](vite.config.ts) so script/CSS URLs resolve under both the **repo subpath** and the **custom domain apex**.
+
+[`src/App.tsx`](src/App.tsx) sets **`BrowserRouter`** `basename` to **`/womens-health-duo`** only when `location.pathname` is under that prefix (production). If the GitHub **repository is renamed**, update **`GITHUB_PAGES_REPO_BASE`** in `App.tsx` to match the new path segment.
+
 ## Performance conventions
 
 - Below-the-fold sections are **lazy-loaded** where the app already does so; keep heavy dependencies out of the initial chunk when practical.

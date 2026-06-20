@@ -96,6 +96,9 @@ export default defineConfig(({ mode }) => {
   let outDirAbs = path.resolve(rootDir, "dist");
 
   return {
+    // Relative base so one build works on the custom domain (/) and on
+    // GitHub project Pages (…/womens-health-duo/). See AGENTS.md.
+    base: "./",
     server: {
       host: "::",
       port: 8080,
