@@ -1,31 +1,73 @@
 # Women's Health Duo
 
-> Holistic women's healthcare by two sisters: Dr. Charmi Shah (OB-GYN — obstetrics, gynecology, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapist and STOTT Pilates instructor for **Mat** and **Reformer**). They serve **Ahmedabad, Mumbai, and Bangalore (Bengaluru)** in India and offer **global online consultations, classes, and programs** for patients and students worldwide.
+> Holistic women's healthcare by two sisters: Dr. Charmi Shah (OB-GYN — obstetrics, gynecology, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapist and STOTT Pilates instructor for **Mat** and **Reformer**, including **Mat Pilates online**). **Primary access for international patients is online** (video OB-GYN, online physio / Pilates programs). **In person:** Dr. Charmi in **Mumbai** and **Ahmedabad**; Dr. Zalak in **Bangalore** and **Ahmedabad**—both offer **virtual** visits worldwide.
 
 ## Summary
 
 - **Brand:** Women's Health Duo
-- **Cities (India):** Ahmedabad, Mumbai, Bangalore / Bengaluru — in-person and hybrid care where applicable; strong emphasis on **online** access for people anywhere.
-- **Dr. Charmi Shah (OB-GYN):** Pregnancy and high-risk obstetrics, gynecology, IVF/IUI and fertility workup, laparoscopic surgery, PCOS, endometriosis, menopause, routine women's health — **online OB-GYN consults** available globally.
-- **Dr. Zalak Shah (physio & Pilates):** Women's health physiotherapy, pelvic floor, antenatal/postnatal rehab, musculoskeletal care for women, **STOTT Pilates on Mat and Reformer**, wellness programs — **online classes and guidance** for international clients.
-- **Delivery:** Clinic/studio presence in India (see website contact); **telehealth and virtual Mat/Reformer-aligned programming** for worldwide reach.
+- **India:** In-person visits for Dr. Charmi in **Mumbai** and **Ahmedabad**; for Dr. Zalak in **Bangalore** and **Ahmedabad**; strong emphasis on **online** access for people anywhere.
+- **Dr. Charmi Shah (OB-GYN):** Pregnancy and high-risk obstetrics, gynecology, IVF/IUI and fertility workup, laparoscopic surgery, PCOS, endometriosis, menopause, routine women's health — **online OB-GYN consults** available globally; in person in **Mumbai** and **Ahmedabad**.
+- **Dr. Zalak Shah (physio & Pilates):** Women's health physiotherapy, pelvic floor, **prenatal and postnatal** rehab, musculoskeletal care for women, **Mat Pilates online**, **STOTT Pilates on Mat and Reformer**, wellness programs — **online classes and guidance** for international clients; in person in **Bangalore** and **Ahmedabad**.
+- **Delivery:** **Online-first worldwide** (video visits from India); many **city** overview pages plus **service-by-city** pages under `/online-consultation/...` (lists highlight common metros only—**many more cities worldwide** are welcome the same way). Dedicated India city pages (e.g. Ahmedabad, Mumbai, Bengaluru) describe local access.
 
 ## Primary links
 
 - [Women's Health Duo — homepage](https://womenshealthduo.com/)
+- [**Virtual online consultations hub** (NRIs & diaspora cities)](https://womenshealthduo.com/online-consultation)
+- [Example: city overview — Dubai / UAE](https://womenshealthduo.com/online-consultation/dubai)
+- [Example: service × city — IVF & fertility, Dubai](https://womenshealthduo.com/online-consultation/dubai/ivf-fertility-treatments)
+- [Example: online care — London, UK](https://womenshealthduo.com/online-consultation/london)
+- [Example: online care — Singapore](https://womenshealthduo.com/online-consultation/singapore)
+- [Example: online care — Toronto, Canada](https://womenshealthduo.com/online-consultation/toronto)
+- [Dr. Charmi Shah — profile](https://womenshealthduo.com/dr-charmi-shah)
+- [Dr. Zalak Shah — profile](https://womenshealthduo.com/dr-zalak-shah)
+- [Dr. Zalak Shah — Google Business (Ahmedabad)](https://share.google/Dvx1j3yYqsuo2MvDV)
+- [Dr. Zalak Shah — Google Business (Bengaluru / Bangalore)](https://share.google/kjTkctZb9U7bOcpIE)
+- [Women's health — Ahmedabad](https://womenshealthduo.com/ahmedabad)
+- [Women's health — Mumbai](https://womenshealthduo.com/mumbai)
+- [Women's health — Bangalore](https://womenshealthduo.com/bangalore)
+- [Learn — YouTube & Instagram hub](https://womenshealthduo.com/learn)
+- [FAQ](https://womenshealthduo.com/faq)
 - [Email — womenshealthduo@gmail.com](mailto:womenshealthduo@gmail.com)
 - [WhatsApp — +91 79905 50754](https://wa.me/917990550754)
 - [Instagram — @womenshealthduo](https://www.instagram.com/womenshealthduo)
 - [YouTube — @WomensHealthDuo](https://www.youtube.com/@WomensHealthDuo)
 
-## Page anchors (single-page site)
+## Discovery & indexing (production)
+
+- **Canonical site:** `https://womenshealthduo.com` (no trailing slash in env defaults).
+- **Robots:** [`/robots.txt`](https://womenshealthduo.com/robots.txt) — allows major search and common AI crawlers; references the sitemap URL.
+- **Sitemap:** [`/sitemap.xml`](https://womenshealthduo.com/sitemap.xml) — generated at **`npm run build`** from `SITEMAP_PATHS` in `src/config/routes.ts` (homepage, doctor profiles, India city landings, Learn, FAQ, virtual hub, per-country hubs, every virtual city overview, and every **service × city** URL). Each URL includes **`<lastmod>`** (build date) and a **priority** hint (hub and core pages higher than long-tail service×city pages).
+- **HTML head:** root [`index.html`](https://womenshealthduo.com/) receives build-time tokens for title, description, **meta keywords** (comma-separated topics for legacy crawlers), Open Graph, and a **`<link rel="sitemap">`** to the absolute sitemap URL.
+
+## URL patterns (virtual SEO)
+
+- **Hub:** `/online-consultation`
+- **Country index:** `/online-consultation/country/<countrySlug>` (e.g. `india`, `united-states`)
+- **City overview:** `/online-consultation/<citySlug>` (e.g. `dubai`, `london`, `toronto`)
+- **Service × city:** `/online-consultation/<citySlug>/<serviceSlug>` — one page per combination for long-tail discovery.
+- **Legacy:** `/global-online` redirects to `/online-consultation` (preserve old bookmarks).
+
+## Online service slugs (`<serviceSlug>`)
+
+These repeat under every virtual city (see `src/data/seoOnlineServices.ts` in the repository): `pregnancy-high-risk-obstetrics`, `ivf-fertility-treatments`, `laparoscopic-surgery`, `pcos-hormonal-disorders`, `gynecological-care`, `menopause-wellness`, `pelvic-floor-rehabilitation`, `antenatal-postnatal-care`, `stott-pilates`, `musculoskeletal-physiotherapy`, `core-functional-training`, `womens-wellness-programs`.
+
+## Topics & queries this site is built for
+
+- **OB-GYN / IVF (Dr. Charmi):** pregnancy & high-risk obstetrics, gynecology, IVF/IUI discussion, laparoscopy-related consults, PCOS/endometriosis, menopause, routine women's health — **telehealth from India** for NRIs and global families; **in person** in **Mumbai** and **Ahmedabad**.
+- **Physio / Pilates (Dr. Zalak):** pelvic floor, **prenatal and postnatal** care, **Mat Pilates online**, STOTT **Mat & Reformer**, MSK physio, core/functional training, wellness-style programs — **online-first** worldwide; **in person** in **Bangalore** and **Ahmedabad**.
+- **Languages often used on consults:** English, Hindi, Gujarati (request when you message).
+- **Booking:** WhatsApp and email on the site; not emergency services.
+
+## Page anchors (homepage sections)
 
 - [Home](https://womenshealthduo.com/#home)
 - [About](https://womenshealthduo.com/#about)
 - [Services](https://womenshealthduo.com/#services)
 - [Testimonials](https://womenshealthduo.com/#testimonials)
 - [Contact](https://womenshealthduo.com/#contact)
+- [FAQ preview](https://womenshealthduo.com/#faq)
 
 ## Note for site owners
 
-If the live domain differs, update `VITE_SITE_URL` in `.env`, `src/config/site.defaults.ts` (`SITE_DEFAULT_URL`), and this file so links stay accurate.
+If the live domain differs, update `VITE_SITE_URL` in `.env`, `src/config/site.defaults.ts` (`SITE_DEFAULT_URL`), and this file so links stay accurate. Marketing URLs live in `src/config/routes.ts`, `src/lib/virtualConsultation.ts`, `src/data/seoOnlineServices.ts`, and `src/data/virtualConsultationCities.json`; `dist/sitemap.xml` lists them at build time. Legacy `/global-online` URLs redirect to `/online-consultation`.

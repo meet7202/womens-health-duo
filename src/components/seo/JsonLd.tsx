@@ -1,4 +1,6 @@
 import { SITE_URL, SITE_NAME, DEFAULT_DESCRIPTION, CONTACT, OG_IMAGE_PATH } from "@/config/site";
+import { ROUTES } from "@/config/routes";
+import { PRACTICE_CHARMI_IN_PERSON, PRACTICE_ZALAK_IN_PERSON } from "@/config/practiceLocations";
 
 /**
  * Schema.org structured data for search engines and AI crawlers.
@@ -32,9 +34,9 @@ export function JsonLd() {
           { "@type": "City", name: "Bangalore", containedInPlace: india },
           {
             "@type": "Place",
-            name: "Worldwide",
+            name: "Worldwide (online-first)",
             description:
-              "Online OB-GYN consultations, women's health physiotherapy guidance, and Mat & Reformer Pilates classes for patients and students globally.",
+              "500+ dedicated virtual consultation city URLs under /online-consultation plus global telehealth: online OB-GYN, IVF discussion, laparoscopy consults, women's health physiotherapy, Mat Pilates online, and Mat & Reformer STOTT Pilates for NRIs and international patients.",
           },
         ],
         knowsAbout: [
@@ -42,7 +44,9 @@ export function JsonLd() {
           "IVF and fertility care",
           "Women's health physiotherapy",
           "STOTT Pilates Mat and Reformer",
+          "Online Mat Pilates and women's health telehealth",
           "Pregnancy and postpartum rehabilitation",
+          "Online telehealth for NRIs and global Indian diaspora",
         ],
         member: [{ "@id": charmiId }, { "@id": zalakId }],
       },
@@ -57,9 +61,13 @@ export function JsonLd() {
           "IVF, IUI, fertility evaluation",
           "Laparoscopic gynecologic surgery",
           "PCOS, endometriosis, menstrual disorders",
-          "Online OB-GYN consultations for Ahmedabad, Mumbai, Bangalore and worldwide",
+          `In-person OB-GYN in ${PRACTICE_CHARMI_IN_PERSON}; primary global access via online video consults for NRIs and international patients`,
         ],
         parentOrganization: { "@id": orgId },
+        areaServed: [
+          { "@type": "City", name: "Ahmedabad", containedInPlace: india },
+          { "@type": "City", name: "Mumbai", containedInPlace: india },
+        ],
         address: {
           "@type": "PostalAddress",
           addressLocality: "Mumbai",
@@ -77,13 +85,18 @@ export function JsonLd() {
         jobTitle: "Women's Health Physiotherapist & STOTT Pilates Instructor (Mat & Reformer)",
         knowsAbout: [
           "Pelvic floor rehabilitation",
-          "Antenatal and postnatal physiotherapy",
+          "Prenatal and postnatal physiotherapy",
+          "Online STOTT Mat Pilates for international patients",
           "STOTT Pilates Mat equipment",
           "STOTT Pilates Reformer",
           "Musculoskeletal physiotherapy for women",
-          "Online women's health physio and Pilates classes worldwide",
+          `In-person women's health physiotherapy in ${PRACTICE_ZALAK_IN_PERSON}; primary global access via online classes and telehealth for NRIs worldwide`,
         ],
         parentOrganization: { "@id": orgId },
+        areaServed: [
+          { "@type": "City", name: "Ahmedabad", containedInPlace: india },
+          { "@type": "City", name: "Bengaluru", containedInPlace: india },
+        ],
         address: {
           "@type": "PostalAddress",
           addressLocality: "Bengaluru",
@@ -101,6 +114,36 @@ export function JsonLd() {
         description: DEFAULT_DESCRIPTION,
         inLanguage: ["en-IN", "en"],
         publisher: { "@id": orgId },
+      },
+      {
+        "@type": ["MedicalClinic", "LocalBusiness"],
+        "@id": `${SITE_URL}${ROUTES.ahmedabad}#clinic`,
+        name: `${SITE_NAME} — Ahmedabad`,
+        url: `${SITE_URL}${ROUTES.ahmedabad}`,
+        telephone: CONTACT.phoneE164,
+        email: CONTACT.email,
+        parentOrganization: { "@id": orgId },
+        areaServed: { "@type": "City", name: "Ahmedabad", containedInPlace: india },
+      },
+      {
+        "@type": ["MedicalClinic", "LocalBusiness"],
+        "@id": `${SITE_URL}${ROUTES.mumbai}#clinic`,
+        name: `${SITE_NAME} — Mumbai`,
+        url: `${SITE_URL}${ROUTES.mumbai}`,
+        telephone: CONTACT.phoneE164,
+        email: CONTACT.email,
+        parentOrganization: { "@id": orgId },
+        areaServed: { "@type": "City", name: "Mumbai", containedInPlace: india },
+      },
+      {
+        "@type": ["MedicalClinic", "LocalBusiness"],
+        "@id": `${SITE_URL}${ROUTES.bangalore}#clinic`,
+        name: `${SITE_NAME} — Bengaluru (Bangalore)`,
+        url: `${SITE_URL}${ROUTES.bangalore}`,
+        telephone: CONTACT.phoneE164,
+        email: CONTACT.email,
+        parentOrganization: { "@id": orgId },
+        areaServed: { "@type": "City", name: "Bengaluru", containedInPlace: india },
       },
     ],
   };

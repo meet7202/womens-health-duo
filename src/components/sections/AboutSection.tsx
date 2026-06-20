@@ -1,7 +1,14 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import { Stethoscope, Heart, Award, GraduationCap, Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ROUTES } from "@/config/routes";
+import {
+  PRACTICE_CHARMI_LOCATIONS_SHORT,
+  PRACTICE_ZALAK_LOCATIONS_SHORT,
+} from "@/config/practiceLocations";
 import drZalak from "@/assets/dr-zalak.jpg";
 import drCharmi from "@/assets/dr-charmi.jpeg";
 
@@ -21,21 +28,23 @@ const doctors = [
     ],
     rating: "4.9",
     reviews: "41",
-    location: "Mumbai, India",
+    location: PRACTICE_CHARMI_LOCATIONS_SHORT,
     phone: "+91-7990550754",
     icon: Stethoscope,
     image: drCharmi,
     imageWidth: 849,
     imageHeight: 1024,
+    profilePath: ROUTES.drCharmi,
   },
   {
     name: "Dr. Zalak Shah (PT)",
     title: "Women's Health Physiotherapist & Pilates Instructor",
     description:
-      "Dr. Zalak Shah is a qualified Physiotherapist with a Bachelor's and Master's degree in Physiotherapy, certified as a STOTT Pilates Instructor. With years of experience across leading hospitals and her fully-equipped Pilates studio, she integrates evidence-based physiotherapy with Pilates methodology to deliver superior patient outcomes. Her holistic approach addresses pelvic health, pre and postnatal care, and musculoskeletal rehabilitation.",
+      "Dr. Zalak Shah is a qualified Physiotherapist with a Bachelor's and Master's degree in Physiotherapy, certified as a STOTT Pilates Instructor. With years of experience across leading hospitals and her fully-equipped Pilates studio, she integrates evidence-based physiotherapy with Pilates methodology to deliver superior patient outcomes. Her holistic approach addresses pelvic health, prenatal and postnatal care, Mat Pilates online for global patients, and musculoskeletal rehabilitation.",
     specialties: [
       "Pelvic Floor Rehabilitation",
-      "Antenatal & Postnatal Care",
+      "Prenatal and postnatal care",
+      "Mat Pilates online",
       "STOTT Pilates",
       "Diastasis Recti",
       "Urinary Incontinence",
@@ -43,12 +52,13 @@ const doctors = [
     ],
     rating: "5.0",
     reviews: "23",
-    location: "Bangalore, India",
+    location: PRACTICE_ZALAK_LOCATIONS_SHORT,
     phone: "+91-7990550754",
     icon: Heart,
     image: drZalak,
     imageWidth: 479,
     imageHeight: 563,
+    profilePath: ROUTES.drZalak,
   },
 ];
 
@@ -139,6 +149,11 @@ export const AboutSection = () => {
                       </span>
                       {doctor.phone}
                     </p>
+                    <div className="pt-2 flex justify-center">
+                      <Button variant="outline" size="sm" asChild>
+                        <Link to={doctor.profilePath}>Full profile &amp; links</Link>
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </div>

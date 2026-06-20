@@ -7,6 +7,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { CONTACT } from "@/config/site";
+import {
+  PRACTICE_CHARMI_LOCATIONS_LINE,
+  PRACTICE_ZALAK_LOCATIONS_LINE,
+} from "@/config/practiceLocations";
 
 const WHATSAPP_NUMBER = "917990550754";
 const WHATSAPP_COMMUNITY_LINK = "https://chat.whatsapp.com/IzlxjOf8wp9GqMdSbCQ3Xj";
@@ -194,7 +198,7 @@ Sent from Women's Health Duo Website`;
                 ) : (
                   <>
                     <MessageCircle className="w-5 h-5 mr-2" />
-                    Send via WhatsApp
+                    Continue on WhatsApp
                   </>
                 )}
               </Button>
@@ -237,7 +241,7 @@ Sent from Women's Health Duo Website`;
                 </a>
                 <div className="flex items-start gap-3 text-muted-foreground">
                   <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Mumbai, India</span>
+                  <span>{PRACTICE_CHARMI_LOCATIONS_LINE}</span>
                 </div>
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <Clock className="w-5 h-5 text-primary" />
@@ -271,7 +275,7 @@ Sent from Women's Health Duo Website`;
                 </a>
                 <div className="flex items-start gap-3 text-muted-foreground">
                   <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span>Bangalore, India</span>
+                  <span>{PRACTICE_ZALAK_LOCATIONS_LINE}</span>
                 </div>
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <Clock className="w-5 h-5 text-primary" />
@@ -308,17 +312,6 @@ Sent from Women's Health Duo Website`;
                   A holistic approach to women's health! Follow us for tips on pregnancy, fertility,
                   pelvic health, and wellness.
                 </p>
-                <div className="pt-3">
-                  <a
-                    href={CONTACT.whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors"
-                  >
-                    <MessageCircle className="w-5 h-5" />
-                    Chat on WhatsApp
-                  </a>
-                </div>
               </div>
             </div>
           </motion.div>

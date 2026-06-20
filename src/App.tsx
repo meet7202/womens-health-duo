@@ -4,6 +4,21 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import { DoctorProfilePage } from "@/pages/DoctorProfilePage";
+import { CityLandingPage } from "@/pages/CityLandingPage";
+import { LearnPage } from "@/pages/LearnPage";
+import { FaqPage } from "@/pages/FaqPage";
+import { VirtualOnlineConsultationHubPage } from "@/pages/VirtualOnlineConsultationHubPage";
+import { VirtualOnlineConsultationCityPage } from "@/pages/VirtualOnlineConsultationCityPage";
+import { VirtualOnlineServiceCityPage } from "@/pages/VirtualOnlineServiceCityPage";
+import { VirtualConsultationCountryPage } from "@/pages/VirtualConsultationCountryPage";
+import {
+  LegacyGlobalOnlineCityRedirect,
+  LegacyGlobalOnlineHubRedirect,
+} from "@/pages/LegacyGlobalOnlineRedirects";
+import { ROUTES } from "@/config/routes";
+import { VIRTUAL_CONSULTATION_HUB_PATH } from "@/lib/virtualConsultation";
+import { StickyWhatsAppButton } from "@/components/layout/StickyWhatsAppButton";
 
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -25,7 +40,29 @@ const App = () => (
     <Sonner />
     <BrowserRouter basename={routerBasename()}>
       <Routes>
-        <Route path="/" element={<Index />} />
+        <Route path={ROUTES.home} element={<Index />} />
+        <Route path={ROUTES.drCharmi} element={<DoctorProfilePage slug="charmi" />} />
+        <Route path={ROUTES.drZalak} element={<DoctorProfilePage slug="zalak" />} />
+        <Route path={ROUTES.ahmedabad} element={<CityLandingPage cityKey="ahmedabad" />} />
+        <Route path={ROUTES.mumbai} element={<CityLandingPage cityKey="mumbai" />} />
+        <Route path={ROUTES.bangalore} element={<CityLandingPage cityKey="bangalore" />} />
+        <Route
+          path={`${VIRTUAL_CONSULTATION_HUB_PATH}/country/:countryCode`}
+          element={<VirtualConsultationCountryPage />}
+        />
+        <Route
+          path={`${VIRTUAL_CONSULTATION_HUB_PATH}/:citySlug/:serviceSlug`}
+          element={<VirtualOnlineServiceCityPage />}
+        />
+        <Route
+          path={`${VIRTUAL_CONSULTATION_HUB_PATH}/:slug`}
+          element={<VirtualOnlineConsultationCityPage />}
+        />
+        <Route path={ROUTES.onlineConsultation} element={<VirtualOnlineConsultationHubPage />} />
+        <Route path={`${ROUTES.globalOnline}/:slug`} element={<LegacyGlobalOnlineCityRedirect />} />
+        <Route path={ROUTES.globalOnline} element={<LegacyGlobalOnlineHubRedirect />} />
+        <Route path={ROUTES.learn} element={<LearnPage />} />
+        <Route path={ROUTES.faq} element={<FaqPage />} />
         <Route
           path="*"
           element={
@@ -35,6 +72,7 @@ const App = () => (
           }
         />
       </Routes>
+      <StickyWhatsAppButton />
     </BrowserRouter>
   </TooltipProvider>
 );

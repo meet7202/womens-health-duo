@@ -1,11 +1,28 @@
-import { Heart, Instagram, Youtube, MessageCircle, Mail, Phone } from "lucide-react";
+import { useMemo } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Heart, Instagram, Mail, MessageCircle, Phone, Youtube } from "lucide-react";
 import { CONTACT } from "@/config/site";
+import { ROUTES } from "@/config/routes";
+import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsappCta";
+
+const SECTION_LINKS = [
+  { label: "About", hash: "about" },
+  { label: "Services", hash: "services" },
+  { label: "Testimonials", hash: "testimonials" },
+  { label: "Contact", hash: "contact" },
+] as const;
 
 export const Footer = () => {
+  const location = useLocation();
+  const footerWhatsappHref = useMemo(
+    () => whatsappUrlWithMessage(whatsappIntentFromPathname(location.pathname)),
+    [location.pathname],
+  );
+
   return (
     <footer className="bg-foreground text-background py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -24,16 +41,93 @@ export const Footer = () => {
           <div>
             <h4 className="font-heading text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {["Home", "About", "Services", "Testimonials", "Contact"].map((link) => (
-                <li key={link}>
-                  <a
-                    href={`#${link.toLowerCase()}`}
+              <li>
+                <Link
+                  to={ROUTES.home}
+                  className="text-background/70 hover:text-background transition-colors text-sm underline-offset-4 hover:underline"
+                >
+                  Home
+                </Link>
+              </li>
+              {SECTION_LINKS.map(({ label, hash }) => (
+                <li key={hash}>
+                  <Link
+                    to={{ pathname: ROUTES.home, hash }}
                     className="text-background/70 hover:text-background transition-colors text-sm underline-offset-4 hover:underline"
                   >
-                    {link}
-                  </a>
+                    {label}
+                  </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-heading text-lg font-semibold mb-4">Explore</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link
+                  to={ROUTES.onlineConsultation}
+                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
+                >
+                  Virtual online consultations
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={ROUTES.drCharmi}
+                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
+                >
+                  Dr. Charmi Shah
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={ROUTES.drZalak}
+                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
+                >
+                  Dr. Zalak Shah
+                </Link>
+              </li>
+              <li>
+                <span className="text-background/50">India: </span>
+                <Link
+                  to={ROUTES.ahmedabad}
+                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
+                >
+                  Ahmedabad
+                </Link>
+                <span className="text-background/40"> · </span>
+                <Link
+                  to={ROUTES.mumbai}
+                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
+                >
+                  Mumbai
+                </Link>
+                <span className="text-background/40"> · </span>
+                <Link
+                  to={ROUTES.bangalore}
+                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
+                >
+                  Bangalore
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={ROUTES.learn}
+                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
+                >
+                  Learn (YouTube &amp; Instagram)
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={ROUTES.faq}
+                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
+                >
+                  FAQ
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -74,13 +168,13 @@ export const Footer = () => {
                 YouTube
               </a>
               <a
-                href={CONTACT.whatsappUrl}
+                href={footerWhatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-md hover:text-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background/50"
               >
                 <MessageCircle className="w-4 h-4" />
-                WhatsApp Us
+                WhatsApp
               </a>
             </div>
           </div>
@@ -88,7 +182,7 @@ export const Footer = () => {
 
         <div className="pt-8 border-t border-background/10 text-center text-sm text-background/50">
           <p>© {new Date().getFullYear()} Women's Health Duo. All rights reserved.</p>
-          <p className="mt-1">Dr. Charmi Shah (Mumbai) & Dr. Zalak Shah (Bangalore) | India</p>
+          <p className="mt-1">Dr. Charmi Shah &amp; Dr. Zalak Shah | Women&apos;s Health Duo</p>
         </div>
       </div>
     </footer>

@@ -12,7 +12,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "tsc -b",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate:virtual-cities": "node scripts/generate-virtual-consultation-cities.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
