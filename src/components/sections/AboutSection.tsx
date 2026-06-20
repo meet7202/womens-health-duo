@@ -40,7 +40,7 @@ const doctors = [
     name: "Dr. Zalak Shah (PT)",
     title: "Women's Health Physiotherapist & Pilates Instructor",
     description:
-      "Dr. Zalak Shah is a qualified Physiotherapist with a Bachelor's and Master's degree in Physiotherapy, certified as a STOTT Pilates Instructor. With years of experience across leading hospitals and her fully-equipped Pilates studio, she integrates evidence-based physiotherapy with Pilates methodology to deliver superior patient outcomes. Her holistic approach addresses pelvic health, prenatal and postnatal care, Mat Pilates online for global patients, and musculoskeletal rehabilitation.",
+      "Dr. Zalak Shah is a qualified Physiotherapist with a Bachelor's and Master's degree in Physiotherapy, certified as a STOTT Pilates Instructor. With years of experience across leading hospitals and a fully equipped studio, she integrates evidence-based physiotherapy with Pilates methodology to deliver superior patient outcomes. Her holistic approach addresses pelvic health, prenatal and postnatal care, Mat Pilates online for global patients, and musculoskeletal rehabilitation.",
     specialties: [
       "Pelvic Floor Rehabilitation",
       "Prenatal and postnatal care",
