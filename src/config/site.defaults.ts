@@ -1,5 +1,3 @@
-import { PRACTICE_BOTH_DOCTORS_IN_PERSON } from "./practiceLocations";
-
 /**
  * Default SEO values (no `import.meta`). Imported by `site.ts` and `vite.config.ts`.
  * Override the public URL at build/runtime with `VITE_SITE_URL` in `.env`.
@@ -9,10 +7,12 @@ export const SITE_DEFAULT_URL = "https://womenshealthduo.com";
 
 export const SITE_NAME = "Women's Health Duo";
 
-export const DEFAULT_TITLE =
-  "Women's Health Duo | Online OB-GYN, IVF & Women's Health Physio / STOTT Pilates";
+/** Keep under ~60 characters for SERP title width and SEO audit tools. */
+export const DEFAULT_TITLE = "Women's Health Duo | OB-GYN, IVF & physio online";
 
-export const DEFAULT_DESCRIPTION = `Video OB-GYN, IVF, and laparoscopy consults with Dr. Charmi Shah; online women's health physiotherapy, Mat Pilates online, and STOTT Pilates (Mat & Reformer) with Dr. Zalak Shah—for international and NRI patients from anywhere, no travel required. ${PRACTICE_BOTH_DOCTORS_IN_PERSON} WhatsApp +91 79905 50754.`;
+/** Target ~150–160 characters for meta description audits (HTML + OG + Twitter). */
+export const DEFAULT_DESCRIPTION =
+  "OB-GYN, IVF & laparoscopy with Dr. Charmi Shah; physio & STOTT Pilates with Dr. Zalak Shah. Mumbai, Ahmedabad, Bangalore + virtual. WhatsApp +917990550754.";
 
 export const KEYWORDS = [
   "online OB-GYN consultation worldwide",
