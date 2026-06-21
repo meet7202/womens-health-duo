@@ -27,7 +27,7 @@ const topicLanes = [
   },
   {
     id: "stott-pilates",
-    title: "STOTT Pilates",
+    title: "Physio and Pilates",
     icon: Dumbbell,
     text: "Mat & Reformer work and women's health physiotherapy with Dr. Zalak, pelvic floor, prenatal/postnatal, and recovery.",
   },

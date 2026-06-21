@@ -42,6 +42,10 @@ export function LearnTopicalAuthoritySection() {
         <Link to={ROUTES.ahmedabad} className="text-primary underline underline-offset-4">
           Ahmedabad
         </Link>
+        ,{" "}
+        <Link to={ROUTES.valsad} className="text-primary underline underline-offset-4">
+          Valsad
+        </Link>
         , and{" "}
         <Link to={ROUTES.bangalore} className="text-primary underline underline-offset-4">
           Bangalore
@@ -49,7 +53,7 @@ export function LearnTopicalAuthoritySection() {
         .
       </p>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {LEARN_PILLAR_CLUSTERS.map((pillar) => {
           const topicLinks = pillarLearnTopicLinks(pillar);
           const writtenGuides = pillarWrittenGuideLinks(pillar);

@@ -28,9 +28,9 @@ export const DOCTOR_BY_SLUG: Record<DoctorSlug, DoctorProfile> = {
     jobTitle: "Obstetrician & Gynecologist, IVF Specialist & Laparoscopic Surgeon",
     metaTitle: "Dr. Charmi Shah | OB-GYN, IVF & Laparoscopy ,  Women's Health Duo",
     metaDescription:
-      "Dr. Charmi Shah: obstetrics, gynecology, IVF, IUI, high-risk pregnancy, and laparoscopic surgery. Online OB-GYN telehealth worldwide; in person in Mumbai and Ahmedabad.",
+      "Dr. Charmi Shah: obstetrics, gynecology, IVF, IUI, high-risk pregnancy, and laparoscopic surgery. Online OB-GYN telehealth worldwide; in person in Mumbai, Ahmedabad, and Valsad.",
     overview: [
-      "Online OB-GYN and IVF consults are available worldwide, many NRIs and expatriate families book video visits for second opinions, pregnancy planning, fertility pathways, and follow-up without traveling to India for every question. In-person OB-GYN visits are focused in Mumbai and Ahmedabad, coordinate through the practice when clinically appropriate.",
+      "Online OB-GYN and IVF consults are available worldwide, many NRIs and expatriate families book video visits for second opinions, pregnancy planning, fertility pathways, and follow-up without traveling to India for every question. In-person OB-GYN visits are focused in Mumbai, Ahmedabad, and Valsad, coordinate through the practice when clinically appropriate.",
       "Dr. Charmi Shah is an obstetrician and gynecologist with advanced training in laparoscopy and assisted reproduction. She supports patients through high-risk pregnancy, complex gynecologic conditions, fertility evaluation, and minimally invasive surgery when clinically appropriate.",
       "Her practice philosophy combines evidence-based medicine with clear, compassionate communication, whether you are planning a pregnancy, managing PCOS or endometriosis, or exploring IVF or IUI.",
       "Through Women's Health Duo, Dr. Charmi works alongside her sister, Dr. Zalak Shah, so patients can access coordinated OB-GYN and women's health physiotherapy / STOTT Pilates pathways where relevant.",
@@ -43,7 +43,7 @@ export const DOCTOR_BY_SLUG: Record<DoctorSlug, DoctorProfile> = {
       "Routine gynecology & preventive screening",
       "Menopause & midlife wellness",
     ],
-    cities: ["Mumbai", "Ahmedabad"],
+    cities: ["Mumbai", "Ahmedabad", "Valsad"],
     external: [
       { label: "LinkedIn", href: EXTERNAL.drCharmi.linkedIn },
       {
@@ -78,6 +78,10 @@ export const DOCTOR_BY_SLUG: Record<DoctorSlug, DoctorProfile> = {
     ],
     cities: ["Bangalore", "Ahmedabad"],
     external: [
+      {
+        label: "Google reviews (read more)",
+        href: EXTERNAL.drZalak.googleReviewsShare,
+      },
       {
         label: "Google Business Profile ,  Ahmedabad",
         href: EXTERNAL.drZalak.googleBusinessAhmedabad,

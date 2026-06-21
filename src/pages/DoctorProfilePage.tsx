@@ -12,6 +12,7 @@ import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/bre
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { InclusiveSeoListFootnote } from "@/components/seo/InclusiveSeoListFootnote";
 import {
+  PRACTICE_CHARMI_IN_PERSON,
   PRACTICE_CHARMI_LOCATIONS_LINE,
   PRACTICE_ZALAK_LOCATIONS_LINE,
 } from "@/config/practiceLocations";
@@ -55,6 +56,7 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
       ? [
           { to: ROUTES.ahmedabad, label: "Ahmedabad" },
           { to: ROUTES.mumbai, label: "Mumbai" },
+          { to: ROUTES.valsad, label: "Valsad" },
         ]
       : [
           { to: ROUTES.ahmedabad, label: "Ahmedabad" },
@@ -106,7 +108,7 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
 
         <h2 className="font-heading text-xl font-semibold text-foreground mb-3">
           {slug === "charmi"
-            ? "Online (worldwide) & in person (Mumbai, Ahmedabad)"
+            ? `Online (worldwide) & in person (${PRACTICE_CHARMI_IN_PERSON})`
             : "Online (worldwide) & in person (Bangalore, Ahmedabad)"}
         </h2>
         <p className="text-muted-foreground mb-3">

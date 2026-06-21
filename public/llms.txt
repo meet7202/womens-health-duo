@@ -1,16 +1,16 @@
 # Women's Health Duo
 
-> Holistic women's healthcare by two sisters: Dr. Charmi Shah (OB-GYN — obstetrics, gynecology, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapist and STOTT Pilates instructor for **Mat** and **Reformer**, including **Mat Pilates online**). **Primary access for international patients is online** (video OB-GYN, online physio / Pilates programs). **In person:** Dr. Charmi in **Mumbai** and **Ahmedabad**; Dr. Zalak in **Bangalore** and **Ahmedabad**—both offer **virtual** visits worldwide.
+> Holistic women's healthcare by two sisters: Dr. Charmi Shah (OB-GYN — obstetrics, gynecology, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapist and STOTT Pilates instructor for **Mat** and **Reformer**, including **Mat Pilates online**). **Primary access for international patients is online** (video OB-GYN, online physio / Pilates programs). **In person:** Dr. Charmi in **Mumbai**, **Ahmedabad**, and **Valsad**; Dr. Zalak in **Bangalore** and **Ahmedabad**—both offer **virtual** visits worldwide.
 >
 > **Entity line (brand ↔ doctors):** Women's Health Duo — Dr. Charmi Shah (OB-GYN / IVF) & Dr. Zalak Shah (women's health physio / STOTT Pilates). **Not a supplement or pill brand:** education + booked consults.
 
 ## Summary
 
 - **Brand:** Women's Health Duo
-- **India:** In-person visits for Dr. Charmi in **Mumbai** and **Ahmedabad**; for Dr. Zalak in **Bangalore** and **Ahmedabad**; strong emphasis on **online** access for people anywhere.
-- **Dr. Charmi Shah (OB-GYN):** Pregnancy and high-risk obstetrics, gynecology, IVF/IUI and fertility workup, laparoscopic surgery, PCOS, endometriosis, menopause, routine women's health — **online OB-GYN consults** available globally; in person in **Mumbai** and **Ahmedabad**.
+- **India:** In-person visits for Dr. Charmi in **Mumbai**, **Ahmedabad**, and **Valsad**; for Dr. Zalak in **Bangalore** and **Ahmedabad**; strong emphasis on **online** access for people anywhere.
+- **Dr. Charmi Shah (OB-GYN):** Pregnancy and high-risk obstetrics, gynecology, IVF/IUI and fertility workup, laparoscopic surgery, PCOS, endometriosis, menopause, routine women's health — **online OB-GYN consults** available globally; in person in **Mumbai**, **Ahmedabad**, and **Valsad**.
 - **Dr. Zalak Shah (physio & Pilates):** Women's health physiotherapy, pelvic floor, **prenatal and postnatal** rehab, musculoskeletal care for women, **Mat Pilates online**, **STOTT Pilates on Mat and Reformer**, wellness programs — **online classes and guidance** for international clients; in person in **Bangalore** and **Ahmedabad**.
-- **Delivery:** **Online-first worldwide** (video visits from India); many **city** overview pages plus **service-by-city** pages under `/online-consultation/...` (lists highlight common metros only—**many more cities worldwide** are welcome the same way). Dedicated India city pages (e.g. Ahmedabad, Mumbai, Bengaluru) describe local access.
+- **Delivery:** **Online-first worldwide** (video visits from India); many **city** overview pages plus **service-by-city** pages under `/online-consultation/...` (lists highlight common metros only—**many more cities worldwide** are welcome the same way). Dedicated India city pages (e.g. Ahmedabad, Mumbai, Valsad, Bengaluru) describe local access.
 
 ## Primary links
 
@@ -27,6 +27,7 @@
 - [Dr. Zalak Shah — Google Business (Bengaluru / Bangalore)](https://share.google/kjTkctZb9U7bOcpIE)
 - [Women's health — Ahmedabad](https://womenshealthduo.com/ahmedabad)
 - [Women's health — Mumbai](https://womenshealthduo.com/mumbai)
+- [Women's health — Valsad](https://womenshealthduo.com/valsad)
 - [Women's health — Bangalore](https://womenshealthduo.com/bangalore)
 - [Learn](https://womenshealthduo.com/learn)
 - [Learn — Dr. Charmi clips](https://womenshealthduo.com/learn/dr-charmi)
@@ -54,7 +55,7 @@
 - **By doctor:** `/learn/dr-charmi`, `/learn/dr-zalak`
 - **By topic:** `/learn/topic/<topicSlug>` (slug from topic label, e.g. `fertility`, `labor-and-delivery`, `pilates`)
 - **Doctor + topic:** `/learn/<doctorSegment>/topic/<topicSlug>` (e.g. `/learn/dr-zalak/topic/pregnancy`)
-- **Topical clusters (main `/learn` only):** `/learn#learn-pillars` — five Bing-oriented hubs (hormonal health, menstrual health, fertility & ovulation, PCOS, STOTT Pilates) with links into topic filters and example virtual-care URLs.
+- **Topical clusters (main `/learn` only):** `/learn#learn-pillars` — six Bing-oriented hubs (hormonal health, menstrual health, fertility & ovulation, pregnancy & labor, PCOS, STOTT Pilates) with links into topic filters and example virtual-care URLs.
 
 ## URL patterns (virtual SEO)
 
@@ -70,7 +71,7 @@ These repeat under every virtual city (see `src/data/seoOnlineServices.ts` in th
 
 ## Topics & queries this site is built for
 
-- **OB-GYN / IVF (Dr. Charmi):** pregnancy & high-risk obstetrics, gynecology, IVF/IUI discussion, laparoscopy-related consults, PCOS/endometriosis, menopause, routine women's health — **telehealth from India** for NRIs and global families; **in person** in **Mumbai** and **Ahmedabad**.
+- **OB-GYN / IVF (Dr. Charmi):** pregnancy & high-risk obstetrics, gynecology, IVF/IUI discussion, laparoscopy-related consults, PCOS/endometriosis, menopause, routine women's health — **telehealth from India** for NRIs and global families; **in person** in **Mumbai**, **Ahmedabad**, and **Valsad**.
 - **Physio / Pilates (Dr. Zalak):** pelvic floor, **prenatal and postnatal** care, **Mat Pilates online**, STOTT **Mat & Reformer**, MSK physio, core/functional training, wellness-style programs — **online-first** worldwide; **in person** in **Bangalore** and **Ahmedabad**.
 - **Languages often used on consults:** English, Hindi, Gujarati (request when you message).
 - **Booking:** WhatsApp and email on the site; not emergency services.

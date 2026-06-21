@@ -13,7 +13,14 @@ export function medicalClinicForCity(city: CityPageData) {
     parentOrganization: { "@id": `${SITE_URL}/#organization` },
     areaServed: {
       "@type": "City",
-      name: city.key === "bangalore" ? "Bengaluru" : city.key === "mumbai" ? "Mumbai" : "Ahmedabad",
+      name:
+        city.key === "bangalore"
+          ? "Bengaluru"
+          : city.key === "mumbai"
+            ? "Mumbai"
+            : city.key === "valsad"
+              ? "Valsad"
+              : "Ahmedabad",
       containedInPlace: { "@type": "Country", name: "India" },
     },
     medicalSpecialty: [

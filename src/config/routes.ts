@@ -25,6 +25,7 @@ export const ROUTES = {
   drZalak: "/dr-zalak-shah",
   ahmedabad: "/ahmedabad",
   mumbai: "/mumbai",
+  valsad: "/valsad",
   bangalore: "/bangalore",
   learn: "/learn",
   /** Index of all written topic guides (linked from Learn; crawlable internal hub). */
@@ -67,6 +68,7 @@ export const SITEMAP_PATHS: readonly string[] = [
   ROUTES.drZalak,
   ROUTES.ahmedabad,
   ROUTES.mumbai,
+  ROUTES.valsad,
   ROUTES.bangalore,
   ROUTES.learnArticles,
   ...learnHubSitemapPaths(),

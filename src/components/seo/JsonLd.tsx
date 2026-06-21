@@ -40,6 +40,7 @@ export function JsonLd() {
         areaServed: [
           { "@type": "City", name: "Ahmedabad", containedInPlace: india },
           { "@type": "City", name: "Mumbai", containedInPlace: india },
+          { "@type": "City", name: "Valsad", containedInPlace: india },
           { "@type": "City", name: "Bangalore", containedInPlace: india },
           {
             "@type": "Place",
@@ -80,6 +81,7 @@ export function JsonLd() {
         areaServed: [
           { "@type": "City", name: "Ahmedabad", containedInPlace: india },
           { "@type": "City", name: "Mumbai", containedInPlace: india },
+          { "@type": "City", name: "Valsad", containedInPlace: india },
         ],
         address: {
           "@type": "PostalAddress",
@@ -147,6 +149,16 @@ export function JsonLd() {
         email: CONTACT.email,
         parentOrganization: { "@id": orgId },
         areaServed: { "@type": "City", name: "Mumbai", containedInPlace: india },
+      },
+      {
+        "@type": ["MedicalClinic", "LocalBusiness"],
+        "@id": `${SITE_URL}${ROUTES.valsad}#clinic`,
+        name: `${SITE_NAME} ,  Valsad`,
+        url: `${SITE_URL}${ROUTES.valsad}`,
+        telephone: CONTACT.phoneE164,
+        email: CONTACT.email,
+        parentOrganization: { "@id": orgId },
+        areaServed: { "@type": "City", name: "Valsad", containedInPlace: india },
       },
       {
         "@type": ["MedicalClinic", "LocalBusiness"],

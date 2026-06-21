@@ -17,6 +17,7 @@ export type LearnPillarId =
   | "hormonal-health"
   | "menstrual-health"
   | "fertility-ovulation"
+  | "pregnancy-labor"
   | "pcos"
   | "stott-pilates";
 
@@ -67,6 +68,7 @@ export function pillarConsultationCity(pillar: LearnPillarCluster): VirtualConsu
   switch (pillar.id) {
     case "hormonal-health":
     case "fertility-ovulation":
+    case "pregnancy-labor":
       return mumbai ?? fallback;
     case "menstrual-health":
     case "pcos":
@@ -160,6 +162,38 @@ export const LEARN_PILLAR_CLUSTERS: readonly LearnPillarCluster[] = [
       "/trying-to-conceive",
       "/pregnancy-planning",
       "/what-is-ivf",
+    ],
+    primaryDoctorProfile: ROUTES.drCharmi,
+  },
+  {
+    id: "pregnancy-labor",
+    title: "Pregnancy & Labor",
+    directAnswer:
+      "Pregnancy and labor education covers trimester questions, birth preparation, warning signs that need urgent local care, and how high-risk planning fits into telehealth, from an OB-GYN perspective with physio-led movement clips when they add context, not emergency advice in comments.",
+    educationBlurb:
+      "Short clips on pregnancy discomforts, labor readiness, safe activity, and early postpartum recovery, with links to written guides for follow-through.",
+    bingKeywords: [
+      "pregnancy questions online India",
+      "labor preparation telehealth",
+      "high risk pregnancy education OB-GYN",
+    ],
+    learnVideoTopicLabels: ["Pregnancy", "Labor & delivery", "Patient education"],
+    relatedServiceSlugs: [
+      "pregnancy-high-risk-obstetrics",
+      "antenatal-postnatal-care",
+      "gynecological-care",
+    ],
+    symptomContentIdeas: [
+      "Bleeding in first trimester: what to tell triage vs what can wait for telehealth",
+      "Contractions timing: when to go to hospital vs prodromal labor",
+      "Postpartum headache and vision changes: red flags after delivery",
+    ],
+    suggestedArticleSlugs: [
+      "/common-pregnancy-discomforts",
+      "/exercises-for-pregnancy",
+      "/how-to-relieve-back-pain-during-pregnancy",
+      "/how-to-recover-after-c-section",
+      "/postpartum-recovery",
     ],
     primaryDoctorProfile: ROUTES.drCharmi,
   },

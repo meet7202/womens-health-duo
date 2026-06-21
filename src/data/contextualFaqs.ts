@@ -36,7 +36,7 @@ const LEARN_HUB_DEFAULT: FaqItem[] = [
   {
     question: "Do you see patients outside India?",
     answer:
-      "Yes, online is how we serve most international families. Dr. Charmi and Dr. Zalak both offer video consults worldwide; in-person visits are focused in Mumbai, Ahmedabad, and Bangalore for Dr. Zalak as listed on our site.",
+      "Yes, online is how we serve most international families. Dr. Charmi and Dr. Zalak both offer video consults worldwide; in-person visits for Dr. Charmi are in Mumbai, Ahmedabad, and Valsad, and for Dr. Zalak in Bangalore and Ahmedabad as listed on our site.",
   },
   {
     question: "What languages can we use on a call?",
@@ -804,7 +804,7 @@ export function virtualCityOverviewFaqs(city: string, country: string): FaqItem[
     },
     {
       question: `Can I still see you in person if I start from ${city} online?`,
-      answer: `Yes. Dr. Charmi sees patients in Mumbai and Ahmedabad; Dr. Zalak in Bangalore and Ahmedabad. Virtual care from ${city}, ${country} continues even if you never travel, this hub page stays your entry point.`,
+      answer: `Yes. Dr. Charmi sees patients in Mumbai, Ahmedabad, and Valsad; Dr. Zalak in Bangalore and Ahmedabad. Virtual care from ${city}, ${country} continues even if you never travel, this hub page stays your entry point.`,
     },
     {
       question: `Where are the ${city}-specific service pages?`,
@@ -913,7 +913,7 @@ export function virtualHubFaqs(): FaqItem[] {
     {
       question: "Where are India in-person cities linked from this hub?",
       answer:
-        "See Ahmedabad, Mumbai, and Bangalore city pages for hybrid and in-person options; those India pages complement the virtual URLs listed here.",
+        "See Ahmedabad, Mumbai, Valsad, and Bangalore city pages for hybrid and in-person options; those India pages complement the virtual URLs listed here.",
     },
     {
       question: "How private are video visits booked through this hub?",
@@ -942,9 +942,11 @@ export function indiaCityFaqs(cityKey: CityKey, cityH1: string): FaqItem[] {
       answer:
         cityKey === "mumbai"
           ? `On this ${label} page: Dr. Charmi Shah leads in-person OB-GYN care in Mumbai; Dr. Zalak Shah is primarily online from Mumbai listings with in-person studios in Bangalore and Ahmedabad.`
-          : cityKey === "bangalore"
-            ? `On this ${label} page: Dr. Zalak Shah sees patients in person in Bangalore; Dr. Charmi Shah is available online and in Mumbai/Ahmedabad in person.`
-            : `On this ${label} page: both sisters see patients in Ahmedabad, Dr. Charmi for OB-GYN/IVF and Dr. Zalak for physio and STOTT Pilates.`,
+          : cityKey === "valsad"
+            ? `On this ${label} page: Dr. Charmi Shah leads in-person OB-GYN care in Valsad; Dr. Zalak Shah is available online and in person in Bangalore and Ahmedabad.`
+            : cityKey === "bangalore"
+              ? `On this ${label} page: Dr. Zalak Shah sees patients in person in Bangalore; Dr. Charmi Shah is available online and in Mumbai, Ahmedabad, and Valsad in person.`
+              : `On this ${label} page: both sisters see patients in Ahmedabad, Dr. Charmi for OB-GYN/IVF and Dr. Zalak for physio and STOTT Pilates.`,
     },
     {
       question: `Do you accept international travelers booking through ${label}?`,
