@@ -74,6 +74,9 @@ jobs:
           test -f dist/valsad/index.html
           test -d dist/assets
           test -f dist/.nojekyll
+          test -f dist/sitemap.xml
+          grep -q "<urlset" dist/sitemap.xml
+          test -f dist/sitemap-virtual-service-cities.xml
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5

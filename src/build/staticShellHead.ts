@@ -226,7 +226,53 @@ const PAGE_PLACEHOLDER_KEYS = [
   "@@PAGE_OG_DESCRIPTION@@",
   "@@PAGE_TW_TITLE@@",
   "@@PAGE_TW_DESCRIPTION@@",
+  "@@PAGE_STATIC_FALLBACK@@",
 ] as const;
+
+function escapeHtmlPcdata(text: string): string {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function shellAbsoluteHref(siteUrl: string, path: string): string {
+  const base = siteUrl.replace(/\/$/, "");
+  if (path === "/") return `${base}/`;
+  const p = path.startsWith("/") ? path : `/${path}`;
+  return `${base}${p}`;
+}
+
+/**
+ * HTML for `<noscript>` so crawlers and assistants that do not execute JavaScript still see
+ * this route's title, description, and key navigation (plus llms.txt).
+ */
+export function buildStaticShellBodyFallback(meta: ShellPageMeta, siteUrl: string): string {
+  const h1 = escapeHtmlPcdata(meta.title);
+  const lead = escapeHtmlPcdata(meta.metaDescription);
+  const nav: [string, string][] = [
+    ["/", "Home"],
+    [ROUTES.learn, "Learn"],
+    [ROUTES.faq, "FAQ"],
+    [ROUTES.onlineConsultation, "Online consultations"],
+    ["/llms.txt", "Assistant overview (llms.txt)"],
+  ];
+  const links = nav
+    .map(
+      ([path, label]) =>
+        `<a href="${escapeAttr(shellAbsoluteHref(siteUrl, path))}">${escapeHtmlPcdata(label)}</a>`,
+    )
+    .join(" · ");
+  return `<noscript>
+  <main style="max-width:40rem;margin:1.5rem auto;padding:0 1rem;font-family:system-ui,sans-serif;line-height:1.5;color:#111">
+    <h1 style="font-size:1.35rem;font-weight:600">${h1}</h1>
+    <p>${lead}</p>
+    <p>${links}</p>
+    <p style="font-size:0.9rem;color:#444">Additional pages load in the browser when JavaScript is enabled.</p>
+  </main>
+</noscript>`;
+}
 
 export function assertShellPagePlaceholdersPresent(html: string) {
   for (const k of PAGE_PLACEHOLDER_KEYS) {
@@ -236,7 +282,11 @@ export function assertShellPagePlaceholdersPresent(html: string) {
   }
 }
 
-export function applyShellPageMetaToHtml(html: string, meta: ShellPageMeta): string {
+export function applyShellPageMetaToHtml(
+  html: string,
+  meta: ShellPageMeta,
+  siteUrl: string,
+): string {
   const titleEsc = escapeTitleText(meta.title);
   const titleAttrEsc = escapeAttr(meta.title);
   const descEsc = escapeAttr(meta.metaDescription);
@@ -250,6 +300,7 @@ export function applyShellPageMetaToHtml(html: string, meta: ShellPageMeta): str
     ["@@PAGE_OG_DESCRIPTION@@", descEsc],
     ["@@PAGE_TW_TITLE@@", titleAttrEsc],
     ["@@PAGE_TW_DESCRIPTION@@", descEsc],
+    ["@@PAGE_STATIC_FALLBACK@@", buildStaticShellBodyFallback(meta, siteUrl)],
   ];
   let out = html;
   for (const [needle, val] of pairs) {

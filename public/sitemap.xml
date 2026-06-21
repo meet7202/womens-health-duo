@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Dev / repo stub only. Production `npm run build` overwrites dist/sitemap.xml with the full URL set (see vite.config.ts and SITEMAP_PATHS in src/config/routes.ts). -->
+<!-- Dev / repo stub only. Production `npm run build` writes dist/sitemap.xml (primary urlset; no service×city matrix) and dist/sitemap-virtual-service-cities.xml (service×city only). See vite.config.ts and src/config/routes.ts. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://womenshealthduo.com/</loc>
