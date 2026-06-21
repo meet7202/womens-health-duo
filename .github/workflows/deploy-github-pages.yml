@@ -26,7 +26,9 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  # Do not cancel an in-flight Pages deploy: overlapping uploads can strand users on a
+  # main bundle that still references chunk files from a cancelled or partial run.
+  cancel-in-progress: false
 
 jobs:
   build:

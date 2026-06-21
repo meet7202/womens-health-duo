@@ -1,11 +1,7 @@
-import { lazy, Suspense } from "react";
 import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 import { PageBreadcrumbs } from "@/components/layout/PageBreadcrumbs";
 import type { Crumb } from "@/components/seo/schema/breadcrumbs";
-
-const Footer = lazy(() =>
-  import("@/components/layout/Footer").then((m) => ({ default: m.Footer })),
-);
 
 type PageShellProps = {
   children: React.ReactNode;
@@ -26,9 +22,7 @@ export function PageShell({ children, breadcrumbs }: PageShellProps) {
         {breadcrumbs && breadcrumbs.length > 0 ? <PageBreadcrumbs items={breadcrumbs} /> : null}
         {children}
       </main>
-      <Suspense fallback={<div className="h-32 bg-foreground" aria-hidden />}>
-        <Footer />
-      </Suspense>
+      <Footer />
     </div>
   );
 }
