@@ -12,12 +12,12 @@
 
 ## Page-level fixes (done or planned)
 
-| Page                   | AI-friendly element                                                                   |
-| ---------------------- | ------------------------------------------------------------------------------------- |
+| Page                   | AI-friendly element                                                                                                                  |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | Home                   | `HOME_HERO_LEDE` (hero), `HOME_ENTITY_DEFINITION` (Learn + schema seed), H1 with clinical terms, FAQ + JSON-LD, `#pillars` sections. |
-| Learn                  | Entity paragraph, topical cluster cards with direct answers, service example URLs.    |
-| FAQ                    | Expanded trust strip linking to disclaimer/editorial policy.                          |
-| Disclaimer / Editorial | Clear boundaries and process statements.                                              |
+| Learn                  | Entity paragraph, topical cluster cards with direct answers, service example URLs.                                                   |
+| FAQ                    | Expanded trust strip linking to disclaimer/editorial policy.                                                                         |
+| Disclaimer / Editorial | Clear boundaries and process statements.                                                                                             |
 
 ## Sitewide
 
