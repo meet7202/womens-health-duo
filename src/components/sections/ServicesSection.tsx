@@ -8,7 +8,6 @@ import {
   Dumbbell,
   Stethoscope,
   Activity,
-  Sparkles,
   Users,
   Scissors,
   HeartPulse,
@@ -106,12 +105,6 @@ const services = [
         title: "Core & Functional Training",
         description:
           "Personalized exercise programs for core stability, strength building, and functional movement.",
-      },
-      {
-        icon: Sparkles,
-        title: "Women's Wellness Programs",
-        description:
-          "Holistic rehabilitation combining physiotherapy and Pilates for optimal health outcomes.",
       },
     ],
   },
