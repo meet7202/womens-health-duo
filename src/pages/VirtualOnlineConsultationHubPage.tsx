@@ -7,6 +7,7 @@ import { PageShell } from "@/components/layout/PageShell";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { ROUTES } from "@/config/routes";
 import { CONTACT, SITE_URL } from "@/config/site";
+import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import {
   ANCHOR_REGION_ORDER,
   ANCHOR_VIRTUAL_CONSULTATION_CITIES,
@@ -61,7 +62,7 @@ export function VirtualOnlineConsultationHubPage() {
     <PageShell breadcrumbs={crumbs}>
       <SeoHead title={TITLE} metaDescription={DESCRIPTION} path={path} />
       <JsonLdGraph graph={graph} />
-      <JsonLdFaq items={hubFaqItems} pageUrl={`${SITE_URL}${path}`} />
+      <JsonLdFaq items={hubFaqItems} pageUrl={githubPagesAbsoluteUrl(SITE_URL, path)} />
 
       <article>
         <p className="text-sm font-semibold uppercase tracking-wide text-primary mb-2">

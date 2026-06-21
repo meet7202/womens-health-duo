@@ -24,6 +24,8 @@ import {
   assertShellPagePlaceholdersPresent,
   resolveShellPageMeta,
 } from "./src/build/staticShellHead.ts";
+import { githubPagesAbsoluteUrl } from "./src/lib/githubPagesPublicUrl.ts";
+import { ensureHttpsSiteOrigin } from "./src/lib/ensureHttpsSiteOrigin.ts";
 
 /** Every indexable pathname (primary + supplemental sitemaps); used for static SPA shells. */
 function allSitemapPathnames(): string[] {
@@ -34,7 +36,7 @@ const rootDir = path.dirname(fileURLToPath(import.meta.url));
 
 function resolveSiteUrl(mode: string) {
   const env = loadEnv(mode, process.cwd(), "");
-  return (env.VITE_SITE_URL || SITE_DEFAULT_URL).replace(/\/$/, "");
+  return ensureHttpsSiteOrigin((env.VITE_SITE_URL || SITE_DEFAULT_URL).replace(/\/$/, ""));
 }
 
 /**
@@ -113,7 +115,7 @@ function buildUrlsetXml(
 ): string {
   const body = paths
     .map((p) => {
-      const loc = p === "/" ? `${siteUrl}/` : `${siteUrl}${p}`;
+      const loc = githubPagesAbsoluteUrl(siteUrl, p);
       return `  <url>
     <loc>${escapeXml(loc)}</loc>
     <lastmod>${lastmod}</lastmod>

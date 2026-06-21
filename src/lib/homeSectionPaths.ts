@@ -1,5 +1,6 @@
 import { ROUTES } from "../config/routes";
 import { SITE_NAME, DEFAULT_DESCRIPTION } from "../config/site.defaults";
+import { githubPagesAbsoluteUrl } from "./githubPagesPublicUrl";
 
 /** Permalink pathname → scroll target element id on the homepage. */
 const PATH_TO_SCROLL_ID: Readonly<Record<string, string>> = {
@@ -60,8 +61,5 @@ export function homeSectionSeo(pathname: string): {
 }
 
 export function homeFaqJsonLdPageUrl(siteUrl: string, pathname: string): string {
-  if (normalizePathname(pathname) === ROUTES.home) {
-    return `${siteUrl}/`;
-  }
-  return `${siteUrl}${normalizePathname(pathname)}`;
+  return githubPagesAbsoluteUrl(siteUrl, normalizePathname(pathname));
 }

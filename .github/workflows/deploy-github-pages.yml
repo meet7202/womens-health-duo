@@ -77,6 +77,14 @@ jobs:
           test -f dist/sitemap.xml
           grep -q "<urlset" dist/sitemap.xml
           test -f dist/sitemap-virtual-service-cities.xml
+          if grep -q '<loc>http://' dist/sitemap.xml dist/sitemap-virtual-service-cities.xml; then
+            echo "ERROR: sitemap must not list http:// URLs in <loc>"
+            exit 1
+          fi
+          if grep -q '^Sitemap: http://' dist/robots.txt; then
+            echo "ERROR: robots.txt must not declare http:// sitemaps"
+            exit 1
+          fi
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5

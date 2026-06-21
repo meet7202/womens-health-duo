@@ -1,6 +1,7 @@
 import { SITE_URL } from "@/config/site";
 import { ROUTES } from "@/config/routes";
 import { knowledgeHubVideoCaptionForSeo, type KnowledgeHubVideo } from "@/data/knowledgeHubVideos";
+import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 
 function youtubeThumb(id: string) {
   return `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
@@ -11,7 +12,8 @@ export function knowledgeHubVideoSchemaNodes(
   videos: readonly KnowledgeHubVideo[],
   learnPagePath: string = ROUTES.learn,
 ) {
-  const pageUrl = `${SITE_URL}${learnPagePath}`;
+  const pageUrl = githubPagesAbsoluteUrl(SITE_URL, learnPagePath);
+  const orgFragment = `${githubPagesAbsoluteUrl(SITE_URL, "/")}#organization`;
   return videos.map((v) => {
     if (v.kind === "youtube_short") {
       const embedUrl = `https://www.youtube.com/embed/${v.youtubeVideoId}`;
@@ -28,7 +30,7 @@ export function knowledgeHubVideoSchemaNodes(
         embedUrl,
         url: watchUrl,
         isPartOf: { "@type": "WebPage", "@id": `${pageUrl}#webpage` },
-        publisher: { "@id": `${SITE_URL}/#organization` },
+        publisher: { "@id": orgFragment },
       };
     }
     const permalink = `https://www.instagram.com/reel/${v.instagramReelId}/`;
@@ -38,11 +40,11 @@ export function knowledgeHubVideoSchemaNodes(
       "@id": `${pageUrl}#video-${v.id}`,
       name: v.title,
       description: knowledgeHubVideoCaptionForSeo(v),
-      thumbnailUrl: `${SITE_URL}/favicon.svg`,
+      thumbnailUrl: githubPagesAbsoluteUrl(SITE_URL, "/favicon.svg"),
       embedUrl,
       url: permalink,
       isPartOf: { "@type": "WebPage", "@id": `${pageUrl}#webpage` },
-      publisher: { "@id": `${SITE_URL}/#organization` },
+      publisher: { "@id": orgFragment },
     };
   });
 }

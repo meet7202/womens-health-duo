@@ -9,6 +9,7 @@ import { SITE_URL } from "@/config/site";
 import { SITE_FAQ } from "@/data/siteFaq";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
+import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 
 const TITLE = "FAQ | Women's Health Duo: OB-GYN, IVF & Women's Health Physio";
 const DESCRIPTION =
@@ -20,7 +21,7 @@ export function FaqPage() {
     { name: "Home", path: ROUTES.home },
     { name: "FAQ", path },
   ];
-  const pageUrl = `${SITE_URL}${path}`;
+  const pageUrl = githubPagesAbsoluteUrl(SITE_URL, path);
   const graph = [
     breadcrumbListSchema(crumbs),
     webPageSchema({

@@ -6,6 +6,7 @@ import { PageShell } from "@/components/layout/PageShell";
 import { Button } from "@/components/ui/button";
 import { CONTACT, SITE_URL } from "@/config/site";
 import { ROUTES } from "@/config/routes";
+import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { whatsappMessageDoctorProfile, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 import { DOCTOR_BY_SLUG, type DoctorSlug } from "@/data/doctorProfiles";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
@@ -26,8 +27,8 @@ const IMAGES: Record<DoctorSlug, { src: string; width: number; height: number; a
 };
 
 const PHYSICIAN_IDS: Record<DoctorSlug, string> = {
-  charmi: `${SITE_URL}/#physician-charmi`,
-  zalak: `${SITE_URL}/#physician-zalak`,
+  charmi: `${githubPagesAbsoluteUrl(SITE_URL, "/")}#physician-charmi`,
+  zalak: `${githubPagesAbsoluteUrl(SITE_URL, "/")}#physician-zalak`,
 };
 
 type DoctorProfilePageProps = {

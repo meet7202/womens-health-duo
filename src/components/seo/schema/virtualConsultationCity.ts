@@ -2,10 +2,11 @@ import { SITE_URL, SITE_NAME, CONTACT } from "@/config/site";
 import { PRACTICE_BOTH_DOCTORS_IN_PERSON } from "@/config/practiceLocations";
 import type { VirtualConsultationCity } from "@/lib/virtualConsultation";
 import { virtualConsultationCityPath } from "@/lib/virtualConsultation";
+import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 
 export function virtualConsultationOfferSchema(city: VirtualConsultationCity) {
-  const url = `${SITE_URL}${virtualConsultationCityPath(city)}`;
-  const orgId = `${SITE_URL}/#organization`;
+  const url = githubPagesAbsoluteUrl(SITE_URL, virtualConsultationCityPath(city));
+  const orgId = `${githubPagesAbsoluteUrl(SITE_URL, "/")}#organization`;
   const countryNode: Record<string, unknown> = {
     "@type": "Country",
     name: city.country,

@@ -3,13 +3,14 @@ import { PRACTICE_BOTH_DOCTORS_IN_PERSON } from "@/config/practiceLocations";
 import type { SeoOnlineService } from "@/data/seoOnlineServices";
 import type { VirtualConsultationCity } from "@/lib/virtualConsultation";
 import { virtualServiceCityPath } from "@/lib/virtualConsultation";
+import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 
 export function virtualServiceCityOfferSchema(
   city: VirtualConsultationCity,
   service: SeoOnlineService,
 ) {
-  const url = `${SITE_URL}${virtualServiceCityPath(city, service.slug)}`;
-  const orgId = `${SITE_URL}/#organization`;
+  const url = githubPagesAbsoluteUrl(SITE_URL, virtualServiceCityPath(city, service.slug));
+  const orgId = `${githubPagesAbsoluteUrl(SITE_URL, "/")}#organization`;
   const countryNode: Record<string, unknown> = {
     "@type": "Country",
     name: city.country,
