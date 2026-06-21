@@ -1,5 +1,5 @@
-import { ROUTES } from "@/config/routes";
-import { EXTERNAL } from "@/config/externalProfiles";
+import { ROUTES } from "../config/routes";
+import { EXTERNAL } from "../config/externalProfiles";
 
 export type DoctorSlug = "charmi" | "zalak";
 
