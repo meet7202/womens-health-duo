@@ -19,6 +19,7 @@ import {
   learnHubSeoTitle,
   learnHubVideosMatching,
   parseLearnHubPathname,
+  stripTrailingIndexHtmlPath,
 } from "@/lib/learnHubUrls";
 
 const DESCRIPTION_DEFAULT =
@@ -36,7 +37,8 @@ export function LearnPage() {
   const canonicalPath = learnHubFilteredPath(parsed);
 
   useEffect(() => {
-    if (normalizePath(location.pathname) !== normalizePath(canonicalPath)) {
+    const locPath = stripTrailingIndexHtmlPath(location.pathname);
+    if (normalizePath(locPath) !== normalizePath(canonicalPath)) {
       navigate(canonicalPath, { replace: true });
       return;
     }

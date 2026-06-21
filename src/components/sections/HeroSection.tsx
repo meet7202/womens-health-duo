@@ -113,7 +113,6 @@ export const HeroSection = () => {
                 height={800}
                 sizes="(min-width: 768px) 45vw, 100vw"
                 decoding="async"
-                fetchPriority="high"
                 loading="eager"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-foreground/10 to-transparent" />

@@ -20,6 +20,7 @@ import {
 import { ROUTES } from "@/config/routes";
 import { VIRTUAL_CONSULTATION_HUB_PATH } from "@/lib/virtualConsultation";
 import { StickyWhatsAppButton } from "@/components/layout/StickyWhatsAppButton";
+import { NormalizeIndexHtmlUrl } from "@/components/layout/NormalizeIndexHtmlUrl";
 
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -39,7 +40,14 @@ const App = () => (
   <TooltipProvider>
     <Toaster />
     <Sonner />
-    <BrowserRouter basename={routerBasename()}>
+    <BrowserRouter
+      basename={routerBasename()}
+      future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true,
+      }}
+    >
+      <NormalizeIndexHtmlUrl />
       <ScrollToTop />
       <Routes>
         <Route path={ROUTES.home} element={<Index />} />
