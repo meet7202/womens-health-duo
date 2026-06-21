@@ -5,12 +5,12 @@ export const SITE_FAQ: FaqItem[] = [
   {
     question: "What is Women's Health Duo?",
     answer:
-      "Women's Health Duo is a women's healthcare brand led by two sisters: Dr. Charmi Shah (OB-GYN, IVF, and laparoscopic surgery) and Dr. Zalak Shah (women's health physiotherapist and STOTT Pilates instructor for Mat and Reformer, including Mat Pilates online). The practice is online-first for global patients: most NRIs and international families book video OB-GYN consults and online physio / Pilates sessions from abroad. Dr. Charmi also sees patients in person in Mumbai and Ahmedabad; Dr. Zalak in Bangalore and Ahmedabad, both offer virtual visits worldwide.",
+      "Women's Health Duo is a women's healthcare brand led by two sisters: Dr. Charmi Shah (OB-GYN, IVF, and laparoscopic surgery) and Dr. Zalak Shah (women's health physiotherapist and STOTT Pilates instructor for Mat and Reformer, including Mat Pilates online). The practice is online-first for global patients: most NRIs and international families book video OB-GYN consults and online physio / Pilates sessions from abroad. Dr. Charmi also sees patients in person in Mumbai, Ahmedabad, and Valsad; Dr. Zalak in Bangalore and Ahmedabad, both offer virtual visits worldwide.",
   },
   {
     question: "Which cities do you see patients in?",
     answer:
-      "Dr. Charmi Shah sees patients in person in Mumbai and Ahmedabad, and virtually worldwide. Dr. Zalak Shah sees patients in person in Bangalore and Ahmedabad, and virtually worldwide. Book via WhatsApp or email for scheduling. For every other country or city, care is delivered online (video or structured programs), see our virtual online consultation hub and city pages for diaspora hubs such as Dubai, London, Singapore, Toronto, Sydney, and New York. …and many more cities worldwide: we welcome patients everywhere; message us if yours is not named.",
+      "Dr. Charmi Shah sees patients in person in Mumbai, Ahmedabad, and Valsad, and virtually worldwide. Dr. Zalak Shah sees patients in person in Bangalore and Ahmedabad, and virtually worldwide. Book via WhatsApp or email for scheduling. For every other country or city, care is delivered online (video or structured programs), see our virtual online consultation hub and city pages for diaspora hubs such as Dubai, London, Singapore, Toronto, Sydney, and New York. …and many more cities worldwide: we welcome patients everywhere; message us if yours is not named.",
   },
   {
     question: "Do you offer online consultations?",

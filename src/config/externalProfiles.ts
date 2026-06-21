@@ -12,5 +12,7 @@ export const EXTERNAL = {
     /** Google Maps / Business Profile share links (separate listings per city). */
     googleBusinessAhmedabad: "https://share.google/Dvx1j3yYqsuo2MvDV",
     googleBusinessBangalore: "https://share.google/kjTkctZb9U7bOcpIE",
+    /** Patient-facing link to read additional Google reviews (same listing / share hub). */
+    googleReviewsShare: "https://share.google/OvzmpQG6sVAO0YPRx",
   },
 } as const;

@@ -91,9 +91,9 @@ const services = [
       },
       {
         icon: Dumbbell,
-        title: "STOTT Pilates (Mat & Reformer)",
+        title: "Physio and Pilates",
         description:
-          "Certified instruction for core strength, flexibility, posture, and women-focused goals on Mat and Reformer equipment in studio, plus Mat-based follow-along options online.",
+          "Women's health physiotherapy combined with Pilates-based movement: certified STOTT Pilates instruction for core strength, flexibility, posture, and women-focused goals on Mat and Reformer in studio, plus Mat-based follow-along options online.",
       },
       {
         icon: Move,

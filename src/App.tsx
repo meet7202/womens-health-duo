@@ -62,6 +62,7 @@ const App = () => (
         <Route path={ROUTES.drZalak} element={<DoctorProfilePage slug="zalak" />} />
         <Route path={ROUTES.ahmedabad} element={<CityLandingPage cityKey="ahmedabad" />} />
         <Route path={ROUTES.mumbai} element={<CityLandingPage cityKey="mumbai" />} />
+        <Route path={ROUTES.valsad} element={<CityLandingPage cityKey="valsad" />} />
         <Route path={ROUTES.bangalore} element={<CityLandingPage cityKey="bangalore" />} />
         <Route
           path={`${VIRTUAL_CONSULTATION_HUB_PATH}/country/:countryCode`}

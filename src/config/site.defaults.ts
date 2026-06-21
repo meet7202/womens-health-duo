@@ -48,6 +48,7 @@ export const KEYWORDS = [
   "OB-GYN India",
   "obstetrician gynecologist Ahmedabad",
   "gynecologist Mumbai",
+  "gynecologist Valsad",
   "gynecologist Bangalore",
   "gynecologist Ahmedabad",
   "IVF specialist Mumbai Ahmedabad Bangalore",

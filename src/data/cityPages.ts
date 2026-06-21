@@ -1,6 +1,6 @@
 import { ROUTES } from "../config/routes";
 
-export type CityKey = "ahmedabad" | "mumbai" | "bangalore";
+export type CityKey = "ahmedabad" | "mumbai" | "valsad" | "bangalore";
 
 export type CityPageData = {
   key: CityKey;
@@ -78,15 +78,44 @@ export const CITY_PAGES: Record<CityKey, CityPageData> = {
     ],
     drZalakGoogleBusinessPresentation: "both",
   },
+  valsad: {
+    key: "valsad",
+    path: ROUTES.valsad,
+    title: "Women's Health Duo in Valsad | OB-GYN, IVF & Laparoscopy",
+    metaDescription:
+      "Women's Health Duo in Valsad (Gujarat): Dr. Charmi Shah for in-person OB-GYN, IVF, and laparoscopy; online consults worldwide. Dr. Zalak Shah for women's health physio & STOTT Pilates online and in Bangalore and Ahmedabad.",
+    h1: "Women's healthcare in Valsad",
+    intro:
+      "Many families start with a video OB-GYN or physio consult, then plan in-person visits when they are in Gujarat. In Valsad, Dr. Charmi Shah provides obstetrics, gynecology, IVF and fertility discussion, and laparoscopic gynecology pathways with clear communication and evidence-based planning. Dr. Zalak Shah's physiotherapy and STOTT Pilates work is available online worldwide and in person in Bangalore and Ahmedabad.",
+    doctors: [
+      {
+        name: "Dr. Charmi Shah",
+        role: "OB-GYN, IVF & laparoscopic surgery",
+        profilePath: ROUTES.drCharmi,
+      },
+      {
+        name: "Dr. Zalak Shah",
+        role: "Women's health physio & Pilates (online worldwide; in person Bangalore & Ahmedabad)",
+        profilePath: ROUTES.drZalak,
+      },
+    ],
+    highlights: [
+      "OB-GYN-led pregnancy and high-risk obstetrics planning",
+      "IVF, IUI, and infertility evaluation consults",
+      "Laparoscopic surgery for fibroids, endometriosis, cysts, and related conditions when indicated",
+      "Same practice contact channels for both sisters (phone, WhatsApp, email)",
+    ],
+    drZalakGoogleBusinessPresentation: "both",
+  },
   bangalore: {
     key: "bangalore",
     path: ROUTES.bangalore,
     title: "Women's Health Duo in Bangalore | Women's Health Physio & STOTT Pilates",
     metaDescription:
-      "Online-first women's health physio: Dr. Zalak Shah in Bengaluru (Bangalore) for physiotherapy & STOTT Pilates; Dr. Charmi Shah for online OB-GYN worldwide and in-person OB-GYN in Mumbai and Ahmedabad.",
+      "Online-first women's health physio: Dr. Zalak Shah in Bengaluru (Bangalore) for physiotherapy & STOTT Pilates; Dr. Charmi Shah for online OB-GYN worldwide and in-person OB-GYN in Mumbai, Ahmedabad, and Valsad.",
     h1: "Women's healthcare in Bengaluru (Bangalore)",
     intro:
-      "Online women's health physio and Pilates programs are how most international patients train with Dr. Zalak first, book from any time zone. In Bengaluru (Bangalore), she leads in-person women's health physiotherapy and STOTT Pilates on Mat and Reformer. Care spans pelvic floor rehabilitation, prenatal and postnatal programs, diastasis recti, and musculoskeletal rehab tailored to women. Dr. Charmi Shah offers online OB-GYN consultations worldwide and in-person OB-GYN in Mumbai and Ahmedabad, use the contact channels to coordinate.",
+      "Online women's health physio and Pilates programs are how most international patients train with Dr. Zalak first, book from any time zone. In Bengaluru (Bangalore), she leads in-person women's health physiotherapy and STOTT Pilates on Mat and Reformer. Care spans pelvic floor rehabilitation, prenatal and postnatal programs, diastasis recti, and musculoskeletal rehab tailored to women. Dr. Charmi Shah offers online OB-GYN consultations worldwide and in-person OB-GYN in Mumbai, Ahmedabad, and Valsad, use the contact channels to coordinate.",
     doctors: [
       {
         name: "Dr. Zalak Shah",
@@ -95,7 +124,7 @@ export const CITY_PAGES: Record<CityKey, CityPageData> = {
       },
       {
         name: "Dr. Charmi Shah",
-        role: "OB-GYN & IVF (Mumbai & Ahmedabad in person; online where appropriate)",
+        role: "OB-GYN & IVF (Mumbai, Ahmedabad & Valsad in person; online where appropriate)",
         profilePath: ROUTES.drCharmi,
       },
     ],

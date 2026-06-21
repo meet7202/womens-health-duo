@@ -2,8 +2,18 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Star, Quote } from "lucide-react";
+import { EXTERNAL } from "@/config/externalProfiles";
 
-const testimonials = [
+type Testimonial = {
+  name: string;
+  text: string;
+  rating: number;
+  doctor: "Dr. Charmi Shah" | "Dr. Zalak Shah";
+  source: string;
+};
+
+/** Three featured quotes per doctor; Zalak order is strongest outcome first (matches on-page Google reviews). */
+const CHARMI_TESTIMONIALS: Testimonial[] = [
   {
     name: "Monika Kothari",
     text: "I was experiencing significant discomfort due to menopause. I consulted Dr. Charmi, and she provided me with exceptional care. Not only did she help me with the side effects, but her guidance and prescribed medications also helped regulate my menstrual cycle. I am truly grateful for her expertise and support. Thank you, Dr. Charmi, you are truly a genius.",
@@ -25,6 +35,9 @@ const testimonials = [
     doctor: "Dr. Charmi Shah",
     source: "Google Review",
   },
+];
+
+const ZALAK_TESTIMONIALS: Testimonial[] = [
   {
     name: "Chaitali Zaveri",
     text: "In my 9th month pregnancy all of a sudden I started having horrible pelvic pain, which restricted me in any kind of movements like walking, getting up, sitting down, etc. My pain was so severe that pain killers were also not working. Dr Zalak did some case study and showed me exercises which would help in relieving my pain. Within 2-3 days I was able to walk properly without support. My pain got decreased by 70-80% within a week. I highly recommend Dr Zalak for any women physiotherapy related challenges.",
@@ -47,6 +60,8 @@ const testimonials = [
     source: "Google Review",
   },
 ];
+
+const testimonials: Testimonial[] = [...CHARMI_TESTIMONIALS, ...ZALAK_TESTIMONIALS];
 
 export const TestimonialsSection = () => {
   const ref = useRef(null);
@@ -94,27 +109,33 @@ export const TestimonialsSection = () => {
               <p className="text-sm text-muted-foreground">41 Google Reviews</p>
             </div>
           </div>
-          <div className="flex items-center gap-4 bg-card rounded-2xl px-6 py-4 shadow-soft">
+          <a
+            href={EXTERNAL.drZalak.googleReviewsShare}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex cursor-pointer items-center gap-4 bg-card rounded-2xl px-6 py-4 shadow-soft border border-transparent hover:border-primary/30 hover:shadow-card transition-all text-left no-underline outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            aria-label="Dr. Zalak Shah: 5.0 stars, 27 Google reviews (opens Google in a new tab)"
+          >
             <div>
               <p className="font-heading text-3xl font-semibold text-foreground">5.0</p>
               <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                  <Star key={i} className="w-4 h-4 fill-primary text-primary" aria-hidden />
                 ))}
               </div>
             </div>
             <div className="text-left">
               <p className="font-medium text-foreground">Dr. Zalak Shah</p>
-              <p className="text-sm text-muted-foreground">23 Google Reviews</p>
+              <p className="text-sm text-muted-foreground">27 Google Reviews</p>
             </div>
-          </div>
+          </a>
         </motion.div>
 
-        {/* Testimonials Grid */}
+        {/* Testimonials Grid: three per doctor */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <motion.div
-              key={index}
+              key={`${testimonial.name}-${index}`}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * index }}
@@ -126,6 +147,7 @@ export const TestimonialsSection = () => {
                 <div>
                   <p className="font-medium text-foreground">{testimonial.name}</p>
                   <p className="text-xs text-muted-foreground">{testimonial.doctor}</p>
+                  <p className="text-xs text-muted-foreground/80 mt-0.5">{testimonial.source}</p>
                 </div>
                 <div className="flex gap-0.5">
                   {[...Array(testimonial.rating)].map((_, i) => (

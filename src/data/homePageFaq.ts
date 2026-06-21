@@ -21,7 +21,7 @@ export const HOME_PAGE_FAQ: FaqItem[] = [
   {
     question: "Do you see patients only in India, or internationally too?",
     answer:
-      "We are online-first for global families and NRIs: most consults happen by video, with structured programmes you can follow from anywhere. Dr. Charmi Shah sees patients in person in Mumbai and Ahmedabad; Dr. Zalak Shah in Bangalore and Ahmedabad, both still offer virtual visits worldwide.",
+      "We are online-first for global families and NRIs: most consults happen by video, with structured programmes you can follow from anywhere. Dr. Charmi Shah sees patients in person in Mumbai, Ahmedabad, and Valsad; Dr. Zalak Shah in Bangalore and Ahmedabad, both still offer virtual visits worldwide.",
   },
   {
     question: "How do I book a consultation with Women's Health Duo?",

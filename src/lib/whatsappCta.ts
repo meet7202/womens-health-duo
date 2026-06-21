@@ -145,6 +145,9 @@ export function whatsappIntentFromPathname(pathname: string): string {
   if (norm === ROUTES.mumbai) {
     return whatsappMessageIndiaCityPage("Mumbai", ROUTES.mumbai);
   }
+  if (norm === ROUTES.valsad) {
+    return whatsappMessageIndiaCityPage("Valsad", ROUTES.valsad);
+  }
   if (norm === ROUTES.bangalore) {
     return whatsappMessageIndiaCityPage("Bangalore", ROUTES.bangalore);
   }

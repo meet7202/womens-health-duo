@@ -110,6 +110,13 @@ export const Footer = () => {
                 </Link>
                 <span className="text-background/40"> · </span>
                 <Link
+                  to={ROUTES.valsad}
+                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
+                >
+                  Valsad
+                </Link>
+                <span className="text-background/40"> · </span>
+                <Link
                   to={ROUTES.bangalore}
                   className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
                 >
