@@ -53,15 +53,30 @@ export const HOME_SECTION_SCROLL_PATHS: readonly string[] = [
 ];
 
 /** Each online service for every virtual city (sitemap only; see `VirtualOnlineServiceCityPage`). */
-const VIRTUAL_SERVICE_CITY_SITEMAP_PATHS: readonly string[] = VIRTUAL_CONSULTATION_CITIES.flatMap(
-  (c) => SEO_ONLINE_SERVICES.map((s) => virtualServiceCityPath(c, s.slug)),
-);
+export const SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES: readonly string[] =
+  VIRTUAL_CONSULTATION_CITIES.flatMap((c) =>
+    SEO_ONLINE_SERVICES.map((s) => virtualServiceCityPath(c, s.slug)),
+  );
 
 const VIRTUAL_COUNTRY_SITEMAP_PATHS: readonly string[] = VIRTUAL_CONSULTATION_COUNTRIES.map((c) =>
   virtualConsultationCountryPath(c),
 );
 
-export const SITEMAP_PATHS: readonly string[] = [
+/** Virtual hub, country hubs, and per-city overview pages (no service×city matrix). */
+export const SITEMAP_SEGMENT_VIRTUAL_HUB_COUNTRY_CITY: readonly string[] = [
+  ROUTES.onlineConsultation,
+  ...VIRTUAL_COUNTRY_SITEMAP_PATHS,
+  ...VIRTUAL_CONSULTATION_CITIES.map((c) => virtualConsultationCityPath(c)),
+];
+
+/** Virtual hub through service×city (full virtual SEO set). */
+export const SITEMAP_SEGMENT_VIRTUAL_CONSULTATION: readonly string[] = [
+  ...SITEMAP_SEGMENT_VIRTUAL_HUB_COUNTRY_CITY,
+  ...SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES,
+];
+
+/** Home, section permalinks, doctor profiles, India city landings, Learn articles index, FAQ, policies. */
+export const SITEMAP_SEGMENT_CORE: readonly string[] = [
   ROUTES.home,
   ...HOME_SECTION_SCROLL_PATHS,
   ROUTES.drCharmi,
@@ -71,13 +86,94 @@ export const SITEMAP_PATHS: readonly string[] = [
   ROUTES.valsad,
   ROUTES.bangalore,
   ROUTES.learnArticles,
-  ...learnHubSitemapPaths(),
-  ...topicGuideSitemapPaths(),
   ROUTES.faq,
   ROUTES.medicalDisclaimer,
   ROUTES.editorialPolicy,
-  ROUTES.onlineConsultation,
-  ...VIRTUAL_COUNTRY_SITEMAP_PATHS,
-  ...VIRTUAL_CONSULTATION_CITIES.map((c) => virtualConsultationCityPath(c)),
-  ...VIRTUAL_SERVICE_CITY_SITEMAP_PATHS,
+];
+
+/** Learn hub + every indexable doctor/topic filter URL. */
+export const SITEMAP_SEGMENT_LEARN: readonly string[] = learnHubSitemapPaths();
+
+/** Flat topic guide article paths (e.g. `/pcos`). */
+export const SITEMAP_SEGMENT_TOPIC_GUIDES: readonly string[] = topicGuideSitemapPaths();
+
+const TOPIC_GUIDE_PATH_SET = new Set<string>(SITEMAP_SEGMENT_TOPIC_GUIDES);
+
+/**
+ * Which logical bucket a pathname belongs to for `<changefreq>` when emitting `sitemap.xml`.
+ */
+export function sitemapUrlsetKindForPath(
+  pathname: string,
+): "core" | "learn" | "guides" | "virtual" {
+  const p = pathname === "" ? "/" : pathname.startsWith("/") ? pathname : `/${pathname}`;
+  if (p.startsWith("/learn")) return "learn";
+  if (p.startsWith("/online-consultation")) return "virtual";
+  if (TOPIC_GUIDE_PATH_SET.has(p)) return "guides";
+  return "core";
+}
+
+/**
+ * Sitemap `<priority>` hints: higher for money pages and hubs, lower for legal and long-tail matrix.
+ * Used at build time in `vite.config.ts`.
+ */
+export function sitemapPriorityForPath(pathname: string): string {
+  const p = pathname === "" ? "/" : pathname.startsWith("/") ? pathname : `/${pathname}`;
+  const segs = p.split("/").filter(Boolean);
+
+  if (p === "/" || segs.length === 0) return "1.0";
+
+  if ((HOME_SECTION_SCROLL_PATHS as readonly string[]).includes(p)) return "0.87";
+
+  if (p === ROUTES.drCharmi || p === ROUTES.drZalak) return "0.95";
+  if (
+    p === ROUTES.ahmedabad ||
+    p === ROUTES.mumbai ||
+    p === ROUTES.valsad ||
+    p === ROUTES.bangalore
+  ) {
+    return "0.92";
+  }
+  if (p === ROUTES.learnArticles) return "0.91";
+  if (p === ROUTES.faq) return "0.84";
+  if (p === ROUTES.medicalDisclaimer || p === ROUTES.editorialPolicy) return "0.35";
+
+  if (segs[0] === "learn") {
+    if (segs.length === 1) return "0.92";
+    if (segs.length === 2) return "0.88";
+    return "0.86";
+  }
+
+  if (TOPIC_GUIDE_PATH_SET.has(p)) return "0.89";
+
+  if (segs[0] === "online-consultation") {
+    if (segs.length === 1) return "0.96";
+    if (segs[1] === "country") return "0.88";
+    if (segs.length === 2) return "0.84";
+    return "0.70";
+  }
+
+  return "0.9";
+}
+
+/** Lower `<priority>` for optional supplemental service×city sitemap (duplicate URLs allowed). */
+export function sitemapPriorityVirtualServiceCityLongtail(): string {
+  return "0.58";
+}
+
+/**
+ * Paths listed in the primary `sitemap.xml` only (no service×city matrix).
+ * Long-tail `/online-consultation/:city/:service` URLs live in
+ * `sitemap-virtual-service-cities.xml` instead.
+ */
+export const SITEMAP_PATHS_PRIMARY_URLSET: readonly string[] = [
+  ...SITEMAP_SEGMENT_CORE,
+  ...SITEMAP_SEGMENT_LEARN,
+  ...SITEMAP_SEGMENT_TOPIC_GUIDES,
+  ...SITEMAP_SEGMENT_VIRTUAL_HUB_COUNTRY_CITY,
+];
+
+/** Every indexable path (primary urlset + supplemental long-tail). Used for static shells. */
+export const SITEMAP_PATHS: readonly string[] = [
+  ...SITEMAP_PATHS_PRIMARY_URLSET,
+  ...SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES,
 ];

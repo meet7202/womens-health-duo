@@ -11,47 +11,23 @@ import {
   OG_IMAGE_PATH,
   SITE_NAME,
 } from "./src/config/site.defaults.ts";
-import { SITEMAP_PATHS } from "./src/config/routes.ts";
+import {
+  SITEMAP_PATHS,
+  SITEMAP_PATHS_PRIMARY_URLSET,
+  SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES,
+  sitemapPriorityForPath,
+  sitemapPriorityVirtualServiceCityLongtail,
+  sitemapUrlsetKindForPath,
+} from "./src/config/routes.ts";
 import {
   applyShellPageMetaToHtml,
   assertShellPagePlaceholdersPresent,
   resolveShellPageMeta,
 } from "./src/build/staticShellHead.ts";
 
-/** Fallback if `sitemap.xml` is missing or has no `<loc>` rows (should not happen after `writeSeoFiles`). */
-function sitemapPathnamesFallback(): string[] {
+/** Every indexable pathname (primary + supplemental sitemaps); used for static SPA shells. */
+function allSitemapPathnames(): string[] {
   return [...SITEMAP_PATHS];
-}
-
-/**
- * Pathnames listed in `dist/sitemap.xml` (must match `<loc>` after `writeSeoFiles`).
- * Keeps static `…/index.html` shells in sync with the shipped sitemap without duplicating logic.
- */
-function pathnamesFromWrittenSitemap(siteUrl: string, outDirAbs: string): string[] {
-  const sitemapFile = path.join(outDirAbs, "sitemap.xml");
-  if (!fs.existsSync(sitemapFile)) return sitemapPathnamesFallback();
-
-  const xml = fs.readFileSync(sitemapFile, "utf8");
-  const paths = new Set<string>();
-
-  for (const m of xml.matchAll(/<loc>\s*([^<]+?)\s*<\/loc>/g)) {
-    const loc = m[1]
-      .replace(/&amp;/g, "&")
-      .replace(/&apos;/g, "'")
-      .replace(/&quot;/g, '"')
-      .replace(/&lt;/g, "<")
-      .replace(/&gt;/g, ">");
-    let pathname: string;
-    try {
-      pathname = new URL(loc).pathname || "/";
-    } catch {
-      continue;
-    }
-    if (pathname !== "/" && pathname.endsWith("/")) pathname = pathname.replace(/\/+$/, "") || "/";
-    paths.add(pathname || "/");
-  }
-
-  return paths.size > 0 ? [...paths] : sitemapPathnamesFallback();
 }
 
 const rootDir = path.dirname(fileURLToPath(import.meta.url));
@@ -88,6 +64,7 @@ function htmlSeoReplacements(siteUrl: string) {
     KEYWORDS,
     OG_IMAGE_PATH,
     SITEMAP_URL: `${siteUrl}/sitemap.xml`,
+    LLMS_TXT_URL: `${siteUrl}/llms.txt`,
   };
 }
 
@@ -108,22 +85,50 @@ function escapeXml(text: string): string {
     .replace(/'/g, "&apos;");
 }
 
-/** Rough priority by path depth / template (static hub pages rank above long-tail service×city). */
-function sitemapPriority(pathname: string): string {
+type SitemapChildKind = "core" | "learn" | "guides" | "virtual";
+
+function sitemapChangefreq(pathname: string, kind: SitemapChildKind): string {
+  if (kind === "core") {
+    if (pathname === "/medical-disclaimer" || pathname === "/editorial-policy") return "yearly";
+    return "weekly";
+  }
+  if (kind === "learn") return "weekly";
+  if (kind === "guides") return "monthly";
   const segs = pathname.split("/").filter(Boolean);
-  if (segs.length === 0) return "1.0";
-  if (segs[0] === "learn") {
-    if (segs.length === 1) return "0.92";
-    if (segs.length === 2) return "0.88";
-    return "0.86";
+  if (segs.length >= 3 && segs[0] === "online-consultation" && segs[1] !== "country") {
+    return "monthly";
   }
-  if (segs[0] === "online-consultation") {
-    if (segs.length === 1) return "0.95";
-    if (segs[1] === "country") return "0.88";
-    if (segs.length === 2) return "0.82";
-    return "0.72";
-  }
-  return "0.9";
+  return "weekly";
+}
+
+function buildUrlsetXml(
+  paths: readonly string[],
+  siteUrl: string,
+  lastmod: string,
+  comment: string,
+  opts: {
+    priority: (p: string) => string;
+    changefreq: (p: string) => string;
+  },
+): string {
+  const body = paths
+    .map((p) => {
+      const loc = p === "/" ? `${siteUrl}/` : `${siteUrl}${p}`;
+      return `  <url>
+    <loc>${escapeXml(loc)}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>${opts.changefreq(p)}</changefreq>
+    <priority>${opts.priority(p)}</priority>
+  </url>`;
+    })
+    .join("\n");
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<!-- ${comment} -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${body}
+</urlset>
+`;
 }
 
 const LEGACY_GLOBAL_ONLINE_SLUG_MAP_PATH = path.join(
@@ -142,14 +147,9 @@ function legacyGlobalOnlineShellPathnames(): string[] {
   return ["/global-online", ...Object.keys(legacyRaw).map((s) => `/global-online/${s}`)];
 }
 
-/** Every pathname in the written sitemap plus legacy `/global-online/*` shells. */
-function staticSpaShellPathnames(siteUrl: string, outDirAbs: string): string[] {
-  return [
-    ...new Set([
-      ...pathnamesFromWrittenSitemap(siteUrl, outDirAbs),
-      ...legacyGlobalOnlineShellPathnames(),
-    ]),
-  ];
+/** Every pathname we ship in sitemaps plus legacy `/global-online/*` shells. */
+function staticSpaShellPathnames(): string[] {
+  return [...new Set([...allSitemapPathnames(), ...legacyGlobalOnlineShellPathnames()])];
 }
 
 /** Copy the built root `index.html` under each route segment as `index.html` (SPA shell). */
@@ -161,10 +161,10 @@ function writeStaticSpaShells(siteUrl: string, outDirAbs: string) {
 
   fs.writeFileSync(
     indexHtmlPath,
-    applyShellPageMetaToHtml(raw, resolveShellPageMeta(siteUrl, "/")),
+    applyShellPageMetaToHtml(raw, resolveShellPageMeta(siteUrl, "/"), siteUrl),
   );
 
-  for (const pathname of staticSpaShellPathnames(siteUrl, outDirAbs)) {
+  for (const pathname of staticSpaShellPathnames()) {
     if (pathname === "/" || pathname === "") continue;
     const rel = pathname.replace(/^\/+/, "");
     if (!rel) continue;
@@ -172,7 +172,7 @@ function writeStaticSpaShells(siteUrl: string, outDirAbs: string) {
     fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(
       path.join(dir, "index.html"),
-      applyShellPageMetaToHtml(raw, resolveShellPageMeta(siteUrl, pathname)),
+      applyShellPageMetaToHtml(raw, resolveShellPageMeta(siteUrl, pathname), siteUrl),
     );
   }
 }
@@ -213,29 +213,41 @@ User-agent: CCBot
 Allow: /
 
 Sitemap: ${siteUrl}/sitemap.xml
-`;
-
-  const sitemapUrls = SITEMAP_PATHS.map((p) => {
-    const loc = p === "/" ? `${siteUrl}/` : `${siteUrl}${p}`;
-    const priority = sitemapPriority(p);
-    return `  <url>
-    <loc>${escapeXml(loc)}</loc>
-    <lastmod>${lastmod}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>${priority}</priority>
-  </url>`;
-  }).join("\n");
-
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated at build; edit SITEMAP_PATHS in src/config/routes.ts -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapUrls}
-</urlset>
+Sitemap: ${siteUrl}/sitemap-virtual-service-cities.xml
 `;
 
   fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(path.join(outDir, "robots.txt"), robots, "utf8");
-  fs.writeFileSync(path.join(outDir, "sitemap.xml"), sitemap, "utf8");
+
+  fs.writeFileSync(
+    path.join(outDir, "sitemap.xml"),
+    buildUrlsetXml(
+      SITEMAP_PATHS_PRIMARY_URLSET,
+      siteUrl,
+      lastmod,
+      "Primary urlset: full site except service×city matrix (see sitemap-virtual-service-cities.xml).",
+      {
+        priority: sitemapPriorityForPath,
+        changefreq: (p) => sitemapChangefreq(p, sitemapUrlsetKindForPath(p)),
+      },
+    ),
+    "utf8",
+  );
+
+  fs.writeFileSync(
+    path.join(outDir, "sitemap-virtual-service-cities.xml"),
+    buildUrlsetXml(
+      SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES,
+      siteUrl,
+      lastmod,
+      "Supplemental: service×city URLs only (lower priority; not duplicated in sitemap.xml)",
+      {
+        priority: () => sitemapPriorityVirtualServiceCityLongtail(),
+        changefreq: () => "monthly",
+      },
+    ),
+    "utf8",
+  );
 }
 
 // https://vitejs.dev/config/
@@ -243,6 +255,7 @@ export default defineConfig(({ mode }) => {
   const siteUrl = resolveSiteUrl(mode);
 
   let outDirAbs = path.resolve(rootDir, "dist");
+  let isBuildCommand = false;
 
   return {
     base: vitePublicBase(siteUrl),
@@ -280,9 +293,14 @@ export default defineConfig(({ mode }) => {
         name: "seo-html-and-files",
         configResolved(config) {
           outDirAbs = path.resolve(config.root, config.build.outDir);
+          isBuildCommand = config.command === "build";
         },
         transformIndexHtml(html) {
-          return applyHtmlReplacements(html, siteUrl);
+          const withSeo = applyHtmlReplacements(html, siteUrl);
+          // Dev: resolve placeholders so `@@PAGE_STATIC_FALLBACK@@` is not shown as raw text.
+          // Production: keep `@@PAGE_*@@` in emitted `dist/index.html` for `writeStaticSpaShells`.
+          if (isBuildCommand) return withSeo;
+          return applyShellPageMetaToHtml(withSeo, resolveShellPageMeta(siteUrl, "/"), siteUrl);
         },
         closeBundle() {
           writeSeoFiles(siteUrl, outDirAbs);

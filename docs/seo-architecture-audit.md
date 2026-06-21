@@ -14,17 +14,17 @@ _Grounded in this codebase. For reusable Cursor prompts, see [`seo-cursor-playbo
 | Virtual SEO  | `/online-consultation`, `/online-consultation/country/:slug`, `/online-consultation/:city`, `/online-consultation/:city/:service` | Long-tail discovery; large cardinality                                         |
 | Legacy       | `/global-online` → redirects                                                                                                      | Bookmark preservation                                                          |
 
-Router definitions: [`src/App.tsx`](../src/App.tsx). Sitemap membership: [`src/config/routes.ts`](../src/config/routes.ts) (`SITEMAP_PATHS`).
+Router definitions: [`src/App.tsx`](../src/App.tsx). Sitemap membership: [`src/config/routes.ts`](../src/config/routes.ts) — **`SITEMAP_PATHS_PRIMARY_URLSET`** for **`sitemap.xml`**, **`SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES`** for **`sitemap-virtual-service-cities.xml`**, full union **`SITEMAP_PATHS`** for static shells; see `vite.config.ts` `writeSeoFiles`.
 
 ## 2. Crawling & indexing
 
-| Mechanism                          | Status                                              | Where                                                                                     |
-| ---------------------------------- | --------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `robots.txt`                       | Generated at build                                  | [`vite.config.ts`](../vite.config.ts)                                                     |
-| `sitemap.xml`                      | Generated at build; includes Learn + virtual matrix | `closeBundle` + `SITEMAP_PATHS`                                                           |
-| Canonical + OG + Twitter card meta | Yes                                                 | [`index.html`](../index.html) tokens + [`SeoHead.tsx`](../src/components/seo/SeoHead.tsx) |
-| `llms.txt`                         | Static; strong AI/crawler summary                   | [`public/llms.txt`](../public/llms.txt)                                                   |
-| IndexNow                           | **Not implemented**                                 | Optional future build artifact or hosting hook                                            |
+| Mechanism                                            | Status                                                                             | Where                                                                                                                               |
+| ---------------------------------------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `robots.txt`                                         | Generated at build                                                                 | [`vite.config.ts`](../vite.config.ts)                                                                                               |
+| `sitemap.xml` + `sitemap-virtual-service-cities.xml` | Generated at build; primary without service×city matrix; long-tail in supplemental | `closeBundle` + `SITEMAP_PATHS_PRIMARY_URLSET` / `SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES` in [`routes.ts`](../src/config/routes.ts) |
+| Canonical + OG + Twitter card meta                   | Yes                                                                                | [`index.html`](../index.html) tokens + [`SeoHead.tsx`](../src/components/seo/SeoHead.tsx)                                           |
+| `llms.txt`                                           | Static; strong AI/crawler summary                                                  | [`public/llms.txt`](../public/llms.txt)                                                                                             |
+| IndexNow                                             | **Not implemented**                                                                | Optional future build artifact or hosting hook                                                                                      |
 
 ## 3. Structured data (JSON-LD)
 

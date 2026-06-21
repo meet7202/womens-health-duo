@@ -46,7 +46,7 @@
 
 - **Canonical site:** `https://womenshealthduo.com` (no trailing slash in env defaults).
 - **Robots:** [`/robots.txt`](https://womenshealthduo.com/robots.txt) — allows major search and common AI crawlers; references the sitemap URL.
-- **Sitemap:** [`/sitemap.xml`](https://womenshealthduo.com/sitemap.xml) — generated at **`npm run build`** from `SITEMAP_PATHS` in `src/config/routes.ts` (homepage, doctor profiles, India city landings, **Learn hub main + every indexable doctor/topic filter URL**, FAQ, **medical disclaimer**, **editorial policy**, virtual hub, per-country hubs, every virtual city overview, and every **service × city** URL). Each URL includes **`<lastmod>`** (build date) and a **priority** hint (hub and core pages higher than long-tail service×city pages).
+- **Sitemap:** [`/sitemap.xml`](https://womenshealthduo.com/sitemap.xml) — at **`npm run build`**, a **single `<urlset>`** (not a sitemap index) lists the **primary** crawl set (core pages, Learn, topic guides, virtual hub/country/city) with **`<lastmod>`**, **`<changefreq>`**, and **`<priority>`** (`sitemapPriorityForPath()` in `src/config/routes.ts`). **`robots.txt`** also lists [`/sitemap-virtual-service-cities.xml`](https://womenshealthduo.com/sitemap-virtual-service-cities.xml): **only** the long-tail **service × city** URLs, with lower priority—so those pages are still discoverable without bloating the primary file.
 - **HTML head:** root [`index.html`](https://womenshealthduo.com/) receives build-time tokens for title, description, **meta keywords** (comma-separated topics for legacy crawlers), Open Graph, and a **`<link rel="sitemap">`** to the absolute sitemap URL.
 
 ## URL patterns (Learn hub — video Shorts & Reels)
@@ -89,4 +89,4 @@ Permanent section URLs (same page as `/`; good for sharing) and hash alternative
 
 ## Note for site owners
 
-If the live domain differs, update `VITE_SITE_URL` in `.env`, `src/config/site.defaults.ts` (`SITE_DEFAULT_URL`), and this file so links stay accurate. Marketing URLs live in `src/config/routes.ts`, `src/lib/virtualConsultation.ts`, `src/data/seoOnlineServices.ts`, and `src/data/virtualConsultationCities.json`; `dist/sitemap.xml` lists them at build time. Legacy `/global-online` URLs redirect to `/online-consultation`.
+If the live domain differs, update `VITE_SITE_URL` in `.env`, `src/config/site.defaults.ts` (`SITE_DEFAULT_URL`), and this file so links stay accurate. Marketing URLs live in `src/config/routes.ts`, `src/lib/virtualConsultation.ts`, `src/data/seoOnlineServices.ts`, and `src/data/virtualConsultationCities.json`; **`dist/sitemap.xml`** (primary) and **`dist/sitemap-virtual-service-cities.xml`** (service×city only) are written at build time. Legacy `/global-online` URLs redirect to `/online-consultation`.

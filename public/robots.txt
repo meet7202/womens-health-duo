@@ -30,3 +30,4 @@ User-agent: CCBot
 Allow: /
 
 Sitemap: https://womenshealthduo.com/sitemap.xml
+Sitemap: https://womenshealthduo.com/sitemap-virtual-service-cities.xml
