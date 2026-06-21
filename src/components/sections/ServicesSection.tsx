@@ -75,7 +75,7 @@ const services = [
         icon: Heart,
         title: "Women's Health Physiotherapy",
         description:
-          "Clinical physiotherapy focused on women's health—pelvic pain, incontinence, pregnancy-related symptoms, postpartum recovery, and safe return to activity—alongside Pilates-based movement.",
+          "Clinical physiotherapy focused on women's health, pelvic pain, incontinence, pregnancy-related symptoms, postpartum recovery, and safe return to activity, alongside Pilates-based movement.",
       },
       {
         icon: Activity,
@@ -87,7 +87,7 @@ const services = [
         icon: Baby,
         title: "Prenatal and postnatal care",
         description:
-          "Exercise and education from pregnancy through postpartum, birth preparation, diastasis recti care, and recovery—including programs you can continue online when you travel or live abroad.",
+          "Exercise and education from pregnancy through postpartum, birth preparation, diastasis recti care, and recovery, including programs you can continue online when you travel or live abroad.",
       },
       {
         icon: Dumbbell,
@@ -145,9 +145,9 @@ export const ServicesSection = () => {
               Comprehensive <span className="text-primary italic">Care</span> for Every Woman
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              The quick map above is a shortcut; here is the full menu by doctor—obstetrics,
-              gynecology, IVF, laparoscopy, pelvic and postpartum physio, and STOTT Pilates—by video
-              from anywhere. {PRACTICE_BOTH_DOCTORS_IN_PERSON}
+              The quick map above is a shortcut; here is the full menu by doctor, obstetrics,
+              gynecology, IVF, laparoscopy, pelvic and postpartum physio, and STOTT Pilates, by
+              video from anywhere. {PRACTICE_BOTH_DOCTORS_IN_PERSON}
             </p>
           </motion.div>
 

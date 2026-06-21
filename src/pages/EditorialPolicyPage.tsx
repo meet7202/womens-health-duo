@@ -8,7 +8,7 @@ import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 
 const TITLE = "Editorial policy | Women's Health Duo";
 const DESCRIPTION =
-  "How Women's Health Duo publishes Learn hub captions, video selections, and on-site health content—authorship, accuracy intent, and corrections.";
+  "How Women's Health Duo publishes Learn hub captions, video selections, and on-site health content, authorship, accuracy intent, and corrections.";
 
 const LAST_UPDATED = "June 2026";
 
@@ -86,7 +86,7 @@ export function EditorialPolicyPage() {
             </h2>
             <p>
               This repository is primarily a consultation and education routing site with a video
-              hub—not a medical journal. If we publish long-form articles in the future, we will
+              hub, not a medical journal. If we publish long-form articles in the future, we will
               list author credentials, revision dates, and reference sections where clinical claims
               require them.
             </p>

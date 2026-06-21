@@ -1,4 +1,4 @@
-/** One landing page per service × virtual city (sitemap + internal links only — not homepage). */
+/** One landing page per service × virtual city (sitemap + internal links only ,  not homepage). */
 export type SeoOnlineService = {
   slug: string;
   /** H1 / visible title (matches Services section intent). */
@@ -17,7 +17,7 @@ export const SEO_ONLINE_SERVICES: readonly SeoOnlineService[] = [
     shortTitle: "Pregnancy & obstetrics",
     doctor: "charmi",
     summary:
-      "Video consults for prenatal care questions, high-risk pregnancy planning, and follow-up with an India-trained obstetrician—ideal when you want continuity with a familiar clinician before or between visits in your home country.",
+      "Video consults for prenatal care questions, high-risk pregnancy planning, and follow-up with an India-trained obstetrician, ideal when you want continuity with a familiar clinician before or between visits in your home country.",
   },
   {
     slug: "ivf-fertility-treatments",
@@ -25,7 +25,7 @@ export const SEO_ONLINE_SERVICES: readonly SeoOnlineService[] = [
     shortTitle: "IVF & fertility",
     doctor: "charmi",
     summary:
-      "Online discussion of fertility workup, IVF/IUI pathways, cycle planning questions, and second opinions—coordinated through WhatsApp or email with clear documentation of your history and prior labs/imaging where available.",
+      "Online discussion of fertility workup, IVF/IUI pathways, cycle planning questions, and second opinions, coordinated through WhatsApp or email with clear documentation of your history and prior labs/imaging where available.",
   },
   {
     slug: "laparoscopic-surgery",
@@ -33,7 +33,7 @@ export const SEO_ONLINE_SERVICES: readonly SeoOnlineService[] = [
     shortTitle: "Laparoscopic gynecology",
     doctor: "charmi",
     summary:
-      "Remote consults for fibroids, endometriosis, ovarian cysts, and minimally invasive surgical options when appropriate—education and planning; definitive surgery remains in-person when indicated.",
+      "Remote consults for fibroids, endometriosis, ovarian cysts, and minimally invasive surgical options when appropriate, education and planning; definitive surgery remains in-person when indicated.",
   },
   {
     slug: "pcos-hormonal-disorders",
@@ -57,7 +57,7 @@ export const SEO_ONLINE_SERVICES: readonly SeoOnlineService[] = [
     shortTitle: "Menopause care",
     doctor: "charmi",
     summary:
-      "Midlife and menopause symptom review, bone health and wellness planning, and shared decision-making for therapies where clinically appropriate—all online for international patients.",
+      "Midlife and menopause symptom review, bone health and wellness planning, and shared decision-making for therapies where clinically appropriate, all online for international patients.",
   },
   {
     slug: "pelvic-floor-rehabilitation",
@@ -65,7 +65,7 @@ export const SEO_ONLINE_SERVICES: readonly SeoOnlineService[] = [
     shortTitle: "Pelvic floor rehab",
     doctor: "zalak",
     summary:
-      "Virtual women's health physiotherapy for pelvic floor concerns, guided exercise, and progression—ideal alongside your local physician for safety and coordinated care.",
+      "Virtual women's health physiotherapy for pelvic floor concerns, guided exercise, and progression, ideal alongside your local physician for safety and coordinated care.",
   },
   {
     slug: "antenatal-postnatal-care",
@@ -81,7 +81,7 @@ export const SEO_ONLINE_SERVICES: readonly SeoOnlineService[] = [
     shortTitle: "Mat Pilates online",
     doctor: "zalak",
     summary:
-      "Live and structured STOTT Mat Pilates–based sessions and coaching for patients anywhere—pairs with in-person Mat & Reformer work in Bangalore and Ahmedabad when you visit India.",
+      "Live and structured STOTT Mat Pilates–based sessions and coaching for patients anywhere, pairs with in-person Mat & Reformer work in Bangalore and Ahmedabad when you visit India.",
   },
   {
     slug: "stott-pilates",
@@ -89,7 +89,7 @@ export const SEO_ONLINE_SERVICES: readonly SeoOnlineService[] = [
     shortTitle: "STOTT Pilates",
     doctor: "zalak",
     summary:
-      "Certified STOTT Pilates on Mat and Reformer—core, posture, and women-focused goals in studio (Bangalore, Ahmedabad) plus remote Reformer-oriented programming and progression coaching for international patients.",
+      "Certified STOTT Pilates on Mat and Reformer, core, posture, and women-focused goals in studio (Bangalore, Ahmedabad) plus remote Reformer-oriented programming and progression coaching for international patients.",
   },
   {
     slug: "musculoskeletal-physiotherapy",
@@ -105,7 +105,7 @@ export const SEO_ONLINE_SERVICES: readonly SeoOnlineService[] = [
     shortTitle: "Core & functional",
     doctor: "zalak",
     summary:
-      "Online core stability and functional strength plans with physiotherapy oversight—useful after pregnancy, surgery (with clearance), or for general women's musculoskeletal health.",
+      "Online core stability and functional strength plans with physiotherapy oversight, useful after pregnancy, surgery (with clearance), or for general women's musculoskeletal health.",
   },
   {
     slug: "womens-wellness-programs",

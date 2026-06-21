@@ -1,8 +1,12 @@
+import { useMemo } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
+import { JsonLdFaq } from "@/components/seo/JsonLdFaq";
 import { PageShell } from "@/components/layout/PageShell";
+import { FaqSection } from "@/components/sections/FaqSection";
 import { ROUTES } from "@/config/routes";
+import { SITE_URL } from "@/config/site";
 import { SEO_ONLINE_SERVICES, getSeoOnlineServiceBySlug } from "@/data/seoOnlineServices";
 import {
   getVirtualConsultationCityBySlug,
@@ -19,9 +23,10 @@ import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { InclusiveSeoListFootnote } from "@/components/seo/InclusiveSeoListFootnote";
 import { Button } from "@/components/ui/button";
 import { PRACTICE_BOTH_DOCTORS_IN_PERSON } from "@/config/practiceLocations";
+import { onlineServiceCityFaqs } from "@/data/contextualFaqs";
 
 function buildMetaTitle(serviceShort: string, city: string, country: string) {
-  return `${serviceShort} online — ${city}, ${country} | Women's Health Duo`;
+  return `${serviceShort} online ,  ${city}, ${country} | Women's Health Duo`;
 }
 
 function buildMetaDescription(
@@ -41,6 +46,11 @@ export function VirtualOnlineServiceCityPage() {
   const { citySlug, serviceSlug } = useParams<{ citySlug: string; serviceSlug: string }>();
   const city = getVirtualConsultationCityBySlug(citySlug);
   const service = getSeoOnlineServiceBySlug(serviceSlug);
+
+  const faqItems = useMemo(() => {
+    if (!city || !service) return [];
+    return onlineServiceCityFaqs(service, city.city, city.country);
+  }, [city, service]);
 
   if (!citySlug || !serviceSlug || !city || !service) {
     return <Navigate to={ROUTES.onlineConsultation} replace />;
@@ -68,7 +78,7 @@ export function VirtualOnlineServiceCityPage() {
     breadcrumbListSchema(crumbs),
     webPageSchema({
       path,
-      name: `${service.title} — ${city.city}, ${city.country} | Women's Health Duo`,
+      name: `${service.title} ,  ${city.city}, ${city.country} | Women's Health Duo`,
       description: metaDescription,
     }),
     virtualServiceCityOfferSchema(city, service),
@@ -83,18 +93,19 @@ export function VirtualOnlineServiceCityPage() {
     <PageShell breadcrumbs={crumbs}>
       <SeoHead title={metaTitle} metaDescription={metaDescription} path={path} />
       <JsonLdGraph graph={graph} />
+      {faqItems.length > 0 ? <JsonLdFaq items={faqItems} pageUrl={`${SITE_URL}${path}`} /> : null}
 
       <article>
         <p className="text-sm font-semibold uppercase tracking-wide text-primary mb-2">
           Virtual online · {city.city}
         </p>
         <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground mb-4">
-          {service.title} — online consultation for patients in {city.city}, {city.country}
+          {service.title} , online consultation for patients in {city.city}, {city.country}
         </h1>
 
         <p className="rounded-lg border border-primary/20 bg-primary/5 px-4 py-3 text-sm text-foreground mb-6">
           {service.summary} <strong className="text-foreground">In person:</strong>{" "}
-          {PRACTICE_BOTH_DOCTORS_IN_PERSON} Book through the practice—see{" "}
+          {PRACTICE_BOTH_DOCTORS_IN_PERSON} Book through the practice, see{" "}
           <Link to={ROUTES.drCharmi} className="text-primary underline underline-offset-4">
             Dr. Charmi Shah
           </Link>{" "}
@@ -114,7 +125,7 @@ export function VirtualOnlineServiceCityPage() {
             >
               All virtual locations in {city.country}
             </Link>{" "}
-            — see other cities, then open a city page for every online service URL.
+            , see other cities, then open a city page for every online service URL.
           </p>
           <p>
             This page is written for people in{" "}
@@ -128,7 +139,7 @@ export function VirtualOnlineServiceCityPage() {
         <div className="flex flex-wrap gap-3 mb-12">
           <Button variant="secondary" asChild>
             <Link to={profilePath}>
-              {service.doctor === "charmi" ? "Dr. Charmi — profile" : "Dr. Zalak — profile"}
+              {service.doctor === "charmi" ? "Dr. Charmi ,  profile" : "Dr. Zalak ,  profile"}
             </Link>
           </Button>
           <Button variant="outline" asChild>
@@ -147,7 +158,7 @@ export function VirtualOnlineServiceCityPage() {
             Similar services in {city.city}
           </h2>
           <p className="text-sm text-muted-foreground mb-4">
-            Other kinds of online visits we offer in {city.city}—each link is a separate page.
+            Other kinds of online visits we offer in {city.city}, each link is a separate page.
           </p>
           <ul className="grid gap-2 sm:grid-cols-2 text-sm">
             {otherServices.map((s) => (
@@ -172,7 +183,7 @@ export function VirtualOnlineServiceCityPage() {
             id="similar-cities-heading"
             className="font-heading text-lg font-semibold text-foreground mb-4"
           >
-            {service.title} — other cities
+            {service.title} , other cities
           </h2>
           <p className="text-sm text-muted-foreground mb-4">
             A few other metros with the same online service page (short list for readability).
@@ -191,6 +202,16 @@ export function VirtualOnlineServiceCityPage() {
           </ul>
           <InclusiveSeoListFootnote variant="cities" />
         </section>
+
+        {faqItems.length > 0 ? (
+          <FaqSection
+            items={faqItems}
+            sectionId="virtual-service-city-faq"
+            headingLabel="FAQ"
+            headingTitle={`Common questions: ${service.shortTitle} in ${city.city}`}
+            headingIntro="How booking, time zones, and video visits usually work for this service when you are based in this city."
+          />
+        ) : null}
 
         <DirectoryPresence />
       </article>

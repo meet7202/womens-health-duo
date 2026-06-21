@@ -131,7 +131,7 @@ export function JsonLd() {
       {
         "@type": ["MedicalClinic", "LocalBusiness"],
         "@id": `${SITE_URL}${ROUTES.ahmedabad}#clinic`,
-        name: `${SITE_NAME} — Ahmedabad`,
+        name: `${SITE_NAME} ,  Ahmedabad`,
         url: `${SITE_URL}${ROUTES.ahmedabad}`,
         telephone: CONTACT.phoneE164,
         email: CONTACT.email,
@@ -141,7 +141,7 @@ export function JsonLd() {
       {
         "@type": ["MedicalClinic", "LocalBusiness"],
         "@id": `${SITE_URL}${ROUTES.mumbai}#clinic`,
-        name: `${SITE_NAME} — Mumbai`,
+        name: `${SITE_NAME} ,  Mumbai`,
         url: `${SITE_URL}${ROUTES.mumbai}`,
         telephone: CONTACT.phoneE164,
         email: CONTACT.email,
@@ -151,7 +151,7 @@ export function JsonLd() {
       {
         "@type": ["MedicalClinic", "LocalBusiness"],
         "@id": `${SITE_URL}${ROUTES.bangalore}#clinic`,
-        name: `${SITE_NAME} — Bengaluru (Bangalore)`,
+        name: `${SITE_NAME} ,  Bengaluru (Bangalore)`,
         url: `${SITE_URL}${ROUTES.bangalore}`,
         telephone: CONTACT.phoneE164,
         email: CONTACT.email,

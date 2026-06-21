@@ -10,7 +10,7 @@ import { SITE_FAQ } from "@/data/siteFaq";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 
-const TITLE = "FAQ | Women's Health Duo — OB-GYN, IVF & Women's Health Physio";
+const TITLE = "FAQ | Women's Health Duo: OB-GYN, IVF & Women's Health Physio";
 const DESCRIPTION =
   "Frequently asked questions about Women's Health Duo: Dr. Charmi Shah (OB-GYN, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapy, Mat Pilates online, STOTT Pilates), cities served, and online consultations.";
 

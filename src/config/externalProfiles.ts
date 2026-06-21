@@ -1,5 +1,5 @@
 /**
- * Third-party profile and directory links (not in JSON-LD `sameAs`; see `AGENTS.md`).
+ * Third-party profile links (not in JSON-LD `sameAs`; see `AGENTS.md`).
  * Keep URLs accurate; prefer official profile pages over search pages.
  */
 export const EXTERNAL = {
@@ -12,11 +12,5 @@ export const EXTERNAL = {
     /** Google Maps / Business Profile share links (separate listings per city). */
     googleBusinessAhmedabad: "https://share.google/Dvx1j3yYqsuo2MvDV",
     googleBusinessBangalore: "https://share.google/kjTkctZb9U7bOcpIE",
-  },
-  /** Major platforms where patients often discover doctors (site-level context). */
-  directories: {
-    practo: "https://www.practo.com",
-    lybrate: "https://www.lybrate.com",
-    curofy: "https://www.curofy.com",
   },
 } as const;

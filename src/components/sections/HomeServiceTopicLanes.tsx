@@ -11,25 +11,25 @@ const topicLanes = [
     id: "hormonal-health",
     title: "Hormonal health",
     icon: Activity,
-    text: "Cycle hormones, PCOS patterns, perimenopause questions—short clips plus a real OB-GYN consult when you're ready.",
+    text: "Cycle hormones, PCOS patterns, perimenopause questions, short clips plus a real OB-GYN consult when you're ready.",
   },
   {
     id: "menstrual-health",
     title: "Menstrual health",
     icon: HeartPulse,
-    text: "Heavy or painful periods, fibroids, endometriosis concerns—education first, then structured care with Dr. Charmi.",
+    text: "Heavy or painful periods, fibroids, endometriosis concerns, education first, then structured care with Dr. Charmi.",
   },
   {
     id: "fertility",
     title: "Fertility",
     icon: Baby,
-    text: "Fertility pathways, IVF/IUI questions, and pregnancy planning—especially helpful for NRIs who want continuity.",
+    text: "Fertility pathways, IVF/IUI questions, and pregnancy planning, especially helpful for NRIs who want continuity.",
   },
   {
     id: "stott-pilates",
     title: "STOTT Pilates",
     icon: Dumbbell,
-    text: "Mat & Reformer work and women's health physiotherapy with Dr. Zalak—pelvic floor, prenatal/postnatal, and recovery.",
+    text: "Mat & Reformer work and women's health physiotherapy with Dr. Zalak, pelvic floor, prenatal/postnatal, and recovery.",
   },
 ] as const;
 
@@ -62,7 +62,7 @@ export function HomeServiceTopicLanes() {
             Four ways people find us
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-            A light overview so you know you&apos;re in the right place—the{" "}
+            A light overview so you know you&apos;re in the right place, the{" "}
             <span className="font-medium text-foreground">full service list by doctor</span> is
             right below this block.
           </p>

@@ -6,7 +6,7 @@ export function medicalClinicForCity(city: CityPageData) {
   return {
     "@type": ["MedicalClinic", "LocalBusiness"],
     "@id": `${url}#clinic`,
-    name: `${SITE_NAME} — ${city.h1.replace(/\s+/g, " ").trim()}`,
+    name: `${SITE_NAME} ,  ${city.h1.replace(/\s+/g, " ").trim()}`,
     url,
     telephone: CONTACT.phoneE164,
     email: CONTACT.email,

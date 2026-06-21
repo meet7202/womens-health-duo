@@ -20,8 +20,8 @@ import drCharmi from "@/assets/dr-charmi.jpeg";
 import drZalak from "@/assets/dr-zalak.jpg";
 
 const IMAGES: Record<DoctorSlug, { src: string; width: number; height: number; alt: string }> = {
-  charmi: { src: drCharmi, width: 849, height: 1024, alt: "Dr. Charmi Shah — portrait" },
-  zalak: { src: drZalak, width: 479, height: 563, alt: "Dr. Zalak Shah — portrait" },
+  charmi: { src: drCharmi, width: 849, height: 1024, alt: "Dr. Charmi Shah ,  portrait" },
+  zalak: { src: drZalak, width: 479, height: 563, alt: "Dr. Zalak Shah ,  portrait" },
 };
 
 const PHYSICIAN_IDS: Record<DoctorSlug, string> = {
@@ -202,7 +202,7 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
           </h2>
           <p className="text-sm text-muted-foreground mb-6 max-w-xl">
             To book with {d.name}, WhatsApp is usually fastest. You can also use the contact form on
-            our homepage—we will reply with next steps and available slots.
+            our homepage, we will reply with next steps and available slots.
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-3">
             <Button

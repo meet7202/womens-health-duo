@@ -45,7 +45,7 @@ export const HeroSection = ({ seoH1 = null }: HeroSectionProps) => {
       id="home"
       className="relative flex min-h-screen items-start gradient-hero overflow-hidden md:items-center"
     >
-      {/* Decorative elements — keep low opacity so headline stays crisp */}
+      {/* Decorative elements ,  keep low opacity so headline stays crisp */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-10 w-96 h-96 bg-rose-light/20 rounded-full blur-3xl" />
@@ -54,7 +54,7 @@ export const HeroSection = ({ seoH1 = null }: HeroSectionProps) => {
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
         <div className="grid gap-10 md:grid-cols-2 md:gap-12 lg:gap-16 items-center">
-          {/* Copy — second on mobile so the photo is above the fold */}
+          {/* Copy ,  second on mobile so the photo is above the fold */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -138,7 +138,7 @@ export const HeroSection = ({ seoH1 = null }: HeroSectionProps) => {
             </motion.div>
           </motion.div>
 
-          {/* Image — first on mobile so it shows without scrolling */}
+          {/* Image ,  first on mobile so it shows without scrolling */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -148,7 +148,7 @@ export const HeroSection = ({ seoH1 = null }: HeroSectionProps) => {
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-elevated">
               <img
                 src={heroImage}
-                alt="Dr. Charmi Shah and Dr. Zalak Shah — Women's Health Duo"
+                alt="Dr. Charmi Shah and Dr. Zalak Shah ,  Women's Health Duo"
                 className="h-full w-full object-cover"
                 width={640}
                 height={800}

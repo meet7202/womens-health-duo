@@ -90,7 +90,7 @@ const Index = () => {
         </Suspense>
         <FaqSection
           items={HOME_PAGE_FAQ}
-          headingTitle={"Women's Health Duo — quick answers"}
+          headingTitle={"Women's Health Duo ,  quick answers"}
           headingIntro="Five common questions about our education platform, clinical lanes, and how to book. Medical decisions belong in a consultation with your clinician."
         />
         <div className="container mx-auto max-w-3xl px-4 pb-16 text-center sm:px-6 lg:px-8">

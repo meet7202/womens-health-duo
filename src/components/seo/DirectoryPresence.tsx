@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 import { EXTERNAL } from "@/config/externalProfiles";
+import { ROUTES } from "@/config/routes";
 
 /**
- * Context on major Indian health directories (no claim of an active listing).
+ * On-site paths to book Dr. Charmi Shah and Dr. Zalak Shah, plus Maps for in-person locations.
  */
 export function DirectoryPresence() {
   return (
@@ -10,45 +12,35 @@ export function DirectoryPresence() {
       aria-labelledby="dir-presence-heading"
     >
       <h2 id="dir-presence-heading" className="font-heading text-xl font-semibold text-foreground">
-        Find doctors on health platforms
+        Book Dr. Charmi Shah or Dr. Zalak Shah
       </h2>
       <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-        Many patients discover specialists through national directories. Official profiles for our
-        doctors are linked on their pages where available. You can also search by name on platforms
-        such as{" "}
-        <a
-          href={EXTERNAL.directories.practo}
-          className="text-primary underline underline-offset-4"
-          target="_blank"
-          rel="noopener noreferrer"
+        The clearest way to plan care is with our team directly. Read{" "}
+        <Link
+          to={ROUTES.drCharmi}
+          className="text-primary font-medium underline underline-offset-4"
         >
-          Practo
-        </a>
-        ,{" "}
-        <a
-          href={EXTERNAL.directories.lybrate}
-          className="text-primary underline underline-offset-4"
-          target="_blank"
-          rel="noopener noreferrer"
+          Dr. Charmi Shah&apos;s profile
+        </Link>{" "}
+        (OB-GYN and IVF) and{" "}
+        <Link to={ROUTES.drZalak} className="text-primary font-medium underline underline-offset-4">
+          Dr. Zalak Shah&apos;s profile
+        </Link>{" "}
+        (women&apos;s health physiotherapy and STOTT Pilates), then message us on WhatsApp or email
+        from those pages, or open{" "}
+        <Link
+          to={ROUTES.onlineConsultation}
+          className="text-primary font-medium underline underline-offset-4"
         >
-          Lybrate
-        </a>
-        , and{" "}
-        <a
-          href={EXTERNAL.directories.curofy}
-          className="text-primary underline underline-offset-4"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Curofy
-        </a>
-        .
+          virtual online consultations
+        </Link>{" "}
+        to see how video visits work and how to book from wherever you are.
       </p>
       <h3 className="font-heading text-base font-semibold text-foreground mt-6 mb-2">
         Google Maps &amp; hours
       </h3>
       <p className="text-sm text-muted-foreground leading-relaxed">
-        For Dr. Zalak Shah&apos;s in-person visits, pick the city you plan to see her in—each
+        For Dr. Zalak Shah&apos;s in-person visits, pick the city you plan to see her in, each
         listing has directions, hours, and phone:{" "}
         <a
           href={EXTERNAL.drZalak.googleBusinessAhmedabad}

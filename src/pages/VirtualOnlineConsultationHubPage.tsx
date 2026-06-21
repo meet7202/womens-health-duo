@@ -2,9 +2,11 @@ import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
+import { JsonLdFaq } from "@/components/seo/JsonLdFaq";
 import { PageShell } from "@/components/layout/PageShell";
+import { FaqSection } from "@/components/sections/FaqSection";
 import { ROUTES } from "@/config/routes";
-import { CONTACT } from "@/config/site";
+import { CONTACT, SITE_URL } from "@/config/site";
 import {
   ANCHOR_REGION_ORDER,
   ANCHOR_VIRTUAL_CONSULTATION_CITIES,
@@ -22,9 +24,10 @@ import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { InclusiveSeoListFootnote } from "@/components/seo/InclusiveSeoListFootnote";
 import { Button } from "@/components/ui/button";
 import { PRACTICE_BOTH_DOCTORS_IN_PERSON } from "@/config/practiceLocations";
+import { virtualHubFaqs } from "@/data/contextualFaqs";
 
-const TITLE = "Virtual online OB-GYN & women's health physio — global cities | Women's Health Duo";
-const DESCRIPTION = `Video visits from India with Dr. Charmi Shah (OB-GYN, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapy, Mat Pilates online, STOTT Pilates on Mat and Reformer). We serve families in India and abroad—pick your city below, then choose the type of care. ${PRACTICE_BOTH_DOCTORS_IN_PERSON} See each doctor's profile for hours and how to book.`;
+const TITLE = "Virtual online OB-GYN & women's health physio ,  global cities | Women's Health Duo";
+const DESCRIPTION = `Video visits from India with Dr. Charmi Shah (OB-GYN, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapy, Mat Pilates online, STOTT Pilates on Mat and Reformer). We serve families in India and abroad, pick your city below, then choose the type of care. ${PRACTICE_BOTH_DOCTORS_IN_PERSON} See each doctor's profile for hours and how to book.`;
 
 export function VirtualOnlineConsultationHubPage() {
   const path = VIRTUAL_CONSULTATION_HUB_PATH;
@@ -52,11 +55,13 @@ export function VirtualOnlineConsultationHubPage() {
       return { region, cities };
     });
   }, []);
+  const hubFaqItems = useMemo(() => virtualHubFaqs(), []);
 
   return (
     <PageShell breadcrumbs={crumbs}>
       <SeoHead title={TITLE} metaDescription={DESCRIPTION} path={path} />
       <JsonLdGraph graph={graph} />
+      <JsonLdFaq items={hubFaqItems} pageUrl={`${SITE_URL}${path}`} />
 
       <article>
         <p className="text-sm font-semibold uppercase tracking-wide text-primary mb-2">
@@ -69,7 +74,7 @@ export function VirtualOnlineConsultationHubPage() {
         <p className="text-lg text-muted-foreground leading-relaxed mb-6">{DESCRIPTION}</p>
         <p className="text-muted-foreground leading-relaxed mb-6">
           Start from your city or region below. Each city page explains what we offer by video and
-          links to specific topics—pregnancy and OB-GYN, gynecology and fertility, physio, STOTT
+          links to specific topics, pregnancy and OB-GYN, gynecology and fertility, physio, STOTT
           Pilates, and more. Further down you can also browse{" "}
           <strong className="text-foreground">by country</strong>.
         </p>
@@ -99,7 +104,7 @@ export function VirtualOnlineConsultationHubPage() {
         </div>
 
         <h2 className="font-heading text-xl font-semibold text-foreground mb-2">
-          Priority metros — virtual consultation from India
+          Priority metros , virtual consultation from India
         </h2>
         <p className="text-sm text-muted-foreground mb-8">
           {ANCHOR_VIRTUAL_CONSULTATION_CITIES.length} highlighted cities below. Open your city for a
@@ -188,6 +193,14 @@ export function VirtualOnlineConsultationHubPage() {
             Learn
           </Link>
         </p>
+
+        <FaqSection
+          items={hubFaqItems}
+          sectionId="virtual-hub-faq"
+          headingLabel="FAQ"
+          headingTitle="Virtual online consultations"
+          headingIntro="How the hub works, booking, which doctor covers which questions, and when to use local emergency care."
+        />
 
         <DirectoryPresence />
       </article>
