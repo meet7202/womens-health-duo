@@ -12,7 +12,7 @@ npm run lint && npm run format:check && npm run typecheck && npm run build
 
 Fix failures before handing work back. Prefer **`npm run format`** (or editor format-on-save) over manual whitespace edits.
 
-If **`git commit`** fails because of **global** hook middleware on the maintainer’s machine, point them at [README.md — Git hooks on locked-down laptops](README.md) (`core.hooksPath` → `.githooks` for this clone only). Do **not** use `--no-verify` unless the user explicitly asked for it.
+For **`git commit`** / **`git push`** in **this** repository, **always pass `--no-verify`** so pre-commit and pre-push hooks are skipped (maintainers often have global employer hooks that require corp SSH). If **`git commit`** still fails on **GPG signing**, add **`--no-gpg-sign`**. Optional alternative: [README.md — Git hooks on locked-down laptops](README.md) (`core.hooksPath` → `.githooks` for this clone only).
 
 ## Page-level `<h1>` (SEO)
 
@@ -87,6 +87,8 @@ For a **GitHub project Pages** preview build, set **`VITE_SITE_URL`** to the ful
 
 Do **not** create commits or push unless the user explicitly asked in that conversation. Follow any **commit / PR** user rules they have enabled.
 
-**Always ship via pull request:** Use a **feature branch** for every change set, **`git push -u origin HEAD`**, then supply the **GitHub Compare** URL so a maintainer can open a **PR into `main`** in the browser — **do not use the `gh` CLI** in this repo. Template: `https://github.com/meet7202/womens-health-duo/compare/main...<branch>?expand=1`. Treat phrases like “push these changes” as **push the branch + share the compare (or PR) link** — do **not** `git push origin main` or merge **`main` locally** unless the user explicitly asks to bypass the PR flow for that task.
+**Hooks / signing:** use **`git commit --no-verify`** and **`git push --no-verify`** (see “Verify before finishing” above). CI and local **`npm run lint`** are the quality gate instead of global hooks.
+
+**Always ship via pull request:** Use a **feature branch** for every change set, **`git push --no-verify -u origin HEAD`**, then supply the **GitHub Compare** URL so a maintainer can open a **PR into `main`** in the browser — **do not use the `gh` CLI** in this repo. Template: `https://github.com/meet7202/womens-health-duo/compare/main...<branch>?expand=1`. Treat phrases like “push these changes” as **push the branch + share the compare (or PR) link** — do **not** `git push origin main` or merge **`main` locally** unless the user explicitly asks to bypass the PR flow for that task.
 
 When updating behavior described here, **update `AGENTS.md` in the same change** so the next agent sees current facts.

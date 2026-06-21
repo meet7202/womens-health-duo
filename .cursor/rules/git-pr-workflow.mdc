@@ -8,8 +8,8 @@ alwaysApply: true
 For every change set:
 
 1. Use a **feature branch** (`git checkout -b <branch>` if you are on `main` and need a new branch).
-2. Commit when the user asked for commits (or when completing their requested change set).
-3. Push the branch: `git push -u origin HEAD` (use `git -c core.hooksPath=.githooks push` in this clone if global hooks block; see [README](../../README.md)).
+2. Commit when the user asked for commits (or when completing their requested change set). **Always** use **`git commit --no-verify`** in this repository (global employer hooks require corp SSH; this project does not rely on them). If commit fails on **GPG signing** without corp auth, add **`--no-gpg-sign`**.
+3. Push the branch: **`git push --no-verify -u origin HEAD`** (same reason as commit hooks). Optionally `git -c core.hooksPath=.githooks push` if you prefer local hooks only; see [README](../../README.md).
 4. **Do not use the `gh` CLI** for this repository. Open a PR on **github.com** using **git + browser only:** give the maintainer the **Compare** URL so they can click **Create pull request** into `main`:
    `https://github.com/meet7202/womens-health-duo/compare/main...<branch>?expand=1`  
    Replace `<branch>` with the pushed branch name (slashes are fine in the path). Optionally paste a suggested title/body in chat; the human completes the PR on GitHub.
