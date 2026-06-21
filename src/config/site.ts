@@ -9,7 +9,7 @@ import {
   HOME_ENTITY_DEFINITION,
   HOME_HERO_LEDE,
   ORGANIZATION_SCHEMA_DESCRIPTION,
-} from "@/config/site.defaults";
+} from "./site.defaults";
 
 /**
  * Canonical site URL for SEO. Set `VITE_SITE_URL` in `.env` (no trailing slash).

@@ -1,5 +1,5 @@
-import { ROUTES } from "@/config/routes";
-import { SITE_NAME, DEFAULT_DESCRIPTION } from "@/config/site";
+import { ROUTES } from "../config/routes";
+import { SITE_NAME, DEFAULT_DESCRIPTION } from "../config/site.defaults";
 
 /** Permalink pathname → scroll target element id on the homepage. */
 const PATH_TO_SCROLL_ID: Readonly<Record<string, string>> = {

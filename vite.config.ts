@@ -12,6 +12,11 @@ import {
   SITE_NAME,
 } from "./src/config/site.defaults.ts";
 import { SITEMAP_PATHS } from "./src/config/routes.ts";
+import {
+  applyShellPageMetaToHtml,
+  assertShellPagePlaceholdersPresent,
+  resolveShellPageMeta,
+} from "./src/build/staticShellHead.ts";
 
 /** Fallback if `sitemap.xml` is missing or has no `<loc>` rows (should not happen after `writeSeoFiles`). */
 function sitemapPathnamesFallback(): string[] {
@@ -149,16 +154,26 @@ function staticSpaShellPathnames(siteUrl: string, outDirAbs: string): string[] {
 
 /** Copy the built root `index.html` under each route segment as `index.html` (SPA shell). */
 function writeStaticSpaShells(siteUrl: string, outDirAbs: string) {
-  const indexHtml = path.join(outDirAbs, "index.html");
-  if (!fs.existsSync(indexHtml)) return;
-  const html = fs.readFileSync(indexHtml);
+  const indexHtmlPath = path.join(outDirAbs, "index.html");
+  if (!fs.existsSync(indexHtmlPath)) return;
+  const raw = fs.readFileSync(indexHtmlPath, "utf8");
+  assertShellPagePlaceholdersPresent(raw);
+
+  fs.writeFileSync(
+    indexHtmlPath,
+    applyShellPageMetaToHtml(raw, resolveShellPageMeta(siteUrl, "/")),
+  );
+
   for (const pathname of staticSpaShellPathnames(siteUrl, outDirAbs)) {
     if (pathname === "/" || pathname === "") continue;
     const rel = pathname.replace(/^\/+/, "");
     if (!rel) continue;
     const dir = path.join(outDirAbs, ...rel.split("/"));
     fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(path.join(dir, "index.html"), html);
+    fs.writeFileSync(
+      path.join(dir, "index.html"),
+      applyShellPageMetaToHtml(raw, resolveShellPageMeta(siteUrl, pathname)),
+    );
   }
 }
 
@@ -274,8 +289,8 @@ export default defineConfig(({ mode }) => {
           const indexHtml = path.join(outDirAbs, "index.html");
           const notFoundHtml = path.join(outDirAbs, "404.html");
           if (fs.existsSync(indexHtml)) {
-            fs.copyFileSync(indexHtml, notFoundHtml);
             writeStaticSpaShells(siteUrl, outDirAbs);
+            fs.copyFileSync(indexHtml, notFoundHtml);
           }
         },
       },
