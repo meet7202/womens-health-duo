@@ -14,6 +14,7 @@ import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/bre
 import { medicalClinicForCity } from "@/components/seo/schema/cityClinic";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { SITE_URL } from "@/config/site";
+import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 
 type CityLandingPageProps = {
   cityKey: CityKey;
@@ -40,7 +41,7 @@ export function CityLandingPage({ cityKey }: CityLandingPageProps) {
     <PageShell breadcrumbs={crumbs}>
       <SeoHead title={city.title} metaDescription={city.metaDescription} path={city.path} />
       <JsonLdGraph graph={graph} />
-      <JsonLdFaq items={faqItems} pageUrl={`${SITE_URL}${city.path}`} />
+      <JsonLdFaq items={faqItems} pageUrl={githubPagesAbsoluteUrl(SITE_URL, city.path)} />
 
       <article>
         <p className="text-sm font-medium uppercase tracking-wide text-primary mb-2">City</p>

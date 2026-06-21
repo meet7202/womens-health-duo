@@ -5,6 +5,7 @@ import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { PageShell } from "@/components/layout/PageShell";
 import { CONTACT, HOME_ENTITY_DEFINITION, SITE_URL } from "@/config/site";
 import { ROUTES } from "@/config/routes";
+import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { learnHubFaqsForTopic, learnHubFaqHeading } from "@/data/contextualFaqs";
 import { KnowledgeHubVideoHub } from "@/components/learn/KnowledgeHubVideoHub";
 import { LearnTopicalAuthoritySection } from "@/components/learn/LearnTopicalAuthoritySection";
@@ -84,7 +85,7 @@ export function LearnPage() {
     <PageShell breadcrumbs={crumbs}>
       <SeoHead title={title} metaDescription={description} path={canonicalPath} />
       <JsonLdGraph graph={graph} />
-      <JsonLdFaq items={learnFaqItems} pageUrl={`${SITE_URL}${canonicalPath}`} />
+      <JsonLdFaq items={learnFaqItems} pageUrl={githubPagesAbsoluteUrl(SITE_URL, canonicalPath)} />
 
       <article>
         <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground mb-4 text-balance">

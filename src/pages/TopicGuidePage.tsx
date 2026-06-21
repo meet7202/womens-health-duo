@@ -9,6 +9,7 @@ import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { ROUTES } from "@/config/routes";
 import { SITE_URL } from "@/config/site";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
+import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import {
   getTopicGuide,
   topicGuideExampleConsultPaths,
@@ -71,7 +72,7 @@ export function TopicGuidePage() {
     <PageShell breadcrumbs={crumbs}>
       <SeoHead title={docTitle} metaDescription={guide.metaDescription} path={guide.path} />
       <JsonLdGraph graph={graph} />
-      <JsonLdFaq items={guide.faqs} pageUrl={`${SITE_URL}${guide.path}`} />
+      <JsonLdFaq items={guide.faqs} pageUrl={githubPagesAbsoluteUrl(SITE_URL, guide.path)} />
 
       <article>
         <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground mb-4 text-balance">

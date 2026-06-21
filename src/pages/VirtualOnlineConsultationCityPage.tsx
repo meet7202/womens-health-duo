@@ -7,6 +7,7 @@ import { PageShell } from "@/components/layout/PageShell";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { ROUTES } from "@/config/routes";
 import { SITE_URL } from "@/config/site";
+import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { SEO_ONLINE_SERVICES } from "@/data/seoOnlineServices";
 import {
   getVirtualConsultationCityBySlug,
@@ -72,7 +73,9 @@ export function VirtualOnlineConsultationCityPage() {
     <PageShell breadcrumbs={crumbs}>
       <SeoHead title={title} metaDescription={description} path={path} />
       <JsonLdGraph graph={graph} />
-      {faqItems.length > 0 ? <JsonLdFaq items={faqItems} pageUrl={`${SITE_URL}${path}`} /> : null}
+      {faqItems.length > 0 ? (
+        <JsonLdFaq items={faqItems} pageUrl={githubPagesAbsoluteUrl(SITE_URL, path)} />
+      ) : null}
 
       <article>
         <p className="text-sm font-semibold uppercase tracking-wide text-primary mb-2">

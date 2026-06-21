@@ -1,8 +1,9 @@
 import { SITE_URL, SITE_NAME, CONTACT } from "@/config/site";
 import type { CityPageData } from "@/data/cityPages";
+import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 
 export function medicalClinicForCity(city: CityPageData) {
-  const url = `${SITE_URL}${city.path}`;
+  const url = githubPagesAbsoluteUrl(SITE_URL, city.path);
   return {
     "@type": ["MedicalClinic", "LocalBusiness"],
     "@id": `${url}#clinic`,
@@ -10,7 +11,7 @@ export function medicalClinicForCity(city: CityPageData) {
     url,
     telephone: CONTACT.phoneE164,
     email: CONTACT.email,
-    parentOrganization: { "@id": `${SITE_URL}/#organization` },
+    parentOrganization: { "@id": `${githubPagesAbsoluteUrl(SITE_URL, "/")}#organization` },
     areaServed: {
       "@type": "City",
       name:

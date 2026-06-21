@@ -6,6 +6,7 @@ import {
   KEYWORDS,
   OG_IMAGE_PATH,
 } from "@/config/site";
+import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 
 export type SeoHeadProps = {
   /** Full `<title>` text */
@@ -38,7 +39,7 @@ function upsertLink(rel: string, href: string) {
 
 function canonicalUrlForPath(path: string | undefined) {
   const p = !path || path === "/" ? "/" : path.startsWith("/") ? path : `/${path}`;
-  return p === "/" ? `${SITE_URL}/` : `${SITE_URL}${p}`;
+  return githubPagesAbsoluteUrl(SITE_URL, p);
 }
 
 /**
@@ -52,7 +53,7 @@ export function SeoHead({ title, metaDescription, path, metaKeywords }: SeoHeadP
   const pageUrl = canonicalUrlForPath(path);
 
   useLayoutEffect(() => {
-    const ogImage = `${SITE_URL}${OG_IMAGE_PATH}`;
+    const ogImage = githubPagesAbsoluteUrl(SITE_URL, OG_IMAGE_PATH);
 
     document.title = resolvedTitle;
     upsertMeta("name", "description", resolvedDescription);

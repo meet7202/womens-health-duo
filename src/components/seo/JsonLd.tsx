@@ -7,17 +7,19 @@ import {
   ORGANIZATION_SCHEMA_DESCRIPTION,
 } from "@/config/site";
 import { ROUTES } from "@/config/routes";
+import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { PRACTICE_CHARMI_IN_PERSON, PRACTICE_ZALAK_IN_PERSON } from "@/config/practiceLocations";
 
 /**
  * Schema.org structured data for search engines and AI crawlers.
  */
 export function JsonLd() {
-  const orgId = `${SITE_URL}/#organization`;
-  const websiteId = `${SITE_URL}/#website`;
-  const charmiId = `${SITE_URL}/#physician-charmi`;
-  const zalakId = `${SITE_URL}/#physician-zalak`;
-  const ogImage = `${SITE_URL}${OG_IMAGE_PATH}`;
+  const origin = githubPagesAbsoluteUrl(SITE_URL, "/");
+  const orgId = `${origin}#organization`;
+  const websiteId = `${origin}#website`;
+  const charmiId = `${origin}#physician-charmi`;
+  const zalakId = `${origin}#physician-zalak`;
+  const ogImage = githubPagesAbsoluteUrl(SITE_URL, OG_IMAGE_PATH);
 
   const india = { "@type": "Country" as const, name: "India" };
 
@@ -28,8 +30,8 @@ export function JsonLd() {
         "@type": ["MedicalOrganization", "Organization"],
         "@id": orgId,
         name: SITE_NAME,
-        url: SITE_URL,
-        logo: `${SITE_URL}${OG_IMAGE_PATH}`,
+        url: origin,
+        logo: ogImage,
         image: ogImage,
         description: ORGANIZATION_SCHEMA_DESCRIPTION,
         disambiguatingDescription:
@@ -90,7 +92,7 @@ export function JsonLd() {
         },
         telephone: CONTACT.phoneE164,
         email: CONTACT.email,
-        url: SITE_URL,
+        url: origin,
       },
       {
         "@type": "Physician",
@@ -119,12 +121,12 @@ export function JsonLd() {
         },
         telephone: CONTACT.phoneE164,
         email: CONTACT.email,
-        url: SITE_URL,
+        url: origin,
       },
       {
         "@type": "WebSite",
         "@id": websiteId,
-        url: SITE_URL,
+        url: origin,
         name: SITE_NAME,
         description: DEFAULT_DESCRIPTION,
         inLanguage: ["en-IN", "en"],
@@ -132,9 +134,9 @@ export function JsonLd() {
       },
       {
         "@type": ["MedicalClinic", "LocalBusiness"],
-        "@id": `${SITE_URL}${ROUTES.ahmedabad}#clinic`,
+        "@id": `${githubPagesAbsoluteUrl(SITE_URL, ROUTES.ahmedabad)}#clinic`,
         name: `${SITE_NAME} ,  Ahmedabad`,
-        url: `${SITE_URL}${ROUTES.ahmedabad}`,
+        url: githubPagesAbsoluteUrl(SITE_URL, ROUTES.ahmedabad),
         telephone: CONTACT.phoneE164,
         email: CONTACT.email,
         parentOrganization: { "@id": orgId },
@@ -142,9 +144,9 @@ export function JsonLd() {
       },
       {
         "@type": ["MedicalClinic", "LocalBusiness"],
-        "@id": `${SITE_URL}${ROUTES.mumbai}#clinic`,
+        "@id": `${githubPagesAbsoluteUrl(SITE_URL, ROUTES.mumbai)}#clinic`,
         name: `${SITE_NAME} ,  Mumbai`,
-        url: `${SITE_URL}${ROUTES.mumbai}`,
+        url: githubPagesAbsoluteUrl(SITE_URL, ROUTES.mumbai),
         telephone: CONTACT.phoneE164,
         email: CONTACT.email,
         parentOrganization: { "@id": orgId },
@@ -152,9 +154,9 @@ export function JsonLd() {
       },
       {
         "@type": ["MedicalClinic", "LocalBusiness"],
-        "@id": `${SITE_URL}${ROUTES.valsad}#clinic`,
+        "@id": `${githubPagesAbsoluteUrl(SITE_URL, ROUTES.valsad)}#clinic`,
         name: `${SITE_NAME} ,  Valsad`,
-        url: `${SITE_URL}${ROUTES.valsad}`,
+        url: githubPagesAbsoluteUrl(SITE_URL, ROUTES.valsad),
         telephone: CONTACT.phoneE164,
         email: CONTACT.email,
         parentOrganization: { "@id": orgId },
@@ -162,9 +164,9 @@ export function JsonLd() {
       },
       {
         "@type": ["MedicalClinic", "LocalBusiness"],
-        "@id": `${SITE_URL}${ROUTES.bangalore}#clinic`,
+        "@id": `${githubPagesAbsoluteUrl(SITE_URL, ROUTES.bangalore)}#clinic`,
         name: `${SITE_NAME} ,  Bengaluru (Bangalore)`,
-        url: `${SITE_URL}${ROUTES.bangalore}`,
+        url: githubPagesAbsoluteUrl(SITE_URL, ROUTES.bangalore),
         telephone: CONTACT.phoneE164,
         email: CONTACT.email,
         parentOrganization: { "@id": orgId },

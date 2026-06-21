@@ -25,6 +25,7 @@ import {
   virtualCityPathSegment,
   virtualServiceCityPath,
 } from "../lib/virtualConsultation";
+import { githubPagesAbsoluteUrl } from "../lib/githubPagesPublicUrl";
 
 const VIRTUAL_HUB_TITLE =
   "Virtual online OB-GYN & women's health physio ,  global cities | Women's Health Duo";
@@ -85,8 +86,7 @@ function normalizePathname(pathname: string): string {
 }
 
 function canonicalHrefForPath(siteUrl: string, pathname: string): string {
-  const p = normalizePathname(pathname);
-  return p === "/" ? `${siteUrl}/` : `${siteUrl}${p}`;
+  return githubPagesAbsoluteUrl(siteUrl, normalizePathname(pathname));
 }
 
 function escapeAttr(text: string): string {
@@ -238,10 +238,8 @@ function escapeHtmlPcdata(text: string): string {
 }
 
 function shellAbsoluteHref(siteUrl: string, path: string): string {
-  const base = siteUrl.replace(/\/$/, "");
-  if (path === "/") return `${base}/`;
-  const p = path.startsWith("/") ? path : `/${path}`;
-  return `${base}${p}`;
+  const p = path === "/" ? "/" : path.startsWith("/") ? path : `/${path}`;
+  return githubPagesAbsoluteUrl(siteUrl, p);
 }
 
 /**
