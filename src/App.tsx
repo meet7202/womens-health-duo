@@ -9,6 +9,8 @@ import { DoctorProfilePage } from "@/pages/DoctorProfilePage";
 import { CityLandingPage } from "@/pages/CityLandingPage";
 import { LearnPage } from "@/pages/LearnPage";
 import { FaqPage } from "@/pages/FaqPage";
+import { MedicalDisclaimerPage } from "@/pages/MedicalDisclaimerPage";
+import { EditorialPolicyPage } from "@/pages/EditorialPolicyPage";
 import { VirtualOnlineConsultationHubPage } from "@/pages/VirtualOnlineConsultationHubPage";
 import { VirtualOnlineConsultationCityPage } from "@/pages/VirtualOnlineConsultationCityPage";
 import { VirtualOnlineServiceCityPage } from "@/pages/VirtualOnlineServiceCityPage";
@@ -17,7 +19,7 @@ import {
   LegacyGlobalOnlineCityRedirect,
   LegacyGlobalOnlineHubRedirect,
 } from "@/pages/LegacyGlobalOnlineRedirects";
-import { ROUTES } from "@/config/routes";
+import { ROUTES, HOME_SECTION_SCROLL_PATHS } from "@/config/routes";
 import { VIRTUAL_CONSULTATION_HUB_PATH } from "@/lib/virtualConsultation";
 import { StickyWhatsAppButton } from "@/components/layout/StickyWhatsAppButton";
 import { NormalizeIndexHtmlUrl } from "@/components/layout/NormalizeIndexHtmlUrl";
@@ -51,6 +53,9 @@ const App = () => (
       <ScrollToTop />
       <Routes>
         <Route path={ROUTES.home} element={<Index />} />
+        {HOME_SECTION_SCROLL_PATHS.map((path) => (
+          <Route key={path} path={path} element={<Index />} />
+        ))}
         <Route path={ROUTES.drCharmi} element={<DoctorProfilePage slug="charmi" />} />
         <Route path={ROUTES.drZalak} element={<DoctorProfilePage slug="zalak" />} />
         <Route path={ROUTES.ahmedabad} element={<CityLandingPage cityKey="ahmedabad" />} />
@@ -76,6 +81,8 @@ const App = () => (
         <Route path={`${ROUTES.learn}/:doctorSegment`} element={<LearnPage />} />
         <Route path={ROUTES.learn} element={<LearnPage />} />
         <Route path={ROUTES.faq} element={<FaqPage />} />
+        <Route path={ROUTES.medicalDisclaimer} element={<MedicalDisclaimerPage />} />
+        <Route path={ROUTES.editorialPolicy} element={<EditorialPolicyPage />} />
         <Route
           path="*"
           element={

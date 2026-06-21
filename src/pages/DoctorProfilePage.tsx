@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import { MessageCircle } from "lucide-react";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { PageShell } from "@/components/layout/PageShell";
 import { Button } from "@/components/ui/button";
 import { CONTACT, SITE_URL } from "@/config/site";
 import { ROUTES } from "@/config/routes";
+import { whatsappMessageDoctorProfile, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 import { DOCTOR_BY_SLUG, type DoctorSlug } from "@/data/doctorProfiles";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
@@ -187,6 +189,43 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
             </Link>
           </p>
         </div>
+
+        <section
+          className="clear-both rounded-2xl border border-border/50 bg-card p-6 sm:p-8 shadow-card mb-12"
+          aria-labelledby="doctor-profile-cta-heading"
+        >
+          <h2
+            id="doctor-profile-cta-heading"
+            className="font-heading text-xl font-semibold text-foreground mb-2"
+          >
+            Consult us
+          </h2>
+          <p className="text-sm text-muted-foreground mb-6 max-w-xl">
+            To book with {d.name}, WhatsApp is usually fastest. You can also use the contact form on
+            our homepage—we will reply with next steps and available slots.
+          </p>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+            <Button
+              size="lg"
+              asChild
+              className="bg-[#25D366] hover:bg-[#1ebe57] text-white border-0 shadow-sm min-h-[3rem]"
+            >
+              <a
+                href={whatsappUrlWithMessage(whatsappMessageDoctorProfile(d.name, d.path))}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="inline-flex items-center justify-center gap-2">
+                  <MessageCircle className="h-5 w-5 shrink-0" aria-hidden />
+                  WhatsApp
+                </span>
+              </a>
+            </Button>
+            <Button size="lg" variant="default" asChild className="min-h-[3rem]">
+              <Link to={ROUTES.homeContact}>BOOK NOW</Link>
+            </Button>
+          </div>
+        </section>
 
         <DirectoryPresence />
       </article>

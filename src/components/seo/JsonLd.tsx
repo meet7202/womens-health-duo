@@ -1,4 +1,11 @@
-import { SITE_URL, SITE_NAME, DEFAULT_DESCRIPTION, CONTACT, OG_IMAGE_PATH } from "@/config/site";
+import {
+  SITE_URL,
+  SITE_NAME,
+  DEFAULT_DESCRIPTION,
+  CONTACT,
+  OG_IMAGE_PATH,
+  ORGANIZATION_SCHEMA_DESCRIPTION,
+} from "@/config/site";
 import { ROUTES } from "@/config/routes";
 import { PRACTICE_CHARMI_IN_PERSON, PRACTICE_ZALAK_IN_PERSON } from "@/config/practiceLocations";
 
@@ -18,13 +25,15 @@ export function JsonLd() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "MedicalOrganization",
+        "@type": ["MedicalOrganization", "Organization"],
         "@id": orgId,
         name: SITE_NAME,
         url: SITE_URL,
         logo: `${SITE_URL}${OG_IMAGE_PATH}`,
         image: ogImage,
-        description: DEFAULT_DESCRIPTION,
+        description: ORGANIZATION_SCHEMA_DESCRIPTION,
+        disambiguatingDescription:
+          "Women's health education and booked medical consultations; we do not sell dietary supplements or pills as a product line.",
         email: CONTACT.email,
         telephone: CONTACT.phoneE164,
         sameAs: [CONTACT.instagram, CONTACT.youtube, CONTACT.whatsappUrl],
@@ -40,10 +49,14 @@ export function JsonLd() {
           },
         ],
         knowsAbout: [
+          "Women's hormonal health education and consultation",
+          "Menstrual health and period disorders",
+          "Fertility education and IVF consultation",
+          "Pelvic health and women's health physiotherapy",
+          "STOTT Pilates Mat and Reformer",
           "Obstetrics and gynecology (OB-GYN)",
           "IVF and fertility care",
           "Women's health physiotherapy",
-          "STOTT Pilates Mat and Reformer",
           "Online Mat Pilates and women's health telehealth",
           "Pregnancy and postpartum rehabilitation",
           "Online telehealth for NRIs and global Indian diaspora",

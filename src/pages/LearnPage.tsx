@@ -3,10 +3,11 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { PageShell } from "@/components/layout/PageShell";
-import { CONTACT } from "@/config/site";
+import { CONTACT, HOME_ENTITY_DEFINITION } from "@/config/site";
 import { ROUTES } from "@/config/routes";
-import { EDUCATION_TOPICS } from "@/data/educationTopics";
+import { LEARN_PILLAR_CLUSTERS } from "@/data/learnPillarClusters";
 import { KnowledgeHubVideoHub } from "@/components/learn/KnowledgeHubVideoHub";
+import { LearnTopicalAuthoritySection } from "@/components/learn/LearnTopicalAuthoritySection";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { knowledgeHubVideoSchemaNodes } from "@/components/seo/schema/knowledgeHubVideos";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
@@ -22,8 +23,9 @@ import {
   stripTrailingIndexHtmlPath,
 } from "@/lib/learnHubUrls";
 
-const DESCRIPTION_DEFAULT =
-  "Free educational women's health content on YouTube and Instagram for patients worldwide—pregnancy, pelvic floor, OB-GYN themes, Mat Pilates online, and STOTT Pilates (Mat & Reformer). The Learn page includes playable Shorts and Reels via official YouTube and Instagram. Pairs with our primary offering: online video consults and programs from India for NRIs and international families. Not a substitute for individualized care.";
+/** On-page intro only; meta + JSON-LD use `learnHubSeoDescription(parsed)`. */
+const LEARN_HUB_INTRO =
+  "If you are sorting through hormones, pregnancy, pelvic symptoms, fertility decisions, or returning to movement after injury or birth, our free Shorts and Reels offer grounded, clinician-led explanations. Dr. Charmi Shah (OB-GYN and IVF) and Dr. Zalak Shah (women's health physio and STOTT Pilates) build each clip around real questions from patients. When you need a plan that fits your history and your life, message us on WhatsApp or email to book a consultation.";
 
 function normalizePath(p: string) {
   return p.replace(/\/+$/, "") || "/";
@@ -50,10 +52,7 @@ export function LearnPage() {
 
   const crumbs = useMemo(() => learnHubBreadcrumbs(parsed), [parsed]);
   const title = learnHubSeoTitle(parsed);
-  const description =
-    parsed.doctor === "all" && parsed.topic === "all"
-      ? DESCRIPTION_DEFAULT
-      : learnHubSeoDescription(parsed);
+  const description = learnHubSeoDescription(parsed);
   const filteredVideos = useMemo(() => learnHubVideosMatching(parsed), [parsed]);
 
   const graph = useMemo(
@@ -75,10 +74,13 @@ export function LearnPage() {
       <JsonLdGraph graph={graph} />
 
       <article>
-        <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground mb-4">
-          Educational content hub
+        <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground mb-4 text-balance">
+          {title}
         </h1>
-        <p className="text-lg text-muted-foreground leading-relaxed">{DESCRIPTION_DEFAULT}</p>
+        <p className="text-base sm:text-lg font-medium text-foreground/95 leading-relaxed border-l-2 border-primary/35 pl-4 mb-3 max-w-3xl">
+          {HOME_ENTITY_DEFINITION}
+        </p>
+        <p className="text-lg text-muted-foreground leading-relaxed mb-6">{LEARN_HUB_INTRO}</p>
         {canonicalPath !== ROUTES.learn ? (
           <p className="text-sm text-muted-foreground mt-3 mb-10">
             <Link to={ROUTES.learn} className="text-primary underline underline-offset-4">
@@ -89,6 +91,8 @@ export function LearnPage() {
         ) : (
           <div className="mb-6" />
         )}
+
+        {canonicalPath === ROUTES.learn ? <LearnTopicalAuthoritySection /> : null}
 
         <KnowledgeHubVideoHub />
 
@@ -125,20 +129,46 @@ export function LearnPage() {
           </div>
         </div>
 
-        <h2 className="font-heading text-xl font-semibold text-foreground mb-4">
-          Themes we cover (matches our services)
-        </h2>
-        <ul className="space-y-6 mb-12">
-          {EDUCATION_TOPICS.map((t) => (
-            <li key={t.title} className="rounded-xl border border-border/30 bg-secondary/20 p-5">
-              <h3 className="font-heading text-lg font-semibold text-foreground">{t.title}</h3>
-              <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{t.blurb}</p>
-            </li>
-          ))}
-        </ul>
+        {canonicalPath === ROUTES.learn ? (
+          <>
+            <h2 className="font-heading text-xl font-semibold text-foreground mb-4">
+              Themes we cover (matches our services)
+            </h2>
+            <ul className="space-y-6 mb-12">
+              {LEARN_PILLAR_CLUSTERS.map((pillar) => (
+                <li
+                  key={pillar.id}
+                  className="rounded-xl border border-border/30 bg-secondary/20 p-5"
+                >
+                  <h3 className="font-heading text-lg font-semibold text-foreground">
+                    {pillar.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
+                    {pillar.educationBlurb}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </>
+        ) : null}
 
-        <p className="text-sm text-muted-foreground mb-10">
-          Prefer structured answers first? See the{" "}
+        <p className="text-sm text-muted-foreground mb-10 leading-relaxed">
+          Medical disclaimer &amp; how we publish: see{" "}
+          <Link to={ROUTES.medicalDisclaimer} className="text-primary underline underline-offset-4">
+            Medical disclaimer
+          </Link>{" "}
+          and{" "}
+          <Link to={ROUTES.editorialPolicy} className="text-primary underline underline-offset-4">
+            Editorial policy
+          </Link>
+          . For how that shows on the homepage, see{" "}
+          <Link
+            to={ROUTES.homeServicesSection}
+            className="text-primary underline underline-offset-4"
+          >
+            Services — quick topic map plus full list by doctor
+          </Link>
+          . Prefer structured answers first? See the{" "}
           <Link to={ROUTES.faq} className="text-primary underline underline-offset-4">
             FAQ
           </Link>{" "}

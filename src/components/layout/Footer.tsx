@@ -7,10 +7,10 @@ import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsa
 import { BRAND_ENTITY_LINE } from "@/config/brandLine";
 
 const SECTION_LINKS = [
-  { label: "About", hash: "about" },
-  { label: "Services", hash: "services" },
-  { label: "Testimonials", hash: "testimonials" },
-  { label: "Contact", hash: "contact" },
+  { label: "About", to: ROUTES.homeAbout },
+  { label: "Services", to: ROUTES.homeServicesSection },
+  { label: "Testimonials", to: ROUTES.homeTestimonials },
+  { label: "Contact", to: ROUTES.homeContact },
 ] as const;
 
 export const Footer = () => {
@@ -53,10 +53,10 @@ export const Footer = () => {
                   Home
                 </Link>
               </li>
-              {SECTION_LINKS.map(({ label, hash }) => (
-                <li key={hash}>
+              {SECTION_LINKS.map(({ label, to }) => (
+                <li key={to}>
                   <Link
-                    to={{ pathname: ROUTES.home, hash }}
+                    to={to}
                     className="text-background/70 hover:text-background transition-colors text-sm underline-offset-4 hover:underline"
                   >
                     {label}
@@ -132,6 +132,22 @@ export const Footer = () => {
                   FAQ
                 </Link>
               </li>
+              <li>
+                <Link
+                  to={ROUTES.medicalDisclaimer}
+                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
+                >
+                  Medical disclaimer
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={ROUTES.editorialPolicy}
+                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
+                >
+                  Editorial policy
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -178,7 +194,7 @@ export const Footer = () => {
                 className="flex items-center gap-2 rounded-md hover:text-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background/50"
               >
                 <MessageCircle className="w-4 h-4" />
-                WhatsApp
+                Book on WhatsApp
               </a>
             </div>
           </div>

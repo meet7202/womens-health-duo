@@ -2,7 +2,7 @@
 
 > Holistic women's healthcare by two sisters: Dr. Charmi Shah (OB-GYN — obstetrics, gynecology, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapist and STOTT Pilates instructor for **Mat** and **Reformer**, including **Mat Pilates online**). **Primary access for international patients is online** (video OB-GYN, online physio / Pilates programs). **In person:** Dr. Charmi in **Mumbai** and **Ahmedabad**; Dr. Zalak in **Bangalore** and **Ahmedabad**—both offer **virtual** visits worldwide.
 >
-> **Entity line (brand ↔ doctors):** Women's Health Duo — Dr. Charmi Shah (OB-GYN / IVF) & Dr. Zalak Shah (women's health physio / STOTT Pilates).
+> **Entity line (brand ↔ doctors):** Women's Health Duo — Dr. Charmi Shah (OB-GYN / IVF) & Dr. Zalak Shah (women's health physio / STOTT Pilates). **Not a supplement or pill brand:** education + booked consults.
 
 ## Summary
 
@@ -16,8 +16,8 @@
 
 - [Women's Health Duo — homepage](https://womenshealthduo.com/)
 - [**Virtual online consultations hub** (NRIs & diaspora cities)](https://womenshealthduo.com/online-consultation)
-- [Example: city overview — Dubai / UAE](https://womenshealthduo.com/online-consultation/dubai)
-- [Example: service × city — IVF & fertility, Dubai](https://womenshealthduo.com/online-consultation/dubai/ivf-fertility-treatments)
+- [Example: city overview — Dubai / UAE](https://womenshealthduo.com/online-consultation/dubai-ae)
+- [Example: service × city — IVF & fertility, Dubai](https://womenshealthduo.com/online-consultation/dubai-ae/ivf-fertility-treatments)
 - [Example: online care — London, UK](https://womenshealthduo.com/online-consultation/london)
 - [Example: online care — Singapore](https://womenshealthduo.com/online-consultation/singapore)
 - [Example: online care — Toronto, Canada](https://womenshealthduo.com/online-consultation/toronto)
@@ -34,6 +34,8 @@
 - [Learn — topic: Fertility](https://womenshealthduo.com/learn/topic/fertility)
 - [Learn — Dr. Zalak · Pregnancy](https://womenshealthduo.com/learn/dr-zalak/topic/pregnancy)
 - [FAQ](https://womenshealthduo.com/faq)
+- [Medical disclaimer](https://womenshealthduo.com/medical-disclaimer)
+- [Editorial policy](https://womenshealthduo.com/editorial-policy)
 - [Email — womenshealthduo@gmail.com](mailto:womenshealthduo@gmail.com)
 - [WhatsApp — +91 79905 50754](https://wa.me/917990550754)
 - [Instagram — @womenshealthduo](https://www.instagram.com/womenshealthduo)
@@ -43,7 +45,7 @@
 
 - **Canonical site:** `https://womenshealthduo.com` (no trailing slash in env defaults).
 - **Robots:** [`/robots.txt`](https://womenshealthduo.com/robots.txt) — allows major search and common AI crawlers; references the sitemap URL.
-- **Sitemap:** [`/sitemap.xml`](https://womenshealthduo.com/sitemap.xml) — generated at **`npm run build`** from `SITEMAP_PATHS` in `src/config/routes.ts` (homepage, doctor profiles, India city landings, **Learn hub main + every indexable doctor/topic filter URL**, FAQ, virtual hub, per-country hubs, every virtual city overview, and every **service × city** URL). Each URL includes **`<lastmod>`** (build date) and a **priority** hint (hub and core pages higher than long-tail service×city pages).
+- **Sitemap:** [`/sitemap.xml`](https://womenshealthduo.com/sitemap.xml) — generated at **`npm run build`** from `SITEMAP_PATHS` in `src/config/routes.ts` (homepage, doctor profiles, India city landings, **Learn hub main + every indexable doctor/topic filter URL**, FAQ, **medical disclaimer**, **editorial policy**, virtual hub, per-country hubs, every virtual city overview, and every **service × city** URL). Each URL includes **`<lastmod>`** (build date) and a **priority** hint (hub and core pages higher than long-tail service×city pages).
 - **HTML head:** root [`index.html`](https://womenshealthduo.com/) receives build-time tokens for title, description, **meta keywords** (comma-separated topics for legacy crawlers), Open Graph, and a **`<link rel="sitemap">`** to the absolute sitemap URL.
 
 ## URL patterns (Learn hub — video Shorts & Reels)
@@ -52,12 +54,13 @@
 - **By doctor:** `/learn/dr-charmi`, `/learn/dr-zalak`
 - **By topic:** `/learn/topic/<topicSlug>` (slug from topic label, e.g. `fertility`, `labor-and-delivery`, `pilates`)
 - **Doctor + topic:** `/learn/<doctorSegment>/topic/<topicSlug>` (e.g. `/learn/dr-zalak/topic/pregnancy`)
+- **Topical clusters (main `/learn` only):** `/learn#learn-pillars` — five Bing-oriented hubs (hormonal health, menstrual health, fertility & ovulation, PCOS, STOTT Pilates) with links into topic filters and example virtual-care URLs.
 
 ## URL patterns (virtual SEO)
 
 - **Hub:** `/online-consultation`
 - **Country index:** `/online-consultation/country/<countrySlug>` (e.g. `india`, `united-states`)
-- **City overview:** `/online-consultation/<citySlug>` (e.g. `dubai`, `london`, `toronto`)
+- **City overview:** `/online-consultation/<citySlug>` (e.g. `dubai-ae`, `london`, `toronto`)
 - **Service × city:** `/online-consultation/<citySlug>/<serviceSlug>` — one page per combination for long-tail discovery.
 - **Legacy:** `/global-online` redirects to `/online-consultation` (preserve old bookmarks).
 
@@ -74,12 +77,14 @@ These repeat under every virtual city (see `src/data/seoOnlineServices.ts` in th
 
 ## Page anchors (homepage sections)
 
-- [Home](https://womenshealthduo.com/#home)
-- [About](https://womenshealthduo.com/#about)
-- [Services](https://womenshealthduo.com/#services)
-- [Testimonials](https://womenshealthduo.com/#testimonials)
-- [Contact](https://womenshealthduo.com/#contact)
-- [FAQ preview](https://womenshealthduo.com/#faq)
+Permanent section URLs (same page as `/`; good for sharing) and hash alternatives:
+
+- **Home:** [womenshealthduo.com/](https://womenshealthduo.com/) or [/#home](https://womenshealthduo.com/#home)
+- **About:** [/about](https://womenshealthduo.com/about) or [/#about](https://womenshealthduo.com/#about)
+- **Services:** [/services](https://womenshealthduo.com/services) or [/#services](https://womenshealthduo.com/#services) — the first block is a **quick topic map** ([/pillars](https://womenshealthduo.com/pillars) or `#pillars`), then the full doctor-by-doctor service list.
+- **Testimonials:** [/testimonials](https://womenshealthduo.com/testimonials) or [/#testimonials](https://womenshealthduo.com/#testimonials)
+- **Contact:** [/contact](https://womenshealthduo.com/contact) or [/#contact](https://womenshealthduo.com/#contact)
+- **FAQ preview (homepage accordion):** [/quick-answers](https://womenshealthduo.com/quick-answers) or [/#faq](https://womenshealthduo.com/#faq) — distinct from the full FAQ page at `/faq`.
 
 ## Note for site owners
 

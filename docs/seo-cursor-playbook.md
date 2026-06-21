@@ -68,7 +68,7 @@ Output: copy draft + internal link suggestions to related Learn topics, services
 ## Topical clusters (WHD-shaped)
 
 ```text
-Propose hub-and-spoke internal linking using EXISTING routes only: Learn topics (educationTopics / URLs), seoOnlineServices slugs, virtual hub, doctor profiles, India city pages.
+Propose hub-and-spoke internal linking using EXISTING routes only: Learn topics ([`learnPillarClusters.ts`](../src/data/learnPillarClusters.ts) + `/learn/topic/...` URLs), `seoOnlineServices` slugs, virtual hub, doctor profiles, India city pages.
 
 Prioritize clusters that match services actually offered (OB-GYN, IVF, laparoscopy, PCOS, pelvic floor, prenatal/postnatal, STOTT/Mat Pilates online).
 

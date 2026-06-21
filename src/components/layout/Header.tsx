@@ -1,24 +1,24 @@
 import { useState, useMemo } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, MessageCircle, Phone } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import whdLogo from "@/assets/whd-logo.jpg";
 import { ROUTES } from "@/config/routes";
 import { cn } from "@/lib/utils";
 import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 
-const hashNavSections = [
-  { label: "About", hash: "about" },
-  { label: "Services", hash: "services" },
-  { label: "Testimonials", hash: "testimonials" },
-  { label: "Contact", hash: "contact" },
+const homeNavSections = [
+  { label: "About", to: ROUTES.homeAbout },
+  { label: "Services", to: ROUTES.homeServicesSection },
+  { label: "Testimonials", to: ROUTES.homeTestimonials },
+  { label: "Contact", to: ROUTES.homeContact },
 ] as const;
 
-/** Hash links before Learn in the primary nav (About → Services → Testimonials). */
-const HASH_NAV_BEFORE_LEARN = hashNavSections.slice(0, 3);
-/** Hash links after Learn (Contact). */
-const HASH_NAV_AFTER_LEARN = hashNavSections.slice(3);
+/** Nav links before Learn: About → Services → Testimonials. */
+const HOME_NAV_BEFORE_LEARN = homeNavSections.slice(0, 3);
+/** Nav links after Learn (Contact). */
+const HOME_NAV_AFTER_LEARN = homeNavSections.slice(3);
 
 function normalizePath(p: string) {
   return p.replace(/\/+$/, "") || "/";
@@ -28,7 +28,7 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  const isHome = location.pathname === "/";
+  const isRootHomePath = normalizePath(location.pathname) === ROUTES.home;
   const isLearnActive =
     location.pathname === ROUTES.learn || location.pathname.startsWith(`${ROUTES.learn}/`);
   const whatsappHref = useMemo(
@@ -59,13 +59,13 @@ export const Header = () => {
     });
   };
 
-  const onHashNavClick = (e: React.MouseEvent, hash: string) => {
+  const onHomeSectionNavClick = (e: React.MouseEvent, to: string) => {
     if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) {
       return;
     }
     e.preventDefault();
     closeMobile();
-    void navigate({ pathname: ROUTES.home, hash }, { replace: isHome });
+    void navigate(to, { replace: isRootHomePath });
   };
 
   /** Learn in the nav: always open the hub and top of page; if already on `/learn`, scroll up (Link alone would not). */
@@ -132,11 +132,11 @@ export const Header = () => {
             >
               Home
             </Link>
-            {HASH_NAV_BEFORE_LEARN.map((item) => (
+            {HOME_NAV_BEFORE_LEARN.map((item) => (
               <Link
-                key={item.hash}
-                to={{ pathname: ROUTES.home, hash: item.hash }}
-                onClick={(e) => onHashNavClick(e, item.hash)}
+                key={item.to}
+                to={item.to}
+                onClick={(e) => onHomeSectionNavClick(e, item.to)}
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               >
                 {item.label}
@@ -152,11 +152,11 @@ export const Header = () => {
             >
               Learn
             </Link>
-            {HASH_NAV_AFTER_LEARN.map((item) => (
+            {HOME_NAV_AFTER_LEARN.map((item) => (
               <Link
-                key={item.hash}
-                to={{ pathname: ROUTES.home, hash: item.hash }}
-                onClick={(e) => onHashNavClick(e, item.hash)}
+                key={item.to}
+                to={item.to}
+                onClick={(e) => onHomeSectionNavClick(e, item.to)}
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               >
                 {item.label}
@@ -177,20 +177,8 @@ export const Header = () => {
             >
               <a href={whatsappHref} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-4 h-4 mr-2" aria-hidden />
-                WhatsApp
+                Book on WhatsApp
               </a>
-            </Button>
-            <Button
-              className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-soft"
-              asChild
-            >
-              <Link
-                to={{ pathname: ROUTES.home, hash: "contact" }}
-                onClick={(e) => onHashNavClick(e, "contact")}
-              >
-                <Phone className="w-4 h-4 mr-2" aria-hidden />
-                Book consultation
-              </Link>
             </Button>
           </motion.div>
 
@@ -223,11 +211,11 @@ export const Header = () => {
               >
                 Home
               </Link>
-              {HASH_NAV_BEFORE_LEARN.map((item) => (
+              {HOME_NAV_BEFORE_LEARN.map((item) => (
                 <Link
-                  key={item.hash}
-                  to={{ pathname: ROUTES.home, hash: item.hash }}
-                  onClick={(e) => onHashNavClick(e, item.hash)}
+                  key={item.to}
+                  to={item.to}
+                  onClick={(e) => onHomeSectionNavClick(e, item.to)}
                   className="text-left py-3 px-4 text-foreground hover:bg-accent rounded-lg transition-colors"
                 >
                   {item.label}
@@ -245,11 +233,11 @@ export const Header = () => {
               >
                 Learn
               </Link>
-              {HASH_NAV_AFTER_LEARN.map((item) => (
+              {HOME_NAV_AFTER_LEARN.map((item) => (
                 <Link
-                  key={item.hash}
-                  to={{ pathname: ROUTES.home, hash: item.hash }}
-                  onClick={(e) => onHashNavClick(e, item.hash)}
+                  key={item.to}
+                  to={item.to}
+                  onClick={(e) => onHomeSectionNavClick(e, item.to)}
                   className="text-left py-3 px-4 text-foreground hover:bg-accent rounded-lg transition-colors"
                 >
                   {item.label}
@@ -258,20 +246,8 @@ export const Header = () => {
               <Button asChild className="mt-2 bg-[#25D366] hover:bg-[#1ebe57] text-white border-0">
                 <a href={whatsappHref} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="w-4 h-4 mr-2" aria-hidden />
-                  WhatsApp
+                  Book on WhatsApp
                 </a>
-              </Button>
-              <Button
-                className="mt-2 bg-primary hover:bg-primary/90 text-primary-foreground"
-                asChild
-              >
-                <Link
-                  to={{ pathname: ROUTES.home, hash: "contact" }}
-                  onClick={(e) => onHashNavClick(e, "contact")}
-                >
-                  <Phone className="w-4 h-4 mr-2" aria-hidden />
-                  Book consultation
-                </Link>
               </Button>
             </nav>
           </motion.div>
