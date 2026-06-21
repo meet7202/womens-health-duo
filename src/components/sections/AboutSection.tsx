@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-import { Stethoscope, Heart, Award, GraduationCap, Users } from "lucide-react";
+import { Stethoscope, Heart, Award, GraduationCap, Users, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ROUTES } from "@/config/routes";
 import {
@@ -10,6 +10,7 @@ import {
   PRACTICE_ZALAK_LOCATIONS_SHORT,
 } from "@/config/practiceLocations";
 import { BRAND_ENTITY_LINE } from "@/config/brandLine";
+import { whatsappMessageDoctorProfile, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 import drZalak from "@/assets/dr-zalak.jpg";
 import drCharmi from "@/assets/dr-charmi.jpeg";
 
@@ -41,8 +42,9 @@ const doctors = [
     name: "Dr. Zalak Shah (PT)",
     title: "Women's Health Physiotherapist & Pilates Instructor",
     description:
-      "Dr. Zalak Shah is a qualified Physiotherapist with a Bachelor's and Master's degree in Physiotherapy, certified as a STOTT Pilates Instructor. With years of experience across leading hospitals and a fully equipped studio, she integrates evidence-based physiotherapy with Pilates methodology to deliver superior patient outcomes. Her holistic approach addresses pelvic health, prenatal and postnatal care, Mat Pilates online for global patients, and musculoskeletal rehabilitation.",
+      "Dr. Zalak Shah is a qualified Physiotherapist with a Bachelor's and Master's degree in Physiotherapy, certified as a STOTT Pilates Instructor. Women's health physiotherapy is a core part of her practice: she combines evidence-based women's health PT with Pilates methodology across leading hospitals and her fully equipped studio. Her work spans pelvic health, prenatal and postnatal care, Mat Pilates online for global patients, and musculoskeletal rehabilitation.",
     specialties: [
+      "Women's Health Physiotherapy",
       "Pelvic Floor Rehabilitation",
       "Prenatal and postnatal care",
       "Mat Pilates online",
@@ -151,8 +153,33 @@ export const AboutSection = () => {
                       <span className="w-4 h-4 rounded-full bg-primary/10 flex items-center justify-center text-xs">
                         📞
                       </span>
-                      {doctor.phone}
+                      <a
+                        href="tel:+917990550754"
+                        className="underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+                      >
+                        {doctor.phone}
+                      </a>
                     </p>
+                    <div className="flex justify-center">
+                      <Button
+                        size="sm"
+                        asChild
+                        className="bg-[#25D366] hover:bg-[#1ebe57] text-white border-0 shadow-sm"
+                      >
+                        <a
+                          href={whatsappUrlWithMessage(
+                            whatsappMessageDoctorProfile(doctor.name, doctor.profilePath),
+                          )}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <span className="inline-flex items-center justify-center gap-2">
+                            <MessageCircle className="h-4 w-4 shrink-0" aria-hidden />
+                            WhatsApp
+                          </span>
+                        </a>
+                      </Button>
+                    </div>
                     <div className="pt-2 flex justify-center">
                       <Button variant="outline" size="sm" asChild>
                         <Link to={doctor.profilePath}>Full profile &amp; links</Link>

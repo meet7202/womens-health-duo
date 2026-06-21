@@ -14,7 +14,9 @@ export class RootErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, info: ErrorInfo) {
-    console.error("[RootErrorBoundary]", error, info.componentStack);
+    if (import.meta.env.DEV) {
+      console.error("[RootErrorBoundary]", error, info.componentStack);
+    }
   }
 
   render() {

@@ -12,9 +12,25 @@ type FaqSectionProps = {
   showHeading?: boolean;
   /** Root section id (default `faq`) */
   sectionId?: string;
+  /** Eyebrow label above the title (default: FAQ) */
+  headingLabel?: string;
+  /** Section heading (default: Common questions) */
+  headingTitle?: string;
+  /** Short intro under the heading */
+  headingIntro?: string;
 };
 
-export function FaqSection({ items, showHeading = true, sectionId = "faq" }: FaqSectionProps) {
+const DEFAULT_HEADING_INTRO =
+  "General information about how Women's Health Duo works. Medical decisions belong in a consultation with your clinician.";
+
+export function FaqSection({
+  items,
+  showHeading = true,
+  sectionId = "faq",
+  headingLabel = "FAQ",
+  headingTitle = "Common questions",
+  headingIntro = DEFAULT_HEADING_INTRO,
+}: FaqSectionProps) {
   return (
     <section
       id={sectionId}
@@ -24,17 +40,16 @@ export function FaqSection({ items, showHeading = true, sectionId = "faq" }: Faq
       <div className="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         {showHeading ? (
           <div className="text-center mb-10">
-            <span className="text-primary font-medium text-sm uppercase tracking-wider">FAQ</span>
+            <span className="text-primary font-medium text-sm uppercase tracking-wider">
+              {headingLabel}
+            </span>
             <h2
               id="faq-heading"
               className="font-heading text-3xl sm:text-4xl font-semibold text-foreground mt-3"
             >
-              Common questions
+              {headingTitle}
             </h2>
-            <p className="text-muted-foreground mt-3 leading-relaxed">
-              General information about how Women&apos;s Health Duo works. Medical decisions belong
-              in a consultation with your clinician.
-            </p>
+            <p className="text-muted-foreground mt-3 leading-relaxed">{headingIntro}</p>
           </div>
         ) : null}
         <Accordion type="single" collapsible className="w-full space-y-2">

@@ -48,24 +48,35 @@ const NotFound = () => {
   return (
     <div className="flex min-h-screen items-center justify-center bg-muted px-4 pb-28 pt-8">
       <div className="mx-auto w-full max-w-md text-center">
-        <h1 className="mb-4 text-4xl font-bold">404</h1>
-        <p className="mb-6 text-xl text-muted-foreground">Oops! Page not found</p>
-        <p className="mb-6 flex flex-col gap-3 text-sm text-muted-foreground sm:flex-row sm:justify-center sm:gap-6">
+        <p
+          className="mb-2 text-5xl font-bold tabular-nums text-muted-foreground"
+          aria-hidden="true"
+        >
+          404
+        </p>
+        <h1 className="mb-4 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+          Page not found
+        </h1>
+        <p className="mb-6 text-muted-foreground">
+          We couldn&apos;t find that URL. Return home or message us on WhatsApp—your chat goes
+          straight to our practice number.
+        </p>
+        <div className="mb-6 flex flex-col items-stretch gap-3 sm:items-center">
           <a
             href={whatsappUrlWithMessage(waMessage)}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary underline underline-offset-4 hover:text-primary/90"
+            className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#25D366] px-4 py-3 text-sm font-semibold text-white shadow-md hover:bg-[#1ebe57] transition-colors"
           >
-            Message on WhatsApp
+            Book on WhatsApp
           </a>
           <Link
-            to={{ pathname: ROUTES.home, hash: "contact" }}
-            className="text-primary underline underline-offset-4 hover:text-primary/90"
+            to={ROUTES.homeContact}
+            className="text-center text-sm text-primary underline underline-offset-4 hover:text-primary/90"
           >
-            Contact form
+            Prefer to add details first? Use the homepage contact form (opens WhatsApp)
           </Link>
-        </p>
+        </div>
         <Link
           to={ROUTES.home}
           className="text-primary underline underline-offset-4 hover:text-primary/90"

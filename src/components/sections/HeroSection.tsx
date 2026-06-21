@@ -1,15 +1,43 @@
 import { motion } from "framer-motion";
-import { Heart, ArrowDown } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Heart, ArrowDown, MessageCircle } from "lucide-react";
+import { useMemo } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ROUTES } from "@/config/routes";
+import { HOME_HERO_LEDE } from "@/config/site";
+import { homePermalinkForScrollId } from "@/lib/homeSectionPaths";
+import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 import heroImage from "@/assets/hero-doctors.jpg";
 
-export const HeroSection = () => {
-  const navigate = useNavigate();
+const DEFAULT_H1 = "Women's Hormonal Health, Menstrual Health, Fertility & STOTT Pilates";
 
-  const goToHomeSection = (hash: string) => {
-    void navigate({ pathname: ROUTES.home, hash }, { replace: true });
+const heroH1VisualClass =
+  "font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight mb-5 text-[hsl(20_28%_11%)] [text-shadow:0_1px_0_hsl(30_40%_99%),0_0_24px_hsl(30_40%_98%_/_0.9)] text-balance";
+
+export type HeroSectionProps = {
+  /**
+   * Homepage section permalink (`/about`, …): use as the sole document `<h1>` (same string as
+   * `<title>` from `homeSectionSeo`). The default marketing headline moves to a styled paragraph.
+   */
+  seoH1?: string | null;
+};
+
+export const HeroSection = ({ seoH1 = null }: HeroSectionProps) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const bookWhatsAppHref = useMemo(
+    () => whatsappUrlWithMessage(whatsappIntentFromPathname(location.pathname)),
+    [location.pathname],
+  );
+  const resolvedSeoH1 = seoH1?.trim() || null;
+
+  const goToHomeSection = (scrollId: string) => {
+    const path = homePermalinkForScrollId(scrollId);
+    if (path) {
+      void navigate(path, { replace: true });
+      return;
+    }
+    void navigate({ pathname: ROUTES.home, hash: scrollId }, { replace: true });
   };
 
   return (
@@ -39,39 +67,52 @@ export const HeroSection = () => {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="inline-flex items-center gap-2 border border-primary/25 bg-primary/15 px-4 py-2 rounded-full mb-6 shadow-sm"
             >
-              <Heart className="w-4 h-4 text-terracotta" />
+              <Heart className="w-4 h-4 text-terracotta" aria-hidden />
               <span className="text-sm font-semibold text-terracotta">
-                OB-GYN · IVF · Physio · STOTT Pilates
+                OB-GYN · IVF · Women&apos;s Health Physio · Pilates
               </span>
             </motion.div>
 
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight mb-6 text-[hsl(20_28%_11%)] [text-shadow:0_1px_0_hsl(30_40%_99%),0_0_24px_hsl(30_40%_98%_/_0.9)]">
-              A Holistic Approach to{" "}
-              <span className="text-[hsl(12_58%_36%)] italic font-extrabold">
-                Women&apos;s Health
-              </span>
-            </h1>
+            {resolvedSeoH1 ? (
+              <>
+                <h1 className={heroH1VisualClass}>{resolvedSeoH1}</h1>
+                <p className="font-heading text-xl sm:text-2xl lg:text-3xl font-bold leading-snug mb-5 text-[hsl(20_22%_18%)] text-balance">
+                  {DEFAULT_H1}
+                </p>
+              </>
+            ) : (
+              <h1 className={heroH1VisualClass}>{DEFAULT_H1}</h1>
+            )}
 
-            <p className="text-lg sm:text-xl max-w-xl mx-auto md:mx-0 mb-8 leading-relaxed font-semibold text-[hsl(20_22%_18%)]">
-              Comprehensive care from pregnancy to postpartum, fertility to pelvic health. We
-              combine medical expertise with physiotherapy and STOTT Pilates for complete wellness.
+            <p className="text-base sm:text-lg max-w-xl mx-auto md:mx-0 mb-4 leading-relaxed font-medium text-[hsl(20_22%_18%)]">
+              {HOME_HERO_LEDE}
+            </p>
+
+            <p className="text-base sm:text-lg max-w-xl mx-auto md:mx-0 mb-8 leading-relaxed text-[hsl(20_22%_18%)]">
+              Led by Dr. Charmi Shah (OB-GYN, IVF, laparoscopy) and Dr. Zalak Shah (women&apos;s
+              health physiotherapy and STOTT Pilates on Mat &amp; Reformer).
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start max-w-xl mx-auto md:mx-0">
               <Button
                 size="lg"
-                onClick={() => goToHomeSection("contact")}
-                className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-elevated text-base px-8 py-6 min-h-[3.25rem] sm:min-w-[12rem]"
+                asChild
+                className="bg-[#25D366] hover:bg-[#1ebe57] text-white border-0 shadow-elevated text-base px-8 py-6 min-h-[3.25rem] sm:min-w-[12rem]"
               >
-                Book consultation
+                <a href={bookWhatsAppHref} target="_blank" rel="noopener noreferrer">
+                  <span className="inline-flex items-center justify-center gap-2">
+                    <MessageCircle className="h-5 w-5 shrink-0" aria-hidden />
+                    Book on WhatsApp
+                  </span>
+                </a>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                onClick={() => goToHomeSection("about")}
+                onClick={() => goToHomeSection("services")}
                 className="border-primary/35 text-foreground hover:bg-primary/5 text-base px-8 py-6 min-h-[3.25rem] sm:min-w-[12rem]"
               >
-                Meet the Sisters
+                View services
               </Button>
             </div>
 
@@ -118,7 +159,7 @@ export const HeroSection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-foreground/10 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-white">
                 <p className="font-heading text-2xl font-semibold drop-shadow-lg">
-                  Dr. Charmi & Dr. Zalak Shah
+                  Dr. Charmi &amp; Dr. Zalak Shah
                 </p>
                 <p className="text-white drop-shadow-md font-medium">
                   Sisters in Care, Partners in Health
@@ -134,9 +175,11 @@ export const HeroSection = () => {
               className="absolute -right-4 top-1/4 bg-background/95 backdrop-blur-sm rounded-2xl p-4 shadow-card"
             >
               <p className="font-heading text-lg font-semibold text-foreground">
-                Obstetrician & Gynecologist
+                Obstetrician &amp; Gynecologist
               </p>
-              <p className="text-sm text-muted-foreground">IVF Specialist & Laparoscopic Surgeon</p>
+              <p className="text-sm text-muted-foreground">
+                IVF Specialist &amp; Laparoscopic Surgeon
+              </p>
             </motion.div>
 
             <motion.div
@@ -146,9 +189,11 @@ export const HeroSection = () => {
               className="absolute -left-4 bottom-1/4 bg-background/95 backdrop-blur-sm rounded-2xl p-4 shadow-card"
             >
               <p className="font-heading text-lg font-semibold text-foreground">
-                Women's Health Physiotherapist
+                Women&apos;s Health Physiotherapy
               </p>
-              <p className="text-sm text-muted-foreground">& Pilates Instructor</p>
+              <p className="text-sm text-muted-foreground">
+                STOTT Pilates &amp; pelvic / prenatal care
+              </p>
             </motion.div>
           </motion.div>
         </div>
@@ -163,7 +208,7 @@ export const HeroSection = () => {
       >
         <motion.button
           type="button"
-          aria-label="Scroll to About section"
+          aria-label="Scroll to about"
           onClick={() => goToHomeSection("about")}
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}

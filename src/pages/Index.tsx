@@ -1,13 +1,16 @@
 import { lazy, Suspense, useLayoutEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { scrollToHashWhenReady } from "@/lib/scrollToHash";
+import { homeFaqJsonLdPageUrl, homeScrollTargetId, homeSectionSeo } from "@/lib/homeSectionPaths";
 import { Header } from "@/components/layout/Header";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { JsonLdFaq } from "@/components/seo/JsonLdFaq";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { ROUTES } from "@/config/routes";
-import { SITE_FAQ } from "@/data/siteFaq";
+import { SITE_URL } from "@/config/site";
+import { HOME_PAGE_FAQ } from "@/data/homePageFaq";
 import { Button } from "@/components/ui/button";
 
 const AboutSection = lazy(() =>
@@ -37,27 +40,42 @@ function SectionFallback() {
   );
 }
 
-const FAQ_PREVIEW_COUNT = 4;
-
 const Index = () => {
   const location = useLocation();
 
   useLayoutEffect(() => {
-    const raw = location.hash.replace(/^#/, "").trim();
-    if (!raw) return;
-    return scrollToHashWhenReady(raw);
+    const rawHash = location.hash.replace(/^#/, "").trim();
+    const hashTarget = rawHash || null;
+    const pathTarget = homeScrollTargetId(location.pathname);
+    const targetId = hashTarget ?? pathTarget;
+    if (!targetId) return;
+    return scrollToHashWhenReady(targetId);
   }, [location.hash, location.pathname]);
+
+  const sectionSeo = homeSectionSeo(location.pathname);
 
   return (
     <div className="min-h-screen bg-background">
-      <SeoHead />
+      <SeoHead
+        {...(sectionSeo
+          ? {
+              title: sectionSeo.title,
+              metaDescription: sectionSeo.metaDescription,
+              path: sectionSeo.canonicalPath,
+            }
+          : {})}
+      />
       <JsonLd />
+      <JsonLdFaq
+        items={HOME_PAGE_FAQ}
+        pageUrl={homeFaqJsonLdPageUrl(SITE_URL, location.pathname)}
+      />
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>
       <Header />
       <main id="main-content" className="pb-28">
-        <HeroSection />
+        <HeroSection seoH1={sectionSeo?.title ?? null} />
         <Suspense fallback={<SectionFallback />}>
           <AboutSection />
         </Suspense>
@@ -70,7 +88,11 @@ const Index = () => {
         <Suspense fallback={<SectionFallback />}>
           <ContactSection />
         </Suspense>
-        <FaqSection items={SITE_FAQ.slice(0, FAQ_PREVIEW_COUNT)} />
+        <FaqSection
+          items={HOME_PAGE_FAQ}
+          headingTitle={"Women's Health Duo — quick answers"}
+          headingIntro="Five common questions about our education platform, clinical lanes, and how to book. Medical decisions belong in a consultation with your clinician."
+        />
         <div className="container mx-auto max-w-3xl px-4 pb-16 text-center sm:px-6 lg:px-8">
           <Button variant="outline" asChild>
             <Link to={ROUTES.faq}>View all questions (FAQ)</Link>

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useMemo } from "react";
+import { useLocation } from "react-router-dom";
 import { Phone, MapPin, Clock, Instagram, Youtube, MessageCircle, Users, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -11,11 +12,16 @@ import {
   PRACTICE_CHARMI_LOCATIONS_LINE,
   PRACTICE_ZALAK_LOCATIONS_LINE,
 } from "@/config/practiceLocations";
+import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 
-const WHATSAPP_NUMBER = "917990550754";
 const WHATSAPP_COMMUNITY_LINK = "https://chat.whatsapp.com/IzlxjOf8wp9GqMdSbCQ3Xj";
 
 export const ContactSection = () => {
+  const location = useLocation();
+  const directWhatsAppHref = useMemo(
+    () => whatsappUrlWithMessage(whatsappIntentFromPathname(location.pathname)),
+    [location.pathname],
+  );
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -36,7 +42,7 @@ export const ContactSection = () => {
       doctor === "charmi"
         ? "Dr. Charmi Shah (OBG & IVF)"
         : doctor === "zalak"
-          ? "Dr. Zalak Shah (Physio & Pilates)"
+          ? "Dr. Zalak Shah (Women's Health Physio & Pilates)"
           : "Not sure - Need guidance";
 
     const message = `*New Consultation Request*
@@ -52,11 +58,8 @@ ${concern}
 ---
 Sent from Women's Health Duo Website`;
 
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
-
     setIsSubmitting(false);
-    window.open(whatsappUrl, "_blank");
+    window.open(whatsappUrlWithMessage(message), "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -76,34 +79,36 @@ Sent from Women's Health Duo Website`;
             Book Your <span className="text-primary italic">Consultation</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Ready to take the next step in your health journey? Fill out the form below and we'll
-            connect you with the right specialist.
+            Fastest way to reach us: message Women&apos;s Health Duo on{" "}
+            <strong className="text-foreground font-medium">WhatsApp</strong> (opens a direct chat
+            with our practice number). You can also use the form—it opens WhatsApp with your details
+            pre-filled so you only need to tap send.
           </p>
         </motion.div>
 
-        {/* WhatsApp Community CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="bg-gradient-to-r from-green-500/10 to-green-600/10 rounded-2xl p-6 mb-12 text-center border border-green-500/20"
+          transition={{ duration: 0.5, delay: 0.05 }}
+          className="mb-12 flex flex-col items-center justify-center gap-3 text-center"
         >
-          <div className="flex items-center justify-center gap-3 mb-3">
-            <Users className="w-6 h-6 text-green-600" />
-            <h3 className="font-heading text-xl font-semibold text-foreground">
-              Join Our WhatsApp Community
-            </h3>
-          </div>
-          <p className="text-muted-foreground mb-4">
-            Get exclusive health tips, updates on workshops, and connect with other women on their
-            wellness journey.
+          <Button
+            asChild
+            size="lg"
+            className="bg-[#25D366] hover:bg-[#1ebe57] text-white border-0 shadow-lg px-8 py-6 text-base"
+          >
+            <a href={directWhatsAppHref} target="_blank" rel="noopener noreferrer">
+              <span className="inline-flex items-center gap-2">
+                <MessageCircle className="h-5 w-5 shrink-0" aria-hidden />
+                Book on WhatsApp — direct message
+              </span>
+            </a>
+          </Button>
+          <p className="text-sm text-muted-foreground max-w-md">
+            Same WhatsApp as the rest of this site ({CONTACT.phoneE164}). This is a{" "}
+            <strong className="text-foreground font-medium">private chat with the practice</strong>,
+            not a public group.
           </p>
-          <a href={WHATSAPP_COMMUNITY_LINK} target="_blank" rel="noopener noreferrer">
-            <Button className="bg-green-600 hover:bg-green-700 text-white shadow-lg">
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Join WhatsApp Community
-            </Button>
-          </a>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
@@ -171,7 +176,9 @@ Sent from Women's Health Duo Website`;
                 >
                   <option value="">Select a doctor</option>
                   <option value="charmi">Dr. Charmi Shah (OBG & IVF)</option>
-                  <option value="zalak">Dr. Zalak Shah (Physio & Pilates)</option>
+                  <option value="zalak">
+                    Dr. Zalak Shah (Women&apos;s Health Physio &amp; Pilates)
+                  </option>
                   <option value="both">Not sure - Need guidance</option>
                 </select>
               </div>
@@ -198,13 +205,15 @@ Sent from Women's Health Duo Website`;
                 ) : (
                   <>
                     <MessageCircle className="w-5 h-5 mr-2" />
-                    Continue on WhatsApp
+                    Send details in WhatsApp
                   </>
                 )}
               </Button>
 
               <p className="text-xs text-muted-foreground text-center">
-                Clicking submit will open WhatsApp with your consultation details pre-filled.
+                Submit opens a <strong className="text-foreground">direct WhatsApp chat</strong>{" "}
+                with Women&apos;s Health Duo using the same practice number as our green buttons—not
+                a community group.
               </p>
             </form>
           </motion.div>
@@ -290,6 +299,18 @@ Sent from Women's Health Duo Website`;
                 Connect With Us
               </h3>
               <div className="space-y-3">
+                <Button
+                  asChild
+                  variant="default"
+                  className="w-full bg-[#25D366] hover:bg-[#1ebe57]"
+                >
+                  <a href={directWhatsAppHref} target="_blank" rel="noopener noreferrer">
+                    <span className="inline-flex items-center justify-center gap-2">
+                      <MessageCircle className="h-5 w-5 shrink-0" aria-hidden />
+                      Book on WhatsApp
+                    </span>
+                  </a>
+                </Button>
                 <a
                   href={CONTACT.instagram}
                   target="_blank"
@@ -316,6 +337,35 @@ Sent from Women's Health Duo Website`;
             </div>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.35 }}
+          className="mx-auto mt-14 max-w-2xl rounded-2xl border border-border/50 bg-muted/30 p-6 text-center"
+        >
+          <div className="mb-3 flex flex-wrap items-center justify-center gap-2">
+            <Users className="h-5 w-5 shrink-0 text-muted-foreground" aria-hidden />
+            <h3 className="font-heading inline-flex flex-wrap items-center justify-center gap-2 text-base font-semibold text-foreground">
+              <span>Women&apos;s Health Duo community</span>
+              <span className="rounded-full border border-primary/40 bg-primary/10 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-primary">
+                Free
+              </span>
+            </h3>
+          </div>
+          <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+            Come join us for health tips, workshop updates, and real conversations with other women
+            on similar journeys—learning together in a friendly WhatsApp space. This community is
+            for inspiration and connection, not for booking consults or personal medical advice.{" "}
+            <strong className="text-foreground">To book, use the direct WhatsApp</strong> buttons
+            above (private chat with the practice).
+          </p>
+          <Button variant="outline" size="sm" asChild>
+            <a href={WHATSAPP_COMMUNITY_LINK} target="_blank" rel="noopener noreferrer">
+              Come join the community
+            </a>
+          </Button>
+        </motion.div>
       </div>
     </section>
   );

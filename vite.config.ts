@@ -61,7 +61,7 @@ function resolveSiteUrl(mode: string) {
  * Must be root-relative (`/`) for the custom apex domain so deep links
  * (e.g. `/online-consultation/.../service`) still load `/assets/...`.
  * For GitHub project Pages, set `VITE_SITE_URL` to the full Pages origin including
- * the repo path (e.g. `https://<user>.github.io/womens-health-duo`) so this becomes `/womens-health-duo/`.
+ * the repo path (e.g. `https://meet7202.github.io/womens-health-duo`) so this becomes `/womens-health-duo/`.
  */
 function vitePublicBase(siteUrl: string): string {
   try {

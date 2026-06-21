@@ -7,14 +7,33 @@ export const SITE_DEFAULT_URL = "https://womenshealthduo.com";
 
 export const SITE_NAME = "Women's Health Duo";
 
+/**
+ * Entity scope line: Learn hub stripe, organization/schema copy. Education plus booked clinical care.
+ */
+export const HOME_ENTITY_DEFINITION =
+  "Women's Health Duo pairs women's health education with booked medical consultations. We focus on hormones, menstrual health, fertility, pelvic health, women's health physiotherapy, and movement-based care you can sustain between visits.";
+
+/** Homepage hero lede only (first body paragraph under the H1). */
+export const HOME_HERO_LEDE =
+  "Comprehensive care from pregnancy to postpartum, fertility to pelvic health. We combine medical expertise with physiotherapy and STOTT Pilates for complete wellness.";
+
+/** Rich MedicalOrganization description for schema.org (may exceed meta length). */
+export const ORGANIZATION_SCHEMA_DESCRIPTION = `${HOME_ENTITY_DEFINITION} Dr. Charmi Shah (OB-GYN, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapy and STOTT Pilates on Mat and Reformer) lead the work. We film explainers and see patients in India and online; we do not retail supplements or vitamins.`;
+
 /** Keep under ~60 characters for SERP title width and SEO audit tools. */
-export const DEFAULT_TITLE = "Women's Health Duo | OB-GYN, IVF & physio online";
+export const DEFAULT_TITLE = "Women's Health Duo | Hormones, Fertility & STOTT Pilates";
 
 /** Target ~150–160 characters for meta description audits (HTML + OG + Twitter). */
 export const DEFAULT_DESCRIPTION =
-  "OB-GYN, IVF & laparoscopy with Dr. Charmi Shah; physio & STOTT Pilates with Dr. Zalak Shah. Mumbai, Ahmedabad, Bangalore + virtual. WhatsApp +917990550754.";
+  "Women's Health Duo: OB-GYN/IVF and physio-led women's health education plus consults in India and online. Hormones, periods, fertility, pelvic health, STOTT Pilates. WhatsApp +917990550754.";
 
 export const KEYWORDS = [
+  "womens health duo clinical education consultation",
+  "women's health education platform consultation",
+  "hormonal health consultation online",
+  "menstrual health telehealth India",
+  "fertility education IVF consultation online",
+  "STOTT Pilates women's health India online",
   "online OB-GYN consultation worldwide",
   "online gynecologist India NRI",
   "Indian gynecologist online Dubai UAE",

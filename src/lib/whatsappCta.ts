@@ -7,6 +7,7 @@ import {
   virtualConsultationCityPath,
   virtualServiceCityPath,
 } from "@/lib/virtualConsultation";
+import { isHomeSectionPermalink } from "@/lib/homeSectionPaths";
 
 const MAX_PREFILL_LEN = 1800;
 
@@ -20,14 +21,14 @@ function siteRef(path: string) {
   return `\n\n— Sent from womenshealthduo.com${path}`;
 }
 
-export function whatsappMessageHomepage(): string {
+export function whatsappMessageHomepage(sourcePath: string = ROUTES.home): string {
   return `Hi Women's Health Duo,
 
 I'd like to book an online consultation (OB-GYN / IVF / physio / Pilates). Please share your next available slots and anything you need from me before the call.
 
 My city & country:
 My time zone:
-Brief reason for visit:${siteRef(ROUTES.home)}`;
+Brief reason for visit:${siteRef(sourcePath)}`;
 }
 
 export function whatsappMessageVirtualHub(): string {
@@ -127,6 +128,10 @@ export function whatsappIntentFromPathname(pathname: string): string {
     return whatsappMessageHomepage();
   }
 
+  if (isHomeSectionPermalink(norm)) {
+    return whatsappMessageHomepage(norm);
+  }
+
   if (norm === ROUTES.drCharmi) {
     return whatsappMessageDoctorProfile("Dr. Charmi Shah", ROUTES.drCharmi);
   }
@@ -148,6 +153,13 @@ export function whatsappIntentFromPathname(pathname: string): string {
     return whatsappMessageLearn(norm);
   }
   if (norm === ROUTES.faq) return whatsappMessageFaq();
+
+  if (norm === ROUTES.medicalDisclaimer) {
+    return whatsappMessageGenericPage("Medical disclaimer", ROUTES.medicalDisclaimer);
+  }
+  if (norm === ROUTES.editorialPolicy) {
+    return whatsappMessageGenericPage("Editorial policy", ROUTES.editorialPolicy);
+  }
 
   if (norm === ROUTES.globalOnline || norm.startsWith(`${ROUTES.globalOnline}/`)) {
     return whatsappMessageVirtualHub();

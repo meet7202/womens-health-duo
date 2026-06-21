@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdFaq } from "@/components/seo/JsonLdFaq";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
@@ -39,7 +40,18 @@ export function FaqPage() {
         <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground mb-4">
           Frequently asked questions
         </h1>
-        <p className="text-muted-foreground leading-relaxed mb-8">{DESCRIPTION}</p>
+        <p className="text-muted-foreground leading-relaxed mb-4">{DESCRIPTION}</p>
+        <p className="text-sm text-muted-foreground leading-relaxed mb-8 border-l-2 border-primary/30 pl-4">
+          For emergencies, telehealth limits, and how we publish captions on the Learn hub, read the{" "}
+          <Link to={ROUTES.medicalDisclaimer} className="text-primary underline underline-offset-4">
+            Medical disclaimer
+          </Link>{" "}
+          and{" "}
+          <Link to={ROUTES.editorialPolicy} className="text-primary underline underline-offset-4">
+            Editorial policy
+          </Link>
+          .
+        </p>
       </article>
 
       <div className="-mx-4 sm:-mx-6 lg:-mx-8">
