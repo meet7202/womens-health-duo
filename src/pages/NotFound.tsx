@@ -6,7 +6,7 @@ import { whatsappMessageGenericPage, whatsappUrlWithMessage } from "@/lib/whatsa
 const NotFound = () => {
   const location = useLocation();
   const waMessage = useMemo(
-    () => whatsappMessageGenericPage("404 — page not found", location.pathname),
+    () => whatsappMessageGenericPage("404 ,  page not found", location.pathname),
     [location.pathname],
   );
 
@@ -58,7 +58,7 @@ const NotFound = () => {
           Page not found
         </h1>
         <p className="mb-6 text-muted-foreground">
-          We couldn&apos;t find that URL. Return home or message us on WhatsApp—your chat goes
+          We couldn&apos;t find that URL. Return home or message us on WhatsApp, your chat goes
           straight to our practice number.
         </p>
         <div className="mb-6 flex flex-col items-stretch gap-3 sm:items-center">

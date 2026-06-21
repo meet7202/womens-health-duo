@@ -11,6 +11,8 @@ import { LearnPage } from "@/pages/LearnPage";
 import { FaqPage } from "@/pages/FaqPage";
 import { MedicalDisclaimerPage } from "@/pages/MedicalDisclaimerPage";
 import { EditorialPolicyPage } from "@/pages/EditorialPolicyPage";
+import { TopicGuidePage } from "@/pages/TopicGuidePage";
+import { LearnArticlesIndexPage } from "@/pages/LearnArticlesIndexPage";
 import { VirtualOnlineConsultationHubPage } from "@/pages/VirtualOnlineConsultationHubPage";
 import { VirtualOnlineConsultationCityPage } from "@/pages/VirtualOnlineConsultationCityPage";
 import { VirtualOnlineServiceCityPage } from "@/pages/VirtualOnlineServiceCityPage";
@@ -77,12 +79,14 @@ const App = () => (
         <Route path={`${ROUTES.globalOnline}/:slug`} element={<LegacyGlobalOnlineCityRedirect />} />
         <Route path={ROUTES.globalOnline} element={<LegacyGlobalOnlineHubRedirect />} />
         <Route path={`${ROUTES.learn}/topic/:topicSlug`} element={<LearnPage />} />
+        <Route path={ROUTES.learnArticles} element={<LearnArticlesIndexPage />} />
         <Route path={`${ROUTES.learn}/:doctorSegment/topic/:topicSlug`} element={<LearnPage />} />
         <Route path={`${ROUTES.learn}/:doctorSegment`} element={<LearnPage />} />
         <Route path={ROUTES.learn} element={<LearnPage />} />
         <Route path={ROUTES.faq} element={<FaqPage />} />
         <Route path={ROUTES.medicalDisclaimer} element={<MedicalDisclaimerPage />} />
         <Route path={ROUTES.editorialPolicy} element={<EditorialPolicyPage />} />
+        <Route path="/:topicGuideSlug" element={<TopicGuidePage />} />
         <Route
           path="*"
           element={

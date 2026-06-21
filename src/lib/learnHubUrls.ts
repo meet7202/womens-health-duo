@@ -160,7 +160,7 @@ export function learnHubSitemapPaths(): string[] {
 }
 
 const LEARN_SEO_BASE =
-  "Women's Health Duo Learn hub: free clinician-led women's health clips on YouTube Shorts and Instagram Reels—pregnancy, pelvic floor, fertility, hormones, Mat Pilates online, and STOTT Pilates (Mat and Reformer). Book consults with Dr. Charmi Shah (OB-GYN/IVF) or Dr. Zalak Shah (women's health physiotherapy).";
+  "Women's Health Duo Learn hub: free clinician-led women's health clips on YouTube Shorts and Instagram Reels, pregnancy, pelvic floor, fertility, hormones, Mat Pilates online, and STOTT Pilates (Mat and Reformer). Book consults with Dr. Charmi Shah (OB-GYN/IVF) or Dr. Zalak Shah (women's health physiotherapy).";
 
 function doctorFilterLabel(d: LearnHubDoctorFilter): string {
   if (d === "charmi") return "Dr. Charmi";
@@ -198,15 +198,15 @@ export function learnHubBreadcrumbs(parsed: LearnHubParsed): BreadcrumbItem[] {
 export function learnHubSeoTitle(parsed: LearnHubParsed): string {
   const base = "Women's Health Duo Learn";
   if (parsed.doctor === "all" && parsed.topic === "all") {
-    return `${base} | Hormones, fertility & STOTT Pilates clips`;
+    return "Women's health & pregnancy videos from our doctors | Women's Health Duo";
   }
   if (parsed.doctor !== "all" && parsed.topic === "all") {
-    return `${base} — ${doctorFilterLabel(parsed.doctor)} clips`;
+    return `${base} ,  ${doctorFilterLabel(parsed.doctor)} clips`;
   }
   if (parsed.doctor === "all" && parsed.topic !== "all") {
-    return `${base} — ${parsed.topic}`;
+    return `${base} ,  ${parsed.topic}`;
   }
-  return `${base} — ${doctorFilterLabel(parsed.doctor)} · ${parsed.topic}`;
+  return `${base} ,  ${doctorFilterLabel(parsed.doctor)} · ${parsed.topic}`;
 }
 
 export function learnHubSeoDescription(parsed: LearnHubParsed): string {

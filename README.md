@@ -23,7 +23,9 @@ git config core.hooksPath .githooks
 
 That only updates **`.git/config`** here; it is not committed. See [`.githooks/README.md`](./.githooks/README.md). To undo: `git config --unset core.hooksPath`.
 
-If the **`gh`** command is also wrapped or points at the wrong host, install the [official GitHub CLI](https://cli.github.com/) and run **`gh auth login --hostname github.com`** (sign in as **meet7202** for this repo), or open PRs on **`https://github.com/meet7202/womens-health-duo`**.
+This project uses **standard `git`** plus the **GitHub website** for pull requests — **not** the `gh` CLI. After you **`git push`** your branch, open:  
+`https://github.com/meet7202/womens-health-duo/compare/main...<your-branch>?expand=1`  
+(substitute your branch name; then use **Create pull request** on GitHub).
 
 ## Run locally
 

@@ -53,7 +53,7 @@ export function virtualCityPathSegment(city: VirtualConsultationCity): string {
   return base;
 }
 
-/** One row per country in the virtual city list — for country index pages + sitemap. */
+/** One row per country in the virtual city list ,  for country index pages + sitemap. */
 export type VirtualConsultationCountryIndex = {
   countryCode: string;
   country: string;
@@ -119,7 +119,7 @@ export function virtualServiceCityPath(city: VirtualConsultationCity, serviceSlu
   return `${VIRTUAL_CONSULTATION_HUB_PATH}/${virtualCityPathSegment(city)}/${serviceSlug}`;
 }
 
-/** Same-country cities first, then others — for “similar cities” footer links (not exhaustive). */
+/** Same-country cities first, then others ,  for “similar cities” footer links (not exhaustive). */
 export function pickSiblingCities(
   current: VirtualConsultationCity,
   limit: number,

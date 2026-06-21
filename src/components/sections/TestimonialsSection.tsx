@@ -6,7 +6,7 @@ import { Star, Quote } from "lucide-react";
 const testimonials = [
   {
     name: "Monika Kothari",
-    text: "I was experiencing significant discomfort due to menopause. I consulted Dr. Charmi, and she provided me with exceptional care. Not only did she help me with the side effects, but her guidance and prescribed medications also helped regulate my menstrual cycle. I am truly grateful for her expertise and support. Thank you, Dr. Charmi—you are truly a genius.",
+    text: "I was experiencing significant discomfort due to menopause. I consulted Dr. Charmi, and she provided me with exceptional care. Not only did she help me with the side effects, but her guidance and prescribed medications also helped regulate my menstrual cycle. I am truly grateful for her expertise and support. Thank you, Dr. Charmi, you are truly a genius.",
     rating: 5,
     doctor: "Dr. Charmi Shah",
     source: "Google Review",

@@ -16,7 +16,7 @@ export function virtualConsultationOfferSchema(city: VirtualConsultationCity) {
   return {
     "@type": "MedicalBusiness",
     "@id": `${url}#virtual-consultation`,
-    name: `${SITE_NAME} — virtual OB-GYN & women's health physio (${city.city})`,
+    name: `${SITE_NAME} ,  virtual OB-GYN & women's health physio (${city.city})`,
     url,
     telephone: CONTACT.phoneE164,
     email: CONTACT.email,

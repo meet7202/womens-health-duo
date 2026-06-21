@@ -72,7 +72,7 @@ export function SeoHead({ title, metaDescription, path, metaKeywords }: SeoHeadP
     upsertMeta("property", "og:title", resolvedTitle);
     upsertMeta("property", "og:description", resolvedDescription);
     upsertMeta("property", "og:image", ogImage);
-    upsertMeta("property", "og:image:alt", "Women's Health Duo — holistic women's healthcare");
+    upsertMeta("property", "og:image:alt", "Women's Health Duo ,  holistic women's healthcare");
     upsertMeta("property", "og:locale", "en_IN");
 
     upsertMeta("name", "twitter:card", "summary_large_image");

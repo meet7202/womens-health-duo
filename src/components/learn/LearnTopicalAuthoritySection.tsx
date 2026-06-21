@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import { ROUTES } from "@/config/routes";
-import { LEARN_PILLAR_CLUSTERS, pillarLearnTopicLinks } from "@/data/learnPillarClusters";
+import {
+  LEARN_PILLAR_CLUSTERS,
+  pillarLearnTopicLinks,
+  pillarWrittenGuideLinks,
+} from "@/data/learnPillarClusters";
 
 export function LearnTopicalAuthoritySection() {
   return (
@@ -17,8 +21,8 @@ export function LearnTopicalAuthoritySection() {
       </h2>
       <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-3 max-w-3xl">
         Each area below links to short clips you can filter on this page, and to how we handle
-        related questions in clinic—Women&apos;s Health Duo is education plus real consults with our
-        doctors, not a supplement shop.
+        related questions in clinic, Women&apos;s Health Duo is education plus real consults with
+        our doctors, not a supplement shop.
       </p>
       <p className="text-muted-foreground text-sm leading-relaxed mb-8 max-w-3xl">
         <strong className="font-medium text-foreground">Booked care:</strong> if you want a real
@@ -29,7 +33,7 @@ export function LearnTopicalAuthoritySection() {
         >
           virtual online consultations
         </Link>{" "}
-        — how video visits work, what we offer by telehealth, and how to book from wherever you are.
+        , how video visits work, what we offer by telehealth, and how to book from wherever you are.
         We also see people in person in{" "}
         <Link to={ROUTES.mumbai} className="text-primary underline underline-offset-4">
           Mumbai
@@ -48,6 +52,7 @@ export function LearnTopicalAuthoritySection() {
       <div className="grid gap-6 md:grid-cols-2">
         {LEARN_PILLAR_CLUSTERS.map((pillar) => {
           const topicLinks = pillarLearnTopicLinks(pillar);
+          const writtenGuides = pillarWrittenGuideLinks(pillar);
 
           return (
             <article
@@ -95,13 +100,33 @@ export function LearnTopicalAuthoritySection() {
                   </div>
                 ) : (
                   <p className="text-sm text-muted-foreground">
-                    We&apos;re tagging more clips for this area—check back soon or jump to{" "}
+                    We&apos;re tagging more clips for this area, check back soon or jump to{" "}
                     <Link to={ROUTES.learn} className="text-primary underline underline-offset-4">
                       all topics
                     </Link>
                     .
                   </p>
                 )}
+
+                {writtenGuides.length > 0 ? (
+                  <div>
+                    <p className="text-sm font-medium text-foreground mb-2">
+                      Written guides and common questions
+                    </p>
+                    <ul className="text-sm space-y-1.5 list-disc pl-4 text-muted-foreground">
+                      {writtenGuides.map((a) => (
+                        <li key={a.path}>
+                          <Link
+                            to={a.path}
+                            className="text-primary font-medium underline underline-offset-4"
+                          >
+                            {a.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : null}
 
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Looking for a booked consult, not just clips?{" "}
@@ -111,7 +136,7 @@ export function LearnTopicalAuthoritySection() {
                   >
                     Read about virtual online consultations here
                   </Link>{" "}
-                  — same booking path for OB-GYN, IVF discussion, women&apos;s health physiotherapy,
+                  , same booking path for OB-GYN, IVF discussion, women&apos;s health physiotherapy,
                   and STOTT Pilates-related care by video.
                 </p>
 
@@ -122,7 +147,7 @@ export function LearnTopicalAuthoritySection() {
                   >
                     Meet our doctors
                   </Link>
-                  {" — "}
+                  {" ,  "}
                   Dr. Charmi Shah (OB-GYN / IVF) and Dr. Zalak Shah (women&apos;s health
                   physiotherapy &amp; STOTT Pilates).
                 </p>

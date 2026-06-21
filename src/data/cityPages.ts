@@ -28,7 +28,7 @@ export const CITY_PAGES: Record<CityKey, CityPageData> = {
       "Online-first: Women's Health Duo in Ahmedabad for Dr. Charmi Shah (OB-GYN, IVF, laparoscopy) and Dr. Zalak Shah (women's health physio, STOTT Pilates). Global telehealth from the same practice.",
     h1: "Women's healthcare in Ahmedabad",
     intro:
-      "Online consults worldwide use the same practice number and email—many families book video visits before or after travel to India. On the ground in Ahmedabad, Dr. Charmi Shah provides obstetrics, gynecology, IVF, and laparoscopic surgery with evidence-based treatment and clear communication. Dr. Zalak Shah offers women's health physiotherapy and STOTT Pilates–aligned training for Mat and Reformer, supporting pregnancy, postpartum, pelvic floor, and musculoskeletal goals.",
+      "Online consults worldwide use the same practice number and email, many families book video visits before or after travel to India. On the ground in Ahmedabad, Dr. Charmi Shah provides obstetrics, gynecology, IVF, and laparoscopic surgery with evidence-based treatment and clear communication. Dr. Zalak Shah offers women's health physiotherapy and STOTT Pilates–aligned training for Mat and Reformer, supporting pregnancy, postpartum, pelvic floor, and musculoskeletal goals.",
     doctors: [
       {
         name: "Dr. Charmi Shah",
@@ -54,10 +54,10 @@ export const CITY_PAGES: Record<CityKey, CityPageData> = {
     path: ROUTES.mumbai,
     title: "Women's Health Duo in Mumbai | OB-GYN, IVF & Laparoscopy",
     metaDescription:
-      "Online-first for NRIs: Women's Health Duo in Mumbai with Dr. Charmi Shah — OB-GYN, IVF, laparoscopy; Dr. Zalak Shah online physio / Pilates worldwide.",
+      "Online-first for NRIs: Women's Health Duo in Mumbai with Dr. Charmi Shah ,  OB-GYN, IVF, laparoscopy; Dr. Zalak Shah online physio / Pilates worldwide.",
     h1: "Women's healthcare in Mumbai",
     intro:
-      "If you are abroad, start with an online OB-GYN or physio consult—telehealth is central to how Women's Health Duo serves NRIs and global families. In Mumbai, Dr. Charmi Shah leads obstetrics, gynecology, IVF, and minimally invasive surgical care with structured prenatal and high-risk pregnancy planning, fertility workups, and laparoscopic options where appropriate. Dr. Zalak Shah's physiotherapy and STOTT Pilates work is available online worldwide and in person in Bangalore and Ahmedabad.",
+      "If you are abroad, start with an online OB-GYN or physio consult, telehealth is central to how Women's Health Duo serves NRIs and global families. In Mumbai, Dr. Charmi Shah leads obstetrics, gynecology, IVF, and minimally invasive surgical care with structured prenatal and high-risk pregnancy planning, fertility workups, and laparoscopic options where appropriate. Dr. Zalak Shah's physiotherapy and STOTT Pilates work is available online worldwide and in person in Bangalore and Ahmedabad.",
     doctors: [
       {
         name: "Dr. Charmi Shah",
@@ -86,7 +86,7 @@ export const CITY_PAGES: Record<CityKey, CityPageData> = {
       "Online-first women's health physio: Dr. Zalak Shah in Bengaluru (Bangalore) for physiotherapy & STOTT Pilates; Dr. Charmi Shah for online OB-GYN worldwide and in-person OB-GYN in Mumbai and Ahmedabad.",
     h1: "Women's healthcare in Bengaluru (Bangalore)",
     intro:
-      "Online women's health physio and Pilates programs are how most international patients train with Dr. Zalak first—book from any time zone. In Bengaluru (Bangalore), she leads in-person women's health physiotherapy and STOTT Pilates on Mat and Reformer. Care spans pelvic floor rehabilitation, prenatal and postnatal programs, diastasis recti, and musculoskeletal rehab tailored to women. Dr. Charmi Shah offers online OB-GYN consultations worldwide and in-person OB-GYN in Mumbai and Ahmedabad—use the contact channels to coordinate.",
+      "Online women's health physio and Pilates programs are how most international patients train with Dr. Zalak first, book from any time zone. In Bengaluru (Bangalore), she leads in-person women's health physiotherapy and STOTT Pilates on Mat and Reformer. Care spans pelvic floor rehabilitation, prenatal and postnatal programs, diastasis recti, and musculoskeletal rehab tailored to women. Dr. Charmi Shah offers online OB-GYN consultations worldwide and in-person OB-GYN in Mumbai and Ahmedabad, use the contact channels to coordinate.",
     doctors: [
       {
         name: "Dr. Zalak Shah",

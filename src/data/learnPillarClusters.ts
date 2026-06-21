@@ -11,6 +11,7 @@ import {
 } from "@/lib/virtualConsultation";
 import { learnHubTopicLabels, learnHubFilteredPath } from "@/lib/learnHubUrls";
 import { ROUTES } from "@/config/routes";
+import { getTopicGuide } from "@/data/topicGuides/topicGuideRegistry";
 
 export type LearnPillarId =
   | "hormonal-health"
@@ -22,25 +23,25 @@ export type LearnPillarId =
 export type LearnPillarCluster = {
   id: LearnPillarId;
   title: string;
-  /** Answer-first block for AI extraction + Bing relevance. */
+  /** Short answer block for search snippets and on-page clarity. */
   directAnswer: string;
   /** Short blurb for the “themes” list on Learn. */
   educationBlurb: string;
   bingKeywords: string[];
-  /** Exact topic labels from hub videos — `/learn/topic/<slug>` only when label exists site-wide. */
+  /** Exact topic labels from hub videos: `/learn/topic/<slug>` only when label exists site-wide. */
   learnVideoTopicLabels: string[];
-  /** `SEO_ONLINE_SERVICES.slug` — example city×service links for consultation intent. */
+  /** `SEO_ONLINE_SERVICES.slug`: example city×service links for consultation intent. */
   relatedServiceSlugs: string[];
   /** Symptom-led angles for future clips / articles. */
   symptomContentIdeas: string[];
-  /** Future long-form URLs (not in this SPA today) — see docs/seo-topical-authority-learn-hub.md */
+  /** Topic guide URL paths (`/slug`) matching this pillar; see `pillarWrittenGuideLinks`. */
   suggestedArticleSlugs: string[];
   primaryDoctorProfile: typeof ROUTES.drCharmi | typeof ROUTES.drZalak;
 };
 
 /**
  * URL path segments under `/online-consultation/...` (same as `virtualCityPathSegment` for these
- * cities — not the internal JSON `slug` like `mumbai-in`).
+ * cities: not the internal JSON `slug` like `mumbai-in`).
  */
 const INDIA_HUB_PATH_SEGMENT = {
   mumbai: "mumbai",
@@ -82,7 +83,7 @@ export const LEARN_PILLAR_CLUSTERS: readonly LearnPillarCluster[] = [
     id: "hormonal-health",
     title: "Hormonal Health",
     directAnswer:
-      "Hormonal health on Women's Health Duo means education and consultation about thyroid-related questions, cycle-hormone links, perimenopause, and related symptoms with an OB-GYN—paired with movement guidance when appropriate—not supplement sales.",
+      "Hormonal health on Women's Health Duo means education and consultation about thyroid-related questions, cycle-hormone links, perimenopause, and related symptoms with an OB-GYN, paired with movement guidance when appropriate, not supplement sales.",
     educationBlurb:
       "Short clips and consults that frame hormones in plain language: when labs help, what patterns worry clinicians, and how to prepare for a video visit.",
     bingKeywords: [
@@ -93,14 +94,14 @@ export const LEARN_PILLAR_CLUSTERS: readonly LearnPillarCluster[] = [
     learnVideoTopicLabels: ["Patient education", "Pregnancy"],
     relatedServiceSlugs: ["menopause-wellness", "pcos-hormonal-disorders", "gynecological-care"],
     symptomContentIdeas: [
-      "Fatigue + irregular cycles — when to test thyroid vs progesterone timing",
-      "Hot flashes under 45 — red flags vs perimenopause",
-      "Post-pill cycle changes — what usually normalizes first",
+      "Fatigue + irregular cycles: when to test thyroid vs progesterone timing",
+      "Hot flashes under 45: red flags vs perimenopause",
+      "Post-pill cycle changes: what usually normalizes first",
     ],
     suggestedArticleSlugs: [
-      "hormonal-imbalance-symptoms-women",
-      "thyroid-and-periods-guide",
-      "perimenopause-first-symptoms",
+      "/hormonal-imbalance",
+      "/what-is-hormonal-imbalance",
+      "/signs-of-hormonal-imbalance",
     ],
     primaryDoctorProfile: ROUTES.drCharmi,
   },
@@ -108,7 +109,7 @@ export const LEARN_PILLAR_CLUSTERS: readonly LearnPillarCluster[] = [
     id: "menstrual-health",
     title: "Menstrual Health",
     directAnswer:
-      "Menstrual health content covers heavy or painful periods, fibroids, endometriosis education, and irregular bleeding—always with guidance on urgent local care when bleeding is severe or sudden.",
+      "Menstrual health content covers heavy or painful periods, fibroids, endometriosis education, and irregular bleeding, always with guidance on urgent local care when bleeding is severe or sudden.",
     educationBlurb:
       "Symptom-led explainers: pain mapping, cycle tracking tips, and when telehealth can triage vs when you need emergency services.",
     bingKeywords: [
@@ -123,14 +124,15 @@ export const LEARN_PILLAR_CLUSTERS: readonly LearnPillarCluster[] = [
       "pelvic-floor-rehabilitation",
     ],
     symptomContentIdeas: [
-      "Sudden heavy bleeding after missed period — ectopic vs miscarriage vs anovulation",
-      "Painful sex + deep period pain — endometriosis patterns",
-      "Bleeding between periods on OCP — pill vs pathology",
+      "Sudden heavy bleeding after missed period: ectopic vs miscarriage vs anovulation",
+      "Painful sex + deep period pain: endometriosis patterns",
+      "Bleeding between periods on OCP: pill vs pathology",
     ],
     suggestedArticleSlugs: [
-      "irregular-periods-causes",
-      "heavy-menstrual-bleeding-treatment-options",
-      "endometriosis-symptoms-checklist",
+      "/irregular-periods",
+      "/painful-periods",
+      "/heavy-periods",
+      "/why-are-my-periods-irregular",
     ],
     primaryDoctorProfile: ROUTES.drCharmi,
   },
@@ -138,7 +140,7 @@ export const LEARN_PILLAR_CLUSTERS: readonly LearnPillarCluster[] = [
     id: "fertility-ovulation",
     title: "Fertility & Ovulation",
     directAnswer:
-      "Fertility and ovulation education explains timing, evaluation pathways, and IVF/IUI discussion framing—paired with Dr. Charmi Shah's online consults for individualized planning, not generic wellness advice.",
+      "Fertility and ovulation education explains timing, evaluation pathways, and IVF/IUI discussion framing, paired with Dr. Charmi Shah's online consults for individualized planning, not generic wellness advice.",
     educationBlurb:
       "Clips on conception timing, what fertility workups often include, and how virtual second opinions work for NRIs.",
     bingKeywords: [
@@ -149,14 +151,15 @@ export const LEARN_PILLAR_CLUSTERS: readonly LearnPillarCluster[] = [
     learnVideoTopicLabels: ["Fertility", "Patient education", "Pregnancy"],
     relatedServiceSlugs: ["ivf-fertility-treatments", "pregnancy-high-risk-obstetrics"],
     symptomContentIdeas: [
-      "No period after stopping birth control — fertility vs PCOS vs stress",
-      "Short luteal phase — what it means before self-diagnosing",
-      "Recurrent early loss — what to bring to first telehealth visit",
+      "No period after stopping birth control: fertility vs PCOS vs stress",
+      "Short luteal phase: what it means before self-diagnosing",
+      "Recurrent early loss: what to bring to first telehealth visit",
     ],
     suggestedArticleSlugs: [
-      "fertility-signs-ovulation-tracking",
-      "ivf-timeline-first-consultation",
-      "secondary-infertility-when-to-test",
+      "/fertility",
+      "/trying-to-conceive",
+      "/pregnancy-planning",
+      "/what-is-ivf",
     ],
     primaryDoctorProfile: ROUTES.drCharmi,
   },
@@ -166,7 +169,7 @@ export const LEARN_PILLAR_CLUSTERS: readonly LearnPillarCluster[] = [
     directAnswer:
       'PCOS is treated as its own cluster because patients search it distinctly: androgen symptoms, cycle length, metabolic links, and fertility overlap. We separate PCOS clips and consults from generic "hormonal" tags for clearer topical authority.',
     educationBlurb:
-      "Dedicated PCOS angle: lifestyle, cycles, and when medication discussions belong in consult—not in comments.",
+      "Dedicated PCOS angle: lifestyle, cycles, and when medication discussions belong in consult, not in comments.",
     bingKeywords: [
       "PCOS symptoms women",
       "PCOS diet exercise evidence",
@@ -179,14 +182,15 @@ export const LEARN_PILLAR_CLUSTERS: readonly LearnPillarCluster[] = [
       "gynecological-care",
     ],
     symptomContentIdeas: [
-      "Acne + chin hair + long cycles — Rotterdam criteria in plain language",
-      "PCOS and pregnancy — progesterone / metformin talking points for your clinician",
-      "Weight-neutral PCOS care — what we emphasize on consult",
+      "Acne + chin hair + long cycles: Rotterdam criteria in plain language",
+      "PCOS and pregnancy: progesterone / metformin talking points for your clinician",
+      "Weight-neutral PCOS care: what we emphasize on consult",
     ],
     suggestedArticleSlugs: [
-      "pcos-symptoms-rotterdam-explained",
-      "pcos-and-fertility-ovulation-induction-overview",
-      "pcos-exercise-stott-pilates-bridge",
+      "/pcos",
+      "/what-is-pcos",
+      "/symptoms-of-pcos",
+      "/can-pcos-affect-fertility",
     ],
     primaryDoctorProfile: ROUTES.drCharmi,
   },
@@ -194,7 +198,7 @@ export const LEARN_PILLAR_CLUSTERS: readonly LearnPillarCluster[] = [
     id: "stott-pilates",
     title: "STOTT Pilates for Women's Health",
     directAnswer:
-      "STOTT Pilates for women's health is Dr. Zalak Shah's lane: Mat and Reformer programming, pelvic-floor-aware progressions, prenatal and postnatal movement, and online Mat sessions—physiotherapy-led, not generic fitness reels.",
+      "STOTT Pilates for women's health is Dr. Zalak Shah's lane: Mat and Reformer programming, pelvic-floor-aware progressions, prenatal and postnatal movement, and online Mat sessions, physiotherapy-led, not generic fitness reels.",
     educationBlurb:
       "Movement education that names STOTT explicitly: Mat online, Reformer in studio, and pelvic health integration.",
     bingKeywords: [
@@ -205,21 +209,41 @@ export const LEARN_PILLAR_CLUSTERS: readonly LearnPillarCluster[] = [
     learnVideoTopicLabels: ["STOTT Pilates", "Pilates", "Pelvic floor", "Pregnancy", "Exercise"],
     relatedServiceSlugs: ["stott-pilates", "mat-pilates-online", "pelvic-floor-rehabilitation"],
     symptomContentIdeas: [
-      "Low back pain in early pregnancy — safe modification ladder",
-      "Diastasis check — when physio vs when surgeon",
-      "Reformer footwork — pelvic floor breath coordination",
+      "Low back pain in early pregnancy: safe modification ladder",
+      "Diastasis check: when physio vs when surgeon",
+      "Reformer footwork: pelvic floor breath coordination",
     ],
     suggestedArticleSlugs: [
-      "stott-pilates-womens-health-pillar",
-      "stott-pilates-pcos",
-      "stott-pilates-period-pain",
-      "stott-pilates-pelvic-floor-recovery",
-      "stott-pilates-after-pregnancy",
-      "stott-pilates-hormonal-balance",
+      "/prenatal-pilates",
+      "/postnatal-pilates",
+      "/what-is-stott-pilates",
+      "/womens-health-physiotherapy",
     ],
     primaryDoctorProfile: ROUTES.drZalak,
   },
 ] as const;
+
+function slugFromArticlePath(pathOrSlug: string): string {
+  const trimmed = pathOrSlug.trim().replace(/^\//, "");
+  return trimmed.split("/")[0] ?? trimmed;
+}
+
+/** Resolved topic guide links for pillar cards (written articles on this site). */
+export function pillarWrittenGuideLinks(
+  pillar: LearnPillarCluster,
+): { title: string; path: string }[] {
+  const out: { title: string; path: string }[] = [];
+  const seen = new Set<string>();
+  for (const raw of pillar.suggestedArticleSlugs) {
+    const slug = slugFromArticlePath(raw);
+    if (seen.has(slug)) continue;
+    const g = getTopicGuide(slug);
+    if (!g) continue;
+    seen.add(slug);
+    out.push({ title: g.title, path: g.path });
+  }
+  return out;
+}
 
 export type PillarLearnTopicLink = { label: string; path: string };
 

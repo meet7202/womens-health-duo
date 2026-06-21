@@ -8,13 +8,13 @@ type InclusiveSeoListFootnoteProps = {
 
 const COPY: Record<InclusiveSeoListFootnoteProps["variant"], string> = {
   cities:
-    "…and many more cities worldwide—we offer the same online visits wherever you live. If yours is not listed, message us on WhatsApp or email.",
+    "…and many more cities worldwide, we offer the same online visits wherever you live. If yours is not listed, message us on WhatsApp or email.",
   countries:
-    "…and many more countries and regions—we welcome patients globally. Contact us if your country is not shown.",
+    "…and many more countries and regions, we welcome patients globally. Contact us if your country is not shown.",
   services:
-    "…and more visit types and questions by arrangement—tell us what you need if you do not see a match.",
+    "…and more visit types and questions by arrangement, tell us what you need if you do not see a match.",
   "city-services":
-    "…and more visit types by arrangement. We welcome patients in many more cities worldwide than appear on this site—WhatsApp or email us from anywhere.",
+    "…and more visit types by arrangement. We welcome patients in many more cities worldwide than appear on this site, WhatsApp or email us from anywhere.",
 };
 
 /**

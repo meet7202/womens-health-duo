@@ -1,6 +1,7 @@
 /** Public routes (pathname only; React Router `basename` applies on GitHub Pages). */
 import { SEO_ONLINE_SERVICES } from "../data/seoOnlineServices";
 import { learnHubSitemapPaths, LEARN_HUB_BASE_PATH } from "../lib/learnHubUrls";
+import { topicGuideSitemapPaths } from "../data/topicGuides/topicGuideSitemapPaths";
 import {
   VIRTUAL_CONSULTATION_HUB_PATH,
   VIRTUAL_CONSULTATION_COUNTRIES,
@@ -26,6 +27,8 @@ export const ROUTES = {
   mumbai: "/mumbai",
   bangalore: "/bangalore",
   learn: "/learn",
+  /** Index of all written topic guides (linked from Learn; crawlable internal hub). */
+  learnArticles: "/learn/articles",
   faq: "/faq",
   medicalDisclaimer: "/medical-disclaimer",
   editorialPolicy: "/editorial-policy",
@@ -48,7 +51,7 @@ export const HOME_SECTION_SCROLL_PATHS: readonly string[] = [
   ROUTES.homeQuickAnswers,
 ];
 
-/** Every service × virtual city — for sitemap.xml only (see `VirtualOnlineServiceCityPage`). */
+/** Each online service for every virtual city (sitemap only; see `VirtualOnlineServiceCityPage`). */
 const VIRTUAL_SERVICE_CITY_SITEMAP_PATHS: readonly string[] = VIRTUAL_CONSULTATION_CITIES.flatMap(
   (c) => SEO_ONLINE_SERVICES.map((s) => virtualServiceCityPath(c, s.slug)),
 );
@@ -65,7 +68,9 @@ export const SITEMAP_PATHS: readonly string[] = [
   ROUTES.ahmedabad,
   ROUTES.mumbai,
   ROUTES.bangalore,
+  ROUTES.learnArticles,
   ...learnHubSitemapPaths(),
+  ...topicGuideSitemapPaths(),
   ROUTES.faq,
   ROUTES.medicalDisclaimer,
   ROUTES.editorialPolicy,

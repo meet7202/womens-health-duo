@@ -81,8 +81,8 @@ Sent from Women's Health Duo Website`;
           <p className="text-lg text-muted-foreground leading-relaxed">
             Fastest way to reach us: message Women&apos;s Health Duo on{" "}
             <strong className="text-foreground font-medium">WhatsApp</strong> (opens a direct chat
-            with our practice number). You can also use the form—it opens WhatsApp with your details
-            pre-filled so you only need to tap send.
+            with our practice number). You can also use the form, it opens WhatsApp with your
+            details pre-filled so you only need to tap send.
           </p>
         </motion.div>
 
@@ -100,7 +100,7 @@ Sent from Women's Health Duo Website`;
             <a href={directWhatsAppHref} target="_blank" rel="noopener noreferrer">
               <span className="inline-flex items-center gap-2">
                 <MessageCircle className="h-5 w-5 shrink-0" aria-hidden />
-                Book on WhatsApp — direct message
+                Book on WhatsApp , direct message
               </span>
             </a>
           </Button>
@@ -212,8 +212,8 @@ Sent from Women's Health Duo Website`;
 
               <p className="text-xs text-muted-foreground text-center">
                 Submit opens a <strong className="text-foreground">direct WhatsApp chat</strong>{" "}
-                with Women&apos;s Health Duo using the same practice number as our green buttons—not
-                a community group.
+                with Women&apos;s Health Duo using the same practice number as our green buttons,
+                not a community group.
               </p>
             </form>
           </motion.div>
@@ -355,7 +355,7 @@ Sent from Women's Health Duo Website`;
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed mb-4">
             Come join us for health tips, workshop updates, and real conversations with other women
-            on similar journeys—learning together in a friendly WhatsApp space. This community is
+            on similar journeys, learning together in a friendly WhatsApp space. This community is
             for inspiration and connection, not for booking consults or personal medical advice.{" "}
             <strong className="text-foreground">To book, use the direct WhatsApp</strong> buttons
             above (private chat with the practice).

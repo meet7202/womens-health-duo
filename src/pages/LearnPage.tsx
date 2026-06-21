@@ -3,11 +3,14 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { PageShell } from "@/components/layout/PageShell";
-import { CONTACT, HOME_ENTITY_DEFINITION } from "@/config/site";
+import { CONTACT, HOME_ENTITY_DEFINITION, SITE_URL } from "@/config/site";
 import { ROUTES } from "@/config/routes";
-import { LEARN_PILLAR_CLUSTERS } from "@/data/learnPillarClusters";
+import { learnHubFaqsForTopic, learnHubFaqHeading } from "@/data/contextualFaqs";
 import { KnowledgeHubVideoHub } from "@/components/learn/KnowledgeHubVideoHub";
 import { LearnTopicalAuthoritySection } from "@/components/learn/LearnTopicalAuthoritySection";
+import { LearnTopicGuidesSection } from "@/components/learn/LearnTopicGuidesSection";
+import { JsonLdFaq } from "@/components/seo/JsonLdFaq";
+import { FaqSection } from "@/components/sections/FaqSection";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { knowledgeHubVideoSchemaNodes } from "@/components/seo/schema/knowledgeHubVideos";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
@@ -55,6 +58,15 @@ export function LearnPage() {
   const description = learnHubSeoDescription(parsed);
   const filteredVideos = useMemo(() => learnHubVideosMatching(parsed), [parsed]);
 
+  const learnFaqItems = useMemo(
+    () => learnHubFaqsForTopic(parsed.topic === "all" ? "all" : parsed.topic),
+    [parsed.topic],
+  );
+  const learnFaqHeading = useMemo(
+    () => learnHubFaqHeading(parsed.topic === "all" ? "all" : parsed.topic),
+    [parsed.topic],
+  );
+
   const graph = useMemo(
     () => [
       breadcrumbListSchema(crumbs),
@@ -72,6 +84,7 @@ export function LearnPage() {
     <PageShell breadcrumbs={crumbs}>
       <SeoHead title={title} metaDescription={description} path={canonicalPath} />
       <JsonLdGraph graph={graph} />
+      <JsonLdFaq items={learnFaqItems} pageUrl={`${SITE_URL}${canonicalPath}`} />
 
       <article>
         <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground mb-4 text-balance">
@@ -81,6 +94,18 @@ export function LearnPage() {
           {HOME_ENTITY_DEFINITION}
         </p>
         <p className="text-lg text-muted-foreground leading-relaxed mb-6">{LEARN_HUB_INTRO}</p>
+        {canonicalPath === ROUTES.learn ? (
+          <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-3xl">
+            For written answers you can follow link by link (not only video), see{" "}
+            <Link
+              to={ROUTES.learnArticles}
+              className="text-primary font-medium underline underline-offset-4"
+            >
+              articles and common questions on Learn
+            </Link>
+            .
+          </p>
+        ) : null}
         {canonicalPath !== ROUTES.learn ? (
           <p className="text-sm text-muted-foreground mt-3 mb-10">
             <Link to={ROUTES.learn} className="text-primary underline underline-offset-4">
@@ -94,6 +119,8 @@ export function LearnPage() {
 
         {canonicalPath === ROUTES.learn ? <LearnTopicalAuthoritySection /> : null}
 
+        {canonicalPath === ROUTES.learn ? <LearnTopicGuidesSection /> : null}
+
         <KnowledgeHubVideoHub />
 
         <div className="grid gap-6 sm:grid-cols-2 mb-12">
@@ -103,8 +130,8 @@ export function LearnPage() {
               YouTube Shorts
             </h2>
             <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-              Short-form clips on women&apos;s health—same themes as this hub—on our Shorts tab
-              only.
+              Short clips on women&apos;s health, in the same clinical areas as this page, on our
+              Shorts tab only.
             </p>
             <Button asChild>
               <a href={`${CONTACT.youtube}/shorts`} target="_blank" rel="noopener noreferrer">
@@ -118,8 +145,8 @@ export function LearnPage() {
               Instagram Reels
             </h2>
             <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-              Reels on pelvic health, pregnancy, postpartum, Pilates, and day-to-day women&apos;s
-              wellness—quick, visual education.
+              Reels on pelvic health, pregnancy, postpartum, Pilates, and everyday women&apos;s
+              wellness. Quick, visual teaching you can save and share.
             </p>
             <Button asChild variant="secondary">
               <a href={`${CONTACT.instagram}/reels/`} target="_blank" rel="noopener noreferrer">
@@ -129,28 +156,13 @@ export function LearnPage() {
           </div>
         </div>
 
-        {canonicalPath === ROUTES.learn ? (
-          <>
-            <h2 className="font-heading text-xl font-semibold text-foreground mb-4">
-              Themes we cover (matches our services)
-            </h2>
-            <ul className="space-y-6 mb-12">
-              {LEARN_PILLAR_CLUSTERS.map((pillar) => (
-                <li
-                  key={pillar.id}
-                  className="rounded-xl border border-border/30 bg-secondary/20 p-5"
-                >
-                  <h3 className="font-heading text-lg font-semibold text-foreground">
-                    {pillar.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
-                    {pillar.educationBlurb}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </>
-        ) : null}
+        <FaqSection
+          items={learnFaqItems}
+          sectionId="learn-context-faq"
+          headingLabel="FAQ"
+          headingTitle={learnFaqHeading.title}
+          headingIntro={learnFaqHeading.intro}
+        />
 
         <p className="text-sm text-muted-foreground mb-10 leading-relaxed">
           Medical disclaimer &amp; how we publish: see{" "}
@@ -166,7 +178,7 @@ export function LearnPage() {
             to={ROUTES.homeServicesSection}
             className="text-primary underline underline-offset-4"
           >
-            Services — quick topic map plus full list by doctor
+            Services (quick topic map and full list by doctor)
           </Link>
           . Prefer structured answers first? See the{" "}
           <Link to={ROUTES.faq} className="text-primary underline underline-offset-4">

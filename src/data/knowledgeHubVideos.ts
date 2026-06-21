@@ -30,14 +30,14 @@ export type KnowledgeHubVideo =
       youtubeVideoId: string;
       /**
        * `shorts` (default): open link targets `/shorts/{id}`.
-       * `watch`: standard upload from @WomensHealthDuo — use `/watch?v={id}` for “Open on YouTube”.
+       * `watch`: standard upload from @WomensHealthDuo ,  use `/watch?v={id}` for “Open on YouTube”.
        */
       youtubeOpenAs?: "shorts" | "watch";
       /** ISO 8601 (e.g. from YouTube “Published”); hub list sorts newest first. */
       postedAt?: string;
       /** Approximate public view count; secondary sort (higher = more relevant). */
       approxViews?: number;
-      /** Full description from YouTube (paste from app / Studio) — under embed for SEO. */
+      /** Full description from YouTube (paste from app / Studio) ,  under embed for SEO. */
       youtubeCaption?: string;
     }
   | {
@@ -48,13 +48,13 @@ export type KnowledgeHubVideo =
       title: string;
       summary: string;
       instagramReelId: string;
-      /** Full caption from Instagram (paste from app) — shown under embed for SEO. */
+      /** Full caption from Instagram (paste from app) ,  shown under embed for SEO. */
       instagramCaption?: string;
       postedAt?: string;
       approxViews?: number;
     };
 
-/** Text under the embed and in `VideoObject.description` — use platform captions when set. */
+/** Text under the embed and in `VideoObject.description` ,  use platform captions when set. */
 export function knowledgeHubVideoCaptionForSeo(v: KnowledgeHubVideo): string {
   if (v.kind === "youtube_short") {
     return v.youtubeCaption ?? `${v.title}\n\n${v.summary}`;
@@ -95,7 +95,7 @@ const KNOWLEDGE_HUB_YOUTUBE_VIDEOS_RAW: readonly KnowledgeHubVideo[] = [
     doctor: "zalak",
     topics: ["Pilates", "STOTT Pilates"],
     title: "Happy International Pilates Day",
-    summary: "Women's Health Duo on YouTube Shorts — Pilates day highlight.",
+    summary: "Women's Health Duo on YouTube Shorts ,  Pilates day highlight.",
     postedAt: "2026-05-02T04:47:39-07:00",
     approxViews: 1162,
   },
@@ -106,7 +106,7 @@ const KNOWLEDGE_HUB_YOUTUBE_VIDEOS_RAW: readonly KnowledgeHubVideo[] = [
     doctor: "charmi",
     topics: ["Pregnancy", "Labor & delivery"],
     title: "What every pregnant woman SHOULD know before they go into LABOR!",
-    summary: "Women's Health Duo on YouTube Shorts — labor preparation.",
+    summary: "Women's Health Duo on YouTube Shorts ,  labor preparation.",
     postedAt: "2026-04-23T05:30:13-07:00",
     approxViews: 1120,
   },
@@ -117,7 +117,7 @@ const KNOWLEDGE_HUB_YOUTUBE_VIDEOS_RAW: readonly KnowledgeHubVideo[] = [
     doctor: "charmi",
     topics: ["Pregnancy", "Patient education"],
     title: "Pregnant? Do this for your baby’s brain and your health 🧠",
-    summary: "Women's Health Duo (@WomensHealthDuo) — long-form upload on YouTube.",
+    summary: "Women's Health Duo (@WomensHealthDuo) ,  long-form upload on YouTube.",
     youtubeOpenAs: "watch",
     postedAt: "2026-04-02T10:18:25-07:00",
     approxViews: 420,
@@ -129,7 +129,7 @@ const KNOWLEDGE_HUB_YOUTUBE_VIDEOS_RAW: readonly KnowledgeHubVideo[] = [
     doctor: "zalak",
     topics: ["Pregnancy", "Exercise"],
     title: "Can you exercise during pregnancy if you have not exercised before? 👀 PART 3!",
-    summary: "Women's Health Duo on YouTube Shorts — exercise when new to training.",
+    summary: "Women's Health Duo on YouTube Shorts ,  exercise when new to training.",
     postedAt: "2026-02-10T05:54:31-08:00",
     approxViews: 1776,
   },
@@ -140,7 +140,7 @@ const KNOWLEDGE_HUB_YOUTUBE_VIDEOS_RAW: readonly KnowledgeHubVideo[] = [
     doctor: "zalak",
     topics: ["Pregnancy", "Exercise"],
     title: "Is walking enough in Pregnancy? Check description to know more!",
-    summary: "Women's Health Duo on YouTube Shorts — activity in pregnancy.",
+    summary: "Women's Health Duo on YouTube Shorts ,  activity in pregnancy.",
     postedAt: "2026-02-06T06:03:06-08:00",
     approxViews: 46,
   },
@@ -151,7 +151,7 @@ const KNOWLEDGE_HUB_YOUTUBE_VIDEOS_RAW: readonly KnowledgeHubVideo[] = [
     doctor: "zalak",
     topics: ["Pregnancy", "Workshop"],
     title: "Exercise in Pregnancy Workshop - Ahmedabad",
-    summary: "Women's Health Duo on YouTube Shorts — pregnancy exercise workshop.",
+    summary: "Women's Health Duo on YouTube Shorts ,  pregnancy exercise workshop.",
     postedAt: "2026-02-04T06:00:28-08:00",
     approxViews: 687,
   },
@@ -162,7 +162,7 @@ const KNOWLEDGE_HUB_YOUTUBE_VIDEOS_RAW: readonly KnowledgeHubVideo[] = [
     doctor: "charmi",
     topics: ["Fertility", "Patient education"],
     title: "Trying to conceive?🤰🏻Get these fertility tests done! 🔬",
-    summary: "Women's Health Duo on YouTube Shorts — fertility testing overview.",
+    summary: "Women's Health Duo on YouTube Shorts ,  fertility testing overview.",
     postedAt: "2026-01-30T09:28:27-08:00",
     approxViews: 630,
   },
@@ -173,7 +173,7 @@ const KNOWLEDGE_HUB_YOUTUBE_VIDEOS_RAW: readonly KnowledgeHubVideo[] = [
     doctor: "both",
     topics: ["Labor & delivery", "Pelvic floor", "Patient education"],
     title: "The biggest childbirth myth - Kegels prepare you for delivery",
-    summary: "Women's Health Duo (@WomensHealthDuo) — long-form upload on YouTube.",
+    summary: "Women's Health Duo (@WomensHealthDuo) ,  long-form upload on YouTube.",
     youtubeOpenAs: "watch",
     postedAt: "2026-01-29T09:38:30-08:00",
     approxViews: 14776,
@@ -185,7 +185,7 @@ const KNOWLEDGE_HUB_YOUTUBE_VIDEOS_RAW: readonly KnowledgeHubVideo[] = [
     doctor: "charmi",
     topics: ["Pregnancy", "Patient education"],
     title: "Avoid these 3 common Pregnancy Mistakes!",
-    summary: "Women's Health Duo on YouTube Shorts — common pregnancy mistakes.",
+    summary: "Women's Health Duo on YouTube Shorts ,  common pregnancy mistakes.",
     postedAt: "2026-01-28T07:58:58-08:00",
     approxViews: 1204,
   },

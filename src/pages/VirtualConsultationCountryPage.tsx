@@ -1,8 +1,12 @@
+import { useMemo } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
+import { JsonLdFaq } from "@/components/seo/JsonLdFaq";
 import { PageShell } from "@/components/layout/PageShell";
+import { FaqSection } from "@/components/sections/FaqSection";
 import { ROUTES } from "@/config/routes";
+import { SITE_URL } from "@/config/site";
 import {
   getVirtualConsultationCountryByPathSegment,
   virtualConsultationCityPath,
@@ -13,18 +17,24 @@ import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { InclusiveSeoListFootnote } from "@/components/seo/InclusiveSeoListFootnote";
 import { Button } from "@/components/ui/button";
 import { PRACTICE_BOTH_DOCTORS_IN_PERSON } from "@/config/practiceLocations";
+import { virtualCountryFaqs } from "@/data/contextualFaqs";
 
 function buildTitle(country: string) {
-  return `Virtual online consultations — ${country} | Women's Health Duo`;
+  return `Virtual online consultations ,  ${country} | Women's Health Duo`;
 }
 
 function buildDescription(country: string, cityCount: number) {
-  return `Virtual OB-GYN, IVF discussion, laparoscopy consults, women's health physiotherapy, Mat Pilates online, and STOTT Pilates (Mat & Reformer) for patients in ${country}. ${cityCount} city overviews link to each type of online visit—book via WhatsApp or email. ${PRACTICE_BOTH_DOCTORS_IN_PERSON}`;
+  return `Virtual OB-GYN, IVF discussion, laparoscopy consults, women's health physiotherapy, Mat Pilates online, and STOTT Pilates (Mat & Reformer) for patients in ${country}. ${cityCount} city overviews link to each type of online visit, book via WhatsApp or email. ${PRACTICE_BOTH_DOCTORS_IN_PERSON}`;
 }
 
 export function VirtualConsultationCountryPage() {
   const { countryCode: countryParam } = useParams<{ countryCode: string }>();
   const row = getVirtualConsultationCountryByPathSegment(countryParam);
+
+  const faqItems = useMemo(() => {
+    if (!row) return [];
+    return virtualCountryFaqs(row.country);
+  }, [row]);
 
   if (!countryParam || !row) {
     return <Navigate to={ROUTES.onlineConsultation} replace />;
@@ -55,13 +65,14 @@ export function VirtualConsultationCountryPage() {
     <PageShell breadcrumbs={crumbs}>
       <SeoHead title={title} metaDescription={description} path={path} />
       <JsonLdGraph graph={graph} />
+      {faqItems.length > 0 ? <JsonLdFaq items={faqItems} pageUrl={`${SITE_URL}${path}`} /> : null}
 
       <article>
         <p className="text-sm font-semibold uppercase tracking-wide text-primary mb-2">
           Virtual online · {row.country}
         </p>
         <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground mb-4">
-          Women&apos;s Health Duo — virtual care for patients in {row.country}
+          Women&apos;s Health Duo , virtual care for patients in {row.country}
         </h1>
 
         <p className="text-lg text-muted-foreground leading-relaxed mb-6">
@@ -75,10 +86,10 @@ export function VirtualConsultationCountryPage() {
             <Link to={ROUTES.onlineConsultation}>Virtual hub (all regions)</Link>
           </Button>
           <Button variant="secondary" asChild>
-            <Link to={ROUTES.drCharmi}>Dr. Charmi — profile</Link>
+            <Link to={ROUTES.drCharmi}>Dr. Charmi , profile</Link>
           </Button>
           <Button variant="secondary" asChild>
-            <Link to={ROUTES.drZalak}>Dr. Zalak — profile</Link>
+            <Link to={ROUTES.drZalak}>Dr. Zalak , profile</Link>
           </Button>
         </div>
 
@@ -106,6 +117,16 @@ export function VirtualConsultationCountryPage() {
           </ul>
           <InclusiveSeoListFootnote variant="cities" />
         </section>
+
+        {faqItems.length > 0 ? (
+          <FaqSection
+            items={faqItems}
+            sectionId="virtual-country-faq"
+            headingLabel="FAQ"
+            headingTitle={`Virtual care in ${row.country}`}
+            headingIntro="How city pages fit together, booking, and what stays the same across the country."
+          />
+        ) : null}
 
         <div className="mt-12">
           <DirectoryPresence />

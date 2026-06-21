@@ -22,7 +22,7 @@ export function virtualServiceCityOfferSchema(
   return {
     "@type": "MedicalBusiness",
     "@id": `${url}#virtual-service-city`,
-    name: `${SITE_NAME} — ${service.title} (${city.city})`,
+    name: `${SITE_NAME} ,  ${service.title} (${city.city})`,
     url,
     telephone: CONTACT.phoneE164,
     email: CONTACT.email,

@@ -9,9 +9,11 @@ For every change set:
 
 1. Use a **feature branch** (`git checkout -b <branch>` if you are on `main` and need a new branch).
 2. Commit when the user asked for commits (or when completing their requested change set).
-3. Push the branch: `git push -u origin HEAD`.
-4. Open a PR to **`main`**: `gh pr create --base main` with a short summary and test plan; return the **PR URL**.
+3. Push the branch: `git push -u origin HEAD` (use `git -c core.hooksPath=.githooks push` in this clone if global hooks block; see [README](../../README.md)).
+4. **Do not use the `gh` CLI** for this repository. Open a PR on **github.com** using **git + browser only:** give the maintainer the **Compare** URL so they can click **Create pull request** into `main`:
+   `https://github.com/meet7202/womens-health-duo/compare/main...<branch>?expand=1`  
+   Replace `<branch>` with the pushed branch name (slashes are fine in the path). Optionally paste a suggested title/body in chat; the human completes the PR on GitHub.
 
-Phrases like **“push these changes”** mean **push the branch and open a PR** — not `git push origin main`.
+Phrases like **“push these changes”** mean **push the branch** and supply the **compare** (or final PR) link — not `git push origin main`.
 
 Do **not** `git push origin main` or merge to `main` locally unless the user **explicitly** asks to skip the PR for that task (rare; default is always PR).
