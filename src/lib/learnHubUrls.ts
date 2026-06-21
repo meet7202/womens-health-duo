@@ -68,11 +68,19 @@ export type LearnHubParsed = {
   topic: string | "all";
 };
 
+/** Static hosts may serve the shell as `…/index.html`; app + sitemap URLs never include that suffix. */
+export function stripTrailingIndexHtmlPath(pathname: string): string {
+  const next = pathname.replace(/\/index\.html$/i, "");
+  return next === "" ? "/" : next;
+}
+
 /**
  * Parse `/learn`, `/learn/dr-charmi`, `/learn/topic/fertility`,
  * `/learn/dr-zalak/topic/pregnancy` (pathname only; basename stripped by React Router).
+ * Accepts optional trailing `/index.html` from static file resolution.
  */
 export function parseLearnHubPathname(pathname: string): LearnHubParsed {
+  pathname = stripTrailingIndexHtmlPath(pathname);
   const base = LEARN_HUB_BASE_PATH;
   if (!pathname.startsWith(base)) return { doctor: "all", topic: "all" };
   const rest = pathname.slice(base.length).replace(/^\/+|\/+$/g, "");

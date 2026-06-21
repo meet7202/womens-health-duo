@@ -13,6 +13,42 @@ import {
 } from "./src/config/site.defaults.ts";
 import { SITEMAP_PATHS } from "./src/config/routes.ts";
 
+/** Fallback if `sitemap.xml` is missing or has no `<loc>` rows (should not happen after `writeSeoFiles`). */
+function sitemapPathnamesFallback(): string[] {
+  return [...SITEMAP_PATHS];
+}
+
+/**
+ * Pathnames listed in `dist/sitemap.xml` (must match `<loc>` after `writeSeoFiles`).
+ * Keeps static `…/index.html` shells in sync with the shipped sitemap without duplicating logic.
+ */
+function pathnamesFromWrittenSitemap(siteUrl: string, outDirAbs: string): string[] {
+  const sitemapFile = path.join(outDirAbs, "sitemap.xml");
+  if (!fs.existsSync(sitemapFile)) return sitemapPathnamesFallback();
+
+  const xml = fs.readFileSync(sitemapFile, "utf8");
+  const paths = new Set<string>();
+
+  for (const m of xml.matchAll(/<loc>\s*([^<]+?)\s*<\/loc>/g)) {
+    const loc = m[1]
+      .replace(/&amp;/g, "&")
+      .replace(/&apos;/g, "'")
+      .replace(/&quot;/g, '"')
+      .replace(/&lt;/g, "<")
+      .replace(/&gt;/g, ">");
+    let pathname: string;
+    try {
+      pathname = new URL(loc).pathname || "/";
+    } catch {
+      continue;
+    }
+    if (pathname !== "/" && pathname.endsWith("/")) pathname = pathname.replace(/\/+$/, "") || "/";
+    paths.add(pathname || "/");
+  }
+
+  return paths.size > 0 ? [...paths] : sitemapPathnamesFallback();
+}
+
 const rootDir = path.dirname(fileURLToPath(import.meta.url));
 
 function resolveSiteUrl(mode: string) {
@@ -83,6 +119,47 @@ function sitemapPriority(pathname: string): string {
     return "0.72";
   }
   return "0.9";
+}
+
+const LEGACY_GLOBAL_ONLINE_SLUG_MAP_PATH = path.join(
+  rootDir,
+  "src/data/legacyGlobalOnlineSlugMap.json",
+);
+
+/** Legacy redirects not listed in `sitemap.xml` — still emit shells so bookmarks return 200 + SPA redirect. */
+function legacyGlobalOnlineShellPathnames(): string[] {
+  const legacyRaw = fs.existsSync(LEGACY_GLOBAL_ONLINE_SLUG_MAP_PATH)
+    ? (JSON.parse(fs.readFileSync(LEGACY_GLOBAL_ONLINE_SLUG_MAP_PATH, "utf8")) as Record<
+        string,
+        string
+      >)
+    : {};
+  return ["/global-online", ...Object.keys(legacyRaw).map((s) => `/global-online/${s}`)];
+}
+
+/** Every pathname in the written sitemap plus legacy `/global-online/*` shells. */
+function staticSpaShellPathnames(siteUrl: string, outDirAbs: string): string[] {
+  return [
+    ...new Set([
+      ...pathnamesFromWrittenSitemap(siteUrl, outDirAbs),
+      ...legacyGlobalOnlineShellPathnames(),
+    ]),
+  ];
+}
+
+/** Copy the built root `index.html` under each route segment as `index.html` (SPA shell). */
+function writeStaticSpaShells(siteUrl: string, outDirAbs: string) {
+  const indexHtml = path.join(outDirAbs, "index.html");
+  if (!fs.existsSync(indexHtml)) return;
+  const html = fs.readFileSync(indexHtml);
+  for (const pathname of staticSpaShellPathnames(siteUrl, outDirAbs)) {
+    if (pathname === "/" || pathname === "") continue;
+    const rel = pathname.replace(/^\/+/, "");
+    if (!rel) continue;
+    const dir = path.join(outDirAbs, ...rel.split("/"));
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(path.join(dir, "index.html"), html);
+  }
 }
 
 function writeSeoFiles(siteUrl: string, outDir: string) {
@@ -198,6 +275,7 @@ export default defineConfig(({ mode }) => {
           const notFoundHtml = path.join(outDirAbs, "404.html");
           if (fs.existsSync(indexHtml)) {
             fs.copyFileSync(indexHtml, notFoundHtml);
+            writeStaticSpaShells(siteUrl, outDirAbs);
           }
         },
       },

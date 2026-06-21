@@ -68,6 +68,8 @@ jobs:
           test -f dist/index.html
           test -s dist/index.html
           test -f dist/404.html
+          test -f dist/dr-zalak-shah/index.html
+          test -f dist/learn/index.html
           test -d dist/assets
           test -f dist/.nojekyll
 
