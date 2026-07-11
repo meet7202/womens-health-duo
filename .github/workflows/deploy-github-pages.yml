@@ -75,6 +75,9 @@ jobs:
           test -d dist/assets
           test -f dist/.nojekyll
           test -f dist/sitemap.xml
+          test -f dist/.well-known/agent-skills/index.json
+          test -f dist/.well-known/content-catalog.json
+          grep -q '"skills"' dist/.well-known/agent-skills/index.json
           grep -q "<urlset" dist/sitemap.xml
           test -f dist/sitemap-virtual-service-cities.xml
           if grep -q '<loc>http://' dist/sitemap.xml dist/sitemap-virtual-service-cities.xml; then
