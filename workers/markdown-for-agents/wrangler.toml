@@ -1,0 +1,24 @@
+# Cloudflare Worker: Accept: text/markdown → HTML-to-Markdown (Free-plan alternative to Pro Markdown for Agents).
+# Deploy: npm run deploy:markdown-worker (from repo root) after `wrangler login`.
+# See workers/markdown-for-agents/README.md and AGENTS.md.
+
+name = "whd-markdown-for-agents"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+
+# Set in dashboard or uncomment after `wrangler whoami`:
+# account_id = "YOUR_CLOUDFLARE_ACCOUNT_ID"
+
+[vars]
+ORIGIN_HOST = "womenshealthduo.com"
+# GitHub Pages host for resolveOverride (bypasses worker loop on subfetch).
+ORIGIN_RESOLVE_OVERRIDE = "meet7202.github.io"
+
+# Route attaches this worker to production HTML. Deploy creates/updates the route when account_id is set.
+[[routes]]
+pattern = "womenshealthduo.com/*"
+zone_name = "womenshealthduo.com"
+
+[[routes]]
+pattern = "www.womenshealthduo.com/*"
+zone_name = "womenshealthduo.com"
