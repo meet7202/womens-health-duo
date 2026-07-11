@@ -73,6 +73,17 @@ Production uses **Cloudflare in front of GitHub Pages**. GitHub Pages cannot set
 
 RFC 8288 allows comma-separated link-values in one `Link` header. Relation types match HTML `<link>` tags in `index.html`.
 
+## Markdown for Agents (Cloudflare Worker, Free plan)
+
+Pro/Business **Markdown for Agents** (dashboard toggle) is not on Cloudflare Free. This repo ships a **Worker** at [`workers/markdown-for-agents/`](workers/markdown-for-agents/) that returns `text/markdown` when `Accept: text/markdown` is sent; browsers still get HTML.
+
+- **Deploy (one-time / when worker changes):** `npm run deploy:markdown-worker` after `wrangler login` — see [`workers/markdown-for-agents/README.md`](workers/markdown-for-agents/README.md).
+- **Scope:** converts origin **static HTML shells** (`#static-seo-shell` H1 + lede, YAML frontmatter from meta, noscript nav links, JSON-LD block) — not React-rendered DOM.
+- **Skips:** `/assets/`, `/images/`, `/.well-known/`, non-HTML file extensions.
+- **Independent** of GitHub Pages deploy workflow; routes `womenshealthduo.com/*` and `www.womenshealthduo.com/*` in `wrangler.toml`.
+
+Validate: `curl -sI -H "Accept: text/markdown" https://womenshealthduo.com/ | grep -iE 'content-type|x-markdown'`
+
 ## GitHub Pages SPA routing
 
 The Vite plugin copies **`dist/index.html` → `dist/404.html`** so unknown URLs still receive the app shell. After **`writeSeoFiles`** writes **`sitemap.xml`** (primary `<urlset>`: **`SITEMAP_PATHS_PRIMARY_URLSET`**) and **`sitemap-virtual-service-cities.xml`** (service×city matrix), it mirrors the built **`index.html`** under **`dist/<pathname>/index.html`** for every pathname in **`SITEMAP_PATHS`** (see [`src/config/routes.ts`](src/config/routes.ts)) plus legacy **`/global-online`** routes from **`legacyGlobalOnlineSlugMap.json`**, so sitemap URLs are real static files: GitHub Pages serves them with **200** instead of relying on `404.html` (which keeps **404** status for the document request). Add new public URLs to the appropriate **`SITEMAP_SEGMENT_*`** (and **`SITEMAP_PATHS`**) in [`src/config/routes.ts`](src/config/routes.ts) (and **`App.tsx`**) so they appear in the correct sitemap feed and get shells. If you change `build.outDir` or remove either step, update this file and the README.
