@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+ig/
+*.session
+
 # TypeScript incremental build
 *.tsbuildinfo
 

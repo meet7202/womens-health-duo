@@ -25,6 +25,7 @@ import { Button } from "@/components/ui/button";
 import { PRACTICE_BOTH_DOCTORS_IN_PERSON } from "@/config/practiceLocations";
 import { virtualCityOverviewFaqs } from "@/data/contextualFaqs";
 import { virtualCityDocumentTitle, virtualCityH1 } from "@/lib/pageSeoCopy";
+import { TelemedicineComplianceBlock } from "@/components/compliance/TelemedicineComplianceBlock";
 
 function buildDescription(city: string, country: string) {
   return `Virtual online consultations for patients in ${city}, ${country}: Dr. Charmi Shah (OB-GYN, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapy, Mat Pilates online, STOTT Pilates Mat & Reformer). ${PRACTICE_BOTH_DOCTORS_IN_PERSON} Book via WhatsApp or email.`;
@@ -82,6 +83,8 @@ export function VirtualOnlineConsultationCityPage() {
         <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground mb-4">
           {h1}
         </h1>
+
+        <TelemedicineComplianceBlock className="mb-8" showLimitations={false} />
 
         <p className="rounded-lg border border-primary/20 bg-primary/5 px-4 py-3 text-sm text-foreground mb-6">
           <strong>Both doctors, all services, virtually:</strong> Dr. Charmi Shah provides online

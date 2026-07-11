@@ -1,5 +1,6 @@
 import { ROUTES } from "../config/routes";
 import { EXTERNAL } from "../config/externalProfiles";
+import { DOCTOR_REGISTRATION, type DoctorRegistration } from "../config/doctorRegistration";
 
 export type DoctorSlug = "charmi" | "zalak";
 
@@ -9,6 +10,7 @@ export type DoctorProfile = {
   name: string;
   credentials: string;
   jobTitle: string;
+  registration: DoctorRegistration;
   metaTitle: string;
   metaDescription: string;
   /** Primary narrative (aligned with on-site About + Services; not scraped from directories). */
@@ -26,6 +28,7 @@ export const DOCTOR_BY_SLUG: Record<DoctorSlug, DoctorProfile> = {
     name: "Dr. Charmi Shah",
     credentials: "MBBS, MS (Obstetrics & Gynecology); fellowship training in laparoscopy and IVF",
     jobTitle: "Obstetrician & Gynecologist, IVF Specialist & Laparoscopic Surgeon",
+    registration: DOCTOR_REGISTRATION.charmi,
     metaTitle: "Dr. Charmi Shah | OB-GYN, IVF & Laparoscopy ,  Women's Health Duo",
     metaDescription:
       "Dr. Charmi Shah: obstetrics, gynecology, IVF, IUI, high-risk pregnancy, and laparoscopic surgery. Online OB-GYN telehealth worldwide; in person in Mumbai, Ahmedabad, and Valsad.",
@@ -58,6 +61,7 @@ export const DOCTOR_BY_SLUG: Record<DoctorSlug, DoctorProfile> = {
     name: "Dr. Zalak Shah (PT)",
     credentials: "BPT, MPT; STOTT Pilates Instructor (Mat & Reformer)",
     jobTitle: "Women's Health Physiotherapist & STOTT Pilates Instructor",
+    registration: DOCTOR_REGISTRATION.zalak,
     metaTitle: "Dr. Zalak Shah | Women's Health Physio & STOTT Pilates ,  Women's Health Duo",
     metaDescription:
       "Dr. Zalak Shah: women's health physiotherapy, pelvic floor rehab, prenatal and postnatal care, Mat Pilates online, and STOTT Pilates on Mat and Reformer. Online programs worldwide; in person in Bangalore and Ahmedabad.",

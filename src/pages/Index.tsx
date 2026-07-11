@@ -67,6 +67,7 @@ const Index = () => {
         <ContactSection />
         <FaqSection
           items={HOME_PAGE_FAQ}
+          tightTop
           headingTitle={"Women's Health Duo ,  quick answers"}
           headingIntro="Five common questions about our education platform, clinical lanes, and how to book. Medical decisions belong in a consultation with your clinician."
         />

@@ -1,8 +1,9 @@
 /**
- * Curated playable embeds for the Learn / knowledge hub.
+ * Curated playable embeds for the Learn / content hub.
  * YouTube: Shorts and uploads from **@WomensHealthDuo** (titles from public oEmbed where applicable).
- * Instagram: bulk list in `knowledgeHubInstagramReels.json` (reel shortcode + copy). Merge new URLs with
- * `npm run import:instagram-reels -- path/to/reel-urls.txt` (see `scripts/import-instagram-reel-urls.mjs`).
+ * Instagram reels: `knowledgeHubInstagramReels.json`; carousels / feed posts: `knowledgeHubInstagramPosts.json`.
+ * Bulk merge from `ig/*.json`: `npm run import:instagram`.
+ * URL list: `npm run import:instagram-reels -- path/to/reel-urls.txt`.
  *
  * **Sort order:** `KNOWLEDGE_HUB_VIDEOS` is ordered by **UTC calendar `postedAt` day, newest day first**,
  * then by **`approxViews` descending** within the same day (relevance). Items without `postedAt` sort
@@ -14,6 +15,7 @@
  * captions live on each row in `knowledgeHubInstagramReels.json` (sync with
  * `node scripts/sync-instagram-captions-from-oembed.mjs`).
  */
+import knowledgeHubInstagramPostsJson from "./knowledgeHubInstagramPosts.json";
 import knowledgeHubInstagramReelsJson from "./knowledgeHubInstagramReels.json";
 import knowledgeHubYoutubeCaptionsJson from "./knowledgeHubYoutubeCaptions.json";
 
@@ -48,17 +50,83 @@ export type KnowledgeHubVideo =
       title: string;
       summary: string;
       instagramReelId: string;
+      /**
+       * Direct MP4 from Instagram CDN (from scrape import). Used for inline playback when the
+       * official embed shows “Watch on Instagram” (licensed music). Refresh with
+       * `npm run import:instagram` — URLs expire after a few weeks.
+       */
+      instagramVideoUrl?: string;
+      /** Remote cover frame from scrape (may expire). */
+      instagramPosterUrl?: string;
+      /** Local cover in `public/images/hub-thumbs/` — used for player posters. */
+      instagramPosterPath?: string;
       /** Full caption from Instagram (paste from app) ,  shown under embed for SEO. */
       instagramCaption?: string;
       postedAt?: string;
       approxViews?: number;
+    }
+  | {
+      id: string;
+      kind: "instagram_post";
+      doctor: HubDoctorTag;
+      topics: string[];
+      title: string;
+      summary: string;
+      instagramPostId: string;
+      /** Carousel multi-slide post vs single feed image. */
+      instagramPostType: "carousel" | "image";
+      instagramCaption?: string;
+      instagramPosterUrl?: string;
+      instagramPosterPath?: string;
+      postedAt?: string;
+      approxViews?: number;
     };
 
-const GENERIC_INSTAGRAM_REEL_TITLE = /^Women's Health Duo\s*,\s*Instagram Reel$/i;
+export type KnowledgeHubInstagramMedia = Extract<
+  KnowledgeHubVideo,
+  { kind: "instagram_reel" } | { kind: "instagram_post" }
+>;
+
+const GENERIC_INSTAGRAM_REEL_TITLE = /^Women's Health Duo\s*[—–,]\s*Instagram Reel$/i;
+const GENERIC_INSTAGRAM_POST_TITLE = /^Women's Health Duo\s*[—–,]\s*Instagram (Carousel|Post)$/i;
+
+export function knowledgeHubInstagramShortcode(v: KnowledgeHubInstagramMedia): string {
+  return v.kind === "instagram_reel" ? v.instagramReelId : v.instagramPostId;
+}
+
+export function knowledgeHubInstagramPermalink(v: KnowledgeHubInstagramMedia): string {
+  const code = knowledgeHubInstagramShortcode(v);
+  return v.kind === "instagram_reel"
+    ? `https://www.instagram.com/reel/${code}/`
+    : `https://www.instagram.com/p/${code}/`;
+}
+
+export function knowledgeHubInstagramEmbedUrl(v: KnowledgeHubInstagramMedia): string {
+  return `${knowledgeHubInstagramPermalink(v)}embed/`;
+}
+
+export function knowledgeHubInstagramPoster(v: KnowledgeHubInstagramMedia): string | undefined {
+  const local = v.instagramPosterPath?.trim();
+  if (local) return local;
+  return v.instagramPosterUrl?.trim() || undefined;
+}
+
+export function knowledgeHubInstagramReelNativeVideo(
+  v: Extract<KnowledgeHubVideo, { kind: "instagram_reel" }>,
+): { src: string; poster?: string } | null {
+  const src = v.instagramVideoUrl?.trim();
+  if (!src) return null;
+  const poster = knowledgeHubInstagramPoster(v);
+  return poster ? { src, poster } : { src };
+}
 
 /** On-page H1 and `<title>` for watch pages; prefers a caption lead over generic reel titles. */
 export function knowledgeHubVideoDisplayTitle(v: KnowledgeHubVideo): string {
-  if (!GENERIC_INSTAGRAM_REEL_TITLE.test(v.title.trim())) return v.title;
+  const title = v.title.trim();
+  const isGenericInstagram =
+    (v.kind === "instagram_reel" && GENERIC_INSTAGRAM_REEL_TITLE.test(title)) ||
+    (v.kind === "instagram_post" && GENERIC_INSTAGRAM_POST_TITLE.test(title));
+  if (!isGenericInstagram) return v.title;
   const cap = knowledgeHubVideoOriginalPlatformCaption(v);
   if (cap) {
     const line = cap
@@ -93,12 +161,24 @@ type KnowledgeHubInstagramReelJson = Omit<
   "kind"
 >;
 
+type KnowledgeHubInstagramPostJson = Omit<
+  Extract<KnowledgeHubVideo, { kind: "instagram_post" }>,
+  "kind"
+>;
+
 const KNOWLEDGE_HUB_YOUTUBE_CAPTIONS = knowledgeHubYoutubeCaptionsJson as Record<string, string>;
 
 const KNOWLEDGE_HUB_INSTAGRAM_REELS: readonly KnowledgeHubVideo[] = (
   knowledgeHubInstagramReelsJson as KnowledgeHubInstagramReelJson[]
 ).map((row) => ({
   kind: "instagram_reel" as const,
+  ...row,
+}));
+
+const KNOWLEDGE_HUB_INSTAGRAM_POSTS: readonly KnowledgeHubVideo[] = (
+  knowledgeHubInstagramPostsJson as KnowledgeHubInstagramPostJson[]
+).map((row) => ({
+  kind: "instagram_post" as const,
   ...row,
 }));
 
@@ -251,6 +331,7 @@ function hubPostedInstantMs(v: KnowledgeHubVideo): number {
 
 const _hubMerged: KnowledgeHubVideo[] = [
   ...KNOWLEDGE_HUB_INSTAGRAM_REELS,
+  ...KNOWLEDGE_HUB_INSTAGRAM_POSTS,
   ...KNOWLEDGE_HUB_YOUTUBE_VIDEOS,
 ];
 _hubMerged.sort(compareKnowledgeHubVideos);

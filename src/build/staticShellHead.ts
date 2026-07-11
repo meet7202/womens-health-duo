@@ -9,6 +9,12 @@ import { DOCTOR_BY_SLUG } from "../data/doctorProfiles";
 import { CITY_PAGES } from "../data/cityPages";
 import { getSeoOnlineServiceBySlug } from "../data/seoOnlineServices";
 import { getTopicGuide } from "../data/topicGuides/topicGuideRegistry";
+import {
+  getInternationalDoctorHub,
+  getInternationalService,
+  INTERNATIONAL_CONSULTATION_BASE,
+} from "../data/internationalServices/internationalServiceRegistry";
+import { INTERNATIONAL_HUB } from "../data/internationalServices/hubContent";
 import { homeSectionSeo } from "../lib/homeSectionPaths";
 import {
   learnHubFilteredPath,
@@ -27,6 +33,22 @@ import {
   EDITORIAL_H1,
   FAQ_DOCUMENT_TITLE,
   FAQ_H1,
+  BOOKING_DOCUMENT_TITLE,
+  BOOKING_H1,
+  COMMUNITY_DOCUMENT_TITLE,
+  COMMUNITY_H1,
+  internationalConsultationHubDocumentTitle,
+  internationalConsultationHubH1,
+  internationalDoctorHubDocumentTitle,
+  internationalServiceDocumentTitle,
+  PRIVACY_DOCUMENT_TITLE,
+  PRIVACY_H1,
+  REFUND_DOCUMENT_TITLE,
+  REFUND_H1,
+  TELEMEDICINE_DOCUMENT_TITLE,
+  TELEMEDICINE_H1,
+  TERMS_DOCUMENT_TITLE,
+  TERMS_H1,
   HOME_DEFAULT_H1,
   LEARN_ARTICLES_DOCUMENT_TITLE,
   LEARN_ARTICLES_H1,
@@ -66,6 +88,24 @@ const MEDICAL_DESCRIPTION =
 
 const EDITORIAL_DESCRIPTION =
   "How Women's Health Duo publishes Learn hub captions, video selections, and on-site health content, authorship, accuracy intent, and corrections.";
+
+const TELEMEDICINE_DESCRIPTION =
+  "Telemedicine policy for Women's Health Duo: how online consultations work, patient and doctor responsibilities, consent, prescriptions, privacy, fees, and emergency care.";
+
+const PRIVACY_DESCRIPTION =
+  "Privacy policy for Women's Health Duo: how we handle personal and health information, consultation records, retention, security, and your rights.";
+
+const TERMS_DESCRIPTION =
+  "Terms of service for using the Women's Health Duo website and booking teleconsultations.";
+
+const REFUND_DESCRIPTION =
+  "Refund and cancellation policy for Women's Health Duo teleconsultations and in-person appointments.";
+
+const BOOKING_DESCRIPTION =
+  "Book a teleconsultation with Dr. Charmi Shah (OB-GYN) or Dr. Zalak Shah (women's health physio). Complete patient details, medical history, and mandatory telemedicine consent.";
+
+const COMMUNITY_DESCRIPTION =
+  "Join Women's Health Duo's free WhatsApp community: health tips, workshop updates, and supportive conversations on pregnancy, fertility, PCOS, pelvic health, and wellness.";
 
 const LEARN_ARTICLES_DESCRIPTION =
   "Browse every written guide on this site: short articles and common questions, grouped by theme, with links to related pages and the Learn video hub.";
@@ -161,6 +201,83 @@ export function resolveShellPageMeta(siteUrl: string, pathname: string): ShellPa
       h1: EDITORIAL_H1,
       metaDescription: EDITORIAL_DESCRIPTION,
     };
+  }
+  if (path === ROUTES.telemedicinePolicy) {
+    return {
+      canonicalHref,
+      title: TELEMEDICINE_DOCUMENT_TITLE,
+      h1: TELEMEDICINE_H1,
+      metaDescription: TELEMEDICINE_DESCRIPTION,
+    };
+  }
+  if (path === ROUTES.privacyPolicy) {
+    return {
+      canonicalHref,
+      title: PRIVACY_DOCUMENT_TITLE,
+      h1: PRIVACY_H1,
+      metaDescription: PRIVACY_DESCRIPTION,
+    };
+  }
+  if (path === ROUTES.termsOfService) {
+    return {
+      canonicalHref,
+      title: TERMS_DOCUMENT_TITLE,
+      h1: TERMS_H1,
+      metaDescription: TERMS_DESCRIPTION,
+    };
+  }
+  if (path === ROUTES.refundPolicy) {
+    return {
+      canonicalHref,
+      title: REFUND_DOCUMENT_TITLE,
+      h1: REFUND_H1,
+      metaDescription: REFUND_DESCRIPTION,
+    };
+  }
+  if (path === ROUTES.bookConsultation) {
+    return {
+      canonicalHref,
+      title: BOOKING_DOCUMENT_TITLE,
+      h1: BOOKING_H1,
+      metaDescription: BOOKING_DESCRIPTION,
+    };
+  }
+  if (path === ROUTES.freeWomensHealthCommunity) {
+    return {
+      canonicalHref,
+      title: COMMUNITY_DOCUMENT_TITLE,
+      h1: COMMUNITY_H1,
+      metaDescription: COMMUNITY_DESCRIPTION,
+    };
+  }
+  if (path === ROUTES.internationalConsultation) {
+    return {
+      canonicalHref,
+      title: internationalConsultationHubDocumentTitle(),
+      h1: internationalConsultationHubH1(),
+      metaDescription: INTERNATIONAL_HUB.metaDescription,
+    };
+  }
+  if (path.startsWith(`${INTERNATIONAL_CONSULTATION_BASE}/`)) {
+    const segment = path.slice(INTERNATIONAL_CONSULTATION_BASE.length + 1);
+    const doctorHub = getInternationalDoctorHub(segment);
+    if (doctorHub) {
+      return {
+        canonicalHref: canonicalHrefForPath(siteUrl, path),
+        title: internationalDoctorHubDocumentTitle(doctorHub.documentTitlePrimary),
+        h1: doctorHub.h1,
+        metaDescription: doctorHub.metaDescription,
+      };
+    }
+    const service = getInternationalService(segment);
+    if (service) {
+      return {
+        canonicalHref: canonicalHrefForPath(siteUrl, path),
+        title: internationalServiceDocumentTitle(service.shortTitle),
+        h1: service.title,
+        metaDescription: service.metaDescription,
+      };
+    }
   }
   if (path === ROUTES.learnArticles) {
     return {

@@ -184,7 +184,7 @@ export function learnWatchSitemapPaths(): string[] {
 }
 
 const LEARN_SEO_BASE =
-  "Women's Health Duo Learn hub: free clinician-led women's health clips on YouTube Shorts and Instagram Reels, pregnancy, pelvic floor, fertility, hormones, Mat Pilates online, and STOTT Pilates (Mat and Reformer). Book consults with Dr. Charmi Shah (OB-GYN/IVF) or Dr. Zalak Shah (women's health physiotherapy).";
+  "Women's Health Duo Learn hub: free clinician-led clips on YouTube Shorts, Instagram Reels, carousels, and posts — pregnancy, pelvic floor, fertility, hormones, Mat Pilates online, and STOTT Pilates (Mat and Reformer). Each clip has a dedicated watch page under /learn/watch/. Book consults with Dr. Charmi Shah (OB-GYN/IVF) or Dr. Zalak Shah (women's health physiotherapy).";
 
 function doctorFilterLabel(d: LearnHubDoctorFilter): string {
   if (d === "charmi") return "Dr. Charmi";

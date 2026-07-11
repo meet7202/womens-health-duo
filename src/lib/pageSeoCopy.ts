@@ -91,15 +91,32 @@ export function learnHubH1(parsed: LearnHubParsed): string {
 }
 
 export function learnWatchDocumentTitle(video: KnowledgeHubVideo): string {
-  return formatDocumentTitle(knowledgeHubVideoDisplayTitle(video));
+  const base = knowledgeHubVideoDisplayTitle(video);
+  if (video.kind === "instagram_post") {
+    const suffix = video.instagramPostType === "carousel" ? "Instagram carousel" : "Instagram post";
+    return formatDocumentTitle(`${base} — ${suffix}`);
+  }
+  return formatDocumentTitle(base);
 }
 
 export function learnWatchH1(video: KnowledgeHubVideo): string {
+  if (video.kind === "instagram_post") {
+    const base = knowledgeHubVideoDisplayTitle(video);
+    const suffix = video.instagramPostType === "carousel" ? "Instagram carousel" : "Instagram post";
+    return `${base} — ${suffix}`;
+  }
   return knowledgeHubVideoDisplayTitle(video);
 }
 
 export function learnWatchMetaDescription(video: KnowledgeHubVideo): string {
-  const text = knowledgeHubVideoCaptionForSeo(video).replace(/\s+/g, " ").trim();
+  const caption = knowledgeHubVideoCaptionForSeo(video).replace(/\s+/g, " ").trim();
+  const prefix =
+    video.kind === "instagram_post"
+      ? video.instagramPostType === "carousel"
+        ? "Carousel from @womenshealthduo on Instagram. "
+        : "Post from @womenshealthduo on Instagram. "
+      : "";
+  const text = prefix + caption;
   if (text.length <= 160) return text;
   return `${text.slice(0, 157)}…`;
 }
@@ -116,6 +133,40 @@ export const MEDICAL_H1 = "Medical disclaimer";
 
 export const EDITORIAL_DOCUMENT_TITLE = formatDocumentTitle("Editorial policy");
 export const EDITORIAL_H1 = "Editorial policy";
+
+export const TELEMEDICINE_DOCUMENT_TITLE = formatDocumentTitle("Telemedicine policy");
+export const TELEMEDICINE_H1 = "Telemedicine policy";
+
+export const PRIVACY_DOCUMENT_TITLE = formatDocumentTitle("Privacy policy");
+export const PRIVACY_H1 = "Privacy policy";
+
+export const TERMS_DOCUMENT_TITLE = formatDocumentTitle("Terms of service");
+export const TERMS_H1 = "Terms of service";
+
+export const REFUND_DOCUMENT_TITLE = formatDocumentTitle("Refund policy");
+export const REFUND_H1 = "Refund & cancellation policy";
+
+export const BOOKING_DOCUMENT_TITLE = formatDocumentTitle("Book teleconsultation");
+export const BOOKING_H1 = "Book a teleconsultation";
+
+export const COMMUNITY_DOCUMENT_TITLE = formatDocumentTitle("Free women's health community");
+export const COMMUNITY_H1 = "Free women's health community on WhatsApp";
+
+export function internationalConsultationHubDocumentTitle(): string {
+  return formatDocumentTitle("International women's health consultation");
+}
+
+export function internationalConsultationHubH1(): string {
+  return "International consultation & second opinion";
+}
+
+export function internationalDoctorHubDocumentTitle(primary: string): string {
+  return formatDocumentTitle(primary);
+}
+
+export function internationalServiceDocumentTitle(shortTitle: string): string {
+  return formatDocumentTitle(`${shortTitle} online`);
+}
 
 export const LEARN_ARTICLES_DOCUMENT_TITLE = formatDocumentTitle("Articles & common questions");
 export const LEARN_ARTICLES_H1 = "Articles and common questions";

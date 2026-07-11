@@ -9,6 +9,8 @@ import {
 import { ROUTES } from "@/config/routes";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { PRACTICE_CHARMI_IN_PERSON, PRACTICE_ZALAK_IN_PERSON } from "@/config/practiceLocations";
+import { DOCTOR_REGISTRATION } from "@/config/doctorRegistration";
+import { DOCTOR_PHOTOS } from "@/config/doctorPhotos";
 
 /**
  * Schema.org structured data for search engines and AI crawlers.
@@ -20,6 +22,11 @@ export function JsonLd() {
   const charmiId = `${origin}#physician-charmi`;
   const zalakId = `${origin}#physician-zalak`;
   const ogImage = githubPagesAbsoluteUrl(SITE_URL, OG_IMAGE_PATH);
+  const charmiPhoto = githubPagesAbsoluteUrl(SITE_URL, DOCTOR_PHOTOS.charmi.displaySrc);
+  const zalakPhoto = githubPagesAbsoluteUrl(
+    SITE_URL,
+    DOCTOR_PHOTOS.zalak.seoImagePath ?? DOCTOR_PHOTOS.zalak.displaySrc,
+  );
 
   const india = { "@type": "Country" as const, name: "India" };
 
@@ -93,6 +100,16 @@ export function JsonLd() {
         telephone: CONTACT.phoneE164,
         email: CONTACT.email,
         url: origin,
+        image: charmiPhoto,
+        hasCredential: {
+          "@type": "EducationalOccupationalCredential",
+          credentialCategory: "Medical registration",
+          identifier: DOCTOR_REGISTRATION.charmi.registrationNumber,
+          recognizedBy: {
+            "@type": "Organization",
+            name: DOCTOR_REGISTRATION.charmi.registrationCouncil,
+          },
+        },
       },
       {
         "@type": "Physician",
@@ -122,6 +139,16 @@ export function JsonLd() {
         telephone: CONTACT.phoneE164,
         email: CONTACT.email,
         url: origin,
+        image: zalakPhoto,
+        hasCredential: {
+          "@type": "EducationalOccupationalCredential",
+          credentialCategory: "Physiotherapy registration",
+          identifier: DOCTOR_REGISTRATION.zalak.registrationNumber,
+          recognizedBy: {
+            "@type": "Organization",
+            name: DOCTOR_REGISTRATION.zalak.registrationCouncil,
+          },
+        },
       },
       {
         "@type": "WebSite",

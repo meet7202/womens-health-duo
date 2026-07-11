@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState, useMemo } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { Phone, MapPin, Clock, Instagram, Youtube, MessageCircle, Users, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -13,8 +13,9 @@ import {
   PRACTICE_ZALAK_LOCATIONS_LINE,
 } from "@/config/practiceLocations";
 import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsappCta";
-
-const WHATSAPP_COMMUNITY_LINK = "https://chat.whatsapp.com/IzlxjOf8wp9GqMdSbCQ3Xj";
+import { ROUTES } from "@/config/routes";
+import { BookingMedicalDisclaimer } from "@/components/compliance/BookingMedicalDisclaimer";
+import { WHATSAPP_COMMUNITY_INVITE_URL } from "@/config/whatsappCommunity";
 
 export const ContactSection = () => {
   const location = useLocation();
@@ -63,7 +64,7 @@ Sent from Women's Health Duo Website`;
   };
 
   return (
-    <section id="contact" className="py-24 bg-secondary/30" ref={ref}>
+    <section id="contact" className="pt-24 pb-10 bg-secondary/30" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -79,10 +80,15 @@ Sent from Women's Health Duo Website`;
             Book Your <span className="text-primary italic">Consultation</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Fastest way to reach us: message Women&apos;s Health Duo on{" "}
-            <strong className="text-foreground font-medium">WhatsApp</strong> (opens a direct chat
-            with our practice number). You can also use the form, it opens WhatsApp with your
-            details pre-filled so you only need to tap send.
+            Fastest way to reach us: use our{" "}
+            <Link
+              to={ROUTES.bookConsultation}
+              className="text-primary underline underline-offset-4"
+            >
+              Book consultation
+            </Link>{" "}
+            form (patient details + telemedicine consent) or message on{" "}
+            <strong className="text-foreground font-medium">WhatsApp</strong>.
           </p>
         </motion.div>
 
@@ -92,6 +98,9 @@ Sent from Women's Health Duo Website`;
           transition={{ duration: 0.5, delay: 0.05 }}
           className="mb-12 flex flex-col items-center justify-center gap-3 text-center"
         >
+          <Button asChild size="lg" variant="default" className="px-8 py-6 text-base">
+            <Link to={ROUTES.bookConsultation}>Book teleconsultation</Link>
+          </Button>
           <Button
             asChild
             size="lg"
@@ -360,12 +369,19 @@ Sent from Women's Health Duo Website`;
             <strong className="text-foreground">To book, use the direct WhatsApp</strong> buttons
             above (private chat with the practice).
           </p>
-          <Button variant="outline" size="sm" asChild>
-            <a href={WHATSAPP_COMMUNITY_LINK} target="_blank" rel="noopener noreferrer">
-              Come join the community
-            </a>
-          </Button>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Button variant="outline" size="sm" asChild>
+              <Link to={ROUTES.freeWomensHealthCommunity}>Learn more about the free community</Link>
+            </Button>
+            <Button variant="outline" size="sm" asChild>
+              <a href={WHATSAPP_COMMUNITY_INVITE_URL} target="_blank" rel="noopener noreferrer">
+                Join on WhatsApp
+              </a>
+            </Button>
+          </div>
         </motion.div>
+
+        <BookingMedicalDisclaimer className="max-w-3xl mx-auto mt-6" />
       </div>
     </section>
   );

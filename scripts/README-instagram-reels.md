@@ -1,50 +1,52 @@
 # Bulk Instagram reels for the Learn hub
 
-The site cannot reliably **scrape** every reel from [instagram.com/womenshealthduo/reels](https://www.instagram.com/womenshealthduo/reels/) (the listing is not a stable public API, and automated scraping conflicts with Instagram’s terms).
+Reels live in **`src/data/knowledgeHubInstagramReels.json`**; carousels and feed images in **`knowledgeHubInstagramPosts.json`**. Both merge in **`src/data/knowledgeHubVideos.ts`**.
 
-Reels are stored in **`src/data/knowledgeHubInstagramReels.json`** and merged in **`src/data/knowledgeHubVideos.ts`**.
+Optional per row: **`postedAt`** (ISO 8601) and **`approxViews`** (number). The hub sorts by **UTC calendar day of `postedAt` (newest day first)**, then by **`approxViews` descending** within the same day. Rows without `postedAt` sort after all dated rows.
 
-Optional per row: **`postedAt`** (ISO 8601) and **`approxViews`** (number). The hub sorts by **UTC calendar day of `postedAt` (newest day first)**, then by **`approxViews` descending** within the same day. Rows without `postedAt` sort after all dated rows (then by views).
+Add **`instagramCaption`** for the **original caption** under each embed on `/learn` and for JSON-LD `VideoObject.description`.
 
-Add **`instagramCaption`** for the **original caption** under each embed on `/learn` and for JSON-LD `VideoObject.description`. Prefer syncing from Instagram with **`node scripts/sync-instagram-captions-from-oembed.mjs`** (see below). YouTube hub descriptions live in **`knowledgeHubYoutubeCaptions.json`**, merged in **`knowledgeHubVideos.ts`** as **`youtubeCaption`** — refresh with **`node scripts/fetch-youtube-hub-captions.mjs`**.
+## Primary: JSON scrape → hub JSON
 
-## Add many reel URLs at once
+Place exports in **`ig/reels_scrap.json`** and **`ig/posts_scrap.json`**, then:
 
-1. Create a text file with one URL (or bare shortcode) per line, for example:
+```sh
+npm run import:instagram
+```
 
-   ```text
-   https://www.instagram.com/reel/AbCdEfGhIjK/
-   https://www.instagram.com/womenshealthduo/reel/AbCdEfGhIjK/
-   https://www.instagram.com/p/XyZaBcDeFgH/
-   ```
+This updates **`knowledgeHubInstagramReels.json`** (reels) and **`knowledgeHubInstagramPosts.json`** (carousels + feed images): captions, **`postedAt`**, **`approxViews`**, CDN **`instagramVideoUrl`**, local cover JPEGs in **`public/images/hub-thumbs/`** (`instagramPosterPath`), content-derived **`topics`**, and **`doctor`** (curated shortcode map + tagged-user + caption heuristics in `scripts/lib/instagram-hub-classify.mjs`).
 
-2. From the repo root:
+If some cover downloads fail:
 
-   ```sh
-   npm run import:instagram-reels -- path/to/reel-urls.txt
-   ```
+```sh
+npm run retry:hub-thumbnails
+```
 
-   Or pipe stdin:
+Re-run **`npm run import:instagram`** periodically — Instagram CDN video URLs expire after a few weeks.
 
-   ```sh
-   cat reel-urls.txt | node scripts/import-instagram-reel-urls.mjs
-   ```
+### Verify
 
-3. The script **merges** into the JSON (skips duplicates), adds default `title` / `summary` / `doctor` / `topics` for new rows, and preserves hand-edited fields on existing shortcodes.
+```sh
+npm run lint && npm run typecheck && npm run build
+```
 
-4. Refine titles, `doctor`, `topics`, and optional hand-edited `instagramCaption` in the JSON as needed, then run `npm run lint && npm run typecheck && npm run build`.
+## URL list import (smaller batches)
 
-## Original captions (Instagram + YouTube)
+1. One URL or shortcode per line in a `.txt` file.
+2. `npm run import:instagram-reels -- path/to/reel-urls.txt`
+3. Optionally refresh captions: **`node scripts/sync-instagram-captions-from-oembed.mjs`**
 
-The Learn hub shows **public caption / description text** under each embed for authenticity.
+## Original captions (YouTube)
 
-- **Instagram reels:** run **`node scripts/sync-instagram-captions-from-oembed.mjs`** — fills **`instagramCaption`** from Instagram’s oEmbed `title` field (full caption) on each row in `knowledgeHubInstagramReels.json`. Rate-limited; re-run after adding reels.
-- **YouTube Shorts / uploads in the hub:** run **`node scripts/fetch-youtube-hub-captions.mjs`** — writes **`src/data/knowledgeHubYoutubeCaptions.json`** (video id → description from `ytInitialPlayerResponse` on the watch page). `knowledgeHubVideos.ts` merges this into each hub row as **`youtubeCaption`**.
+- **YouTube Shorts / hub uploads:** **`node scripts/fetch-youtube-hub-captions.mjs`** → `knowledgeHubYoutubeCaptions.json`
 
-**`doctor` field:** Use `charmi`, `zalak`, or `both`. The Learn hub doctor tabs match **exactly** (single-doctor tabs do not include `both`). To bulk-refresh tags from public captions, fetch oEmbed with `node scripts/fetch-instagram-reel-oembed.mjs`, then update the map in `scripts/apply-reel-doctor-tags.mjs` and run `node scripts/apply-reel-doctor-tags.mjs`.
+## Doctor tags
 
-## Where to get a full list of reel links
+Use `charmi`, `zalak`, or `both`. Learn hub doctor tabs match **exactly** (`both` rows appear under **All** only).
 
-- **Instagram Graph API** (Meta app + Business/Creator Instagram linked to a Facebook Page): list media for the IG user.
-- **Download your information** (Instagram settings): your export can include content metadata with permalinks.
-- **Manual / clipboard**: Share → Copy link per reel (works for smaller sets).
+Doctor assignment runs automatically during **`npm run import:instagram`**. To override a reel, add its shortcode to **`DOCTOR_BY_SHORTCODE`** in `scripts/lib/instagram-hub-classify.mjs`, then re-import.
+
+## Other sources
+
+- **Download your information** (Instagram settings): export JSON → convert shortcodes/URLs into scrape JSON or a URL list.
+- **Manual**: Share → Copy link → `import:instagram-reels`.

@@ -29,7 +29,7 @@ import {
 
 /** On-page intro only; meta + JSON-LD use `learnHubSeoDescription(parsed)`. */
 const LEARN_HUB_INTRO =
-  "If you are sorting through hormones, pregnancy, pelvic symptoms, fertility decisions, or returning to movement after injury or birth, our free Shorts and Reels offer grounded, clinician-led explanations. Dr. Charmi Shah (OB-GYN and IVF) and Dr. Zalak Shah (women's health physio and STOTT Pilates) build each clip around real questions from patients. When you need a plan that fits your history and your life, message us on WhatsApp or email to book a consultation.";
+  "If you are sorting through hormones, pregnancy, pelvic symptoms, fertility decisions, or returning to movement after injury or birth, our free Shorts, Reels, carousels, and posts offer grounded, clinician-led explanations. Dr. Charmi Shah (OB-GYN and IVF) and Dr. Zalak Shah (women's health physio and STOTT Pilates) build each piece around real questions from patients. When you need a plan that fits your history and your life, message us on WhatsApp or email to book a consultation.";
 
 function normalizePath(p: string) {
   return p.replace(/\/+$/, "") || "/";
@@ -96,7 +96,7 @@ export function LearnPage() {
         <p className="text-lg text-muted-foreground leading-relaxed mb-6">{LEARN_HUB_INTRO}</p>
         {canonicalPath === ROUTES.learn ? (
           <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-3xl">
-            For written answers you can follow link by link (not only video), see{" "}
+            For written answers you can follow link by link (not only reels and posts), see{" "}
             <Link
               to={ROUTES.learnArticles}
               className="text-primary font-medium underline underline-offset-4"
@@ -109,7 +109,7 @@ export function LearnPage() {
         {canonicalPath !== ROUTES.learn ? (
           <p className="text-sm text-muted-foreground mt-3 mb-10">
             <Link to={ROUTES.learn} className="text-primary underline underline-offset-4">
-              View all clips
+              View content hub
             </Link>{" "}
             to clear filters.
           </p>
@@ -130,8 +130,8 @@ export function LearnPage() {
               YouTube Shorts
             </h2>
             <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-              Short clips on women&apos;s health, in the same clinical areas as this page, on our
-              Shorts tab only.
+              Short-form videos on women&apos;s health, in the same clinical areas as this page, on
+              our Shorts tab only.
             </p>
             <Button asChild>
               <a href={`${CONTACT.youtube}/shorts`} target="_blank" rel="noopener noreferrer">

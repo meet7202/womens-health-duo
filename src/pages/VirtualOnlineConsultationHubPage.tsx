@@ -27,6 +27,8 @@ import { Button } from "@/components/ui/button";
 import { PRACTICE_BOTH_DOCTORS_IN_PERSON } from "@/config/practiceLocations";
 import { virtualHubFaqs } from "@/data/contextualFaqs";
 import { virtualHubDocumentTitle, virtualHubH1 } from "@/lib/pageSeoCopy";
+import { TelemedicineComplianceBlock } from "@/components/compliance/TelemedicineComplianceBlock";
+import { TelemedicineLimitations } from "@/components/compliance/TelemedicineLimitations";
 
 const TITLE = virtualHubDocumentTitle();
 const H1 = virtualHubH1();
@@ -75,6 +77,9 @@ export function VirtualOnlineConsultationHubPage() {
         </h1>
 
         <p className="text-lg text-muted-foreground leading-relaxed mb-6">{DESCRIPTION}</p>
+
+        <TelemedicineComplianceBlock className="mb-10" showLimitations={false} />
+
         <p className="text-muted-foreground leading-relaxed mb-6">
           Start from your city or region below. Each city page explains what we offer by video and
           links to specific topics, pregnancy and OB-GYN, gynecology and fertility, physio, STOTT
@@ -105,6 +110,8 @@ export function VirtualOnlineConsultationHubPage() {
             <Link to={ROUTES.faq}>FAQ</Link>
           </Button>
         </div>
+
+        <TelemedicineLimitations className="mb-10" />
 
         <h2 className="font-heading text-xl font-semibold text-foreground mb-2">
           Priority metros , virtual consultation from India

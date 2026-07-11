@@ -38,7 +38,7 @@ export function FaqPage() {
     <PageShell breadcrumbs={crumbs}>
       <SeoHead title={TITLE} metaDescription={DESCRIPTION} path={path} />
       <JsonLdGraph graph={graph} />
-      <JsonLdFaq items={SITE_FAQ} pageUrl={pageUrl} />
+      <JsonLdFaq items={SITE_FAQ.slice(0, 10)} pageUrl={pageUrl} />
 
       <article className="max-w-3xl">
         <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground mb-4">
@@ -49,8 +49,15 @@ export function FaqPage() {
           For emergencies, telehealth limits, and how we publish captions on the Learn hub, read the{" "}
           <Link to={ROUTES.medicalDisclaimer} className="text-primary underline underline-offset-4">
             Medical disclaimer
-          </Link>{" "}
-          and{" "}
+          </Link>
+          ,{" "}
+          <Link
+            to={ROUTES.telemedicinePolicy}
+            className="text-primary underline underline-offset-4"
+          >
+            Telemedicine policy
+          </Link>
+          , and{" "}
           <Link to={ROUTES.editorialPolicy} className="text-primary underline underline-offset-4">
             Editorial policy
           </Link>

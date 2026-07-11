@@ -19,12 +19,25 @@ import {
   PRACTICE_ZALAK_LOCATIONS_LINE,
 } from "@/config/practiceLocations";
 import { BRAND_ENTITY_LINE } from "@/config/brandLine";
-import drCharmi from "@/assets/dr-charmi.jpeg";
-import drZalak from "@/assets/dr-zalak.jpg";
+import { doctorRegistrationLine } from "@/config/doctorRegistration";
+import { EmergencyDisclaimer } from "@/components/compliance/EmergencyDisclaimer";
+import { TelemedicineTrustBadges } from "@/components/compliance/TelemedicineTrustBadges";
+import { BookingMedicalDisclaimer } from "@/components/compliance/BookingMedicalDisclaimer";
+import { DOCTOR_PHOTOS } from "@/config/doctorPhotos";
 
 const IMAGES: Record<DoctorSlug, { src: string; width: number; height: number; alt: string }> = {
-  charmi: { src: drCharmi, width: 849, height: 1024, alt: "Dr. Charmi Shah ,  portrait" },
-  zalak: { src: drZalak, width: 479, height: 563, alt: "Dr. Zalak Shah ,  portrait" },
+  charmi: {
+    src: DOCTOR_PHOTOS.charmi.displaySrc,
+    width: DOCTOR_PHOTOS.charmi.width,
+    height: DOCTOR_PHOTOS.charmi.height,
+    alt: DOCTOR_PHOTOS.charmi.alt,
+  },
+  zalak: {
+    src: DOCTOR_PHOTOS.zalak.displaySrc,
+    width: DOCTOR_PHOTOS.zalak.width,
+    height: DOCTOR_PHOTOS.zalak.height,
+    alt: DOCTOR_PHOTOS.zalak.alt,
+  },
 };
 
 const PHYSICIAN_IDS: Record<DoctorSlug, string> = {
@@ -80,7 +93,11 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
           {d.name}
         </h1>
         <p className="text-lg text-primary font-medium mb-1">{d.jobTitle}</p>
-        <p className="text-sm text-muted-foreground mb-8">{d.credentials}</p>
+        <p className="text-sm text-muted-foreground mb-1">{d.credentials}</p>
+        <p className="text-sm font-medium text-foreground mb-1">
+          {doctorRegistrationLine(slug)} · {d.registration.yearsExperience} clinical experience
+        </p>
+        <TelemedicineTrustBadges className="mb-4" />
         <p className="text-sm text-foreground/90 border-l-2 border-primary/35 pl-3 mb-8 max-w-2xl">
           {BRAND_ENTITY_LINE}
         </p>
@@ -121,6 +138,13 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
           <strong className="text-foreground">Online is the default for global patients:</strong>{" "}
           book the same clinicians by WhatsApp or email from any country.{" "}
           {slug === "charmi" ? PRACTICE_CHARMI_LOCATIONS_LINE : PRACTICE_ZALAK_LOCATIONS_LINE} See{" "}
+          <Link
+            to={ROUTES.internationalConsultation}
+            className="text-primary underline underline-offset-4"
+          >
+            international consultation services
+          </Link>
+          ,{" "}
           <Link
             to={ROUTES.onlineConsultation}
             className="text-primary underline underline-offset-4"
@@ -202,17 +226,27 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
           className="clear-both rounded-2xl border border-border/50 bg-card p-6 sm:p-8 shadow-card mb-12"
           aria-labelledby="doctor-profile-cta-heading"
         >
+          <EmergencyDisclaimer className="mb-6" />
           <h2
             id="doctor-profile-cta-heading"
             className="font-heading text-xl font-semibold text-foreground mb-2"
           >
             Consult us
           </h2>
-          <p className="text-sm text-muted-foreground mb-6 max-w-xl">
-            To book with {d.name}, WhatsApp is usually fastest. You can also use the contact form on
-            our homepage, we will reply with next steps and available slots.
+          <p className="text-sm text-muted-foreground mb-2 max-w-xl">
+            To book with {d.name}, use our structured{" "}
+            <Link
+              to={ROUTES.bookConsultation}
+              className="text-primary underline underline-offset-4"
+            >
+              Book consultation
+            </Link>{" "}
+            form (includes telemedicine consent) or WhatsApp for quick messages.
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+            <Button size="lg" variant="default" asChild className="min-h-[3rem]">
+              <Link to={ROUTES.bookConsultation}>Book consultation</Link>
+            </Button>
             <Button
               size="lg"
               asChild
@@ -229,10 +263,11 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
                 </span>
               </a>
             </Button>
-            <Button size="lg" variant="default" asChild className="min-h-[3rem]">
-              <Link to={ROUTES.homeContact}>BOOK NOW</Link>
+            <Button size="lg" variant="outline" asChild className="min-h-[3rem]">
+              <Link to={ROUTES.homeContact}>Contact</Link>
             </Button>
           </div>
+          <BookingMedicalDisclaimer className="mt-6" />
         </section>
 
         <DirectoryPresence />

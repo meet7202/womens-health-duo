@@ -8,6 +8,7 @@ import { HOME_HERO_LEDE } from "@/config/site";
 import { homePermalinkForScrollId } from "@/lib/homeSectionPaths";
 import { HOME_DEFAULT_H1 } from "@/lib/pageSeoCopy";
 import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsappCta";
+import { cn } from "@/lib/utils";
 import heroImage from "@/assets/hero-doctors.jpg";
 
 const heroH1VisualClass =
@@ -20,6 +21,36 @@ export type HeroSectionProps = {
    */
   seoH1?: string | null;
 };
+
+const heroDoctorCardClass = "rounded-2xl bg-background/95 p-4 shadow-card backdrop-blur-sm";
+
+type HeroDoctorCardProps = {
+  title: string;
+  subtitle: string;
+  className?: string;
+  initialX?: number;
+  delay?: number;
+};
+
+function HeroDoctorCard({
+  title,
+  subtitle,
+  className,
+  initialX = 0,
+  delay = 0.8,
+}: HeroDoctorCardProps) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: initialX }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ delay, duration: 0.5 }}
+      className={cn(heroDoctorCardClass, className)}
+    >
+      <p className="font-heading text-lg font-semibold text-foreground">{title}</p>
+      <p className="text-sm text-muted-foreground">{subtitle}</p>
+    </motion.div>
+  );
+}
 
 export const HeroSection = ({ seoH1 = null }: HeroSectionProps) => {
   const navigate = useNavigate();
@@ -155,23 +186,25 @@ export const HeroSection = ({ seoH1 = null }: HeroSectionProps) => {
                 decoding="async"
                 loading="eager"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-foreground/10 to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 text-white">
-                <p className="font-heading text-2xl font-semibold drop-shadow-lg">
+              {/* Mobile: bottom scrim only (legible names); desktop: full gradient unchanged */}
+              <div className="absolute inset-x-0 bottom-0 h-[36%] bg-gradient-to-t from-foreground/55 to-transparent md:hidden" />
+              <div className="absolute inset-0 hidden bg-gradient-to-t from-foreground/40 via-foreground/10 to-transparent md:block" />
+              <div className="absolute bottom-4 left-4 right-4 text-white sm:bottom-6 sm:left-6 sm:right-6 md:bottom-6 md:left-6 md:right-6">
+                <p className="font-heading text-lg font-semibold drop-shadow-lg sm:text-2xl">
                   Dr. Charmi &amp; Dr. Zalak Shah
                 </p>
-                <p className="text-white drop-shadow-md font-medium">
+                <p className="text-sm text-white drop-shadow-md font-medium sm:text-base">
                   Sisters in Care, Partners in Health
                 </p>
               </div>
             </div>
 
-            {/* Floating cards */}
+            {/* Desktop: match live site (womenshealthduo.com) */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.8, duration: 0.5 }}
-              className="absolute -right-4 top-1/4 bg-background/95 backdrop-blur-sm rounded-2xl p-4 shadow-card"
+              className="absolute -right-4 top-1/4 max-md:hidden bg-background/95 backdrop-blur-sm rounded-2xl p-4 shadow-card"
             >
               <p className="font-heading text-lg font-semibold text-foreground">
                 Obstetrician &amp; Gynecologist
@@ -185,7 +218,7 @@ export const HeroSection = ({ seoH1 = null }: HeroSectionProps) => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1, duration: 0.5 }}
-              className="absolute -left-4 bottom-1/4 bg-background/95 backdrop-blur-sm rounded-2xl p-4 shadow-card"
+              className="absolute -left-4 bottom-1/4 max-md:hidden bg-background/95 backdrop-blur-sm rounded-2xl p-4 shadow-card"
             >
               <p className="font-heading text-lg font-semibold text-foreground">
                 Women&apos;s Health Physiotherapy
@@ -194,6 +227,22 @@ export const HeroSection = ({ seoH1 = null }: HeroSectionProps) => {
                 STOTT Pilates &amp; pelvic / prenatal care
               </p>
             </motion.div>
+
+            {/* Mobile: below photo so badges never cover faces */}
+            <div className="mt-4 grid gap-3 sm:grid-cols-2 md:hidden">
+              <HeroDoctorCard
+                title="Obstetrician & Gynecologist"
+                subtitle="IVF Specialist & Laparoscopic Surgeon"
+                initialX={0}
+                delay={0.85}
+              />
+              <HeroDoctorCard
+                title="Women's Health Physiotherapy"
+                subtitle="STOTT Pilates & pelvic / prenatal care"
+                initialX={0}
+                delay={0.95}
+              />
+            </div>
           </motion.div>
         </div>
       </div>

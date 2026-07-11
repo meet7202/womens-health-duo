@@ -30,11 +30,25 @@
 - [Women's health — Valsad](https://womenshealthduo.com/valsad)
 - [Women's health — Bangalore](https://womenshealthduo.com/bangalore)
 - [Learn](https://womenshealthduo.com/learn)
+- [Learn — articles & topic guides index](https://womenshealthduo.com/learn/articles)
 - [Learn — Dr. Charmi clips](https://womenshealthduo.com/learn/dr-charmi)
 - [Learn — Dr. Zalak clips](https://womenshealthduo.com/learn/dr-zalak)
 - [Learn — topic: Fertility](https://womenshealthduo.com/learn/topic/fertility)
 - [Learn — Dr. Zalak · Pregnancy](https://womenshealthduo.com/learn/dr-zalak/topic/pregnancy)
+- [Example watch page — Instagram reel](https://womenshealthduo.com/learn/watch/ig-duasgqgemg0/)
+- [Example watch page — Instagram post / carousel](https://womenshealthduo.com/learn/watch/igp-dhltqaop6-k/)
 - [FAQ](https://womenshealthduo.com/faq)
+- [Book teleconsultation](https://womenshealthduo.com/book-consultation)
+- [**International consultation hub** (second opinion & specialist telehealth)](https://womenshealthduo.com/international-consultation)
+- [International OB-GYN & fertility — Dr. Charmi](https://womenshealthduo.com/international-consultation/dr-charmi)
+- [International physio & Pilates — Dr. Zalak](https://womenshealthduo.com/international-consultation/dr-zalak)
+- [Example: IVF second opinion online](https://womenshealthduo.com/international-consultation/ivf-second-opinion)
+- [Example: pelvic floor physio online](https://womenshealthduo.com/international-consultation/pelvic-floor-physiotherapy-online)
+- [Free women's health community (WhatsApp)](https://womenshealthduo.com/free-womens-health-community)
+- [Telemedicine policy](https://womenshealthduo.com/telemedicine-policy)
+- [Privacy policy](https://womenshealthduo.com/privacy-policy)
+- [Terms of service](https://womenshealthduo.com/terms-of-service)
+- [Refund policy](https://womenshealthduo.com/refund-policy)
 - [Medical disclaimer](https://womenshealthduo.com/medical-disclaimer)
 - [Editorial policy](https://womenshealthduo.com/editorial-policy)
 - [Email — womenshealthduo@gmail.com](mailto:womenshealthduo@gmail.com)
@@ -46,16 +60,16 @@
 
 - **Canonical site:** `https://womenshealthduo.com` (no trailing slash in env defaults).
 - **Robots:** [`/robots.txt`](https://womenshealthduo.com/robots.txt) — allows major search and common AI crawlers; references the sitemap URL.
-- **Sitemap:** [`/sitemap.xml`](https://womenshealthduo.com/sitemap.xml) — at **`npm run build`**, a **single `<urlset>`** (not a sitemap index) lists the **primary** crawl set (core pages, Learn, topic guides, virtual hub/country/city) with **`<lastmod>`**, **`<changefreq>`**, and **`<priority>`** (`sitemapPriorityForPath()` in `src/config/routes.ts`). **`robots.txt`** also lists [`/sitemap-virtual-service-cities.xml`](https://womenshealthduo.com/sitemap-virtual-service-cities.xml): **only** the long-tail **service × city** URLs, with lower priority—so those pages are still discoverable without bloating the primary file.
+- **Sitemap:** [`/sitemap.xml`](https://womenshealthduo.com/sitemap.xml) — at **`npm run build`**, a **single `<urlset>`** (not a sitemap index) lists the **primary** crawl set (core pages, Learn hub filters, **every Learn watch URL**, topic guides, virtual hub/country/city, international consultation, book teleconsultation, free community) with **`<lastmod>`**, **`<changefreq>`**, and **`<priority>`** (`sitemapPriorityForPath()` in `src/config/routes.ts`). Current primary urlset size is on the order of **950+ URLs** (includes **~195** `/learn/watch/…` clip pages). **`robots.txt`** also lists [`/sitemap-virtual-service-cities.xml`](https://womenshealthduo.com/sitemap-virtual-service-cities.xml): **only** the long-tail **service × city** URLs, with lower priority—so those pages are still discoverable without bloating the primary file.
 - **HTML head:** root [`index.html`](https://womenshealthduo.com/) receives build-time tokens for title, description, **meta keywords** (comma-separated topics for legacy crawlers), Open Graph, and a **`<link rel="sitemap">`** to the absolute sitemap URL.
 
-## URL patterns (Learn hub — video Shorts & Reels)
+## URL patterns (Learn hub — Shorts, Reels, posts & watch pages)
 
-- **All clips:** `/learn`
-- **By doctor:** `/learn/dr-charmi`, `/learn/dr-zalak`
-- **By topic:** `/learn/topic/<topicSlug>` (slug from topic label, e.g. `fertility`, `labor-and-delivery`, `pilates`)
-- **Doctor + topic:** `/learn/<doctorSegment>/topic/<topicSlug>` (e.g. `/learn/dr-zalak/topic/pregnancy`)
-- **Topical clusters (main `/learn` only):** `/learn#learn-pillars` — six Bing-oriented hubs (hormonal health, menstrual health, fertility & ovulation, pregnancy & labor, PCOS, STOTT Pilates) with links into topic filters and example virtual-care URLs.
+- **Hub (filtered carousel):** `/learn`, `/learn/dr-charmi`, `/learn/dr-zalak`, `/learn/topic/<topicSlug>`, `/learn/<doctorSegment>/topic/<topicSlug>` (topic slug from label, e.g. `fertility`, `labor-and-delivery`, `pilates`, `carousel`, `posts`).
+- **Per-clip watch pages (Google Video / one `VideoObject` each):** `/learn/watch/<videoId>/` where `<videoId>` is `ig-…` (Instagram reel), `igp-…` (Instagram post or carousel), or a YouTube id for Shorts. **All hub rows** (~190+ clips: reels, carousels/feed posts, and YouTube Shorts) are in the primary sitemap.
+- **Playback:** YouTube Shorts use the official embed. Instagram **reels** use a native `<video>` when a CDN `videoUrl` is available from import (licensed-music reels); otherwise the official `/reel/{id}/embed/` iframe. Instagram **posts/carousels** use the official `/p/{id}/embed/` iframe. Cover images for posters are stored on-site under **`/images/hub-thumbs/`** when import succeeds.
+- **Articles index:** `/learn/articles` — written topic guides (flat paths like `/pcos`, `/endometriosis`, …).
+- **Topical clusters (main `/learn` only):** `/learn#learn-pillars` — **six** Bing-oriented hubs (hormonal health, menstrual health, fertility & ovulation, pregnancy & labor, PCOS, STOTT Pilates) with links into topic filters and example virtual-care URLs.
 
 ## URL patterns (virtual SEO)
 
@@ -74,7 +88,7 @@ These repeat under every virtual city (see `src/data/seoOnlineServices.ts` in th
 - **OB-GYN / IVF (Dr. Charmi):** pregnancy & high-risk obstetrics, gynecology, IVF/IUI discussion, laparoscopy-related consults, PCOS/endometriosis, menopause, routine women's health — **telehealth from India** for NRIs and global families; **in person** in **Mumbai**, **Ahmedabad**, and **Valsad**.
 - **Physio / Pilates (Dr. Zalak):** pelvic floor, **prenatal and postnatal** care, **Mat Pilates online**, STOTT **Mat & Reformer**, MSK physio, core/functional training, wellness-style programs — **online-first** worldwide; **in person** in **Bangalore** and **Ahmedabad**.
 - **Languages often used on consults:** English, Hindi, Gujarati (request when you message).
-- **Booking:** WhatsApp and email on the site; not emergency services.
+- **Booking:** Structured teleconsultation at **`/book-consultation`** (patient details + mandatory telemedicine consent, then WhatsApp handoff). General questions: WhatsApp and email on the site; **not** emergency services. **Free education community** (public WhatsApp group, not clinical chat): **`/free-womens-health-community`**.
 
 ## Page anchors (homepage sections)
 
@@ -89,4 +103,4 @@ Permanent section URLs (same page as `/`; good for sharing) and hash alternative
 
 ## Note for site owners
 
-If the live domain differs, update `VITE_SITE_URL` in `.env`, `src/config/site.defaults.ts` (`SITE_DEFAULT_URL`), and this file so links stay accurate. Marketing URLs live in `src/config/routes.ts`, `src/lib/virtualConsultation.ts`, `src/data/seoOnlineServices.ts`, and `src/data/virtualConsultationCities.json`; **`dist/sitemap.xml`** (primary) and **`dist/sitemap-virtual-service-cities.xml`** (service×city only) are written at build time. Legacy `/global-online` URLs redirect to `/online-consultation`.
+If the live domain differs, update `VITE_SITE_URL` in `.env`, `src/config/site.defaults.ts` (`SITE_DEFAULT_URL`), and this file so links stay accurate. Marketing URLs live in `src/config/routes.ts`, `src/lib/virtualConsultation.ts`, `src/data/seoOnlineServices.ts`, and `src/data/virtualConsultationCities.json`; Learn clip data in `src/data/knowledgeHubInstagramReels.json`, `knowledgeHubInstagramPosts.json`, and `knowledgeHubVideos.ts`; hub cover images in `public/images/hub-thumbs/` (refresh via `npm run import:instagram` or `npm run retry:hub-thumbnails`). **`dist/sitemap.xml`** (primary) and **`dist/sitemap-virtual-service-cities.xml`** (service×city only) are written at build time. Legacy `/global-online` URLs redirect to `/online-consultation`.

@@ -12,6 +12,15 @@ import { LearnWatchPage } from "@/pages/LearnWatchPage";
 import { FaqPage } from "@/pages/FaqPage";
 import { MedicalDisclaimerPage } from "@/pages/MedicalDisclaimerPage";
 import { EditorialPolicyPage } from "@/pages/EditorialPolicyPage";
+import { TelemedicinePolicyPage } from "@/pages/TelemedicinePolicyPage";
+import { PrivacyPolicyPage } from "@/pages/PrivacyPolicyPage";
+import { TermsOfServicePage } from "@/pages/TermsOfServicePage";
+import { RefundPolicyPage } from "@/pages/RefundPolicyPage";
+import { BookConsultationPage } from "@/pages/BookConsultationPage";
+import { FreeWomensHealthCommunityPage } from "@/pages/FreeWomensHealthCommunityPage";
+import { InternationalConsultationHubPage } from "@/pages/InternationalConsultationHubPage";
+import { InternationalDoctorHubPage } from "@/pages/InternationalDoctorHubPage";
+import { InternationalServicePage } from "@/pages/InternationalServicePage";
 import { TopicGuidePage } from "@/pages/TopicGuidePage";
 import { LearnArticlesIndexPage } from "@/pages/LearnArticlesIndexPage";
 import { VirtualOnlineConsultationHubPage } from "@/pages/VirtualOnlineConsultationHubPage";
@@ -125,11 +134,39 @@ const App = () => (
         <Route path={publicRoutePath(`${ROUTES.learn}/:doctorSegment`)} element={<LearnPage />} />
         <Route path={publicRoutePath(ROUTES.learn)} element={<LearnPage />} />
         <Route path={publicRoutePath(ROUTES.faq)} element={<FaqPage />} />
+        <Route path={publicRoutePath(ROUTES.bookConsultation)} element={<BookConsultationPage />} />
+        <Route
+          path={publicRoutePath(ROUTES.freeWomensHealthCommunity)}
+          element={<FreeWomensHealthCommunityPage />}
+        />
+        <Route
+          path={publicRoutePath(`${ROUTES.internationalConsultation}/dr-charmi`)}
+          element={<InternationalDoctorHubPage />}
+        />
+        <Route
+          path={publicRoutePath(`${ROUTES.internationalConsultation}/dr-zalak`)}
+          element={<InternationalDoctorHubPage />}
+        />
+        <Route
+          path={publicRoutePath(`${ROUTES.internationalConsultation}/:serviceSlug`)}
+          element={<InternationalServicePage />}
+        />
+        <Route
+          path={publicRoutePath(ROUTES.internationalConsultation)}
+          element={<InternationalConsultationHubPage />}
+        />
         <Route
           path={publicRoutePath(ROUTES.medicalDisclaimer)}
           element={<MedicalDisclaimerPage />}
         />
         <Route path={publicRoutePath(ROUTES.editorialPolicy)} element={<EditorialPolicyPage />} />
+        <Route
+          path={publicRoutePath(ROUTES.telemedicinePolicy)}
+          element={<TelemedicinePolicyPage />}
+        />
+        <Route path={publicRoutePath(ROUTES.privacyPolicy)} element={<PrivacyPolicyPage />} />
+        <Route path={publicRoutePath(ROUTES.termsOfService)} element={<TermsOfServicePage />} />
+        <Route path={publicRoutePath(ROUTES.refundPolicy)} element={<RefundPolicyPage />} />
         <Route path={publicRoutePath("/:topicGuideSlug")} element={<TopicGuidePage />} />
         <Route
           path="*"

@@ -105,6 +105,17 @@ export function MedicalDisclaimerPage() {
 
           <p>
             See also our{" "}
+            <Link
+              to={ROUTES.telemedicinePolicy}
+              className="text-primary underline underline-offset-4"
+            >
+              Telemedicine policy
+            </Link>
+            ,{" "}
+            <Link to={ROUTES.privacyPolicy} className="text-primary underline underline-offset-4">
+              Privacy policy
+            </Link>
+            ,{" "}
             <Link to={ROUTES.editorialPolicy} className="text-primary underline underline-offset-4">
               Editorial policy
             </Link>

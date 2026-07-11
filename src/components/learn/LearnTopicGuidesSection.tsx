@@ -60,7 +60,7 @@ export function LearnTopicGuidesSection() {
         >
           Learn
         </Link>{" "}
-        and scroll down to the video list. The clips and the guides cover the same clinical themes.
+        and scroll down to the content hub. The posts and the guides cover the same clinical themes.
       </p>
     </section>
   );

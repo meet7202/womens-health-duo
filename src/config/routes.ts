@@ -6,6 +6,7 @@ import {
   LEARN_HUB_BASE_PATH,
 } from "../lib/learnHubUrls";
 import { topicGuideSitemapPaths } from "../data/topicGuides/topicGuideSitemapPaths";
+import { internationalConsultationSitemapPaths } from "../data/internationalServices/internationalConsultationSitemapPaths";
 import {
   VIRTUAL_CONSULTATION_HUB_PATH,
   VIRTUAL_CONSULTATION_COUNTRIES,
@@ -37,6 +38,15 @@ export const ROUTES = {
   faq: "/faq",
   medicalDisclaimer: "/medical-disclaimer",
   editorialPolicy: "/editorial-policy",
+  telemedicinePolicy: "/telemedicine-policy",
+  privacyPolicy: "/privacy-policy",
+  termsOfService: "/terms-of-service",
+  refundPolicy: "/refund-policy",
+  bookConsultation: "/book-consultation",
+  /** Free WhatsApp community — SEO landing for free women's health resources. */
+  freeWomensHealthCommunity: "/free-womens-health-community",
+  /** International second opinion & specialist telehealth service pages. */
+  internationalConsultation: "/international-consultation",
   /** Virtual hub + city overview pages + service×city SEO pages */
   onlineConsultation: VIRTUAL_CONSULTATION_HUB_PATH,
   /** @deprecated Use `onlineConsultation`; kept for redirects only */
@@ -79,6 +89,10 @@ export const SITEMAP_SEGMENT_VIRTUAL_CONSULTATION: readonly string[] = [
   ...SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES,
 ];
 
+/** International consultation hub, doctor sub-hubs, and service landings. */
+export const SITEMAP_SEGMENT_INTERNATIONAL_CONSULTATION: readonly string[] =
+  internationalConsultationSitemapPaths();
+
 /** Home, section permalinks, doctor profiles, India city landings, Learn articles index, FAQ, policies. */
 export const SITEMAP_SEGMENT_CORE: readonly string[] = [
   ROUTES.home,
@@ -93,6 +107,13 @@ export const SITEMAP_SEGMENT_CORE: readonly string[] = [
   ROUTES.faq,
   ROUTES.medicalDisclaimer,
   ROUTES.editorialPolicy,
+  ROUTES.telemedicinePolicy,
+  ROUTES.privacyPolicy,
+  ROUTES.termsOfService,
+  ROUTES.refundPolicy,
+  ROUTES.bookConsultation,
+  ROUTES.freeWomensHealthCommunity,
+  ...SITEMAP_SEGMENT_INTERNATIONAL_CONSULTATION,
 ];
 
 /** Learn hub + every indexable doctor/topic filter URL + per-clip watch pages. */
@@ -142,7 +163,24 @@ export function sitemapPriorityForPath(pathname: string): string {
   }
   if (p === ROUTES.learnArticles) return "0.91";
   if (p === ROUTES.faq) return "0.84";
-  if (p === ROUTES.medicalDisclaimer || p === ROUTES.editorialPolicy) return "0.35";
+  if (
+    p === ROUTES.medicalDisclaimer ||
+    p === ROUTES.editorialPolicy ||
+    p === ROUTES.telemedicinePolicy ||
+    p === ROUTES.privacyPolicy ||
+    p === ROUTES.termsOfService ||
+    p === ROUTES.refundPolicy
+  ) {
+    return "0.35";
+  }
+  if (p === ROUTES.bookConsultation) return "0.94";
+  if (p === ROUTES.freeWomensHealthCommunity) return "0.93";
+  if (p === ROUTES.internationalConsultation) return "0.95";
+  if (p.startsWith(`${ROUTES.internationalConsultation}/`)) {
+    const rest = p.slice(ROUTES.internationalConsultation.length + 1);
+    if (rest === "dr-charmi" || rest === "dr-zalak") return "0.94";
+    return "0.92";
+  }
 
   if (segs[0] === "learn") {
     if (segs.length === 1) return "0.92";

@@ -8,6 +8,11 @@ import {
   virtualServiceCityPath,
 } from "@/lib/virtualConsultation";
 import { isHomeSectionPermalink } from "@/lib/homeSectionPaths";
+import {
+  getInternationalDoctorHub,
+  getInternationalService,
+  INTERNATIONAL_CONSULTATION_BASE,
+} from "@/data/internationalServices/internationalServiceRegistry";
 
 const MAX_PREFILL_LEN = 1800;
 
@@ -118,6 +123,43 @@ My city & country:
 My time zone:${siteRef(path)}`;
 }
 
+export function whatsappMessageInternationalHub(): string {
+  return `Hi Women's Health Duo,
+
+I'm interested in an international consultation / second opinion (I'm outside India or an NRI).
+
+My city & country:
+My time zone:
+Doctor preference (Dr. Charmi / Dr. Zalak / not sure):
+Main concern:${siteRef(INTERNATIONAL_CONSULTATION_BASE)}`;
+}
+
+export function whatsappMessageInternationalDoctorHub(
+  doctorName: string,
+  pagePath: string,
+): string {
+  return `Hi Women's Health Duo,
+
+I'd like an international consultation with ${doctorName}. I found your international services page.
+
+My city & country:
+My time zone:
+Service or concern:${siteRef(pagePath)}`;
+}
+
+export function whatsappMessageInternationalService(
+  serviceTitle: string,
+  pagePath: string,
+): string {
+  return `Hi Women's Health Duo,
+
+I'd like to book / discuss internationally: ${serviceTitle}
+
+My city & country:
+My time zone:
+Reports I can share (if any):${siteRef(pagePath)}`;
+}
+
 /**
  * Default chat text for the sticky FAB from the current client route (no React context required).
  */
@@ -170,6 +212,23 @@ export function whatsappIntentFromPathname(pathname: string): string {
 
   if (norm === ROUTES.onlineConsultation) {
     return whatsappMessageVirtualHub();
+  }
+
+  if (norm === ROUTES.internationalConsultation) {
+    return whatsappMessageInternationalHub();
+  }
+
+  if (norm.startsWith(`${INTERNATIONAL_CONSULTATION_BASE}/`)) {
+    const segment = norm.slice(INTERNATIONAL_CONSULTATION_BASE.length + 1);
+    const doctorHub = getInternationalDoctorHub(segment);
+    if (doctorHub) {
+      const name = doctorHub.doctor === "charmi" ? "Dr. Charmi Shah" : "Dr. Zalak Shah (PT)";
+      return whatsappMessageInternationalDoctorHub(name, norm);
+    }
+    const service = getInternationalService(segment);
+    if (service) {
+      return whatsappMessageInternationalService(service.title, norm);
+    }
   }
 
   const hub = ROUTES.onlineConsultation;
