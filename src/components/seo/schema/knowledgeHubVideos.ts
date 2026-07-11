@@ -1,17 +1,13 @@
 import { SITE_URL } from "@/config/site";
 import {
+  knowledgeHubInstagramEmbedUrl,
+  knowledgeHubInstagramPermalink,
   knowledgeHubVideoCaptionForSeo,
   knowledgeHubVideoDisplayTitle,
-  knowledgeHubInstagramEmbedUrl,
-  knowledgeHubInstagramPoster,
-  knowledgeHubInstagramPermalink,
   type KnowledgeHubVideo,
 } from "@/data/knowledgeHubVideos";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
-
-function youtubeThumb(id: string) {
-  return `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
-}
+import { knowledgeHubVideoThumbnailAbsolute, youtubeThumbnailUrl } from "@/lib/mediaSeo";
 
 /** `VideoObject` for a single Learn watch page (Google video indexing). */
 export function knowledgeHubWatchPageVideoSchema(video: KnowledgeHubVideo, watchPagePath: string) {
@@ -32,10 +28,11 @@ export function knowledgeHubWatchPageVideoSchema(video: KnowledgeHubVideo, watch
       "@id": `${pageUrl}#video`,
       name,
       description,
-      thumbnailUrl: youtubeThumb(video.youtubeVideoId),
+      thumbnailUrl: youtubeThumbnailUrl(video.youtubeVideoId),
       embedUrl,
       url: watchUrl,
       contentUrl: pageUrl,
+      caption: description.slice(0, 500),
       ...(video.postedAt ? { uploadDate: video.postedAt } : {}),
       mainEntityOfPage: { "@type": "WebPage", "@id": pageWebPageId },
       publisher: { "@id": orgFragment },
@@ -59,10 +56,7 @@ export function knowledgeHubWatchPageVideoSchema(video: KnowledgeHubVideo, watch
   const permalink = knowledgeHubInstagramPermalink(video);
   const embedUrl = knowledgeHubInstagramEmbedUrl(video);
   const nativeVideo = video.instagramVideoUrl?.trim();
-  const poster = knowledgeHubInstagramPoster(video);
-  const thumbnailUrl = poster?.startsWith("/")
-    ? githubPagesAbsoluteUrl(SITE_URL, poster)
-    : poster || githubPagesAbsoluteUrl(SITE_URL, "/favicon.svg");
+  const thumbnailUrl = knowledgeHubVideoThumbnailAbsolute(SITE_URL, video);
   return {
     "@type": "VideoObject",
     "@id": `${pageUrl}#video`,
@@ -72,6 +66,7 @@ export function knowledgeHubWatchPageVideoSchema(video: KnowledgeHubVideo, watch
     embedUrl,
     url: permalink,
     contentUrl: nativeVideo || pageUrl,
+    caption: description.slice(0, 500),
     ...(video.postedAt ? { uploadDate: video.postedAt } : {}),
     mainEntityOfPage: { "@type": "WebPage", "@id": pageWebPageId },
     publisher: { "@id": orgFragment },

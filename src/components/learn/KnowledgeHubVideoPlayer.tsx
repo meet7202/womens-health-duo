@@ -8,6 +8,7 @@ import {
   knowledgeHubVideoOriginalPlatformCaption,
   type KnowledgeHubVideo,
 } from "@/data/knowledgeHubVideos";
+import { knowledgeHubPosterAlt } from "@/lib/mediaSeo";
 
 type KnowledgeHubVideoPlayerProps = {
   video: KnowledgeHubVideo;
@@ -25,11 +26,13 @@ function youtubeThumbnail(videoId: string) {
 function HubPoster({
   src,
   alt,
+  title,
   frameClass,
   onActivate,
 }: {
   src: string;
   alt: string;
+  title?: string;
   frameClass: string;
   onActivate?: () => void;
 }) {
@@ -52,6 +55,7 @@ function HubPoster({
     <img
       src={src}
       alt={alt}
+      title={title ?? alt}
       className="absolute inset-0 h-full w-full object-contain bg-muted/30"
       loading="lazy"
       decoding="async"
@@ -267,6 +271,7 @@ export function KnowledgeHubVideoPlayer({
         : "aspect-[9/16] w-full max-h-[min(70vh,520px)] min-h-[280px]";
 
   const minFrameClass = cn(frameClass, variant === "carousel" && "min-h-[320px]");
+  const posterSeoAlt = knowledgeHubPosterAlt(video);
 
   return (
     <div className={cn("flex flex-col", className)}>
@@ -277,7 +282,8 @@ export function KnowledgeHubVideoPlayer({
               {!youtubeReady ? (
                 <HubPoster
                   src={youtubeThumbnail(video.youtubeVideoId)}
-                  alt={video.title}
+                  alt={posterSeoAlt}
+                  title={posterSeoAlt}
                   frameClass="absolute inset-0 h-full w-full"
                 />
               ) : null}
@@ -298,14 +304,14 @@ export function KnowledgeHubVideoPlayer({
             </div>
           ) : instagramNativeVideo ? (
             <NativeInstagramReelPlayer
-              title={video.title}
+              title={posterSeoAlt}
               src={instagramNativeVideo.src}
               poster={instagramNativeVideo.poster}
               frameClass={minFrameClass}
             />
           ) : (
             <DeferredEmbed
-              title={video.title}
+              title={posterSeoAlt}
               embedSrc={embedSrc}
               poster={instagramPoster}
               frameClass={minFrameClass}
@@ -333,7 +339,8 @@ export function KnowledgeHubVideoPlayer({
                     ? youtubeThumbnail(video.youtubeVideoId)
                     : (instagramPoster as string)
                 }
-                alt={video.title}
+                alt={posterSeoAlt}
+                title={posterSeoAlt}
                 frameClass="absolute inset-0 h-full w-full"
               />
             ) : null}

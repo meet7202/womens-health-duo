@@ -44,14 +44,22 @@ export function virtualCityH1(city: string, country: string): string {
   return `Women's Health Duo – online care for patients in ${city}, ${country}`;
 }
 
+/** Append " online" for SERP titles unless the label already mentions online. */
+function seoLabelWithOnlineSuffix(label: string): string {
+  const trimmed = label.trim();
+  if (/\bonline\b/i.test(trimmed)) return trimmed;
+  return `${trimmed} online`;
+}
+
 export function virtualServiceCityDocumentTitle(
   serviceShort: string,
   city: string,
   country: string,
 ): string {
-  const withCountry = formatDocumentTitle(`${serviceShort} online, ${city}, ${country}`);
+  const service = seoLabelWithOnlineSuffix(serviceShort);
+  const withCountry = formatDocumentTitle(`${service}, ${city}, ${country}`);
   if (withCountry.length <= DOCUMENT_TITLE_MAX_LEN) return withCountry;
-  return formatDocumentTitle(`${serviceShort} online, ${city}`);
+  return formatDocumentTitle(`${service}, ${city}`);
 }
 
 export function virtualServiceCityH1(serviceTitle: string, city: string, country: string): string {
@@ -165,7 +173,7 @@ export function internationalDoctorHubDocumentTitle(primary: string): string {
 }
 
 export function internationalServiceDocumentTitle(shortTitle: string): string {
-  return formatDocumentTitle(`${shortTitle} online`);
+  return formatDocumentTitle(seoLabelWithOnlineSuffix(shortTitle));
 }
 
 export const LEARN_ARTICLES_DOCUMENT_TITLE = formatDocumentTitle("Articles & common questions");

@@ -6,7 +6,6 @@ import { CONTACT } from "@/config/site";
 import { AppLink as Link } from "@/components/router/AppLink";
 import {
   KNOWLEDGE_HUB_VIDEOS,
-  knowledgeHubInstagramPermalink,
   knowledgeHubVideoDisplayTitle,
   type KnowledgeHubVideo,
 } from "@/data/knowledgeHubVideos";
@@ -41,13 +40,6 @@ function topicLabelsForVideos(videos: readonly KnowledgeHubVideo[]): string[] {
 }
 
 function VideoSlide({ video }: { video: KnowledgeHubVideo }) {
-  const openLabel = video.kind === "youtube_short" ? "Open on YouTube" : "Open on Instagram";
-  const openHref =
-    video.kind === "youtube_short"
-      ? video.youtubeOpenAs === "watch"
-        ? `https://www.youtube.com/watch?v=${video.youtubeVideoId}`
-        : `https://www.youtube.com/shorts/${video.youtubeVideoId}`
-      : knowledgeHubInstagramPermalink(video);
   const watchPath = learnVideoWatchPath(video.id);
   const displayTitle = knowledgeHubVideoDisplayTitle(video);
 
@@ -90,11 +82,6 @@ function VideoSlide({ video }: { video: KnowledgeHubVideo }) {
         <div className="flex items-center gap-1">
           <Button variant="ghost" size="sm" className="shrink-0 text-primary" asChild>
             <Link to={watchPath}>Watch page</Link>
-          </Button>
-          <Button variant="ghost" size="sm" className="shrink-0 text-primary" asChild>
-            <a href={openHref} target="_blank" rel="noopener noreferrer">
-              {openLabel}
-            </a>
           </Button>
         </div>
       </div>

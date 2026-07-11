@@ -164,7 +164,7 @@ export function resolveShellPageMeta(siteUrl: string, pathname: string): ShellPa
     return {
       canonicalHref: canonicalHrefForPath(siteUrl, sectionSeo.canonicalPath),
       title: sectionSeo.title,
-      h1: sectionSeo.title,
+      h1: sectionSeo.h1,
       metaDescription: sectionSeo.metaDescription,
     };
   }
@@ -448,8 +448,8 @@ const STATIC_SEO_SHELL_STYLES =
   "position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0";
 
 /**
- * Crawlable HTML for this route: visible H1 outside `<noscript>` (removed when React mounts)
- * plus a fuller `<noscript>` fallback for users without JavaScript.
+ * Crawlable HTML for this route: one visible H1 in `#static-seo-shell` (removed when React mounts)
+ * plus a `<noscript>` fallback without duplicate heading tags.
  */
 export function buildStaticShellBodyFallback(meta: ShellPageMeta, siteUrl: string): string {
   const h1 = escapeHtmlPcdata(meta.h1);
@@ -475,7 +475,7 @@ export function buildStaticShellBodyFallback(meta: ShellPageMeta, siteUrl: strin
 
   const noscriptMain = `<noscript>
   <main style="max-width:40rem;margin:1.5rem auto;padding:0 1rem;font-family:system-ui,sans-serif;line-height:1.5;color:#111">
-    <h1 style="font-size:1.35rem;font-weight:600">${h1}</h1>
+    <p style="font-size:1.35rem;font-weight:600;margin:0 0 0.75rem">${h1}</p>
     <p>${lead}</p>
     <p>${links}</p>
     <p style="font-size:0.9rem;color:#444">Additional pages load in the browser when JavaScript is enabled.</p>

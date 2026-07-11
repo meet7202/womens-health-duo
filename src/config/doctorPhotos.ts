@@ -1,4 +1,5 @@
 import type { DoctorSlug } from "../data/doctorProfiles";
+import { doctorPhotoAlt, doctorPhotoTitle } from "../lib/mediaSeo";
 import drCharmi from "../assets/dr-charmi.jpeg";
 import drZalakDisplay from "../assets/dr-zalak.jpeg";
 
@@ -14,6 +15,8 @@ export type DoctorPhotoMeta = {
   width: number;
   height: number;
   alt: string;
+  /** Short label for `title` attribute (Google Images context). */
+  title: string;
   /** Optional stable site path for schema when displaySrc differs (pathname only). */
   seoImagePath?: string;
 };
@@ -23,13 +26,15 @@ export const DOCTOR_PHOTOS: Record<DoctorSlug, DoctorPhotoMeta> = {
     displaySrc: drCharmi,
     width: 849,
     height: 1024,
-    alt: "Dr. Charmi Shah ,  portrait",
+    alt: doctorPhotoAlt("charmi"),
+    title: doctorPhotoTitle("charmi"),
   },
   zalak: {
     displaySrc: drZalakDisplay,
     width: 1182,
     height: 1331,
-    alt: "Dr. Zalak Shah ,  portrait",
+    alt: doctorPhotoAlt("zalak"),
+    title: doctorPhotoTitle("zalak"),
     seoImagePath: DR_ZALAK_SEO_IMAGE_PATH,
   },
 };

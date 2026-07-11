@@ -30,7 +30,8 @@ export function DoctorIdentityCard({ slug, compact, className }: DoctorIdentityC
     >
       <img
         src={PHOTOS[slug]}
-        alt={`${d.name} — professional photograph`}
+        alt={DOCTOR_PHOTOS[slug].alt}
+        title={DOCTOR_PHOTOS[slug].title}
         width={compact ? 72 : 120}
         height={compact ? 90 : 150}
         className={cn(
@@ -41,7 +42,7 @@ export function DoctorIdentityCard({ slug, compact, className }: DoctorIdentityC
         decoding="async"
       />
       <div className="min-w-0 flex-1">
-        <h3 className="font-heading text-lg font-semibold text-foreground">{d.name}</h3>
+        <p className="font-heading text-lg font-semibold text-foreground">{d.name}</p>
         <p className="text-sm text-primary font-medium mt-0.5">{d.jobTitle}</p>
         <p className="text-sm text-muted-foreground mt-1">{d.credentials}</p>
         <p className="text-sm font-medium text-foreground mt-2">

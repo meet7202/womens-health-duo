@@ -50,6 +50,8 @@ export function homePermalinkForScrollId(scrollId: string): string | null {
 export function homeSectionSeo(pathname: string): {
   canonicalPath: string;
   title: string;
+  /** On-page H1 — slug-aligned label, not the branded document title. */
+  h1: string;
   metaDescription: string;
 } | null {
   const norm = normalizePathname(pathname);
@@ -58,6 +60,7 @@ export function homeSectionSeo(pathname: string): {
   return {
     canonicalPath: publicPathname(norm),
     title: homeSectionDocumentTitle(label),
+    h1: label,
     metaDescription: DEFAULT_DESCRIPTION,
   };
 }

@@ -4,7 +4,7 @@ import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { PageShell } from "@/components/layout/PageShell";
 import { ROUTES } from "@/config/routes";
-import { CONTACT } from "@/config/site";
+import { CONTACT, SITE_URL } from "@/config/site";
 import { KnowledgeHubVideoPlayer } from "@/components/learn/KnowledgeHubVideoPlayer";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { knowledgeHubWatchPageVideoSchema } from "@/components/seo/schema/knowledgeHubVideos";
@@ -21,6 +21,8 @@ import {
   learnWatchH1,
   learnWatchMetaDescription,
 } from "@/lib/pageSeoCopy";
+import { knowledgeHubPosterImageObject } from "@/components/seo/schema/mediaImages";
+import { knowledgeHubPosterAlt, knowledgeHubVideoThumbnailAbsolute } from "@/lib/mediaSeo";
 import { Button } from "@/components/ui/button";
 import { Instagram, Youtube } from "lucide-react";
 import NotFound from "@/pages/NotFound";
@@ -68,6 +70,7 @@ export function LearnWatchPage() {
         description,
       }),
       knowledgeHubWatchPageVideoSchema(video, watchPath),
+      knowledgeHubPosterImageObject(video, watchPath),
     ];
   }, [video, crumbs, watchPath, title, description]);
 
@@ -77,10 +80,19 @@ export function LearnWatchPage() {
 
   const platformLabel = video.kind === "youtube_short" ? "YouTube" : "Instagram";
   const PlatformIcon = video.kind === "youtube_short" ? Youtube : Instagram;
+  const posterAlt = knowledgeHubPosterAlt(video);
+  const ogType = video.kind === "instagram_post" ? "website" : "video.other";
 
   return (
     <PageShell breadcrumbs={crumbs}>
-      <SeoHead title={title} metaDescription={description} path={watchPath} />
+      <SeoHead
+        title={title}
+        metaDescription={description}
+        path={watchPath}
+        ogImage={knowledgeHubVideoThumbnailAbsolute(SITE_URL, video)}
+        ogImageAlt={posterAlt}
+        ogType={ogType}
+      />
       <JsonLdGraph graph={graph} />
 
       <article className="max-w-2xl mx-auto">

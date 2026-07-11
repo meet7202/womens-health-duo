@@ -14,6 +14,7 @@ import {
 import {
   SITEMAP_PATHS,
   SITEMAP_PATHS_PRIMARY_URLSET,
+  SITEMAP_SEGMENT_INTERNATIONAL_CONSULTATION,
   SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES,
   sitemapPriorityForPath,
   sitemapPriorityVirtualServiceCityLongtail,
@@ -26,6 +27,7 @@ import {
 } from "./src/build/staticShellHead.ts";
 import { githubPagesAbsoluteUrl } from "./src/lib/githubPagesPublicUrl.ts";
 import { ensureHttpsSiteOrigin } from "./src/lib/ensureHttpsSiteOrigin.ts";
+import { buildVideoSitemapXml, videoSitemapEntryCount } from "./src/build/videoSitemap.ts";
 
 /** Every indexable pathname (primary + supplemental sitemaps); used for static SPA shells. */
 function allSitemapPathnames(): string[] {
@@ -216,6 +218,7 @@ Allow: /
 
 Sitemap: ${siteUrl}/sitemap.xml
 Sitemap: ${siteUrl}/sitemap-virtual-service-cities.xml
+Sitemap: ${siteUrl}/sitemap-videos.xml
 `;
 
   fs.mkdirSync(outDir, { recursive: true });
@@ -247,6 +250,30 @@ Sitemap: ${siteUrl}/sitemap-virtual-service-cities.xml
         priority: () => sitemapPriorityVirtualServiceCityLongtail(),
         changefreq: () => "monthly",
       },
+    ),
+    "utf8",
+  );
+
+  fs.writeFileSync(
+    path.join(outDir, "sitemap-videos.xml"),
+    buildVideoSitemapXml(siteUrl, lastmod),
+    "utf8",
+  );
+
+  fs.writeFileSync(
+    path.join(outDir, ".sitemap-build-meta.json"),
+    JSON.stringify(
+      {
+        lastmod,
+        siteUrl,
+        primaryUrlCount: SITEMAP_PATHS_PRIMARY_URLSET.length,
+        virtualServiceCityUrlCount: SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES.length,
+        videoUrlCount: videoSitemapEntryCount(),
+        internationalConsultationUrlCount: SITEMAP_SEGMENT_INTERNATIONAL_CONSULTATION.length,
+        staticShellCount: staticSpaShellPathnames().length,
+      },
+      null,
+      2,
     ),
     "utf8",
   );

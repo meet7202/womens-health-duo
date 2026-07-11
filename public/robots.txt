@@ -31,3 +31,4 @@ Allow: /
 
 Sitemap: https://womenshealthduo.com/sitemap.xml
 Sitemap: https://womenshealthduo.com/sitemap-virtual-service-cities.xml
+Sitemap: https://womenshealthduo.com/sitemap-videos.xml

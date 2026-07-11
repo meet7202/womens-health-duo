@@ -25,18 +25,23 @@ import { BookingMedicalDisclaimer } from "@/components/compliance/BookingMedical
 import { DOCTOR_PHOTOS } from "@/config/doctorPhotos";
 import { AppLink as Link } from "@/components/router/AppLink";
 
-const IMAGES: Record<DoctorSlug, { src: string; width: number; height: number; alt: string }> = {
+const IMAGES: Record<
+  DoctorSlug,
+  { src: string; width: number; height: number; alt: string; title: string }
+> = {
   charmi: {
     src: DOCTOR_PHOTOS.charmi.displaySrc,
     width: DOCTOR_PHOTOS.charmi.width,
     height: DOCTOR_PHOTOS.charmi.height,
     alt: DOCTOR_PHOTOS.charmi.alt,
+    title: DOCTOR_PHOTOS.charmi.title,
   },
   zalak: {
     src: DOCTOR_PHOTOS.zalak.displaySrc,
     width: DOCTOR_PHOTOS.zalak.width,
     height: DOCTOR_PHOTOS.zalak.height,
     alt: DOCTOR_PHOTOS.zalak.alt,
+    title: DOCTOR_PHOTOS.zalak.title,
   },
 };
 
@@ -106,6 +111,7 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
           <img
             src={img.src}
             alt={img.alt}
+            title={img.title}
             width={img.width}
             height={img.height}
             className="rounded-2xl object-cover object-top shadow-card w-full aspect-[4/5]"
