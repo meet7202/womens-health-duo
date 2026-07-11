@@ -197,26 +197,17 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-# AI / research crawlers (allow listing for discoverability; adjust if you prefer to opt out)
-User-agent: GPTBot
-Allow: /
-
+# Agent fetch / search crawlers (aligns with Cloudflare managed block: training bots Disallow there)
 User-agent: ChatGPT-User
 Allow: /
 
 User-agent: OAI-SearchBot
 Allow: /
 
-User-agent: ClaudeBot
-Allow: /
-
 User-agent: anthropic-ai
 Allow: /
 
 User-agent: PerplexityBot
-Allow: /
-
-User-agent: CCBot
 Allow: /
 
 Sitemap: ${siteUrl}/sitemap.xml
