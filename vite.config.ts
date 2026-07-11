@@ -28,6 +28,7 @@ import {
 import { githubPagesAbsoluteUrl } from "./src/lib/githubPagesPublicUrl.ts";
 import { ensureHttpsSiteOrigin } from "./src/lib/ensureHttpsSiteOrigin.ts";
 import { buildVideoSitemapXml, videoSitemapEntryCount } from "./src/build/videoSitemap.ts";
+import { writeAgentDiscoveryFiles } from "./src/build/agentDiscovery.ts";
 
 /** Every indexable pathname (primary + supplemental sitemaps); used for static SPA shells. */
 function allSitemapPathnames(): string[] {
@@ -69,6 +70,8 @@ function htmlSeoReplacements(siteUrl: string) {
     OG_IMAGE_PATH,
     SITEMAP_URL: `${siteUrl}/sitemap.xml`,
     LLMS_TXT_URL: `${siteUrl}/llms.txt`,
+    AGENT_SKILLS_INDEX_URL: `${siteUrl}/.well-known/agent-skills/index.json`,
+    CONTENT_CATALOG_URL: `${siteUrl}/.well-known/content-catalog.json`,
   };
 }
 
@@ -277,6 +280,8 @@ Sitemap: ${siteUrl}/sitemap-videos.xml
     ),
     "utf8",
   );
+
+  writeAgentDiscoveryFiles(siteUrl, rootDir, outDir);
 }
 
 // https://vitejs.dev/config/
