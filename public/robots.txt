@@ -1,4 +1,5 @@
 # Default for local dev; production `npm run build` overwrites robots.txt in dist with the same rules + your VITE_SITE_URL sitemap.
+# Live site: Cloudflare prepends managed Content-Signal + training-bot Disallow before this block.
 User-agent: *
 Allow: /
 
@@ -8,25 +9,17 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-User-agent: GPTBot
-Allow: /
-
+# Agent fetch / search crawlers (training bots GPTBot, ClaudeBot, CCBot: Disallow in Cloudflare block)
 User-agent: ChatGPT-User
 Allow: /
 
 User-agent: OAI-SearchBot
 Allow: /
 
-User-agent: ClaudeBot
-Allow: /
-
 User-agent: anthropic-ai
 Allow: /
 
 User-agent: PerplexityBot
-Allow: /
-
-User-agent: CCBot
 Allow: /
 
 Sitemap: https://womenshealthduo.com/sitemap.xml
