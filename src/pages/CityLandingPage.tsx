@@ -15,6 +15,14 @@ import { medicalClinicForCity } from "@/components/seo/schema/cityClinic";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { SITE_URL } from "@/config/site";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
+import { indiaCityDocumentTitle } from "@/lib/pageSeoCopy";
+
+const INDIA_CITY_LABEL: Record<CityKey, string> = {
+  ahmedabad: "Ahmedabad",
+  mumbai: "Mumbai",
+  valsad: "Valsad",
+  bangalore: "Bangalore",
+};
 
 type CityLandingPageProps = {
   cityKey: CityKey;
@@ -22,6 +30,7 @@ type CityLandingPageProps = {
 
 export function CityLandingPage({ cityKey }: CityLandingPageProps) {
   const city = CITY_PAGES[cityKey];
+  const docTitle = indiaCityDocumentTitle(INDIA_CITY_LABEL[cityKey]);
   const crumbs = [
     { name: "Home", path: ROUTES.home },
     { name: city.h1, path: city.path },
@@ -30,7 +39,7 @@ export function CityLandingPage({ cityKey }: CityLandingPageProps) {
     breadcrumbListSchema(crumbs),
     webPageSchema({
       path: city.path,
-      name: city.title,
+      name: docTitle,
       description: city.metaDescription,
     }),
     medicalClinicForCity(city),
@@ -39,7 +48,7 @@ export function CityLandingPage({ cityKey }: CityLandingPageProps) {
 
   return (
     <PageShell breadcrumbs={crumbs}>
-      <SeoHead title={city.title} metaDescription={city.metaDescription} path={city.path} />
+      <SeoHead title={docTitle} metaDescription={city.metaDescription} path={city.path} />
       <JsonLdGraph graph={graph} />
       <JsonLdFaq items={faqItems} pageUrl={githubPagesAbsoluteUrl(SITE_URL, city.path)} />
 

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ROUTES } from "@/config/routes";
+import { publicPathname } from "@/lib/githubPagesPublicUrl";
 import {
   LEARN_PILLAR_CLUSTERS,
   pillarLearnTopicLinks,
@@ -28,26 +29,38 @@ export function LearnTopicalAuthoritySection() {
         <strong className="font-medium text-foreground">Booked care:</strong> if you want a real
         consultation (not just clips), start with{" "}
         <Link
-          to={ROUTES.onlineConsultation}
+          to={publicPathname(ROUTES.onlineConsultation)}
           className="text-primary font-medium underline underline-offset-4"
         >
           virtual online consultations
         </Link>{" "}
         , how video visits work, what we offer by telehealth, and how to book from wherever you are.
         We also see people in person in{" "}
-        <Link to={ROUTES.mumbai} className="text-primary underline underline-offset-4">
+        <Link
+          to={publicPathname(ROUTES.mumbai)}
+          className="text-primary underline underline-offset-4"
+        >
           Mumbai
         </Link>
         ,{" "}
-        <Link to={ROUTES.ahmedabad} className="text-primary underline underline-offset-4">
+        <Link
+          to={publicPathname(ROUTES.ahmedabad)}
+          className="text-primary underline underline-offset-4"
+        >
           Ahmedabad
         </Link>
         ,{" "}
-        <Link to={ROUTES.valsad} className="text-primary underline underline-offset-4">
+        <Link
+          to={publicPathname(ROUTES.valsad)}
+          className="text-primary underline underline-offset-4"
+        >
           Valsad
         </Link>
         , and{" "}
-        <Link to={ROUTES.bangalore} className="text-primary underline underline-offset-4">
+        <Link
+          to={publicPathname(ROUTES.bangalore)}
+          className="text-primary underline underline-offset-4"
+        >
           Bangalore
         </Link>
         .
@@ -105,7 +118,10 @@ export function LearnTopicalAuthoritySection() {
                 ) : (
                   <p className="text-sm text-muted-foreground">
                     We&apos;re tagging more clips for this area, check back soon or jump to{" "}
-                    <Link to={ROUTES.learn} className="text-primary underline underline-offset-4">
+                    <Link
+                      to={publicPathname(ROUTES.learn)}
+                      className="text-primary underline underline-offset-4"
+                    >
                       all topics
                     </Link>
                     .
@@ -135,7 +151,7 @@ export function LearnTopicalAuthoritySection() {
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Looking for a booked consult, not just clips?{" "}
                   <Link
-                    to={ROUTES.onlineConsultation}
+                    to={publicPathname(ROUTES.onlineConsultation)}
                     className="text-primary font-medium underline underline-offset-2"
                   >
                     Read about virtual online consultations here
@@ -146,7 +162,7 @@ export function LearnTopicalAuthoritySection() {
 
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   <Link
-                    to={ROUTES.homeAbout}
+                    to={publicPathname(ROUTES.homeAbout)}
                     className="text-primary font-medium underline underline-offset-2"
                   >
                     Meet our doctors

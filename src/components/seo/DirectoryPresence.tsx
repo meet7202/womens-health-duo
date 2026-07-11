@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { EXTERNAL } from "@/config/externalProfiles";
 import { ROUTES } from "@/config/routes";
+import { publicPathname } from "@/lib/githubPagesPublicUrl";
 
 /**
  * On-site paths to book Dr. Charmi Shah and Dr. Zalak Shah, plus Maps for in-person locations.
@@ -17,19 +18,22 @@ export function DirectoryPresence() {
       <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
         The clearest way to plan care is with our team directly. Read{" "}
         <Link
-          to={ROUTES.drCharmi}
+          to={publicPathname(ROUTES.drCharmi)}
           className="text-primary font-medium underline underline-offset-4"
         >
           Dr. Charmi Shah&apos;s profile
         </Link>{" "}
         (OB-GYN and IVF) and{" "}
-        <Link to={ROUTES.drZalak} className="text-primary font-medium underline underline-offset-4">
+        <Link
+          to={publicPathname(ROUTES.drZalak)}
+          className="text-primary font-medium underline underline-offset-4"
+        >
           Dr. Zalak Shah&apos;s profile
         </Link>{" "}
         (women&apos;s health physiotherapy and STOTT Pilates), then message us on WhatsApp or email
         from those pages, or open{" "}
         <Link
-          to={ROUTES.onlineConsultation}
+          to={publicPathname(ROUTES.onlineConsultation)}
           className="text-primary font-medium underline underline-offset-4"
         >
           virtual online consultations

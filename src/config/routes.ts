@@ -1,6 +1,10 @@
 /** Public routes (pathname only; React Router `basename` applies on GitHub Pages). */
 import { SEO_ONLINE_SERVICES } from "../data/seoOnlineServices";
-import { learnHubSitemapPaths, LEARN_HUB_BASE_PATH } from "../lib/learnHubUrls";
+import {
+  learnHubSitemapPaths,
+  learnWatchSitemapPaths,
+  LEARN_HUB_BASE_PATH,
+} from "../lib/learnHubUrls";
 import { topicGuideSitemapPaths } from "../data/topicGuides/topicGuideSitemapPaths";
 import {
   VIRTUAL_CONSULTATION_HUB_PATH,
@@ -91,8 +95,11 @@ export const SITEMAP_SEGMENT_CORE: readonly string[] = [
   ROUTES.editorialPolicy,
 ];
 
-/** Learn hub + every indexable doctor/topic filter URL. */
-export const SITEMAP_SEGMENT_LEARN: readonly string[] = learnHubSitemapPaths();
+/** Learn hub + every indexable doctor/topic filter URL + per-clip watch pages. */
+export const SITEMAP_SEGMENT_LEARN: readonly string[] = [
+  ...learnHubSitemapPaths(),
+  ...learnWatchSitemapPaths(),
+];
 
 /** Flat topic guide article paths (e.g. `/pcos`). */
 export const SITEMAP_SEGMENT_TOPIC_GUIDES: readonly string[] = topicGuideSitemapPaths();

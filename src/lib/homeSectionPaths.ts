@@ -1,6 +1,7 @@
 import { ROUTES } from "../config/routes";
-import { SITE_NAME, DEFAULT_DESCRIPTION } from "../config/site.defaults";
-import { githubPagesAbsoluteUrl } from "./githubPagesPublicUrl";
+import { DEFAULT_DESCRIPTION } from "../config/site.defaults";
+import { githubPagesAbsoluteUrl, publicPathname } from "./githubPagesPublicUrl";
+import { homeSectionDocumentTitle } from "./pageSeoCopy";
 
 /** Permalink pathname → scroll target element id on the homepage. */
 const PATH_TO_SCROLL_ID: Readonly<Record<string, string>> = {
@@ -41,7 +42,8 @@ export function isHomeSectionPermalink(pathname: string): boolean {
 
 /** Permalink pathname for a homepage section id (`about`, `services`, …), or `null`. */
 export function homePermalinkForScrollId(scrollId: string): string | null {
-  return SCROLL_ID_TO_PATH[scrollId] ?? null;
+  const path = SCROLL_ID_TO_PATH[scrollId];
+  return path ? publicPathname(path) : null;
 }
 
 /** SEO overrides when rendering the homepage on a section permalink. */
@@ -54,8 +56,8 @@ export function homeSectionSeo(pathname: string): {
   const label = PATH_TO_LABEL[norm];
   if (!label) return null;
   return {
-    canonicalPath: norm,
-    title: `${label} | ${SITE_NAME}`,
+    canonicalPath: publicPathname(norm),
+    title: homeSectionDocumentTitle(label),
     metaDescription: DEFAULT_DESCRIPTION,
   };
 }

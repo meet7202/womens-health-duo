@@ -1,15 +1,17 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { CONTACT } from "@/config/site";
 import {
   KNOWLEDGE_HUB_VIDEOS,
-  knowledgeHubVideoOriginalPlatformCaption,
+  knowledgeHubVideoDisplayTitle,
   type KnowledgeHubVideo,
 } from "@/data/knowledgeHubVideos";
+import { KnowledgeHubVideoPlayer } from "@/components/learn/KnowledgeHubVideoPlayer";
 import {
   learnHubFilteredPath,
+  learnVideoWatchPath,
   parseLearnHubPathname,
   type LearnHubDoctorFilter,
 } from "@/lib/learnHubUrls";
@@ -44,22 +46,6 @@ function topicLabelsForVideos(videos: readonly KnowledgeHubVideo[]): string[] {
 }
 
 function VideoSlide({ video }: { video: KnowledgeHubVideo }) {
-  const embedContainerRef = useRef<HTMLDivElement>(null);
-  const [embedVisible, setEmbedVisible] = useState(false);
-
-  useEffect(() => {
-    const root = embedContainerRef.current;
-    if (!root) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((e) => e.isIntersecting)) setEmbedVisible(true);
-      },
-      { root: null, rootMargin: "360px 0px", threshold: 0 },
-    );
-    observer.observe(root);
-    return () => observer.disconnect();
-  }, []);
-
   const openLabel = video.kind === "youtube_short" ? "Open on YouTube" : "Open on Instagram";
   const openHref =
     video.kind === "youtube_short"
@@ -67,15 +53,8 @@ function VideoSlide({ video }: { video: KnowledgeHubVideo }) {
         ? `https://www.youtube.com/watch?v=${video.youtubeVideoId}`
         : `https://www.youtube.com/shorts/${video.youtubeVideoId}`
       : `https://www.instagram.com/reel/${video.instagramReelId}/`;
-
-  const embedSrc =
-    video.kind === "youtube_short"
-      ? `https://www.youtube.com/embed/${video.youtubeVideoId}`
-      : `https://www.instagram.com/reel/${video.instagramReelId}/embed/`;
-
-  const originalCaption = knowledgeHubVideoOriginalPlatformCaption(video);
-  const originalCaptionHeading =
-    video.kind === "youtube_short" ? "Original YouTube description" : "Original Instagram caption";
+  const watchPath = learnVideoWatchPath(video.id);
+  const displayTitle = knowledgeHubVideoDisplayTitle(video);
 
   return (
     <div className="flex h-full flex-col rounded-2xl border border-border/50 bg-card shadow-soft overflow-hidden">
@@ -95,64 +74,13 @@ function VideoSlide({ video }: { video: KnowledgeHubVideo }) {
           ))}
         </div>
         <p className="text-sm font-medium text-foreground leading-snug line-clamp-2">
-          {video.title}
+          <Link to={watchPath} className="hover:text-primary transition-colors">
+            {displayTitle}
+          </Link>
         </p>
         <p className="text-xs text-muted-foreground leading-relaxed">{video.summary}</p>
       </div>
-      <div ref={embedContainerRef} className="relative flex-1 bg-black/5">
-        {embedVisible ? (
-          video.kind === "youtube_short" ? (
-            <iframe
-              title={video.title}
-              src={embedSrc}
-              className="aspect-[9/16] w-full max-h-[min(70vh,520px)] min-h-[280px]"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
-            />
-          ) : (
-            <iframe
-              title={video.title}
-              src={embedSrc}
-              className="aspect-[9/16] w-full max-h-[min(70vh,520px)] min-h-[320px]"
-              allow="clipboard-write; autoplay; encrypted-media; picture-in-picture;"
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
-            />
-          )
-        ) : (
-          <div
-            className="aspect-[9/16] w-full max-h-[min(70vh,520px)] min-h-[320px] flex flex-col items-center justify-center gap-2 bg-muted/40 px-4 text-center"
-            aria-busy="true"
-          >
-            <span className="sr-only">Video player loads when this card is near the viewport.</span>
-            <span className="text-xs text-muted-foreground" aria-hidden>
-              Loading player when in view…
-            </span>
-          </div>
-        )}
-      </div>
-      <div className="border-t border-border/40 bg-muted/15 px-3 py-3 space-y-2">
-        <div>
-          <p className="text-xs font-semibold text-foreground mb-1">{originalCaptionHeading}</p>
-          {originalCaption ? (
-            <p className="text-xs text-muted-foreground leading-relaxed whitespace-pre-wrap break-words max-h-[min(40vh,320px)] overflow-y-auto pr-1">
-              {originalCaption}
-            </p>
-          ) : (
-            <p className="text-xs text-muted-foreground leading-relaxed italic">
-              The original caption could not be synced for this post (it may have been removed or is
-              private). Open on {video.kind === "youtube_short" ? "YouTube" : "Instagram"} to read
-              the live post.
-            </p>
-          )}
-        </div>
-        <p className="text-[10px] text-muted-foreground/80 leading-snug border-t border-border/30 pt-2">
-          Text is copied from the public {video.kind === "youtube_short" ? "YouTube" : "Instagram"}{" "}
-          post for transparency; formatting may differ slightly from the app.
-        </p>
-      </div>
+      <KnowledgeHubVideoPlayer video={video} variant="carousel" className="flex-1" />
       <div className="flex items-center justify-between gap-2 border-t border-border/40 px-3 py-2">
         <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
           {video.kind === "youtube_short" ? (
@@ -162,11 +90,16 @@ function VideoSlide({ video }: { video: KnowledgeHubVideo }) {
           )}
           <span>Plays on {video.kind === "youtube_short" ? "YouTube" : "Instagram"}</span>
         </div>
-        <Button variant="ghost" size="sm" className="shrink-0 text-primary" asChild>
-          <a href={openHref} target="_blank" rel="noopener noreferrer">
-            {openLabel}
-          </a>
-        </Button>
+        <div className="flex items-center gap-1">
+          <Button variant="ghost" size="sm" className="shrink-0 text-primary" asChild>
+            <Link to={watchPath}>Watch page</Link>
+          </Button>
+          <Button variant="ghost" size="sm" className="shrink-0 text-primary" asChild>
+            <a href={openHref} target="_blank" rel="noopener noreferrer">
+              {openLabel}
+            </a>
+          </Button>
+        </div>
       </div>
     </div>
   );
@@ -200,10 +133,9 @@ export function KnowledgeHubVideoHub() {
       <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-6 max-w-3xl">
         Quick clips on women&apos;s health, pregnancy, movement, pelvic wellness, and more, from Dr.
         Charmi and Dr. Zalak. Pick a doctor or a topic to see what matches you; swipe the carousel
-        to explore. Under each video you&apos;ll find the same caption or description we used on{" "}
-        <strong className="text-foreground">Instagram</strong> or{" "}
-        <strong className="text-foreground">YouTube</strong>, and you can open any clip there
-        whenever you like.
+        to explore. Each clip also has a dedicated{" "}
+        <strong className="text-foreground">watch page</strong> with the full transcript for search
+        and sharing.
       </p>
 
       <div className="flex flex-col gap-4 mb-6">

@@ -15,6 +15,7 @@ import {
   topicGuideExampleConsultPaths,
   topicGuideLearnLinks,
 } from "@/data/topicGuides/topicGuideRegistry";
+import { topicGuideDocumentTitle } from "@/lib/pageSeoCopy";
 import NotFound from "@/pages/NotFound";
 
 export function TopicGuidePage() {
@@ -38,7 +39,7 @@ export function TopicGuidePage() {
       breadcrumbListSchema(crumbs),
       webPageSchema({
         path: guide.path,
-        name: `${guide.title} | Women's Health Duo`,
+        name: topicGuideDocumentTitle(guide.title),
         description: guide.metaDescription,
       }),
     ];
@@ -65,7 +66,7 @@ export function TopicGuidePage() {
     return <NotFound />;
   }
 
-  const docTitle = `${guide.title} | Women's Health Duo`;
+  const docTitle = topicGuideDocumentTitle(guide.title);
   const faqHeadingBase = guide.title.endsWith("?") ? guide.title.slice(0, -1) : guide.title;
 
   return (

@@ -14,6 +14,7 @@ import { JsonLdFaq } from "@/components/seo/JsonLdFaq";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { ROUTES } from "@/config/routes";
+import { publicPathname } from "@/lib/githubPagesPublicUrl";
 import { SITE_URL } from "@/config/site";
 import { HOME_PAGE_FAQ } from "@/data/homePageFaq";
 import { Button } from "@/components/ui/button";
@@ -71,7 +72,7 @@ const Index = () => {
         />
         <div className="container mx-auto max-w-3xl px-4 pb-16 text-center sm:px-6 lg:px-8">
           <Button variant="outline" asChild>
-            <Link to={ROUTES.faq}>View all questions (FAQ)</Link>
+            <Link to={publicPathname(ROUTES.faq)}>View all questions (FAQ)</Link>
           </Button>
         </div>
       </main>

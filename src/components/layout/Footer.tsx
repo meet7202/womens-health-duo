@@ -3,14 +3,15 @@ import { Link, useLocation } from "react-router-dom";
 import { Heart, Instagram, Mail, MessageCircle, Phone, Youtube } from "lucide-react";
 import { CONTACT } from "@/config/site";
 import { ROUTES } from "@/config/routes";
+import { publicPathname } from "@/lib/githubPagesPublicUrl";
 import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 import { BRAND_ENTITY_LINE } from "@/config/brandLine";
 
 const SECTION_LINKS = [
-  { label: "About", to: ROUTES.homeAbout },
-  { label: "Services", to: ROUTES.homeServicesSection },
-  { label: "Testimonials", to: ROUTES.homeTestimonials },
-  { label: "Contact", to: ROUTES.homeContact },
+  { label: "About", to: publicPathname(ROUTES.homeAbout) },
+  { label: "Services", to: publicPathname(ROUTES.homeServicesSection) },
+  { label: "Testimonials", to: publicPathname(ROUTES.homeTestimonials) },
+  { label: "Contact", to: publicPathname(ROUTES.homeContact) },
 ] as const;
 
 export const Footer = () => {
@@ -47,7 +48,7 @@ export const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to={ROUTES.home}
+                  to={publicPathname(ROUTES.home)}
                   className="text-background/70 hover:text-background transition-colors text-sm underline-offset-4 hover:underline"
                 >
                   Home
@@ -71,7 +72,7 @@ export const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  to={ROUTES.onlineConsultation}
+                  to={publicPathname(ROUTES.onlineConsultation)}
                   className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
                 >
                   Virtual online consultations
@@ -79,7 +80,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
-                  to={ROUTES.drCharmi}
+                  to={publicPathname(ROUTES.drCharmi)}
                   className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
                 >
                   Dr. Charmi Shah
@@ -87,7 +88,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
-                  to={ROUTES.drZalak}
+                  to={publicPathname(ROUTES.drZalak)}
                   className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
                 >
                   Dr. Zalak Shah
@@ -96,28 +97,28 @@ export const Footer = () => {
               <li>
                 <span className="text-background/50">India: </span>
                 <Link
-                  to={ROUTES.ahmedabad}
+                  to={publicPathname(ROUTES.ahmedabad)}
                   className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
                 >
                   Ahmedabad
                 </Link>
                 <span className="text-background/40"> · </span>
                 <Link
-                  to={ROUTES.mumbai}
+                  to={publicPathname(ROUTES.mumbai)}
                   className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
                 >
                   Mumbai
                 </Link>
                 <span className="text-background/40"> · </span>
                 <Link
-                  to={ROUTES.valsad}
+                  to={publicPathname(ROUTES.valsad)}
                   className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
                 >
                   Valsad
                 </Link>
                 <span className="text-background/40"> · </span>
                 <Link
-                  to={ROUTES.bangalore}
+                  to={publicPathname(ROUTES.bangalore)}
                   className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
                 >
                   Bangalore
@@ -125,7 +126,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
-                  to={ROUTES.learn}
+                  to={publicPathname(ROUTES.learn)}
                   className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
                 >
                   Learn
@@ -133,7 +134,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
-                  to={ROUTES.faq}
+                  to={publicPathname(ROUTES.faq)}
                   className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
                 >
                   FAQ
@@ -141,7 +142,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
-                  to={ROUTES.medicalDisclaimer}
+                  to={publicPathname(ROUTES.medicalDisclaimer)}
                   className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
                 >
                   Medical disclaimer
@@ -149,7 +150,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
-                  to={ROUTES.editorialPolicy}
+                  to={publicPathname(ROUTES.editorialPolicy)}
                   className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
                 >
                   Editorial policy

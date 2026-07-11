@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ROUTES } from "@/config/routes";
+import { publicPathname } from "@/lib/githubPagesPublicUrl";
 import {
   getTopicGuide,
   topicGuideHubSlugs,
@@ -31,7 +32,7 @@ export function LearnTopicGuidesSection() {
         {hubSlugs.map((slug) => {
           const g = getTopicGuide(slug);
           const title = g?.title ?? topicGuideTitleFromSlug(slug);
-          const path = `/${slug}`;
+          const path = g?.path ?? publicPathname(`/${slug}`);
           return (
             <li key={slug} className="rounded-xl border border-border/40 bg-card p-4 shadow-soft">
               <Link
@@ -46,14 +47,17 @@ export function LearnTopicGuidesSection() {
       </ul>
       <p className="text-sm text-muted-foreground mt-6">
         <Link
-          to={ROUTES.learnArticles}
+          to={publicPathname(ROUTES.learnArticles)}
           className="text-primary font-medium underline underline-offset-4"
         >
           Browse all articles and common questions
         </Link>{" "}
         (every written page on this site, grouped by theme). If you would rather watch first, stay
         on{" "}
-        <Link to={ROUTES.learn} className="text-primary font-medium underline underline-offset-4">
+        <Link
+          to={publicPathname(ROUTES.learn)}
+          className="text-primary font-medium underline underline-offset-4"
+        >
           Learn
         </Link>{" "}
         and scroll down to the video list. The clips and the guides cover the same clinical themes.

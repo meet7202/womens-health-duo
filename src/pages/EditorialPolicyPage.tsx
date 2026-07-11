@@ -6,7 +6,10 @@ import { ROUTES } from "@/config/routes";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 
-const TITLE = "Editorial policy | Women's Health Duo";
+import { EDITORIAL_DOCUMENT_TITLE, EDITORIAL_H1 } from "@/lib/pageSeoCopy";
+
+const TITLE = EDITORIAL_DOCUMENT_TITLE;
+const H1 = EDITORIAL_H1;
 const DESCRIPTION =
   "How Women's Health Duo publishes Learn hub captions, video selections, and on-site health content, authorship, accuracy intent, and corrections.";
 
@@ -35,7 +38,7 @@ export function EditorialPolicyPage() {
       <article className="max-w-3xl">
         <p className="text-xs text-muted-foreground mb-2">Last updated: {LAST_UPDATED}</p>
         <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground mb-4">
-          Editorial policy
+          {H1}
         </h1>
         <p className="text-muted-foreground leading-relaxed mb-8">{DESCRIPTION}</p>
 

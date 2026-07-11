@@ -25,10 +25,7 @@ import { InclusiveSeoListFootnote } from "@/components/seo/InclusiveSeoListFootn
 import { Button } from "@/components/ui/button";
 import { PRACTICE_BOTH_DOCTORS_IN_PERSON } from "@/config/practiceLocations";
 import { onlineServiceCityFaqs } from "@/data/contextualFaqs";
-
-function buildMetaTitle(serviceShort: string, city: string, country: string) {
-  return `${serviceShort} online ,  ${city}, ${country} | Women's Health Duo`;
-}
+import { virtualServiceCityDocumentTitle, virtualServiceCityH1 } from "@/lib/pageSeoCopy";
 
 function buildMetaDescription(
   serviceTitle: string,
@@ -62,7 +59,8 @@ export function VirtualOnlineServiceCityPage() {
   }
 
   const path = virtualServiceCityPath(city, service.slug);
-  const metaTitle = buildMetaTitle(service.shortTitle, city.city, city.country);
+  const metaTitle = virtualServiceCityDocumentTitle(service.shortTitle, city.city, city.country);
+  const h1 = virtualServiceCityH1(service.title, city.city, city.country);
   const metaDescription = buildMetaDescription(
     service.title,
     city.city,
@@ -79,7 +77,7 @@ export function VirtualOnlineServiceCityPage() {
     breadcrumbListSchema(crumbs),
     webPageSchema({
       path,
-      name: `${service.title} ,  ${city.city}, ${city.country} | Women's Health Duo`,
+      name: metaTitle,
       description: metaDescription,
     }),
     virtualServiceCityOfferSchema(city, service),
@@ -103,7 +101,7 @@ export function VirtualOnlineServiceCityPage() {
           Virtual online · {city.city}
         </p>
         <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground mb-4">
-          {service.title} , online consultation for patients in {city.city}, {city.country}
+          {h1}
         </h1>
 
         <p className="rounded-lg border border-primary/20 bg-primary/5 px-4 py-3 text-sm text-foreground mb-6">

@@ -9,6 +9,7 @@ import { ROUTES } from "@/config/routes";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { whatsappMessageDoctorProfile, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 import { DOCTOR_BY_SLUG, type DoctorSlug } from "@/data/doctorProfiles";
+import { doctorDocumentTitle } from "@/lib/pageSeoCopy";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { InclusiveSeoListFootnote } from "@/components/seo/InclusiveSeoListFootnote";
@@ -37,6 +38,10 @@ type DoctorProfilePageProps = {
 
 export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
   const d = DOCTOR_BY_SLUG[slug];
+  const docTitle = doctorDocumentTitle(
+    d.name,
+    slug === "charmi" ? "OB-GYN, IVF & laparoscopy" : "Women's health physio & Pilates",
+  );
   const img = IMAGES[slug];
   const crumbs = [
     { name: "Home", path: ROUTES.home },
@@ -46,7 +51,7 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
     breadcrumbListSchema(crumbs),
     webPageSchema({
       path: d.path,
-      name: d.metaTitle,
+      name: docTitle,
       description: d.metaDescription,
       aboutId: PHYSICIAN_IDS[slug],
     }),
@@ -66,7 +71,7 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
 
   return (
     <PageShell breadcrumbs={crumbs}>
-      <SeoHead title={d.metaTitle} metaDescription={d.metaDescription} path={d.path} />
+      <SeoHead title={docTitle} metaDescription={d.metaDescription} path={d.path} />
       <JsonLdGraph graph={graph} />
 
       <article>
