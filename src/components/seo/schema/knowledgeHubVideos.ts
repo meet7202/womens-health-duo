@@ -2,6 +2,9 @@ import { SITE_URL } from "@/config/site";
 import {
   knowledgeHubVideoCaptionForSeo,
   knowledgeHubVideoDisplayTitle,
+  knowledgeHubInstagramEmbedUrl,
+  knowledgeHubInstagramPoster,
+  knowledgeHubInstagramPermalink,
   type KnowledgeHubVideo,
 } from "@/data/knowledgeHubVideos";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
@@ -39,17 +42,36 @@ export function knowledgeHubWatchPageVideoSchema(video: KnowledgeHubVideo, watch
     };
   }
 
-  const permalink = `https://www.instagram.com/reel/${video.instagramReelId}/`;
-  const embedUrl = `https://www.instagram.com/reel/${video.instagramReelId}/embed/`;
+  if (video.kind === "instagram_post") {
+    const permalink = knowledgeHubInstagramPermalink(video);
+    return {
+      "@type": "SocialMediaPosting",
+      "@id": `${pageUrl}#post`,
+      headline: name,
+      articleBody: description,
+      url: permalink,
+      datePublished: video.postedAt,
+      mainEntityOfPage: { "@type": "WebPage", "@id": pageWebPageId },
+      publisher: { "@id": orgFragment },
+    };
+  }
+
+  const permalink = knowledgeHubInstagramPermalink(video);
+  const embedUrl = knowledgeHubInstagramEmbedUrl(video);
+  const nativeVideo = video.instagramVideoUrl?.trim();
+  const poster = knowledgeHubInstagramPoster(video);
+  const thumbnailUrl = poster?.startsWith("/")
+    ? githubPagesAbsoluteUrl(SITE_URL, poster)
+    : poster || githubPagesAbsoluteUrl(SITE_URL, "/favicon.svg");
   return {
     "@type": "VideoObject",
     "@id": `${pageUrl}#video`,
     name,
     description,
-    thumbnailUrl: githubPagesAbsoluteUrl(SITE_URL, "/favicon.svg"),
+    thumbnailUrl,
     embedUrl,
     url: permalink,
-    contentUrl: pageUrl,
+    contentUrl: nativeVideo || pageUrl,
     ...(video.postedAt ? { uploadDate: video.postedAt } : {}),
     mainEntityOfPage: { "@type": "WebPage", "@id": pageWebPageId },
     publisher: { "@id": orgFragment },

@@ -1,7 +1,9 @@
+import { TELEMEDICINE_FAQ } from "./telemedicineFaq";
+
 /** Visible FAQ copy ,  must match FAQ JSON-LD wherever emitted. */
 export type FaqItem = { question: string; answer: string };
 
-export const SITE_FAQ: FaqItem[] = [
+export const SITE_FAQ_BASE: FaqItem[] = [
   {
     question: "What is Women's Health Duo?",
     answer:
@@ -42,4 +44,12 @@ export const SITE_FAQ: FaqItem[] = [
     answer:
       'Yes. Open "Virtual online consultations" in the site menu for an overview, then choose a city page (for example Dubai, London, Singapore, Toronto, or Sydney) written for Indian diaspora and expatriate patients. Each page describes the same online booking process, telehealth from India with English, Hindi, or Gujarati where helpful. …and many more cities worldwide: the pages highlight common metros only; we serve families globally.',
   },
+  {
+    question: "Is there a free women's health community I can join?",
+    answer:
+      "Yes. Women's Health Duo runs a free WhatsApp community for health tips, workshop updates, and supportive conversations on pregnancy, fertility, PCOS, pelvic health, and wellness — separate from booking a private consult. See our Free women's health community page (womenshealthduo.com/free-womens-health-community) for what is included and how to join.",
+  },
 ];
+
+/** Site FAQ + telemedicine compliance FAQ (max 10 JSON-LD items on /faq — use first 10 of combined). */
+export const SITE_FAQ: FaqItem[] = [...SITE_FAQ_BASE, ...TELEMEDICINE_FAQ];

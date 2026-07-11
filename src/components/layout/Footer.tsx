@@ -7,6 +7,15 @@ import { publicPathname } from "@/lib/githubPagesPublicUrl";
 import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 import { BRAND_ENTITY_LINE } from "@/config/brandLine";
 
+const LEGAL_LINKS = [
+  { label: "Telemedicine policy", to: ROUTES.telemedicinePolicy },
+  { label: "Privacy policy", to: ROUTES.privacyPolicy },
+  { label: "Terms of service", to: ROUTES.termsOfService },
+  { label: "Refund policy", to: ROUTES.refundPolicy },
+  { label: "Medical disclaimer", to: ROUTES.medicalDisclaimer },
+  { label: "Editorial policy", to: ROUTES.editorialPolicy },
+] as const;
+
 const SECTION_LINKS = [
   { label: "About", to: publicPathname(ROUTES.homeAbout) },
   { label: "Services", to: publicPathname(ROUTES.homeServicesSection) },
@@ -72,6 +81,14 @@ export const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
+                  to={publicPathname(ROUTES.internationalConsultation)}
+                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
+                >
+                  International consultation
+                </Link>
+              </li>
+              <li>
+                <Link
                   to={publicPathname(ROUTES.onlineConsultation)}
                   className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
                 >
@@ -134,28 +151,38 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
+                  to={publicPathname(ROUTES.freeWomensHealthCommunity)}
+                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
+                >
+                  Free WhatsApp community
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={publicPathname(ROUTES.bookConsultation)}
+                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
+                >
+                  Book teleconsultation
+                </Link>
+              </li>
+              <li>
+                <Link
                   to={publicPathname(ROUTES.faq)}
                   className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
                 >
                   FAQ
                 </Link>
               </li>
-              <li>
-                <Link
-                  to={publicPathname(ROUTES.medicalDisclaimer)}
-                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
-                >
-                  Medical disclaimer
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to={publicPathname(ROUTES.editorialPolicy)}
-                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
-                >
-                  Editorial policy
-                </Link>
-              </li>
+              {LEGAL_LINKS.map(({ label, to }) => (
+                <li key={to}>
+                  <Link
+                    to={publicPathname(to)}
+                    className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { CONTACT } from "@/config/site";
 import {
   KNOWLEDGE_HUB_VIDEOS,
+  knowledgeHubInstagramPermalink,
   knowledgeHubVideoDisplayTitle,
   type KnowledgeHubVideo,
 } from "@/data/knowledgeHubVideos";
@@ -15,13 +16,6 @@ import {
   parseLearnHubPathname,
   type LearnHubDoctorFilter,
 } from "@/lib/learnHubUrls";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { Instagram, Youtube } from "lucide-react";
 
 const DOCTOR_FILTERS: { value: LearnHubDoctorFilter; label: string }[] = [
@@ -52,14 +46,14 @@ function VideoSlide({ video }: { video: KnowledgeHubVideo }) {
       ? video.youtubeOpenAs === "watch"
         ? `https://www.youtube.com/watch?v=${video.youtubeVideoId}`
         : `https://www.youtube.com/shorts/${video.youtubeVideoId}`
-      : `https://www.instagram.com/reel/${video.instagramReelId}/`;
+      : knowledgeHubInstagramPermalink(video);
   const watchPath = learnVideoWatchPath(video.id);
   const displayTitle = knowledgeHubVideoDisplayTitle(video);
 
   return (
     <div className="flex h-full flex-col rounded-2xl border border-border/50 bg-card shadow-soft overflow-hidden">
-      <div className="border-b border-border/40 bg-muted/30 px-4 py-3 space-y-1">
-        <div className="flex flex-wrap items-center gap-2 text-xs">
+      <div className="border-b border-border/40 bg-muted/30 px-4 py-3 space-y-1 min-h-[7.25rem]">
+        <div className="flex flex-wrap items-center gap-2 text-xs min-h-[1.75rem]">
           <span className="rounded-full bg-primary/15 px-2 py-0.5 font-medium text-primary">
             {video.doctor === "charmi"
               ? "Dr. Charmi"
@@ -73,14 +67,16 @@ function VideoSlide({ video }: { video: KnowledgeHubVideo }) {
             </span>
           ))}
         </div>
-        <p className="text-sm font-medium text-foreground leading-snug line-clamp-2">
+        <p className="text-sm font-medium text-foreground leading-snug line-clamp-2 min-h-[2.5rem]">
           <Link to={watchPath} className="hover:text-primary transition-colors">
             {displayTitle}
           </Link>
         </p>
-        <p className="text-xs text-muted-foreground leading-relaxed">{video.summary}</p>
+        <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2 min-h-[2.5rem]">
+          {video.summary}
+        </p>
       </div>
-      <KnowledgeHubVideoPlayer video={video} variant="carousel" className="flex-1" />
+      <KnowledgeHubVideoPlayer video={video} variant="carousel" className="flex-1 min-h-0" />
       <div className="flex items-center justify-between gap-2 border-t border-border/40 px-3 py-2">
         <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
           {video.kind === "youtube_short" ? (
@@ -123,17 +119,17 @@ export function KnowledgeHubVideoHub() {
   );
 
   return (
-    <section className="mb-14" aria-labelledby="knowledge-video-hub-heading">
+    <section className="mb-14" aria-labelledby="content-hub-heading">
       <h2
-        id="knowledge-video-hub-heading"
+        id="content-hub-heading"
         className="font-heading text-2xl sm:text-3xl font-semibold text-foreground mb-2"
       >
-        Video knowledge hub
+        Content hub
       </h2>
       <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-6 max-w-3xl">
-        Quick clips on women&apos;s health, pregnancy, movement, pelvic wellness, and more, from Dr.
-        Charmi and Dr. Zalak. Pick a doctor or a topic to see what matches you; swipe the carousel
-        to explore. Each clip also has a dedicated{" "}
+        Reels, carousels, and posts on women&apos;s health, pregnancy, movement, pelvic wellness,
+        and more, from Dr. Charmi and Dr. Zalak. Pick a doctor or a topic to see what matches you;
+        browse the grid below. Each item also has a dedicated{" "}
         <strong className="text-foreground">watch page</strong> with the full transcript for search
         and sharing.
       </p>
@@ -193,35 +189,17 @@ export function KnowledgeHubVideoHub() {
       </div>
 
       <div className="rounded-2xl border border-border/40 bg-muted/10 p-4 sm:p-6">
-        <div className="relative px-10 sm:px-14">
-          {filtered.length === 0 ? (
-            <p className="text-sm text-muted-foreground py-8 text-center">
-              No clips match these filters. Try &quot;All&quot; or another topic.
-            </p>
-          ) : (
-            <Carousel
-              key={location.pathname}
-              opts={{ align: "start", loop: false }}
-              className="w-full"
-            >
-              <CarouselContent className="-ml-2 md:-ml-4">
-                {filtered.map((video) => (
-                  <CarouselItem
-                    key={video.id}
-                    className="pl-2 md:pl-4 basis-[min(100%,420px)] sm:basis-[85%] md:basis-[55%] lg:basis-[40%]"
-                  >
-                    <VideoSlide video={video} />
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="left-1 top-1/2 -translate-y-1/2" />
-              <CarouselNext className="right-1 top-1/2 -translate-y-1/2" />
-            </Carousel>
-          )}
-        </div>
-        <p className="text-xs text-muted-foreground mt-4 text-center sm:hidden">
-          Swipe horizontally to browse clips.
-        </p>
+        {filtered.length === 0 ? (
+          <p className="text-sm text-muted-foreground py-8 text-center">
+            No posts match these filters. Try &quot;All&quot; or another topic.
+          </p>
+        ) : (
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3">
+            {filtered.map((video) => (
+              <VideoSlide key={video.id} video={video} />
+            ))}
+          </div>
+        )}
       </div>
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2">

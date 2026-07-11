@@ -52,11 +52,11 @@ export function LearnArticlesIndexPage() {
         <p className="text-lg text-muted-foreground leading-relaxed mb-4 max-w-3xl">
           These pages are written by our clinicians in the same voice as our Shorts and Reels. They
           are meant as orientation, not a substitute for a visit. Each article ends with links to
-          similar topics, the Learn hub for clips, and how to book.
+          similar topics, the Learn content hub, and how to book.
         </p>
         <p className="text-sm text-muted-foreground leading-relaxed mb-10 max-w-3xl">
-          You can move through every page from here: each title is a normal site link. For video
-          first, open{" "}
+          You can move through every page from here: each title is a normal site link. For reels,
+          carousels, and posts first, open{" "}
           <Link to={ROUTES.learn} className="text-primary font-medium underline underline-offset-4">
             Learn
           </Link>

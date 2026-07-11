@@ -87,7 +87,7 @@ export const LEARN_PILLAR_CLUSTERS: readonly LearnPillarCluster[] = [
     directAnswer:
       "Hormonal health on Women's Health Duo means education and consultation about thyroid-related questions, cycle-hormone links, perimenopause, and related symptoms with an OB-GYN, paired with movement guidance when appropriate, not supplement sales.",
     educationBlurb:
-      "Short clips and consults that frame hormones in plain language: when labs help, what patterns worry clinicians, and how to prepare for a video visit.",
+      "Short-form content and consults that frame hormones in plain language: when labs help, what patterns worry clinicians, and how to prepare for a video visit.",
     bingKeywords: [
       "hormonal imbalance symptoms women",
       "women's hormone consultation online India",
@@ -144,7 +144,7 @@ export const LEARN_PILLAR_CLUSTERS: readonly LearnPillarCluster[] = [
     directAnswer:
       "Fertility and ovulation education explains timing, evaluation pathways, and IVF/IUI discussion framing, paired with Dr. Charmi Shah's online consults for individualized planning, not generic wellness advice.",
     educationBlurb:
-      "Clips on conception timing, what fertility workups often include, and how virtual second opinions work for NRIs.",
+      "Posts on conception timing, what fertility workups often include, and how virtual second opinions work for NRIs.",
     bingKeywords: [
       "fertility signs ovulation",
       "IVF consultation online India",
@@ -169,9 +169,9 @@ export const LEARN_PILLAR_CLUSTERS: readonly LearnPillarCluster[] = [
     id: "pregnancy-labor",
     title: "Pregnancy & Labor",
     directAnswer:
-      "Pregnancy and labor education covers trimester questions, birth preparation, warning signs that need urgent local care, and how high-risk planning fits into telehealth, from an OB-GYN perspective with physio-led movement clips when they add context, not emergency advice in comments.",
+      "Pregnancy and labor education covers trimester questions, birth preparation, warning signs that need urgent local care, and how high-risk planning fits into telehealth, from an OB-GYN perspective with physio-led movement content when it adds context, not emergency advice in comments.",
     educationBlurb:
-      "Short clips on pregnancy discomforts, labor readiness, safe activity, and early postpartum recovery, with links to written guides for follow-through.",
+      "Short posts on pregnancy discomforts, labor readiness, safe activity, and early postpartum recovery, with links to written guides for follow-through.",
     bingKeywords: [
       "pregnancy questions online India",
       "labor preparation telehealth",
@@ -201,7 +201,7 @@ export const LEARN_PILLAR_CLUSTERS: readonly LearnPillarCluster[] = [
     id: "pcos",
     title: "PCOS",
     directAnswer:
-      'PCOS is treated as its own cluster because patients search it distinctly: androgen symptoms, cycle length, metabolic links, and fertility overlap. We separate PCOS clips and consults from generic "hormonal" tags for clearer topical authority.',
+      'PCOS is treated as its own cluster because patients search it distinctly: androgen symptoms, cycle length, metabolic links, and fertility overlap. We separate PCOS content and consults from generic "hormonal" tags for clearer topical authority.',
     educationBlurb:
       "Dedicated PCOS angle: lifestyle, cycles, and when medication discussions belong in consult, not in comments.",
     bingKeywords: [

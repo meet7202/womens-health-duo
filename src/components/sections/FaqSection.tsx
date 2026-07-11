@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import type { FaqItem } from "@/data/siteFaq";
+import { cn } from "@/lib/utils";
 
 type FaqSectionProps = {
   items: FaqItem[];
@@ -18,6 +19,8 @@ type FaqSectionProps = {
   headingTitle?: string;
   /** Short intro under the heading */
   headingIntro?: string;
+  /** Less top padding when stacked right after another section (e.g. contact → FAQ). */
+  tightTop?: boolean;
 };
 
 const DEFAULT_HEADING_INTRO =
@@ -30,11 +33,15 @@ export function FaqSection({
   headingLabel = "FAQ",
   headingTitle = "Common questions",
   headingIntro = DEFAULT_HEADING_INTRO,
+  tightTop = false,
 }: FaqSectionProps) {
   return (
     <section
       id={sectionId}
-      className="py-20 bg-secondary/25 border-y border-border/40"
+      className={cn(
+        "bg-secondary/25 border-y border-border/40 pb-20",
+        tightTop ? "pt-10" : "pt-20",
+      )}
       aria-labelledby="faq-heading"
     >
       <div className="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">

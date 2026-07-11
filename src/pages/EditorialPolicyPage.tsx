@@ -55,7 +55,7 @@ export function EditorialPolicyPage() {
                 Dr. Zalak Shah
               </Link>{" "}
               (women&apos;s health physiotherapist; STOTT Pilates instructor, Mat &amp; Reformer).
-              Short-form clips may be scripted for clarity; they remain educational, not
+              Short-form posts may be scripted for clarity; they remain educational, not
               personalized medical advice.
             </p>
           </div>

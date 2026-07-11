@@ -21,13 +21,13 @@ export function LearnTopicalAuthoritySection() {
         Pick what you want to learn about
       </h2>
       <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-3 max-w-3xl">
-        Each area below links to short clips you can filter on this page, and to how we handle
-        related questions in clinic, Women&apos;s Health Duo is education plus real consults with
-        our doctors, not a supplement shop.
+        Each area below links to content you can filter on this page, and to how we handle related
+        questions in clinic, Women&apos;s Health Duo is education plus real consults with our
+        doctors, not a supplement shop.
       </p>
       <p className="text-muted-foreground text-sm leading-relaxed mb-8 max-w-3xl">
         <strong className="font-medium text-foreground">Booked care:</strong> if you want a real
-        consultation (not just clips), start with{" "}
+        consultation (not just content), start with{" "}
         <Link
           to={publicPathname(ROUTES.onlineConsultation)}
           className="text-primary font-medium underline underline-offset-4"
@@ -99,9 +99,7 @@ export function LearnTopicalAuthoritySection() {
               <div className="mt-auto space-y-3 pt-3 border-t border-border/40">
                 {topicLinks.length > 0 ? (
                   <div>
-                    <p className="text-sm font-medium text-foreground mb-2">
-                      Short clips on this site
-                    </p>
+                    <p className="text-sm font-medium text-foreground mb-2">Content on this site</p>
                     <div className="flex flex-wrap gap-2">
                       {topicLinks.map(({ label, path }) => (
                         <Link
@@ -117,7 +115,7 @@ export function LearnTopicalAuthoritySection() {
                   </div>
                 ) : (
                   <p className="text-sm text-muted-foreground">
-                    We&apos;re tagging more clips for this area, check back soon or jump to{" "}
+                    We&apos;re tagging more content for this area, check back soon or jump to{" "}
                     <Link
                       to={publicPathname(ROUTES.learn)}
                       className="text-primary underline underline-offset-4"
@@ -149,7 +147,7 @@ export function LearnTopicalAuthoritySection() {
                 ) : null}
 
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Looking for a booked consult, not just clips?{" "}
+                  Looking for a booked consult, not just content?{" "}
                   <Link
                     to={publicPathname(ROUTES.onlineConsultation)}
                     className="text-primary font-medium underline underline-offset-2"

@@ -11,7 +11,7 @@ import {
 } from "@/config/practiceLocations";
 import { BRAND_ENTITY_LINE } from "@/config/brandLine";
 import { whatsappMessageDoctorProfile, whatsappUrlWithMessage } from "@/lib/whatsappCta";
-import drZalak from "@/assets/dr-zalak.jpg";
+import { DOCTOR_PHOTOS } from "@/config/doctorPhotos";
 import drCharmi from "@/assets/dr-charmi.jpeg";
 
 const doctors = [
@@ -58,9 +58,9 @@ const doctors = [
     location: PRACTICE_ZALAK_LOCATIONS_SHORT,
     phone: "+91-7990550754",
     icon: Heart,
-    image: drZalak,
-    imageWidth: 479,
-    imageHeight: 563,
+    image: DOCTOR_PHOTOS.zalak.displaySrc,
+    imageWidth: DOCTOR_PHOTOS.zalak.width,
+    imageHeight: DOCTOR_PHOTOS.zalak.height,
     profilePath: ROUTES.drZalak,
   },
 ];

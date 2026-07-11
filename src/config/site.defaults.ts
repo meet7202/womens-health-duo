@@ -106,6 +106,10 @@ export const KEYWORDS = [
   "Dr Zalak Shah STOTT Pilates Bangalore Ahmedabad",
   "womenshealthduo.com online consultation",
   "Women's Health Duo sitemap virtual cities",
+  "book teleconsultation women's health India",
+  "free women's health community WhatsApp",
+  "learn hub Instagram reels watch page",
+  "international consultation second opinion online",
 ].join(", ");
 
 /** Public profiles (no Twitter/X). Used in JSON-LD `sameAs` and docs. */

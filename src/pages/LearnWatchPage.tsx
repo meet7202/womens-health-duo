@@ -10,6 +10,7 @@ import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/bre
 import { knowledgeHubWatchPageVideoSchema } from "@/components/seo/schema/knowledgeHubVideos";
 import {
   getKnowledgeHubVideoById,
+  knowledgeHubInstagramPermalink,
   knowledgeHubVideoDisplayTitle,
   type KnowledgeHubVideo,
 } from "@/data/knowledgeHubVideos";
@@ -35,7 +36,7 @@ function openOnPlatformHref(video: KnowledgeHubVideo): string {
       ? `https://www.youtube.com/watch?v=${video.youtubeVideoId}`
       : `https://www.youtube.com/shorts/${video.youtubeVideoId}`;
   }
-  return `https://www.instagram.com/reel/${video.instagramReelId}/`;
+  return knowledgeHubInstagramPermalink(video);
 }
 
 export function LearnWatchPage() {
@@ -115,13 +116,13 @@ export function LearnWatchPage() {
             </a>
           </Button>
           <Button asChild variant="ghost" size="sm">
-            <Link to={ROUTES.learn}>Back to all clips</Link>
+            <Link to={ROUTES.learn}>Back to content hub</Link>
           </Button>
         </div>
 
         <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-          This page focuses on one clinician-led clip from Women&apos;s Health Duo. For more videos
-          and written guides, visit{" "}
+          This page focuses on one clinician-led post from Women&apos;s Health Duo. For more reels,
+          carousels, and written guides, visit{" "}
           <Link to={ROUTES.learn} className="text-primary underline underline-offset-4">
             Learn
           </Link>{" "}

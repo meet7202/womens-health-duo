@@ -26,6 +26,7 @@ import { Button } from "@/components/ui/button";
 import { PRACTICE_BOTH_DOCTORS_IN_PERSON } from "@/config/practiceLocations";
 import { onlineServiceCityFaqs } from "@/data/contextualFaqs";
 import { virtualServiceCityDocumentTitle, virtualServiceCityH1 } from "@/lib/pageSeoCopy";
+import { TelemedicineComplianceBlock } from "@/components/compliance/TelemedicineComplianceBlock";
 
 function buildMetaDescription(
   serviceTitle: string,
@@ -103,6 +104,8 @@ export function VirtualOnlineServiceCityPage() {
         <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground mb-4">
           {h1}
         </h1>
+
+        <TelemedicineComplianceBlock className="mb-8" showLimitations={false} />
 
         <p className="rounded-lg border border-primary/20 bg-primary/5 px-4 py-3 text-sm text-foreground mb-6">
           {service.summary} <strong className="text-foreground">In person:</strong>{" "}
