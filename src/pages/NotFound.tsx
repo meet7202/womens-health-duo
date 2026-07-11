@@ -1,7 +1,8 @@
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useEffect, useLayoutEffect, useMemo } from "react";
 import { ROUTES } from "@/config/routes";
 import { whatsappMessageGenericPage, whatsappUrlWithMessage } from "@/lib/whatsappCta";
+import { AppLink as Link } from "@/components/router/AppLink";
 
 const NotFound = () => {
   const location = useLocation();

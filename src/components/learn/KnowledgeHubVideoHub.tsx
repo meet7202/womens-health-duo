@@ -1,8 +1,9 @@
 import { useMemo } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { CONTACT } from "@/config/site";
+import { AppLink as Link } from "@/components/router/AppLink";
 import {
   KNOWLEDGE_HUB_VIDEOS,
   knowledgeHubInstagramPermalink,

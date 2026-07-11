@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { MessageCircle } from "lucide-react";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
@@ -24,6 +23,7 @@ import { EmergencyDisclaimer } from "@/components/compliance/EmergencyDisclaimer
 import { TelemedicineTrustBadges } from "@/components/compliance/TelemedicineTrustBadges";
 import { BookingMedicalDisclaimer } from "@/components/compliance/BookingMedicalDisclaimer";
 import { DOCTOR_PHOTOS } from "@/config/doctorPhotos";
+import { AppLink as Link } from "@/components/router/AppLink";
 
 const IMAGES: Record<DoctorSlug, { src: string; width: number; height: number; alt: string }> = {
   charmi: {

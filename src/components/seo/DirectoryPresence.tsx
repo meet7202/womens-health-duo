@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
 import { EXTERNAL } from "@/config/externalProfiles";
 import { ROUTES } from "@/config/routes";
 import { publicPathname } from "@/lib/githubPagesPublicUrl";
+import { AppLink as Link } from "@/components/router/AppLink";
 
 /**
  * On-site paths to book Dr. Charmi Shah and Dr. Zalak Shah, plus Maps for in-person locations.

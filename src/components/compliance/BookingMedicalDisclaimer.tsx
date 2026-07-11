@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import { ROUTES } from "@/config/routes";
 import { cn } from "@/lib/utils";
+import { AppLink as Link } from "@/components/router/AppLink";
 
 type BookingMedicalDisclaimerProps = {
   className?: string;

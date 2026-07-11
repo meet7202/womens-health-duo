@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Globe } from "lucide-react";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
@@ -9,6 +8,7 @@ import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { ROUTES } from "@/config/routes";
 import { SITE_URL } from "@/config/site";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
+import { AppLink as Link } from "@/components/router/AppLink";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import {
   internationalConsultationHubDocumentTitle,

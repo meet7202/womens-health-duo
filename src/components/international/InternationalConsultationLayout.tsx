@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { CalendarCheck, Globe, MessageCircle, Video } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ROUTES } from "@/config/routes";
@@ -6,6 +5,7 @@ import { whatsappUrlWithMessage } from "@/lib/whatsappCta";
 import { EmergencyDisclaimer } from "@/components/compliance/EmergencyDisclaimer";
 import type { InternationalService } from "@/data/internationalServices/types";
 import { internationalServicePath } from "@/data/internationalServices/internationalServiceRegistry";
+import { AppLink as Link } from "@/components/router/AppLink";
 
 export const HOW_IT_WORKS_STEPS = [
   {

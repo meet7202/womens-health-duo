@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { JsonLdFaq } from "@/components/seo/JsonLdFaq";
@@ -14,6 +13,7 @@ import { TelemedicineLimitations } from "@/components/compliance/TelemedicineLim
 import { TELEMEDICINE_FAQ } from "@/data/telemedicineFaq";
 import { DOCTOR_BY_SLUG } from "@/data/doctorProfiles";
 import { doctorRegistrationLine } from "@/config/doctorRegistration";
+import { AppLink as Link } from "@/components/router/AppLink";
 
 const TITLE = TELEMEDICINE_DOCUMENT_TITLE;
 const H1 = TELEMEDICINE_H1;

@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
 import { DOCTOR_BY_SLUG, type DoctorSlug } from "@/data/doctorProfiles";
 import { doctorRegistrationLine } from "@/config/doctorRegistration";
 import { DOCTOR_PHOTOS } from "@/config/doctorPhotos";
 import { cn } from "@/lib/utils";
+import { AppLink as Link } from "@/components/router/AppLink";
 
 const PHOTOS: Record<DoctorSlug, string> = {
   charmi: DOCTOR_PHOTOS.charmi.displaySrc,

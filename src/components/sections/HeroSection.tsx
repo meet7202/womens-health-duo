@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Heart, ArrowDown, MessageCircle } from "lucide-react";
 import { useMemo } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { appRouterTo } from "@/lib/githubPagesPublicUrl";
 import { Button } from "@/components/ui/button";
 import { ROUTES } from "@/config/routes";
 import { HOME_HERO_LEDE } from "@/config/site";
@@ -64,10 +65,10 @@ export const HeroSection = ({ seoH1 = null }: HeroSectionProps) => {
   const goToHomeSection = (scrollId: string) => {
     const path = homePermalinkForScrollId(scrollId);
     if (path) {
-      void navigate(path, { replace: true });
+      void navigate(appRouterTo(path), { replace: true });
       return;
     }
-    void navigate({ pathname: ROUTES.home, hash: scrollId }, { replace: true });
+    void navigate(appRouterTo({ pathname: ROUTES.home, hash: scrollId }), { replace: true });
   };
 
   return (

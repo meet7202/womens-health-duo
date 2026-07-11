@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ROUTES } from "@/config/routes";
 import { EmergencyDisclaimer } from "@/components/compliance/EmergencyDisclaimer";
@@ -6,6 +5,7 @@ import { TelemedicineLimitations } from "@/components/compliance/TelemedicineLim
 import { TelemedicineTrustBadges } from "@/components/compliance/TelemedicineTrustBadges";
 import { BookingMedicalDisclaimer } from "@/components/compliance/BookingMedicalDisclaimer";
 import { cn } from "@/lib/utils";
+import { AppLink as Link } from "@/components/router/AppLink";
 
 type TelemedicineComplianceBlockProps = {
   className?: string;

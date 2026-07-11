@@ -1,3 +1,4 @@
+import { publicPathname } from "../../lib/githubPagesPublicUrl";
 import { CHARMI_INTERNATIONAL_SERVICES } from "./charmiServices";
 import { ZALAK_INTERNATIONAL_SERVICES } from "./zalakServices";
 import {
@@ -17,11 +18,11 @@ export const INTERNATIONAL_SERVICES: readonly InternationalService[] = [
 const serviceBySlug = new Map(INTERNATIONAL_SERVICES.map((s) => [s.slug, s]));
 
 export function internationalServicePath(slug: string): string {
-  return `${INTERNATIONAL_CONSULTATION_BASE}/${slug}`;
+  return publicPathname(`${INTERNATIONAL_CONSULTATION_BASE}/${slug}`);
 }
 
 export function internationalDoctorHubPath(hub: InternationalDoctorHub): string {
-  return `${INTERNATIONAL_CONSULTATION_BASE}/${hub.pathSegment}`;
+  return publicPathname(`${INTERNATIONAL_CONSULTATION_BASE}/${hub.pathSegment}`);
 }
 
 export function getInternationalService(slug: string): InternationalService | undefined {
@@ -40,7 +41,7 @@ export function internationalServicesForDoctor(
 
 export function internationalServiceSitemapPaths(): string[] {
   const paths = [
-    INTERNATIONAL_HUB.path,
+    publicPathname(INTERNATIONAL_HUB.path),
     ...INTERNATIONAL_DOCTOR_HUBS.map((h) => internationalDoctorHubPath(h)),
     ...INTERNATIONAL_SERVICES.map((s) => internationalServicePath(s.slug)),
   ];

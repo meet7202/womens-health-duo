@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Link, Navigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { JsonLdFaq } from "@/components/seo/JsonLdFaq";
@@ -8,6 +8,8 @@ import { FaqSection } from "@/components/sections/FaqSection";
 import { ROUTES } from "@/config/routes";
 import { SITE_URL } from "@/config/site";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
+import { AppLink as Link } from "@/components/router/AppLink";
+import { AppNavigate as Navigate } from "@/components/router/AppNavigate";
 import {
   getVirtualConsultationCountryByPathSegment,
   virtualConsultationCityPath,

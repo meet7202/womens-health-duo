@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdFaq } from "@/components/seo/JsonLdFaq";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
@@ -10,6 +9,7 @@ import { SITE_FAQ } from "@/data/siteFaq";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
+import { AppLink as Link } from "@/components/router/AppLink";
 
 import { FAQ_DOCUMENT_TITLE, FAQ_H1 } from "@/lib/pageSeoCopy";
 

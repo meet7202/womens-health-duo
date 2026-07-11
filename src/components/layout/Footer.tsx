@@ -1,11 +1,12 @@
 import { useMemo } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Heart, Instagram, Mail, MessageCircle, Phone, Youtube } from "lucide-react";
 import { CONTACT } from "@/config/site";
 import { ROUTES } from "@/config/routes";
 import { publicPathname } from "@/lib/githubPagesPublicUrl";
 import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 import { BRAND_ENTITY_LINE } from "@/config/brandLine";
+import { AppLink as Link } from "@/components/router/AppLink";
 
 const LEGAL_LINKS = [
   { label: "Telemedicine policy", to: ROUTES.telemedicinePolicy },

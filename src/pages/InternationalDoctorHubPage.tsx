@@ -1,4 +1,4 @@
-import { Link, Navigate, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { PageShell } from "@/components/layout/PageShell";
@@ -7,6 +7,8 @@ import { ROUTES } from "@/config/routes";
 import { DOCTOR_BY_SLUG } from "@/data/doctorProfiles";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { internationalDoctorHubDocumentTitle } from "@/lib/pageSeoCopy";
+import { AppLink as Link } from "@/components/router/AppLink";
+import { AppNavigate as Navigate } from "@/components/router/AppNavigate";
 import {
   getInternationalDoctorHub,
   internationalDoctorHubPath,

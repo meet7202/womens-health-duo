@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useMemo } from "react";
 import { Activity, HeartPulse, Baby, Dumbbell, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ROUTES } from "@/config/routes";
 import { publicPathname } from "@/lib/githubPagesPublicUrl";
 import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsappCta";
+import { AppLink as Link } from "@/components/router/AppLink";
 
 const topicLanes = [
   {

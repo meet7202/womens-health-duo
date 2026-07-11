@@ -79,6 +79,7 @@ For a **GitHub project Pages** preview build, set **`VITE_SITE_URL`** to the ful
 
 ## UI / shadcn
 
+- **Internal links:** use **`AppLink`** / **`AppNavigate`** from [`src/components/router/`](src/components/router/) (import as `Link` / `Navigate`) for in-app routes — they apply **`publicPathname()`** so `href` matches GitHub Pages trailing-slash URLs and avoids extra 301s. **`ROUTES.*`** constants stay slashless; path builders (`learnHubFilteredPath`, `virtualConsultationCityPath`, `internationalServicePath`, etc.) should return trailing-slash paths.
 - Path alias **`@` → `src`** (see `vite.config.ts`, `tsconfig.app.json`). **`vite.config.ts`** imports [`src/config/routes.ts`](src/config/routes.ts) for `SITEMAP_PATHS`; keep that dependency chain free of **`@/`** imports — Node loads the config without TS path mapping (see [`learnHubUrls.ts`](src/lib/learnHubUrls.ts), which uses relative imports for that reason).
 - **`src/components/ui/use-toast.ts`** re-exports from **`src/hooks/use-toast.ts`** — implement toast logic only in `hooks`; keep the re-export thin.
 - ESLint may relax **`react-refresh/only-export-components`** under `src/components/ui/**` for shadcn-style patterns — do not blanket-disable for the whole tree.

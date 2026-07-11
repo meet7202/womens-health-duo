@@ -1,3 +1,5 @@
+import type { To } from "react-router-dom";
+
 /** Paths that are static files on the host (not `…/index.html` directories). */
 const TRAILING_SLASH_EXCLUDE =
   /\.(txt|xml|html|svg|png|jpe?g|webp|ico|pdf|json|css|js|webmanifest|map)$/i;
@@ -54,4 +56,32 @@ export function needsPublicTrailingSlash(pathname: string): boolean {
   if (core === "/") return false;
   if (isStaticAssetPath(core)) return false;
   return !pathname.endsWith("/");
+}
+
+function isExternalOrSpecialRouterPath(pathname: string): boolean {
+  return (
+    pathname.startsWith("#") ||
+    /^https?:\/\//i.test(pathname) ||
+    pathname.startsWith("mailto:") ||
+    pathname.startsWith("tel:")
+  );
+}
+
+/** Normalize React Router `to` values for GitHub Pages directory URLs. */
+export function appRouterTo(to: To): To {
+  if (typeof to === "string") {
+    if (isExternalOrSpecialRouterPath(to)) return to;
+    return publicPathname(to);
+  }
+  if (
+    typeof to === "object" &&
+    to !== null &&
+    "pathname" in to &&
+    typeof to.pathname === "string"
+  ) {
+    const { pathname } = to;
+    if (isExternalOrSpecialRouterPath(pathname)) return to;
+    return { ...to, pathname: publicPathname(pathname) };
+  }
+  return to;
 }

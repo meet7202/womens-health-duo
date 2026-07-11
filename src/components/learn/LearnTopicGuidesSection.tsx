@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import { ROUTES } from "@/config/routes";
 import { publicPathname } from "@/lib/githubPagesPublicUrl";
+import { AppLink as Link } from "@/components/router/AppLink";
 import {
   getTopicGuide,
   topicGuideHubSlugs,

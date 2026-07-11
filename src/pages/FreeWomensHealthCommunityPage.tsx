@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import {
   BookOpen,
   CalendarHeart,
@@ -22,6 +21,7 @@ import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { COMMUNITY_DOCUMENT_TITLE, COMMUNITY_H1 } from "@/lib/pageSeoCopy";
 import { COMMUNITY_BENEFITS, COMMUNITY_FAQ, COMMUNITY_TOPICS } from "@/data/communityFaq";
 import { Button } from "@/components/ui/button";
+import { AppLink as Link } from "@/components/router/AppLink";
 
 const TITLE = COMMUNITY_DOCUMENT_TITLE;
 const H1 = COMMUNITY_H1;
