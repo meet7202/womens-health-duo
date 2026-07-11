@@ -19,6 +19,8 @@
     "preview": "vite preview",
     "audit:seo-titles": "node scripts/audit-seo-titles.mjs",
     "audit:seo-h1": "node scripts/audit-seo-h1.mjs",
+    "audit:seo-headings": "node scripts/audit-seo-headings.mjs",
+    "audit:seo-sitemap": "node scripts/audit-seo-sitemap.mjs",
     "generate:virtual-cities": "node scripts/generate-virtual-consultation-cities.mjs",
     "import:instagram-reels": "node scripts/import-instagram-reel-urls.mjs",
     "import:instagram": "node scripts/import-instagram.mjs",

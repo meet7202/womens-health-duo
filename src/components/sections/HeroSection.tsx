@@ -11,14 +11,15 @@ import { HOME_DEFAULT_H1 } from "@/lib/pageSeoCopy";
 import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 import { cn } from "@/lib/utils";
 import heroImage from "@/assets/hero-doctors.jpg";
+import { HERO_IMAGE_ALT, HERO_IMAGE_TITLE } from "@/lib/mediaSeo";
 
 const heroH1VisualClass =
   "font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight mb-5 text-[hsl(20_28%_11%)] [text-shadow:0_1px_0_hsl(30_40%_99%),0_0_24px_hsl(30_40%_98%_/_0.9)] text-balance";
 
 export type HeroSectionProps = {
   /**
-   * Homepage section permalink (`/about`, …): use as the sole document `<h1>` (same string as
-   * `<title>` from `homeSectionSeo`). The default marketing headline moves to a styled paragraph.
+   * Homepage section permalink (`/about`, …): slug-aligned section label as the sole `<h1>`
+   * (`homeSectionSeo().h1`). The default marketing headline moves to a styled paragraph.
    */
   seoH1?: string | null;
 };
@@ -179,7 +180,8 @@ export const HeroSection = ({ seoH1 = null }: HeroSectionProps) => {
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-elevated">
               <img
                 src={heroImage}
-                alt="Dr. Charmi Shah and Dr. Zalak Shah ,  Women's Health Duo"
+                alt={HERO_IMAGE_ALT}
+                title={HERO_IMAGE_TITLE}
                 className="h-full w-full object-cover"
                 width={640}
                 height={800}

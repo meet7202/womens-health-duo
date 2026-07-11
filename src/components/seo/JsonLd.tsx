@@ -10,7 +10,7 @@ import { ROUTES } from "@/config/routes";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { PRACTICE_CHARMI_IN_PERSON, PRACTICE_ZALAK_IN_PERSON } from "@/config/practiceLocations";
 import { DOCTOR_REGISTRATION } from "@/config/doctorRegistration";
-import { DOCTOR_PHOTOS } from "@/config/doctorPhotos";
+import { physicianImageObject } from "@/components/seo/schema/mediaImages";
 
 /**
  * Schema.org structured data for search engines and AI crawlers.
@@ -22,11 +22,8 @@ export function JsonLd() {
   const charmiId = `${origin}#physician-charmi`;
   const zalakId = `${origin}#physician-zalak`;
   const ogImage = githubPagesAbsoluteUrl(SITE_URL, OG_IMAGE_PATH);
-  const charmiPhoto = githubPagesAbsoluteUrl(SITE_URL, DOCTOR_PHOTOS.charmi.displaySrc);
-  const zalakPhoto = githubPagesAbsoluteUrl(
-    SITE_URL,
-    DOCTOR_PHOTOS.zalak.seoImagePath ?? DOCTOR_PHOTOS.zalak.displaySrc,
-  );
+  const charmiImage = physicianImageObject("charmi");
+  const zalakImage = physicianImageObject("zalak");
 
   const india = { "@type": "Country" as const, name: "India" };
 
@@ -100,7 +97,7 @@ export function JsonLd() {
         telephone: CONTACT.phoneE164,
         email: CONTACT.email,
         url: origin,
-        image: charmiPhoto,
+        image: charmiImage,
         hasCredential: {
           "@type": "EducationalOccupationalCredential",
           credentialCategory: "Medical registration",
@@ -139,7 +136,7 @@ export function JsonLd() {
         telephone: CONTACT.phoneE164,
         email: CONTACT.email,
         url: origin,
-        image: zalakPhoto,
+        image: zalakImage,
         hasCredential: {
           "@type": "EducationalOccupationalCredential",
           credentialCategory: "Physiotherapy registration",

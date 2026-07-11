@@ -38,6 +38,8 @@ const doctors = [
     imageWidth: 849,
     imageHeight: 1024,
     profilePath: ROUTES.drCharmi,
+    photoAlt: DOCTOR_PHOTOS.charmi.alt,
+    photoTitle: DOCTOR_PHOTOS.charmi.title,
   },
   {
     name: "Dr. Zalak Shah (PT)",
@@ -63,6 +65,8 @@ const doctors = [
     imageWidth: DOCTOR_PHOTOS.zalak.width,
     imageHeight: DOCTOR_PHOTOS.zalak.height,
     profilePath: ROUTES.drZalak,
+    photoAlt: DOCTOR_PHOTOS.zalak.alt,
+    photoTitle: DOCTOR_PHOTOS.zalak.title,
   },
 ];
 
@@ -109,7 +113,8 @@ export const AboutSection = () => {
                 <div className="w-40 h-48 rounded-2xl overflow-hidden flex-shrink-0 shadow-lg">
                   <img
                     src={doctor.image}
-                    alt={`${doctor.name} ,  portrait`}
+                    alt={doctor.photoAlt}
+                    title={doctor.photoTitle}
                     width={doctor.imageWidth}
                     height={doctor.imageHeight}
                     sizes="(max-width: 1024px) 160px, 320px"
