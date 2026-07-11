@@ -1,5 +1,6 @@
 import { useCallback, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { AppLink as Link } from "@/components/router/AppLink";
+
 import { ChevronLeft, ChevronRight, MessageCircle } from "lucide-react";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";

@@ -1,5 +1,6 @@
-import { Navigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { ROUTES } from "@/config/routes";
+import { AppNavigate as Navigate } from "@/components/router/AppNavigate";
 import {
   getVirtualConsultationCityBySlug,
   resolveLegacyGlobalOnlineSlug,

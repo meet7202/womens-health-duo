@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { JsonLdFaq } from "@/components/seo/JsonLdFaq";
@@ -10,6 +10,7 @@ import { ROUTES } from "@/config/routes";
 import { SITE_URL } from "@/config/site";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
+import { AppLink as Link } from "@/components/router/AppLink";
 import {
   getTopicGuide,
   topicGuideExampleConsultPaths,

@@ -1,4 +1,4 @@
-import { Link, Navigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { JsonLdFaq } from "@/components/seo/JsonLdFaq";
@@ -10,6 +10,8 @@ import { SITE_URL } from "@/config/site";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { internationalServiceDocumentTitle } from "@/lib/pageSeoCopy";
+import { AppLink as Link } from "@/components/router/AppLink";
+import { AppNavigate as Navigate } from "@/components/router/AppNavigate";
 import {
   getInternationalDoctorHub,
   getInternationalService,

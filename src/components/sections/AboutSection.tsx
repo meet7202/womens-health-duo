@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Link } from "react-router-dom";
+import { AppLink as Link } from "@/components/router/AppLink";
+
 import { Stethoscope, Heart, Award, GraduationCap, Users, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ROUTES } from "@/config/routes";

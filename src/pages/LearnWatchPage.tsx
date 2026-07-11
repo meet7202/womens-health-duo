@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { PageShell } from "@/components/layout/PageShell";
@@ -8,6 +8,7 @@ import { CONTACT } from "@/config/site";
 import { KnowledgeHubVideoPlayer } from "@/components/learn/KnowledgeHubVideoPlayer";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { knowledgeHubWatchPageVideoSchema } from "@/components/seo/schema/knowledgeHubVideos";
+import { AppLink as Link } from "@/components/router/AppLink";
 import {
   getKnowledgeHubVideoById,
   knowledgeHubInstagramPermalink,

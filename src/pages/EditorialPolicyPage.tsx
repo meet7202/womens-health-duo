@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { PageShell } from "@/components/layout/PageShell";
 import { ROUTES } from "@/config/routes";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
+import { AppLink as Link } from "@/components/router/AppLink";
 
 import { EDITORIAL_DOCUMENT_TITLE, EDITORIAL_H1 } from "@/lib/pageSeoCopy";
 

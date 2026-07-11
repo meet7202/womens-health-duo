@@ -1,5 +1,6 @@
 import { Fragment } from "react";
-import { Link } from "react-router-dom";
+import { AppLink as Link } from "@/components/router/AppLink";
+
 import {
   Breadcrumb,
   BreadcrumbItem,

@@ -1,5 +1,5 @@
 import { useEffect, useMemo } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { PageShell } from "@/components/layout/PageShell";
@@ -16,6 +16,7 @@ import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/bre
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { Youtube, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { AppLink as Link } from "@/components/router/AppLink";
 import {
   learnHubBreadcrumbs,
   learnHubFilteredPath,

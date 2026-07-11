@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -8,6 +8,7 @@ import { ROUTES } from "@/config/routes";
 import { cn } from "@/lib/utils";
 import { publicPathname } from "@/lib/githubPagesPublicUrl";
 import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsappCta";
+import { AppLink as Link } from "@/components/router/AppLink";
 
 const homeNavSections = [
   { label: "About", to: publicPathname(ROUTES.homeAbout) },

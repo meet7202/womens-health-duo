@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { ROUTES } from "@/config/routes";
 import { cn } from "@/lib/utils";
+import { AppLink as Link } from "@/components/router/AppLink";
 
 type TelemedicineConsentCheckboxProps = {
   checked: boolean;

@@ -1,5 +1,5 @@
 import { useLayoutEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { scrollToHashWhenReady } from "@/lib/scrollToHash";
 import { homeFaqJsonLdPageUrl, homeScrollTargetId, homeSectionSeo } from "@/lib/homeSectionPaths";
 import { Header } from "@/components/layout/Header";
@@ -18,6 +18,7 @@ import { publicPathname } from "@/lib/githubPagesPublicUrl";
 import { SITE_URL } from "@/config/site";
 import { HOME_PAGE_FAQ } from "@/data/homePageFaq";
 import { Button } from "@/components/ui/button";
+import { AppLink as Link } from "@/components/router/AppLink";
 
 /**
  * Home sections are imported eagerly (not `lazy`) so production never depends on
