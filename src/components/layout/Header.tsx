@@ -6,13 +6,14 @@ import { Button } from "@/components/ui/button";
 import whdLogo from "@/assets/whd-logo.jpg";
 import { ROUTES } from "@/config/routes";
 import { cn } from "@/lib/utils";
+import { publicPathname } from "@/lib/githubPagesPublicUrl";
 import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 
 const homeNavSections = [
-  { label: "About", to: ROUTES.homeAbout },
-  { label: "Services", to: ROUTES.homeServicesSection },
-  { label: "Testimonials", to: ROUTES.homeTestimonials },
-  { label: "Contact", to: ROUTES.homeContact },
+  { label: "About", to: publicPathname(ROUTES.homeAbout) },
+  { label: "Services", to: publicPathname(ROUTES.homeServicesSection) },
+  { label: "Testimonials", to: publicPathname(ROUTES.homeTestimonials) },
+  { label: "Contact", to: publicPathname(ROUTES.homeContact) },
 ] as const;
 
 /** Nav links before Learn: About → Services → Testimonials. */
@@ -51,7 +52,7 @@ export const Header = () => {
       window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
       return;
     }
-    void navigate({ pathname: ROUTES.home }, { replace: alreadyHome });
+    void navigate({ pathname: publicPathname(ROUTES.home) }, { replace: alreadyHome });
     const scrollTop = () => window.scrollTo({ top: 0, left: 0, behavior: "auto" });
     queueMicrotask(scrollTop);
     requestAnimationFrame(() => {
@@ -65,7 +66,7 @@ export const Header = () => {
     }
     e.preventDefault();
     closeMobile();
-    void navigate(to, { replace: isRootHomePath });
+    void navigate(publicPathname(to), { replace: isRootHomePath });
   };
 
   /** Learn in the nav: always open the hub and top of page; if already on `/learn`, scroll up (Link alone would not). */
@@ -81,7 +82,7 @@ export const Header = () => {
       window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
       return;
     }
-    void navigate(ROUTES.learn);
+    void navigate(publicPathname(ROUTES.learn));
     const scrollTop = () => window.scrollTo({ top: 0, left: 0, behavior: "auto" });
     queueMicrotask(scrollTop);
     requestAnimationFrame(() => {
@@ -100,7 +101,7 @@ export const Header = () => {
             transition={{ duration: 0.5 }}
           >
             <Link
-              to={ROUTES.home}
+              to={publicPathname(ROUTES.home)}
               onClick={goHome}
               className="flex min-w-0 items-center gap-2 sm:gap-3 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
@@ -126,7 +127,7 @@ export const Header = () => {
 
           <nav className="hidden md:flex items-center gap-4 lg:gap-6" aria-label="Primary">
             <Link
-              to={ROUTES.home}
+              to={publicPathname(ROUTES.home)}
               onClick={goHome}
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
@@ -143,7 +144,7 @@ export const Header = () => {
               </Link>
             ))}
             <Link
-              to={ROUTES.learn}
+              to={publicPathname(ROUTES.learn)}
               onClick={goLearn}
               className={cn(
                 "text-sm font-medium transition-colors rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 shrink-0",
@@ -205,7 +206,7 @@ export const Header = () => {
           >
             <nav id="mobile-nav" className="container mx-auto px-4 py-4 flex flex-col gap-1">
               <Link
-                to={ROUTES.home}
+                to={publicPathname(ROUTES.home)}
                 onClick={goHome}
                 className="text-left py-3 px-4 text-foreground hover:bg-accent rounded-lg transition-colors"
               >
@@ -222,7 +223,7 @@ export const Header = () => {
                 </Link>
               ))}
               <Link
-                to={ROUTES.learn}
+                to={publicPathname(ROUTES.learn)}
                 onClick={goLearn}
                 className={cn(
                   "text-left py-3 px-4 rounded-lg transition-colors",

@@ -7,6 +7,7 @@ import {
   OG_IMAGE_PATH,
 } from "@/config/site";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
+import { BING_TITLE_MAX_LEN, capDocumentTitle } from "@/lib/seoTitle";
 
 export type SeoHeadProps = {
   /** Full `<title>` text */
@@ -47,7 +48,7 @@ function canonicalUrlForPath(path: string | undefined) {
  * Omit props on the homepage to use defaults from `site.defaults`.
  */
 export function SeoHead({ title, metaDescription, path, metaKeywords }: SeoHeadProps = {}) {
-  const resolvedTitle = title ?? DEFAULT_TITLE;
+  const resolvedTitle = capDocumentTitle(title ?? DEFAULT_TITLE, BING_TITLE_MAX_LEN);
   const resolvedDescription = metaDescription ?? DEFAULT_DESCRIPTION;
   const resolvedKeywords = metaKeywords ?? KEYWORDS;
   const pageUrl = canonicalUrlForPath(path);

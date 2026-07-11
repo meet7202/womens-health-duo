@@ -1,4 +1,5 @@
 import { learnHubTopicLabels, learnHubFilteredPath } from "../../lib/learnHubUrls";
+import { publicPathname } from "../../lib/githubPagesPublicUrl";
 import {
   virtualServiceCityPath,
   getVirtualConsultationCityBySlug,
@@ -230,7 +231,7 @@ const GUIDE_BY_SLUG: ReadonlyMap<string, TopicGuidePageModel> = new Map(
     const learnTopicLabels = filterLearnTopics(row.learnTopics ?? cc.defaultLearnTopics);
     const sections = cc.buildSections(title);
     const faqs = buildTopicGuideFaqs(row.slug, title, consult, cc.faqPool);
-    const path = `/${row.slug}`;
+    const path = publicPathname(`/${row.slug}`);
     const relatedSlugs = computeRelated(row, BY_CLUSTER);
     const model: TopicGuidePageModel = {
       slug: row.slug,
@@ -309,7 +310,7 @@ export function topicGuidesGroupedForIndex(): TopicGuideIndexGroup[] {
     const guides = rows.map((row) => {
       const g = GUIDE_BY_SLUG.get(row.slug);
       const title = g?.title ?? topicGuideTitleFromSlug(row.slug);
-      return { slug: row.slug, title, path: `/${row.slug}` };
+      return { slug: row.slug, title, path: publicPathname(`/${row.slug}`) };
     });
     return {
       clusterId,

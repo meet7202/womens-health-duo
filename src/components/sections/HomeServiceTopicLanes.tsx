@@ -4,6 +4,7 @@ import { useMemo } from "react";
 import { Activity, HeartPulse, Baby, Dumbbell, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ROUTES } from "@/config/routes";
+import { publicPathname } from "@/lib/githubPagesPublicUrl";
 import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 
 const topicLanes = [
@@ -88,7 +89,7 @@ export function HomeServiceTopicLanes() {
               <p className="flex-1 text-sm leading-relaxed text-muted-foreground">{lane.text}</p>
               <div className="mt-5 flex flex-wrap gap-2">
                 <Button variant="outline" size="sm" asChild>
-                  <Link to={ROUTES.learn}>Learn hub</Link>
+                  <Link to={publicPathname(ROUTES.learn)}>Learn hub</Link>
                 </Button>
                 <Button variant="ghost" size="sm" className="text-primary" asChild>
                   <a href={bookWhatsAppHref} target="_blank" rel="noopener noreferrer">

@@ -54,6 +54,22 @@ export type KnowledgeHubVideo =
       approxViews?: number;
     };
 
+const GENERIC_INSTAGRAM_REEL_TITLE = /^Women's Health Duo\s*,\s*Instagram Reel$/i;
+
+/** On-page H1 and `<title>` for watch pages; prefers a caption lead over generic reel titles. */
+export function knowledgeHubVideoDisplayTitle(v: KnowledgeHubVideo): string {
+  if (!GENERIC_INSTAGRAM_REEL_TITLE.test(v.title.trim())) return v.title;
+  const cap = knowledgeHubVideoOriginalPlatformCaption(v);
+  if (cap) {
+    const line = cap
+      .split("\n")
+      .map((l) => l.trim())
+      .find((l) => l.length >= 24);
+    if (line) return line.length > 120 ? `${line.slice(0, 117)}…` : line;
+  }
+  return v.title;
+}
+
 /** Text under the embed and in `VideoObject.description` ,  use platform captions when set. */
 export function knowledgeHubVideoCaptionForSeo(v: KnowledgeHubVideo): string {
   if (v.kind === "youtube_short") {
@@ -240,3 +256,7 @@ const _hubMerged: KnowledgeHubVideo[] = [
 _hubMerged.sort(compareKnowledgeHubVideos);
 
 export const KNOWLEDGE_HUB_VIDEOS: readonly KnowledgeHubVideo[] = _hubMerged;
+
+export function getKnowledgeHubVideoById(id: string): KnowledgeHubVideo | undefined {
+  return KNOWLEDGE_HUB_VIDEOS.find((v) => v.id === id);
+}

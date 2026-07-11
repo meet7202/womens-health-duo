@@ -19,10 +19,7 @@ import { InclusiveSeoListFootnote } from "@/components/seo/InclusiveSeoListFootn
 import { Button } from "@/components/ui/button";
 import { PRACTICE_BOTH_DOCTORS_IN_PERSON } from "@/config/practiceLocations";
 import { virtualCountryFaqs } from "@/data/contextualFaqs";
-
-function buildTitle(country: string) {
-  return `Virtual online consultations ,  ${country} | Women's Health Duo`;
-}
+import { virtualCountryDocumentTitle, virtualCountryH1 } from "@/lib/pageSeoCopy";
 
 function buildDescription(country: string, cityCount: number) {
   return `Virtual OB-GYN, IVF discussion, laparoscopy consults, women's health physiotherapy, Mat Pilates online, and STOTT Pilates (Mat & Reformer) for patients in ${country}. ${cityCount} city overviews link to each type of online visit, book via WhatsApp or email. ${PRACTICE_BOTH_DOCTORS_IN_PERSON}`;
@@ -46,7 +43,8 @@ export function VirtualConsultationCountryPage() {
   }
 
   const path = virtualConsultationCountryPath(row);
-  const title = buildTitle(row.country);
+  const title = virtualCountryDocumentTitle(row.country);
+  const h1 = virtualCountryH1(row.country);
   const description = buildDescription(row.country, row.cities.length);
   const crumbs = [
     { name: "Home", path: ROUTES.home },
@@ -75,7 +73,7 @@ export function VirtualConsultationCountryPage() {
           Virtual online · {row.country}
         </p>
         <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground mb-4">
-          Women&apos;s Health Duo , virtual care for patients in {row.country}
+          {h1}
         </h1>
 
         <p className="text-lg text-muted-foreground leading-relaxed mb-6">

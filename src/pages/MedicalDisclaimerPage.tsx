@@ -6,7 +6,10 @@ import { ROUTES } from "@/config/routes";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 
-const TITLE = "Medical disclaimer | Women's Health Duo";
+import { MEDICAL_DOCUMENT_TITLE, MEDICAL_H1 } from "@/lib/pageSeoCopy";
+
+const TITLE = MEDICAL_DOCUMENT_TITLE;
+const H1 = MEDICAL_H1;
 const DESCRIPTION =
   "Medical disclaimer for Women's Health Duo: education and telehealth consults are not emergency care, not a substitute for in-person evaluation when needed, and not supplement retail.";
 
@@ -35,7 +38,7 @@ export function MedicalDisclaimerPage() {
       <article className="max-w-3xl">
         <p className="text-xs text-muted-foreground mb-2">Last updated: {LAST_UPDATED}</p>
         <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground mb-4">
-          Medical disclaimer
+          {H1}
         </h1>
         <p className="text-muted-foreground leading-relaxed mb-8">{DESCRIPTION}</p>
 

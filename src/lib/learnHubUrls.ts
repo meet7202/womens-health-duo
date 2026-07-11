@@ -3,6 +3,7 @@ import {
   type HubDoctorTag,
   type KnowledgeHubVideo,
 } from "../data/knowledgeHubVideos";
+import { publicPathname } from "./githubPagesPublicUrl";
 
 /**
  * Same shape as `Crumb` in `components/seo/schema/breadcrumbs`.
@@ -12,6 +13,9 @@ type BreadcrumbItem = { name: string; path: string };
 
 /** Must stay aligned with `ROUTES.learn` in `src/config/routes.ts`. */
 export const LEARN_HUB_BASE_PATH = "/learn" as const;
+
+/** Prefix for per-clip watch pages (`/learn/watch/<videoId>/`). */
+export const LEARN_WATCH_PATH_PREFIX = `${LEARN_HUB_BASE_PATH}/watch` as const;
 
 /** Doctor tab on Learn: `all`, or a single clinician (`HubDoctorTag` minus duo-only `both`). */
 export type LearnHubDoctorFilter = "all" | Exclude<HubDoctorTag, "both">;
@@ -111,6 +115,20 @@ export function parseLearnHubPathname(pathname: string): LearnHubParsed {
 }
 
 /** Canonical path for Learn hub filters (for links, canonical, sitemap). */
+/** Canonical watch-page path for a hub clip (trailing slash for GitHub Pages). */
+export function learnVideoWatchPath(videoId: string): string {
+  return publicPathname(`${LEARN_WATCH_PATH_PREFIX}/${videoId}`);
+}
+
+/** Video id from `/learn/watch/<id>/`, or `null` when the path is not a watch URL. */
+export function parseLearnVideoWatchId(pathname: string): string | null {
+  pathname = stripTrailingIndexHtmlPath(pathname);
+  const prefix = `${LEARN_WATCH_PATH_PREFIX}/`;
+  if (!pathname.startsWith(prefix)) return null;
+  const id = pathname.slice(prefix.length).replace(/\/+$/, "");
+  return id.length > 0 ? id : null;
+}
+
 export function learnHubFilteredPath(opts: {
   doctor?: LearnHubDoctorFilter;
   topic?: string | "all";
@@ -118,17 +136,16 @@ export function learnHubFilteredPath(opts: {
   const doctor = opts.doctor ?? "all";
   const topic = opts.topic ?? "all";
   const base = LEARN_HUB_BASE_PATH;
-  if (doctor === "all" && topic === "all") return base;
-  if (doctor === "all" && topic !== "all") {
-    return `${base}/topic/${learnTopicSlug(topic)}`;
+  let path: string = base;
+  if (doctor === "all" && topic === "all") path = base;
+  else if (doctor === "all" && topic !== "all") {
+    path = `${base}/topic/${learnTopicSlug(topic)}`;
+  } else if (doctor !== "all" && topic === "all") {
+    path = `${base}/${LEARN_DOCTOR_SEGMENT[doctor]}`;
+  } else if (doctor !== "all" && topic !== "all") {
+    path = `${base}/${LEARN_DOCTOR_SEGMENT[doctor]}/topic/${learnTopicSlug(topic)}`;
   }
-  if (doctor !== "all" && topic === "all") {
-    return `${base}/${LEARN_DOCTOR_SEGMENT[doctor]}`;
-  }
-  if (doctor !== "all" && topic !== "all") {
-    return `${base}/${LEARN_DOCTOR_SEGMENT[doctor]}/topic/${learnTopicSlug(topic)}`;
-  }
-  return base;
+  return publicPathname(path);
 }
 
 function hasVideosForFilter(doctor: Exclude<LearnHubDoctorFilter, "all">, topic: string): boolean {
@@ -157,6 +174,13 @@ export function learnHubSitemapPaths(): string[] {
   }
 
   return [...paths].sort((a, b) => a.localeCompare(b));
+}
+
+/** Every indexable per-clip watch URL (one video per page for Google Video indexing). */
+export function learnWatchSitemapPaths(): string[] {
+  return KNOWLEDGE_HUB_VIDEOS.map((v) => learnVideoWatchPath(v.id)).sort((a, b) =>
+    a.localeCompare(b),
+  );
 }
 
 const LEARN_SEO_BASE =
@@ -195,19 +219,10 @@ export function learnHubBreadcrumbs(parsed: LearnHubParsed): BreadcrumbItem[] {
   return items;
 }
 
-export function learnHubSeoTitle(parsed: LearnHubParsed): string {
-  const base = "Women's Health Duo Learn";
-  if (parsed.doctor === "all" && parsed.topic === "all") {
-    return "Women's health & pregnancy videos from our doctors | Women's Health Duo";
-  }
-  if (parsed.doctor !== "all" && parsed.topic === "all") {
-    return `${base} ,  ${doctorFilterLabel(parsed.doctor)} clips`;
-  }
-  if (parsed.doctor === "all" && parsed.topic !== "all") {
-    return `${base} ,  ${parsed.topic}`;
-  }
-  return `${base} ,  ${doctorFilterLabel(parsed.doctor)} · ${parsed.topic}`;
-}
+export {
+  learnHubDocumentTitle as learnHubSeoTitle,
+  learnHubH1 as learnHubSeoH1,
+} from "./pageSeoCopy";
 
 export function learnHubSeoDescription(parsed: LearnHubParsed): string {
   const tail =

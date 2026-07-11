@@ -1,6 +1,7 @@
 import virtualConsultationCities from "../data/virtualConsultationCities.json";
 import legacyGlobalOnlineSlugMap from "../data/legacyGlobalOnlineSlugMap.json";
 import { ANCHOR_VIRTUAL_CONSULTATION_CITIES } from "../data/anchorVirtualConsultationCities";
+import { publicPathname } from "./githubPagesPublicUrl";
 
 export const VIRTUAL_CONSULTATION_HUB_PATH = "/online-consultation" as const;
 
@@ -93,7 +94,7 @@ function buildVirtualConsultationCountries(): readonly VirtualConsultationCountr
 export const VIRTUAL_CONSULTATION_COUNTRIES = buildVirtualConsultationCountries();
 
 export function virtualConsultationCountryPath(country: VirtualConsultationCountryIndex): string {
-  return `${VIRTUAL_CONSULTATION_HUB_PATH}/country/${country.pathSegment}`;
+  return publicPathname(`${VIRTUAL_CONSULTATION_HUB_PATH}/country/${country.pathSegment}`);
 }
 
 /** Resolve country hub from URL segment (`india`) or legacy ISO-style code (`in`). */
@@ -111,12 +112,14 @@ export function getVirtualConsultationCountryByPathSegment(
 export const getVirtualConsultationCountryByCode = getVirtualConsultationCountryByPathSegment;
 
 export function virtualConsultationCityPath(city: VirtualConsultationCity): string {
-  return `${VIRTUAL_CONSULTATION_HUB_PATH}/${virtualCityPathSegment(city)}`;
+  return publicPathname(`${VIRTUAL_CONSULTATION_HUB_PATH}/${virtualCityPathSegment(city)}`);
 }
 
 /** Service-specific virtual URL: `/online-consultation/:citySegment/:serviceSlug` */
 export function virtualServiceCityPath(city: VirtualConsultationCity, serviceSlug: string): string {
-  return `${VIRTUAL_CONSULTATION_HUB_PATH}/${virtualCityPathSegment(city)}/${serviceSlug}`;
+  return publicPathname(
+    `${VIRTUAL_CONSULTATION_HUB_PATH}/${virtualCityPathSegment(city)}/${serviceSlug}`,
+  );
 }
 
 /** Same-country cities first, then others ,  for “similar cities” footer links (not exhaustive). */

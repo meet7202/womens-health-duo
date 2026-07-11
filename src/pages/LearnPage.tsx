@@ -13,7 +13,6 @@ import { LearnTopicGuidesSection } from "@/components/learn/LearnTopicGuidesSect
 import { JsonLdFaq } from "@/components/seo/JsonLdFaq";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
-import { knowledgeHubVideoSchemaNodes } from "@/components/seo/schema/knowledgeHubVideos";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { Youtube, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -22,6 +21,7 @@ import {
   learnHubFilteredPath,
   learnHubSeoDescription,
   learnHubSeoTitle,
+  learnHubSeoH1,
   learnHubVideosMatching,
   parseLearnHubPathname,
   stripTrailingIndexHtmlPath,
@@ -56,8 +56,8 @@ export function LearnPage() {
 
   const crumbs = useMemo(() => learnHubBreadcrumbs(parsed), [parsed]);
   const title = learnHubSeoTitle(parsed);
+  const h1 = learnHubSeoH1(parsed);
   const description = learnHubSeoDescription(parsed);
-  const filteredVideos = useMemo(() => learnHubVideosMatching(parsed), [parsed]);
 
   const learnFaqItems = useMemo(
     () => learnHubFaqsForTopic(parsed.topic === "all" ? "all" : parsed.topic),
@@ -76,9 +76,8 @@ export function LearnPage() {
         name: title,
         description,
       }),
-      ...knowledgeHubVideoSchemaNodes(filteredVideos, canonicalPath),
     ],
-    [crumbs, canonicalPath, title, description, filteredVideos],
+    [crumbs, canonicalPath, title, description],
   );
 
   return (
@@ -89,7 +88,7 @@ export function LearnPage() {
 
       <article>
         <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground mb-4 text-balance">
-          {title}
+          {h1}
         </h1>
         <p className="text-base sm:text-lg font-medium text-foreground/95 leading-relaxed border-l-2 border-primary/35 pl-4 mb-3 max-w-3xl">
           {HOME_ENTITY_DEFINITION}

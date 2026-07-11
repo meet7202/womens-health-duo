@@ -17,6 +17,8 @@
     "format:check": "prettier --check .",
     "typecheck": "tsc -b",
     "preview": "vite preview",
+    "audit:seo-titles": "node scripts/audit-seo-titles.mjs",
+    "audit:seo-h1": "node scripts/audit-seo-h1.mjs",
     "generate:virtual-cities": "node scripts/generate-virtual-consultation-cities.mjs",
     "import:instagram-reels": "node scripts/import-instagram-reel-urls.mjs"
   },

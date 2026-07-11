@@ -7,6 +7,7 @@ import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { ROUTES } from "@/config/routes";
 import { topicGuidesGroupedForIndex } from "@/data/topicGuides/topicGuideRegistry";
+import { LEARN_ARTICLES_DOCUMENT_TITLE, LEARN_ARTICLES_H1 } from "@/lib/pageSeoCopy";
 
 const PAGE_PATH = ROUTES.learnArticles;
 
@@ -27,7 +28,7 @@ export function LearnArticlesIndexPage() {
       breadcrumbListSchema(crumbs),
       webPageSchema({
         path: PAGE_PATH,
-        name: "Articles and common questions | Women's Health Duo Learn",
+        name: LEARN_ARTICLES_DOCUMENT_TITLE,
         description:
           "Written guides from our doctors: plain-language articles and question-style pages on PCOS, periods, fertility, pregnancy movement, pelvic health, Pilates, and gynecology. Each page links to related reading and back to Learn video clips.",
       }),
@@ -35,7 +36,8 @@ export function LearnArticlesIndexPage() {
     [crumbs],
   );
 
-  const title = "Articles and common questions | Women's Health Duo Learn";
+  const title = LEARN_ARTICLES_DOCUMENT_TITLE;
+  const h1 = LEARN_ARTICLES_H1;
   const description =
     "Browse every written guide on this site: short articles and common questions, grouped by theme, with links to related pages and the Learn video hub.";
 
@@ -45,7 +47,7 @@ export function LearnArticlesIndexPage() {
       <JsonLdGraph graph={graph} />
       <article>
         <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground mb-4 text-balance">
-          Articles and common questions
+          {h1}
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-4 max-w-3xl">
           These pages are written by our clinicians in the same voice as our Shorts and Reels. They
