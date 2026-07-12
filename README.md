@@ -96,8 +96,10 @@ Update [`public/CNAME`](./public/CNAME), `SITE_DEFAULT_URL` in `site.defaults.ts
 - **Meta & canonical:** injected at build from `site.defaults` / `VITE_SITE_URL` (see [`index.html`](index.html), [`vite.config.ts`](vite.config.ts)).
 - **Structured data:** Schema.org JSON-LD in [`src/components/seo/JsonLd.tsx`](src/components/seo/JsonLd.tsx) (`MedicalOrganization`, `Physician`, `WebSite`).
 - **Crawlers:** [`public/llms.txt`](./public/llms.txt); `robots.txt` and **`sitemap.xml`** (primary urlset; omits service×city matrix) plus **`sitemap-virtual-service-cities.xml`** (those URLs only) are written into **`dist/`** on build.
+- **Indexing APIs:** after deploy, submit built sitemap URLs via **`npm run submit:indexing`** (IndexNow for Bing + Google Indexing API). Set **`INDEXNOW_KEY`** in **`.env`** (gitignored); build emits **`dist/{key}.txt`**. See [`.env.example`](./.env.example) and **Actions → Submit indexing** for CI secrets.
+- **Cloudflare Crawler Hints (recommended):** with the site on Cloudflare, enable **Caching → Configuration → Crawler Hints** so Cloudflare auto-pings [IndexNow](https://www.indexnow.org/) when content changes ([announcement](https://blog.cloudflare.com/cloudflare-now-supports-indexnow/)). Use bulk `submit:indexnow` once after major deploys; Crawler Hints handles ongoing updates.
 - **Cursor / Bing / AI search:** WHD-specific prompt pack and architecture snapshot — [`docs/seo-cursor-playbook.md`](./docs/seo-cursor-playbook.md), [`docs/seo-architecture-audit.md`](./docs/seo-architecture-audit.md).
-- After launch, submit **`https://womenshealthduo.com/sitemap.xml`** in [Google Search Console](https://search.google.com/search-console) and Bing Webmaster Tools.
+- Also submit **`https://womenshealthduo.com/sitemap.xml`** in [Google Search Console](https://search.google.com/search-console) and Bing Webmaster Tools (one-time property setup).
 
 This project is a standard static Vite + React site with a self-contained bundle (no third-party hosted builder runtime).
 

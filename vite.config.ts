@@ -184,7 +184,13 @@ function writeStaticSpaShells(siteUrl: string, outDirAbs: string) {
   }
 }
 
-function writeSeoFiles(siteUrl: string, outDir: string) {
+function writeIndexNowKeyFile(outDir: string, key: string) {
+  const trimmed = key.trim();
+  if (!trimmed) return;
+  fs.writeFileSync(path.join(outDir, `${trimmed}.txt`), `${trimmed}\n`, "utf8");
+}
+
+function writeSeoFiles(siteUrl: string, outDir: string, indexNowKey = "") {
   const lastmod = new Date().toISOString().slice(0, 10);
 
   const robots = `# https://www.robotstxt.org/robotstxt.html
@@ -273,11 +279,14 @@ Sitemap: ${siteUrl}/sitemap-videos.xml
   );
 
   writeAgentDiscoveryFiles(siteUrl, rootDir, outDir);
+  writeIndexNowKeyFile(outDir, indexNowKey);
 }
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), "");
   const siteUrl = resolveSiteUrl(mode);
+  const indexNowKey = env.INDEXNOW_KEY?.trim() ?? "";
 
   let outDirAbs = path.resolve(rootDir, "dist");
   let isBuildCommand = false;
@@ -328,7 +337,7 @@ export default defineConfig(({ mode }) => {
           return applyShellPageMetaToHtml(withSeo, resolveShellPageMeta(siteUrl, "/"), siteUrl);
         },
         closeBundle() {
-          writeSeoFiles(siteUrl, outDirAbs);
+          writeSeoFiles(siteUrl, outDirAbs, indexNowKey);
           const indexHtml = path.join(outDirAbs, "index.html");
           const notFoundHtml = path.join(outDirAbs, "404.html");
           if (fs.existsSync(indexHtml)) {

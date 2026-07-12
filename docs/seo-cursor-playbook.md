@@ -29,7 +29,7 @@ Output:
 3. Sitemap + robots generation (vite closeBundle, SITEMAP_PATHS in src/config/routes.ts).
 4. Internal linking inventory (Header, Footer, homepage, Learn, FAQ).
 5. Content / schema alignment risks (FAQ visible text vs FAQPage schema, thin templated pages).
-6. Bing + AI crawler basics already present (canonical, OG, llms.txt) vs optional (IndexNow).
+6. Bing + AI crawler basics already present (canonical, OG, llms.txt); IndexNow via Cloudflare Crawler Hints + submit scripts.
 7. A WHD-realistic roadmap: practice clarity first, then Learn topical depth, then virtual long-tail — not “generic women’s health encyclopedia” unless product asks.
 ```
 
@@ -108,7 +108,7 @@ Do not add Twitter/X sameAs or third-party runtime scripts.
 ```text
 Check vite.config.ts robots.txt + sitemap.xml emission, index.html tokens, and public/llms.txt.
 
-Recommend IndexNow only if describing exact static file or build step to host the key; do not claim it is implemented unless code exists.
+IndexNow: (1) enable Cloudflare Crawler Hints (Caching → Configuration) for automatic IndexNow on cache changes; (2) INDEXNOW_KEY in .env + build dist/{key}.txt + npm run submit:indexnow for bulk post-deploy. Google: submit:google-indexing with service account.
 
 List duplicate or near-duplicate risks (many virtual service×city pages) and mitigations (canonical, unique copy blocks, sitemap priority — already partially modeled).
 ```
