@@ -89,6 +89,26 @@ Cloudflare uses cache-change signals to push [IndexNow](https://www.indexnow.org
 
 For a new site or large route expansion, enable Crawler Hints **and** run a one-time bulk IndexNow submit after the key file is live.
 
+## Cloudflare purge (stale 404 on new root static files)
+
+GitHub Pages sits behind **Cloudflare**. If a path previously returned **404** (common for `/favicon.ico` before icons ship), Cloudflare may **cache that 404** and keep serving it after deploy (`cf-cache-status: HIT` while `age` is below `max-age`). Origin is correct; only the edge cache is stale.
+
+**When:** after adding or replacing root-level static assets in `public/` (favicons, IndexNow key file, etc.) that browsers or crawlers may have requested while missing.
+
+1. Cloudflare dashboard → **Caching** → **Configuration** → **Purge Cache** → **Custom Purge** → **Purge by URL**.
+2. Purge each affected URL on **both** `womenshealthduo.com` and `www.womenshealthduo.com` if both are active, e.g.:
+   - `https://womenshealthduo.com/favicon.ico`
+   - `https://womenshealthduo.com/favicon-48.png`
+3. Validate (expect **200**, not cached 404):
+   ```sh
+   curl -sI https://womenshealthduo.com/favicon.ico | head -1
+   curl -sI https://womenshealthduo.com/favicon-48.png | head -1
+   ```
+
+TTL without purge is ~4 hours (`max-age=14400`). **Do not** add query-string cache-busting to favicon `<link>` tags — Google expects a stable `/favicon.ico` at the site root.
+
+**Favicon assets:** `public/favicon.ico`, `favicon-48.png`, `favicon-192.png`, `apple-touch-icon.png`, plus `favicon.svg`; wired in [`index.html`](index.html). Regenerate raster sizes from the SVG when the mark changes (see PR #36 / `@resvg/resvg-js-cli`).
+
 ## Markdown for Agents (Cloudflare Worker, Free plan)
 
 Pro/Business **Markdown for Agents** (dashboard toggle) is not on Cloudflare Free. This repo ships a **Worker** at [`workers/markdown-for-agents/`](workers/markdown-for-agents/) that returns `text/markdown` when `Accept: text/markdown` is sent; browsers still get HTML.
