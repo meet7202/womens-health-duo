@@ -64,6 +64,7 @@ jobs:
         env:
           # Canonical URL for meta, sitemap, robots (must match your live domain)
           VITE_SITE_URL: https://womenshealthduo.com
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
 
       - name: Verify build output
         run: |

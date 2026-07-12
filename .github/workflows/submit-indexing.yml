@@ -1,0 +1,122 @@
+# Submit sitemap URLs to IndexNow (Bing) and Google Indexing API after deploy.
+#
+# One-time setup:
+# 1. IndexNow: set INDEXNOW_KEY in .env (local) and GitHub secret INDEXNOW_KEY (CI build writes dist/{key}.txt).
+# 2. Google: GCP project → enable "Indexing API" → create service account → download JSON.
+#    Search Console → Settings → Users → add service account email as Owner.
+# 3. GitHub repo → Settings → Secrets → Actions:
+#    - INDEXNOW_KEY
+#    - GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON (full JSON, one line)
+#
+# Run manually after a production deploy, or on schedule once credentials are set.
+
+name: Submit indexing
+
+on:
+  workflow_dispatch:
+    inputs:
+      feed:
+        description: "Sitemap feed"
+        required: true
+        default: "all"
+        type: choice
+        options:
+          - all
+          - primary
+          - virtual
+          - video
+      dry_run:
+        description: "Dry run (no API calls)"
+        required: true
+        default: true
+        type: boolean
+      google_limit:
+        description: "Google Indexing API max URLs (daily quota ~200)"
+        required: true
+        default: "200"
+        type: string
+      google_offset:
+        description: "Google URL offset (page through long-tail)"
+        required: true
+        default: "0"
+        type: string
+      indexnow_only:
+        description: "IndexNow only (skip Google)"
+        required: true
+        default: false
+        type: boolean
+      google_only:
+        description: "Google only (skip IndexNow)"
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    name: Submit URLs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate workflow inputs
+        run: |
+          if [ "${{ inputs.indexnow_only }}" = "true" ] && [ "${{ inputs.google_only }}" = "true" ]; then
+            echo "ERROR: enable only one of indexnow_only or google_only, not both"
+            exit 1
+          fi
+
+      - name: Verify secrets (live run)
+        if: inputs.dry_run != true
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+          GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON }}
+        run: |
+          need_indexnow=false
+          need_google=false
+          if [ "${{ inputs.google_only }}" != "true" ]; then need_indexnow=true; fi
+          if [ "${{ inputs.indexnow_only }}" != "true" ]; then need_google=true; fi
+          if [ "$need_indexnow" = "true" ] && [ -z "$INDEXNOW_KEY" ]; then
+            echo "ERROR: INDEXNOW_KEY secret is not set"
+            exit 1
+          fi
+          if [ "$need_google" = "true" ] && [ -z "$GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON" ]; then
+            echo "ERROR: GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON secret is not set"
+            exit 1
+          fi
+
+      - name: Build sitemaps
+        run: npm run build
+        env:
+          VITE_SITE_URL: https://womenshealthduo.com
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+
+      - name: Submit to IndexNow
+        if: inputs.google_only != true
+        run: |
+          ARGS="--feed=${{ inputs.feed }}"
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          npm run submit:indexnow -- $ARGS
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+
+      - name: Submit to Google Indexing API
+        if: inputs.indexnow_only != true
+        run: |
+          ARGS="--feed=${{ inputs.feed }} --limit=${{ inputs.google_limit }} --offset=${{ inputs.google_offset }}"
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          npm run submit:google-indexing -- $ARGS
+        env:
+          GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON }}

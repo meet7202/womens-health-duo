@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Local secrets (INDEXNOW_KEY, Google SA JSON path, etc.)
+.env
+
 # Cloudflare Wrangler local dev/deploy cache
 .wrangler
 
@@ -20,6 +23,9 @@ ig/
 
 # TypeScript incremental build
 *.tsbuildinfo
+
+# Search indexing API credentials (never commit)
+google-indexing-service-account.json
 
 # Editor directories and files
 .vscode/*
