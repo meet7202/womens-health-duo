@@ -155,7 +155,7 @@ const TOPIC_RULES = [
 
 /**
  * @param {unknown} post
- * @param {"reel" | "carousel" | "image"} mediaKind
+ * @param {"reel" | "carousel" | "image" | "youtube"} mediaKind
  */
 export function topicsFromInstagramRow(post, mediaKind) {
   const caption = String(post?.caption ?? "");
@@ -171,6 +171,7 @@ export function topicsFromInstagramRow(post, mediaKind) {
   if (mediaKind === "reel") topics.add("Reels");
   if (mediaKind === "carousel") topics.add("Carousel");
   if (mediaKind === "image") topics.add("Posts");
+  // YouTube rows use clinical topics only (no platform tag).
 
   if (topics.size === 0) topics.add("Women's health");
   else if (

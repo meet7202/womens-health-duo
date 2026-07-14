@@ -1,0 +1,2 @@
+# Deprecated — use learn-queue.txt instead.
+# See learn-queue.txt for Instagram reel/post/carousel and YouTube Short/video examples.

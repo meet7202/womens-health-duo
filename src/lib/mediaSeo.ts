@@ -61,6 +61,6 @@ export function knowledgeHubVideoThumbnailAbsolute(
   if (poster?.startsWith("/")) {
     return githubPagesAbsoluteUrl(siteUrl, poster);
   }
-  if (poster) return poster;
+  // Prefer stable on-site thumbnails; avoid expiring Instagram CDN poster URLs in schema/sitemap.
   return githubPagesAbsoluteUrl(siteUrl, "/favicon.svg");
 }

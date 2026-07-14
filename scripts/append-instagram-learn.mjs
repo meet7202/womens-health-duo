@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 /**
- * Append one Instagram reel (delegates to append-learn-media.mjs).
- * @deprecated Prefer `node scripts/append-learn-media.mjs <url>` for all Learn hub clips.
+ * @deprecated Use `node scripts/append-learn-media.mjs <url>` for Instagram and YouTube.
  */
 import { spawnSync } from "node:child_process";
 import path from "node:path";
