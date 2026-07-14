@@ -21,7 +21,7 @@ export const HOME_HERO_LEDE =
 export const ORGANIZATION_SCHEMA_DESCRIPTION = `${HOME_ENTITY_DEFINITION} Dr. Charmi Shah (OB-GYN, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapy and STOTT Pilates on Mat and Reformer) lead the work. We film explainers and see patients in India and online; we do not retail supplements or vitamins.`;
 
 /** Target ~60 characters (Bing warns above 70). Used when a page omits `SeoHead` title. */
-export const DEFAULT_TITLE = "Women's Health Duo | Hormones, Fertility & STOTT Pilates";
+export const DEFAULT_TITLE = "Dr. Charmi Shah & Dr. Zalak Shah: Women's Health Duo";
 
 /** Target ~150–160 characters for meta description audits (HTML + OG + Twitter). */
 export const DEFAULT_DESCRIPTION =
