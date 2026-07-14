@@ -67,11 +67,16 @@ function main() {
     added += 1;
   }
 
-  const out = [...byCode.values()].sort((a, b) =>
-    String(a.instagramReelId).localeCompare(String(b.instagramReelId)),
-  );
-  fs.writeFileSync(jsonPath, `${JSON.stringify(out, null, 2)}\n`, "utf8");
-  console.error(`Updated ${jsonPath}: ${out.length} total rows (${added} new).`);
+  const out = [...byCode.values()];
+  // Preserve existing array order; append genuinely new rows at the end only.
+  const existingOrder = existing.map((row) => row.instagramReelId).filter((id) => byCode.has(id));
+  const newCodes = [...byCode.keys()].filter((code) => !existing.some((row) => row.instagramReelId === code));
+  const ordered = [
+    ...existingOrder.map((code) => byCode.get(code)),
+    ...newCodes.map((code) => byCode.get(code)),
+  ];
+  fs.writeFileSync(jsonPath, `${JSON.stringify(ordered, null, 2)}\n`, "utf8");
+  console.error(`Updated ${jsonPath}: ${ordered.length} total rows (${added} new).`);
 }
 
 main();
