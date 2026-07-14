@@ -1,0 +1,28 @@
+---
+description: SEO + AI search quality bar — titles, descriptions, hierarchy, schema, WHD invariants
+alwaysApply: true
+---
+
+# SEO & AI search (Women's Health Duo)
+
+**Full checklist:** [`docs/seo-ai-search-system-prompt.md`](docs/seo-ai-search-system-prompt.md). **YMYL / E-E-A-T:** [`.cursor/rules/medical-eeat.mdc`](medical-eeat.mdc). **Repo invariants:** [`AGENTS.md`](../../AGENTS.md).
+
+## Non-negotiables (this codebase)
+
+- **One intent per page** — one H1, one primary topic; audits: `npm run audit:seo-h1`, `audit:seo-headings`.
+- **Titles:** ~**50–60 chars** via `formatDocumentTitle()` / `capDocumentTitle()` (`seoTitle.ts`); CI: `audit:seo-titles` (< 70).
+- **Meta descriptions:** **25–160 chars** via `capMetaDescription()` (`seoDescription.ts`); keep **book consult + `CONTACT.phoneE164`** when capping; CI: `audit:seo-descriptions`.
+- **Do not** remove **Dr. Charmi Shah** / **Dr. Zalak Shah** names for readability; assign clinical lanes correctly (Charmi = OB-GYN/IVF/laparoscopy; Zalak = physio/STOTT Pilates).
+- **URLs:** trailing-slash static shells from `SITEMAP_PATHS` + `App.tsx`; use `AppLink` / path builders — no query-string routes.
+- **Schema:** `JsonLd`, `JsonLdGraph`, `JsonLdFaq`, `VideoObject` on watch pages — extend in `src/components/seo/schema/`; FAQ JSON-LD only when same Q&A is on-page (max 10).
+- **AI discovery:** `public/llms.txt`, `.well-known/agent-skills/`, Markdown Worker — keep aligned with routes; do not add fake APIs.
+
+## Before finishing SEO work
+
+```sh
+npm run lint && npm run format:check && npm run typecheck && npm run build && npm run audit:seo-titles && npm run audit:seo-descriptions && npm run audit:seo-h1 && npm run audit:seo-headings && npm run audit:seo-sitemap
+```
+
+## What NOT to do
+
+No keyword stuffing, doorway pages, duplicate titles/descriptions, multiple H1s, thin templated fluff, fake reviews, or invented credentials. No “best/No.1/guaranteed IVF” unless verifiable. Optimize for **helpful content** and long-term trust — not tricks.

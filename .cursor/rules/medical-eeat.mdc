@@ -1,0 +1,56 @@
+---
+description: YMYL E-E-A-T — doctor attribution, verified credentials, entity consistency (Women's Health Duo)
+alwaysApply: true
+---
+
+# Medical E-E-A-T (YMYL)
+
+Women's Health Duo is a **YMYL** site. Medical copy must show real expertise and trust — **never invent** credentials, awards, years, memberships, or outcomes.
+
+## Source of truth
+
+- Doctors: [`src/data/doctorProfiles.ts`](src/data/doctorProfiles.ts), [`src/config/doctorRegistration.ts`](src/config/doctorRegistration.ts)
+- Practice cities: [`src/config/practiceLocations.ts`](src/config/practiceLocations.ts)
+- Brand line: [`src/config/brandLine.ts`](src/config/brandLine.ts)
+
+## Verified entities (use exactly)
+
+| Entity | Role on this site |
+|--------|-------------------|
+| **Women's Health Duo** | Organization / clinic brand |
+| **Dr. Charmi Shah** | OB-GYN, IVF, laparoscopy — `MBBS, MS (Obstetrics & Gynecology); fellowship training in laparoscopy and IVF` |
+| **Dr. Zalak Shah (PT)** | Women's health physiotherapy, STOTT Pilates — `BPT, MPT; STOTT Pilates Instructor (Mat & Reformer)` |
+
+**Do not** describe Dr. Zalak as an obstetrician, gynecologist, or IVF physician. **Do not** describe Dr. Charmi as a physiotherapist or Pilates instructor.
+
+## Doctor attribution
+
+On medical/service pages, name the **correct** clinician naturally (do not strip names for “readability” or SEO):
+
+- IVF, IUI, fertility surgery, PCOS/endometriosis, high-risk pregnancy, laparoscopy → **Dr. Charmi Shah**
+- Pelvic floor, prenatal/postnatal physio, diastasis, STOTT/Mat Pilates → **Dr. Zalak Shah**
+- Duo-led education or coordinated pathways → both sisters, with **accurate** lanes
+
+Example (correct):
+
+> IVF and laparoscopic gynecology at Women's Health Duo are led by **Dr. Charmi Shah**; **Dr. Zalak Shah** supports pregnancy-safe movement and pelvic health physiotherapy alongside medical care.
+
+## Author / reviewer (when adding long-form content)
+
+Where applicable: written by, medically reviewed by (correct doctor for topic), last updated, clinic name, contact from [`site.defaults.ts`](src/config/site.defaults.ts) `CONTACT`. Topic guides: see [`docs/seo-trust-eeat-audit.md`](docs/seo-trust-eeat-audit.md).
+
+## Local authority
+
+Tie services to verified cities only: Dr. Charmi — Mumbai, Ahmedabad, Valsad (+ virtual); Dr. Zalak — Bangalore, Ahmedabad (+ virtual). Do not invent locations.
+
+## Trust signals — allowed vs forbidden
+
+**OK:** evidence-based care, personalized consults, patient education, telehealth where policy allows, named specialists.
+
+**Avoid unless independently verifiable:** “best/No.1 doctor”, guaranteed pregnancy/IVF success, miracle treatment, unverified awards or conference lists.
+
+## Entity consistency for search & AI
+
+Keep **Women's Health Duo**, **Dr. Charmi Shah**, and **Dr. Zalak Shah** spelled consistently in titles, meta, JSON-LD, FAQ, and body copy. Connect entities to real services (IVF, IUI, gynecology, physiotherapy, STOTT Pilates) and verified geos (Ahmedabad, Gujarat, Mumbai, Bangalore, etc.) — **no keyword stuffing**.
+
+When editing SEO strings, **do not remove doctor names or booking contact** (`CONTACT.phoneE164` / WhatsApp) to shorten copy unless the user explicitly asks.

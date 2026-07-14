@@ -77,6 +77,7 @@ import {
   virtualServiceCityPath,
 } from "../lib/virtualConsultation";
 import { githubPagesAbsoluteUrl } from "../lib/githubPagesPublicUrl";
+import { capMetaDescription } from "../lib/seoDescription";
 
 const VIRTUAL_HUB_DESCRIPTION = `Video visits from India with Dr. Charmi Shah (OB-GYN, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapy, Mat Pilates online, STOTT Pilates on Mat and Reformer). We serve families in India and abroad, pick your city below, then choose the type of care. ${PRACTICE_BOTH_DOCTORS_IN_PERSON} See each doctor's profile for hours and how to book.`;
 
@@ -498,9 +499,13 @@ export function applyShellPageMetaToHtml(
   meta: ShellPageMeta,
   siteUrl: string,
 ): string {
-  const titleEsc = escapeTitleText(meta.title);
-  const titleAttrEsc = escapeAttr(meta.title);
-  const descEsc = escapeAttr(meta.metaDescription);
+  const cappedMeta: ShellPageMeta = {
+    ...meta,
+    metaDescription: capMetaDescription(meta.metaDescription),
+  };
+  const titleEsc = escapeTitleText(cappedMeta.title);
+  const titleAttrEsc = escapeAttr(cappedMeta.title);
+  const descEsc = escapeAttr(cappedMeta.metaDescription);
   const canonEsc = escapeAttr(meta.canonicalHref);
   const pairs: [string, string][] = [
     ["@@PAGE_CANONICAL@@", canonEsc],
@@ -511,7 +516,7 @@ export function applyShellPageMetaToHtml(
     ["@@PAGE_OG_DESCRIPTION@@", descEsc],
     ["@@PAGE_TW_TITLE@@", titleAttrEsc],
     ["@@PAGE_TW_DESCRIPTION@@", descEsc],
-    ["@@PAGE_STATIC_FALLBACK@@", buildStaticShellBodyFallback(meta, siteUrl)],
+    ["@@PAGE_STATIC_FALLBACK@@", buildStaticShellBodyFallback(cappedMeta, siteUrl)],
   ];
   let out = html;
   for (const [needle, val] of pairs) {

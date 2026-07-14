@@ -3,6 +3,7 @@
  * Must not use `@/` imports (imported from `staticShellHead.ts` in Node).
  */
 import { DOCUMENT_TITLE_MAX_LEN, formatDocumentTitle } from "./seoTitle";
+import { capMetaDescription, LEARN_WATCH_META_FALLBACK } from "./seoDescription";
 import type { LearnHubParsed } from "./learnHubUrls";
 import {
   knowledgeHubVideoCaptionForSeo,
@@ -124,9 +125,7 @@ export function learnWatchMetaDescription(video: KnowledgeHubVideo): string {
         ? "Carousel from @womenshealthduo on Instagram. "
         : "Post from @womenshealthduo on Instagram. "
       : "";
-  const text = prefix + caption;
-  if (text.length <= 160) return text;
-  return `${text.slice(0, 157)}…`;
+  return capMetaDescription(prefix + caption, { fallback: LEARN_WATCH_META_FALLBACK });
 }
 
 export function topicGuideDocumentTitle(guideTitle: string): string {

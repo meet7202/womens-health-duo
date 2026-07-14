@@ -7,6 +7,7 @@ import {
   OG_IMAGE_PATH,
 } from "@/config/site";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
+import { capMetaDescription } from "@/lib/seoDescription";
 import { BING_TITLE_MAX_LEN, capDocumentTitle } from "@/lib/seoTitle";
 
 export type SeoHeadProps = {
@@ -62,7 +63,7 @@ export function SeoHead({
   ogType = "website",
 }: SeoHeadProps = {}) {
   const resolvedTitle = capDocumentTitle(title ?? DEFAULT_TITLE, BING_TITLE_MAX_LEN);
-  const resolvedDescription = metaDescription ?? DEFAULT_DESCRIPTION;
+  const resolvedDescription = capMetaDescription(metaDescription ?? DEFAULT_DESCRIPTION);
   const resolvedKeywords = metaKeywords ?? KEYWORDS;
   const pageUrl = canonicalUrlForPath(path);
   const defaultOgImage = githubPagesAbsoluteUrl(SITE_URL, OG_IMAGE_PATH);
