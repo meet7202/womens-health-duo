@@ -11,7 +11,11 @@ import { readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { downloadHubThumbnail } from "./lib/download-hub-thumbnail.mjs";
-import { doctorFromInstagramRow, titleFromCaption, topicsFromInstagramRow } from "./lib/instagram-hub-classify.mjs";
+import {
+  doctorFromInstagramRow,
+  titleFromCaption,
+  topicsFromInstagramRow,
+} from "./lib/instagram-hub-classify.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
@@ -107,7 +111,9 @@ async function main() {
   raw = raw.replace(/\n]\n?$/, `,\n${buildBlock(row)}\n]\n`);
   writeFileSync(jsonPath, raw);
 
-  const orig = JSON.parse(execSync(`git show HEAD:${path.relative(root, jsonPath)}`, { encoding: "utf8" }));
+  const orig = JSON.parse(
+    execSync(`git show HEAD:${path.relative(root, jsonPath)}`, { encoding: "utf8" }),
+  );
   const cur = JSON.parse(readFileSync(jsonPath, "utf8"));
   let changed = 0;
   for (const o of orig) {
