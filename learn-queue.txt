@@ -1,14 +1,10 @@
-# Learn hub import queue
+# Optional local batch queue (CLI only: npm run import:learn-media -- --queue learn-queue.txt)
 #
-# Add one URL per line (Instagram reel/post/carousel or YouTube Short/video), then either:
-# - Push this file (opens a PR; GitHub Actions imports and clears processed lines), or
-# - Run Actions → "Import Learn media" → paste the URL in workflow_dispatch.
-#
-# Optional prefixes for bare IDs: instagram:SHORTCODE or youtube:VIDEO_ID
+# For one clip end-to-end (import → merge → deploy), use GitHub Actions instead:
+# Actions → "Import Learn media" → Run workflow → paste one URL.
 #
 # Examples:
 # https://www.instagram.com/reel/DasHzcwKK-U/
 # https://www.instagram.com/p/DafWfOlFJYO/
 # https://www.youtube.com/shorts/fhr0O0EhPvk
 # https://www.youtube.com/watch?v=th_SrXDdXoY
-# https://youtu.be/6ZuwMigvS04

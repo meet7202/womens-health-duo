@@ -37,7 +37,7 @@ function stripOriginFetchHeader(request: Request): Request {
 }
 
 export default {
-  async fetch(request: Request, env: Env): Promise<Response> {
+  async fetch(request: Request, _env: Env): Promise<Response> {
     if (request.headers.get(ORIGIN_FETCH_HEADER) === "1") {
       return fetch(stripOriginFetchHeader(request));
     }
