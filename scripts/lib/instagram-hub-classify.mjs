@@ -96,6 +96,7 @@ export const DOCTOR_BY_SHORTCODE = {
   DaAzLDrqHqN: "zalak",
   DaPtDAWqvYA: "both",
   DaPwUfMq3W4: "both",
+  "DasHzcwKK-U": "both",
 };
 
 /** @param {unknown} post scraped Instagram row */
