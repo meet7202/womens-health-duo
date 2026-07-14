@@ -55,7 +55,6 @@ export function knowledgeHubWatchPageVideoSchema(video: KnowledgeHubVideo, watch
 
   const permalink = knowledgeHubInstagramPermalink(video);
   const embedUrl = knowledgeHubInstagramEmbedUrl(video);
-  const nativeVideo = video.instagramVideoUrl?.trim();
   const thumbnailUrl = knowledgeHubVideoThumbnailAbsolute(SITE_URL, video);
   return {
     "@type": "VideoObject",
@@ -65,7 +64,8 @@ export function knowledgeHubWatchPageVideoSchema(video: KnowledgeHubVideo, watch
     thumbnailUrl,
     embedUrl,
     url: permalink,
-    contentUrl: nativeVideo || pageUrl,
+    // Stable WHD watch page — never expiring Instagram CDN MP4 URLs (playback-only in JSON).
+    contentUrl: pageUrl,
     caption: description.slice(0, 500),
     ...(video.postedAt ? { uploadDate: video.postedAt } : {}),
     mainEntityOfPage: { "@type": "WebPage", "@id": pageWebPageId },

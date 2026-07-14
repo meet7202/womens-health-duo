@@ -100,11 +100,13 @@ function NativeInstagramReelPlayer({
   src,
   poster,
   frameClass,
+  onFallback,
 }: {
   title: string;
   src: string;
   poster?: string;
   frameClass: string;
+  onFallback?: () => void;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [started, setStarted] = useState(false);
@@ -169,6 +171,7 @@ function NativeInstagramReelPlayer({
         }}
         onPause={() => setPlaying(false)}
         onClick={togglePlay}
+        onError={() => onFallback?.()}
       />
       {started && !playing ? (
         <button
@@ -205,18 +208,22 @@ function DeferredEmbed({
 
   return (
     <div className={cn("relative overflow-hidden bg-muted/20", frameClass)}>
-      {poster && !ready ? (
-        <HubPoster src={poster} alt={title} frameClass="absolute inset-0 h-full w-full" />
-      ) : null}
       <iframe
         title={title}
         src={embedSrc}
-        className={cn("relative z-10 h-full w-full", frameClass, !ready && poster && "opacity-0")}
+        className={cn(
+          "relative z-10 h-full w-full",
+          frameClass,
+          !ready && poster && "opacity-0 pointer-events-none",
+        )}
         allow={allow}
         loading={eager ? "eager" : "lazy"}
         referrerPolicy="strict-origin-when-cross-origin"
         onLoad={() => setReady(true)}
       />
+      {poster && !ready ? (
+        <HubPoster src={poster} alt={title} frameClass="absolute inset-0 z-20 h-full w-full" />
+      ) : null}
     </div>
   );
 }
@@ -230,6 +237,13 @@ export function KnowledgeHubVideoPlayer({
   const embedContainerRef = useRef<HTMLDivElement>(null);
   const [embedVisible, setEmbedVisible] = useState(eager);
   const [youtubeReady, setYoutubeReady] = useState(false);
+  const [instagramUseEmbed, setInstagramUseEmbed] = useState(false);
+
+  useEffect(() => {
+    if (!embedVisible || video.kind !== "youtube_short" || youtubeReady) return;
+    const timer = window.setTimeout(() => setYoutubeReady(true), 10_000);
+    return () => window.clearTimeout(timer);
+  }, [embedVisible, video.kind, youtubeReady]);
 
   useEffect(() => {
     if (eager) return;
@@ -279,21 +293,13 @@ export function KnowledgeHubVideoPlayer({
         {embedVisible ? (
           video.kind === "youtube_short" ? (
             <div className={cn("relative overflow-hidden bg-muted/20", minFrameClass)}>
-              {!youtubeReady ? (
-                <HubPoster
-                  src={youtubeThumbnail(video.youtubeVideoId)}
-                  alt={posterSeoAlt}
-                  title={posterSeoAlt}
-                  frameClass="absolute inset-0 h-full w-full"
-                />
-              ) : null}
               <iframe
                 title={video.title}
                 src={embedSrc}
                 className={cn(
                   "relative z-10 h-full w-full",
                   minFrameClass,
-                  !youtubeReady && "opacity-0",
+                  !youtubeReady && "opacity-0 pointer-events-none",
                 )}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
@@ -301,13 +307,22 @@ export function KnowledgeHubVideoPlayer({
                 referrerPolicy="strict-origin-when-cross-origin"
                 onLoad={() => setYoutubeReady(true)}
               />
+              {!youtubeReady ? (
+                <HubPoster
+                  src={youtubeThumbnail(video.youtubeVideoId)}
+                  alt={posterSeoAlt}
+                  title={posterSeoAlt}
+                  frameClass="absolute inset-0 z-20 h-full w-full"
+                />
+              ) : null}
             </div>
-          ) : instagramNativeVideo ? (
+          ) : instagramNativeVideo && !instagramUseEmbed ? (
             <NativeInstagramReelPlayer
               title={posterSeoAlt}
               src={instagramNativeVideo.src}
               poster={instagramNativeVideo.poster}
               frameClass={minFrameClass}
+              onFallback={() => setInstagramUseEmbed(true)}
             />
           ) : (
             <DeferredEmbed

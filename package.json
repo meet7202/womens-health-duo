@@ -27,8 +27,10 @@
     "submit:indexing": "node scripts/submit-indexing.mjs",
     "generate:virtual-cities": "node scripts/generate-virtual-consultation-cities.mjs",
     "import:instagram-reels": "node scripts/import-instagram-reel-urls.mjs",
+    "import:learn-media": "node scripts/append-learn-media.mjs",
     "import:instagram-learn": "node scripts/append-instagram-learn.mjs",
     "import:instagram": "node scripts/import-instagram.mjs",
+    "refresh:instagram-cdn": "node scripts/refresh-instagram-cdn.mjs",
     "retry:hub-thumbnails": "node scripts/retry-hub-thumbnails.mjs",
     "deploy:markdown-worker": "npm ci --prefix workers/markdown-for-agents && npm run deploy --prefix workers/markdown-for-agents"
   },

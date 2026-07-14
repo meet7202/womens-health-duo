@@ -38,11 +38,8 @@ function playerLoc(video: KnowledgeHubVideo): string | null {
   return null;
 }
 
-function contentLoc(video: KnowledgeHubVideo): string | null {
-  if (video.kind === "instagram_reel") {
-    const native = video.instagramVideoUrl?.trim();
-    if (native) return native;
-  }
+function contentLoc(_video: KnowledgeHubVideo): string | null {
+  // Omit video:content_loc for Instagram reels — CDN MP4 URLs expire and must not appear in SEO feeds.
   return null;
 }
 

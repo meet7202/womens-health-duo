@@ -1,9 +1,2 @@
-# Instagram Learn hub import queue
-#
-# Add one reel or post URL per line, then either:
-# - Push this file (opens a PR; GitHub Actions imports and clears processed lines), or
-# - Run Actions → "Import Instagram to Learn" → paste the URL in workflow_dispatch.
-#
-# Examples:
-# https://www.instagram.com/reel/DasHzcwKK-U/
-# https://www.instagram.com/p/DafWfOlFJYO/
+# Deprecated — use learn-queue.txt instead.
+# See learn-queue.txt for Instagram reel/post/carousel and YouTube Short/video examples.

@@ -51,12 +51,12 @@ export type KnowledgeHubVideo =
       summary: string;
       instagramReelId: string;
       /**
-       * Direct MP4 from Instagram CDN (from scrape import). Used for inline playback when the
-       * official embed shows “Watch on Instagram” (licensed music). Refresh with
-       * `npm run import:instagram` — URLs expire after a few weeks.
+       * Direct MP4 from Instagram CDN (from scrape import). **Playback only** — not used in
+       * JSON-LD, video sitemap, or OG URLs (those use stable watch-page / permalink / embed URLs).
+       * Refresh with `npm run refresh:instagram-cdn` or `npm run import:instagram` — URLs expire.
        */
       instagramVideoUrl?: string;
-      /** Remote cover frame from scrape (may expire). */
+      /** Remote cover frame from scrape (may expire). Prefer `instagramPosterPath` for SEO. */
       instagramPosterUrl?: string;
       /** Local cover in `public/images/hub-thumbs/` — used for player posters. */
       instagramPosterPath?: string;
