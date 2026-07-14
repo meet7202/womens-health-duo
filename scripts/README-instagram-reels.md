@@ -41,10 +41,20 @@ npm run lint && npm run typecheck && npm run build
 ### Append one reel (recommended for SEO)
 
 ```sh
-node scripts/append-instagram-reel.mjs https://www.instagram.com/reel/DasHzcwKK-U/
+node scripts/append-instagram-learn.mjs https://www.instagram.com/reel/DasHzcwKK-U/
+node scripts/append-instagram-reel.mjs https://www.instagram.com/reel/DasHzcwKK-U/  # alias
 ```
 
-Requires **`yt-dlp`** locally. Writes **`postedAt`**, **`instagramVideoUrl`**, poster JPEG, caption, topics, and title for the **new row only** — existing hub JSON rows are left byte-identical.
+Requires **`yt-dlp`** locally. Writes **`postedAt`**, **`instagramVideoUrl`** (reels), poster JPEG, caption, topics, and title for the **new row only** — existing hub JSON rows are left byte-identical.
+
+**Carousels / feed posts** (`/p/…` with multiple slides or a still image) append to **`knowledgeHubInstagramPosts.json`** with `igp-…` watch ids.
+
+### GitHub Actions (automatic PR)
+
+1. Add a URL to **`instagram-queue.txt`** (one per line) and push, **or**
+2. **Actions → Import Instagram to Learn → Run workflow** and paste the URL.
+
+The workflow runs **`append-instagram-learn.mjs`**, Prettier, full verify, and opens a PR. Existing indexed Learn rows are not rewritten.
 
 ## Original captions (YouTube)
 
