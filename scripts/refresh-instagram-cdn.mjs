@@ -149,6 +149,7 @@ async function main() {
   console.error(
     `Done: checked=${checked} refreshed=${refreshed} skipped_healthy=${skippedHealthy} unchanged=${unchanged} failed=${failed}`,
   );
+  // Partial yt-dlp failures are OK when at least one row refreshed (CI writes JSON only then).
   if (failed > 0 && refreshed === 0) process.exit(1);
 }
 

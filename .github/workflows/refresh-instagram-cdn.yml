@@ -1,4 +1,5 @@
-# Refresh expired Instagram reel CDN URLs (daily PR when URLs change)
+# Refresh expired Instagram reel CDN URLs → verify → push main → deploy.
+# Skips PRs (this repo blocks GITHUB_TOKEN from opening pull requests).
 
 name: Refresh Instagram CDN
 
@@ -16,7 +17,7 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
+  actions: write
 
 concurrency:
   group: refresh-instagram-cdn
@@ -27,8 +28,10 @@ jobs:
     name: Refresh reel CDN URLs
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout main
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -50,7 +53,14 @@ jobs:
           if [ "${{ inputs.force_all }}" = "true" ]; then
             ARGS="--all"
           fi
-          node scripts/refresh-instagram-cdn.mjs $ARGS
+          node scripts/refresh-instagram-cdn.mjs $ARGS || {
+            code=$?
+            if [ "$code" -eq 1 ] && git diff --quiet -- src/data/knowledgeHubInstagramReels.json; then
+              echo "Refresh had fetch errors but no file changes; continuing."
+              exit 0
+            fi
+            exit "$code"
+          }
           if git diff --quiet -- src/data/knowledgeHubInstagramReels.json; then
             echo "has_changes=false" >> "$GITHUB_OUTPUT"
           else
@@ -76,21 +86,19 @@ jobs:
         env:
           VITE_SITE_URL: https://womenshealthduo.com
 
-      - name: Create pull request
+      - name: Push to main
         if: steps.refresh.outputs.has_changes == 'true'
-        uses: peter-evans/create-pull-request@v7
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: learn/refresh-instagram-cdn-${{ github.run_id }}
-          delete-branch: true
-          commit-message: "Refresh Instagram reel CDN URLs"
-          title: "Learn hub: refresh Instagram CDN URLs"
-          body: |
-            Automated CDN refresh from [Refresh Instagram CDN](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}).
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/knowledgeHubInstagramReels.json
+          git diff --staged --quiet && exit 0
+          git commit -m "Refresh Instagram reel CDN URLs"
+          git push origin HEAD:main
 
-            Updates only `instagramVideoUrl` and `instagramPosterUrl` in `knowledgeHubInstagramReels.json` (playback / poster fallback — not used in JSON-LD or video sitemap).
-            Titles, captions, watch page ids, and other indexed fields are unchanged.
-
-            Merge to restore inline reel playback for rows with expired CDN links.
-
-            Trigger: ${{ github.event_name }}${{ inputs.force_all && ' (force all)' || '' }}
+      - name: Trigger GitHub Pages deploy
+        if: steps.refresh.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy-github-pages.yml --ref main
