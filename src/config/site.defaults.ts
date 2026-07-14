@@ -20,12 +20,21 @@ export const HOME_HERO_LEDE =
 /** Rich MedicalOrganization description for schema.org (may exceed meta length). */
 export const ORGANIZATION_SCHEMA_DESCRIPTION = `${HOME_ENTITY_DEFINITION} Dr. Charmi Shah (OB-GYN, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapy and STOTT Pilates on Mat and Reformer) lead the work. We film explainers and see patients in India and online; we do not retail supplements or vitamins.`;
 
+/** Public profiles (no Twitter/X). Used in JSON-LD `sameAs` and docs. */
+export const CONTACT = {
+  email: "womenshealthduo@gmail.com",
+  phoneE164: "+917990550754",
+  instagram: "https://www.instagram.com/womenshealthduo",
+  youtube: "https://www.youtube.com/@WomensHealthDuo",
+  /** Same WhatsApp number as site CTAs (E.164 without + for wa.me). */
+  whatsappUrl: "https://wa.me/917990550754",
+} as const;
+
 /** Target ~60 characters (Bing warns above 70). Used when a page omits `SeoHead` title. */
 export const DEFAULT_TITLE = "Dr. Charmi Shah & Dr. Zalak Shah: Women's Health Duo";
 
-/** Target ~150–160 characters for meta description audits (HTML + OG + Twitter). */
-export const DEFAULT_DESCRIPTION =
-  "Women's Health Duo: OB-GYN/IVF and physio-led women's health education plus consults in India and online. Hormones, periods, fertility, pelvic health, STOTT Pilates. WhatsApp +917990550754.";
+/** Target 25–160 characters for Bing meta description audits (HTML + OG + Twitter). */
+export const DEFAULT_DESCRIPTION = `Women's Health Duo: book OB-GYN/IVF or physio consults in India and online. WhatsApp ${CONTACT.phoneE164}. Hormones, fertility, pelvic health, STOTT Pilates.`;
 
 export const KEYWORDS = [
   "womens health duo clinical education consultation",
@@ -111,15 +120,5 @@ export const KEYWORDS = [
   "learn hub Instagram reels watch page",
   "international consultation second opinion online",
 ].join(", ");
-
-/** Public profiles (no Twitter/X). Used in JSON-LD `sameAs` and docs. */
-export const CONTACT = {
-  email: "womenshealthduo@gmail.com",
-  phoneE164: "+917990550754",
-  instagram: "https://www.instagram.com/womenshealthduo",
-  youtube: "https://www.youtube.com/@WomensHealthDuo",
-  /** Same WhatsApp number as site CTAs (E.164 without + for wa.me). */
-  whatsappUrl: "https://wa.me/917990550754",
-} as const;
 
 export const OG_IMAGE_PATH = "/favicon.svg";

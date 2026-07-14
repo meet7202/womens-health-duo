@@ -18,6 +18,7 @@
     "typecheck": "tsc -b",
     "preview": "vite preview",
     "audit:seo-titles": "node scripts/audit-seo-titles.mjs",
+    "audit:seo-descriptions": "node scripts/audit-seo-descriptions.mjs",
     "audit:seo-h1": "node scripts/audit-seo-h1.mjs",
     "audit:seo-headings": "node scripts/audit-seo-headings.mjs",
     "audit:seo-sitemap": "node scripts/audit-seo-sitemap.mjs",

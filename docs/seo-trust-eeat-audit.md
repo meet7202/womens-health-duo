@@ -1,5 +1,8 @@
 # Trust & E-E-A-T audit (YMYL) — Women’s Health Duo
 
+**Agent rule (always on):** [`.cursor/rules/medical-eeat.mdc`](../.cursor/rules/medical-eeat.mdc).  
+**Verified doctor lanes:** Dr. Charmi Shah — OB-GYN / IVF / laparoscopy (`doctorProfiles.ts`). Dr. Zalak Shah — women's health physiotherapy / STOTT Pilates (not OB-GYN). Do not use generic YMYL templates that assign both sisters the same medical degree.
+
 ## What was already strong
 
 - **Named physicians** with dedicated routes (`/dr-charmi-shah`, `/dr-zalak-shah`), photos, credentials, and `Physician` JSON-LD in [`JsonLd.tsx`](../src/components/seo/JsonLd.tsx).

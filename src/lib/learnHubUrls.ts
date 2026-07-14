@@ -3,6 +3,7 @@ import {
   type HubDoctorTag,
   type KnowledgeHubVideo,
 } from "../data/knowledgeHubVideos";
+import { capMetaDescription } from "./seoDescription";
 import { publicPathname } from "./githubPagesPublicUrl";
 
 /**
@@ -228,7 +229,7 @@ export function learnHubSeoDescription(parsed: LearnHubParsed): string {
   const tail =
     " Pairs with our online video consults from India for NRIs and international families. Not a substitute for individualized care.";
   if (parsed.doctor === "all" && parsed.topic === "all") {
-    return `${LEARN_SEO_BASE}${tail}`.slice(0, 320);
+    return capMetaDescription(`${LEARN_SEO_BASE}${tail}`);
   }
   const bits: string[] = [LEARN_SEO_BASE];
   if (parsed.doctor !== "all") {
@@ -241,5 +242,5 @@ export function learnHubSeoDescription(parsed: LearnHubParsed): string {
   if (parsed.topic !== "all") {
     bits.push(`Topic filter: ${parsed.topic}.`);
   }
-  return (bits.join(" ") + tail).slice(0, 320);
+  return capMetaDescription(bits.join(" ") + tail);
 }
