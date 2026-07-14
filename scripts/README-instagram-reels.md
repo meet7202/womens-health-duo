@@ -53,12 +53,13 @@ Requires **`yt-dlp`** locally. Writes **`postedAt`**, captions, poster JPEG (Ins
 
 **YouTube:** Shorts and long uploads append to **`KNOWLEDGE_HUB_YOUTUBE_VIDEOS_RAW`** in **`knowledgeHubVideos.ts`** plus **`knowledgeHubYoutubeCaptions.json`** (`yt-duo-…` hub ids; `youtubeOpenAs: "watch"` for uploads over 60s).
 
-### GitHub Actions (automatic PR)
+### GitHub Actions (one URL, end-to-end)
 
-1. Add a URL to **`learn-queue.txt`** (one per line) and push, **or**
-2. **Actions → Import Learn media → Run workflow** and paste the URL.
+1. **Actions → Import Learn media → Run workflow**
+2. Paste **one** Instagram or YouTube URL in **media_url**
+3. Workflow imports, verifies, **pushes to `main`**, and triggers **Deploy to GitHub Pages**
 
-The workflow runs **`append-learn-media.mjs`**, Prettier, full verify, and opens a PR. Existing indexed Learn rows are not rewritten.
+No queue file or manual PR. (This repo blocks `GITHUB_TOKEN` from opening PRs, so workflows push directly after verify.)
 
 ## Original captions (YouTube)
 
