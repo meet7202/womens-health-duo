@@ -70,7 +70,9 @@ function main() {
   const out = [...byCode.values()];
   // Preserve existing array order; append genuinely new rows at the end only.
   const existingOrder = existing.map((row) => row.instagramReelId).filter((id) => byCode.has(id));
-  const newCodes = [...byCode.keys()].filter((code) => !existing.some((row) => row.instagramReelId === code));
+  const newCodes = [...byCode.keys()].filter(
+    (code) => !existing.some((row) => row.instagramReelId === code),
+  );
   const ordered = [
     ...existingOrder.map((code) => byCode.get(code)),
     ...newCodes.map((code) => byCode.get(code)),
