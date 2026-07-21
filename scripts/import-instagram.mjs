@@ -64,7 +64,13 @@ function sortHubRows(rows, idKey) {
 
 /** @param {Record<string, unknown>} row */
 function postedAtStringFromRow(row) {
-  const ts = row?.timestamp ?? row?.taken_at_timestamp ?? row?.taken_at ?? row?.upload_date ?? row?.uploaded_date ?? row?.timestamp_ms;
+  const ts =
+    row?.timestamp ??
+    row?.taken_at_timestamp ??
+    row?.taken_at ??
+    row?.upload_date ??
+    row?.uploaded_date ??
+    row?.timestamp_ms;
   if (ts == null) return "";
   // numeric seconds
   if (typeof ts === "number" && Number.isFinite(ts)) {
