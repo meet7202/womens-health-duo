@@ -16,6 +16,7 @@ import { FaqSection } from "@/components/sections/FaqSection";
 import { ROUTES } from "@/config/routes";
 import { publicPathname } from "@/lib/githubPagesPublicUrl";
 import { SITE_URL } from "@/config/site";
+import heroImage640Webp from "@/assets/hero-doctors-640w.webp";
 import { HOME_PAGE_FAQ } from "@/data/homePageFaq";
 import { Button } from "@/components/ui/button";
 import { AppLink as Link } from "@/components/router/AppLink";
@@ -49,7 +50,15 @@ const Index = () => {
               metaDescription: sectionSeo.metaDescription,
               path: sectionSeo.canonicalPath,
             }
-          : {})}
+          : {
+              preloadImages: [
+                {
+                  href: heroImage640Webp,
+                  as: "image",
+                  type: "image/webp",
+                },
+              ],
+            })}
       />
       <JsonLd />
       <JsonLdFaq
