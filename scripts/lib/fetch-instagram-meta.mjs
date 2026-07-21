@@ -77,7 +77,7 @@ export async function fetchInstagramLearnMeta(shortcode) {
   // and extract JSON-LD `uploadDate` / `datePublished` or other date hints.
   async function fetchHtmlShortcode() {
     try {
-      const res = await fetch(instagramPageUrl(shortcode, 'p'), { headers: { 'User-Agent': UA } });
+      const res = await fetch(instagramPageUrl(shortcode, "p"), { headers: { "User-Agent": UA } });
       if (!res.ok) return null;
       return await res.text();
     } catch {
@@ -90,7 +90,9 @@ export async function fetchInstagramLearnMeta(shortcode) {
       const html = await fetchHtmlShortcode();
       if (html) {
         // Look for a JSON-LD block first
-        const ldMatch = html.match(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/i);
+        const ldMatch = html.match(
+          /<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/i,
+        );
         if (ldMatch) {
           try {
             const ld = JSON.parse(ldMatch[1]);
@@ -106,7 +108,9 @@ export async function fetchInstagramLearnMeta(shortcode) {
 
         // Fallback: search for explicit uploadDate or datePublished strings in HTML
         if (!meta.timestamp) {
-          const m = html.match(/"uploadDate"\s*:\s*"([0-9T:\-\.Z]+)"/i) || html.match(/"datePublished"\s*:\s*"([0-9T:\-\.Z]+)"/i);
+          const m =
+            html.match(/"uploadDate"\s*:\s*"([0-9T:\-\.Z]+)"/i) ||
+            html.match(/"datePublished"\s*:\s*"([0-9T:\-\.Z]+)"/i);
           if (m) {
             const d = new Date(m[1]);
             if (!Number.isNaN(d.getTime())) meta.timestamp = Math.floor(d.getTime() / 1000);
