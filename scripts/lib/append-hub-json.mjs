@@ -18,10 +18,13 @@ export function hubRowBlock(row) {
  */
 export function appendHubJsonRow({ filePath, row }) {
   let raw = readFileSync(filePath, "utf8");
-  if (!raw.endsWith("\n]\n") && !raw.endsWith("]\n")) {
+  // Accept files ending with Unix or Windows line endings. Preserve original EOL when appending.
+  const eol = raw.includes("\r\n") ? "\r\n" : "\n";
+  if (!raw.trimEnd().endsWith("]")) {
     throw new Error(`Unexpected JSON file ending: ${filePath}`);
   }
-  raw = raw.replace(/\n]\n?$/, `,\n${hubRowBlock(row)}\n]\n`);
+  // Replace the trailing closing array bracket (and any trailing newline) with the new row, preserving EOL.
+  raw = raw.replace(/\r?\n?\]\r?\n?$/, `,\n${hubRowBlock(row)}${eol}]${eol}`);
   writeFileSync(filePath, raw);
 }
 

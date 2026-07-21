@@ -62,6 +62,41 @@ function sortHubRows(rows, idKey) {
   });
 }
 
+/** @param {Record<string, unknown>} row */
+function postedAtStringFromRow(row) {
+  const ts = row?.timestamp ?? row?.taken_at_timestamp ?? row?.taken_at ?? row?.upload_date ?? row?.uploaded_date ?? row?.timestamp_ms;
+  if (ts == null) return "";
+  // numeric seconds
+  if (typeof ts === "number" && Number.isFinite(ts)) {
+    // if it's in milliseconds (large number), convert
+    if (ts > 1e12) return new Date(Math.floor(ts / 1000) * 1000).toISOString();
+    return new Date(ts * 1000).toISOString();
+  }
+  // string of digits: could be seconds or YYYYMMDD
+  const s = String(ts).trim();
+  if (!s) return "";
+  if (/^\d{8}$/.test(s)) {
+    // YYYYMMDD
+    const year = Number(s.slice(0, 4));
+    const month = Number(s.slice(4, 6));
+    const day = Number(s.slice(6, 8));
+    try {
+      return new Date(Date.UTC(year, month - 1, day, 0, 0, 0)).toISOString();
+    } catch {
+      return "";
+    }
+  }
+  if (/^\d+$/.test(s)) {
+    const n = Number(s);
+    if (n > 1e12) return new Date(Math.floor(n / 1000)).toISOString();
+    return new Date(n * 1000).toISOString();
+  }
+  // fall back: try Date parse
+  const d = new Date(s);
+  if (!Number.isNaN(d.getTime())) return d.toISOString();
+  return "";
+}
+
 function mergeReels(scrapRows, existingRows) {
   /** @type {Map<string, Record<string, unknown>>} */
   const byCode = new Map();
@@ -80,7 +115,7 @@ function mergeReels(scrapRows, existingRows) {
     }
     const code = String(row.shortCode).trim();
     const caption = String(row.caption ?? "").trim();
-    const postedAt = String(row.timestamp ?? "").trim();
+    const postedAt = postedAtStringFromRow(row);
     const views = row.videoPlayCount;
     const isNew = !byCode.has(code);
     const prev = isNew
@@ -144,7 +179,7 @@ function mergePosts(scrapRows, existingRows) {
 
     const code = String(row.shortCode).trim();
     const caption = String(row.caption ?? "").trim();
-    const postedAt = String(row.timestamp ?? "").trim();
+    const postedAt = postedAtStringFromRow(row);
     const views = row.videoPlayCount ?? row.likesCount;
     const fallbackTitle =
       mediaKind === "carousel"
