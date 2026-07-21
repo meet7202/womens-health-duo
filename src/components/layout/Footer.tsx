@@ -152,6 +152,14 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
+                  to={publicPathname(ROUTES.learnArticles)}
+                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
+                >
+                  Articles and common questions
+                </Link>
+              </li>
+              <li>
+                <Link
                   to={publicPathname(ROUTES.freeWomensHealthCommunity)}
                   className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
                 >
