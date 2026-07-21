@@ -10,7 +10,14 @@ import { homePermalinkForScrollId } from "@/lib/homeSectionPaths";
 import { HOME_DEFAULT_H1 } from "@/lib/pageSeoCopy";
 import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 import { cn } from "@/lib/utils";
-import heroImage from "@/assets/hero-doctors.jpg";
+import heroImage640 from "@/assets/hero-doctors-640w.jpg";
+import heroImage960 from "@/assets/hero-doctors-960w.jpg";
+import heroImage1280 from "@/assets/hero-doctors-1280w.jpg";
+import heroImage1536 from "@/assets/hero-doctors-1536w.jpg";
+import heroImage640Webp from "@/assets/hero-doctors-640w.webp";
+import heroImage960Webp from "@/assets/hero-doctors-960w.webp";
+import heroImage1280Webp from "@/assets/hero-doctors-1280w.webp";
+import heroImage1536Webp from "@/assets/hero-doctors-1536w.webp";
 import { HERO_IMAGE_ALT, HERO_IMAGE_TITLE } from "@/lib/mediaSeo";
 
 const heroH1VisualClass =
@@ -178,17 +185,30 @@ export const HeroSection = ({ seoH1 = null }: HeroSectionProps) => {
             className="relative order-1 mx-auto w-full max-w-md md:order-2 md:mx-0 md:max-w-none"
           >
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-elevated">
-              <img
-                src={heroImage}
-                alt={HERO_IMAGE_ALT}
-                title={HERO_IMAGE_TITLE}
-                className="h-full w-full object-cover"
-                width={640}
-                height={800}
-                sizes="(min-width: 768px) 45vw, 100vw"
-                decoding="async"
-                loading="eager"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcSet={`${heroImage640Webp} 640w, ${heroImage960Webp} 960w, ${heroImage1280Webp} 1280w, ${heroImage1536Webp} 1536w`}
+                  sizes="(min-width: 768px) 45vw, 100vw"
+                />
+                <source
+                  type="image/jpeg"
+                  srcSet={`${heroImage640} 640w, ${heroImage960} 960w, ${heroImage1280} 1280w, ${heroImage1536} 1536w`}
+                  sizes="(min-width: 768px) 45vw, 100vw"
+                />
+                <img
+                  src={heroImage640}
+                  alt={HERO_IMAGE_ALT}
+                  title={HERO_IMAGE_TITLE}
+                  className="h-full w-full object-cover"
+                  width={640}
+                  height={800}
+                  sizes="(min-width: 768px) 45vw, 100vw"
+                  decoding="async"
+                  loading="eager"
+                  fetchPriority="high"
+                />
+              </picture>
               {/* Mobile: bottom scrim only (legible names); desktop: full gradient unchanged */}
               <div className="absolute inset-x-0 bottom-0 h-[36%] bg-gradient-to-t from-foreground/55 to-transparent md:hidden" />
               <div className="absolute inset-0 hidden bg-gradient-to-t from-foreground/40 via-foreground/10 to-transparent md:block" />

@@ -28,19 +28,31 @@ export function DoctorIdentityCard({ slug, compact, className }: DoctorIdentityC
         className,
       )}
     >
-      <img
-        src={PHOTOS[slug]}
-        alt={DOCTOR_PHOTOS[slug].alt}
-        title={DOCTOR_PHOTOS[slug].title}
-        width={compact ? 72 : 120}
-        height={compact ? 90 : 150}
-        className={cn(
-          "rounded-xl object-cover object-top shrink-0",
-          compact ? "w-[72px] h-[90px]" : "w-[120px] h-[150px]",
-        )}
-        loading="lazy"
-        decoding="async"
-      />
+      <picture>
+        <source
+          type="image/webp"
+          srcSet={DOCTOR_PHOTOS[slug].srcSetWebp}
+          sizes={compact ? "72px" : "120px"}
+        />
+        <source
+          type="image/jpeg"
+          srcSet={DOCTOR_PHOTOS[slug].srcSetJpeg}
+          sizes={compact ? "72px" : "120px"}
+        />
+        <img
+          src={PHOTOS[slug]}
+          alt={DOCTOR_PHOTOS[slug].alt}
+          title={DOCTOR_PHOTOS[slug].title}
+          width={compact ? 72 : 120}
+          height={compact ? 90 : 150}
+          className={cn(
+            "rounded-xl object-cover object-top shrink-0",
+            compact ? "w-[72px] h-[90px]" : "w-[120px] h-[150px]",
+          )}
+          loading="lazy"
+          decoding="async"
+        />
+      </picture>
       <div className="min-w-0 flex-1">
         <p className="font-heading text-lg font-semibold text-foreground">{d.name}</p>
         <p className="text-sm text-primary font-medium mt-0.5">{d.jobTitle}</p>

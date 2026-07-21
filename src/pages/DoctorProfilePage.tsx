@@ -27,7 +27,15 @@ import { AppLink as Link } from "@/components/router/AppLink";
 
 const IMAGES: Record<
   DoctorSlug,
-  { src: string; width: number; height: number; alt: string; title: string }
+  {
+    src: string;
+    width: number;
+    height: number;
+    alt: string;
+    title: string;
+    srcSetJpeg: string;
+    srcSetWebp: string;
+  }
 > = {
   charmi: {
     src: DOCTOR_PHOTOS.charmi.displaySrc,
@@ -35,6 +43,8 @@ const IMAGES: Record<
     height: DOCTOR_PHOTOS.charmi.height,
     alt: DOCTOR_PHOTOS.charmi.alt,
     title: DOCTOR_PHOTOS.charmi.title,
+    srcSetJpeg: DOCTOR_PHOTOS.charmi.srcSetJpeg,
+    srcSetWebp: DOCTOR_PHOTOS.charmi.srcSetWebp,
   },
   zalak: {
     src: DOCTOR_PHOTOS.zalak.displaySrc,
@@ -42,6 +52,8 @@ const IMAGES: Record<
     height: DOCTOR_PHOTOS.zalak.height,
     alt: DOCTOR_PHOTOS.zalak.alt,
     title: DOCTOR_PHOTOS.zalak.title,
+    srcSetJpeg: DOCTOR_PHOTOS.zalak.srcSetJpeg,
+    srcSetWebp: DOCTOR_PHOTOS.zalak.srcSetWebp,
   },
 };
 
@@ -108,16 +120,20 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
         </p>
 
         <div className="float-none sm:float-right sm:ml-8 sm:mb-4 w-full max-w-[220px] mx-auto sm:mx-0">
-          <img
-            src={img.src}
-            alt={img.alt}
-            title={img.title}
-            width={img.width}
-            height={img.height}
-            className="rounded-2xl object-cover object-top shadow-card w-full aspect-[4/5]"
-            loading="eager"
-            decoding="async"
-          />
+          <picture>
+            <source type="image/webp" srcSet={img.srcSetWebp} sizes="220px" />
+            <source type="image/jpeg" srcSet={img.srcSetJpeg} sizes="220px" />
+            <img
+              src={img.src}
+              alt={img.alt}
+              title={img.title}
+              width={img.width}
+              height={img.height}
+              className="rounded-2xl object-cover object-top shadow-card w-full aspect-[4/5]"
+              loading="eager"
+              decoding="async"
+            />
+          </picture>
         </div>
 
         <div className="space-y-4 text-muted-foreground leading-relaxed mb-8">

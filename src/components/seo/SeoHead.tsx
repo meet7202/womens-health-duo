@@ -20,6 +20,13 @@ export type SeoHeadProps = {
   /** Absolute or site-relative OG/Twitter image (watch pages: video poster). */
   ogImage?: string;
   ogImageAlt?: string;
+  /** Preload critical images from the homepage / top of the page. */
+  preloadImages?: Array<{
+    href: string;
+    as?: string;
+    type?: string;
+    crossOrigin?: "anonymous" | "use-credentials";
+  }>;
   /** Open Graph type; use `video.other` on Learn watch pages. */
   ogType?: "website" | "video.other";
 };
@@ -44,6 +51,17 @@ function upsertLink(rel: string, href: string) {
   el.setAttribute("href", href);
 }
 
+function upsertLinkWithAttrs(rel: string, href: string, attrs: Record<string, string>) {
+  let el = document.querySelector(`link[rel="${rel}"][href="${href}"]`);
+  if (!el) {
+    el = document.createElement("link");
+    el.setAttribute("rel", rel);
+    el.setAttribute("href", href);
+    document.head.appendChild(el);
+  }
+  Object.entries(attrs).forEach(([key, value]) => el.setAttribute(key, value));
+}
+
 function canonicalUrlForPath(path: string | undefined) {
   const p = !path || path === "/" ? "/" : path.startsWith("/") ? path : `/${path}`;
   return githubPagesAbsoluteUrl(SITE_URL, p);
@@ -60,6 +78,7 @@ export function SeoHead({
   metaKeywords,
   ogImage,
   ogImageAlt,
+  preloadImages,
   ogType = "website",
 }: SeoHeadProps = {}) {
   const resolvedTitle = capDocumentTitle(title ?? DEFAULT_TITLE, BING_TITLE_MAX_LEN);
@@ -90,6 +109,14 @@ export function SeoHead({
 
     upsertLink("canonical", pageUrl);
 
+    preloadImages?.forEach((image) => {
+      upsertLinkWithAttrs("preload", image.href, {
+        as: image.as ?? "image",
+        ...(image.type ? { type: image.type } : {}),
+        ...(image.crossOrigin ? { crossorigin: image.crossOrigin } : {}),
+      });
+    });
+
     upsertMeta("property", "og:type", ogType);
     upsertMeta("property", "og:site_name", "Women's Health Duo");
     upsertMeta("property", "og:url", pageUrl);
@@ -113,6 +140,7 @@ export function SeoHead({
     resolvedOgImage,
     resolvedOgImageAlt,
     ogType,
+    preloadImages,
   ]);
 
   return null;

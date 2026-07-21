@@ -13,7 +13,6 @@ import {
 import { BRAND_ENTITY_LINE } from "@/config/brandLine";
 import { whatsappMessageDoctorProfile, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 import { DOCTOR_PHOTOS } from "@/config/doctorPhotos";
-import drCharmi from "@/assets/dr-charmi.jpeg";
 
 const doctors = [
   {
@@ -34,12 +33,14 @@ const doctors = [
     location: PRACTICE_CHARMI_LOCATIONS_SHORT,
     phone: "+91-7990550754",
     icon: Stethoscope,
-    image: drCharmi,
+    image: DOCTOR_PHOTOS.charmi.displaySrc,
     imageWidth: 849,
     imageHeight: 1024,
     profilePath: ROUTES.drCharmi,
     photoAlt: DOCTOR_PHOTOS.charmi.alt,
     photoTitle: DOCTOR_PHOTOS.charmi.title,
+    photoSrcSetJpeg: DOCTOR_PHOTOS.charmi.srcSetJpeg,
+    photoSrcSetWebp: DOCTOR_PHOTOS.charmi.srcSetWebp,
   },
   {
     name: "Dr. Zalak Shah (PT)",
@@ -111,17 +112,28 @@ export const AboutSection = () => {
             >
               <div className="flex flex-col items-center text-center gap-6">
                 <div className="w-40 h-48 rounded-2xl overflow-hidden flex-shrink-0 shadow-lg">
-                  <img
-                    src={doctor.image}
-                    alt={doctor.photoAlt}
-                    title={doctor.photoTitle}
-                    width={doctor.imageWidth}
-                    height={doctor.imageHeight}
-                    sizes="(max-width: 1024px) 160px, 320px"
-                    loading="lazy"
-                    decoding="async"
-                    className="h-full w-full object-cover object-top"
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcSet={doctor.photoSrcSetWebp}
+                      sizes="(max-width: 1024px) 160px, 320px"
+                    />
+                    <source
+                      type="image/jpeg"
+                      srcSet={doctor.photoSrcSetJpeg}
+                      sizes="(max-width: 1024px) 160px, 320px"
+                    />
+                    <img
+                      src={doctor.image}
+                      alt={doctor.photoAlt}
+                      title={doctor.photoTitle}
+                      width={doctor.imageWidth}
+                      height={doctor.imageHeight}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-full w-full object-cover object-top"
+                    />
+                  </picture>
                 </div>
                 <div className="flex-1">
                   <div className="flex flex-col items-center gap-2 mb-2">
