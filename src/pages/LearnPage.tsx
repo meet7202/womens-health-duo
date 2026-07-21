@@ -95,18 +95,16 @@ export function LearnPage() {
           {HOME_ENTITY_DEFINITION}
         </p>
         <p className="text-lg text-muted-foreground leading-relaxed mb-6">{LEARN_HUB_INTRO}</p>
-        {canonicalPath === ROUTES.learn ? (
-          <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-3xl">
-            For written answers you can follow link by link (not only reels and posts), see{" "}
-            <Link
-              to={ROUTES.learnArticles}
-              className="text-primary font-medium underline underline-offset-4"
-            >
-              articles and common questions on Learn
-            </Link>
-            .
-          </p>
-        ) : null}
+        <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-3xl">
+          For written answers you can follow link by link (not only reels and posts), see{" "}
+          <Link
+            to={ROUTES.learnArticles}
+            className="text-primary font-medium underline underline-offset-4"
+          >
+            articles and common questions on Learn
+          </Link>
+          .
+        </p>
         {canonicalPath !== ROUTES.learn ? (
           <p className="text-sm text-muted-foreground mt-3 mb-10">
             <Link to={ROUTES.learn} className="text-primary underline underline-offset-4">
