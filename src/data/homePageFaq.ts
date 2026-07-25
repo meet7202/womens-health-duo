@@ -26,6 +26,6 @@ export const HOME_PAGE_FAQ: FaqItem[] = [
   {
     question: "How do I book a consultation with Women's Health Duo?",
     answer:
-      "Use the WhatsApp button on this site or email womenshealthduo@gmail.com with your city, country, time zone, and a short summary. We will suggest next steps and available slots. Urgent or emergency symptoms should go to your local emergency services.",
+      "Use the WhatsApp button on this site or email contact@womenshealthduo.com with your city, country, time zone, and a short summary. We will suggest next steps and available slots. Urgent or emergency symptoms should go to your local emergency services.",
   },
 ];

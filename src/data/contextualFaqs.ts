@@ -16,7 +16,7 @@ const LEARN_HUB_DEFAULT: FaqItem[] = [
   {
     question: "How do I book a consultation after watching a clip?",
     answer:
-      "Use the WhatsApp button on this site or email womenshealthduo@gmail.com with your city, country, time zone, and a short summary. We will suggest whether Dr. Charmi Shah (OB-GYN / IVF) or Dr. Zalak Shah (women's health physio / STOTT Pilates) fits first, and share available slots.",
+      "Use the WhatsApp button on this site or email contact@womenshealthduo.com with your city, country, time zone, and a short summary. We will suggest whether Dr. Charmi Shah (OB-GYN / IVF) or Dr. Zalak Shah (women's health physio / STOTT Pilates) fits first, and share available slots.",
   },
   {
     question: "Can I get a prescription or procedure from a reel alone?",
@@ -370,7 +370,7 @@ function quadVirtualBooking(args: {
   return [
     {
       question: `How do I book ${serviceTitle} from ${city}?`,
-      answer: `Message us on WhatsApp or email womenshealthduo@gmail.com. Include ${city}, ${country}, your time zone, and that you want ${serviceTitle}. We coordinate with ${doctorLabel} for the next available video slot.`,
+      answer: `Message us on WhatsApp or email contact@womenshealthduo.com. Include ${city}, ${country}, your time zone, and that you want ${serviceTitle}. We coordinate with ${doctorLabel} for the next available video slot.`,
     },
     {
       question: `Is video consultation as effective as in-person for ${serviceTitle}?`,
@@ -784,7 +784,7 @@ export function virtualCityOverviewFaqs(city: string, country: string): FaqItem[
   return take10([
     {
       question: `How do I book an online consult from ${city}, ${country}?`,
-      answer: `WhatsApp or email womenshealthduo@gmail.com with “${city}, ${country}” in the first line, your time zone, and whether you need OB-GYN or physio/Pilates first. This ${city} overview page links to every service-specific URL for ${city}, and we route you to Dr. Charmi or Dr. Zalak from there.`,
+      answer: `WhatsApp or email contact@womenshealthduo.com with “${city}, ${country}” in the first line, your time zone, and whether you need OB-GYN or physio/Pilates first. This ${city} overview page links to every service-specific URL for ${city}, and we route you to Dr. Charmi or Dr. Zalak from there.`,
     },
     {
       question: `Is telehealth from India effective if I live in ${city}, ${country}?`,

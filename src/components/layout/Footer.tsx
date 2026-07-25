@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { useLocation } from "react-router-dom";
-import { Heart, Instagram, Mail, MessageCircle, Phone, Youtube } from "lucide-react";
+import { Heart, Instagram, Linkedin, Mail, MessageCircle, Phone, Youtube } from "lucide-react";
 import { CONTACT } from "@/config/site";
 import { ROUTES } from "@/config/routes";
 import { publicPathname } from "@/lib/githubPagesPublicUrl";
@@ -230,6 +230,15 @@ export const Footer = () => {
               >
                 <Youtube className="w-4 h-4" />
                 YouTube
+              </a>
+              <a
+                href={CONTACT.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-md hover:text-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background/50"
+              >
+                <Linkedin className="w-4 h-4" />
+                LinkedIn
               </a>
               <a
                 href={footerWhatsappHref}

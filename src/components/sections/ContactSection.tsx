@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState, useMemo } from "react";
 import { useLocation } from "react-router-dom";
-import { Phone, MapPin, Clock, Instagram, Youtube, MessageCircle, Users, Mail } from "lucide-react";
+import { Phone, MapPin, Clock, Instagram, Linkedin, Youtube, MessageCircle, Users, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -252,11 +252,11 @@ Sent from Women's Health Duo Website`;
                   +91-7990550754
                 </a>
                 <a
-                  href="mailto:womenshealthduo@gmail.com"
+                  href={`mailto:${CONTACT.email}`}
                   className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Mail className="w-5 h-5 text-primary" />
-                  womenshealthduo@gmail.com
+                  {CONTACT.email}
                 </a>
                 <div className="flex items-start gap-3 text-muted-foreground">
                   <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -286,11 +286,11 @@ Sent from Women's Health Duo Website`;
                   +91-7990550754
                 </a>
                 <a
-                  href="mailto:womenshealthduo@gmail.com"
+                  href={`mailto:${CONTACT.email}`}
                   className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Mail className="w-5 h-5 text-primary" />
-                  womenshealthduo@gmail.com
+                  {CONTACT.email}
                 </a>
                 <div className="flex items-start gap-3 text-muted-foreground">
                   <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -338,6 +338,15 @@ Sent from Women's Health Duo Website`;
                 >
                   <Youtube className="w-6 h-6 shrink-0" />
                   Women&apos;s Health Duo on YouTube
+                </a>
+                <a
+                  href={CONTACT.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 text-primary hover:underline underline-offset-4"
+                >
+                  <Linkedin className="w-6 h-6 shrink-0" />
+                  Women&apos;s Health Duo on LinkedIn
                 </a>
                 <p className="text-sm text-muted-foreground">
                   A holistic approach to women's health! Follow us for tips on pregnancy, fertility,

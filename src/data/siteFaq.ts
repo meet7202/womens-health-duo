@@ -37,7 +37,7 @@ export const SITE_FAQ_BASE: FaqItem[] = [
   {
     question: "How do I contact Women's Health Duo?",
     answer:
-      "Use the phone number and WhatsApp on the website, or email womenshealthduo@gmail.com. Instagram and YouTube are used for educational reels and videos; they are not a substitute for individualized medical advice or emergency care.",
+      "Use the phone number and WhatsApp on the website, or email contact@womenshealthduo.com. Instagram and YouTube are used for educational reels and videos; they are not a substitute for individualized medical advice or emergency care.",
   },
   {
     question: "Do you have pages for NRIs in major global cities?",
