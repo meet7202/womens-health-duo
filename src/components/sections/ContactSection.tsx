@@ -2,7 +2,17 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState, useMemo } from "react";
 import { useLocation } from "react-router-dom";
-import { Phone, MapPin, Clock, Instagram, Linkedin, Youtube, MessageCircle, Users, Mail } from "lucide-react";
+import {
+  Phone,
+  MapPin,
+  Clock,
+  Instagram,
+  Linkedin,
+  Youtube,
+  MessageCircle,
+  Users,
+  Mail,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
