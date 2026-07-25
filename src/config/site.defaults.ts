@@ -22,10 +22,11 @@ export const ORGANIZATION_SCHEMA_DESCRIPTION = `${HOME_ENTITY_DEFINITION} Dr. Ch
 
 /** Public profiles (no Twitter/X). Used in JSON-LD `sameAs` and docs. */
 export const CONTACT = {
-  email: "womenshealthduo@gmail.com",
+  email: "contact@womenshealthduo.com",
   phoneE164: "+917990550754",
   instagram: "https://www.instagram.com/womenshealthduo",
   youtube: "https://www.youtube.com/@WomensHealthDuo",
+  linkedin: "https://www.linkedin.com/company/womenshealthduo/",
   /** Same WhatsApp number as site CTAs (E.164 without + for wa.me). */
   whatsappUrl: "https://wa.me/917990550754",
 } as const;

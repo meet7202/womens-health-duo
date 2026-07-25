@@ -38,6 +38,6 @@ Fetch **`/llms.txt`** (plain text) for URL patterns, sitemap notes, service slug
 ## Contact (general questions only — not emergency)
 
 - WhatsApp practice line: +91 79905 50754 (`https://wa.me/917990550754`)
-- Email: womenshealthduo@gmail.com
+- Email: contact@womenshealthduo.com
 
 For booking flow details, use the **book-consultation** skill. For Learn hub URLs, use the **learn-hub** skill.

@@ -23,7 +23,7 @@ function bookingFaqs(title: string, consult: "charmi" | "zalak" | "both"): FaqIt
   return [
     {
       question: `How do I book a consultation about ${title}?`,
-      answer: `Message Women's Health Duo on WhatsApp or email womenshealthduo@gmail.com with your city, country, time zone, and a one-line subject that mentions "${title}". Attach prior labs or reports if relevant. ${routing}`,
+      answer: `Message Women's Health Duo on WhatsApp or email contact@womenshealthduo.com with your city, country, time zone, and a one-line subject that mentions "${title}". Attach prior labs or reports if relevant. ${routing}`,
     },
     {
       question: `Is an online video visit enough for questions about ${title}?`,
