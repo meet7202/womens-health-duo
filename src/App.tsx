@@ -31,6 +31,10 @@ import {
   LegacyGlobalOnlineCityRedirect,
   LegacyGlobalOnlineHubRedirect,
 } from "@/pages/LegacyGlobalOnlineRedirects";
+import { PrenatalClassesPage } from "@/pages/PrenatalClassesPage";
+import { PostnatalClassesPage } from "@/pages/PostnatalClassesPage";
+import { PilatesClassesPage } from "@/pages/PilatesClassesPage";
+import { ZalakGroupClassPage } from "@/pages/ZalakGroupClassPage";
 import { ROUTES, HOME_SECTION_SCROLL_PATHS } from "@/config/routes";
 import { VIRTUAL_CONSULTATION_HUB_PATH } from "@/lib/virtualConsultation";
 import { StickyWhatsAppButton } from "@/components/layout/StickyWhatsAppButton";
@@ -80,6 +84,22 @@ const App = () => (
         <Route
           path={publicRoutePath(ROUTES.drZalak)}
           element={<DoctorProfilePage slug="zalak" />}
+        />
+        <Route
+          path={publicRoutePath(ROUTES.prenatal)}
+          element={<PrenatalClassesPage />}
+        />
+        <Route
+          path={publicRoutePath(ROUTES.postnatal)}
+          element={<PostnatalClassesPage />}
+        />
+        <Route
+          path={publicRoutePath(ROUTES.pilates)}
+          element={<PilatesClassesPage />}
+        />
+        <Route
+          path={publicRoutePath(`${ROUTES.drZalak}/:classSlug`)}
+          element={<ZalakGroupClassPage />}
         />
         <Route
           path={publicRoutePath(ROUTES.ahmedabad)}

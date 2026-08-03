@@ -10,11 +10,7 @@ import { ROUTES } from "@/config/routes";
 import { CONTACT, SITE_URL } from "@/config/site";
 import { AppLink as Link } from "@/components/router/AppLink";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
-import {
-  breadcrumbListSchema,
-  webPageSchema,
-  reviewSchema,
-} from "@/components/seo/schema/breadcrumbs";
+import { breadcrumbListSchema, webPageSchema, reviewSchema } from "@/components/seo/schema/breadcrumbs";
 import { ZALAK_GROUP_CLASS_CONTENT } from "@/data/zalakGroupClasses";
 import { whatsappUrlWithMessage } from "@/lib/whatsappCta";
 

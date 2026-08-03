@@ -28,6 +28,13 @@ export const ROUTES = {
   homeQuickAnswers: "/quick-answers",
   drCharmi: "/dr-charmi-shah",
   drZalak: "/dr-zalak-shah",
+  zalakPrenatalClasses: "/dr-zalak-shah/prenatal-classes",
+  zalakPostnatalClasses: "/dr-zalak-shah/postnatal-classes",
+  zalakPilatesClasses: "/dr-zalak-shah/pilates-classes",
+  /** Dedicated pages for group classes (SEO-friendly short URLs) */
+  prenatal: "/prenatal",
+  postnatal: "/postnatal",
+  pilates: "/pilates",
   ahmedabad: "/ahmedabad",
   mumbai: "/mumbai",
   valsad: "/valsad",
@@ -99,6 +106,12 @@ export const SITEMAP_SEGMENT_CORE: readonly string[] = [
   ...HOME_SECTION_SCROLL_PATHS,
   ROUTES.drCharmi,
   ROUTES.drZalak,
+  ROUTES.zalakPrenatalClasses,
+  ROUTES.zalakPostnatalClasses,
+  ROUTES.zalakPilatesClasses,
+  ROUTES.prenatal,
+  ROUTES.postnatal,
+  ROUTES.pilates,
   ROUTES.ahmedabad,
   ROUTES.mumbai,
   ROUTES.valsad,
@@ -160,6 +173,9 @@ export function sitemapPriorityForPath(pathname: string): string {
     p === ROUTES.bangalore
   ) {
     return "0.92";
+  }
+  if (p === ROUTES.prenatal || p === ROUTES.postnatal || p === ROUTES.pilates) {
+    return "0.93";
   }
   if (p === ROUTES.learnArticles) return "0.91";
   if (p === ROUTES.faq) return "0.84";
