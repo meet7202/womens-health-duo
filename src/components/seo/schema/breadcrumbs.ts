@@ -46,11 +46,7 @@ export function webPageSchema(params: {
   return base;
 }
 
-export function reviewSchema(params: {
-  reviews: Review[];
-  itemReviewed: string;
-  pageUrl: string;
-}) {
+export function reviewSchema(params: { reviews: Review[]; itemReviewed: string; pageUrl: string }) {
   return {
     "@type": "AggregateRating",
     itemReviewed: {

@@ -85,18 +85,9 @@ const App = () => (
           path={publicRoutePath(ROUTES.drZalak)}
           element={<DoctorProfilePage slug="zalak" />}
         />
-        <Route
-          path={publicRoutePath(ROUTES.prenatal)}
-          element={<PrenatalClassesPage />}
-        />
-        <Route
-          path={publicRoutePath(ROUTES.postnatal)}
-          element={<PostnatalClassesPage />}
-        />
-        <Route
-          path={publicRoutePath(ROUTES.pilates)}
-          element={<PilatesClassesPage />}
-        />
+        <Route path={publicRoutePath(ROUTES.prenatal)} element={<PrenatalClassesPage />} />
+        <Route path={publicRoutePath(ROUTES.postnatal)} element={<PostnatalClassesPage />} />
+        <Route path={publicRoutePath(ROUTES.pilates)} element={<PilatesClassesPage />} />
         <Route
           path={publicRoutePath(`${ROUTES.drZalak}/:classSlug`)}
           element={<ZalakGroupClassPage />}
