@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ROUTES } from "@/config/routes";
 import { HOME_HERO_LEDE } from "@/config/site";
 import { homePermalinkForScrollId } from "@/lib/homeSectionPaths";
-import { HOME_DEFAULT_H1 } from "@/lib/pageSeoCopy";
+import { HOME_DEFAULT_H1, HOME_DEFAULT_H1_SUBTITLE } from "@/lib/pageSeoCopy";
 import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 import { cn } from "@/lib/utils";
 import heroImage640 from "@/assets/hero-doctors-640w.jpg";
@@ -22,14 +22,6 @@ import { HERO_IMAGE_ALT, HERO_IMAGE_TITLE } from "@/lib/mediaSeo";
 
 const heroH1VisualClass =
   "font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight mb-5 text-[hsl(20_28%_11%)] [text-shadow:0_1px_0_hsl(30_40%_99%),0_0_24px_hsl(30_40%_98%_/_0.9)] text-balance";
-
-export type HeroSectionProps = {
-  /**
-   * Homepage section permalink (`/about`, …): slug-aligned section label as the sole `<h1>`
-   * (`homeSectionSeo().h1`). The default marketing headline moves to a styled paragraph.
-   */
-  seoH1?: string | null;
-};
 
 const heroDoctorCardClass = "rounded-2xl bg-background/95 p-4 shadow-card backdrop-blur-sm";
 
@@ -61,14 +53,13 @@ function HeroDoctorCard({
   );
 }
 
-export const HeroSection = ({ seoH1 = null }: HeroSectionProps) => {
+export const HeroSection = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const bookWhatsAppHref = useMemo(
     () => whatsappUrlWithMessage(whatsappIntentFromPathname(location.pathname)),
     [location.pathname],
   );
-  const resolvedSeoH1 = seoH1?.trim() || null;
 
   const goToHomeSection = (scrollId: string) => {
     const path = homePermalinkForScrollId(scrollId);
@@ -112,16 +103,10 @@ export const HeroSection = ({ seoH1 = null }: HeroSectionProps) => {
               </span>
             </motion.div>
 
-            {resolvedSeoH1 ? (
-              <>
-                <h1 className={heroH1VisualClass}>{resolvedSeoH1}</h1>
-                <p className="font-heading text-xl sm:text-2xl lg:text-3xl font-bold leading-snug mb-5 text-[hsl(20_22%_18%)] text-balance">
-                  {HOME_DEFAULT_H1}
-                </p>
-              </>
-            ) : (
-              <h1 className={heroH1VisualClass}>{HOME_DEFAULT_H1}</h1>
-            )}
+            <h1 className={heroH1VisualClass}>{HOME_DEFAULT_H1}</h1>
+            <p className="font-heading text-xl sm:text-2xl lg:text-3xl font-bold leading-snug mb-5 text-[hsl(20_22%_18%)] text-balance">
+              {HOME_DEFAULT_H1_SUBTITLE}
+            </p>
 
             <p className="text-base sm:text-lg max-w-xl mx-auto md:mx-0 mb-4 leading-relaxed font-medium text-[hsl(20_22%_18%)]">
               {HOME_HERO_LEDE}

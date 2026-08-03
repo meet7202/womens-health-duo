@@ -70,7 +70,7 @@ const Index = () => {
       </a>
       <Header />
       <main id="main-content" className="pb-28">
-        <HeroSection seoH1={sectionSeo?.h1 ?? null} />
+        <HeroSection />
         <AboutSection />
         <ServicesSection />
         <TestimonialsSection />

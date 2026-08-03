@@ -12,8 +12,10 @@ import {
 } from "../data/knowledgeHubVideos";
 
 /** Homepage hero H1 when `/` has no section permalink. */
-export const HOME_DEFAULT_H1 =
-  "Women's Hormonal Health, Menstrual Health, Fertility & STOTT Pilates";
+export const HOME_DEFAULT_H1 = "Comprehensive Women's Health Care";
+
+export const HOME_DEFAULT_H1_SUBTITLE =
+  "Hormonal Health · Fertility · Pregnancy · Postpartum · Pelvic Health · Physiotherapy";
 
 export function homeSectionDocumentTitle(label: string): string {
   return formatDocumentTitle(label);
