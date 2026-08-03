@@ -1,11 +1,7 @@
-import { useMemo } from "react";
-import { useLocation } from "react-router-dom";
-import { Heart, Instagram, Linkedin, Mail, MessageCircle, Phone, Youtube } from "lucide-react";
+import { Heart, Instagram, Mail, Phone, Youtube } from "lucide-react";
 import { CONTACT } from "@/config/site";
 import { ROUTES } from "@/config/routes";
 import { publicPathname } from "@/lib/githubPagesPublicUrl";
-import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsappCta";
-import { BRAND_ENTITY_LINE } from "@/config/brandLine";
 import { AppLink as Link } from "@/components/router/AppLink";
 
 const LEGAL_LINKS = [
@@ -17,58 +13,71 @@ const LEGAL_LINKS = [
   { label: "Editorial policy", to: ROUTES.editorialPolicy },
 ] as const;
 
-const SECTION_LINKS = [
-  { label: "About", to: publicPathname(ROUTES.homeAbout) },
-  { label: "Services", to: publicPathname(ROUTES.homeServicesSection) },
-  { label: "Testimonials", to: publicPathname(ROUTES.homeTestimonials) },
-  { label: "Contact", to: publicPathname(ROUTES.homeContact) },
-] as const;
+type SectionLink = {
+  label: string;
+  to: string;
+};
+
+const CLASS_LINKS: SectionLink[] = [
+  { label: "Prenatal", to: publicPathname(ROUTES.prenatal) },
+  { label: "Postnatal", to: publicPathname(ROUTES.postnatal) },
+  { label: "Pilates", to: publicPathname(ROUTES.pilates) },
+];
+
+const DOCTOR_LINKS: SectionLink[] = [
+  { label: "Dr. Charmi Shah", to: publicPathname(ROUTES.drCharmi) },
+  { label: "Dr. Zalak Shah", to: publicPathname(ROUTES.drZalak) },
+];
+
+const CONSULTATION_LINKS: SectionLink[] = [
+  { label: "International", to: publicPathname(ROUTES.internationalConsultation) },
+  { label: "Virtual consult", to: publicPathname(ROUTES.onlineConsultation) },
+  { label: "Book consult", to: publicPathname(ROUTES.bookConsultation) },
+];
+
+const RESOURCE_LINKS: SectionLink[] = [
+  { label: "Learn hub", to: publicPathname(ROUTES.learn) },
+  { label: "Articles", to: publicPathname(ROUTES.learnArticles) },
+  { label: "FAQ", to: publicPathname(ROUTES.faq) },
+  { label: "Free WhatsApp community", to: publicPathname(ROUTES.freeWomensHealthCommunity) },
+];
+
+const LOCATION_LINKS: SectionLink[] = [
+  { label: "Global", to: publicPathname(ROUTES.onlineConsultation) },
+  { label: "Ahmedabad", to: publicPathname(ROUTES.ahmedabad) },
+  { label: "Mumbai", to: publicPathname(ROUTES.mumbai) },
+  { label: "Valsad", to: publicPathname(ROUTES.valsad) },
+  { label: "Bangalore", to: publicPathname(ROUTES.bangalore) },
+];
 
 export const Footer = () => {
-  const location = useLocation();
-  const footerWhatsappHref = useMemo(
-    () => whatsappUrlWithMessage(whatsappIntentFromPathname(location.pathname)),
-    [location.pathname],
-  );
-
   return (
-    <footer className="bg-foreground text-background py-12">
+    <footer className="bg-foreground text-background py-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 mb-6">
           {/* Brand */}
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center">
-                <Heart className="w-5 h-5 text-background" />
+          <div className="col-span-2 md:col-span-4 lg:col-span-2">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-8 h-8 rounded-full bg-background/10 flex items-center justify-center">
+                <Heart className="w-4 h-4 text-background" />
               </div>
-              <h3 className="font-heading text-xl font-semibold">Women's Health Duo</h3>
+              <h3 className="font-heading text-lg font-semibold">Women's Health Duo</h3>
             </div>
-            <p className="text-background/70 text-sm leading-relaxed">
+            <p className="text-background/70 text-xs leading-relaxed">
               Two sisters, one mission: comprehensive women's healthcare combining medical expertise
               with physiotherapy and wellness.
             </p>
-            <p className="text-background/85 text-sm leading-relaxed mt-3 border-t border-background/15 pt-3">
-              {BRAND_ENTITY_LINE}
-            </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Programs */}
           <div>
-            <h4 className="font-heading text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to={publicPathname(ROUTES.home)}
-                  className="text-background/70 hover:text-background transition-colors text-sm underline-offset-4 hover:underline"
-                >
-                  Home
-                </Link>
-              </li>
-              {SECTION_LINKS.map(({ label, to }) => (
+            <h4 className="font-heading text-sm font-semibold mb-3 text-background/90">Program</h4>
+            <ul className="space-y-1.5 text-xs">
+              {CLASS_LINKS.map(({ label, to }) => (
                 <li key={to}>
                   <Link
                     to={to}
-                    className="text-background/70 hover:text-background transition-colors text-sm underline-offset-4 hover:underline"
+                    className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
                   >
                     {label}
                   </Link>
@@ -77,111 +86,87 @@ export const Footer = () => {
             </ul>
           </div>
 
+          {/* Doctors */}
           <div>
-            <h4 className="font-heading text-lg font-semibold mb-4">Explore</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  to={publicPathname(ROUTES.internationalConsultation)}
-                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
-                >
-                  International consultation
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to={publicPathname(ROUTES.onlineConsultation)}
-                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
-                >
-                  Virtual online consultations
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to={publicPathname(ROUTES.drCharmi)}
-                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
-                >
-                  Dr. Charmi Shah
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to={publicPathname(ROUTES.drZalak)}
-                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
-                >
-                  Dr. Zalak Shah
-                </Link>
-              </li>
-              <li>
-                <span className="text-background/50">India: </span>
-                <Link
-                  to={publicPathname(ROUTES.ahmedabad)}
-                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
-                >
-                  Ahmedabad
-                </Link>
-                <span className="text-background/40"> · </span>
-                <Link
-                  to={publicPathname(ROUTES.mumbai)}
-                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
-                >
-                  Mumbai
-                </Link>
-                <span className="text-background/40"> · </span>
-                <Link
-                  to={publicPathname(ROUTES.valsad)}
-                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
-                >
-                  Valsad
-                </Link>
-                <span className="text-background/40"> · </span>
-                <Link
-                  to={publicPathname(ROUTES.bangalore)}
-                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
-                >
-                  Bangalore
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to={publicPathname(ROUTES.learn)}
-                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
-                >
-                  Learn
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to={publicPathname(ROUTES.learnArticles)}
-                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
-                >
-                  Articles and common questions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to={publicPathname(ROUTES.freeWomensHealthCommunity)}
-                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
-                >
-                  Free WhatsApp community
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to={publicPathname(ROUTES.bookConsultation)}
-                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
-                >
-                  Book teleconsultation
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to={publicPathname(ROUTES.faq)}
-                  className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
-                >
-                  FAQ
-                </Link>
-              </li>
+            <h4 className="font-heading text-sm font-semibold mb-3 text-background/90">Doctors</h4>
+            <ul className="space-y-1.5 text-xs">
+              {DOCTOR_LINKS.map(({ label, to }) => (
+                <li key={to}>
+                  <Link
+                    to={to}
+                    className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Consult */}
+          <div>
+            <h4 className="font-heading text-sm font-semibold mb-3 text-background/90">Consult</h4>
+            <ul className="space-y-1.5 text-xs">
+              {CONSULTATION_LINKS.map(({ label, to }) => (
+                <li key={to}>
+                  <Link
+                    to={to}
+                    className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h4 className="font-heading text-sm font-semibold mb-3 text-background/90">
+              Resources
+            </h4>
+            <ul className="space-y-1.5 text-xs">
+              {RESOURCE_LINKS.map(({ label, to }) => (
+                <li key={to}>
+                  <Link
+                    to={to}
+                    className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Locations */}
+          <div>
+            <h4 className="font-heading text-sm font-semibold mb-3 text-background/90">
+              Locations
+            </h4>
+            <div className="text-xs text-background/70">
+              {LOCATION_LINKS.map(({ label, to }, index) => (
+                <span key={to}>
+                  <Link
+                    to={to}
+                    className="hover:text-background transition-colors underline-offset-4 hover:underline"
+                  >
+                    {label}
+                  </Link>
+                  {index < LOCATION_LINKS.length - 1 && (
+                    <span className="text-background/40 mx-1">·</span>
+                  )}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Legal & Contact */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-background/10">
+          <div>
+            <h4 className="font-heading text-sm font-semibold mb-3 text-background/90">Legal</h4>
+            <ul className="space-y-1.5 text-xs">
               {LEGAL_LINKS.map(({ label, to }) => (
                 <li key={to}>
                   <Link
@@ -195,67 +180,50 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
-            <h4 className="font-heading text-lg font-semibold mb-4">Connect</h4>
-            <div className="space-y-2 text-sm text-background/70">
+            <h4 className="font-heading text-sm font-semibold mb-3 text-background/90">Connect</h4>
+            <div className="space-y-1.5 text-xs text-background/70">
               <a
                 href={`tel:${CONTACT.phoneE164}`}
-                className="flex items-center gap-2 rounded-md hover:text-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background/50"
+                className="flex items-center gap-1.5 hover:text-background transition-colors"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-3 h-3" />
                 +91-7990550754
               </a>
               <a
                 href={`mailto:${CONTACT.email}`}
-                className="flex items-center gap-2 rounded-md hover:text-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background/50"
+                className="flex items-center gap-1.5 hover:text-background transition-colors"
               >
-                <Mail className="w-4 h-4" />
+                <Mail className="w-3 h-3" />
                 {CONTACT.email}
               </a>
               <a
                 href={CONTACT.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 rounded-md hover:text-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background/50"
+                className="flex items-center gap-1.5 hover:text-background transition-colors"
               >
-                <Instagram className="w-4 h-4" />
+                <Instagram className="w-3 h-3" />
                 Instagram
               </a>
               <a
                 href={CONTACT.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 rounded-md hover:text-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background/50"
+                className="flex items-center gap-1.5 hover:text-background transition-colors"
               >
-                <Youtube className="w-4 h-4" />
+                <Youtube className="w-3 h-3" />
                 YouTube
-              </a>
-              <a
-                href={CONTACT.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 rounded-md hover:text-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background/50"
-              >
-                <Linkedin className="w-4 h-4" />
-                LinkedIn
-              </a>
-              <a
-                href={footerWhatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 rounded-md hover:text-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background/50"
-              >
-                <MessageCircle className="w-4 h-4" />
-                Book on WhatsApp
               </a>
             </div>
           </div>
-        </div>
 
-        <div className="pt-8 border-t border-background/10 text-center text-sm text-background/50">
-          <p>© {new Date().getFullYear()} Women's Health Duo. All rights reserved.</p>
-          <p className="mt-1">Dr. Charmi Shah &amp; Dr. Zalak Shah | Women&apos;s Health Duo</p>
+          <div className="col-span-2 md:col-span-2 flex flex-col justify-end">
+            <p className="text-background/50 text-xs">
+              © {new Date().getFullYear()} Women's Health Duo. All rights reserved.
+            </p>
+            <p className="text-background/50 text-xs mt-1">Dr. Charmi Shah &amp; Dr. Zalak Shah</p>
+          </div>
         </div>
       </div>
     </footer>
