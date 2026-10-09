@@ -32,6 +32,11 @@ export const AGENT_SKILL_DEFINITIONS: readonly {
     description:
       "Navigate the Learn hub: filtered carousel URLs, per-clip watch pages, articles index, and topical clusters.",
   },
+  {
+    name: "dns-aid",
+    description:
+      "DNS-based agent discovery: SVCB/HTTPS entrypoints and DNSSEC for authenticated discovery under the public domain.",
+  },
 ];
 
 function sha256Digest(filePath: string): string {
