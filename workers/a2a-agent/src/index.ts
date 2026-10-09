@@ -42,10 +42,7 @@ const AGENT_CARD = {
       id: "learn-hub",
       name: "Learn hub",
       description: "Educational resources, videos, topic guides, and website navigation help.",
-      examples: [
-        "Show me fertility information.",
-        "What are the Learn hub filters?",
-      ],
+      examples: ["Show me fertility information.", "What are the Learn hub filters?"],
     },
   ],
 };
@@ -105,7 +102,12 @@ function buildReply(input: string): string {
     return "You can book a consultation through the site’s telemedicine flow at https://womenshealthduo.com/book-consultation. The form includes patient intake and mandatory telemedicine consent before WhatsApp handoff.";
   }
 
-  if (lowered.includes("learn") || lowered.includes("video") || lowered.includes("article") || lowered.includes("topic")) {
+  if (
+    lowered.includes("learn") ||
+    lowered.includes("video") ||
+    lowered.includes("article") ||
+    lowered.includes("topic")
+  ) {
     return "The Learn hub is at https://womenshealthduo.com/learn and includes filtered topic and doctor views, plus watch pages for educational clips.";
   }
 
@@ -113,7 +115,12 @@ function buildReply(input: string): string {
     return "Women’s Health Duo includes Dr. Charmi Shah (OB-GYN, IVF, laparoscopy) and Dr. Zalak Shah (women’s health physiotherapy and STOTT Pilates).";
   }
 
-  if (lowered.includes("fertility") || lowered.includes("pcos") || lowered.includes("endometriosis") || lowered.includes("pregnancy")) {
+  if (
+    lowered.includes("fertility") ||
+    lowered.includes("pcos") ||
+    lowered.includes("endometriosis") ||
+    lowered.includes("pregnancy")
+  ) {
     return "The site covers fertility, pregnancy, PCOS, endometriosis, and related women’s health topics in its Learn content and virtual consultation pathways.";
   }
 
@@ -152,7 +159,8 @@ export default {
 
           return jsonResponse({
             jsonrpc: "2.0",
-            id: isObject(payload) && typeof payload.id !== "undefined" ? payload.id : "a2a-response",
+            id:
+              isObject(payload) && typeof payload.id !== "undefined" ? payload.id : "a2a-response",
             result: {
               status: { state: "completed", message: "ok" },
               artifacts: [
