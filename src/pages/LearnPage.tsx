@@ -10,6 +10,7 @@ import { learnHubFaqsForTopic, learnHubFaqHeading } from "@/data/contextualFaqs"
 import { KnowledgeHubVideoHub } from "@/components/learn/KnowledgeHubVideoHub";
 import { LearnTopicalAuthoritySection } from "@/components/learn/LearnTopicalAuthoritySection";
 import { LearnTopicGuidesSection } from "@/components/learn/LearnTopicGuidesSection";
+import { ContextualDeepLinks } from "@/components/learn/ContextualDeepLinks";
 import { JsonLdFaq } from "@/components/seo/JsonLdFaq";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
@@ -119,6 +120,8 @@ export function LearnPage() {
         {canonicalPath === ROUTES.learn ? <LearnTopicalAuthoritySection /> : null}
 
         {canonicalPath === ROUTES.learn ? <LearnTopicGuidesSection /> : null}
+
+        <ContextualDeepLinks context="learn" />
 
         <KnowledgeHubVideoHub />
 

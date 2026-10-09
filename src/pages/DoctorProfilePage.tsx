@@ -24,6 +24,7 @@ import { TelemedicineTrustBadges } from "@/components/compliance/TelemedicineTru
 import { BookingMedicalDisclaimer } from "@/components/compliance/BookingMedicalDisclaimer";
 import { DOCTOR_PHOTOS } from "@/config/doctorPhotos";
 import { AppLink as Link } from "@/components/router/AppLink";
+import { ContextualDeepLinks } from "@/components/learn/ContextualDeepLinks";
 
 const IMAGES: Record<
   DoctorSlug,
@@ -142,6 +143,18 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
           ))}
         </div>
 
+        {slug === "zalak" ? (
+          <div className="mb-8 rounded-2xl border border-primary/20 bg-primary/5 p-4 text-sm text-foreground/90">
+            <strong className="font-medium text-foreground">
+              Dr. Zalak&apos;s strongest care paths:
+            </strong>{" "}
+            prenatal support, postnatal recovery, urinary incontinence and pelvic floor rehab, and
+            diastasis recti / core retraining. These are the main add-on growth clusters alongside
+            the online consultation engine, with Pilates used as a support layer for safe, guided
+            progress.
+          </div>
+        ) : null}
+
         <h2 className="font-heading text-xl font-semibold text-foreground clear-both sm:clear-none mt-10 mb-3">
           Specialties and focus areas
         </h2>
@@ -188,6 +201,7 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
             </li>
           ))}
         </ul>
+        <ContextualDeepLinks context="doctor" doctorName={d.name} />
         <InclusiveSeoListFootnote variant="cities" className="mb-10" />
 
         <h2 className="font-heading text-xl font-semibold text-foreground mb-3">

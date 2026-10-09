@@ -8,6 +8,7 @@ import { ROUTES } from "@/config/routes";
 import { HOME_HERO_LEDE } from "@/config/site";
 import { homePermalinkForScrollId } from "@/lib/homeSectionPaths";
 import { HOME_DEFAULT_H1, HOME_DEFAULT_H1_SUBTITLE } from "@/lib/pageSeoCopy";
+import { trackWhatsAppClick } from "@/lib/analytics";
 import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 import { cn } from "@/lib/utils";
 import heroImage640 from "@/assets/hero-doctors-640w.jpg";
@@ -60,6 +61,11 @@ export const HeroSection = () => {
     () => whatsappUrlWithMessage(whatsappIntentFromPathname(location.pathname)),
     [location.pathname],
   );
+  const handleWhatsAppClick = () =>
+    trackWhatsAppClick({
+      ctaPlacement: "hero",
+      pagePath: location.pathname,
+    });
 
   const goToHomeSection = (scrollId: string) => {
     const path = homePermalinkForScrollId(scrollId);
@@ -123,7 +129,12 @@ export const HeroSection = () => {
                 asChild
                 className="bg-[#25D366] hover:bg-[#1ebe57] text-white border-0 shadow-elevated text-base px-8 py-6 min-h-[3.25rem] sm:min-w-[12rem]"
               >
-                <a href={bookWhatsAppHref} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={bookWhatsAppHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={handleWhatsAppClick}
+                >
                   <span className="inline-flex items-center justify-center gap-2">
                     <MessageCircle className="h-5 w-5 shrink-0" aria-hidden />
                     Book on WhatsApp

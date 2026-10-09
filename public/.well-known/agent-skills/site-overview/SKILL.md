@@ -33,7 +33,7 @@ Fetch **`/llms.txt`** (plain text) for URL patterns, sitemap notes, service slug
 - `/.well-known/agent-skills/index.json` — curated agent skills index (this file is one entry)
 - `/.well-known/content-catalog.json` — RFC 9264 linkset for content discovery (not an API catalog)
 - `/sitemap.xml` — primary crawl urlset (~950+ URLs)
-- `/robots.txt` — search + agent-fetch allowed in origin rules; training bots Disallow via Cloudflare managed block + `ai-train=no` Content-Signal
+- `/robots.txt` — origin rules declare `Content-Signal: search=yes, ai-input=yes, ai-train=no`; search + agent-fetch are allowed while training crawlers remain restricted by managed rules when configured
 
 ## Contact (general questions only — not emergency)
 
