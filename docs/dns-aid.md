@@ -4,6 +4,8 @@ This project already exposes HTTP-based agent discovery via `/.well-known/agent-
 
 ## Required pattern
 
+The A2A endpoint for this site is served by the Cloudflare worker at `https://womenshealthduo.com/a2a`, and its discovery is advertised by the DNS-AID SVCB records below.
+
 Use a DNS discovery subdomain under the main site zone, for example:
 
 - `_index._agents.womenshealthduo.com`

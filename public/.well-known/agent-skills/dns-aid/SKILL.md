@@ -8,6 +8,8 @@ DNS-AID (DNS for AI Discovery) publishes the machine-readable discovery endpoint
 
 ## Production records to publish
 
+The site exposes a minimal A2A-compatible worker at `https://womenshealthduo.com/a2a`, and the DNS-AID records advertise that agent-protocol endpoint in the public discovery zone.
+
 Publish authoritative `HTTPS` / `SVCB` records in the public DNS zone for the domain. The exact names depend on the deployment model, but the discovery intent should be expressed at a subdomain such as the examples below.
 
 ```dns
