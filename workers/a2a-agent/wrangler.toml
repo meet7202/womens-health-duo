@@ -1,0 +1,19 @@
+name = "whd-a2a-agent"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+
+# Set in dashboard or uncomment after `wrangler whoami`:
+# account_id = "YOUR_CLOUDFLARE_ACCOUNT_ID"
+
+[vars]
+SITE_NAME = "Women's Health Duo"
+SITE_URL = "https://womenshealthduo.com"
+AGENT_NAME = "womens-health-duo-agent"
+
+[[routes]]
+pattern = "womenshealthduo.com/a2a*"
+zone_name = "womenshealthduo.com"
+
+[[routes]]
+pattern = "www.womenshealthduo.com/a2a*"
+zone_name = "womenshealthduo.com"
