@@ -7,7 +7,7 @@ import type { InternationalService } from "@/data/internationalServices/types";
 import { internationalServicePath } from "@/data/internationalServices/internationalServiceRegistry";
 import { AppLink as Link } from "@/components/router/AppLink";
 
-export const HOW_IT_WORKS_STEPS = [
+const HOW_IT_WORKS_STEPS = [
   {
     icon: MessageCircle,
     title: "Message on WhatsApp",

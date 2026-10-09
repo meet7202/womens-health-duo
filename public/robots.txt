@@ -1,6 +1,7 @@
 # Default for local dev; production `npm run build` overwrites robots.txt in dist with the same rules + your VITE_SITE_URL sitemap.
-# Live site: Cloudflare prepends managed Content-Signal + training-bot Disallow before this block.
+# Origin robots declares the site’s Content-Signal preferences for search and AI discovery.
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 
 User-agent: Googlebot

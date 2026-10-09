@@ -1,4 +1,5 @@
 import { DOCTOR_BY_SLUG, type DoctorSlug } from "@/data/doctorProfiles";
+import { trackWhatsAppClick } from "@/lib/analytics";
 import { whatsappUrlWithMessage } from "@/lib/whatsappCta";
 
 export type ConsultationMode = "video" | "audio" | "chat";
@@ -147,6 +148,15 @@ export function buildBookingWhatsAppMessage(data: BookingFormData): string {
 }
 
 export function openBookingWhatsApp(data: BookingFormData): void {
+  const doctorName = data.doctor
+    ? (DOCTOR_BY_SLUG[data.doctor]?.name ?? "Not selected")
+    : "Not selected";
+  trackWhatsAppClick({
+    ctaPlacement: "book_consultation_form",
+    pagePath: window.location.pathname,
+    doctor: doctorName,
+    service: "book_consultation",
+  });
   window.open(
     whatsappUrlWithMessage(buildBookingWhatsAppMessage(data)),
     "_blank",

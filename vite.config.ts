@@ -195,6 +195,7 @@ function writeSeoFiles(siteUrl: string, outDir: string, indexNowKey = "") {
 
   const robots = `# https://www.robotstxt.org/robotstxt.html
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 
 User-agent: Googlebot

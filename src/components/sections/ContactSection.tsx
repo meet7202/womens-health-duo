@@ -23,6 +23,7 @@ import {
   PRACTICE_CHARMI_LOCATIONS_LINE,
   PRACTICE_ZALAK_LOCATIONS_LINE,
 } from "@/config/practiceLocations";
+import { trackWhatsAppClick } from "@/lib/analytics";
 import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 import { ROUTES } from "@/config/routes";
 import { BookingMedicalDisclaimer } from "@/components/compliance/BookingMedicalDisclaimer";
@@ -34,6 +35,11 @@ export const ContactSection = () => {
     () => whatsappUrlWithMessage(whatsappIntentFromPathname(location.pathname)),
     [location.pathname],
   );
+  const handleWhatsAppClick = () =>
+    trackWhatsAppClick({
+      ctaPlacement: "contact_section",
+      pagePath: location.pathname,
+    });
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -71,6 +77,12 @@ ${concern}
 Sent from Women's Health Duo Website`;
 
     setIsSubmitting(false);
+    trackWhatsAppClick({
+      ctaPlacement: "contact_form",
+      pagePath: location.pathname,
+      doctor: doctorName,
+      service: "consultation_request",
+    });
     window.open(whatsappUrlWithMessage(message), "_blank", "noopener,noreferrer");
   };
 
@@ -117,7 +129,12 @@ Sent from Women's Health Duo Website`;
             size="lg"
             className="bg-[#25D366] hover:bg-[#1ebe57] text-white border-0 shadow-lg px-8 py-6 text-base"
           >
-            <a href={directWhatsAppHref} target="_blank" rel="noopener noreferrer">
+            <a
+              href={directWhatsAppHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleWhatsAppClick}
+            >
               <span className="inline-flex items-center gap-2">
                 <MessageCircle className="h-5 w-5 shrink-0" aria-hidden />
                 Book on WhatsApp , direct message

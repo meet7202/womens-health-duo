@@ -70,6 +70,17 @@ function main() {
     );
   }
 
+  const contentSignal = "Content-Signal: search=yes, ai-input=yes, ai-train=no";
+  if (!robots.includes(contentSignal)) {
+    errors.push(`robots.txt missing ${contentSignal}`);
+  } else {
+    const contentSignalOrder =
+      /User-agent:\s+\*\s*\nContent-Signal:\s*search=yes,\s*ai-input=yes,\s*ai-train=no\s*\nAllow:\s*\//m;
+    if (!contentSignalOrder.test(robots)) {
+      errors.push("robots.txt Content-Signal must sit under User-agent: * before Allow: /");
+    }
+  }
+
   for (const line of [
     `${meta.siteUrl}/sitemap.xml`,
     `${meta.siteUrl}/sitemap-virtual-service-cities.xml`,

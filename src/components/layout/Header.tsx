@@ -7,6 +7,7 @@ import whdLogo from "@/assets/whd-logo.jpg";
 import { ROUTES } from "@/config/routes";
 import { cn } from "@/lib/utils";
 import { publicPathname } from "@/lib/githubPagesPublicUrl";
+import { trackWhatsAppClick } from "@/lib/analytics";
 import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 import { AppLink as Link } from "@/components/router/AppLink";
 
@@ -37,6 +38,11 @@ export const Header = () => {
     () => whatsappUrlWithMessage(whatsappIntentFromPathname(location.pathname)),
     [location.pathname],
   );
+  const handleWhatsAppClick = () =>
+    trackWhatsAppClick({
+      ctaPlacement: "header",
+      pagePath: location.pathname,
+    });
 
   const closeMobile = () => setIsOpen(false);
 
@@ -177,7 +183,12 @@ export const Header = () => {
               size="default"
               className="bg-[#25D366] hover:bg-[#1ebe57] text-white border-0 shadow-soft"
             >
-              <a href={whatsappHref} target="_blank" rel="noopener noreferrer">
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleWhatsAppClick}
+              >
                 <MessageCircle className="w-4 h-4 mr-2" aria-hidden />
                 Book on WhatsApp
               </a>
@@ -246,7 +257,12 @@ export const Header = () => {
                 </Link>
               ))}
               <Button asChild className="mt-2 bg-[#25D366] hover:bg-[#1ebe57] text-white border-0">
-                <a href={whatsappHref} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={handleWhatsAppClick}
+                >
                   <MessageCircle className="w-4 h-4 mr-2" aria-hidden />
                   Book on WhatsApp
                 </a>

@@ -21,10 +21,72 @@ export function LearnTopicalAuthoritySection() {
         Pick what you want to learn about
       </h2>
       <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-3 max-w-3xl">
-        Each area below links to content you can filter on this page, and to how we handle related
-        questions in clinic, Women&apos;s Health Duo is education plus real consults with our
-        doctors, not a supplement shop.
+        Each area below links to relevant content, topics, and the right next step. Women&apos;s
+        Health Duo is education plus real consults with our doctors, not a supplement shop.
       </p>
+      <div className="mb-6 rounded-2xl border border-primary/20 bg-primary/5 p-4 text-sm text-foreground/90">
+        <strong className="font-medium">Priority for Dr. Zalak:</strong> women&apos;s health
+        physiotherapy, prenatal and postnatal recovery, incontinence, and diastasis support are the
+        strongest add-on growth clusters after the online consultation hub. Pilates remains a
+        support tool for these care paths, not the main keyword bet.
+      </div>
+      <div className="mb-6 rounded-2xl border border-primary/20 bg-primary/5 p-4 text-sm text-foreground/90">
+        <strong className="font-medium">Fastest next step:</strong> if your question is personal,
+        you are not just looking for a general answer, or you want a plan that fits your history,
+        start with the doctor or virtual consultation route and then come back to the broader Learn
+        content.
+      </div>
+
+      <div className="mb-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <Link
+          to={publicPathname(ROUTES.prenatal)}
+          className="rounded-2xl border border-border/60 bg-card p-4 shadow-soft transition-colors hover:border-primary/40 hover:bg-primary/5"
+        >
+          <p className="text-xs font-medium uppercase tracking-[0.12em] text-primary">Prenatal</p>
+          <h3 className="mt-2 font-heading text-lg font-semibold text-foreground">
+            Pregnancy support
+          </h3>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Safe movement, pelvic floor support, and preparation for labor.
+          </p>
+        </Link>
+        <Link
+          to={publicPathname(ROUTES.postnatal)}
+          className="rounded-2xl border border-border/60 bg-card p-4 shadow-soft transition-colors hover:border-primary/40 hover:bg-primary/5"
+        >
+          <p className="text-xs font-medium uppercase tracking-[0.12em] text-primary">Postnatal</p>
+          <h3 className="mt-2 font-heading text-lg font-semibold text-foreground">
+            Recovery & core rehab
+          </h3>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Diastasis, pelvic floor recovery, and return-to-movement guidance.
+          </p>
+        </Link>
+        <Link
+          to={publicPathname(ROUTES.learn)}
+          className="rounded-2xl border border-border/60 bg-card p-4 shadow-soft transition-colors hover:border-primary/40 hover:bg-primary/5"
+        >
+          <p className="text-xs font-medium uppercase tracking-[0.12em] text-primary">
+            Incontinence
+          </p>
+          <h3 className="mt-2 font-heading text-lg font-semibold text-foreground">
+            Pelvic floor support
+          </h3>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Learn the rehab patterns and when to book a targeted physio consult.
+          </p>
+        </Link>
+        <Link
+          to={publicPathname(ROUTES.learn)}
+          className="rounded-2xl border border-border/60 bg-card p-4 shadow-soft transition-colors hover:border-primary/40 hover:bg-primary/5"
+        >
+          <p className="text-xs font-medium uppercase tracking-[0.12em] text-primary">Diastasis</p>
+          <h3 className="mt-2 font-heading text-lg font-semibold text-foreground">Core recovery</h3>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Screening, rehab, and safe return-to-strength guidance after birth.
+          </p>
+        </Link>
+      </div>
       <p className="text-muted-foreground text-sm leading-relaxed mb-8 max-w-3xl">
         <strong className="font-medium text-foreground">Booked care:</strong> if you want a real
         consultation (not just content), start with{" "}

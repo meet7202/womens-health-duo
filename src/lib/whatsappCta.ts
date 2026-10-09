@@ -104,6 +104,21 @@ My time zone:
 Topic:${siteRef(pagePath)}`;
 }
 
+export function whatsappMessageZalakCluster(
+  clusterName: string,
+  pagePath: string,
+  doctorName: string = "Dr. Zalak Shah",
+): string {
+  return `Hi Women's Health Duo,
+
+I'd like to book a ${clusterName.toLowerCase()} consultation with ${doctorName}. I found your page on the website and would like to understand the next steps.
+
+My city & country:
+My time zone:
+Main concern / symptoms:
+Any reports or scans I should share:${siteRef(pagePath)}`;
+}
+
 export function whatsappMessageFaq(): string {
   return `Hi Women's Health Duo,
 
@@ -197,6 +212,28 @@ export function whatsappIntentFromPathname(pathname: string): string {
   if (norm === ROUTES.learn || norm.startsWith(`${ROUTES.learn}/`)) {
     return whatsappMessageLearn(norm);
   }
+
+  if (
+    norm === ROUTES.prenatal ||
+    norm === ROUTES.zalakPrenatalClasses ||
+    norm.includes("prenatal")
+  ) {
+    return whatsappMessageZalakCluster("prenatal physiotherapy", norm);
+  }
+  if (
+    norm === ROUTES.postnatal ||
+    norm === ROUTES.zalakPostnatalClasses ||
+    norm.includes("postnatal")
+  ) {
+    return whatsappMessageZalakCluster("postnatal recovery", norm);
+  }
+  if (norm.includes("incontinence") || norm.includes("bladder") || norm.includes("leakage")) {
+    return whatsappMessageZalakCluster("pelvic floor / incontinence rehab", norm);
+  }
+  if (norm.includes("diastasis")) {
+    return whatsappMessageZalakCluster("diastasis recti rehab", norm);
+  }
+
   if (norm === ROUTES.faq) return whatsappMessageFaq();
 
   if (norm === ROUTES.medicalDisclaimer) {
