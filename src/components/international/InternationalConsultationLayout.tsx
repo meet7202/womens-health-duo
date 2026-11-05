@@ -1,6 +1,7 @@
 import { CalendarCheck, Globe, MessageCircle, Video } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ROUTES } from "@/config/routes";
+import { TrackedWhatsAppLink } from "@/components/cta/TrackedWhatsAppLink";
 import { whatsappUrlWithMessage } from "@/lib/whatsappCta";
 import { EmergencyDisclaimer } from "@/components/compliance/EmergencyDisclaimer";
 import type { InternationalService } from "@/data/internationalServices/types";
@@ -34,25 +35,37 @@ type InternationalWhatsappButtonProps = {
   message: string;
   label?: string;
   className?: string;
+  doctor?: string;
+  service?: string;
+  ctaPlacement?: string;
 };
 
 export function InternationalWhatsappButton({
   message,
   label = "Book on WhatsApp",
   className,
+  doctor,
+  service = "international_consultation",
+  ctaPlacement = "international_service",
 }: InternationalWhatsappButtonProps) {
   return (
     <Button
       asChild
       size="lg"
-      className={`bg-[#25D366] hover:bg-[#1ebe57] text-white border-0 shadow-lg ${className ?? ""}`}
+      className={`bg-whatsapp hover:bg-whatsapp-hover text-white border-0 shadow-lg ${className ?? ""}`}
     >
-      <a href={whatsappUrlWithMessage(message)} target="_blank" rel="noopener noreferrer">
+      <TrackedWhatsAppLink
+        href={whatsappUrlWithMessage(message)}
+        ctaPlacement={ctaPlacement}
+        doctor={doctor}
+        service={service}
+        aria-label={label}
+      >
         <span className="inline-flex items-center gap-2">
           <MessageCircle className="h-5 w-5 shrink-0" aria-hidden />
           {label}
         </span>
-      </a>
+      </TrackedWhatsAppLink>
     </Button>
   );
 }
@@ -68,9 +81,13 @@ export function InternationalBookConsultationLink({ className }: { className?: s
 export function InternationalCtaBlock({
   whatsappMessage,
   className,
+  doctor,
+  service,
 }: {
   whatsappMessage: string;
   className?: string;
+  doctor?: string;
+  service?: string;
 }) {
   return (
     <div
@@ -78,7 +95,7 @@ export function InternationalCtaBlock({
     >
       <EmergencyDisclaimer />
       <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-2">
-        <InternationalWhatsappButton message={whatsappMessage} />
+        <InternationalWhatsappButton message={whatsappMessage} doctor={doctor} service={service} />
         <InternationalBookConsultationLink />
       </div>
     </div>
@@ -122,16 +139,16 @@ export function HowItWorksSection() {
 export function ServiceCardList({
   services,
   heading = "International services",
+  headingId = "intl-services-heading",
 }: {
   services: readonly InternationalService[];
   heading?: string;
+  /** Unique when multiple lists render on one page (SEO-33). */
+  headingId?: string;
 }) {
   return (
-    <section className="mb-10" aria-labelledby="intl-services-heading">
-      <h2
-        id="intl-services-heading"
-        className="font-heading text-2xl font-semibold text-foreground mb-4"
-      >
+    <section className="mb-10" aria-labelledby={headingId}>
+      <h2 id={headingId} className="font-heading text-2xl font-semibold text-foreground mb-4">
         {heading}
       </h2>
       <ul className="grid gap-3 sm:grid-cols-2">

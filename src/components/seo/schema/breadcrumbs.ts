@@ -3,12 +3,6 @@ import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 
 export type Crumb = { name: string; path: string };
 
-export type Review = {
-  name: string;
-  quote: string;
-  context?: string;
-};
-
 export function breadcrumbListSchema(items: Crumb[]) {
   return {
     "@type": "BreadcrumbList",
@@ -44,29 +38,4 @@ export function webPageSchema(params: {
     base.about = { "@id": params.aboutId };
   }
   return base;
-}
-
-export function reviewSchema(params: { reviews: Review[]; itemReviewed: string; pageUrl: string }) {
-  return {
-    "@type": "AggregateRating",
-    itemReviewed: {
-      "@type": "Service",
-      name: params.itemReviewed,
-    },
-    ratingValue: "5",
-    reviewCount: params.reviews.length.toString(),
-    review: params.reviews.map((review) => ({
-      "@type": "Review",
-      author: {
-        "@type": "Person",
-        name: review.name,
-      },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
-        bestRating: "5",
-      },
-      reviewBody: review.quote,
-    })),
-  };
 }

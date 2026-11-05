@@ -7,6 +7,12 @@ export type DoctorRegistration = {
   /** Year of registration with the council (when known). */
   yearRegistered?: number;
   yearsExperience: string;
+  /**
+   * Optional provenance when a public registry URL / last-checked date is available (SEO-18).
+   * Do not claim “verified” in UI unless these are set by an owner refresh.
+   */
+  registrySourceUrl?: string;
+  registrationCheckedAsOf?: string;
 };
 
 /**

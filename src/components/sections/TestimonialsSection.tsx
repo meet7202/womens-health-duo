@@ -1,8 +1,8 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Star, Quote } from "lucide-react";
-import { EXTERNAL } from "@/config/externalProfiles";
+import { Star, Quote, ExternalLink } from "lucide-react";
+import { PUBLIC_REVIEW_PROVENANCE, publicReviewHasAggregate } from "@/config/publicReviews";
 
 type Testimonial = {
   name: string;
@@ -63,6 +63,81 @@ const ZALAK_TESTIMONIALS: Testimonial[] = [
 
 const testimonials: Testimonial[] = [...CHARMI_TESTIMONIALS, ...ZALAK_TESTIMONIALS];
 
+function ReviewSummaryCard({
+  doctorLabel,
+  slug,
+}: {
+  doctorLabel: string;
+  slug: "charmi" | "zalak";
+}) {
+  const provenance = PUBLIC_REVIEW_PROVENANCE[slug];
+  const hasAggregate = publicReviewHasAggregate(provenance);
+  const sourceUrl = provenance.sourceUrl;
+  const sourceLabel = provenance.sourceLabel ?? "Google reviews";
+
+  const body = (
+    <>
+      {hasAggregate ? (
+        <div>
+          <p className="font-heading text-3xl font-semibold text-foreground">
+            {provenance.rating!.toFixed(1)}
+          </p>
+          <div className="flex gap-0.5" aria-hidden>
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div className="flex gap-0.5" aria-hidden>
+          {[...Array(5)].map((_, i) => (
+            <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+          ))}
+        </div>
+      )}
+      <div className="text-left">
+        <p className="font-medium text-foreground">{doctorLabel}</p>
+        {hasAggregate ? (
+          <p className="text-sm text-muted-foreground">
+            {provenance.reviewCount} {sourceLabel}
+            {provenance.asOf ? ` (as of ${provenance.asOf})` : ""}
+          </p>
+        ) : sourceUrl ? (
+          <p className="text-sm text-muted-foreground inline-flex items-center gap-1">
+            Read {sourceLabel}
+            <ExternalLink className="h-3 w-3 shrink-0" aria-hidden />
+          </p>
+        ) : (
+          <p className="text-sm text-muted-foreground">Patient reviews on this page</p>
+        )}
+      </div>
+    </>
+  );
+
+  const cardClass =
+    "flex items-center gap-4 bg-card rounded-2xl px-6 py-4 shadow-soft border border-transparent";
+
+  if (sourceUrl) {
+    return (
+      <a
+        href={sourceUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${cardClass} hover:border-primary/30 hover:shadow-card transition-all text-left no-underline outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background`}
+        aria-label={
+          hasAggregate
+            ? `${doctorLabel}: ${provenance.rating!.toFixed(1)} stars, ${provenance.reviewCount} reviews (opens ${sourceLabel} in a new tab)`
+            : `${doctorLabel}: open ${sourceLabel} in a new tab`
+        }
+      >
+        {body}
+      </a>
+    );
+  }
+
+  return <div className={cardClass}>{body}</div>;
+}
+
 export const TestimonialsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -71,8 +146,8 @@ export const TestimonialsSection = () => {
     <section id="testimonials" className="py-24 bg-background" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <m.div
+          initial={false}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
@@ -86,57 +161,25 @@ export const TestimonialsSection = () => {
           <p className="text-lg text-muted-foreground leading-relaxed">
             Real experiences from women who trusted us with their health journey.
           </p>
-        </motion.div>
+        </m.div>
 
-        {/* Ratings Summary */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        {/* Ratings / review source links — aggregates only with provenance (SEO-18) */}
+        <m.div
+          initial={false}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex flex-wrap justify-center gap-8 mb-12"
         >
-          <div className="flex items-center gap-4 bg-card rounded-2xl px-6 py-4 shadow-soft">
-            <div>
-              <p className="font-heading text-3xl font-semibold text-foreground">4.9</p>
-              <div className="flex gap-0.5">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-primary text-primary" />
-                ))}
-              </div>
-            </div>
-            <div className="text-left">
-              <p className="font-medium text-foreground">Dr. Charmi Shah</p>
-              <p className="text-sm text-muted-foreground">41 Google Reviews</p>
-            </div>
-          </div>
-          <a
-            href={EXTERNAL.drZalak.googleReviewsShare}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex cursor-pointer items-center gap-4 bg-card rounded-2xl px-6 py-4 shadow-soft border border-transparent hover:border-primary/30 hover:shadow-card transition-all text-left no-underline outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-            aria-label="Dr. Zalak Shah: 5.0 stars, 27 Google reviews (opens Google in a new tab)"
-          >
-            <div>
-              <p className="font-heading text-3xl font-semibold text-foreground">5.0</p>
-              <div className="flex gap-0.5">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-primary text-primary" aria-hidden />
-                ))}
-              </div>
-            </div>
-            <div className="text-left">
-              <p className="font-medium text-foreground">Dr. Zalak Shah</p>
-              <p className="text-sm text-muted-foreground">27 Google Reviews</p>
-            </div>
-          </a>
-        </motion.div>
+          <ReviewSummaryCard doctorLabel="Dr. Charmi Shah" slug="charmi" />
+          <ReviewSummaryCard doctorLabel="Dr. Zalak Shah" slug="zalak" />
+        </m.div>
 
         {/* Testimonials Grid: three per doctor */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
-            <motion.div
+            <m.div
               key={`${testimonial.name}-${index}`}
-              initial={{ opacity: 0, y: 30 }}
+              initial={false}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * index }}
               className="bg-card rounded-2xl p-6 shadow-soft border border-border/30 hover:shadow-card transition-shadow duration-300"
@@ -155,7 +198,7 @@ export const TestimonialsSection = () => {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

@@ -39,7 +39,7 @@ function JoinCommunityButton({
     <Button
       asChild
       size={size}
-      className={`bg-[#25D366] hover:bg-[#1ebe57] text-white border-0 shadow-lg ${className ?? ""}`}
+      className={`bg-whatsapp hover:bg-whatsapp-hover text-white border-0 shadow-lg ${className ?? ""}`}
     >
       <a href={WHATSAPP_COMMUNITY_INVITE_URL} target="_blank" rel="noopener noreferrer">
         <span className="inline-flex items-center gap-2">
@@ -257,7 +257,7 @@ export function FreeWomensHealthCommunityPage() {
           </ul>
         </section>
 
-        <div className="rounded-2xl border border-[#25D366]/30 bg-[#25D366]/5 p-6 sm:p-8 text-center">
+        <div className="rounded-2xl border border-whatsapp/30 bg-whatsapp/5 p-6 sm:p-8 text-center">
           <h2 className="font-heading text-xl sm:text-2xl font-semibold text-foreground mb-3">
             Ready to join? It takes one tap.
           </h2>

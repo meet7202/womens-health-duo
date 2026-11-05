@@ -12,6 +12,7 @@ import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/bre
 import { internationalServiceDocumentTitle } from "@/lib/pageSeoCopy";
 import { AppLink as Link } from "@/components/router/AppLink";
 import { AppNavigate as Navigate } from "@/components/router/AppNavigate";
+import NotFound from "@/pages/NotFound";
 import {
   getInternationalDoctorHub,
   getInternationalService,
@@ -31,7 +32,7 @@ export function InternationalServicePage() {
   const { serviceSlug } = useParams<{ serviceSlug: string }>();
 
   if (!serviceSlug) {
-    return <Navigate to={INTERNATIONAL_CONSULTATION_BASE} replace />;
+    return <NotFound />;
   }
 
   if (getInternationalDoctorHub(serviceSlug)) {
@@ -42,7 +43,8 @@ export function InternationalServicePage() {
 
   const service = getInternationalService(serviceSlug);
   if (!service) {
-    return <Navigate to={INTERNATIONAL_CONSULTATION_BASE} replace />;
+    // True not-found — do not soft-redirect unknown slugs to the hub (SEO-33/F).
+    return <NotFound />;
   }
 
   const path = internationalServicePath(service.slug);
@@ -81,6 +83,8 @@ export function InternationalServicePage() {
 
         <InternationalCtaBlock
           whatsappMessage={whatsappMessageInternationalService(service.title, path)}
+          doctor={service.doctor === "zalak" ? "Dr. Zalak Shah" : "Dr. Charmi Shah"}
+          service={service.slug}
           className="mb-10"
         />
 

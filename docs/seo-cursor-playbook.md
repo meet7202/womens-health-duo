@@ -108,7 +108,7 @@ Do not add Twitter/X sameAs or third-party runtime scripts.
 ```text
 Check vite.config.ts robots.txt + sitemap.xml emission, index.html tokens, and public/llms.txt.
 
-IndexNow: (1) enable Cloudflare Crawler Hints (Caching → Configuration) for automatic IndexNow on cache changes; (2) INDEXNOW_KEY in .env + build dist/{key}.txt + npm run submit:indexnow for bulk post-deploy. Google: submit:google-indexing with service account.
+IndexNow: (1) enable Cloudflare Crawler Hints (Caching → Configuration) for automatic IndexNow on cache changes; (2) INDEXNOW_KEY in .env + build dist/{key}.txt + npm run submit:indexnow for bulk post-deploy. Google: Search Console sitemaps (Indexing API not for ordinary WHD pages).
 
 List duplicate or near-duplicate risks (many virtual service×city pages) and mitigations (canonical, unique copy blocks, sitemap priority — already partially modeled).
 ```

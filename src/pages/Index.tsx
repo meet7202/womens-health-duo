@@ -1,31 +1,20 @@
-import { useLayoutEffect } from "react";
+import { lazy, Suspense, useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { scrollToHashWhenReady } from "@/lib/scrollToHash";
 import { homeFaqJsonLdPageUrl, homeScrollTargetId, homeSectionSeo } from "@/lib/homeSectionPaths";
 import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
-import { AboutSection } from "@/components/sections/AboutSection";
-import { ServicesSection } from "@/components/sections/ServicesSection";
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
-import { ContactSection } from "@/components/sections/ContactSection";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { JsonLdFaq } from "@/components/seo/JsonLdFaq";
 import { SeoHead } from "@/components/seo/SeoHead";
-import { FaqSection } from "@/components/sections/FaqSection";
-import { ROUTES } from "@/config/routes";
-import { publicPathname } from "@/lib/githubPagesPublicUrl";
 import { SITE_URL } from "@/config/site";
-import heroImage640Webp from "@/assets/hero-doctors-640w.webp";
 import { HOME_PAGE_FAQ } from "@/data/homePageFaq";
-import { Button } from "@/components/ui/button";
-import { AppLink as Link } from "@/components/router/AppLink";
 
 /**
- * Home sections are imported eagerly (not `lazy`) so production never depends on
- * extra hashed chunk files for the first paint. That avoids 404s when HTML or the
- * entry bundle is briefly out of sync with `/assets/*` after a deploy or CDN swap.
+ * Hero + chrome stay eager. Below-the-fold sections (and framer-motion) load in a
+ * separate chunk so LCP is not blocked by About/Services/Contact JS.
  */
+const HomeBelowFold = lazy(() => import("./HomeBelowFold"));
 
 const Index = () => {
   const location = useLocation();
@@ -43,6 +32,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* SEO-25: prefer prerendered hero <picture>; build may inject matching homepage-only preload. */}
       <SeoHead
         {...(sectionSeo
           ? {
@@ -50,15 +40,7 @@ const Index = () => {
               metaDescription: sectionSeo.metaDescription,
               path: sectionSeo.canonicalPath,
             }
-          : {
-              preloadImages: [
-                {
-                  href: heroImage640Webp,
-                  as: "image",
-                  type: "image/webp",
-                },
-              ],
-            })}
+          : {})}
       />
       <JsonLd />
       <JsonLdFaq
@@ -71,23 +53,10 @@ const Index = () => {
       <Header />
       <main id="main-content" className="pb-28">
         <HeroSection />
-        <AboutSection />
-        <ServicesSection />
-        <TestimonialsSection />
-        <ContactSection />
-        <FaqSection
-          items={HOME_PAGE_FAQ}
-          tightTop
-          headingTitle={"Women's Health Duo ,  quick answers"}
-          headingIntro="Five common questions about our education platform, clinical lanes, and how to book. Medical decisions belong in a consultation with your clinician."
-        />
-        <div className="container mx-auto max-w-3xl px-4 pb-16 text-center sm:px-6 lg:px-8">
-          <Button variant="outline" asChild>
-            <Link to={publicPathname(ROUTES.faq)}>View all questions (FAQ)</Link>
-          </Button>
-        </div>
+        <Suspense fallback={<div className="min-h-[40vh] bg-background" aria-hidden="true" />}>
+          <HomeBelowFold />
+        </Suspense>
       </main>
-      <Footer />
     </div>
   );
 };

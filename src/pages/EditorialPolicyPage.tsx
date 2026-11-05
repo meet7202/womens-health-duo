@@ -65,10 +65,13 @@ export function EditorialPolicyPage() {
               Learn hub captions
             </h2>
             <p>
-              Where shown, YouTube descriptions and Instagram captions are copied from the public
-              post at the time of sync for transparency. If a caption is missing, the live post on
-              the platform is authoritative. We do not alter clinical claims in captions except to
-              fix obvious formatting for readability on this site.
+              Where shown, YouTube descriptions and Instagram captions are usually copied from the
+              public post at the time of sync for transparency. If a caption is missing, the live
+              post on the platform is authoritative. When a synced caption includes a clinical claim
+              we are not ready to stand behind as current on-site guidance, we may replace the
+              on-site caption with a short editorial hold or clarification while keeping the
+              original platform text in our data for clinician review, we do not invent a full
+              medical rewrite in that hold.
             </p>
           </div>
 
@@ -85,13 +88,21 @@ export function EditorialPolicyPage() {
 
           <div>
             <h2 className="font-heading text-lg font-semibold text-foreground mb-2">
-              Citations and long-form articles
+              Topic guides and clinical review
             </h2>
             <p>
-              This repository is primarily a consultation and education routing site with a video
-              hub, not a medical journal. If we publish long-form articles in the future, we will
-              list author credentials, revision dates, and reference sections where clinical claims
-              require them.
+              About <strong className="font-medium text-foreground">100</strong> written topic
+              guides (articles and common questions linked from Learn) already exist as educational
+              routing pages. Editorial fields support author, reviewer, published/updated/reviewed
+              dates, review status, and references. Existing guides default to{" "}
+              <strong className="font-medium text-foreground">pending</strong> (or stay in{" "}
+              <strong className="font-medium text-foreground">draft</strong> /{" "}
+              <strong className="font-medium text-foreground">needs-review</strong>): they are not
+              marked as clinician-approved authorship or medical review unless a guide explicitly
+              carries <strong className="font-medium text-foreground">approved</strong> status with
+              verified author/reviewer fields. We do not backdate review stamps or invent
+              credentials. When a guide is approved, the page can show a byline, reviewer name, and
+              dates that match those fields.
             </p>
           </div>
 

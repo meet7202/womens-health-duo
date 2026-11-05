@@ -50,6 +50,27 @@ const LOCATION_LINKS: SectionLink[] = [
   { label: "Bangalore", to: publicPathname(ROUTES.bangalore) },
 ];
 
+/** ≥48×48 CSS px touch target with readable footer link contrast. */
+const footerNavLinkClass =
+  "inline-flex min-h-12 items-center text-sm text-background/80 hover:text-background transition-colors underline-offset-4 hover:underline";
+
+const footerExternalLinkClass =
+  "flex min-h-12 items-center gap-2 text-sm text-background/80 hover:text-background transition-colors";
+
+function FooterNavList({ links }: { links: readonly SectionLink[] }) {
+  return (
+    <ul className="flex flex-col">
+      {links.map(({ label, to }) => (
+        <li key={to}>
+          <Link to={to} className={footerNavLinkClass}>
+            {label}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export const Footer = () => {
   return (
     <footer className="bg-foreground text-background py-8">
@@ -63,7 +84,7 @@ export const Footer = () => {
               </div>
               <h3 className="font-heading text-lg font-semibold">Women's Health Duo</h3>
             </div>
-            <p className="text-background/70 text-xs leading-relaxed">
+            <p className="text-background/80 text-sm leading-relaxed">
               Two sisters, one mission: comprehensive women's healthcare combining medical expertise
               with physiotherapy and wellness.
             </p>
@@ -71,108 +92,47 @@ export const Footer = () => {
 
           {/* Programs */}
           <div>
-            <h4 className="font-heading text-sm font-semibold mb-3 text-background/90">Program</h4>
-            <ul className="space-y-1.5 text-xs">
-              {CLASS_LINKS.map(({ label, to }) => (
-                <li key={to}>
-                  <Link
-                    to={to}
-                    className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <h4 className="font-heading text-sm font-semibold mb-2 text-background/90">Program</h4>
+            <FooterNavList links={CLASS_LINKS} />
           </div>
 
           {/* Doctors */}
           <div>
-            <h4 className="font-heading text-sm font-semibold mb-3 text-background/90">Doctors</h4>
-            <ul className="space-y-1.5 text-xs">
-              {DOCTOR_LINKS.map(({ label, to }) => (
-                <li key={to}>
-                  <Link
-                    to={to}
-                    className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <h4 className="font-heading text-sm font-semibold mb-2 text-background/90">Doctors</h4>
+            <FooterNavList links={DOCTOR_LINKS} />
           </div>
 
           {/* Consult */}
           <div>
-            <h4 className="font-heading text-sm font-semibold mb-3 text-background/90">Consult</h4>
-            <ul className="space-y-1.5 text-xs">
-              {CONSULTATION_LINKS.map(({ label, to }) => (
-                <li key={to}>
-                  <Link
-                    to={to}
-                    className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <h4 className="font-heading text-sm font-semibold mb-2 text-background/90">Consult</h4>
+            <FooterNavList links={CONSULTATION_LINKS} />
           </div>
 
           {/* Resources */}
           <div>
-            <h4 className="font-heading text-sm font-semibold mb-3 text-background/90">
+            <h4 className="font-heading text-sm font-semibold mb-2 text-background/90">
               Resources
             </h4>
-            <ul className="space-y-1.5 text-xs">
-              {RESOURCE_LINKS.map(({ label, to }) => (
-                <li key={to}>
-                  <Link
-                    to={to}
-                    className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <FooterNavList links={RESOURCE_LINKS} />
           </div>
 
           {/* Locations */}
           <div>
-            <h4 className="font-heading text-sm font-semibold mb-3 text-background/90">
+            <h4 className="font-heading text-sm font-semibold mb-2 text-background/90">
               Locations
             </h4>
-            <div className="text-xs text-background/70">
-              {LOCATION_LINKS.map(({ label, to }, index) => (
-                <span key={to}>
-                  <Link
-                    to={to}
-                    className="hover:text-background transition-colors underline-offset-4 hover:underline"
-                  >
-                    {label}
-                  </Link>
-                  {index < LOCATION_LINKS.length - 1 && (
-                    <span className="text-background/40 mx-1">·</span>
-                  )}
-                </span>
-              ))}
-            </div>
+            <FooterNavList links={LOCATION_LINKS} />
           </div>
         </div>
 
         {/* Legal & Contact */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-background/10">
           <div>
-            <h4 className="font-heading text-sm font-semibold mb-3 text-background/90">Legal</h4>
-            <ul className="space-y-1.5 text-xs">
+            <h4 className="font-heading text-sm font-semibold mb-2 text-background/90">Legal</h4>
+            <ul className="flex flex-col">
               {LEGAL_LINKS.map(({ label, to }) => (
                 <li key={to}>
-                  <Link
-                    to={publicPathname(to)}
-                    className="text-background/70 hover:text-background transition-colors underline-offset-4 hover:underline"
-                  >
+                  <Link to={publicPathname(to)} className={footerNavLinkClass}>
                     {label}
                   </Link>
                 </li>
@@ -181,48 +141,42 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-heading text-sm font-semibold mb-3 text-background/90">Connect</h4>
-            <div className="space-y-1.5 text-xs text-background/70">
-              <a
-                href={`tel:${CONTACT.phoneE164}`}
-                className="flex items-center gap-1.5 hover:text-background transition-colors"
-              >
-                <Phone className="w-3 h-3" />
+            <h4 className="font-heading text-sm font-semibold mb-2 text-background/90">Connect</h4>
+            <div className="flex flex-col">
+              <a href={`tel:${CONTACT.phoneE164}`} className={footerExternalLinkClass}>
+                <Phone className="w-4 h-4 shrink-0" aria-hidden />
                 +91-7990550754
               </a>
-              <a
-                href={`mailto:${CONTACT.email}`}
-                className="flex items-center gap-1.5 hover:text-background transition-colors"
-              >
-                <Mail className="w-3 h-3" />
+              <a href={`mailto:${CONTACT.email}`} className={footerExternalLinkClass}>
+                <Mail className="w-4 h-4 shrink-0" aria-hidden />
                 {CONTACT.email}
               </a>
               <a
                 href={CONTACT.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 hover:text-background transition-colors"
+                className={footerExternalLinkClass}
               >
-                <Instagram className="w-3 h-3" />
+                <Instagram className="w-4 h-4 shrink-0" aria-hidden />
                 Instagram
               </a>
               <a
                 href={CONTACT.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 hover:text-background transition-colors"
+                className={footerExternalLinkClass}
               >
-                <Youtube className="w-3 h-3" />
+                <Youtube className="w-4 h-4 shrink-0" aria-hidden />
                 YouTube
               </a>
             </div>
           </div>
 
           <div className="col-span-2 md:col-span-2 flex flex-col justify-end">
-            <p className="text-background/50 text-xs">
+            <p className="text-background/70 text-sm">
               © {new Date().getFullYear()} Women's Health Duo. All rights reserved.
             </p>
-            <p className="text-background/50 text-xs mt-1">Dr. Charmi Shah &amp; Dr. Zalak Shah</p>
+            <p className="text-background/70 text-sm mt-1">Dr. Charmi Shah &amp; Dr. Zalak Shah</p>
           </div>
         </div>
       </div>

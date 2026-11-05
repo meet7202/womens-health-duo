@@ -4,15 +4,11 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { CONTACT } from "@/config/site";
 import { AppLink as Link } from "@/components/router/AppLink";
+import { KNOWLEDGE_HUB_VIDEOS, type KnowledgeHubVideo } from "@/data/knowledgeHubVideos";
+import { KnowledgeHubVideoCard } from "@/components/learn/KnowledgeHubVideoCard";
 import {
-  KNOWLEDGE_HUB_VIDEOS,
-  knowledgeHubVideoDisplayTitle,
-  type KnowledgeHubVideo,
-} from "@/data/knowledgeHubVideos";
-import { KnowledgeHubVideoPlayer } from "@/components/learn/KnowledgeHubVideoPlayer";
-import {
+  learnHubDoctorFilterPath,
   learnHubFilteredPath,
-  learnVideoWatchPath,
   parseLearnHubPathname,
   type LearnHubDoctorFilter,
 } from "@/lib/learnHubUrls";
@@ -39,56 +35,10 @@ function topicLabelsForVideos(videos: readonly KnowledgeHubVideo[]): string[] {
   return Array.from(new Set(videos.flatMap((v) => v.topics))).sort((a, b) => a.localeCompare(b));
 }
 
-function VideoSlide({ video }: { video: KnowledgeHubVideo }) {
-  const watchPath = learnVideoWatchPath(video.id);
-  const displayTitle = knowledgeHubVideoDisplayTitle(video);
-
-  return (
-    <div className="flex h-full flex-col rounded-2xl border border-border/50 bg-card shadow-soft overflow-hidden">
-      <div className="border-b border-border/40 bg-muted/30 px-4 py-3 space-y-1 min-h-[7.25rem]">
-        <div className="flex flex-wrap items-center gap-2 text-xs min-h-[1.75rem]">
-          <span className="rounded-full bg-primary/15 px-2 py-0.5 font-medium text-primary">
-            {video.doctor === "charmi"
-              ? "Dr. Charmi"
-              : video.doctor === "zalak"
-                ? "Dr. Zalak"
-                : "Duo"}
-          </span>
-          {video.topics.map((t) => (
-            <span key={t} className="rounded-full bg-secondary px-2 py-0.5 text-muted-foreground">
-              {t}
-            </span>
-          ))}
-        </div>
-        <p className="text-sm font-medium text-foreground leading-snug line-clamp-2 min-h-[2.5rem]">
-          <Link to={watchPath} className="hover:text-primary transition-colors">
-            {displayTitle}
-          </Link>
-        </p>
-        <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2 min-h-[2.5rem]">
-          {video.summary}
-        </p>
-      </div>
-      <KnowledgeHubVideoPlayer video={video} variant="carousel" className="flex-1 min-h-0" />
-      <div className="flex items-center justify-between gap-2 border-t border-border/40 px-3 py-2">
-        <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-          {video.kind === "youtube_short" ? (
-            <Youtube className="h-4 w-4 shrink-0" aria-hidden />
-          ) : (
-            <Instagram className="h-4 w-4 shrink-0" aria-hidden />
-          )}
-          <span>Plays on {video.kind === "youtube_short" ? "YouTube" : "Instagram"}</span>
-        </div>
-        <div className="flex items-center gap-1">
-          <Button variant="ghost" size="sm" className="shrink-0 text-primary" asChild>
-            <Link to={watchPath}>Watch page</Link>
-          </Button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
+/**
+ * Learn hub listing (SEO-26): lightweight poster cards only.
+ * Full players live on `/learn/watch/:id` — keeps listing DOM/JS bounded while watch URLs stay discoverable.
+ */
 export function KnowledgeHubVideoHub() {
   const location = useLocation();
   const parsed = useMemo(() => parseLearnHubPathname(location.pathname), [location.pathname]);
@@ -118,8 +68,8 @@ export function KnowledgeHubVideoHub() {
         Reels, carousels, and posts on women&apos;s health, pregnancy, movement, pelvic wellness,
         and more, from Dr. Charmi and Dr. Zalak. Pick a doctor or a topic to see what matches you;
         browse the grid below. Each item also has a dedicated{" "}
-        <strong className="text-foreground">watch page</strong> with the full transcript for search
-        and sharing.
+        <strong className="text-foreground">watch page</strong> with the original caption or
+        description for search and sharing.
       </p>
 
       <div className="flex flex-col gap-4 mb-6">
@@ -137,7 +87,7 @@ export function KnowledgeHubVideoHub() {
                 className={cn(doctor === value && "shadow-soft")}
                 asChild
               >
-                <Link replace to={learnHubFilteredPath({ doctor: value, topic })}>
+                <Link replace to={learnHubDoctorFilterPath({ doctor: value, topic })}>
                   {label}
                 </Link>
               </Button>
@@ -184,7 +134,7 @@ export function KnowledgeHubVideoHub() {
         ) : (
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3">
             {filtered.map((video) => (
-              <VideoSlide key={video.id} video={video} />
+              <KnowledgeHubVideoCard key={video.id} video={video} />
             ))}
           </div>
         )}

@@ -11,6 +11,7 @@ import { SITE_URL } from "@/config/site";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { AppLink as Link } from "@/components/router/AppLink";
+import { DOCTOR_BY_SLUG } from "@/data/doctorProfiles";
 import {
   getTopicGuide,
   topicGuideExampleConsultPaths,
@@ -18,6 +19,18 @@ import {
 } from "@/data/topicGuides/topicGuideRegistry";
 import { topicGuideDocumentTitle } from "@/lib/pageSeoCopy";
 import NotFound from "@/pages/NotFound";
+
+function formatGuideDate(iso: string | undefined): string | null {
+  if (!iso?.trim()) return null;
+  const t = Date.parse(iso);
+  if (Number.isNaN(t)) return iso.trim();
+  return new Intl.DateTimeFormat("en-IN", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(t));
+}
 
 export function TopicGuidePage() {
   const { topicGuideSlug } = useParams<{ topicGuideSlug: string }>();
@@ -52,7 +65,7 @@ export function TopicGuidePage() {
   );
 
   const consultExamples = useMemo(
-    () => (guide ? topicGuideExampleConsultPaths(guide.serviceSlugs) : []),
+    () => (guide ? topicGuideExampleConsultPaths(guide.serviceSlugs, guide.primaryConsult) : []),
     [guide],
   );
 
@@ -69,6 +82,14 @@ export function TopicGuidePage() {
 
   const docTitle = topicGuideDocumentTitle(guide.title);
   const faqHeadingBase = guide.title.endsWith("?") ? guide.title.slice(0, -1) : guide.title;
+  // SEO-14: show byline/review only for approved guides with real attribution fields.
+  const showEditorialByline =
+    guide.reviewStatus === "approved" && Boolean(guide.authorId || guide.reviewerId);
+  const authorName = guide.authorId ? DOCTOR_BY_SLUG[guide.authorId]?.name : undefined;
+  const reviewerName = guide.reviewerId ? DOCTOR_BY_SLUG[guide.reviewerId]?.name : undefined;
+  const publishedLabel = formatGuideDate(guide.publishedAt);
+  const updatedLabel = formatGuideDate(guide.updatedAt);
+  const reviewedLabel = formatGuideDate(guide.reviewedAt);
 
   return (
     <PageShell breadcrumbs={crumbs}>
@@ -80,6 +101,36 @@ export function TopicGuidePage() {
         <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground mb-4 text-balance">
           {guide.title}
         </h1>
+        {showEditorialByline ? (
+          <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+            {authorName ? (
+              <>
+                Written by{" "}
+                <Link
+                  to={DOCTOR_BY_SLUG[guide.authorId!].path}
+                  className="text-primary underline underline-offset-4"
+                >
+                  {authorName}
+                </Link>
+              </>
+            ) : null}
+            {authorName && reviewerName ? ". " : null}
+            {reviewerName ? (
+              <>
+                Medically reviewed by{" "}
+                <Link
+                  to={DOCTOR_BY_SLUG[guide.reviewerId!].path}
+                  className="text-primary underline underline-offset-4"
+                >
+                  {reviewerName}
+                </Link>
+              </>
+            ) : null}
+            {publishedLabel ? `. Published ${publishedLabel}` : null}
+            {updatedLabel ? `. Updated ${updatedLabel}` : null}
+            {reviewedLabel ? `. Reviewed ${reviewedLabel}` : null}.
+          </p>
+        ) : null}
         <p className="text-lg text-muted-foreground leading-relaxed mb-10">
           {guide.introParagraph}
         </p>
@@ -190,7 +241,7 @@ export function TopicGuidePage() {
           {consultExamples.length > 0 ? (
             <>
               <p className="text-xs font-medium text-foreground mb-2">
-                Example: one way to book online care (Mumbai service page)
+                Book a consult for this topic
               </p>
               <ul className="text-sm space-y-1.5">
                 {consultExamples.map((c) => (

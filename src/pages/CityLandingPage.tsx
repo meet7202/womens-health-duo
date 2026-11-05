@@ -18,20 +18,13 @@ import { SITE_URL } from "@/config/site";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { indiaCityDocumentTitle } from "@/lib/pageSeoCopy";
 
-const INDIA_CITY_LABEL: Record<CityKey, string> = {
-  ahmedabad: "Ahmedabad",
-  mumbai: "Mumbai",
-  valsad: "Valsad",
-  bangalore: "Bangalore",
-};
-
 type CityLandingPageProps = {
   cityKey: CityKey;
 };
 
 export function CityLandingPage({ cityKey }: CityLandingPageProps) {
   const city = CITY_PAGES[cityKey];
-  const docTitle = indiaCityDocumentTitle(INDIA_CITY_LABEL[cityKey]);
+  const docTitle = indiaCityDocumentTitle(cityKey);
   const crumbs = [
     { name: "Home", path: ROUTES.home },
     { name: city.h1, path: city.path },

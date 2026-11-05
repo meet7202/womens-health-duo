@@ -20,11 +20,17 @@ import {
   sitemapPriorityVirtualServiceCityLongtail,
   sitemapUrlsetKindForPath,
 } from "./src/config/routes.ts";
+import { redirectAliasShellPathnames } from "./src/config/routeDisposition.ts";
+import { learnWatchShellPathnames } from "./src/lib/learnHubUrls.ts";
 import {
   applyShellPageMetaToHtml,
   assertShellPagePlaceholdersPresent,
+  notFoundShellMeta,
   resolveShellPageMeta,
 } from "./src/build/staticShellHead.ts";
+import { prerenderPriorityPagesIntoShells } from "./src/build/prerenderPriorityPages.ts";
+import { ensureHomepageHeroLcpHint } from "./src/build/homepageHeroPreload.ts";
+import { writeIndexNowContentManifest } from "./src/build/indexnowContentManifest.ts";
 import { githubPagesAbsoluteUrl } from "./src/lib/githubPagesPublicUrl.ts";
 import { ensureHttpsSiteOrigin } from "./src/lib/ensureHttpsSiteOrigin.ts";
 import { buildVideoSitemapXml, videoSitemapEntryCount } from "./src/build/videoSitemap.ts";
@@ -108,10 +114,15 @@ function sitemapChangefreq(pathname: string, kind: SitemapChildKind): string {
   return "weekly";
 }
 
+/**
+ * Sitemap urlset builder (SEO-09).
+ * Omit `<lastmod>` until a verified per-URL content revision exists — build-day stamps
+ * are not meaningful content modification dates. Google treats lastmod as optional.
+ */
 function buildUrlsetXml(
   paths: readonly string[],
   siteUrl: string,
-  lastmod: string,
+  _lastmod: string,
   comment: string,
   opts: {
     priority: (p: string) => string;
@@ -123,7 +134,6 @@ function buildUrlsetXml(
       const loc = githubPagesAbsoluteUrl(siteUrl, p);
       return `  <url>
     <loc>${escapeXml(loc)}</loc>
-    <lastmod>${lastmod}</lastmod>
     <changefreq>${opts.changefreq(p)}</changefreq>
     <priority>${opts.priority(p)}</priority>
   </url>`;
@@ -154,9 +164,20 @@ function legacyGlobalOnlineShellPathnames(): string[] {
   return ["/global-online", ...Object.keys(legacyRaw).map((s) => `/global-online/${s}`)];
 }
 
-/** Every pathname we ship in sitemaps plus legacy `/global-online/*` shells. */
+/**
+ * Every pathname that gets a static HTML shell (SEO-02):
+ * indexable sitemap pages + explicit redirect aliases + legacy global-online aliases.
+ * Sitemap membership stays separate (`SITEMAP_PATHS*` only).
+ */
 function staticSpaShellPathnames(): string[] {
-  return [...new Set([...allSitemapPathnames(), ...legacyGlobalOnlineShellPathnames()])];
+  return [
+    ...new Set([
+      ...allSitemapPathnames(),
+      ...learnWatchShellPathnames(),
+      ...legacyGlobalOnlineShellPathnames(),
+      ...redirectAliasShellPathnames(),
+    ]),
+  ];
 }
 
 /** Copy the built root `index.html` under each route segment as `index.html` (SPA shell). */
@@ -182,6 +203,12 @@ function writeStaticSpaShells(siteUrl: string, outDirAbs: string) {
       applyShellPageMetaToHtml(raw, resolveShellPageMeta(siteUrl, pathname), siteUrl),
     );
   }
+
+  // Distinct 404 from the same placeholder template (not the already-substituted homepage).
+  fs.writeFileSync(
+    path.join(outDirAbs, "404.html"),
+    applyShellPageMetaToHtml(raw, notFoundShellMeta(siteUrl, "/404"), siteUrl),
+  );
 }
 
 function writeIndexNowKeyFile(outDir: string, key: string) {
@@ -212,6 +239,13 @@ User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: anthropic-ai
+Allow: /
+
+# Anthropic search / user retrieval (training ClaudeBot stays under Cloudflare managed Disallow)
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
 Allow: /
 
 User-agent: PerplexityBot
@@ -265,7 +299,9 @@ Sitemap: ${siteUrl}/sitemap-videos.xml
     path.join(outDir, ".sitemap-build-meta.json"),
     JSON.stringify(
       {
-        lastmod,
+        // Build clock for tooling only — not emitted as sitemap lastmod (SEO-09).
+        buildDate: lastmod,
+        lastmodStrategy: "omit-until-verified-content-revision",
         siteUrl,
         primaryUrlCount: SITEMAP_PATHS_PRIMARY_URLSET.length,
         virtualServiceCityUrlCount: SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES.length,
@@ -290,7 +326,6 @@ export default defineConfig(({ mode }) => {
   const indexNowKey = env.INDEXNOW_KEY?.trim() ?? "";
 
   let outDirAbs = path.resolve(rootDir, "dist");
-  let isBuildCommand = false;
 
   return {
     base: vitePublicBase(siteUrl),
@@ -325,25 +360,62 @@ export default defineConfig(({ mode }) => {
     plugins: [
       react(),
       {
+        name: "cf-async-module-scripts",
+        transformIndexHtml: {
+          order: "post",
+          handler(html) {
+            // Tell Cloudflare Rocket Loader to leave Vite module graphs alone if RL is on.
+            return html.replace(
+              /<script(?![^>]*\bdata-cfasync=)([^>]*\btype=(["'])module\2)/gi,
+              '<script data-cfasync="false"$1',
+            );
+          },
+        },
+      },
+      {
         name: "seo-html-and-files",
         configResolved(config) {
           outDirAbs = path.resolve(config.root, config.build.outDir);
-          isBuildCommand = config.command === "build";
         },
-        transformIndexHtml(html) {
+        transformIndexHtml(html, ctx) {
           const withSeo = applyHtmlReplacements(html, siteUrl);
-          // Dev: resolve placeholders so `@@PAGE_STATIC_FALLBACK@@` is not shown as raw text.
-          // Production: keep `@@PAGE_*@@` in emitted `dist/index.html` for `writeStaticSpaShells`.
-          if (isBuildCommand) return withSeo;
-          return applyShellPageMetaToHtml(withSeo, resolveShellPageMeta(siteUrl, "/"), siteUrl);
+          // Dev server only: resolve PAGE_* so raw placeholders never flash.
+          // Production `vite build` must keep `@@PAGE_*@@` for writeStaticSpaShells (closeBundle).
+          // Prefer argv over ctx.server — some Vite paths expose a server-like ctx during build.
+          const isCliBuild = process.argv.some((a) => a === "build" || a.endsWith("/build"));
+          if (!isCliBuild && ctx.server) {
+            return applyShellPageMetaToHtml(withSeo, resolveShellPageMeta(siteUrl, "/"), siteUrl);
+          }
+          return withSeo;
         },
-        closeBundle() {
+        async closeBundle() {
           writeSeoFiles(siteUrl, outDirAbs, indexNowKey);
           const indexHtml = path.join(outDirAbs, "index.html");
-          const notFoundHtml = path.join(outDirAbs, "404.html");
           if (fs.existsSync(indexHtml)) {
             writeStaticSpaShells(siteUrl, outDirAbs);
-            fs.copyFileSync(indexHtml, notFoundHtml);
+            // SEO-10 foundation: React 18 renderToString into priority shells (soft-fail).
+            // Skip with WHD_PRERENDER=0 when debugging shell-only builds.
+            if (process.env.WHD_PRERENDER !== "0") {
+              const prerender = await prerenderPriorityPagesIntoShells(outDirAbs, rootDir);
+              console.info(
+                `[seo-10] prerender priority pages: ${prerender.succeeded}/${prerender.attempted} ok` +
+                  (prerender.failed ? `, ${prerender.failed} failed` : ""),
+              );
+              if (prerender.errors.length) {
+                for (const line of prerender.errors.slice(0, 8)) {
+                  console.warn(`[seo-10] ${line}`);
+                }
+                if (prerender.errors.length > 8) {
+                  console.warn(`[seo-10] … ${prerender.errors.length - 8} more`);
+                }
+              }
+            }
+            // SEO-25: prefer prerendered hero picture; otherwise homepage-only responsive preload.
+            const heroHint = ensureHomepageHeroLcpHint(outDirAbs);
+            console.info(`[seo-25] homepage hero LCP: ${heroHint.mode}`);
+            // SEO-40: fingerprint manifest for change-aware IndexNow dry-runs.
+            const manifestPath = writeIndexNowContentManifest(siteUrl, outDirAbs);
+            console.info(`[seo-40] IndexNow content manifest → ${path.basename(manifestPath)}`);
           }
         },
       },

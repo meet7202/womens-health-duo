@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { AppLink as Link } from "@/components/router/AppLink";
@@ -13,6 +13,7 @@ import {
 import { BRAND_ENTITY_LINE } from "@/config/brandLine";
 import { whatsappMessageDoctorProfile, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 import { DOCTOR_PHOTOS } from "@/config/doctorPhotos";
+import { PUBLIC_REVIEW_PROVENANCE, publicReviewHasAggregate } from "@/config/publicReviews";
 
 const doctors = [
   {
@@ -28,8 +29,7 @@ const doctors = [
       "PCOS Management",
       "Menopause Care",
     ],
-    rating: "4.9",
-    reviews: "41",
+    doctorSlug: "charmi" as const,
     location: PRACTICE_CHARMI_LOCATIONS_SHORT,
     phone: "+91-7990550754",
     icon: Stethoscope,
@@ -57,8 +57,7 @@ const doctors = [
       "Urinary Incontinence",
       "Core Strengthening",
     ],
-    rating: "5.0",
-    reviews: "27",
+    doctorSlug: "zalak" as const,
     location: PRACTICE_ZALAK_LOCATIONS_SHORT,
     phone: "+91-7990550754",
     icon: Heart,
@@ -68,6 +67,8 @@ const doctors = [
     profilePath: ROUTES.drZalak,
     photoAlt: DOCTOR_PHOTOS.zalak.alt,
     photoTitle: DOCTOR_PHOTOS.zalak.title,
+    photoSrcSetJpeg: DOCTOR_PHOTOS.zalak.srcSetJpeg,
+    photoSrcSetWebp: DOCTOR_PHOTOS.zalak.srcSetWebp,
   },
 ];
 
@@ -79,8 +80,8 @@ export const AboutSection = () => {
     <section id="about" className="py-24 bg-background" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <m.div
+          initial={false}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
@@ -98,14 +99,14 @@ export const AboutSection = () => {
           <p className="text-base text-foreground/90 leading-relaxed mt-4 max-w-2xl mx-auto border-t border-border/40 pt-4">
             {BRAND_ENTITY_LINE}
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Doctors Grid */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {doctors.map((doctor, index) => (
-            <motion.div
+            <m.div
               key={doctor.name}
-              initial={{ opacity: 0, y: 30 }}
+              initial={false}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="bg-card rounded-3xl p-8 shadow-card border border-border/50 hover:shadow-elevated transition-shadow duration-300"
@@ -113,22 +114,14 @@ export const AboutSection = () => {
               <div className="flex flex-col items-center text-center gap-6">
                 <div className="w-40 h-48 rounded-2xl overflow-hidden flex-shrink-0 shadow-lg">
                   <picture>
-                    <source
-                      type="image/webp"
-                      srcSet={doctor.photoSrcSetWebp}
-                      sizes="(max-width: 1024px) 160px, 320px"
-                    />
-                    <source
-                      type="image/jpeg"
-                      srcSet={doctor.photoSrcSetJpeg}
-                      sizes="(max-width: 1024px) 160px, 320px"
-                    />
+                    <source type="image/webp" srcSet={doctor.photoSrcSetWebp} sizes="160px" />
+                    <source type="image/jpeg" srcSet={doctor.photoSrcSetJpeg} sizes="160px" />
                     <img
                       src={doctor.image}
                       alt={doctor.photoAlt}
                       title={doctor.photoTitle}
-                      width={doctor.imageWidth}
-                      height={doctor.imageHeight}
+                      width={160}
+                      height={192}
                       loading="lazy"
                       decoding="async"
                       className="h-full w-full object-cover object-top"
@@ -140,9 +133,30 @@ export const AboutSection = () => {
                     <h3 className="font-heading text-2xl font-semibold text-foreground">
                       {doctor.name}
                     </h3>
-                    <span className="bg-primary/10 text-primary text-xs font-medium px-2 py-1 rounded-full">
-                      {doctor.rating}★ ({doctor.reviews} reviews)
-                    </span>
+                    {(() => {
+                      const provenance = PUBLIC_REVIEW_PROVENANCE[doctor.doctorSlug];
+                      if (publicReviewHasAggregate(provenance)) {
+                        return (
+                          <span className="bg-primary/10 text-primary text-xs font-medium px-2 py-1 rounded-full">
+                            {provenance.rating!.toFixed(1)}★ ({provenance.reviewCount} reviews
+                            {provenance.asOf ? `, as of ${provenance.asOf}` : ""})
+                          </span>
+                        );
+                      }
+                      if (provenance.sourceUrl) {
+                        return (
+                          <a
+                            href={provenance.sourceUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-primary/10 text-primary text-xs font-medium px-2 py-1 rounded-full underline-offset-2 hover:underline"
+                          >
+                            {provenance.sourceLabel ?? "Google reviews"}
+                          </a>
+                        );
+                      }
+                      return null;
+                    })()}
                   </div>
                   <p className="text-primary font-medium mb-4">{doctor.title}</p>
                   <p className="text-muted-foreground leading-relaxed mb-6">{doctor.description}</p>
@@ -182,7 +196,7 @@ export const AboutSection = () => {
                       <Button
                         size="sm"
                         asChild
-                        className="bg-[#25D366] hover:bg-[#1ebe57] text-white border-0 shadow-sm"
+                        className="bg-whatsapp hover:bg-whatsapp-hover text-white border-0 shadow-sm"
                       >
                         <a
                           href={whatsappUrlWithMessage(
@@ -206,13 +220,13 @@ export const AboutSection = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
 
         {/* Credentials */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <m.div
+          initial={false}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
@@ -232,7 +246,7 @@ export const AboutSection = () => {
               <p className="text-sm text-muted-foreground">{stat.label}</p>
             </div>
           ))}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

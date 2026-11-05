@@ -1,13 +1,17 @@
 import { useEffect, useRef, useState } from "react";
-import { Play } from "lucide-react";
+import { Pause, Play } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { AppLink as Link } from "@/components/router/AppLink";
 import {
   knowledgeHubInstagramEmbedUrl,
   knowledgeHubInstagramPoster,
   knowledgeHubInstagramReelNativeVideo,
+  knowledgeHubVideoCaptionForSeo,
+  knowledgeHubVideoHasCaptionEditorialHold,
   knowledgeHubVideoOriginalPlatformCaption,
   type KnowledgeHubVideo,
 } from "@/data/knowledgeHubVideos";
+import { learnVideoWatchPath } from "@/lib/learnHubUrls";
 import { knowledgeHubPosterAlt } from "@/lib/mediaSeo";
 
 type KnowledgeHubVideoPlayerProps = {
@@ -111,11 +115,13 @@ function NativeInstagramReelPlayer({
   const videoRef = useRef<HTMLVideoElement>(null);
   const [started, setStarted] = useState(false);
   const [playing, setPlaying] = useState(false);
+  const [ended, setEnded] = useState(false);
 
   const play = () => {
     const el = videoRef.current;
     if (!el) return;
     setStarted(true);
+    setEnded(false);
     void el
       .play()
       .then(() => setPlaying(true))
@@ -132,7 +138,7 @@ function NativeInstagramReelPlayer({
   };
 
   const togglePlay = () => {
-    if (!started) {
+    if (!started || ended) {
       play();
       return;
     }
@@ -143,19 +149,14 @@ function NativeInstagramReelPlayer({
   return (
     <div className={cn("relative overflow-hidden bg-muted/20 select-none", frameClass)}>
       {!started && poster ? (
-        <HubPoster
-          src={poster}
-          alt={title}
-          frameClass="absolute inset-0 h-full w-full"
-          onActivate={play}
-        />
+        <HubPoster src={poster} alt={title} frameClass="absolute inset-0 h-full w-full" />
       ) : null}
       <video
         ref={videoRef}
         title={title}
         src={src}
         className={cn(
-          "h-full w-full object-contain bg-black cursor-pointer",
+          "h-full w-full object-contain bg-black",
           !started && poster ? "absolute inset-0 opacity-0 pointer-events-none" : "relative block",
         )}
         playsInline
@@ -168,23 +169,41 @@ function NativeInstagramReelPlayer({
         onPlay={() => {
           setStarted(true);
           setPlaying(true);
+          setEnded(false);
         }}
         onPause={() => setPlaying(false)}
-        onClick={togglePlay}
+        onEnded={() => {
+          setPlaying(false);
+          setEnded(true);
+        }}
         onError={() => onFallback?.()}
       />
-      {started && !playing ? (
-        <button
-          type="button"
-          onClick={play}
-          className="absolute inset-0 flex items-center justify-center bg-black/20 transition hover:bg-black/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-          aria-label={`Play ${title}`}
+      {/* Persistent semantic control — keyboard + focus ring; works after ended (SEO-27). */}
+      <button
+        type="button"
+        onClick={togglePlay}
+        className={cn(
+          "absolute z-20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
+          started && playing
+            ? "bottom-3 right-3 rounded-full bg-black/70 p-2.5 text-white shadow-md hover:bg-black/85"
+            : "inset-0 flex items-center justify-center bg-black/20 transition hover:bg-black/30",
+        )}
+        aria-label={playing ? `Pause ${title}` : `Play ${title}`}
+      >
+        <span
+          className={cn(
+            "text-white shadow-lg",
+            started && playing ? "" : "rounded-full bg-black/60 p-3.5",
+          )}
+          aria-hidden
         >
-          <span className="rounded-full bg-black/60 p-3.5 text-white shadow-lg" aria-hidden>
+          {playing ? (
+            <Pause className="h-5 w-5 fill-current" />
+          ) : (
             <Play className="h-7 w-7 fill-current" />
-          </span>
-        </button>
-      ) : null}
+          )}
+        </span>
+      </button>
     </div>
   );
 }
@@ -204,25 +223,54 @@ function DeferredEmbed({
   allow: string;
   eager: boolean;
 }) {
+  const [activated, setActivated] = useState(eager);
   const [ready, setReady] = useState(false);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  useEffect(() => {
+    if (activated && ready) {
+      iframeRef.current?.focus();
+    }
+  }, [activated, ready]);
 
   return (
     <div className={cn("relative overflow-hidden bg-muted/20", frameClass)}>
-      <iframe
-        title={title}
-        src={embedSrc}
-        className={cn(
-          "relative z-10 h-full w-full",
-          frameClass,
-          !ready && poster && "opacity-0 pointer-events-none",
-        )}
-        allow={allow}
-        loading={eager ? "eager" : "lazy"}
-        referrerPolicy="strict-origin-when-cross-origin"
-        onLoad={() => setReady(true)}
-      />
-      {poster && !ready ? (
-        <HubPoster src={poster} alt={title} frameClass="absolute inset-0 z-20 h-full w-full" />
+      {activated ? (
+        <iframe
+          ref={iframeRef}
+          title={title}
+          src={embedSrc}
+          className={cn(
+            "relative z-10 h-full w-full",
+            frameClass,
+            !ready && poster && "opacity-0 pointer-events-none",
+          )}
+          allow={allow}
+          loading={eager ? "eager" : "lazy"}
+          referrerPolicy="strict-origin-when-cross-origin"
+          onLoad={() => setReady(true)}
+        />
+      ) : null}
+      {(!activated || (poster && !ready)) && poster ? (
+        <HubPoster
+          src={poster}
+          alt={title}
+          frameClass="absolute inset-0 z-20 h-full w-full"
+          onActivate={activated ? undefined : () => setActivated(true)}
+        />
+      ) : null}
+      {!activated && !poster ? (
+        <button
+          type="button"
+          onClick={() => setActivated(true)}
+          className={cn(
+            frameClass,
+            "absolute inset-0 z-20 flex items-center justify-center bg-muted/40 text-sm font-medium text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
+          )}
+          aria-label={`Load embedded player: ${title}`}
+        >
+          Load player
+        </button>
       ) : null}
     </div>
   );
@@ -235,15 +283,24 @@ export function KnowledgeHubVideoPlayer({
   variant = "carousel",
 }: KnowledgeHubVideoPlayerProps) {
   const embedContainerRef = useRef<HTMLDivElement>(null);
+  const youtubeIframeRef = useRef<HTMLIFrameElement>(null);
   const [embedVisible, setEmbedVisible] = useState(eager);
+  const [youtubeActivated, setYoutubeActivated] = useState(eager);
   const [youtubeReady, setYoutubeReady] = useState(false);
   const [instagramUseEmbed, setInstagramUseEmbed] = useState(false);
 
   useEffect(() => {
-    if (!embedVisible || video.kind !== "youtube_short" || youtubeReady) return;
+    if (!embedVisible || !youtubeActivated || video.kind !== "youtube_short" || youtubeReady)
+      return;
     const timer = window.setTimeout(() => setYoutubeReady(true), 10_000);
     return () => window.clearTimeout(timer);
-  }, [embedVisible, video.kind, youtubeReady]);
+  }, [embedVisible, youtubeActivated, video.kind, youtubeReady]);
+
+  useEffect(() => {
+    if (youtubeActivated && youtubeReady) {
+      youtubeIframeRef.current?.focus();
+    }
+  }, [youtubeActivated, youtubeReady]);
 
   useEffect(() => {
     if (eager) return;
@@ -271,8 +328,15 @@ export function KnowledgeHubVideoPlayer({
       : undefined;
 
   const originalCaption = knowledgeHubVideoOriginalPlatformCaption(video);
-  const originalCaptionHeading =
-    video.kind === "youtube_short" ? "Original YouTube description" : "Original Instagram caption";
+  const captionOnHold = knowledgeHubVideoHasCaptionEditorialHold(video);
+  const servedCaption = knowledgeHubVideoCaptionForSeo(video);
+  const originalCaptionHeading = captionOnHold
+    ? "Site caption (editorial hold)"
+    : video.kind === "youtube_short"
+      ? "Original YouTube description"
+      : "Original Instagram caption";
+  const captionHoldMessage =
+    "An ovarian-reserve line from the original platform caption is on clinical hold and is not served as unqualified current guidance. The original platform text is preserved separately; open on YouTube or Instagram for the live post.";
 
   const isInstagramPost = video.kind === "instagram_post";
   const frameClass =
@@ -286,6 +350,91 @@ export function KnowledgeHubVideoPlayer({
 
   const minFrameClass = cn(frameClass, variant === "carousel" && "min-h-[320px]");
   const posterSeoAlt = knowledgeHubPosterAlt(video);
+  const watchPath = learnVideoWatchPath(video.id);
+  const carouselPosterSrc =
+    video.kind === "youtube_short"
+      ? youtubeThumbnail(video.youtubeVideoId)
+      : (instagramPoster ?? undefined);
+
+  // Hub/category cards: poster → dedicated watch page only (no iframe/video bytes).
+  // Prevents GSC “Video isn't on a watch page” when Google finds embeds on /learn/.
+  if (variant === "carousel") {
+    return (
+      <div className={cn("flex flex-col", className)}>
+        <div className="relative bg-black/5">
+          {carouselPosterSrc ? (
+            <Link
+              to={watchPath}
+              className={cn(
+                "relative block w-full overflow-hidden bg-muted/20",
+                minFrameClass,
+                "group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
+              )}
+              aria-label={`Open watch page: ${posterSeoAlt}`}
+            >
+              <HubPoster
+                src={carouselPosterSrc}
+                alt={posterSeoAlt}
+                title={posterSeoAlt}
+                frameClass="absolute inset-0 h-full w-full"
+              />
+              <span
+                className="absolute inset-0 flex items-center justify-center bg-black/20 transition group-hover:bg-black/30"
+                aria-hidden
+              >
+                <span className="rounded-full bg-black/60 p-3.5 text-white shadow-lg">
+                  <Play className="h-7 w-7 fill-current" />
+                </span>
+              </span>
+            </Link>
+          ) : (
+            <Link
+              to={watchPath}
+              className={cn(
+                minFrameClass,
+                "flex items-center justify-center bg-muted/40 px-4 text-center text-sm text-primary underline-offset-4 hover:underline",
+              )}
+            >
+              Open watch page
+            </Link>
+          )}
+        </div>
+        <div
+          className={cn(
+            "border-t border-border/40 bg-muted/15 px-1 sm:px-2 py-4 space-y-2",
+            "min-h-[8.5rem]",
+          )}
+        >
+          <h2 className="text-sm font-semibold text-foreground">{originalCaptionHeading}</h2>
+          {captionOnHold ? (
+            <>
+              <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-wrap break-words line-clamp-3">
+                {servedCaption}
+              </p>
+              <p className="text-xs text-muted-foreground/90 leading-relaxed italic">
+                {captionHoldMessage}
+              </p>
+            </>
+          ) : originalCaption ? (
+            <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-wrap break-words line-clamp-3">
+              {originalCaption}
+            </p>
+          ) : (
+            <p className="text-sm text-muted-foreground leading-relaxed italic line-clamp-3">
+              {`The original caption could not be synced for this post (it may have been removed or is private). Open on ${video.kind === "youtube_short" ? "YouTube" : "Instagram"} to read the live post.`}
+            </p>
+          )}
+          <p className="text-[10px] text-muted-foreground/80 leading-snug border-t border-border/30 pt-2">
+            Full caption and player on the{" "}
+            <Link to={watchPath} className="underline underline-offset-2">
+              watch page
+            </Link>
+            .
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={cn("flex flex-col", className)}>
@@ -293,26 +442,30 @@ export function KnowledgeHubVideoPlayer({
         {embedVisible ? (
           video.kind === "youtube_short" ? (
             <div className={cn("relative overflow-hidden bg-muted/20", minFrameClass)}>
-              <iframe
-                title={video.title}
-                src={embedSrc}
-                className={cn(
-                  "relative z-10 h-full w-full",
-                  minFrameClass,
-                  !youtubeReady && "opacity-0 pointer-events-none",
-                )}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                loading={eager ? "eager" : "lazy"}
-                referrerPolicy="strict-origin-when-cross-origin"
-                onLoad={() => setYoutubeReady(true)}
-              />
-              {!youtubeReady ? (
+              {youtubeActivated ? (
+                <iframe
+                  ref={youtubeIframeRef}
+                  title={video.title}
+                  src={embedSrc}
+                  className={cn(
+                    "relative z-10 h-full w-full",
+                    minFrameClass,
+                    !youtubeReady && "opacity-0 pointer-events-none",
+                  )}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  loading={eager ? "eager" : "lazy"}
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  onLoad={() => setYoutubeReady(true)}
+                />
+              ) : null}
+              {!youtubeActivated || !youtubeReady ? (
                 <HubPoster
                   src={youtubeThumbnail(video.youtubeVideoId)}
                   alt={posterSeoAlt}
                   title={posterSeoAlt}
                   frameClass="absolute inset-0 z-20 h-full w-full"
+                  onActivate={youtubeActivated ? undefined : () => setYoutubeActivated(true)}
                 />
               ) : null}
             </div>
@@ -369,45 +522,31 @@ export function KnowledgeHubVideoPlayer({
           </div>
         )}
       </div>
-      <div
-        className={cn(
-          "border-t border-border/40 bg-muted/15 px-1 sm:px-2 py-4 space-y-2",
-          variant === "carousel" && "min-h-[8.5rem]",
-        )}
-      >
+      <div className="border-t border-border/40 bg-muted/15 px-1 sm:px-2 py-4 space-y-2">
         <h2 className="text-sm font-semibold text-foreground">{originalCaptionHeading}</h2>
-        {originalCaption ? (
-          <p
-            className={cn(
-              "text-sm text-muted-foreground leading-relaxed whitespace-pre-wrap break-words",
-              variant === "carousel" && "line-clamp-3",
-            )}
-          >
+        {captionOnHold ? (
+          <>
+            <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-wrap break-words">
+              {servedCaption}
+            </p>
+            <p className="text-xs text-muted-foreground/90 leading-relaxed italic">
+              {captionHoldMessage}
+            </p>
+          </>
+        ) : originalCaption ? (
+          <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-wrap break-words">
             {originalCaption}
           </p>
         ) : (
-          <p
-            className={cn(
-              "text-sm text-muted-foreground leading-relaxed italic",
-              variant === "carousel" && "line-clamp-3",
-            )}
-          >
-            The original caption could not be synced for this post (it may have been removed or is
-            private). Open on {video.kind === "youtube_short" ? "YouTube" : "Instagram"} to read the
-            live post.
+          <p className="text-sm text-muted-foreground leading-relaxed italic">
+            {`The original caption could not be synced for this post (it may have been removed or is private). Open on ${video.kind === "youtube_short" ? "YouTube" : "Instagram"} to read the live post.`}
           </p>
         )}
-        {variant === "carousel" ? (
-          <p className="text-[10px] text-muted-foreground/80 leading-snug border-t border-border/30 pt-2">
-            Full caption on the watch page.
-          </p>
-        ) : (
-          <p className="text-[10px] text-muted-foreground/80 leading-snug border-t border-border/30 pt-2">
-            Text is copied from the public{" "}
-            {video.kind === "youtube_short" ? "YouTube" : "Instagram"} post for transparency;
-            formatting may differ slightly from the app.
-          </p>
-        )}
+        <p className="text-[10px] text-muted-foreground/80 leading-snug border-t border-border/30 pt-2">
+          {captionOnHold
+            ? "Platform caption withheld until clinical review (SEO editorial hold)."
+            : `Text is copied from the public ${video.kind === "youtube_short" ? "YouTube" : "Instagram"} post for transparency; formatting may differ slightly from the app.`}
+        </p>
       </div>
     </div>
   );

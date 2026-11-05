@@ -27,8 +27,8 @@ export function LearnTopicalAuthoritySection() {
       <div className="mb-6 rounded-2xl border border-primary/20 bg-primary/5 p-4 text-sm text-foreground/90">
         <strong className="font-medium">Priority for Dr. Zalak:</strong> women&apos;s health
         physiotherapy, prenatal and postnatal recovery, incontinence, and diastasis support are the
-        strongest add-on growth clusters after the online consultation hub. Pilates remains a
-        support tool for these care paths, not the main keyword bet.
+        priority care pathways alongside online consultation. Pilates remains a support tool for
+        these care paths, not the main keyword bet.
       </div>
       <div className="mb-6 rounded-2xl border border-primary/20 bg-primary/5 p-4 text-sm text-foreground/90">
         <strong className="font-medium">Fastest next step:</strong> if your question is personal,

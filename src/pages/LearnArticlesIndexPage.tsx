@@ -51,9 +51,9 @@ export function LearnArticlesIndexPage() {
           {h1}
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-4 max-w-3xl">
-          These pages are written by our clinicians in the same voice as our Shorts and Reels. They
-          are meant as orientation, not a substitute for a visit. Each article ends with links to
-          similar topics, the Learn content hub, and how to book.
+          These pages explain common women&apos;s health questions in the same practical voice as
+          our Shorts and Reels. They are orientation, not a substitute for a visit. Each article
+          ends with links to similar topics, the Learn hub, and how to book.
         </p>
         <p className="text-sm text-muted-foreground leading-relaxed mb-10 max-w-3xl">
           You can move through every page from here: each title is a normal site link. For reels,

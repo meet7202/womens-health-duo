@@ -91,14 +91,26 @@ function main() {
     }
   }
 
-  for (const xml of [primaryXml, virtualXml, videoXml]) {
-    const mods = extractLastmods(xml);
-    const bad = mods.filter((d) => d !== meta.lastmod);
-    if (bad.length > 0) {
-      errors.push(`stale <lastmod> in sitemap (expected ${meta.lastmod}, found ${bad[0]})`);
-      break;
+  // SEO-09: lastmod is optional. When present it must be a real calendar date, not future,
+  // and must not be required to equal the build clock (build-day stamps are not content dates).
+  const today = new Date().toISOString().slice(0, 10);
+  const isoDay = /^\d{4}-\d{2}-\d{2}$/;
+  for (const [label, xml] of [
+    ["sitemap.xml", primaryXml],
+    ["sitemap-virtual-service-cities.xml", virtualXml],
+  ]) {
+    for (const d of extractLastmods(xml)) {
+      if (!isoDay.test(d)) {
+        errors.push(`${label}: invalid <lastmod> ${d}`);
+        break;
+      }
+      if (d > today) {
+        errors.push(`${label}: future <lastmod> ${d}`);
+        break;
+      }
     }
   }
+  // Video publication dates live under video:publication_date (postedAt only) — not url lastmod.
 
   const intlInPrimary = primaryLocs.filter((loc) =>
     loc.includes("/international-consultation/"),
@@ -127,7 +139,7 @@ function main() {
 
   if (errors.length === 0) {
     console.log(
-      `audit-seo-sitemap: OK (lastmod ${meta.lastmod}; primary ${primaryLocs.length}, virtual ${virtualLocs.length}, video ${videoLocs.length})`,
+      `audit-seo-sitemap: OK (lastmodStrategy ${meta.lastmodStrategy ?? "unknown"}; primary ${primaryLocs.length}, virtual ${virtualLocs.length}, video ${videoLocs.length})`,
     );
     return;
   }

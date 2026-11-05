@@ -24,15 +24,19 @@ export function physicianImageObject(slug: DoctorSlug) {
     contentUrl: url,
     name: doctorPhotoTitle(slug),
     caption: doctorPhotoAlt(slug),
-    width: meta.width,
-    height: meta.height,
+    width: meta.seoWidth ?? meta.width,
+    height: meta.seoHeight ?? meta.height,
   };
 }
 
 /** Poster / thumbnail as `ImageObject` for Google Images (paired with watch pages). */
-export function knowledgeHubPosterImageObject(video: KnowledgeHubVideo, watchPagePath: string) {
+export function knowledgeHubPosterImageObject(
+  video: KnowledgeHubVideo,
+  watchPagePath: string,
+): Record<string, unknown> | null {
   const pageUrl = githubPagesAbsoluteUrl(SITE_URL, watchPagePath);
   const contentUrl = knowledgeHubVideoThumbnailAbsolute(SITE_URL, video);
+  if (!contentUrl) return null;
   const name = knowledgeHubPosterAlt(video);
   const caption = knowledgeHubVideoCaptionForSeo(video).slice(0, 500);
   return {

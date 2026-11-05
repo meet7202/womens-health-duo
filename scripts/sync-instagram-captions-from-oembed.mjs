@@ -8,6 +8,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { setTimeout as delay } from "node:timers/promises";
+import { isCaptionEditorialLocked } from "./lib/caption-editorial-locks.mjs";
 
 const root = fileURLToPath(new URL("..", import.meta.url));
 const jsonPath = `${root}/src/data/knowledgeHubInstagramReels.json`;
@@ -17,6 +18,11 @@ const rows = JSON.parse(readFileSync(jsonPath, "utf8"));
 
 for (const row of rows) {
   const id = row.instagramReelId;
+  // SEO-15: do not overwrite locked platform captions under editorial hold.
+  if (isCaptionEditorialLocked(id) && String(row.instagramCaption ?? "").trim()) {
+    console.log("Preserved locked caption for", id);
+    continue;
+  }
   const url = `https://www.instagram.com/reel/${id}/`;
   const api = `https://www.instagram.com/api/v1/oembed/?url=${encodeURIComponent(url)}`;
   try {

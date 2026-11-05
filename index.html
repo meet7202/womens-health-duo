@@ -9,16 +9,12 @@
     <meta name="description" content="@@PAGE_META_DESCRIPTION@@" />
     <meta name="keywords" content="@@SEO_KEYWORDS@@" />
     <meta name="author" content="@@SEO_SITE_NAME@@" />
-    <meta
-      name="robots"
-      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-    />
-    <meta name="googlebot" content="index, follow" />
-    <meta name="bingbot" content="index, follow" />
+    <!-- @@PAGE_ROBOTS@@: per-route indexability (SEO-02); do not hardcode conflicting googlebot/bingbot. -->
+    <meta name="robots" content="@@PAGE_ROBOTS@@" />
     <meta name="language" content="English" />
     <meta name="geo.region" content="IN" />
     <meta name="geo.placename" content="India" />
-    <meta name="theme-color" content="#b85c4e" />
+    <meta name="theme-color" content="#9f4c38" />
     <meta name="format-detection" content="telephone=yes" />
 
     <link rel="canonical" href="@@PAGE_CANONICAL@@" />
@@ -47,33 +43,50 @@
     <link rel="icon" href="%BASE_URL%favicon-48.png" type="image/png" sizes="48x48" />
     <link rel="icon" href="%BASE_URL%favicon-192.png" type="image/png" sizes="192x192" />
     <link rel="apple-touch-icon" href="%BASE_URL%apple-touch-icon.png" sizes="180x180" />
-    <link rel="mask-icon" href="%BASE_URL%favicon.svg" color="#a84a3d" />
+    <link rel="mask-icon" href="%BASE_URL%favicon.svg" color="#9f4c38" />
 
-    <meta property="og:type" content="website" />
+    <!-- @@PAGE_OG_*@@: per-route Open Graph (SEO-03 / SEO-21); watch pages use poster + video.other. -->
+    <meta property="og:type" content="@@PAGE_OG_TYPE@@" />
     <meta property="og:site_name" content="@@SEO_SITE_NAME@@" />
     <meta property="og:url" content="@@PAGE_OG_URL@@" />
     <meta property="og:title" content="@@PAGE_OG_TITLE@@" />
     <meta property="og:description" content="@@PAGE_OG_DESCRIPTION@@" />
-    <meta property="og:image" content="@@SEO_SITE_URL@@@@SEO_OG_IMAGE_PATH@@" />
-    <meta
-      property="og:image:alt"
-      content="@@SEO_SITE_NAME@@ — holistic women's healthcare in India"
-    />
+    <meta property="og:image" content="@@PAGE_OG_IMAGE@@" />
+    <meta property="og:image:alt" content="@@PAGE_OG_IMAGE_ALT@@" />
     <meta property="og:locale" content="en_IN" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="@@PAGE_TW_TITLE@@" />
     <meta name="twitter:description" content="@@PAGE_TW_DESCRIPTION@@" />
-    <meta name="twitter:image" content="@@SEO_SITE_URL@@@@SEO_OG_IMAGE_PATH@@" />
+    <meta name="twitter:image" content="@@PAGE_OG_IMAGE@@" />
+    <meta name="twitter:image:alt" content="@@PAGE_OG_IMAGE_ALT@@" />
 
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Self-hosted fonts (public/fonts) — no fonts.googleapis.com / fonts.gstatic.com chain. -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="%BASE_URL%fonts/dm-sans-latin-400-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
+    <link
+      rel="preload"
+      href="%BASE_URL%fonts/cormorant-garamond-latin-600-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="%BASE_URL%fonts/fonts.css" />
+    <!-- Italic faces after first paint -->
+    <link
+      rel="stylesheet"
+      href="%BASE_URL%fonts/fonts-italic.css"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="%BASE_URL%fonts/fonts-italic.css" />
+    </noscript>
   </head>
 
   <body>

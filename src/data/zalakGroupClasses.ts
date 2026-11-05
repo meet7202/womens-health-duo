@@ -1,5 +1,5 @@
-import type { FaqItem } from "@/data/siteFaq";
-import { ROUTES } from "@/config/routes";
+import type { FaqItem } from "./siteFaq";
+import { ROUTES } from "../config/routes";
 
 export type ZalakGroupClassKey = "prenatal" | "postnatal" | "pilates";
 
@@ -28,7 +28,7 @@ export const ZALAK_GROUP_CLASS_CONTENT: Record<ZalakGroupClassKey, ZalakGroupCla
   prenatal: {
     key: "prenatal",
     slug: "prenatal-classes",
-    title: "Prenatal & Antenatal Classes for Pregnancy Support",
+    title: "Prenatal Classes with Dr. Zalak Shah",
     eyebrow: "Dr. Zalak Shah · Pregnancy movement & birth preparation",
     metaDescription:
       "Join Dr. Zalak Shah's prenatal and antenatal classes for pregnancy-safe movement, pelvic floor support, birth preparation. 1:1 and group classes online & offline in Bangalore, Ahmedabad.",
@@ -150,7 +150,7 @@ export const ZALAK_GROUP_CLASS_CONTENT: Record<ZalakGroupClassKey, ZalakGroupCla
   postnatal: {
     key: "postnatal",
     slug: "postnatal-classes",
-    title: "Postnatal Classes for Recovery, Core Strength & Confidence",
+    title: "Postnatal Classes with Dr. Zalak Shah",
     eyebrow: "Dr. Zalak Shah · Postpartum movement and rehabilitation",
     metaDescription:
       "Explore Dr. Zalak Shah's postnatal classes for pelvic floor recovery, diastasis recti healing, core strength. 1:1 and group classes online & offline in Bangalore, Ahmedabad.",
@@ -269,7 +269,7 @@ export const ZALAK_GROUP_CLASS_CONTENT: Record<ZalakGroupClassKey, ZalakGroupCla
   pilates: {
     key: "pilates",
     slug: "pilates-classes",
-    title: "Mat Pilates & Reformer Pilates Classes with Dr. Zalak Shah",
+    title: "Pilates Classes with Dr. Zalak Shah",
     eyebrow: "Dr. Zalak Shah · Pilates for strength, posture and mindful movement",
     metaDescription:
       "Book Dr. Zalak Shah's Mat Pilates and Reformer Pilates classes for posture, core strength, mobility. 1:1 and group classes online & offline in Bangalore, Ahmedabad.",

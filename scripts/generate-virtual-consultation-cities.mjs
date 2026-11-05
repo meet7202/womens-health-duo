@@ -2,6 +2,10 @@
  * Generates src/data/virtualConsultationCities.json (~500 metros with large Indian diaspora
  * or global hubs) + src/data/legacyGlobalOnlineSlugMap.json for redirects from /global-online/*.
  * Run: node scripts/generate-virtual-consultation-cities.mjs
+ *
+ * SEO-11 FREEZE (Nov 2026): Do not expand the city seed for search growth. Re-running may refresh
+ * slugs/legacy maps but must not add metros without an explicit product decision + disposition
+ * review. Prefer hubs + protected clicked URLs over a larger city×service matrix.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -12,6 +16,12 @@ const root = path.resolve(__dirname, "..");
 const outJson = path.join(root, "src/data/virtualConsultationCities.json");
 const outLegacy = path.join(root, "src/data/legacyGlobalOnlineSlugMap.json");
 
+/**
+ * Cap for generated JSON rows (SEO-11). Anchors may add a few unique metros on merge —
+ * keep `VIRTUAL_CONSULTATION_CITY_COUNT_FREEZE` in sync after any intentional raise.
+ */
+const FROZEN_GENERATED_CITY_COUNT = 500;
+
 function slugify(s) {
   return String(s)
     .normalize("NFKD")
@@ -21,12 +31,43 @@ function slugify(s) {
     .replace(/^-|-$/g, "");
 }
 
-/** @type {{ city: string; country: string; countryCode: string }[]} */
+/** Persist public path segments from the previous JSON so regenerating never renames live URLs (SEO-35). */
+const existingByCityKey = new Map();
+/** @type {Set<string>} */
+const reservedSlugs = new Set();
+if (fs.existsSync(outJson)) {
+  try {
+    const prev = JSON.parse(fs.readFileSync(outJson, "utf8"));
+    for (const row of prev) {
+      if (!row?.slug || !row?.city || !row?.countryCode) continue;
+      const key = `${row.city}|${String(row.countryCode).toUpperCase()}`;
+      if (!existingByCityKey.has(key)) existingByCityKey.set(key, row.slug);
+      reservedSlugs.add(row.slug);
+    }
+  } catch {
+    // ignore corrupt prior file
+  }
+}
+
+/** @type {{ slug: string; city: string; country: string; countryCode: string }[]} */
 const rows = [];
 
 function add(city, country, countryCode) {
-  const slug = `${slugify(city)}-${countryCode.toLowerCase()}`;
-  rows.push({ slug, city, country, countryCode });
+  const cc = String(countryCode).toUpperCase();
+  const key = `${city}|${cc}`;
+  let slug = existingByCityKey.get(key);
+  if (!slug) {
+    const base = `${slugify(city)}-${cc.toLowerCase()}`;
+    slug = base;
+    let n = 2;
+    // New duplicate city names must not steal an existing public slug.
+    while (reservedSlugs.has(slug)) {
+      slug = `${base}-${n++}`;
+    }
+    existingByCityKey.set(key, slug);
+  }
+  reservedSlugs.add(slug);
+  rows.push({ slug, city, country, countryCode: cc });
 }
 
 /** Curated: GCC, Levant, Africa, Americas, Europe, Asia-Pacific — real city names only. */
@@ -759,14 +800,25 @@ for (const r of rows) {
   final.push(r);
 }
 
-// If still short, add numbered regional hubs (last resort — real region names)
-let i = 1;
-while (final.length < 500) {
-  add(`Metro Region ${i}`, "Global", "ZZ");
-  i++;
+// SEO-35: never pad with fake "Metro Region N" rows. The previous loop checked
+// `final.length` while `add()` only mutated `rows`, so it never terminated.
+const allowExpansion = process.env.ALLOW_VIRTUAL_CITY_EXPANSION === "1";
+if (final.length > FROZEN_GENERATED_CITY_COUNT && !allowExpansion) {
+  console.error(
+    `SEO-11: refusing to write more than ${FROZEN_GENERATED_CITY_COUNT} generated cities ` +
+      `(seed produced ${final.length}). City×service expansion is frozen. ` +
+      `After disposition review, raise FROZEN_GENERATED_CITY_COUNT + ` +
+      `VIRTUAL_CONSULTATION_CITY_COUNT_FREEZE and re-run with ALLOW_VIRTUAL_CITY_EXPANSION=1.`,
+  );
+  process.exit(1);
 }
-
-const out = final.slice(0, 500);
+const out = final.slice(0, FROZEN_GENERATED_CITY_COUNT);
+if (out.length < FROZEN_GENERATED_CITY_COUNT) {
+  console.warn(
+    `SEO-35: generated ${out.length} cities (below freeze target ${FROZEN_GENERATED_CITY_COUNT}); ` +
+      `not padding with synthetic metros.`,
+  );
+}
 
 // Legacy /global-online/:slug → new slug (old slugs had no country suffix)
 const legacyMap = {

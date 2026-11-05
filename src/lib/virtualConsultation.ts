@@ -7,6 +7,18 @@ export const VIRTUAL_CONSULTATION_HUB_PATH = "/online-consultation" as const;
 
 export type VirtualConsultationCity = (typeof virtualConsultationCities)[number];
 
+/**
+ * SEO-11 — freeze city×service matrix expansion.
+ *
+ * Raising this expands `SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES` (city × every
+ * `SEO_ONLINE_SERVICES` slug) and must not happen silently. Disposition default for
+ * existing long-tail URLs (including GSC-clicked Appendix A rows in
+ * `docs/seo-url-migration.csv`) is **keep/improve** — prefer content quality over
+ * mass-noindex or mass-deletion. To expand: update this baseline after explicit review,
+ * and set `ALLOW_VIRTUAL_CITY_EXPANSION=1` when regenerating the JSON seed.
+ */
+export const VIRTUAL_CONSULTATION_CITY_COUNT_FREEZE = 505;
+
 /** Lowercase slug for URLs (city names, country names, etc.). */
 export function slugifyUrlSegment(raw: string): string {
   return raw
@@ -30,6 +42,14 @@ function mergeVirtualConsultationCities(): readonly VirtualConsultationCity[] {
       countryCode: a.countryCode,
     };
     merged.set(a.slug, row);
+  }
+  if (merged.size > VIRTUAL_CONSULTATION_CITY_COUNT_FREEZE) {
+    throw new Error(
+      `SEO-11: virtual consultation city count ${merged.size} exceeds freeze ` +
+        `${VIRTUAL_CONSULTATION_CITY_COUNT_FREEZE}. Do not expand the city×service matrix ` +
+        `without disposition review (docs/seo-remediation-status.md; protect Appendix A URLs). ` +
+        `After review, raise VIRTUAL_CONSULTATION_CITY_COUNT_FREEZE deliberately.`,
+    );
   }
   return Object.freeze([...merged.values()]) as readonly VirtualConsultationCity[];
 }

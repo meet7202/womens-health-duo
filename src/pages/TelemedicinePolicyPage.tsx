@@ -38,6 +38,7 @@ export function TelemedicinePolicyPage() {
     <PageShell breadcrumbs={crumbs}>
       <SeoHead title={TITLE} metaDescription={DESCRIPTION} path={path} />
       <JsonLdGraph graph={graph} />
+      {/* FAQ JSON-LD only when the same Q&A is visible on-page (SEO-33). */}
       <JsonLdFaq items={TELEMEDICINE_FAQ.slice(0, 8)} pageUrl={pageUrl} />
 
       <article className="max-w-3xl">
@@ -48,6 +49,26 @@ export function TelemedicinePolicyPage() {
         <p className="text-muted-foreground leading-relaxed mb-6">{DESCRIPTION}</p>
 
         <EmergencyDisclaimer className="mb-8" />
+
+        <section className="mb-10" aria-labelledby="telemedicine-faq-heading">
+          <h2
+            id="telemedicine-faq-heading"
+            className="font-heading text-lg font-semibold text-foreground mb-4"
+          >
+            Telemedicine questions
+          </h2>
+          <dl className="space-y-4">
+            {TELEMEDICINE_FAQ.slice(0, 8).map((item) => (
+              <div
+                key={item.question}
+                className="rounded-lg border border-border/40 p-4 bg-muted/20"
+              >
+                <dt className="font-medium text-foreground mb-1">{item.question}</dt>
+                <dd className="text-sm text-muted-foreground leading-relaxed">{item.answer}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
 
         <div className="space-y-8 text-sm text-muted-foreground leading-relaxed">
           <section>

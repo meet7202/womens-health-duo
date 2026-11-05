@@ -1,12 +1,35 @@
 const MAX_HTML_BYTES = 2_097_152;
 
+/**
+ * True when Accept prefers `text/markdown` with q > 0.
+ * `text/markdown;q=0` (or missing type) must not trigger conversion.
+ */
 export function wantsMarkdown(acceptHeader: string | null): boolean {
   if (!acceptHeader) return false;
-  return /\btext\/markdown\b/i.test(acceptHeader);
+
+  for (const part of acceptHeader.split(",")) {
+    const trimmed = part.trim();
+    if (!trimmed) continue;
+    const [mediaRaw, ...params] = trimmed.split(";").map((s) => s.trim());
+    const media = (mediaRaw ?? "").toLowerCase();
+    if (media !== "text/markdown") continue;
+
+    let q = 1;
+    for (const param of params) {
+      const m = param.match(/^q\s*=\s*([0-9.]+)$/i);
+      if (m) {
+        const parsed = Number(m[1]);
+        q = Number.isFinite(parsed) ? parsed : 0;
+      }
+    }
+    return q > 0;
+  }
+  return false;
 }
 
 export function shouldSkipMarkdownPath(pathname: string): boolean {
   if (pathname.startsWith("/assets/")) return true;
+  if (pathname.startsWith("/fonts/")) return true;
   if (pathname.startsWith("/images/")) return true;
   if (pathname.startsWith("/.well-known/")) return true;
   const lower = pathname.toLowerCase();
@@ -67,31 +90,55 @@ function extractJsonLd(html: string): string[] {
     .filter(Boolean);
 }
 
+function formatInlineLinks(html: string): string {
+  const withLinks = html.replace(
+    /<a[^>]+href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi,
+    (_full, href: string, labelHtml: string) => {
+      const label = stripTags(labelHtml) || href;
+      return `[${label}](${href})`;
+    },
+  );
+  return stripTags(withLinks);
+}
+
+/**
+ * Parse the full `#static-seo-shell` main (visible unclipped shell after SEO-10).
+ * Captures H1, paragraphs, and in-shell nav links — not only a 1px clipped stub.
+ */
 function staticShellMarkdown(html: string): string {
   const shell = html.match(/<main id="static-seo-shell"[^>]*>([\s\S]*?)<\/main>/i)?.[1];
   if (!shell) return "";
 
+  const lines: string[] = [];
   const h1 = shell.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i);
-  const paragraphs = [...shell.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/gi)]
-    .map((match) => stripTags(match[1]))
+  if (h1) lines.push(`# ${stripTags(h1[1])}`, "");
+
+  const paragraphs = [...shell.matchAll(/<(?:p|li)[^>]*>([\s\S]*?)<\/(?:p|li)>/gi)]
+    .map((match) => formatInlineLinks(match[1]))
     .filter(Boolean);
 
-  const lines: string[] = [];
-  if (h1) lines.push(`# ${stripTags(h1[1])}`, "");
+  // Prefer unique prose / link lines (nav links often sit inside a <p>).
+  const seen = new Set<string>();
   for (const paragraph of paragraphs) {
+    if (seen.has(paragraph)) continue;
+    seen.add(paragraph);
     lines.push(paragraph, "");
   }
+
   return lines.join("\n").trim();
 }
 
-function noscriptNavLinks(html: string): string {
+function shellOrNoscriptNavLinks(html: string): string {
+  const shell = html.match(/<main id="static-seo-shell"[^>]*>([\s\S]*?)<\/main>/i)?.[1];
   const noscript = html.match(/<noscript>([\s\S]*?)<\/noscript>/i)?.[1];
-  if (!noscript) return "";
+  const source = shell || noscript || "";
+  if (!source) return "";
 
-  const links = [...noscript.matchAll(/<a[^>]+href="([^"]+)"[^>]*>([^<]*)<\/a>/gi)].map(
-    (match) => `[${stripTags(match[2])}](${match[1]})`,
+  const links = [...source.matchAll(/<a[^>]+href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi)].map(
+    (match) => `[${stripTags(match[2]) || match[1]}](${match[1]})`,
   );
-  return links.length ? `**Links:** ${links.join(" · ")}` : "";
+  const unique = [...new Set(links)];
+  return unique.length ? `**Links:** ${unique.join(" · ")}` : "";
 }
 
 export function htmlToMarkdown(html: string): string {
@@ -102,12 +149,17 @@ export function htmlToMarkdown(html: string): string {
   const jsonLd = extractJsonLd(html);
   const frontmatter = pageFrontmatter(html);
   const bodyMd = staticShellMarkdown(html);
-  const nav = noscriptNavLinks(html);
+  const nav = shellOrNoscriptNavLinks(html);
 
   const parts: string[] = [];
   if (frontmatter) parts.push(frontmatter, "");
   if (bodyMd) parts.push(bodyMd);
-  if (nav) parts.push("", nav);
+  // Skip a second link list when the shell body already inlined the same anchors.
+  if (nav) {
+    const linkItems = nav.replace("**Links:** ", "").split(" · ").filter(Boolean);
+    const bodyHasLinks = linkItems.length > 0 && linkItems.every((link) => bodyMd.includes(link));
+    if (!bodyHasLinks) parts.push("", nav);
+  }
 
   if (jsonLd.length) {
     if (parts.length) parts.push("");

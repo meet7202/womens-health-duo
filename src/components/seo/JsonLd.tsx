@@ -74,8 +74,11 @@ export function JsonLd() {
         "@type": "Physician",
         "@id": charmiId,
         name: "Dr. Charmi Shah",
-        medicalSpecialty: ["Obstetrics", "Gynecology", "Infertility", "ReproductiveMedicine"],
+        // Schema.org MedicalSpecialty members only (Obstetric / Gynecologic). IVF & laparoscopy → knowsAbout.
+        medicalSpecialty: ["Obstetric", "Gynecologic"],
         jobTitle: "Obstetrician, Gynecologist (OB-GYN) & IVF Specialist",
+        description:
+          "Obstetrician and gynecologist with fellowship training in laparoscopy and IVF; high-risk pregnancy, fertility pathways, and minimally invasive gynecologic surgery.",
         knowsAbout: [
           "High-risk obstetrics",
           "IVF, IUI, fertility evaluation",
@@ -109,12 +112,17 @@ export function JsonLd() {
         },
       },
       {
-        "@type": "Physician",
+        // Person (not Physician): allied-health physiotherapist — avoid overclaiming MD Physician.
+        // Physiotherapy specialty lives in jobTitle / knowsAbout (medicalSpecialty is not a Person domain).
+        "@type": "Person",
         "@id": zalakId,
         name: "Dr. Zalak Shah",
-        medicalSpecialty: ["Physiotherapy", "PhysicalTherapy"],
         jobTitle: "Women's Health Physiotherapist & STOTT Pilates Instructor (Mat & Reformer)",
+        description:
+          "Women's health physiotherapist (BPT, MPT) and STOTT Pilates Instructor (Mat & Reformer); pelvic floor, prenatal/postnatal rehab, and musculoskeletal physiotherapy for women.",
         knowsAbout: [
+          "Women's health physiotherapy",
+          "Physiotherapy",
           "Pelvic floor rehabilitation",
           "Prenatal and postnatal physiotherapy",
           "Online STOTT Mat Pilates for international patients",
@@ -165,6 +173,14 @@ export function JsonLd() {
         email: CONTACT.email,
         parentOrganization: { "@id": orgId },
         areaServed: { "@type": "City", name: "Ahmedabad", containedInPlace: india },
+        medicalSpecialty: ["Obstetric", "Gynecologic", "Physiotherapy"],
+        description:
+          "In-person OB-GYN, IVF and laparoscopy with Dr. Charmi Shah and women's health physiotherapy / STOTT Pilates with Dr. Zalak Shah in Ahmedabad.",
+        knowsAbout: [
+          "IVF, IUI, and fertility evaluation",
+          "Laparoscopic gynecologic surgery",
+          "Women's health physiotherapy",
+        ],
       },
       {
         "@type": ["MedicalClinic", "LocalBusiness"],
@@ -175,6 +191,14 @@ export function JsonLd() {
         email: CONTACT.email,
         parentOrganization: { "@id": orgId },
         areaServed: { "@type": "City", name: "Mumbai", containedInPlace: india },
+        medicalSpecialty: ["Obstetric", "Gynecologic"],
+        description:
+          "In-person OB-GYN, IVF and laparoscopy with Dr. Charmi Shah in Mumbai; Dr. Zalak Shah's physiotherapy is online worldwide and in person in Bangalore and Ahmedabad.",
+        knowsAbout: [
+          "IVF, IUI, and fertility evaluation",
+          "Laparoscopic gynecologic surgery",
+          "High-risk pregnancy planning",
+        ],
       },
       {
         "@type": ["MedicalClinic", "LocalBusiness"],
@@ -185,6 +209,14 @@ export function JsonLd() {
         email: CONTACT.email,
         parentOrganization: { "@id": orgId },
         areaServed: { "@type": "City", name: "Valsad", containedInPlace: india },
+        medicalSpecialty: ["Obstetric", "Gynecologic"],
+        description:
+          "In-person OB-GYN, IVF and laparoscopy with Dr. Charmi Shah in Valsad; Dr. Zalak Shah's physiotherapy is online worldwide and in person in Bangalore and Ahmedabad.",
+        knowsAbout: [
+          "IVF, IUI, and fertility evaluation",
+          "Laparoscopic gynecologic surgery",
+          "High-risk pregnancy planning",
+        ],
       },
       {
         "@type": ["MedicalClinic", "LocalBusiness"],
@@ -195,6 +227,14 @@ export function JsonLd() {
         email: CONTACT.email,
         parentOrganization: { "@id": orgId },
         areaServed: { "@type": "City", name: "Bengaluru", containedInPlace: india },
+        medicalSpecialty: ["Physiotherapy"],
+        description:
+          "In-person women's health physiotherapy and STOTT Pilates with Dr. Zalak Shah in Bengaluru; Dr. Charmi Shah offers online OB-GYN worldwide and in-person care in Mumbai, Ahmedabad, and Valsad.",
+        knowsAbout: [
+          "Women's health physiotherapy",
+          "Pelvic floor rehabilitation",
+          "STOTT Pilates Mat and Reformer",
+        ],
       },
     ],
   };

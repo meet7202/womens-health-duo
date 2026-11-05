@@ -67,11 +67,20 @@ function isExternalOrSpecialRouterPath(pathname: string): boolean {
   );
 }
 
-/** Normalize React Router `to` values for GitHub Pages directory URLs. */
+/**
+ * Normalize React Router `to` values for GitHub Pages directory URLs.
+ * Parse pathname / search / hash separately so booking query strings stay intact (SEO-07/23).
+ */
 export function appRouterTo(to: To): To {
   if (typeof to === "string") {
     if (isExternalOrSpecialRouterPath(to)) return to;
-    return publicPathname(to);
+    const hashIdx = to.indexOf("#");
+    const withoutHash = hashIdx >= 0 ? to.slice(0, hashIdx) : to;
+    const hash = hashIdx >= 0 ? to.slice(hashIdx) : "";
+    const searchIdx = withoutHash.indexOf("?");
+    const pathname = searchIdx >= 0 ? withoutHash.slice(0, searchIdx) : withoutHash;
+    const search = searchIdx >= 0 ? withoutHash.slice(searchIdx) : "";
+    return `${publicPathname(pathname || "/")}${search}${hash}`;
   }
   if (
     typeof to === "object" &&
