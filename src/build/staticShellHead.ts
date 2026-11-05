@@ -2,8 +2,19 @@
  * Build-time HTML `<head>` values for static SPA shells (`dist/.../index.html`).
  * Must not use `@/` path aliases (imported from `vite.config.ts` in Node).
  */
-import { DEFAULT_DESCRIPTION, DEFAULT_TITLE } from "../config/site.defaults";
+import {
+  DEFAULT_DESCRIPTION,
+  DEFAULT_OG_IMAGE_ALT,
+  DEFAULT_TITLE,
+  OG_IMAGE_PATH,
+} from "../config/site.defaults";
 import { ROUTES } from "../config/routes";
+import {
+  ROBOTS_INDEX_FOLLOW,
+  ROBOTS_NOINDEX_FOLLOW,
+  ROBOTS_NOINDEX_NOFOLLOW,
+  resolveRouteDisposition,
+} from "../config/routeDisposition";
 import { PRACTICE_BOTH_DOCTORS_IN_PERSON } from "../config/practiceLocations";
 import { DOCTOR_BY_SLUG } from "../data/doctorProfiles";
 import { CITY_PAGES } from "../data/cityPages";
@@ -28,6 +39,9 @@ import {
   LEARN_HUB_BASE_PATH,
 } from "../lib/learnHubUrls";
 import { getKnowledgeHubVideoById } from "../data/knowledgeHubVideos";
+import { isIndexableKnowledgeHubWatchPage } from "../lib/knowledgeHubVideoEligibility";
+import { ZALAK_GROUP_CLASS_CONTENT } from "../data/zalakGroupClasses";
+import { formatDocumentTitle } from "../lib/seoTitle";
 import {
   EDITORIAL_DOCUMENT_TITLE,
   EDITORIAL_H1,
@@ -73,10 +87,13 @@ import {
   VIRTUAL_CONSULTATION_HUB_PATH,
   getVirtualConsultationCityBySlug,
   getVirtualConsultationCountryByPathSegment,
+  resolveLegacyGlobalOnlineSlug,
   virtualCityPathSegment,
+  virtualConsultationCityPath,
   virtualServiceCityPath,
 } from "../lib/virtualConsultation";
 import { githubPagesAbsoluteUrl } from "../lib/githubPagesPublicUrl";
+import { knowledgeHubPosterAlt, knowledgeHubVideoThumbnailAbsolute } from "../lib/mediaSeo";
 import { capMetaDescription } from "../lib/seoDescription";
 
 const VIRTUAL_HUB_DESCRIPTION = `Video visits from India with Dr. Charmi Shah (OB-GYN, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapy, Mat Pilates online, STOTT Pilates on Mat and Reformer). We serve families in India and abroad, pick your city below, then choose the type of care. ${PRACTICE_BOTH_DOCTORS_IN_PERSON} See each doctor's profile for hours and how to book.`;
@@ -149,12 +166,94 @@ function escapeTitleText(text: string): string {
   return text.replace(/&/g, "&amp;").replace(/</g, "&lt;");
 }
 
+export type ShellOgType = "website" | "video.other";
+
 export type ShellPageMeta = {
   canonicalHref: string;
   title: string;
   h1: string;
   metaDescription: string;
+  /**
+   * Robots meta content (SEO-02). Defaults to index/follow for known pages;
+   * redirect aliases and unknown routes set noindex explicitly.
+   */
+  robots?: string;
+  /** When set, emit a temporary HTML redirect fallback until an edge 301/308 is live. */
+  redirectToPath?: string;
+  /**
+   * Open Graph type (SEO-03 / SEO-21). Defaults to `website`.
+   * Learn watch pages use `video.other` for Shorts/Reels; Instagram image/carousel posts stay `website`.
+   */
+  ogType?: ShellOgType;
+  /** Absolute OG/Twitter image URL. Defaults to site `OG_IMAGE_PATH`. */
+  ogImage?: string;
+  /** `og:image:alt` / `twitter:image:alt`. Defaults to `DEFAULT_OG_IMAGE_ALT`. */
+  ogImageAlt?: string;
+  /** Extra crawlable body paragraphs under the meta lead (SEO-10). */
+  shellExtraParagraphs?: string[];
+  /** Extra in-shell links (site paths); merged with primary nav (SEO-10). */
+  shellExtraLinks?: { path: string; label: string }[];
 };
+
+function defaultShellOgImage(siteUrl: string): string {
+  return githubPagesAbsoluteUrl(siteUrl, OG_IMAGE_PATH);
+}
+
+function resolveShellOgFields(
+  meta: ShellPageMeta,
+  siteUrl: string,
+): { ogType: ShellOgType; ogImage: string; ogImageAlt: string } {
+  return {
+    ogType: meta.ogType ?? "website",
+    ogImage: meta.ogImage ?? defaultShellOgImage(siteUrl),
+    ogImageAlt: meta.ogImageAlt ?? DEFAULT_OG_IMAGE_ALT,
+  };
+}
+
+function resolvedRobots(meta: ShellPageMeta): string {
+  if (meta.robots) return meta.robots;
+  if (meta.redirectToPath) return ROBOTS_NOINDEX_FOLLOW;
+  return ROBOTS_INDEX_FOLLOW;
+}
+
+/** Distinct not-found shell identity — never reuse homepage title/H1 (SEO-02 / SEO-07). */
+export function notFoundShellMeta(siteUrl: string, pathname: string): ShellPageMeta {
+  return {
+    canonicalHref: canonicalHrefForPath(siteUrl, pathname),
+    title: "Page not found | Women's Health Duo",
+    h1: "Page not found",
+    metaDescription:
+      "This URL is not a published Women's Health Duo page. Return home or book a consult via the practice WhatsApp number.",
+    robots: ROBOTS_NOINDEX_NOFOLLOW,
+  };
+}
+
+const ZALAK_CLASS_BY_PATH = new Map(
+  Object.values(ZALAK_GROUP_CLASS_CONTENT).map((c) => [c.path, c] as const),
+);
+
+const ZALAK_CLASS_NESTED_ALIAS_TO_CANONICAL: Record<string, string> = {
+  [ROUTES.zalakPrenatalClasses]: ROUTES.prenatal,
+  [ROUTES.zalakPostnatalClasses]: ROUTES.postnatal,
+  [ROUTES.zalakPilatesClasses]: ROUTES.pilates,
+};
+
+function zalakClassShellMeta(siteUrl: string, classPath: string): ShellPageMeta | null {
+  const content = ZALAK_CLASS_BY_PATH.get(classPath);
+  if (!content) return null;
+  return {
+    canonicalHref: canonicalHrefForPath(siteUrl, content.path),
+    title: formatDocumentTitle(content.title),
+    h1: content.title,
+    metaDescription: content.metaDescription,
+    shellExtraParagraphs: [content.intro],
+    shellExtraLinks: [
+      { path: ROUTES.bookConsultation, label: "Book a consultation" },
+      { path: ROUTES.drZalak, label: "Dr. Zalak Shah profile" },
+      ...content.relatedLinks.slice(0, 3).map((l) => ({ path: l.path, label: l.label })),
+    ],
+  };
+}
 
 export function resolveShellPageMeta(siteUrl: string, pathname: string): ShellPageMeta {
   const path = normalizePathname(pathname);
@@ -349,11 +448,25 @@ export function resolveShellPageMeta(siteUrl: string, pathname: string): ShellPa
       const video = getKnowledgeHubVideoById(watchId);
       if (video) {
         const watchPath = learnVideoWatchPath(video.id);
+        const isAlias = watchId !== video.id;
+        const indexable = isIndexableKnowledgeHubWatchPage(video);
+        const posterAbs = knowledgeHubVideoThumbnailAbsolute(siteUrl, video);
+        // Parity with LearnWatchPage SeoHead: video.other for Shorts/Reels; website for posts.
+        const ogType: ShellOgType = video.kind === "instagram_post" ? "website" : "video.other";
         return {
           canonicalHref: canonicalHrefForPath(siteUrl, watchPath),
           title: learnWatchDocumentTitle(video),
           h1: learnWatchH1(video),
           metaDescription: learnWatchMetaDescription(video),
+          ogType,
+          ...(posterAbs
+            ? { ogImage: posterAbs, ogImageAlt: knowledgeHubPosterAlt(video) }
+            : { ogImageAlt: knowledgeHubPosterAlt(video) }),
+          ...(isAlias
+            ? { redirectToPath: watchPath, robots: ROBOTS_NOINDEX_FOLLOW }
+            : indexable
+              ? {}
+              : { robots: ROBOTS_NOINDEX_FOLLOW }),
         };
       }
     }
@@ -369,17 +482,9 @@ export function resolveShellPageMeta(siteUrl: string, pathname: string): ShellPa
 
   for (const city of Object.values(CITY_PAGES)) {
     if (city.path === path) {
-      const cityLabel =
-        city.key === "ahmedabad"
-          ? "Ahmedabad"
-          : city.key === "mumbai"
-            ? "Mumbai"
-            : city.key === "valsad"
-              ? "Valsad"
-              : "Bangalore";
       return {
         canonicalHref,
-        title: indiaCityDocumentTitle(cityLabel),
+        title: indiaCityDocumentTitle(city.key),
         h1: city.h1,
         metaDescription: city.metaDescription,
       };
@@ -390,12 +495,45 @@ export function resolveShellPageMeta(siteUrl: string, pathname: string): ShellPa
     if (d.path === path) {
       const specialty =
         d.slug === "charmi" ? "OB-GYN, IVF & laparoscopy" : "Women's health physio & Pilates";
+      const blurb = d.overview[0]?.trim();
       return {
         canonicalHref,
         title: doctorDocumentTitle(d.name, specialty),
         h1: d.name,
         metaDescription: d.metaDescription,
+        ...(blurb ? { shellExtraParagraphs: [blurb] } : {}),
+        shellExtraLinks: [
+          { path: ROUTES.bookConsultation, label: "Book a consultation" },
+          { path: ROUTES.onlineConsultation, label: "Online consultations" },
+        ],
       };
+    }
+  }
+
+  const classMeta = zalakClassShellMeta(siteUrl, path);
+  if (classMeta) return classMeta;
+
+  const aliasDisposition = resolveRouteDisposition(path);
+  if (aliasDisposition.kind === "redirect") {
+    const target = zalakClassShellMeta(siteUrl, aliasDisposition.targetPath);
+    if (target) {
+      return {
+        ...target,
+        redirectToPath: aliasDisposition.targetPath,
+        robots: ROBOTS_NOINDEX_FOLLOW,
+      };
+    }
+  } else {
+    const nestedClassCanonical = ZALAK_CLASS_NESTED_ALIAS_TO_CANONICAL[path];
+    if (nestedClassCanonical) {
+      const target = zalakClassShellMeta(siteUrl, nestedClassCanonical);
+      if (target) {
+        return {
+          ...target,
+          redirectToPath: nestedClassCanonical,
+          robots: ROBOTS_NOINDEX_FOLLOW,
+        };
+      }
     }
   }
 
@@ -403,30 +541,53 @@ export function resolveShellPageMeta(siteUrl: string, pathname: string): ShellPa
     const slug = segs[0]!;
     const guide = getTopicGuide(slug);
     if (guide) {
+      const intro = guide.introParagraph?.trim();
       return {
         canonicalHref: canonicalHrefForPath(siteUrl, guide.path),
         title: topicGuideDocumentTitle(guide.title),
         h1: guide.title,
         metaDescription: guide.metaDescription,
+        ...(intro ? { shellExtraParagraphs: [intro] } : {}),
+        shellExtraLinks: [
+          { path: ROUTES.bookConsultation, label: "Book a consultation" },
+          { path: ROUTES.learn, label: "Learn hub" },
+          { path: ROUTES.learnArticles, label: "Articles and common questions" },
+        ],
       };
     }
   }
 
-  return {
-    canonicalHref,
-    title: DEFAULT_TITLE,
-    h1: HOME_DEFAULT_H1,
-    metaDescription: DEFAULT_DESCRIPTION,
-  };
+  // Legacy `/global-online` → `/online-consultation` (SEO-07); shells stay noindex until edge 301.
+  if (path === ROUTES.globalOnline || path.startsWith(`${ROUTES.globalOnline}/`)) {
+    let target: string = VIRTUAL_CONSULTATION_HUB_PATH;
+    if (segs.length === 2) {
+      const mapped = resolveLegacyGlobalOnlineSlug(segs[1]);
+      const city = mapped ? getVirtualConsultationCityBySlug(mapped) : undefined;
+      if (city) target = virtualConsultationCityPath(city);
+    }
+    const targetMeta = resolveShellPageMeta(siteUrl, target);
+    return {
+      ...targetMeta,
+      redirectToPath: target,
+      robots: ROBOTS_NOINDEX_FOLLOW,
+    };
+  }
+
+  // Unknown path: do not inherit homepage identity (SEO-02).
+  return notFoundShellMeta(siteUrl, path);
 }
 
 const PAGE_PLACEHOLDER_KEYS = [
   "@@PAGE_CANONICAL@@",
   "@@PAGE_TITLE@@",
   "@@PAGE_META_DESCRIPTION@@",
+  "@@PAGE_ROBOTS@@",
   "@@PAGE_OG_URL@@",
+  "@@PAGE_OG_TYPE@@",
   "@@PAGE_OG_TITLE@@",
   "@@PAGE_OG_DESCRIPTION@@",
+  "@@PAGE_OG_IMAGE@@",
+  "@@PAGE_OG_IMAGE_ALT@@",
   "@@PAGE_TW_TITLE@@",
   "@@PAGE_TW_DESCRIPTION@@",
   "@@PAGE_STATIC_FALLBACK@@",
@@ -445,45 +606,57 @@ function shellAbsoluteHref(siteUrl: string, path: string): string {
   return githubPagesAbsoluteUrl(siteUrl, p);
 }
 
+/** Visible crawlable shell (SEO-10) — not clipped; removed after React mounts a live H1. */
 const STATIC_SEO_SHELL_STYLES =
-  "position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0";
+  "max-width:42rem;margin:1.5rem auto;padding:0 1rem 1.25rem;font-family:system-ui,sans-serif;line-height:1.55;color:#111";
 
 /**
- * Crawlable HTML for this route: one visible H1 in `#static-seo-shell` (removed when React mounts)
- * plus a `<noscript>` fallback without duplicate heading tags.
+ * Crawlable HTML for this route: one visible H1 in `#static-seo-shell` (removed when React mounts).
+ * Enriched with route-specific paragraphs/links when available. Readable without JavaScript.
  */
 export function buildStaticShellBodyFallback(meta: ShellPageMeta, siteUrl: string): string {
   const h1 = escapeHtmlPcdata(meta.h1);
   const lead = escapeHtmlPcdata(meta.metaDescription);
-  const nav: [string, string][] = [
-    ["/", "Home"],
-    [ROUTES.learn, "Learn"],
-    [ROUTES.faq, "FAQ"],
-    [ROUTES.onlineConsultation, "Online consultations"],
-    ["/llms.txt", "Assistant overview (llms.txt)"],
-  ];
-  const links = nav
+  const extras = (meta.shellExtraParagraphs ?? [])
+    .map((p) => p.trim())
+    .filter(Boolean)
+    .map((p) => `<p>${escapeHtmlPcdata(p)}</p>`)
+    .join("\n    ");
+
+  const seenPaths = new Set<string>();
+  const navEntries: { path: string; label: string }[] = [];
+  const pushNav = (path: string, label: string) => {
+    const key = path.replace(/\/+$/, "") || "/";
+    if (seenPaths.has(key)) return;
+    seenPaths.add(key);
+    navEntries.push({ path, label });
+  };
+  pushNav("/", "Home");
+  pushNav(ROUTES.learn, "Learn");
+  pushNav(ROUTES.faq, "FAQ");
+  pushNav(ROUTES.onlineConsultation, "Online consultations");
+  pushNav(ROUTES.bookConsultation, "Book consultation");
+  for (const link of meta.shellExtraLinks ?? []) {
+    pushNav(link.path, link.label);
+  }
+  pushNav("/llms.txt", "Assistant overview (llms.txt)");
+
+  const links = navEntries
     .map(
-      ([path, label]) =>
+      ({ path, label }) =>
         `<a href="${escapeAttr(shellAbsoluteHref(siteUrl, path))}">${escapeHtmlPcdata(label)}</a>`,
     )
     .join(" · ");
 
-  const crawlableMain = `<main id="static-seo-shell" style="${STATIC_SEO_SHELL_STYLES}">
+  return `<main id="static-seo-shell" style="${STATIC_SEO_SHELL_STYLES}">
     <h1>${h1}</h1>
     <p>${lead}</p>
+    ${extras}
+    <nav aria-label="Site links">
+      <p>${links}</p>
+    </nav>
+    <p style="font-size:0.9rem;color:#444">This summary is available without JavaScript. The full interactive page loads in the browser.</p>
   </main>`;
-
-  const noscriptMain = `<noscript>
-  <main style="max-width:40rem;margin:1.5rem auto;padding:0 1rem;font-family:system-ui,sans-serif;line-height:1.5;color:#111">
-    <p style="font-size:1.35rem;font-weight:600;margin:0 0 0.75rem">${h1}</p>
-    <p>${lead}</p>
-    <p>${links}</p>
-    <p style="font-size:0.9rem;color:#444">Additional pages load in the browser when JavaScript is enabled.</p>
-  </main>
-</noscript>`;
-
-  return crawlableMain + noscriptMain;
 }
 
 export function assertShellPagePlaceholdersPresent(html: string) {
@@ -502,18 +675,28 @@ export function applyShellPageMetaToHtml(
   const cappedMeta: ShellPageMeta = {
     ...meta,
     metaDescription: capMetaDescription(meta.metaDescription),
+    robots: resolvedRobots(meta),
   };
   const titleEsc = escapeTitleText(cappedMeta.title);
   const titleAttrEsc = escapeAttr(cappedMeta.title);
   const descEsc = escapeAttr(cappedMeta.metaDescription);
+  const robotsEsc = escapeAttr(resolvedRobots(cappedMeta));
   const canonEsc = escapeAttr(meta.canonicalHref);
+  const og = resolveShellOgFields(cappedMeta, siteUrl);
+  const ogTypeEsc = escapeAttr(og.ogType);
+  const ogImageEsc = escapeAttr(og.ogImage);
+  const ogImageAltEsc = escapeAttr(og.ogImageAlt);
   const pairs: [string, string][] = [
     ["@@PAGE_CANONICAL@@", canonEsc],
     ["@@PAGE_TITLE@@", titleEsc],
     ["@@PAGE_META_DESCRIPTION@@", descEsc],
+    ["@@PAGE_ROBOTS@@", robotsEsc],
     ["@@PAGE_OG_URL@@", canonEsc],
+    ["@@PAGE_OG_TYPE@@", ogTypeEsc],
     ["@@PAGE_OG_TITLE@@", titleAttrEsc],
     ["@@PAGE_OG_DESCRIPTION@@", descEsc],
+    ["@@PAGE_OG_IMAGE@@", ogImageEsc],
+    ["@@PAGE_OG_IMAGE_ALT@@", ogImageAltEsc],
     ["@@PAGE_TW_TITLE@@", titleAttrEsc],
     ["@@PAGE_TW_DESCRIPTION@@", descEsc],
     ["@@PAGE_STATIC_FALLBACK@@", buildStaticShellBodyFallback(cappedMeta, siteUrl)],
@@ -521,6 +704,20 @@ export function applyShellPageMetaToHtml(
   let out = html;
   for (const [needle, val] of pairs) {
     out = out.split(needle).join(val);
+  }
+  if (meta.redirectToPath) {
+    const targetAbs = escapeAttr(shellAbsoluteHref(siteUrl, meta.redirectToPath));
+    const targetPathEsc = escapeHtmlPcdata(
+      meta.redirectToPath.endsWith("/") ? meta.redirectToPath : `${meta.redirectToPath}/`,
+    );
+    const refresh = `<meta http-equiv="refresh" content="0;url=${targetAbs}">`;
+    const linkNotice = `<p data-seo-alias-redirect="1"><a href="${targetAbs}">Continue to ${targetPathEsc}</a></p>`;
+    if (out.includes("</head>")) {
+      out = out.replace("</head>", `${refresh}\n</head>`);
+    }
+    if (out.includes("</body>")) {
+      out = out.replace("</body>", `${linkNotice}\n</body>`);
+    }
   }
   return out;
 }

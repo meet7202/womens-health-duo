@@ -6,16 +6,35 @@ import {
   knowledgeHubVideoDisplayTitle,
   type KnowledgeHubVideo,
 } from "@/data/knowledgeHubVideos";
+import { isEligibleKnowledgeHubVideoObject } from "@/lib/knowledgeHubVideoEligibility";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { knowledgeHubVideoThumbnailAbsolute, youtubeThumbnailUrl } from "@/lib/mediaSeo";
 
-/** `VideoObject` for a single Learn watch page (Google video indexing). */
-export function knowledgeHubWatchPageVideoSchema(video: KnowledgeHubVideo, watchPagePath: string) {
+/**
+ * Schema for a single Learn watch page.
+ * Returns VideoObject only when eligible (date + thumbnail + real player).
+ * Instagram image/carousel posts intentionally omit SocialMediaPosting — Google’s
+ * Discussion Forum rich result requires `author` and is meant for UGC forums, not
+ * publisher clips (poster `ImageObject` on the watch page covers image SEO).
+ * Never sets `contentUrl` to an HTML watch page (Google requires video bytes for contentUrl).
+ */
+export function knowledgeHubWatchPageVideoSchema(
+  video: KnowledgeHubVideo,
+  watchPagePath: string,
+): Record<string, unknown> | null {
   const pageUrl = githubPagesAbsoluteUrl(SITE_URL, watchPagePath);
   const pageWebPageId = `${pageUrl}#webpage`;
   const orgFragment = `${githubPagesAbsoluteUrl(SITE_URL, "/")}#organization`;
   const name = knowledgeHubVideoDisplayTitle(video);
   const description = knowledgeHubVideoCaptionForSeo(video);
+
+  if (video.kind === "instagram_post") {
+    return null;
+  }
+
+  if (!isEligibleKnowledgeHubVideoObject(video)) {
+    return null;
+  }
 
   if (video.kind === "youtube_short") {
     const embedUrl = `https://www.youtube.com/embed/${video.youtubeVideoId}`;
@@ -31,23 +50,8 @@ export function knowledgeHubWatchPageVideoSchema(video: KnowledgeHubVideo, watch
       thumbnailUrl: youtubeThumbnailUrl(video.youtubeVideoId),
       embedUrl,
       url: watchUrl,
-      contentUrl: pageUrl,
       caption: description.slice(0, 500),
-      ...(video.postedAt ? { uploadDate: video.postedAt } : {}),
-      mainEntityOfPage: { "@type": "WebPage", "@id": pageWebPageId },
-      publisher: { "@id": orgFragment },
-    };
-  }
-
-  if (video.kind === "instagram_post") {
-    const permalink = knowledgeHubInstagramPermalink(video);
-    return {
-      "@type": "SocialMediaPosting",
-      "@id": `${pageUrl}#post`,
-      headline: name,
-      articleBody: description,
-      url: permalink,
-      datePublished: video.postedAt,
+      uploadDate: video.postedAt,
       mainEntityOfPage: { "@type": "WebPage", "@id": pageWebPageId },
       publisher: { "@id": orgFragment },
     };
@@ -56,6 +60,8 @@ export function knowledgeHubWatchPageVideoSchema(video: KnowledgeHubVideo, watch
   const permalink = knowledgeHubInstagramPermalink(video);
   const embedUrl = knowledgeHubInstagramEmbedUrl(video);
   const thumbnailUrl = knowledgeHubVideoThumbnailAbsolute(SITE_URL, video);
+  if (!thumbnailUrl) return null;
+
   return {
     "@type": "VideoObject",
     "@id": `${pageUrl}#video`,
@@ -64,10 +70,8 @@ export function knowledgeHubWatchPageVideoSchema(video: KnowledgeHubVideo, watch
     thumbnailUrl,
     embedUrl,
     url: permalink,
-    // Stable WHD watch page — never expiring Instagram CDN MP4 URLs (playback-only in JSON).
-    contentUrl: pageUrl,
     caption: description.slice(0, 500),
-    ...(video.postedAt ? { uploadDate: video.postedAt } : {}),
+    uploadDate: video.postedAt,
     mainEntityOfPage: { "@type": "WebPage", "@id": pageWebPageId },
     publisher: { "@id": orgFragment },
   };

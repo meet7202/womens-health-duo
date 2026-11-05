@@ -119,14 +119,16 @@ export function doctorFromInstagramRow(post) {
     caption.includes("charmishah") ||
     caption.includes("dr. charmi") ||
     caption.includes("dr charmi") ||
-    /\b(obgyn|ob-gyn|gynecolog|gynaecolog|obstetric|ivf|laparoscop)\b/.test(caption);
+    /\b(obgyn|ob-gyn|gynecolog\w*|gynaecolog\w*|obstetric\w*|ivf|laparoscop\w*|gynecologist|gynaecologist)\b/.test(
+      caption,
+    );
 
   const hasZalak =
     caption.includes("@_zalakshah_") ||
     caption.includes("@zalakshah") ||
     caption.includes("dr. zalak") ||
     caption.includes("dr zalak") ||
-    /\b(physiother|pilates|pelvic floor|stott|reformer|contrology)\b/.test(caption);
+    /\b(physiotherap\w*|physio|pilates|pelvic floor|stott|reformer|contrology)\b/.test(caption);
 
   if (hasCharmi && hasZalak) return "both";
   if (hasZalak) return "zalak";
@@ -143,14 +145,18 @@ const TOPIC_RULES = [
   { topic: "Fertility", re: /\b(fertility|ivf|iui|trying to conceive|ttc|ovulation)\b/i },
   {
     topic: "Pregnancy",
-    re: /\b(pregnan|prenatal|postpartum|trimester|gestational|c-section|c section)\b/i,
+    // Prefix stems without trailing \b so "pregnancy" / "pregnant" match (SEO-34).
+    re: /\b(pregnan\w*|prenatal|postpartum|trimester|gestational|c-section|c section)\b/i,
   },
   { topic: "Exercise", re: /\b(exercise|workout|training|hiit|yoga|menstrual cycle)\b/i },
   {
     topic: "Menstrual health",
-    re: /\b(period|menstrual|menopause|pcos|endometri|dysmenorrhea)\b/i,
+    re: /\b(period|menstrual|menopause|pcos|endometri\w*|dysmenorrhea)\b/i,
   },
-  { topic: "Patient education", re: /\b(awareness|did you know|myth|tips|education)\b/i },
+  {
+    topic: "Patient education",
+    re: /\b(awareness|did you know|myth|tips|education|physiotherap\w*|gynecolog\w*|gynaecolog\w*|gynecologist|gynaecologist)\b/i,
+  },
 ];
 
 /**
@@ -181,7 +187,8 @@ export function topicsFromInstagramRow(post, mediaKind) {
     topics.add("Women's health");
   }
 
-  return [...topics].slice(0, 5);
+  // SEO-34: do not drop clinical topics via .slice(0, 5).
+  return [...topics];
 }
 
 /** @param {string} caption */

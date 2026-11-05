@@ -62,10 +62,16 @@ export function InternationalDoctorHubPage() {
 
         <InternationalCtaBlock
           whatsappMessage={whatsappMessageInternationalDoctorHub(doctor.name, path)}
+          doctor={doctor.name}
+          service="international_consultation"
           className="mb-10"
         />
 
-        <ServiceCardList services={services} heading={`${doctor.name} — international services`} />
+        <ServiceCardList
+          services={services}
+          heading={`${doctor.name} — international services`}
+          headingId={`intl-services-${hub.pathSegment}`}
+        />
 
         <HowItWorksSection />
 

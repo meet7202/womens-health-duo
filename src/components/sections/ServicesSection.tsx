@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useMemo } from "react";
 import { useLocation } from "react-router-dom";
@@ -125,8 +125,8 @@ export const ServicesSection = () => {
       <div className="bg-secondary/30 py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <m.div
+            initial={false}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto mb-16"
@@ -142,14 +142,14 @@ export const ServicesSection = () => {
               gynecology, IVF, laparoscopy, pelvic and postpartum physio, and STOTT Pilates, by
               video from anywhere. {PRACTICE_BOTH_DOCTORS_IN_PERSON}
             </p>
-          </motion.div>
+          </m.div>
 
           {/* Services Grid */}
           <div className="space-y-16">
             {services.map((serviceGroup, groupIndex) => (
-              <motion.div
+              <m.div
                 key={serviceGroup.category}
-                initial={{ opacity: 0, y: 30 }}
+                initial={false}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: groupIndex * 0.2 }}
               >
@@ -169,9 +169,9 @@ export const ServicesSection = () => {
                 {/* Service Cards */}
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {serviceGroup.items.map((service, index) => (
-                    <motion.div
+                    <m.div
                       key={service.title}
-                      initial={{ opacity: 0, y: 20 }}
+                      initial={false}
                       animate={isInView ? { opacity: 1, y: 0 } : {}}
                       transition={{ duration: 0.5, delay: 0.1 * index + groupIndex * 0.3 }}
                       className="group bg-background rounded-2xl p-6 shadow-soft border border-border/30 hover:shadow-card hover:border-primary/20 transition-all duration-300"
@@ -185,16 +185,16 @@ export const ServicesSection = () => {
                       <p className="text-muted-foreground text-sm leading-relaxed">
                         {service.description}
                       </p>
-                    </motion.div>
+                    </m.div>
                   ))}
                 </div>
-              </motion.div>
+              </m.div>
             ))}
           </div>
 
           {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <m.div
+            initial={false}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.8 }}
             className="mt-16 text-center"
@@ -211,7 +211,7 @@ export const ServicesSection = () => {
               Book on WhatsApp to discuss your needs
               <span aria-hidden>→</span>
             </button>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

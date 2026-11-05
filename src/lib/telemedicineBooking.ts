@@ -1,5 +1,6 @@
 import { DOCTOR_BY_SLUG, type DoctorSlug } from "@/data/doctorProfiles";
 import { trackWhatsAppClick } from "@/lib/analytics";
+import { bookingIntentServiceLabel } from "@/lib/bookingIntent";
 import { whatsappUrlWithMessage } from "@/lib/whatsappCta";
 
 export type ConsultationMode = "video" | "audio" | "chat";
@@ -7,6 +8,8 @@ export type ConsultationVisitType = "first" | "follow-up";
 
 export type BookingFormData = {
   doctor: DoctorSlug | "";
+  /** Allowlisted SEO service slug from booking intent (not free-text patient data). */
+  serviceInterest: string;
   consultationMode: ConsultationMode;
   visitType: ConsultationVisitType;
   fullName: string;
@@ -44,9 +47,12 @@ export const BOOKING_STEPS = [
   "Review & book",
 ] as const;
 
-export function defaultBookingFormData(): BookingFormData {
+export function defaultBookingFormData(
+  intent?: Partial<Pick<BookingFormData, "doctor" | "serviceInterest">>,
+): BookingFormData {
   return {
-    doctor: "",
+    doctor: intent?.doctor ?? "",
+    serviceInterest: intent?.serviceInterest ?? "",
     consultationMode: "video",
     visitType: "first",
     fullName: "",
@@ -97,10 +103,15 @@ export function buildBookingWhatsAppMessage(data: BookingFormData): string {
       ? "First consultation (new patient / new condition / >6 months)"
       : "Follow-up (same doctor, same condition, within 6 months)";
 
+  const serviceLabel =
+    bookingIntentServiceLabel(data.serviceInterest.trim()) ?? data.serviceInterest.trim();
+  const serviceLine = serviceLabel ? `*Service interest:* ${serviceLabel}` : null;
+
   const sections = [
     "*Teleconsultation booking request — Women's Health Duo*",
     "",
     "*Doctor:* " + doctorLabel,
+    ...(serviceLine ? [serviceLine] : []),
     "*Consultation mode:* " + modeLabel,
     "*Visit type:* " + visitLabel,
     "",
@@ -155,7 +166,7 @@ export function openBookingWhatsApp(data: BookingFormData): void {
     ctaPlacement: "book_consultation_form",
     pagePath: window.location.pathname,
     doctor: doctorName,
-    service: "book_consultation",
+    service: data.serviceInterest.trim() || "book_consultation",
   });
   window.open(
     whatsappUrlWithMessage(buildBookingWhatsAppMessage(data)),

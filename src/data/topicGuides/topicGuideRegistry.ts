@@ -1,14 +1,16 @@
 import { learnHubTopicLabels, learnHubFilteredPath } from "../../lib/learnHubUrls";
 import { publicPathname } from "../../lib/githubPagesPublicUrl";
-import {
-  virtualServiceCityPath,
-  getVirtualConsultationCityBySlug,
-} from "../../lib/virtualConsultation";
+import { bookConsultationPath } from "../../lib/bookingIntent";
 import { SEO_ONLINE_SERVICES } from "../seoOnlineServices";
 import { buildTopicGuideFaqs, clusterConfig } from "./clusterContent";
+import { guideUniquenessOverrideForSlug } from "./guideUniquenessOverrides";
 import { TOPIC_GUIDE_ROWS } from "./topicGuideRows";
-import type { TopicGuideClusterId, TopicGuidePageModel, TopicGuideRow } from "./types";
-const MUMBAI_SLUG = "mumbai";
+import type {
+  TopicGuideClusterId,
+  TopicGuidePageModel,
+  TopicGuideRow,
+  TopicGuideSection,
+} from "./types";
 const QUESTION_FIRST = new Set([
   "what",
   "why",
@@ -158,8 +160,16 @@ function buildTopicGuideIntroParagraph(title: string, blurb: string): string {
   return `${trimmedCore} ${INTRO_CODA}`;
 }
 
+/**
+ * Concise page-specific meta before length capping (SEO-05).
+ * Do not append the long intro coda here — capping was leaving orphaned “Read.” fragments.
+ */
 function buildMetaDescription(title: string, blurb: string): string {
-  return truncateMetaToCompleteSentences(buildTopicGuideIntroParagraph(title, blurb), 300);
+  const t = title.trim();
+  const b = blurb.trim();
+  const head = /[?!.]$/u.test(t) ? `${t} ${b}` : `${t}. ${b}`;
+  const core = /[.!?]"?$/u.test(head.trim()) ? head.trim() : `${head.trim()}.`;
+  return truncateMetaToCompleteSentences(core, 155);
 }
 function filterLearnTopics(labels: string[]): string[] {
   const allowed = new Set(learnHubTopicLabels());
@@ -222,6 +232,42 @@ function byClusterMap(): Map<TopicGuideClusterId, string[]> {
   return m;
 }
 const BY_CLUSTER = byClusterMap();
+function sectionsWithUniquenessScaffold(
+  title: string,
+  clusterSections: TopicGuideSection[],
+  row: TopicGuideRow,
+): {
+  sections: TopicGuideSection[];
+  primaryQuestion?: string;
+  directAnswer?: string;
+} {
+  const override = guideUniquenessOverrideForSlug(row.slug);
+  const primaryQuestion = row.primaryQuestion ?? override?.primaryQuestion;
+  const directAnswer = row.directAnswer ?? override?.directAnswer;
+  if (!primaryQuestion?.trim() || !directAnswer?.trim()) {
+    return { sections: clusterSections };
+  }
+  const paragraphs = [directAnswer.trim()];
+  if (override?.followOn?.trim()) paragraphs.push(override.followOn.trim());
+  const first: TopicGuideSection = {
+    heading: override?.firstSectionHeading?.trim() || primaryQuestion.trim(),
+    paragraphs,
+  };
+  // Drop a cluster first section that only restates the same title heading.
+  const rest = clusterSections.filter((sec, idx) => {
+    if (idx !== 0) return true;
+    const h = sec.heading.trim().toLowerCase();
+    const q = primaryQuestion.trim().toLowerCase().replace(/\?+$/, "");
+    const titleLow = title.trim().toLowerCase().replace(/\?+$/, "");
+    return h !== q && h !== titleLow && !h.startsWith(`${titleLow}:`);
+  });
+  return {
+    sections: [first, ...rest],
+    primaryQuestion: primaryQuestion.trim(),
+    directAnswer: directAnswer.trim(),
+  };
+}
+
 const GUIDE_BY_SLUG: ReadonlyMap<string, TopicGuidePageModel> = new Map(
   TOPIC_GUIDE_ROWS.map((row) => {
     const cc = clusterConfig(row.cluster);
@@ -229,8 +275,8 @@ const GUIDE_BY_SLUG: ReadonlyMap<string, TopicGuidePageModel> = new Map(
     const consult = row.primaryConsult ?? cc.defaultConsult;
     const services = row.serviceSlugs ?? cc.defaultServiceSlugs;
     const learnTopicLabels = filterLearnTopics(row.learnTopics ?? cc.defaultLearnTopics);
-    const sections = cc.buildSections(title);
-    const faqs = buildTopicGuideFaqs(row.slug, title, consult, cc.faqPool);
+    const uniqueness = sectionsWithUniquenessScaffold(title, cc.buildSections(title), row);
+    const faqs = buildTopicGuideFaqs(row.slug, title, consult, cc.faqPool, row.faqIds);
     const path = publicPathname(`/${row.slug}`);
     const relatedSlugs = computeRelated(row, BY_CLUSTER);
     const model: TopicGuidePageModel = {
@@ -241,12 +287,22 @@ const GUIDE_BY_SLUG: ReadonlyMap<string, TopicGuidePageModel> = new Map(
       title,
       introParagraph: buildTopicGuideIntroParagraph(title, cc.metaBlurb),
       metaDescription: buildMetaDescription(title, cc.metaBlurb),
-      sections,
+      sections: uniqueness.sections,
       faqs,
       learnTopicLabels,
       primaryConsult: consult,
       serviceSlugs: services,
       relatedSlugs,
+      authorId: row.authorId,
+      reviewerId: row.reviewerId,
+      publishedAt: row.publishedAt,
+      updatedAt: row.updatedAt,
+      reviewedAt: row.reviewedAt,
+      /** Existing guides default to pending — never invent reviewed/approved status. */
+      reviewStatus: row.reviewStatus ?? "pending",
+      references: row.references ?? [],
+      primaryQuestion: uniqueness.primaryQuestion,
+      directAnswer: uniqueness.directAnswer,
     };
     return [row.slug, model] as const;
   }),
@@ -320,19 +376,29 @@ export function topicGuidesGroupedForIndex(): TopicGuideIndexGroup[] {
   });
 }
 
-/** Mumbai service pages: example deep links for booking CTAs (same pattern as learn pillars). */
+/**
+ * Booking CTAs for guides: doctor + allowlisted service intent → /book-consultation/ (SEO-23).
+ * Do not deep-link arbitrary city×service matrix pages as “sample booking”.
+ */
 export function topicGuideExampleConsultPaths(
   serviceSlugs: string[],
+  primaryConsult: "charmi" | "zalak" | "both" = "both",
 ): { label: string; path: string }[] {
-  const city = getVirtualConsultationCityBySlug(MUMBAI_SLUG);
-  if (!city) return [];
+  const fallbackDoctor: "charmi" | "zalak" = primaryConsult === "zalak" ? "zalak" : "charmi";
   const out: { label: string; path: string }[] = [];
   for (const slug of serviceSlugs) {
     const svc = SEO_ONLINE_SERVICES.find((s) => s.slug === slug);
     if (!svc) continue;
+    const doc = svc.doctor === "zalak" || svc.doctor === "charmi" ? svc.doctor : fallbackDoctor;
     out.push({
-      label: `${svc.shortTitle} in Mumbai (sample booking link)`,
-      path: virtualServiceCityPath(city, svc.slug),
+      label: `Book: ${svc.shortTitle}`,
+      path: bookConsultationPath({ doctor: doc, service: svc.slug }),
+    });
+  }
+  if (out.length === 0) {
+    out.push({
+      label: "Book a teleconsultation",
+      path: bookConsultationPath({ doctor: fallbackDoctor }),
     });
   }
   return out.slice(0, 3);

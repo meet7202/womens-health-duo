@@ -123,3 +123,7 @@ export const KEYWORDS = [
 ].join(", ");
 
 export const OG_IMAGE_PATH = "/favicon.svg";
+
+/** Default `og:image:alt` / `twitter:image:alt` when a page does not supply a specific poster. */
+export const DEFAULT_OG_IMAGE_ALT =
+  "Women's Health Duo — OB-GYN and women's health physiotherapy in India and online";

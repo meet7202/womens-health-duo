@@ -3,11 +3,8 @@
  * No `@/` imports — safe from Node build scripts.
  */
 import type { DoctorSlug } from "../data/doctorProfiles";
-import {
-  knowledgeHubInstagramPoster,
-  knowledgeHubVideoDisplayTitle,
-  type KnowledgeHubVideo,
-} from "../data/knowledgeHubVideos";
+import { knowledgeHubVideoDisplayTitle, type KnowledgeHubVideo } from "../data/knowledgeHubVideos";
+import { knowledgeHubStableLocalPosterPath } from "./knowledgeHubVideoEligibility";
 import { githubPagesAbsoluteUrl } from "./githubPagesPublicUrl";
 
 export function doctorPhotoAlt(slug: DoctorSlug): string {
@@ -34,7 +31,10 @@ function hubDoctorLabel(video: KnowledgeHubVideo): string {
 }
 
 function hubMediaKindLabel(video: KnowledgeHubVideo): string {
-  if (video.kind === "youtube_short") return "YouTube Short";
+  if (video.kind === "youtube_short") {
+    // SEO-34: match youtubeOpenAs — long-form uploads are not always Shorts.
+    return video.youtubeOpenAs === "watch" ? "YouTube video" : "YouTube Short";
+  }
   if (video.kind === "instagram_reel") return "Instagram Reel";
   return video.instagramPostType === "carousel" ? "Instagram carousel" : "Instagram post";
 }
@@ -49,18 +49,20 @@ export function youtubeThumbnailUrl(youtubeVideoId: string): string {
   return `https://i.ytimg.com/vi/${youtubeVideoId}/hqdefault.jpg`;
 }
 
-/** Absolute HTTPS thumbnail for schema, OG, and video sitemap. */
+/**
+ * Absolute HTTPS thumbnail for schema, OG, and video sitemap.
+ * Returns `null` when no trustworthy video-specific poster exists (never invent favicon thumbnails).
+ */
 export function knowledgeHubVideoThumbnailAbsolute(
   siteUrl: string,
   video: KnowledgeHubVideo,
-): string {
+): string | null {
   if (video.kind === "youtube_short") {
     return youtubeThumbnailUrl(video.youtubeVideoId);
   }
-  const poster = knowledgeHubInstagramPoster(video);
-  if (poster?.startsWith("/")) {
+  const poster = knowledgeHubStableLocalPosterPath(video);
+  if (poster) {
     return githubPagesAbsoluteUrl(siteUrl, poster);
   }
-  // Prefer stable on-site thumbnails; avoid expiring Instagram CDN poster URLs in schema/sitemap.
-  return githubPagesAbsoluteUrl(siteUrl, "/favicon.svg");
+  return null;
 }

@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Heart, ArrowDown, MessageCircle } from "lucide-react";
 import { useMemo } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -12,14 +11,21 @@ import { trackWhatsAppClick } from "@/lib/analytics";
 import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 import { cn } from "@/lib/utils";
 import heroImage640 from "@/assets/hero-doctors-640w.jpg";
+import heroImage800 from "@/assets/hero-doctors-800w.jpg";
 import heroImage960 from "@/assets/hero-doctors-960w.jpg";
 import heroImage1280 from "@/assets/hero-doctors-1280w.jpg";
 import heroImage1536 from "@/assets/hero-doctors-1536w.jpg";
 import heroImage640Webp from "@/assets/hero-doctors-640w.webp";
+import heroImage800Webp from "@/assets/hero-doctors-800w.webp";
 import heroImage960Webp from "@/assets/hero-doctors-960w.webp";
 import heroImage1280Webp from "@/assets/hero-doctors-1280w.webp";
 import heroImage1536Webp from "@/assets/hero-doctors-1536w.webp";
 import { HERO_IMAGE_ALT, HERO_IMAGE_TITLE } from "@/lib/mediaSeo";
+
+/** Shared with Index preload so LCP discovery matches the responsive `<picture>`. */
+export const HERO_IMAGE_SIZES = "(min-width: 768px) min(45vw, 560px), min(100vw, 448px)";
+export const HERO_WEBP_SRCSET = `${heroImage640Webp} 640w, ${heroImage800Webp} 800w, ${heroImage960Webp} 960w, ${heroImage1280Webp} 1280w, ${heroImage1536Webp} 1536w`;
+export const HERO_JPEG_SRCSET = `${heroImage640} 640w, ${heroImage800} 800w, ${heroImage960} 960w, ${heroImage1280} 1280w, ${heroImage1536} 1536w`;
 
 const heroH1VisualClass =
   "font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight mb-5 text-[hsl(20_28%_11%)] [text-shadow:0_1px_0_hsl(30_40%_99%),0_0_24px_hsl(30_40%_98%_/_0.9)] text-balance";
@@ -30,27 +36,14 @@ type HeroDoctorCardProps = {
   title: string;
   subtitle: string;
   className?: string;
-  initialX?: number;
-  delay?: number;
 };
 
-function HeroDoctorCard({
-  title,
-  subtitle,
-  className,
-  initialX = 0,
-  delay = 0.8,
-}: HeroDoctorCardProps) {
+function HeroDoctorCard({ title, subtitle, className }: HeroDoctorCardProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, x: initialX }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ delay, duration: 0.5 }}
-      className={cn(heroDoctorCardClass, className)}
-    >
+    <div className={cn(heroDoctorCardClass, className)}>
       <p className="font-heading text-lg font-semibold text-foreground">{title}</p>
       <p className="text-sm text-muted-foreground">{subtitle}</p>
-    </motion.div>
+    </div>
   );
 }
 
@@ -91,23 +84,14 @@ export const HeroSection = () => {
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
         <div className="grid gap-10 md:grid-cols-2 md:gap-12 lg:gap-16 items-center">
           {/* Copy ,  second on mobile so the photo is above the fold */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="order-2 text-center md:order-1 md:text-left"
-          >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="inline-flex items-center gap-2 border border-primary/25 bg-primary/15 px-4 py-2 rounded-full mb-6 shadow-sm"
-            >
+          {/* Primary copy stays visible on first paint (SEO-28) — no opacity-0 entrance. */}
+          <div className="order-2 text-center md:order-1 md:text-left">
+            <div className="inline-flex items-center gap-2 border border-primary/25 bg-primary/15 px-4 py-2 rounded-full mb-6 shadow-sm">
               <Heart className="w-4 h-4 text-terracotta" aria-hidden />
               <span className="text-sm font-semibold text-terracotta">
                 OB-GYN · IVF · Women&apos;s Health Physio · Pilates
               </span>
-            </motion.div>
+            </div>
 
             <h1 className={heroH1VisualClass}>{HOME_DEFAULT_H1}</h1>
             <p className="font-heading text-xl sm:text-2xl lg:text-3xl font-bold leading-snug mb-5 text-[hsl(20_22%_18%)] text-balance">
@@ -127,7 +111,7 @@ export const HeroSection = () => {
               <Button
                 size="lg"
                 asChild
-                className="bg-[#25D366] hover:bg-[#1ebe57] text-white border-0 shadow-elevated text-base px-8 py-6 min-h-[3.25rem] sm:min-w-[12rem]"
+                className="bg-whatsapp hover:bg-whatsapp-hover text-white border-0 shadow-elevated text-base px-8 py-6 min-h-[3.25rem] sm:min-w-[12rem]"
               >
                 <a
                   href={bookWhatsAppHref}
@@ -152,12 +136,7 @@ export const HeroSection = () => {
             </div>
 
             {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-              className="flex justify-center md:justify-start gap-8 mt-12 pt-8 border-t border-border/50"
-            >
+            <div className="flex justify-center md:justify-start gap-8 mt-12 pt-8 border-t border-border/50">
               <div className="text-center">
                 <p className="font-heading text-3xl font-bold text-primary">4.9★</p>
                 <p className="text-sm font-medium text-[hsl(20_18%_28%)]">Google Rating</p>
@@ -170,28 +149,15 @@ export const HeroSection = () => {
                 <p className="font-heading text-3xl font-bold text-primary">10+</p>
                 <p className="text-sm font-medium text-[hsl(20_18%_28%)]">Years Experience</p>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
           {/* Image ,  first on mobile so it shows without scrolling */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0, duration: 0.55 }}
-            className="relative order-1 mx-auto w-full max-w-md md:order-2 md:mx-0 md:max-w-none"
-          >
+          <div className="relative order-1 mx-auto w-full max-w-md md:order-2 md:mx-0 md:max-w-none">
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-elevated">
               <picture>
-                <source
-                  type="image/webp"
-                  srcSet={`${heroImage640Webp} 640w, ${heroImage960Webp} 960w, ${heroImage1280Webp} 1280w, ${heroImage1536Webp} 1536w`}
-                  sizes="(min-width: 768px) 45vw, 100vw"
-                />
-                <source
-                  type="image/jpeg"
-                  srcSet={`${heroImage640} 640w, ${heroImage960} 960w, ${heroImage1280} 1280w, ${heroImage1536} 1536w`}
-                  sizes="(min-width: 768px) 45vw, 100vw"
-                />
+                <source type="image/webp" srcSet={HERO_WEBP_SRCSET} sizes={HERO_IMAGE_SIZES} />
+                <source type="image/jpeg" srcSet={HERO_JPEG_SRCSET} sizes={HERO_IMAGE_SIZES} />
                 <img
                   src={heroImage640}
                   alt={HERO_IMAGE_ALT}
@@ -199,7 +165,7 @@ export const HeroSection = () => {
                   className="h-full w-full object-cover"
                   width={640}
                   height={800}
-                  sizes="(min-width: 768px) 45vw, 100vw"
+                  sizes={HERO_IMAGE_SIZES}
                   decoding="async"
                   loading="eager"
                   fetchPriority="high"
@@ -219,71 +185,50 @@ export const HeroSection = () => {
             </div>
 
             {/* Desktop: match live site (womenshealthduo.com) */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.8, duration: 0.5 }}
-              className="absolute -right-4 top-1/4 max-md:hidden bg-background/95 backdrop-blur-sm rounded-2xl p-4 shadow-card"
-            >
+            <div className="absolute -right-4 top-1/4 max-md:hidden bg-background/95 backdrop-blur-sm rounded-2xl p-4 shadow-card">
               <p className="font-heading text-lg font-semibold text-foreground">
                 Obstetrician &amp; Gynecologist
               </p>
               <p className="text-sm text-muted-foreground">
                 IVF Specialist &amp; Laparoscopic Surgeon
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1, duration: 0.5 }}
-              className="absolute -left-4 bottom-1/4 max-md:hidden bg-background/95 backdrop-blur-sm rounded-2xl p-4 shadow-card"
-            >
+            <div className="absolute -left-4 bottom-1/4 max-md:hidden bg-background/95 backdrop-blur-sm rounded-2xl p-4 shadow-card">
               <p className="font-heading text-lg font-semibold text-foreground">
                 Women&apos;s Health Physiotherapy
               </p>
               <p className="text-sm text-muted-foreground">
                 STOTT Pilates &amp; pelvic / prenatal care
               </p>
-            </motion.div>
+            </div>
 
             {/* Mobile: below photo so badges never cover faces */}
             <div className="mt-4 grid gap-3 sm:grid-cols-2 md:hidden">
               <HeroDoctorCard
                 title="Obstetrician & Gynecologist"
                 subtitle="IVF Specialist & Laparoscopic Surgeon"
-                initialX={0}
-                delay={0.85}
               />
               <HeroDoctorCard
                 title="Women's Health Physiotherapy"
                 subtitle="STOTT Pilates & pelvic / prenatal care"
-                initialX={0}
-                delay={0.95}
               />
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.5 }}
-        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2"
-      >
-        <motion.button
+      <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2">
+        <button
           type="button"
           aria-label="Scroll to about"
           onClick={() => goToHomeSection("about")}
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="p-2 text-muted-foreground hover:text-primary transition-colors"
+          className="p-2 text-muted-foreground hover:text-primary transition-colors motion-safe:animate-bounce"
         >
           <ArrowDown className="w-6 h-6" aria-hidden />
-        </motion.button>
-      </motion.div>
+        </button>
+      </div>
     </section>
   );
 };

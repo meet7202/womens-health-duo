@@ -784,7 +784,7 @@ export function virtualCityOverviewFaqs(city: string, country: string): FaqItem[
   return take10([
     {
       question: `How do I book an online consult from ${city}, ${country}?`,
-      answer: `WhatsApp or email contact@womenshealthduo.com with “${city}, ${country}” in the first line, your time zone, and whether you need OB-GYN or physio/Pilates first. This ${city} overview page links to every service-specific URL for ${city}, and we route you to Dr. Charmi or Dr. Zalak from there.`,
+      answer: `WhatsApp or email contact@womenshealthduo.com with “${city}, ${country}” in the first line, your time zone, and whether you need OB-GYN or physio/Pilates first. This ${city} overview links to each care topic for ${city}, and we route you to Dr. Charmi or Dr. Zalak from there.`,
     },
     {
       question: `Is telehealth from India effective if I live in ${city}, ${country}?`,
@@ -808,7 +808,7 @@ export function virtualCityOverviewFaqs(city: string, country: string): FaqItem[
     },
     {
       question: `Where are the ${city}-specific service pages?`,
-      answer: `Scroll the “Online services in ${city}” list on this page. Each link opens a dedicated URL for that clinical topic in ${city}, ${country}, so search engines and patients see the same context you see here.`,
+      answer: `Scroll the “Online services in ${city}” list on this page. Each link opens that clinical topic for patients connecting from ${city}, ${country}, with the same booking path.`,
     },
     {
       question: `Do I need Indian insurance if I live in ${country}?`,
@@ -832,7 +832,7 @@ export function virtualCountryFaqs(country: string): FaqItem[] {
     },
     {
       question: `Is online care the same quality everywhere in ${country}?`,
-      answer: `Clinical standards for patients in ${country} match our India practice; only your local emergency resources differ by city. We document on each ${country} city page what must be done in person.`,
+      answer: `Clinical standards for patients in ${country} match our India practice. Availability, local exam needs, and emergency pathways can differ by city and situation — we confirm suitability when you book and note what must be done in person.`,
     },
     {
       question: `Can NRIs and expatriates use these ${country} pages?`,

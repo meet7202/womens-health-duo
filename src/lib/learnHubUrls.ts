@@ -3,6 +3,7 @@ import {
   type HubDoctorTag,
   type KnowledgeHubVideo,
 } from "../data/knowledgeHubVideos";
+import { isIndexableKnowledgeHubWatchPage } from "./knowledgeHubVideoEligibility";
 import { capMetaDescription } from "./seoDescription";
 import { publicPathname } from "./githubPagesPublicUrl";
 
@@ -154,6 +155,23 @@ function hasVideosForFilter(doctor: Exclude<LearnHubDoctorFilter, "all">, topic:
 }
 
 /**
+ * Doctor-tab / filter link target (SEO-34).
+ * When the requested doctor×topic has no qualifying clips, fall back to that doctor's all-topics hub
+ * (or the all-doctors topic hub when doctor is `all`).
+ */
+export function learnHubDoctorFilterPath(opts: {
+  doctor?: LearnHubDoctorFilter;
+  topic?: string | "all";
+}): string {
+  const doctor = opts.doctor ?? "all";
+  const topic = opts.topic ?? "all";
+  if (doctor !== "all" && topic !== "all" && !hasVideosForFilter(doctor, topic)) {
+    return learnHubFilteredPath({ doctor, topic: "all" });
+  }
+  return learnHubFilteredPath({ doctor, topic });
+}
+
+/**
  * All indexable Learn URLs: main hub, each doctor tab, each topic, and doctor×topic when at least one clip matches.
  */
 export function learnHubSitemapPaths(): string[] {
@@ -177,15 +195,22 @@ export function learnHubSitemapPaths(): string[] {
   return [...paths].sort((a, b) => a.localeCompare(b));
 }
 
-/** Every indexable per-clip watch URL (one video per page for Google Video indexing). */
-export function learnWatchSitemapPaths(): string[] {
+/** All watch-page shells (including temporary noindex incomplete media). */
+export function learnWatchShellPathnames(): string[] {
   return KNOWLEDGE_HUB_VIDEOS.map((v) => learnVideoWatchPath(v.id)).sort((a, b) =>
     a.localeCompare(b),
   );
 }
 
-const LEARN_SEO_BASE =
-  "Women's Health Duo Learn hub: free clinician-led clips on YouTube Shorts, Instagram Reels, carousels, and posts — pregnancy, pelvic floor, fertility, hormones, Mat Pilates online, and STOTT Pilates (Mat and Reformer). Each clip has a dedicated watch page under /learn/watch/. Book consults with Dr. Charmi Shah (OB-GYN/IVF) or Dr. Zalak Shah (women's health physiotherapy).";
+/**
+ * Indexable per-clip watch URLs for the primary sitemap.
+ * Incomplete reels/Shorts (no date/poster) are omitted until media eligibility is complete.
+ */
+export function learnWatchSitemapPaths(): string[] {
+  return KNOWLEDGE_HUB_VIDEOS.filter(isIndexableKnowledgeHubWatchPage)
+    .map((v) => learnVideoWatchPath(v.id))
+    .sort((a, b) => a.localeCompare(b));
+}
 
 function doctorFilterLabel(d: LearnHubDoctorFilter): string {
   if (d === "charmi") return "Dr. Charmi";
@@ -225,22 +250,37 @@ export {
   learnHubH1 as learnHubSeoH1,
 } from "./pageSeoCopy";
 
+/**
+ * Filter identity comes first so capping cannot erase doctor/topic (SEO-05).
+ * Root vs filtered views get distinct authored descriptions — not one shared paragraph + late suffix.
+ */
 export function learnHubSeoDescription(parsed: LearnHubParsed): string {
-  const tail =
-    " Pairs with our online video consults from India for NRIs and international families. Not a substitute for individualized care.";
   if (parsed.doctor === "all" && parsed.topic === "all") {
-    return capMetaDescription(`${LEARN_SEO_BASE}${tail}`);
-  }
-  const bits: string[] = [LEARN_SEO_BASE];
-  if (parsed.doctor !== "all") {
-    bits.push(
-      parsed.doctor === "charmi"
-        ? "This view highlights clips led by Dr. Charmi Shah (OB-GYN)."
-        : "This view highlights clips led by Dr. Zalak Shah (women's health physio & STOTT Pilates).",
+    // Keep both clinicians early so capping cannot drop Dr. Zalak (SEO-05).
+    return capMetaDescription(
+      "Learn hub videos with Dr. Charmi Shah and Dr. Zalak Shah: pregnancy, pelvic floor, fertility, and Pilates Shorts/Reels with dedicated watch pages.",
     );
   }
-  if (parsed.topic !== "all") {
-    bits.push(`Topic filter: ${parsed.topic}.`);
+  if (parsed.doctor === "charmi" && parsed.topic === "all") {
+    return capMetaDescription(
+      "Dr. Charmi Shah Learn clips: OB-GYN, IVF, fertility, hormones, and pregnancy education from Women's Health Duo. Browse Shorts, Reels, and posts with watch pages.",
+    );
   }
-  return capMetaDescription(bits.join(" ") + tail);
+  if (parsed.doctor === "zalak" && parsed.topic === "all") {
+    return capMetaDescription(
+      "Dr. Zalak Shah Learn clips: women's health physiotherapy, pelvic floor, prenatal/postnatal movement, and STOTT Pilates from Women's Health Duo.",
+    );
+  }
+  if (parsed.doctor === "all" && parsed.topic !== "all") {
+    return capMetaDescription(
+      `${parsed.topic} videos from Women's Health Duo: clinician-led Shorts, Reels, and posts with watch pages. Filter by Dr. Charmi or Dr. Zalak as needed.`,
+    );
+  }
+  const doctor =
+    parsed.doctor === "charmi"
+      ? "Dr. Charmi Shah (OB-GYN)"
+      : "Dr. Zalak Shah (women's health physio)";
+  return capMetaDescription(
+    `${parsed.topic} clips led by ${doctor} on the Women's Health Duo Learn hub — dedicated watch pages for each video.`,
+  );
 }

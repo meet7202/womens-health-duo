@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import { useMemo } from "react";
 import { Activity, HeartPulse, Baby, Dumbbell, MessageCircle } from "lucide-react";
@@ -72,10 +72,10 @@ export function HomeServiceTopicLanes() {
 
         <div className="mx-auto grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {topicLanes.map((lane, index) => (
-            <motion.article
+            <m.article
               key={lane.id}
               id={lane.id}
-              initial={{ opacity: 0, y: 16 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.45, delay: index * 0.05 }}
@@ -101,7 +101,7 @@ export function HomeServiceTopicLanes() {
                   </a>
                 </Button>
               </div>
-            </motion.article>
+            </m.article>
           ))}
         </div>
       </div>

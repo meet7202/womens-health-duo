@@ -24,7 +24,15 @@ function walkHtmlFiles(dir, out = []) {
 
 function crawlableH1(html) {
   const shellMatch = html.match(/id="static-seo-shell"[\s\S]*?<h1[^>]*>([^<]*)<\/h1>/i);
-  return shellMatch ? decodeEntities(shellMatch[1]) : null;
+  if (shellMatch) return decodeEntities(shellMatch[1]);
+
+  // SEO-10: priority prerender injects real React markup into #root and drops #static-seo-shell
+  // so crawlers see a single H1. Ignore <noscript> duplicates when extracting.
+  const withoutNoscript = html.replace(/<noscript\b[\s\S]*?<\/noscript>/gi, "");
+  const rootH1 = withoutNoscript.match(/id=["']root["'][^>]*>[\s\S]*?<h1\b[^>]*>([\s\S]*?)<\/h1>/i);
+  if (!rootH1) return null;
+  const text = rootH1[1].replace(/<[^>]+>/g, "").trim();
+  return text ? decodeEntities(text) : null;
 }
 
 function countH1Tags(html) {

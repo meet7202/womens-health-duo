@@ -54,15 +54,21 @@ function seoLabelWithOnlineSuffix(label: string): string {
   return `${trimmed} online`;
 }
 
+/**
+ * City × service titles: emphasize online consultation/advice (not in-city surgery).
+ * Keep city identity early so long country names do not erase the location (SEO-05).
+ */
 export function virtualServiceCityDocumentTitle(
   serviceShort: string,
   city: string,
   country: string,
 ): string {
-  const service = seoLabelWithOnlineSuffix(serviceShort);
-  const withCountry = formatDocumentTitle(`${service}, ${city}, ${country}`);
+  const topic = serviceShort.trim();
+  const withCountry = formatDocumentTitle(`Online advice: ${topic} — ${city}, ${country}`);
   if (withCountry.length <= DOCUMENT_TITLE_MAX_LEN) return withCountry;
-  return formatDocumentTitle(`${service}, ${city}`);
+  const cityOnly = formatDocumentTitle(`Online advice: ${topic} — ${city}`);
+  if (cityOnly.length <= DOCUMENT_TITLE_MAX_LEN) return cityOnly;
+  return formatDocumentTitle(`${topic} online — ${city}`);
 }
 
 export function virtualServiceCityH1(serviceTitle: string, city: string, country: string): string {
@@ -180,8 +186,22 @@ export function internationalServiceDocumentTitle(shortTitle: string): string {
 export const LEARN_ARTICLES_DOCUMENT_TITLE = formatDocumentTitle("Articles & common questions");
 export const LEARN_ARTICLES_H1 = "Articles and common questions";
 
-export function indiaCityDocumentTitle(cityName: string): string {
-  return formatDocumentTitle(`${cityName} OB-GYN, IVF & physio`);
+/** India in-person city landings — emphasize who actually practices there (SEO-05). */
+export function indiaCityDocumentTitle(
+  cityKey: "ahmedabad" | "mumbai" | "valsad" | "bangalore" | string,
+): string {
+  switch (cityKey) {
+    case "bangalore":
+      return formatDocumentTitle("Bangalore physio & STOTT Pilates");
+    case "mumbai":
+      return formatDocumentTitle("Mumbai OB-GYN, IVF & care");
+    case "valsad":
+      return formatDocumentTitle("Valsad OB-GYN & IVF care");
+    case "ahmedabad":
+      return formatDocumentTitle("Ahmedabad OB-GYN & physio");
+    default:
+      return formatDocumentTitle(`${cityKey} women's health care`);
+  }
 }
 
 export function doctorDocumentTitle(name: string, specialty: string): string {

@@ -2,7 +2,10 @@
 
 Free-plan alternative to Cloudflare Pro **Markdown for Agents**. When a client sends `Accept: text/markdown`, this Worker fetches the origin HTML (GitHub Pages static shell), converts it to Markdown, and returns `Content-Type: text/markdown` with `x-markdown-tokens`.
 
-Normal browser requests are unchanged (pass-through).
+Normal browser requests are unchanged (pass-through), except:
+
+- **Long cache** on `/assets/*`, `/fonts/*`, and other fingerprinted static files (`Cache-Control: public, max-age=31536000, immutable`).
+- **Rocket Loader off** via `fetch(..., { cf: { rocketLoader: false } })` so Cloudflare does not inject `rocket-loader.min.js` on Worker routes.
 
 ## Prerequisites
 
@@ -40,14 +43,17 @@ curl -s -H "Accept: text/markdown" https://womenshealthduo.com/faq | head -40
 
 # Browsers still get HTML
 curl -sI https://womenshealthduo.com/ | grep -i content-type
+
+# Immutable browser cache on hashed assets / fonts
+curl -sI https://womenshealthduo.com/fonts/fonts.css | grep -i cache-control
 ```
 
-Expected: `content-type: text/markdown; charset=utf-8` and `vary` includes `Accept`.
+Expected: `content-type: text/markdown; charset=utf-8` and `vary` includes `Accept`. Asset/font responses should include `cache-control: public, max-age=31536000, immutable`.
 
 ## Limits
 
 - Converts **origin HTML only** (static SEO shells), not post-React DOM — same as crawlers.
-- Skips `/assets/`, `/images/`, `/.well-known/`, and non-HTML extensions.
+- Skips `/assets/`, `/fonts/`, `/images/`, `/.well-known/`, and non-HTML extensions.
 - HTML origin responses larger than **2 MB** fall back to HTML.
 - Re-deploy this Worker only when `workers/markdown-for-agents/` changes — independent of GitHub Pages site deploys.
 

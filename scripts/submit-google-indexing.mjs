@@ -1,27 +1,28 @@
 #!/usr/bin/env node
 /**
- * Submit built sitemap URLs to Google Indexing API (urlNotifications.publish).
+ * Google Indexing API helper — FAIL-CLOSED for ordinary WHD pages.
  *
- * Prerequisites:
- * - `npm run build`
- * - GCP service account with Indexing API enabled
- * - Service account added as Owner in Google Search Console for the property
+ * Google's Indexing API is restricted to JobPosting or livestream BroadcastEvent
+ * (within VideoObject) URLs. Ordinary service, article, and on-demand Learn clips
+ * on Women's Health Duo are NOT eligible.
  *
- * Credentials (one of):
+ * This script never loads sitemap feeds. It only posts when given an explicit
+ * `--urls-file=` of pre-validated eligible URLs. An empty/missing file exits 1
+ * without calling the network.
+ *
+ * Prefer Search Console sitemaps + URL Inspection for ordinary discovery.
+ * Prefer IndexNow (`npm run submit:indexnow`) for Bing/Yandex partners.
+ *
+ * Credentials (only used when eligible URLs are supplied):
  * - GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON — inline JSON (CI / .env)
  * - GOOGLE_APPLICATION_CREDENTIALS — path to service account JSON file
  *
  * Usage:
- *   npm run submit:google-indexing
- *   npm run submit:google-indexing -- --feed=primary --limit=50 --dry-run
- *
- * Note: default quota is ~200 publish requests/day. Use --feed=primary for high-value
- * pages first; re-run daily with --offset to walk long-tail virtual URLs.
+ *   npm run submit:google-indexing -- --urls-file=./eligible-job-or-livestream-urls.txt --dry-run
  */
 import { readFileSync, existsSync } from "node:fs";
 import { GoogleAuth } from "google-auth-library";
 import { loadEnvFile } from "./lib/loadEnv.mjs";
-import { loadIndexableUrls, readSitemapBuildMeta } from "./lib/sitemapUrls.mjs";
 
 loadEnvFile();
 
@@ -30,28 +31,35 @@ const PUBLISH_URL = "https://indexing.googleapis.com/v3/urlNotifications:publish
 
 function parseArgs(argv) {
   const opts = {
-    feed: "primary",
     dryRun: false,
-    limit: 200,
-    offset: 0,
     delayMs: 500,
     type: "URL_UPDATED",
+    urlsFile: "",
   };
 
   for (const arg of argv) {
     if (arg === "--dry-run") opts.dryRun = true;
-    else if (arg.startsWith("--feed=")) opts.feed = arg.slice("--feed=".length);
-    else if (arg.startsWith("--limit=")) {
-      opts.limit = Number.parseInt(arg.slice("--limit=".length), 10);
-    } else if (arg.startsWith("--offset=")) {
-      opts.offset = Number.parseInt(arg.slice("--offset=".length), 10);
-    } else if (arg.startsWith("--delay-ms=")) {
+    else if (arg.startsWith("--urls-file="))
+      opts.urlsFile = arg.slice("--urls-file=".length).trim();
+    else if (arg.startsWith("--delay-ms=")) {
       opts.delayMs = Number.parseInt(arg.slice("--delay-ms=".length), 10);
     } else if (arg.startsWith("--type=")) {
       opts.type = arg.slice("--type=".length);
     } else if (arg === "--help" || arg === "-h") {
       printHelp();
       process.exit(0);
+    } else if (
+      arg.startsWith("--feed=") ||
+      arg.startsWith("--limit=") ||
+      arg.startsWith("--offset=")
+    ) {
+      console.error(
+        "submit-google-indexing: sitemap feed submission was removed. Ordinary WHD pages are not Indexing API–eligible.",
+      );
+      console.error(
+        "  Pass --urls-file= with JobPosting or livestream BroadcastEvent URLs only, or use Search Console / IndexNow.",
+      );
+      process.exit(1);
     } else {
       console.error(`submit-google-indexing: unknown argument ${arg}`);
       printHelp();
@@ -59,14 +67,6 @@ function parseArgs(argv) {
     }
   }
 
-  if (!Number.isFinite(opts.limit) || opts.limit < 1) {
-    console.error("submit-google-indexing: --limit must be >= 1");
-    process.exit(1);
-  }
-  if (!Number.isFinite(opts.offset) || opts.offset < 0) {
-    console.error("submit-google-indexing: --offset must be >= 0");
-    process.exit(1);
-  }
   if (!["URL_UPDATED", "URL_DELETED"].includes(opts.type)) {
     console.error('submit-google-indexing: --type must be "URL_UPDATED" or "URL_DELETED"');
     process.exit(1);
@@ -76,12 +76,15 @@ function parseArgs(argv) {
 }
 
 function printHelp() {
-  console.log(`Usage: node scripts/submit-google-indexing.mjs [options]
+  console.log(`Usage: node scripts/submit-google-indexing.mjs --urls-file=PATH [options]
+
+Google Indexing API is ONLY for JobPosting or livestream BroadcastEvent pages.
+This repository's ordinary sitemap URLs must NOT be submitted.
+
+Required:
+  --urls-file=PATH   Text file, one absolute https URL per line (eligible routes only)
 
 Options:
-  --feed=primary|virtual|video|all   Sitemap feed(s) (default: primary — core + learn + guides)
-  --limit=N                          Max URLs to publish this run (default: 200, daily quota)
-  --offset=N                         Skip first N URLs in the feed (for paging long-tail)
   --delay-ms=N                       Pause between requests (default: 500)
   --type=URL_UPDATED|URL_DELETED     Notification type (default: URL_UPDATED)
   --dry-run                          List URLs without calling the API
@@ -90,7 +93,34 @@ Options:
 Env:
   GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON   Inline service account JSON
   GOOGLE_APPLICATION_CREDENTIALS         Path to service account JSON file
+
+Owner note: unused Indexing API credentials may be revoked in GCP / Search Console
+when no longer needed. This script does not revoke secrets.
 `);
+}
+
+function loadEligibleUrls(urlsFile) {
+  if (!urlsFile) {
+    throw new Error(
+      "refusing to submit: pass --urls-file= with validated JobPosting or livestream URLs (empty sitemap submission is disabled)",
+    );
+  }
+  if (!existsSync(urlsFile)) {
+    throw new Error(`urls file not found: ${urlsFile}`);
+  }
+  const urls = readFileSync(urlsFile, "utf8")
+    .split(/\r?\n/)
+    .map((l) => l.trim())
+    .filter((l) => l && !l.startsWith("#"));
+  if (urls.length === 0) {
+    throw new Error(`urls file is empty: ${urlsFile} (fail closed — no Indexing API calls)`);
+  }
+  for (const url of urls) {
+    if (!/^https:\/\//i.test(url)) {
+      throw new Error(`invalid URL (https required): ${url}`);
+    }
+  }
+  return urls;
 }
 
 function loadServiceAccountCredentials() {
@@ -152,23 +182,15 @@ async function publishUrl(accessToken, url, type) {
 
 async function main() {
   const opts = parseArgs(process.argv.slice(2));
-  const meta = readSitemapBuildMeta();
-  const allUrls = loadIndexableUrls(opts.feed);
-  const slice = allUrls.slice(opts.offset, opts.offset + opts.limit);
+  const urls = loadEligibleUrls(opts.urlsFile);
 
   console.log(
-    `submit-google-indexing: ${slice.length} URL(s) (feed="${opts.feed}", offset=${opts.offset}, limit=${opts.limit}) for ${meta.siteUrl}`,
+    `submit-google-indexing: ${urls.length} explicit eligible URL(s) (NOT from sitemap feeds)`,
   );
 
-  if (slice.length === 0) {
-    console.log("submit-google-indexing: nothing to submit");
-    return;
-  }
-
   if (opts.dryRun) {
-    console.log("submit-google-indexing: dry-run — first URLs:");
-    for (const url of slice.slice(0, 5)) console.log(`  ${url}`);
-    if (slice.length > 5) console.log(`  … and ${slice.length - 5} more`);
+    console.log("submit-google-indexing: dry-run — URLs:");
+    for (const url of urls) console.log(`  ${url}`);
     return;
   }
 
@@ -178,44 +200,27 @@ async function main() {
   let okCount = 0;
   let failCount = 0;
 
-  for (let i = 0; i < slice.length; i += 1) {
-    const url = slice[i];
+  for (let i = 0; i < urls.length; i += 1) {
+    const url = urls[i];
     const result = await publishUrl(accessToken, url, opts.type);
 
     if (result.ok) {
       okCount += 1;
-      console.log(`submit-google-indexing: [${i + 1}/${slice.length}] OK ${url}`);
+      console.log(`submit-google-indexing: [${i + 1}/${urls.length}] OK ${url}`);
     } else {
       failCount += 1;
       const errMsg =
         result.json?.error?.message ?? result.json?.error?.status ?? JSON.stringify(result.json);
       console.error(
-        `submit-google-indexing: [${i + 1}/${slice.length}] FAIL HTTP ${result.status} ${url}`,
+        `submit-google-indexing: [${i + 1}/${urls.length}] FAIL HTTP ${result.status} ${url}`,
       );
       console.error(`  ${errMsg}`);
-
-      if (result.status === 403) {
-        console.error(
-          "  Hint: enable Indexing API in GCP, and add the service account email as Owner in Search Console.",
-        );
-        break;
-      }
-      if (result.status === 429) {
-        console.error("  Daily quota reached — re-run tomorrow or lower --limit.");
-        break;
-      }
+      if (result.status === 403 || result.status === 429) break;
     }
 
-    if (i < slice.length - 1 && opts.delayMs > 0) {
+    if (i < urls.length - 1 && opts.delayMs > 0) {
       await sleep(opts.delayMs);
     }
-  }
-
-  const nextOffset = opts.offset + okCount + failCount;
-  if (nextOffset < allUrls.length) {
-    console.log(
-      `submit-google-indexing: ${allUrls.length - nextOffset} URL(s) remaining — re-run with --offset=${nextOffset}`,
-    );
   }
 
   console.log(`submit-google-indexing: finished (${okCount} ok, ${failCount} failed)`);

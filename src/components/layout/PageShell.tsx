@@ -11,10 +11,10 @@ type PageShellProps = {
 export function PageShell({ children, breadcrumbs }: PageShellProps) {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>
+      <Header />
       <main
         id="main-content"
         className="container mx-auto max-w-3xl px-4 pt-28 pb-28 sm:px-6 lg:px-8 lg:max-w-4xl"

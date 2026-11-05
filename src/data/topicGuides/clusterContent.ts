@@ -37,24 +37,86 @@ function bookingFaqs(title: string, consult: "charmi" | "zalak" | "both"): FaqIt
     },
   ];
 }
+function normalizeFaqKey(raw: string): string {
+  return raw
+    .toLowerCase()
+    .replace(/['']/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function poolFaqKey(item: FaqItem): string {
+  if (item.id?.trim()) return normalizeFaqKey(item.id);
+  return normalizeFaqKey(item.question.replace(/\?+$/, ""));
+}
+
+function normalizeFaqText(text: string): string {
+  return text.toLowerCase().replace(/[?'']/g, "").replace(/\s+/g, " ").trim();
+}
+
+function asVisibleFaq(item: FaqItem): FaqItem {
+  return { question: item.question, answer: item.answer };
+}
+
+/**
+ * Booking FAQs are always prepended. Cluster FAQs (SEO-13):
+ * - when `faqIds` is set, pick those ids/question keys only (do not pad to 7/10);
+ * - otherwise prefer a pool question matching the guide title/slug, then fill from
+ *   pool declaration order up to CLUSTER_FAQ_COUNT (no hash rotation).
+ * Visible FAQ + JSON-LD share this list (≤10 total when padded).
+ */
 export function buildTopicGuideFaqs(
   slug: string,
   title: string,
   consult: "charmi" | "zalak" | "both",
   pool: FaqItem[],
+  faqIds?: readonly string[],
 ): FaqItem[] {
   const booking = bookingFaqs(title, consult);
   if (pool.length < CLUSTER_FAQ_COUNT) {
     throw new Error(`Topic guide FAQ pool too small for slug=${slug}`);
   }
-  let h = 0;
-  for (let i = 0; i < slug.length; i++) h = (h + slug.charCodeAt(i) * (i + 1)) % 997;
-  const start = h % pool.length;
+
+  const byKey = new Map(pool.map((item) => [poolFaqKey(item), item] as const));
   const picked: FaqItem[] = [];
-  for (let i = 0; i < pool.length && picked.length < CLUSTER_FAQ_COUNT; i++) {
-    picked.push(pool[(start + i) % pool.length]!);
+  const seen = new Set<string>();
+  const push = (item: FaqItem | undefined, cap: number) => {
+    if (!item) return;
+    const key = poolFaqKey(item);
+    if (seen.has(key) || picked.length >= cap) return;
+    seen.add(key);
+    picked.push(item);
+  };
+
+  if (faqIds && faqIds.length > 0) {
+    for (const rawId of faqIds) {
+      const key = normalizeFaqKey(rawId.replace(/\?+$/, ""));
+      const item = byKey.get(key);
+      if (!item) {
+        throw new Error(`Topic guide faqId="${rawId}" not found in pool for slug=${slug}`);
+      }
+      push(item, faqIds.length);
+    }
+    return [...booking, ...picked.map(asVisibleFaq)];
   }
-  return [...booking, ...picked];
+
+  const slugKey = normalizeFaqKey(slug);
+  const titleNorm = normalizeFaqText(title);
+  push(byKey.get(slugKey), CLUSTER_FAQ_COUNT);
+  push(
+    pool.find((f) => normalizeFaqText(f.question) === titleNorm),
+    CLUSTER_FAQ_COUNT,
+  );
+  push(
+    pool.find((f) => {
+      const q = normalizeFaqText(f.question);
+      return q.length >= 12 && (titleNorm.includes(q) || q.includes(titleNorm));
+    }),
+    CLUSTER_FAQ_COUNT,
+  );
+  for (const item of pool) push(item, CLUSTER_FAQ_COUNT);
+
+  return [...booking, ...picked.map(asVisibleFaq)].slice(0, TOPIC_GUIDE_FAQ_TOTAL);
 }
 const CLUSTER_LIBRARY: Record<TopicGuideClusterId, ClusterConfig> = {
   pcos: {
@@ -85,51 +147,61 @@ const CLUSTER_LIBRARY: Record<TopicGuideClusterId, ClusterConfig> = {
     ],
     faqPool: [
       {
+        id: "what-is-pcos",
         question: "What is PCOS?",
         answer:
           "PCOS is a hormonal condition that often features irregular ovulation or menstrual cycles alongside findings such as elevated androgen levels or polycystic-appearing ovaries on ultrasound, not everyone has cysts, and the name can be confusing.",
       },
       {
+        id: "symptoms-of-pcos",
         question: "What are common symptoms of PCOS?",
         answer:
           "Irregular periods, acne, extra facial/body hair, scalp hair thinning, weight gain or difficulty losing weight, and fertility challenges are common, but symptoms vary widely between individuals.",
       },
       {
+        id: "can-pcos-affect-fertility",
         question: "Can PCOS affect fertility?",
         answer:
           "Yes, especially when ovulation is infrequent or absent. Many people with PCOS still conceive naturally or with support; the right workup clarifies ovulation status and next steps.",
       },
       {
+        id: "does-pcos-always-show-up-on-ultrasound",
         question: "Does PCOS always show up on ultrasound?",
         answer:
           "No. Diagnosis is clinical and lab-based in context; ultrasound supports certain patterns but is not required for every person.",
       },
       {
+        id: "how-to-manage-pcos-naturally",
         question: "Can lifestyle changes improve PCOS symptoms?",
         answer:
           "Sleep, stress, nutrition, and joyful movement can influence cycles and metabolic markers for some people. Medical management may still be appropriate, decisions belong in consultation.",
       },
       {
+        id: "is-pcos-curable",
         question: "Is PCOS curable?",
         answer:
           "PCOS is a long-term tendency you manage, not a single event you erase. Many people feel much better with the right mix of education, lifestyle, and medical support.",
       },
       {
+        id: "pcos-tests",
         question: "What tests might be discussed for PCOS?",
         answer:
           "Depending on your story, clinicians may discuss cycle tracking, hormone panels, metabolic screening, and ultrasound, chosen individually, not as a universal bundle.",
       },
       {
+        id: "birth-control-pcos-tests",
         question: "Can birth control affect how PCOS looks on tests?",
         answer:
           "Yes, hormonal contraception changes some lab patterns. Tell your clinician what you take and when; timing of tests matters.",
       },
       {
+        id: "urgent-care-bleeding",
         question: "When should I seek urgent care for bleeding?",
         answer:
           "Soaking through pads hourly, dizziness, severe pain, fever, or pregnancy with bleeding are emergencies, use local urgent/emergency services.",
       },
       {
+        id: "can-i-get-pregnant-with-pcos",
         question: "Can I get pregnant with PCOS?",
         answer:
           "Many people do. If cycles are irregular, ovulation tracking and a fertility-focused visit can clarify timing and options.",
@@ -160,26 +232,31 @@ const CLUSTER_LIBRARY: Record<TopicGuideClusterId, ClusterConfig> = {
     ],
     faqPool: [
       {
+        id: "what-causes-heavy-periods",
         question: "What counts as a heavy period?",
         answer:
           "Clues include soaking through protection quickly, large clots, waking at night to change pads, anemia symptoms like fatigue or shortness of breath, or bleeding that limits daily life, tell a clinician.",
       },
       {
+        id: "why-are-my-periods-painful",
         question: "Why are painful periods not always 'normal'?",
         answer:
           "Some pain is common, but pain that keeps you from school/work, worsens over time, occurs with sex, or comes with abnormal bleeding deserves evaluation for conditions like endometriosis.",
       },
       {
+        id: "why-are-my-periods-irregular",
         question: "Why might periods become irregular?",
         answer:
           "Stress, weight change, thyroid disorders, PCOS, perimenopause, pregnancy, medications, and other hormonal shifts are common causes, sometimes more than one overlaps.",
       },
       {
+        id: "what-is-pms",
         question: "What is PMS?",
         answer:
           "Premenstrual syndrome describes emotional and physical symptoms in the days before a period that resolve when bleeding starts, severity varies.",
       },
       {
+        id: "what-is-pmdd",
         question: "What is PMDD?",
         answer:
           "Premenstrual dysphoric disorder is a severe form of premenstrual mood and function change that often needs targeted treatment, worth discussing with a clinician.",
@@ -230,9 +307,16 @@ const CLUSTER_LIBRARY: Record<TopicGuideClusterId, ClusterConfig> = {
     ],
     faqPool: [
       {
+        id: "signs-of-hormonal-imbalance",
         question: "What are signs of hormonal imbalance?",
         answer:
           "There is no single checklist, common themes include cycle changes, acne, hair changes, weight shifts, sleep disruption, hot flashes, mood changes, or galactorrhea. Context and testing guide the story.",
+      },
+      {
+        id: "what-is-hormonal-imbalance",
+        question: "What is hormonal imbalance?",
+        answer:
+          "People use the phrase for many patterns — cycle changes, thyroid issues, androgen effects, perimenopause, or prolactin elevation. A clinician ties symptoms to history and selected tests rather than a one-size panel.",
       },
       {
         question: "Do I need special hormone panels online?",
@@ -299,34 +383,46 @@ const CLUSTER_LIBRARY: Record<TopicGuideClusterId, ClusterConfig> = {
     ],
     faqPool: [
       {
+        id: "when-to-see-a-fertility-specialist",
         question: "How long should we try before seeing a specialist?",
         answer:
           "Guidelines vary by age and medical history. If cycles are irregular, endometriosis is suspected, or there are prior surgeries, earlier evaluation may be reasonable, ask your clinician.",
       },
       {
+        id: "how-to-track-ovulation",
         question: "How can we track ovulation?",
         answer:
           "Calendar methods, LH kits, basal body temperature, and cervical mucus tracking each have pros/cons; your clinician can suggest what fits your cycle regularity and stress level.",
       },
       {
+        id: "can-stress-affect-fertility",
         question: "Can stress affect fertility?",
         answer:
           "Severe stress can disrupt cycles; moderate stress is common and not the sole cause for most couples. Still, mental health support matters while trying to conceive.",
       },
       {
+        id: "what-is-preconception-planning",
         question: "What is preconception planning?",
         answer:
           "Optimizing medications, folic acid, vaccines where appropriate, chronic disease control, and reviewing genetic or lifestyle risks before pregnancy.",
       },
       {
+        id: "what-is-ivf",
         question: "What is IVF at a high level?",
         answer:
           "In vitro fertilization stimulates the ovaries (with monitoring), retrieves eggs, fertilizes them in the lab, grows embryos, and transfers one selected embryo to the uterus, steps vary by protocol and clinic.",
       },
       {
+        id: "how-to-improve-egg-quality",
         question: "Can egg quality be improved?",
         answer:
           "Age is the dominant factor; some lifestyle changes may help overall health. Be cautious of marketing claims, ask what evidence supports any intervention.",
+      },
+      {
+        id: "how-to-improve-fertility",
+        question: "How can we improve fertility chances while waiting for evaluation?",
+        answer:
+          "Timing intercourse around ovulation when cycles are predictable, reviewing medications with a clinician, avoiding smoking, and addressing known medical conditions are practical first steps — not a substitute for workup when indicated.",
       },
       {
         question: "When is a second opinion reasonable?",
@@ -434,6 +530,7 @@ const CLUSTER_LIBRARY: Record<TopicGuideClusterId, ClusterConfig> = {
           "It varies by delivery mode, complications, sleep, nutrition, and goals, some tissues need weeks, while strength and endurance may take months.",
       },
       {
+        id: "when-can-i-exercise-after-delivery",
         question: "When can I exercise after delivery?",
         answer:
           "Follow your obstetric clinician's clearance, often gradual walking starts early, while higher-load training waits longer, especially after cesarean or complications.",
@@ -504,6 +601,7 @@ const CLUSTER_LIBRARY: Record<TopicGuideClusterId, ClusterConfig> = {
           "Stress incontinence often relates to pressure management during cough/sneeze/lift, training may include timing, breathing, and strength, but red-flag causes need evaluation.",
       },
       {
+        id: "are-kegels-right-for-everyone",
         question: "Are Kegels right for everyone?",
         answer:
           "No, if the pelvic floor is tight or painful, more squeezing can worsen symptoms. Assessment guides whether relaxation, down-training, or strengthening fits.",
@@ -734,6 +832,7 @@ const CLUSTER_LIBRARY: Record<TopicGuideClusterId, ClusterConfig> = {
           "Poor sleep can worsen insulin resistance signals, appetite regulation, pain, and mood, improving sleep hygiene is a legitimate medical talking point.",
       },
       {
+        id: "how-does-exercise-improve-womens-health",
         question: "How does exercise improve women's health?",
         answer:
           "Regular movement supports mood, bone density, cardiovascular risk, metabolic health, and many pelvic symptoms when progressed safely.",

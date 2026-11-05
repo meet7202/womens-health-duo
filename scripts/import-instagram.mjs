@@ -22,6 +22,7 @@ import {
   titleFromCaption,
   topicsFromInstagramRow,
 } from "./lib/instagram-hub-classify.mjs";
+import { isCaptionEditorialLocked } from "./lib/caption-editorial-locks.mjs";
 import { attachHubThumbnailPaths } from "./lib/download-hub-thumbnail.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -135,7 +136,7 @@ function mergeReels(scrapRows, existingRows) {
         }
       : { ...byCode.get(code) };
 
-    if (caption) prev.instagramCaption = caption;
+    if (caption && !isCaptionEditorialLocked(code)) prev.instagramCaption = caption;
     if (postedAt) prev.postedAt = postedAt;
     if (typeof views === "number" && Number.isFinite(views)) prev.approxViews = views;
     const videoUrl = String(row.videoUrl ?? "").trim();
@@ -205,7 +206,7 @@ function mergePosts(scrapRows, existingRows) {
         }
       : { ...byCode.get(code) };
 
-    if (caption) prev.instagramCaption = caption;
+    if (caption && !isCaptionEditorialLocked(code)) prev.instagramCaption = caption;
     if (postedAt) prev.postedAt = postedAt;
     if (typeof views === "number" && Number.isFinite(views)) prev.approxViews = views;
     prev.instagramPostType = mediaKind;

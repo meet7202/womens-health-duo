@@ -1,6 +1,9 @@
+import { preferredScrollBehavior } from "@/lib/motionPreferences";
+
 /**
  * Scroll to an element by id after it may appear (e.g. lazy-loaded homepage sections).
  * Returns a cancel function for useEffect cleanup.
+ * Honors `prefers-reduced-motion` unless `behavior` is passed explicitly (SEO-28).
  */
 export function scrollToHashWhenReady(
   rawHash: string,
@@ -10,7 +13,7 @@ export function scrollToHashWhenReady(
   if (!id) return () => {};
 
   const maxMs = options?.maxMs ?? 4000;
-  const behavior = options?.behavior ?? "smooth";
+  const behavior = options?.behavior ?? preferredScrollBehavior();
   const start = performance.now();
   let cancelled = false;
   let frame = 0;

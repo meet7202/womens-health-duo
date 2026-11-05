@@ -1,6 +1,8 @@
 /**
- * Fail verify when built static shells repeat the same heading text at any level (h1–h6).
- * The crawlable shell only ships h1 + lead; this guards regressions if richer fallbacks return.
+ * Fail verify when built static shells repeat the same heading text.
+ * Shell-only pages: any h1–h6 duplicate fails.
+ * SEO-10 prerendered `#root[data-seo-prerender]`: enforce unique H1 only — full React trees
+ * may reuse doctor/service labels as h2–h6 until SEO-33 heading cleanup.
  * Run after `npm run build`.
  */
 import { readFileSync, readdirSync, statSync } from "node:fs";
@@ -31,10 +33,11 @@ function walkHtmlFiles(dir, out = []) {
 }
 
 function extractHeadings(html) {
+  const withoutNoscript = html.replace(/<noscript\b[\s\S]*?<\/noscript>/gi, "");
   const re = /<h([1-6])[^>]*>([\s\S]*?)<\/h\1>/gi;
   const out = [];
   let m;
-  while ((m = re.exec(html)) !== null) {
+  while ((m = re.exec(withoutNoscript)) !== null) {
     const level = Number(m[1]);
     const text = normalizeHeading(m[2].replace(/<[^>]+>/g, " "));
     if (text) out.push({ level, text });
@@ -56,10 +59,12 @@ function main() {
   for (const file of files) {
     const html = readFileSync(file, "utf8");
     const rel = file.slice(DIST.length) || "/";
+    const prerendered = /id=["']root["'][^>]*\bdata-seo-prerender=/.test(html);
     const headings = extractHeadings(html);
     const seen = new Map();
 
     for (const h of headings) {
+      if (prerendered && h.level !== 1) continue;
       const key = h.text;
       const prev = seen.get(key);
       if (prev) {

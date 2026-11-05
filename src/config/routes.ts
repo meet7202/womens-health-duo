@@ -73,7 +73,12 @@ export const HOME_SECTION_SCROLL_PATHS: readonly string[] = [
   ROUTES.homeQuickAnswers,
 ];
 
-/** Each online service for every virtual city (sitemap only; see `VirtualOnlineServiceCityPage`). */
+/**
+ * Each online service for every virtual city (supplemental sitemap only).
+ * SEO-11: city list is frozen via `VIRTUAL_CONSULTATION_CITY_COUNT_FREEZE` — do not expand
+ * cities/services here without disposition review. Long-tail stays indexable at lower
+ * priority (`sitemapPriorityVirtualServiceCityLongtail`); default action keep/improve.
+ */
 export const SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES: readonly string[] =
   VIRTUAL_CONSULTATION_CITIES.flatMap((c) =>
     SEO_ONLINE_SERVICES.map((s) => virtualServiceCityPath(c, s.slug)),
@@ -106,9 +111,7 @@ export const SITEMAP_SEGMENT_CORE: readonly string[] = [
   ...HOME_SECTION_SCROLL_PATHS,
   ROUTES.drCharmi,
   ROUTES.drZalak,
-  ROUTES.zalakPrenatalClasses,
-  ROUTES.zalakPostnatalClasses,
-  ROUTES.zalakPilatesClasses,
+  // Nested `/dr-zalak-shah/*-classes` aliases redirect to short canonicals — not sitemap entries.
   ROUTES.prenatal,
   ROUTES.postnatal,
   ROUTES.pilates,

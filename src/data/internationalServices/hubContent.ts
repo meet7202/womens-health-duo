@@ -65,7 +65,7 @@ export const INTERNATIONAL_HUB_FAQS = [
   {
     question: "Is this the same as the virtual city pages?",
     answer:
-      "City pages highlight SEO for specific locations. This hub lists international service offerings directly — both lead to the same WhatsApp booking flow.",
+      "City pages help you find care by location. This hub lists international service offerings by clinical need — both paths use the same WhatsApp booking flow.",
   },
   {
     question: "What about emergencies?",

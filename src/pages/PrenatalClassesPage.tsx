@@ -10,13 +10,11 @@ import { ROUTES } from "@/config/routes";
 import { CONTACT, SITE_URL } from "@/config/site";
 import { AppLink as Link } from "@/components/router/AppLink";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
-import {
-  breadcrumbListSchema,
-  webPageSchema,
-  reviewSchema,
-} from "@/components/seo/schema/breadcrumbs";
+import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { ZALAK_GROUP_CLASS_CONTENT } from "@/data/zalakGroupClasses";
 import { whatsappUrlWithMessage } from "@/lib/whatsappCta";
+import { TrackedWhatsAppLink, WHATSAPP_BUTTON_CLASS } from "@/components/cta/TrackedWhatsAppLink";
+import { bookConsultationPath } from "@/lib/bookingIntent";
 
 const content = ZALAK_GROUP_CLASS_CONTENT.prenatal;
 
@@ -33,11 +31,6 @@ export function PrenatalClassesPage() {
       path: content.path,
       name: content.title,
       description: content.metaDescription,
-    }),
-    reviewSchema({
-      reviews: content.testimonials,
-      itemReviewed: content.title,
-      pageUrl,
     }),
   ];
 
@@ -168,20 +161,29 @@ export function PrenatalClassesPage() {
             </div>
             <div className="flex flex-wrap gap-3">
               <Button size="lg" asChild>
-                <Link to={ROUTES.bookConsultation}>Book your slot</Link>
+                <Link
+                  to={bookConsultationPath({
+                    doctor: "zalak",
+                    service: "antenatal-postnatal-care",
+                  })}
+                >
+                  Book your slot
+                </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
-                <a
+              <Button size="lg" asChild className={WHATSAPP_BUTTON_CLASS}>
+                <TrackedWhatsAppLink
                   href={whatsappUrlWithMessage(
                     `Hi, I would like to know more about ${content.title}.`,
                   )}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  ctaPlacement="zalak_class"
+                  doctor="Dr. Zalak Shah"
+                  service="prenatal"
+                  pagePath={content.path}
                 >
                   <span className="inline-flex items-center gap-2">
-                    <MessageCircle className="h-4 w-4" /> WhatsApp us
+                    <MessageCircle className="h-4 w-4" aria-hidden /> WhatsApp us
                   </span>
-                </a>
+                </TrackedWhatsAppLink>
               </Button>
             </div>
           </div>

@@ -1,23 +1,27 @@
-import { ShieldCheck, Lock, UserCheck, CreditCard } from "lucide-react";
+import { ShieldCheck, ClipboardCheck, UserCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+/**
+ * Honest trust signals only — no unverified “encrypted / secure / verified” claims (SEO-18).
+ * Registration numbers are shown on doctor profiles and the booking identity card; consent + intake
+ * are required on `/book-consultation`.
+ */
 const BADGES = [
   { icon: UserCheck, label: "Registered practitioners" },
-  { icon: ShieldCheck, label: "Registration verified" },
-  { icon: Lock, label: "Encrypted consultation channels" },
-  { icon: CreditCard, label: "Secure payment coordination" },
+  { icon: ShieldCheck, label: "Registration numbers on profiles & booking" },
+  { icon: ClipboardCheck, label: "Consent & intake before booking" },
 ] as const;
 
 type TelemedicineTrustBadgesProps = {
   className?: string;
 };
 
-/** Trust signals for telehealth pages — no false HIPAA certification claims. */
+/** Trust signals for telehealth pages — factual practice disclosures only. */
 export function TelemedicineTrustBadges({ className }: TelemedicineTrustBadgesProps) {
   return (
     <ul
       className={cn("flex flex-wrap gap-3", className)}
-      aria-label="Telemedicine trust and security highlights"
+      aria-label="Telemedicine practice disclosures"
     >
       {BADGES.map(({ icon: Icon, label }) => (
         <li

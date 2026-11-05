@@ -4,11 +4,14 @@ import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { PageShell } from "@/components/layout/PageShell";
 import { ROUTES } from "@/config/routes";
-import { CONTACT, SITE_URL } from "@/config/site";
+import { SITE_URL } from "@/config/site";
+import { TrackedWhatsAppLink } from "@/components/cta/TrackedWhatsAppLink";
 import { KnowledgeHubVideoPlayer } from "@/components/learn/KnowledgeHubVideoPlayer";
+import { whatsappMessageLearn, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { knowledgeHubWatchPageVideoSchema } from "@/components/seo/schema/knowledgeHubVideos";
 import { AppLink as Link } from "@/components/router/AppLink";
+import { AppNavigate as Navigate } from "@/components/router/AppNavigate";
 import {
   getKnowledgeHubVideoById,
   knowledgeHubInstagramPermalink,
@@ -23,6 +26,11 @@ import {
 } from "@/lib/pageSeoCopy";
 import { knowledgeHubPosterImageObject } from "@/components/seo/schema/mediaImages";
 import { knowledgeHubPosterAlt, knowledgeHubVideoThumbnailAbsolute } from "@/lib/mediaSeo";
+import {
+  isEligibleKnowledgeHubVideoObject,
+  isIndexableKnowledgeHubWatchPage,
+} from "@/lib/knowledgeHubVideoEligibility";
+import { ROBOTS_INDEX_FOLLOW, ROBOTS_NOINDEX_FOLLOW } from "@/config/routeDisposition";
 import { Button } from "@/components/ui/button";
 import { Instagram, Youtube } from "lucide-react";
 import NotFound from "@/pages/NotFound";
@@ -62,26 +70,39 @@ export function LearnWatchPage() {
 
   const graph = useMemo(() => {
     if (!video) return [];
-    return [
+    const nodes: Record<string, unknown>[] = [
       breadcrumbListSchema(crumbs),
       webPageSchema({
         path: watchPath,
         name: title,
         description,
       }),
-      knowledgeHubWatchPageVideoSchema(video, watchPath),
-      knowledgeHubPosterImageObject(video, watchPath),
     ];
+    const mediaSchema = knowledgeHubWatchPageVideoSchema(video, watchPath);
+    if (mediaSchema) nodes.push(mediaSchema);
+    const poster = knowledgeHubPosterImageObject(video, watchPath);
+    if (poster) nodes.push(poster);
+    return nodes;
   }, [video, crumbs, watchPath, title, description]);
 
   if (!video) {
     return <NotFound />;
   }
 
+  // Platform id aliases (raw YouTube id / IG shortcode) → canonical hub watch id.
+  if (videoId && videoId !== video.id) {
+    return <Navigate to={learnVideoWatchPath(video.id)} replace />;
+  }
+
   const platformLabel = video.kind === "youtube_short" ? "YouTube" : "Instagram";
   const PlatformIcon = video.kind === "youtube_short" ? Youtube : Instagram;
   const posterAlt = knowledgeHubPosterAlt(video);
-  const ogType = video.kind === "instagram_post" ? "website" : "video.other";
+  const videoEligible = isEligibleKnowledgeHubVideoObject(video);
+  const ogType = video.kind === "instagram_post" || !videoEligible ? "website" : "video.other";
+  const ogImage = knowledgeHubVideoThumbnailAbsolute(SITE_URL, video) ?? undefined;
+  const robots = isIndexableKnowledgeHubWatchPage(video)
+    ? ROBOTS_INDEX_FOLLOW
+    : ROBOTS_NOINDEX_FOLLOW;
 
   return (
     <PageShell breadcrumbs={crumbs}>
@@ -89,9 +110,10 @@ export function LearnWatchPage() {
         title={title}
         metaDescription={description}
         path={watchPath}
-        ogImage={knowledgeHubVideoThumbnailAbsolute(SITE_URL, video)}
+        ogImage={ogImage}
         ogImageAlt={posterAlt}
         ogType={ogType}
+        robots={robots}
       />
       <JsonLdGraph graph={graph} />
 
@@ -110,10 +132,11 @@ export function LearnWatchPage() {
           ))}
           {video.postedAt ? (
             <time dateTime={video.postedAt} className="text-muted-foreground">
-              {new Date(video.postedAt).toLocaleDateString(undefined, {
+              {new Date(video.postedAt).toLocaleDateString("en-IN", {
                 year: "numeric",
                 month: "long",
                 day: "numeric",
+                timeZone: "UTC",
               })}
             </time>
           ) : null}
@@ -140,14 +163,16 @@ export function LearnWatchPage() {
             Learn
           </Link>{" "}
           or message us on{" "}
-          <a
-            href={CONTACT.whatsappUrl}
+          <TrackedWhatsAppLink
+            href={whatsappUrlWithMessage(whatsappMessageLearn(watchPath))}
+            ctaPlacement="learn_watch"
+            doctor={doctorLabel(video)}
+            service="learn"
+            pagePath={watchPath}
             className="text-primary underline underline-offset-4"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             WhatsApp
-          </a>{" "}
+          </TrackedWhatsAppLink>{" "}
           to book a consultation.
         </p>
       </article>

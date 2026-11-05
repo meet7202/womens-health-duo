@@ -43,6 +43,8 @@ export function LearnPage() {
 
   const parsed = useMemo(() => parseLearnHubPathname(location.pathname), [location.pathname]);
   const canonicalPath = learnHubFilteredPath(parsed);
+  /** Semantic root check — do not compare `canonicalPath` to slashless `ROUTES.learn`. */
+  const isRootLearnHub = parsed.doctor === "all" && parsed.topic === "all";
 
   useEffect(() => {
     const locPath = stripTrailingIndexHtmlPath(location.pathname);
@@ -106,7 +108,7 @@ export function LearnPage() {
           </Link>
           .
         </p>
-        {canonicalPath !== ROUTES.learn ? (
+        {!isRootLearnHub ? (
           <p className="text-sm text-muted-foreground mt-3 mb-10">
             <Link to={ROUTES.learn} className="text-primary underline underline-offset-4">
               View content hub
@@ -117,9 +119,9 @@ export function LearnPage() {
           <div className="mb-6" />
         )}
 
-        {canonicalPath === ROUTES.learn ? <LearnTopicalAuthoritySection /> : null}
+        {isRootLearnHub ? <LearnTopicalAuthoritySection /> : null}
 
-        {canonicalPath === ROUTES.learn ? <LearnTopicGuidesSection /> : null}
+        {isRootLearnHub ? <LearnTopicGuidesSection /> : null}
 
         <ContextualDeepLinks context="learn" />
 

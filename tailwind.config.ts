@@ -68,6 +68,10 @@ export default {
         sage: "hsl(var(--sage))",
         blush: "hsl(var(--blush))",
         nude: "hsl(var(--nude))",
+        whatsapp: {
+          DEFAULT: "hsl(var(--whatsapp))",
+          hover: "hsl(var(--whatsapp-hover))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -1,4 +1,5 @@
 import { useCallback, useMemo, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { AppLink as Link } from "@/components/router/AppLink";
 
 import { ChevronLeft, ChevronRight, MessageCircle } from "lucide-react";
@@ -31,7 +32,14 @@ import {
   type ConsultationMode,
   type ConsultationVisitType,
 } from "@/lib/telemedicineBooking";
+import {
+  bookingIntentServiceLabel,
+  bookingIntentServicesForDoctor,
+  isBookingIntentService,
+  parseBookingIntent,
+} from "@/lib/bookingIntent";
 import { cn } from "@/lib/utils";
+import { WHATSAPP_CTA_CLASS } from "@/components/cta/TrackedWhatsAppLink";
 
 const TITLE = BOOKING_DOCUMENT_TITLE;
 const H1 = BOOKING_H1;
@@ -40,6 +48,8 @@ const DESCRIPTION =
 
 export function BookConsultationPage() {
   const path = ROUTES.bookConsultation;
+  const [searchParams] = useSearchParams();
+  const initialIntent = useMemo(() => parseBookingIntent(searchParams), [searchParams]);
   const crumbs = [
     { name: "Home", path: ROUTES.home },
     { name: "Book consultation", path },
@@ -50,15 +60,31 @@ export function BookConsultationPage() {
   ];
 
   const [step, setStep] = useState(0);
-  const [data, setData] = useState<BookingFormData>(defaultBookingFormData);
+  const [data, setData] = useState<BookingFormData>(() =>
+    defaultBookingFormData({
+      doctor: initialIntent.doctor,
+      serviceInterest: initialIntent.service,
+    }),
+  );
   const [consentChecked, setConsentChecked] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [consentError, setConsentError] = useState(false);
 
+  const serviceOptions = useMemo(() => bookingIntentServicesForDoctor(data.doctor), [data.doctor]);
+
   const progress = useMemo(() => ((step + 1) / BOOKING_STEPS.length) * 100, [step]);
 
   const patch = useCallback((partial: Partial<BookingFormData>) => {
-    setData((prev) => ({ ...prev, ...partial }));
+    setData((prev) => {
+      const next = { ...prev, ...partial };
+      if (partial.doctor && next.serviceInterest) {
+        const allowed = bookingIntentServicesForDoctor(partial.doctor).some(
+          (s) => s.slug === next.serviceInterest,
+        );
+        if (!allowed) next.serviceInterest = "";
+      }
+      return next;
+    });
   }, []);
 
   const goNext = () => {
@@ -128,24 +154,54 @@ export function BookConsultationPage() {
             <div className="space-y-6">
               <p className="text-sm text-muted-foreground">
                 Select the clinician you wish to consult. Registration numbers are shown on each
-                card.
+                card. Optional service interest can be prefilled from a booking link and changed
+                here.
               </p>
-              <div className="grid gap-4 sm:grid-cols-2">
-                {(Object.keys(DOCTOR_BY_SLUG) as DoctorSlug[]).map((slug) => (
-                  <button
-                    key={slug}
-                    type="button"
-                    onClick={() => patch({ doctor: slug })}
-                    className={cn(
-                      "text-left rounded-2xl transition ring-2 ring-offset-2 ring-offset-background",
-                      data.doctor === slug
-                        ? "ring-primary"
-                        : "ring-transparent hover:ring-primary/30",
-                    )}
-                  >
-                    <DoctorIdentityCard slug={slug} compact />
-                  </button>
-                ))}
+              <fieldset>
+                <legend className="sr-only">Select clinician</legend>
+                <div className="grid gap-4 sm:grid-cols-2" role="radiogroup" aria-label="Clinician">
+                  {(Object.keys(DOCTOR_BY_SLUG) as DoctorSlug[]).map((slug) => {
+                    const selected = data.doctor === slug;
+                    return (
+                      <button
+                        key={slug}
+                        type="button"
+                        role="radio"
+                        aria-checked={selected}
+                        aria-label={`Select ${DOCTOR_BY_SLUG[slug].name}`}
+                        onClick={() => patch({ doctor: slug })}
+                        className={cn(
+                          "text-left rounded-2xl transition ring-2 ring-offset-2 ring-offset-background focus-visible:outline-none focus-visible:ring-primary",
+                          selected ? "ring-primary" : "ring-transparent hover:ring-primary/30",
+                        )}
+                      >
+                        <DoctorIdentityCard slug={slug} compact />
+                      </button>
+                    );
+                  })}
+                </div>
+              </fieldset>
+              <div className="space-y-2">
+                <Label htmlFor="serviceInterest">Service interest (optional)</Label>
+                <select
+                  id="serviceInterest"
+                  value={isBookingIntentService(data.serviceInterest) ? data.serviceInterest : ""}
+                  onChange={(e) => patch({ serviceInterest: e.target.value })}
+                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                >
+                  <option value="">Not specified</option>
+                  {serviceOptions.map((svc) => (
+                    <option key={svc.slug} value={svc.slug}>
+                      {svc.shortTitle}
+                    </option>
+                  ))}
+                </select>
+                {data.serviceInterest && bookingIntentServiceLabel(data.serviceInterest) ? (
+                  <p className="text-xs text-muted-foreground">
+                    Prefill from link: {bookingIntentServiceLabel(data.serviceInterest)}. You can
+                    change or clear this before continuing.
+                  </p>
+                ) : null}
               </div>
             </div>
           )}
@@ -476,6 +532,14 @@ export function BookConsultationPage() {
                   <dt className="text-muted-foreground">Patient</dt>
                   <dd className="font-medium text-foreground">{data.fullName}</dd>
                 </div>
+                {data.serviceInterest && bookingIntentServiceLabel(data.serviceInterest) ? (
+                  <div>
+                    <dt className="text-muted-foreground">Service interest</dt>
+                    <dd className="font-medium text-foreground">
+                      {bookingIntentServiceLabel(data.serviceInterest)}
+                    </dd>
+                  </div>
+                ) : null}
                 <div>
                   <dt className="text-muted-foreground">Mode</dt>
                   <dd className="font-medium text-foreground capitalize">
@@ -524,11 +588,7 @@ export function BookConsultationPage() {
               </Button>
             )}
             {step === 5 && (
-              <Button
-                type="button"
-                className="bg-[#25D366] hover:bg-[#1ebe57] text-white"
-                onClick={submitBooking}
-              >
+              <Button type="button" className={WHATSAPP_CTA_CLASS} onClick={submitBooking}>
                 <MessageCircle className="h-4 w-4 mr-2" aria-hidden />
                 Confirm &amp; open WhatsApp
               </Button>

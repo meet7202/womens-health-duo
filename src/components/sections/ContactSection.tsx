@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState, useMemo } from "react";
 import { useLocation } from "react-router-dom";
@@ -90,8 +90,8 @@ Sent from Women's Health Duo Website`;
     <section id="contact" className="pt-24 pb-10 bg-secondary/30" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <m.div
+          initial={false}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
@@ -113,10 +113,10 @@ Sent from Women's Health Duo Website`;
             form (patient details + telemedicine consent) or message on{" "}
             <strong className="text-foreground font-medium">WhatsApp</strong>.
           </p>
-        </motion.div>
+        </m.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
+        <m.div
+          initial={false}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.05 }}
           className="mb-12 flex flex-col items-center justify-center gap-3 text-center"
@@ -127,7 +127,7 @@ Sent from Women's Health Duo Website`;
           <Button
             asChild
             size="lg"
-            className="bg-[#25D366] hover:bg-[#1ebe57] text-white border-0 shadow-lg px-8 py-6 text-base"
+            className="bg-whatsapp hover:bg-whatsapp-hover text-white border-0 shadow-lg px-8 py-6 text-base"
           >
             <a
               href={directWhatsAppHref}
@@ -146,12 +146,12 @@ Sent from Women's Health Duo Website`;
             <strong className="text-foreground font-medium">private chat with the practice</strong>,
             not a public group.
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
+          <m.div
+            initial={false}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-background rounded-3xl p-8 shadow-card border border-border/30"
@@ -235,7 +235,7 @@ Sent from Women's Health Duo Website`;
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-green-600 hover:bg-green-700 text-white shadow-soft py-6"
+                className="w-full bg-whatsapp hover:bg-whatsapp-hover text-white shadow-soft py-6"
               >
                 {isSubmitting ? (
                   "Opening WhatsApp..."
@@ -253,11 +253,11 @@ Sent from Women's Health Duo Website`;
                 not a community group.
               </p>
             </form>
-          </motion.div>
+          </m.div>
 
           {/* Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
+          <m.div
+            initial={false}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="space-y-8"
@@ -339,7 +339,7 @@ Sent from Women's Health Duo Website`;
                 <Button
                   asChild
                   variant="default"
-                  className="w-full bg-[#25D366] hover:bg-[#1ebe57]"
+                  className="w-full bg-whatsapp hover:bg-whatsapp-hover text-white"
                 >
                   <a href={directWhatsAppHref} target="_blank" rel="noopener noreferrer">
                     <span className="inline-flex items-center justify-center gap-2">
@@ -381,11 +381,11 @@ Sent from Women's Health Duo Website`;
                 </p>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
+        <m.div
+          initial={false}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.35 }}
           className="mx-auto mt-14 max-w-2xl rounded-2xl border border-border/50 bg-muted/30 p-6 text-center"
@@ -416,7 +416,7 @@ Sent from Women's Health Duo Website`;
               </a>
             </Button>
           </div>
-        </motion.div>
+        </m.div>
 
         <BookingMedicalDisclaimer className="max-w-3xl mx-auto mt-6" />
       </div>

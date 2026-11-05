@@ -5,10 +5,12 @@ import {
   DEFAULT_DESCRIPTION,
   KEYWORDS,
   OG_IMAGE_PATH,
+  DEFAULT_OG_IMAGE_ALT,
 } from "@/config/site";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { capMetaDescription } from "@/lib/seoDescription";
 import { BING_TITLE_MAX_LEN, capDocumentTitle } from "@/lib/seoTitle";
+import { ROBOTS_INDEX_FOLLOW } from "@/config/routeDisposition";
 
 export type SeoHeadProps = {
   /** Full `<title>` text */
@@ -17,6 +19,11 @@ export type SeoHeadProps = {
   /** Path beginning with `/` (e.g. `/faq`). Home is `/`. */
   path?: string;
   metaKeywords?: string;
+  /**
+   * Robots directive. Must match the static shell for the same route (SEO-02).
+   * Defaults to index/follow; pass noindex for intentional exclusions / errors.
+   */
+  robots?: string;
   /** Absolute or site-relative OG/Twitter image (watch pages: video poster). */
   ogImage?: string;
   ogImageAlt?: string;
@@ -25,6 +32,9 @@ export type SeoHeadProps = {
     href: string;
     as?: string;
     type?: string;
+    /** Responsive preload — must match the LCP `<picture>` srcset/sizes. */
+    imageSrcSet?: string;
+    imageSizes?: string;
     crossOrigin?: "anonymous" | "use-credentials";
   }>;
   /** Open Graph type; use `video.other` on Learn watch pages. */
@@ -76,6 +86,7 @@ export function SeoHead({
   metaDescription,
   path,
   metaKeywords,
+  robots = ROBOTS_INDEX_FOLLOW,
   ogImage,
   ogImageAlt,
   preloadImages,
@@ -84,6 +95,7 @@ export function SeoHead({
   const resolvedTitle = capDocumentTitle(title ?? DEFAULT_TITLE, BING_TITLE_MAX_LEN);
   const resolvedDescription = capMetaDescription(metaDescription ?? DEFAULT_DESCRIPTION);
   const resolvedKeywords = metaKeywords ?? KEYWORDS;
+  const resolvedRobots = robots.trim() || ROBOTS_INDEX_FOLLOW;
   const pageUrl = canonicalUrlForPath(path);
   const defaultOgImage = githubPagesAbsoluteUrl(SITE_URL, OG_IMAGE_PATH);
   const resolvedOgImage =
@@ -92,20 +104,16 @@ export function SeoHead({
       : ogImage.startsWith("http")
         ? ogImage
         : githubPagesAbsoluteUrl(SITE_URL, ogImage);
-  const resolvedOgImageAlt =
-    ogImageAlt ??
-    "Women's Health Duo — OB-GYN and women's health physiotherapy in India and online";
+  const resolvedOgImageAlt = ogImageAlt ?? DEFAULT_OG_IMAGE_ALT;
 
   useLayoutEffect(() => {
     document.title = resolvedTitle;
     upsertMeta("name", "description", resolvedDescription);
     upsertMeta("name", "keywords", resolvedKeywords);
-    upsertMeta(
-      "name",
-      "robots",
-      "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-    );
-    upsertMeta("name", "googlebot", "index, follow");
+    upsertMeta("name", "robots", resolvedRobots);
+    // Single robots directive — avoid conflicting googlebot/bingbot overrides (SEO-02).
+    document.querySelector('meta[name="googlebot"]')?.remove();
+    document.querySelector('meta[name="bingbot"]')?.remove();
 
     upsertLink("canonical", pageUrl);
 
@@ -113,6 +121,8 @@ export function SeoHead({
       upsertLinkWithAttrs("preload", image.href, {
         as: image.as ?? "image",
         ...(image.type ? { type: image.type } : {}),
+        ...(image.imageSrcSet ? { imagesrcset: image.imageSrcSet } : {}),
+        ...(image.imageSizes ? { imagesizes: image.imageSizes } : {}),
         ...(image.crossOrigin ? { crossorigin: image.crossOrigin } : {}),
       });
     });
@@ -136,6 +146,7 @@ export function SeoHead({
     resolvedTitle,
     resolvedDescription,
     resolvedKeywords,
+    resolvedRobots,
     pageUrl,
     resolvedOgImage,
     resolvedOgImageAlt,

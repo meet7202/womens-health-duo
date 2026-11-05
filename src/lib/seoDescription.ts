@@ -30,10 +30,16 @@ function truncateAtWord(text: string, maxLen: number): string {
 }
 
 function stripDanglingClauseEnd(text: string): string {
-  return text
+  let out = text
     .replace(/\([^)]*$/, "")
     .replace(/[,;:\s]+$/, "")
     .trim();
+  // Drop orphaned one-word "sentences" left after mid-phrase cuts (e.g. "Read.").
+  out = out.replace(/(?:^|\s)([A-Za-z]{1,12})\.\s*$/u, (full, word: string) => {
+    if (/^(?:Dr|Mr|Ms|Mrs|vs|etc|Inc|Ltd)$/i.test(word)) return full;
+    return "";
+  });
+  return out.replace(/[,;:\s]+$/u, "").trim();
 }
 
 function sentenceBreakIndex(text: string): number {
@@ -55,10 +61,7 @@ function leadBeforeBookingCta(trimmed: string, bodyBudget: number): string {
     }
   }
 
-  const secondDoctor = trimmed.search(/ and Dr\. Zalak/i);
-  if (secondDoctor >= META_DESCRIPTION_MIN_LEN && secondDoctor <= bodyBudget) {
-    return trimmed.slice(0, secondDoctor).trim();
-  }
+  // Do not cut before "and Dr. Zalak" — that erased the second clinician from duo copy (SEO-05).
 
   const closedClause = trimmed.indexOf("). ");
   if (closedClause > 0) {

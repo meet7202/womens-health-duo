@@ -15,9 +15,23 @@
  * captions live on each row in `knowledgeHubInstagramReels.json` (sync with
  * `node scripts/sync-instagram-captions-from-oembed.mjs`).
  */
+import { captionEditorialHoldForKey } from "./knowledgeHubCaptionEditorial";
 import knowledgeHubInstagramPostsJson from "./knowledgeHubInstagramPosts.json";
 import knowledgeHubInstagramReelsJson from "./knowledgeHubInstagramReels.json";
 import knowledgeHubYoutubeCaptionsJson from "./knowledgeHubYoutubeCaptions.json";
+
+/** Keep local (do not import eligibility — that module imports this file). */
+const PLATFORM_ERROR_CAPTION_MARKERS = [
+  "this content isn't available",
+  "content isn't available to everyone",
+  "sorry, this page isn't available",
+];
+
+function isPlatformUnavailableCaption(text: string | undefined): boolean {
+  const t = (text ?? "").trim().toLowerCase();
+  if (!t) return false;
+  return PLATFORM_ERROR_CAPTION_MARKERS.some((m) => t.includes(m));
+}
 
 export type HubDoctorTag = "charmi" | "zalak" | "both";
 
@@ -120,6 +134,25 @@ export function knowledgeHubInstagramReelNativeVideo(
   return poster ? { src, poster } : { src };
 }
 
+function captionEditorialHoldForVideo(v: KnowledgeHubVideo) {
+  if (v.kind === "youtube_short") {
+    return captionEditorialHoldForKey(v.id) ?? captionEditorialHoldForKey(v.youtubeVideoId);
+  }
+  if (v.kind === "instagram_reel") {
+    return captionEditorialHoldForKey(v.id) ?? captionEditorialHoldForKey(v.instagramReelId);
+  }
+  return undefined;
+}
+
+/** True when a caption must not drive H1/title (empty or Instagram availability error). */
+export function isRejectedKnowledgeHubCaptionForDisplayTitle(
+  text: string | null | undefined,
+): boolean {
+  const t = (text ?? "").trim();
+  if (!t) return true;
+  return isPlatformUnavailableCaption(t);
+}
+
 /** On-page H1 and `<title>` for watch pages; prefers a caption lead over generic reel titles. */
 export function knowledgeHubVideoDisplayTitle(v: KnowledgeHubVideo): string {
   const title = v.title.trim();
@@ -127,33 +160,51 @@ export function knowledgeHubVideoDisplayTitle(v: KnowledgeHubVideo): string {
     (v.kind === "instagram_reel" && GENERIC_INSTAGRAM_REEL_TITLE.test(title)) ||
     (v.kind === "instagram_post" && GENERIC_INSTAGRAM_POST_TITLE.test(title));
   if (!isGenericInstagram) return v.title;
+  // SEO-16: never promote empty / platform-unavailable error strings into the display title.
   const cap = knowledgeHubVideoOriginalPlatformCaption(v);
-  if (cap) {
+  if (cap && !isRejectedKnowledgeHubCaptionForDisplayTitle(cap)) {
     const line = cap
       .split("\n")
       .map((l) => l.trim())
-      .find((l) => l.length >= 24);
+      .find((l) => l.length >= 24 && !isRejectedKnowledgeHubCaptionForDisplayTitle(l));
     if (line) return line.length > 120 ? `${line.slice(0, 117)}…` : line;
   }
   return v.title;
 }
 
-/** Text under the embed and in `VideoObject.description` ,  use platform captions when set. */
+/**
+ * Text under the embed and in `VideoObject.description`.
+ * Editorial holds (SEO-15) serve `displayCaption`; platform originals remain available via
+ * `knowledgeHubVideoOriginalPlatformCaption`.
+ */
 export function knowledgeHubVideoCaptionForSeo(v: KnowledgeHubVideo): string {
+  const hold = captionEditorialHoldForVideo(v);
+  if (hold?.displayCaption?.trim()) return hold.displayCaption.trim();
   if (v.kind === "youtube_short") {
     return v.youtubeCaption ?? `${v.title}\n\n${v.summary}`;
   }
   return v.instagramCaption ?? `${v.title}\n\n${v.summary}`;
 }
 
-/** Original public caption / description only (no site fallback). */
+/** Whether on-site caption display is an editorial hold (not the raw platform text). */
+export function knowledgeHubVideoHasCaptionEditorialHold(v: KnowledgeHubVideo): boolean {
+  return Boolean(captionEditorialHoldForVideo(v)?.displayCaption?.trim());
+}
+
+/**
+ * Original public caption / description only (no site fallback, no editorial rewrite).
+ * Prefer live row fields; fall back to the held snapshot when present.
+ */
 export function knowledgeHubVideoOriginalPlatformCaption(v: KnowledgeHubVideo): string | null {
   if (v.kind === "youtube_short") {
     const t = v.youtubeCaption?.trim();
-    return t && t.length > 0 ? t : null;
+    if (t) return t;
+  } else {
+    const t = v.instagramCaption?.trim();
+    if (t) return t;
   }
-  const t = v.instagramCaption?.trim();
-  return t && t.length > 0 ? t : null;
+  const held = captionEditorialHoldForVideo(v)?.platformCaptionOriginal?.trim();
+  return held && held.length > 0 ? held : null;
 }
 
 type KnowledgeHubInstagramReelJson = Omit<
@@ -261,6 +312,7 @@ const KNOWLEDGE_HUB_YOUTUBE_VIDEOS_RAW: readonly KnowledgeHubVideo[] = [
     summary: "Women's Health Duo on YouTube Shorts ,  fertility testing overview.",
     postedAt: "2026-01-30T09:28:27-08:00",
     approxViews: 630,
+    // SEO-15: ovarian-reserve caption hold lives in knowledgeHubCaptionEditorial.json
   },
   {
     id: "yt-duo-kegels-myth",
@@ -338,6 +390,56 @@ _hubMerged.sort(compareKnowledgeHubVideos);
 
 export const KNOWLEDGE_HUB_VIDEOS: readonly KnowledgeHubVideo[] = _hubMerged;
 
+/**
+ * Resolve a Learn watch id: canonical hub `id`, raw YouTube video id, or Instagram shortcode.
+ * Platform-id aliases redirect to the canonical `/learn/watch/<id>/` path (GSC Coverage 404s).
+ */
 export function getKnowledgeHubVideoById(id: string): KnowledgeHubVideo | undefined {
-  return KNOWLEDGE_HUB_VIDEOS.find((v) => v.id === id);
+  const direct = KNOWLEDGE_HUB_VIDEOS.find((v) => v.id === id);
+  if (direct) return direct;
+
+  const lowered = id.toLowerCase();
+  return KNOWLEDGE_HUB_VIDEOS.find((v) => {
+    if (v.kind === "youtube_short" && v.youtubeVideoId === id) return true;
+    if (v.kind === "instagram_reel") {
+      return (
+        v.instagramReelId === id ||
+        v.instagramReelId.toLowerCase() === lowered ||
+        `ig-${v.instagramReelId}`.toLowerCase() === lowered
+      );
+    }
+    if (v.kind === "instagram_post") {
+      return (
+        v.instagramPostId === id ||
+        v.instagramPostId.toLowerCase() === lowered ||
+        `igp-${v.instagramPostId}`.toLowerCase() === lowered
+      );
+    }
+    return false;
+  });
+}
+
+/** Non-canonical watch path segments that should 301/meta-refresh to `learnVideoWatchPath(video.id)`. */
+export function knowledgeHubWatchIdAliases(video: KnowledgeHubVideo): string[] {
+  const aliases: string[] = [];
+  if (video.kind === "youtube_short" && video.youtubeVideoId && video.youtubeVideoId !== video.id) {
+    aliases.push(video.youtubeVideoId);
+  }
+  if (video.kind === "instagram_reel" && video.instagramReelId) {
+    const short = video.instagramReelId;
+    if (short !== video.id) aliases.push(short);
+    const withPrefix = `ig-${short}`;
+    if (withPrefix !== video.id && withPrefix.toLowerCase() !== video.id.toLowerCase()) {
+      aliases.push(withPrefix);
+    }
+  }
+  if (video.kind === "instagram_post" && video.instagramPostId) {
+    const short = video.instagramPostId;
+    if (short !== video.id) aliases.push(short);
+    const withPrefix = `igp-${short}`;
+    if (withPrefix !== video.id && withPrefix.toLowerCase() !== video.id.toLowerCase()) {
+      aliases.push(withPrefix);
+    }
+  }
+  return [...new Set(aliases)];
 }

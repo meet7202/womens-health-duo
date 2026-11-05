@@ -7,7 +7,9 @@ import { CONTACT, SITE_URL } from "@/config/site";
 import { ROUTES } from "@/config/routes";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { whatsappMessageDoctorProfile, whatsappUrlWithMessage } from "@/lib/whatsappCta";
+import { TrackedWhatsAppLink, WHATSAPP_CTA_CLASS } from "@/components/cta/TrackedWhatsAppLink";
 import { DOCTOR_BY_SLUG, type DoctorSlug } from "@/data/doctorProfiles";
+import { bookConsultationPath } from "@/lib/bookingIntent";
 import { doctorDocumentTitle } from "@/lib/pageSeoCopy";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
@@ -149,9 +151,8 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
               Dr. Zalak&apos;s strongest care paths:
             </strong>{" "}
             prenatal support, postnatal recovery, urinary incontinence and pelvic floor rehab, and
-            diastasis recti / core retraining. These are the main add-on growth clusters alongside
-            the online consultation engine, with Pilates used as a support layer for safe, guided
-            progress.
+            diastasis recti / core retraining. Online consultation is available worldwide; STOTT
+            Pilates (Mat and Reformer) supports safe, guided progress when it fits your care plan.
           </div>
         ) : null}
 
@@ -281,23 +282,21 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-3">
             <Button size="lg" variant="default" asChild className="min-h-[3rem]">
-              <Link to={ROUTES.bookConsultation}>Book consultation</Link>
+              <Link to={bookConsultationPath({ doctor: slug })}>Book consultation</Link>
             </Button>
-            <Button
-              size="lg"
-              asChild
-              className="bg-[#25D366] hover:bg-[#1ebe57] text-white border-0 shadow-sm min-h-[3rem]"
-            >
-              <a
+            <Button size="lg" asChild className={`${WHATSAPP_CTA_CLASS} shadow-sm min-h-[3rem]`}>
+              <TrackedWhatsAppLink
                 href={whatsappUrlWithMessage(whatsappMessageDoctorProfile(d.name, d.path))}
-                target="_blank"
-                rel="noopener noreferrer"
+                ctaPlacement="doctor_profile"
+                doctor={d.name}
+                service="online_consult"
+                pagePath={d.path}
               >
                 <span className="inline-flex items-center justify-center gap-2">
                   <MessageCircle className="h-5 w-5 shrink-0" aria-hidden />
                   WhatsApp
                 </span>
-              </a>
+              </TrackedWhatsAppLink>
             </Button>
             <Button size="lg" variant="outline" asChild className="min-h-[3rem]">
               <Link to={ROUTES.homeContact}>Contact</Link>
