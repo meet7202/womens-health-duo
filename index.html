@@ -87,6 +87,19 @@
     <noscript>
       <link rel="stylesheet" href="%BASE_URL%fonts/fonts-italic.css" />
     </noscript>
+    <!--
+      Crawl `#static-seo-shell` stays in HTML for no-JS agents / Markdown worker.
+      JS visitors must not see it (esp. when GitHub Pages serves 404.html for a SPA path).
+      Mark <html> early so CSS can hide the shell before React boots; RemoveStaticSeoShell deletes it.
+    -->
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <style>
+      html.js #static-seo-shell {
+        display: none !important;
+      }
+    </style>
   </head>
 
   <body>

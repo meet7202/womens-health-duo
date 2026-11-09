@@ -1,0 +1,2 @@
+url,check_timestamp,js_enabled,title_match_raw,h1_visible,primary_cta_works,console_errors,hydration_ok,notes
+,pending-after-deploy,,,,,,,"SEO-38 pending: browser-rendered coverage after deploy; compare raw shell/prerender vs hydrated DOM for sample URLs"

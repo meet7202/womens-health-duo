@@ -2,6 +2,7 @@
 
 Branch: `seo/remediation-2026-11`  
 Started: 5 November 2026  
+Closeout checkpoint: 9 November 2026  
 Canonical origin: `https://womenshealthduo.com`
 
 Progress ledger for the evidence-led remediation prompt. Status values: `not-started` | `in-progress` | `verified-local` | `needs-owner-data` | `needs-deploy-check` | `complete`.
@@ -17,6 +18,10 @@ Progress ledger for the evidence-led remediation prompt. Status values: `not-sta
 | Guide disposition (SEO-12/36)   | [`docs/seo-guide-disposition.csv`](seo-guide-disposition.csv) (`npm run generate:seo-guide-disposition`)        |
 | Page status ledger (SEO-32)     | [`docs/seo-page-status.csv`](seo-page-status.csv) (`npm run generate:seo-page-status` / `test:seo-page-status`) |
 | Media disposition (SEO-36)      | [`docs/seo-media-disposition.csv`](seo-media-disposition.csv) (`npm run generate:seo-media-disposition`)        |
+| Launch checklist (L01–W10)      | [`docs/seo-launch-checklist.md`](seo-launch-checklist.md)                                                       |
+| Owner / clinician actions       | [`docs/seo-owner-actions.md`](seo-owner-actions.md)                                                             |
+| Production crawl (SEO-38)       | [`docs/seo-production-crawl.csv`](seo-production-crawl.csv) — **pending after deploy**                          |
+| Browser coverage (SEO-38)       | [`docs/seo-browser-coverage.csv`](seo-browser-coverage.csv) — **pending after deploy**                          |
 | Cloudflare redirect prep        | [`docs/seo-cloudflare-redirects.md`](seo-cloudflare-redirects.md)                                               |
 | Route disposition model         | [`src/config/routeDisposition.ts`](../src/config/routeDisposition.ts)                                           |
 | Guide uniqueness overrides      | [`src/data/topicGuides/guideUniquenessOverrides.ts`](../src/data/topicGuides/guideUniquenessOverrides.ts)       |
@@ -86,17 +91,17 @@ Exports under `~/Downloads/womenshealthduo.com-*-2026-11-05.zip` (Coverage, Vide
 | SEO-42 | needs-owner-data   | Clinical/local authority queue.                                                                                                                                                                                                                                                                                                                  |
 | SEO-43 | verified-local     | [`docs/seo-measurement-plan.md`](seo-measurement-plan.md)                                                                                                                                                                                                                                                                                        |
 
-## Checks run (this wave)
+## Checks run (closeout 9 Nov 2026)
 
-| Command                                       | Result                                                                                          |
-| --------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `npm run lint` / `format:check` / `typecheck` | OK                                                                                              |
-| `npm run build`                               | OK — shells + prerender 43/43 templates; unclipped shell; dual-H1 stripped on SSR               |
-| `npm run audit:seo-titles` … `seo-sitemap`    | OK — titles ≤69; descriptions 25–160; one H1; no duplicate headings; lastmod omitted; video 106 |
-| `npm run audit:seo-semantic`                  | OK                                                                                              |
-| `npm run audit:indexnow-manifest`             | OK dry-run (baseline empty → all added)                                                         |
-| `npm run test:indexnow-change-manifest`       | OK                                                                                              |
-| `npm run test:seo-page-status`                | OK (7561 ≈ 7558)                                                                                |
+| Command                                       | Result                                                                                             |
+| --------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `npm run lint` / `format:check` / `typecheck` | OK                                                                                                 |
+| `npm run build`                               | OK — shells + prerender 43/43 templates; hero picture; IndexNow manifest                           |
+| `npm run audit:seo-titles` … `seo-sitemap`    | OK — 7764 shells; titles ≤69; descriptions 25–160; one H1; lastmod omitted; primary 967; video 106 |
+| `npm run audit:seo-semantic`                  | OK                                                                                                 |
+| `npm run test:seo-page-status`                | OK (7561 ≈ 7558)                                                                                   |
+| `npm run test:indexnow-change-manifest`       | OK                                                                                                 |
+| `npm run test:google-indexing-guard`          | OK                                                                                                 |
 
 ### Spot-checks (`dist/`)
 
