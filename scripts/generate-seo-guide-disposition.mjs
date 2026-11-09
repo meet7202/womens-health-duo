@@ -85,6 +85,10 @@ async function main() {
       const hasScaffoldFlag = scaffoldYes ? "yes" : "no";
       if (scaffoldYes) scaffolded += 1;
 
+      // Prefer registry-resolved status (includes TOPIC_GUIDE_REVIEW_HOLDS). Keep `status` and
+      // `reviewStatus` identical so the CSV never collapses draft/needs-review into "pending".
+      const reviewStatus = guide?.reviewStatus ?? row.reviewStatus ?? "pending";
+
       lines.push(
         [
           `/${row.slug}`,
@@ -93,9 +97,9 @@ async function main() {
           primaryQuestion,
           "keep-improve",
           clinicalReviewerRequired(row.cluster, row.primaryConsult),
-          guide?.reviewStatus === "approved" ? "approved" : "pending",
+          reviewStatus,
           hasScaffoldFlag,
-          row.reviewStatus ?? guide?.reviewStatus ?? "approved",
+          reviewStatus,
         ]
           .map(csvEscape)
           .join(","),
