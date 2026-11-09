@@ -54,7 +54,7 @@ function jsonResponse(body: unknown, status = 200): Response {
       "content-type": "application/json; charset=utf-8",
       "cache-control": "no-store",
       "access-control-allow-origin": "*",
-      "access-control-allow-methods": "GET, POST, OPTIONS",
+      "access-control-allow-methods": "GET, HEAD, POST, OPTIONS",
       "access-control-allow-headers": "content-type, authorization",
     },
   });
@@ -136,19 +136,33 @@ export default {
         status: 204,
         headers: {
           "access-control-allow-origin": "*",
-          "access-control-allow-methods": "GET, POST, OPTIONS",
+          "access-control-allow-methods": "GET, HEAD, POST, OPTIONS",
           "access-control-allow-headers": "content-type, authorization",
         },
       });
     }
 
     if (url.pathname === "/" || url.pathname === "/a2a" || url.pathname === "/a2a/") {
-      if (request.method === "GET") {
-        return jsonResponse({
+      if (request.method === "GET" || request.method === "HEAD") {
+        const card = {
           jsonrpc: "2.0",
           kind: "agent-card",
           ...AGENT_CARD,
-        });
+        };
+        // Cloudflare / uptime probes often use HEAD — must not 404.
+        if (request.method === "HEAD") {
+          return new Response(null, {
+            status: 200,
+            headers: {
+              "content-type": "application/json; charset=utf-8",
+              "cache-control": "no-store",
+              "access-control-allow-origin": "*",
+              "access-control-allow-methods": "GET, POST, OPTIONS, HEAD",
+              "access-control-allow-headers": "content-type, authorization",
+            },
+          });
+        }
+        return jsonResponse(card);
       }
 
       if (request.method === "POST") {

@@ -7,6 +7,13 @@ Normal browser requests are unchanged (pass-through), except:
 - **Long cache** on `/assets/*`, `/fonts/*`, and other fingerprinted static files (`Cache-Control: public, max-age=31536000, immutable`).
 - **Rocket Loader off** via `fetch(..., { cf: { rocketLoader: false } })` so Cloudflare does not inject `rocket-loader.min.js` on Worker routes.
 
+## Origin fetch (important)
+
+This Worker must call `fetch(incomingRequest)` with the **original** Request so Cloudflare
+forwards to GitHub Pages. Constructing `new Request(sameUrl)` re-enters the Worker and can
+exhaust subrequests (dashboard errors / 1102). Optional `ORIGIN_RESOLVE_OVERRIDE` must be a
+**same-zone** CNAME to Pages — not `*.github.io`.
+
 ## Prerequisites
 
 - Cloudflare **Free** plan is fine (Worker free tier: 100k requests/day).

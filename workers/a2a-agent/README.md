@@ -4,20 +4,18 @@ This worker exposes a minimal A2A-compatible endpoint for `womenshealthduo.com`.
 
 ## Endpoints
 
-- `GET https://womenshealthduo.com/a2a` — returns the agent card JSON
+- `GET` / `HEAD https://womenshealthduo.com/a2a` — agent card JSON (`HEAD` for Cloudflare/uptime probes)
 - `POST https://womenshealthduo.com/a2a` — accepts a minimal A2A-style message payload and responds with a structured result
 - `OPTIONS https://womenshealthduo.com/a2a` — handles CORS preflight
 
 ## Deploy
 
 ```sh
-cd workers/a2a-agent
-npm install
-npx wrangler login
-npm run deploy
+# From repo root (or cd workers/a2a-agent && npm run deploy)
+npm run deploy:a2a-agent
 ```
 
-If route attachment fails, add the Cloudflare account ID to `wrangler.toml` or deploy with `npx wrangler deploy --env production` after logging in.
+Requires a fresh `npx wrangler login` if the local OAuth token expired. If route attachment fails, set `account_id` in `wrangler.toml`.
 
 ## Notes
 

@@ -4,37 +4,46 @@ import {
   shouldSkipMarkdownPath,
   wantsMarkdown,
 } from "./convert";
-import { FETCH_NO_ROCKET_LOADER, isLongCachePath, withImmutableCache } from "./cacheHeaders";
+import { isLongCachePath, withImmutableCache } from "./cacheHeaders";
 
 export interface Env {
   ORIGIN_HOST: string;
-  ORIGIN_RESOLVE_OVERRIDE: string;
+  /**
+   * Optional same-zone CNAME that points at GitHub Pages (e.g. `origin.womenshealthduo.com`).
+   * Used only with `cf.resolveOverride` — ignored when empty or outside this zone.
+   */
+  ORIGIN_RESOLVE_OVERRIDE?: string;
 }
 
-/** Internal header so origin subrequests skip markdown conversion (avoids worker loops). */
-const ORIGIN_FETCH_HEADER = "x-whd-markdown-origin-fetch";
-
-function originFetchRequest(request: Request): Request {
-  const headers = new Headers(request.headers);
-  headers.delete("Accept");
-  headers.set("Accept", "text/html,application/xhtml+xml;q=0.9,*/*;q=0.8");
-  headers.set(ORIGIN_FETCH_HEADER, "1");
-
-  return new Request(request.url, {
-    method: "GET",
-    headers,
-    redirect: "follow",
-  });
+function isA2aPath(pathname: string): boolean {
+  return pathname === "/a2a" || pathname.startsWith("/a2a/");
 }
 
-function stripOriginFetchHeader(request: Request): Request {
-  const headers = new Headers(request.headers);
-  headers.delete(ORIGIN_FETCH_HEADER);
-  return new Request(request.url, {
-    method: request.method,
-    headers,
-    redirect: request.redirect,
-  });
+/**
+ * Forward to the zone origin without re-entering this Worker.
+ * Always pass the *incoming* Request object to `fetch` (Cloudflare routes that to origin).
+ * Optionally set `resolveOverride` when a same-zone CNAME is configured.
+ */
+function originFetchInit(env: Env): RequestInit {
+  const cf: Record<string, unknown> = { rocketLoader: false };
+  const override = env.ORIGIN_RESOLVE_OVERRIDE?.trim();
+  if (override) {
+    cf.resolveOverride = override;
+  }
+  return { cf };
+}
+
+/** Same-zone fetch with Rocket Loader disabled; long-cache hashed static assets. */
+async function fetchPassthrough(
+  request: Request,
+  pathname: string,
+  env: Env,
+): Promise<Response> {
+  const response = await fetch(request, originFetchInit(env));
+  if (isLongCachePath(pathname) && response.ok) {
+    return withImmutableCache(response);
+  }
+  return response;
 }
 
 function mergeVary(existing: string | null, value: string): string {
@@ -73,40 +82,34 @@ function markdownHeaders(
   return headers;
 }
 
-/** Same-zone fetch with Rocket Loader disabled; long-cache hashed static assets. */
-async function fetchPassthrough(request: Request, pathname: string): Promise<Response> {
-  const response = await fetch(request, FETCH_NO_ROCKET_LOADER);
-  if (isLongCachePath(pathname) && response.ok) {
-    return withImmutableCache(response);
-  }
-  return response;
-}
-
 export default {
-  async fetch(request: Request, _env: Env): Promise<Response> {
-    if (request.headers.get(ORIGIN_FETCH_HEADER) === "1") {
-      return fetch(stripOriginFetchHeader(request), FETCH_NO_ROCKET_LOADER);
-    }
-
+  async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
 
+    // Leave /a2a* to whd-a2a-agent (more specific route); still pass original Request to origin path.
+    if (isA2aPath(url.pathname)) {
+      return fetch(request, originFetchInit(env));
+    }
+
     if (request.method !== "GET" && request.method !== "HEAD") {
-      return fetch(request, FETCH_NO_ROCKET_LOADER);
+      return fetch(request, originFetchInit(env));
     }
 
     if (shouldSkipMarkdownPath(url.pathname)) {
-      return fetchPassthrough(request, url.pathname);
+      return fetchPassthrough(request, url.pathname, env);
     }
 
     if (!wantsMarkdown(request.headers.get("Accept"))) {
-      return fetchPassthrough(request, url.pathname);
+      return fetchPassthrough(request, url.pathname, env);
     }
 
     let originResponse: Response;
     try {
-      originResponse = await fetch(originFetchRequest(request), FETCH_NO_ROCKET_LOADER);
+      // Critical: fetch the *incoming* Request so CF hits origin (no Worker loop).
+      // Do not construct `new Request(url)` for same-host origin fetches.
+      originResponse = await fetch(request, originFetchInit(env));
     } catch {
-      return fetchPassthrough(request, url.pathname);
+      return fetchPassthrough(request, url.pathname, env);
     }
 
     const contentType = originResponse.headers.get("Content-Type") ?? "";
