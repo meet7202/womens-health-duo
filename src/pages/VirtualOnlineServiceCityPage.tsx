@@ -26,8 +26,9 @@ import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { InclusiveSeoListFootnote } from "@/components/seo/InclusiveSeoListFootnote";
 import { Button } from "@/components/ui/button";
 import {
-  PRACTICE_BOTH_DOCTORS_IN_PERSON,
+  PRACTICE_CHARMI_IN_PERSON,
   PRACTICE_IN_PERSON_BOOKING_LINE,
+  PRACTICE_ZALAK_IN_PERSON,
 } from "@/config/practiceLocations";
 import { onlineServiceCityFaqs } from "@/data/contextualFaqs";
 import { bookConsultationPath } from "@/lib/bookingIntent";
@@ -146,8 +147,11 @@ export function VirtualOnlineServiceCityPage() {
             , then book with your time zone and a short summary of your concern.
           </p>
           <p>
-            <strong className="text-foreground">In person (India):</strong>{" "}
-            {PRACTICE_BOTH_DOCTORS_IN_PERSON} {PRACTICE_IN_PERSON_BOOKING_LINE}
+            <strong className="text-foreground">Separate India in-person option:</strong> this{" "}
+            {city.city} page is for video care only. If you travel to India, Dr. Charmi Shah sees
+            patients in {PRACTICE_CHARMI_IN_PERSON}, and Dr. Zalak Shah in{" "}
+            {PRACTICE_ZALAK_IN_PERSON}— by appointment at those centres, not a Women&apos;s Health
+            Duo clinic in {city.city}. {PRACTICE_IN_PERSON_BOOKING_LINE}
           </p>
         </div>
 
