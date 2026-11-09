@@ -46,7 +46,7 @@ const LEARN_HUB_DEFAULT: FaqItem[] = [
   {
     question: "How quickly do you reply on WhatsApp?",
     answer:
-      "We aim to respond during working hours listed on doctor profiles. For emergencies, use your local emergency services.",
+      "We aim to respond Monday–Saturday, 9:00 AM–6:00 PM (India). For emergencies, use your local emergency services.",
   },
   {
     question: "Where is the full practice FAQ?",

@@ -11,8 +11,9 @@ compatibility_date = "2024-12-01"
 
 [vars]
 ORIGIN_HOST = "womenshealthduo.com"
-# GitHub Pages host for resolveOverride (bypasses worker loop on subfetch).
-ORIGIN_RESOLVE_OVERRIDE = "meet7202.github.io"
+# Optional same-zone CNAME → GitHub Pages for cf.resolveOverride (must be ON this zone).
+# Do not set meet7202.github.io here — resolveOverride only works for hosts in this zone.
+# ORIGIN_RESOLVE_OVERRIDE = "origin.womenshealthduo.com"
 
 # Route attaches this worker to production HTML. Deploy creates/updates the route when account_id is set.
 [[routes]]

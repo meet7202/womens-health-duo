@@ -7,11 +7,25 @@ Normal browser requests are unchanged (pass-through), except:
 - **Long cache** on `/assets/*`, `/fonts/*`, and other fingerprinted static files (`Cache-Control: public, max-age=31536000, immutable`).
 - **Rocket Loader off** via `fetch(..., { cf: { rocketLoader: false } })` so Cloudflare does not inject `rocket-loader.min.js` on Worker routes.
 
+## Origin fetch (important)
+
+This Worker must call `fetch(incomingRequest)` with the **original** Request so Cloudflare
+forwards to GitHub Pages. Constructing `new Request(sameUrl)` re-enters the Worker and can
+exhaust subrequests (dashboard errors / 1102). Optional `ORIGIN_RESOLVE_OVERRIDE` must be a
+**same-zone** CNAME to Pages — not `*.github.io`.
+
 ## Prerequisites
 
 - Cloudflare **Free** plan is fine (Worker free tier: 100k requests/day).
 - Zone `womenshealthduo.com` on your Cloudflare account.
 - [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/) (`npm install` runs in this folder).
+
+## Cloudflare Workers Builds note
+
+This monorepo is **npm-primary** (`package-lock.json`). Do not commit a root `bun.lockb` —
+Workers Builds auto-detects Bun and runs `bun install --frozen-lockfile`, which fails when the
+Bun lockfile drifts from `package.json`. Prefer dashboard deploy via Wrangler CLI from this
+folder, or set the build root/`package manager` to npm if using Workers Builds CI.
 
 ## One-time deploy
 

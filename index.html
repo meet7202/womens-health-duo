@@ -87,9 +87,55 @@
     <noscript>
       <link rel="stylesheet" href="%BASE_URL%fonts/fonts-italic.css" />
     </noscript>
+    <!--
+      Crawl `#static-seo-shell` stays in HTML for no-JS agents / Markdown worker.
+      JS visitors must not see it (esp. when GitHub Pages serves 404.html for a SPA path).
+      Mark <html> early so CSS can hide the shell before React boots; RemoveStaticSeoShell
+      removes the node only after a live #root h1 mounts (lazy routes / Markdown still OK).
+    -->
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <style>
+      html.js #static-seo-shell {
+        display: none !important;
+      }
+    </style>
+    <!-- Google Tag Manager (@@SEO_GTM_CONTAINER_ID@@). dataLayer + gtag shim for whatsapp_click. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+    </script>
+    <script>
+      (function (w, d, s, l, i) {
+        // Fail closed: never request gtm.js with a missing/placeholder id.
+        if (!i || i.indexOf("@@") !== -1 || !/^GTM-[A-Z0-9]+$/i.test(i)) return;
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "@@SEO_GTM_CONTAINER_ID@@");
+    </script>
   </head>
 
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=@@SEO_GTM_CONTAINER_ID@@"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+        title="Google Tag Manager"
+      ></iframe
+    ></noscript>
     @@PAGE_STATIC_FALLBACK@@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

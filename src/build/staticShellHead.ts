@@ -606,13 +606,14 @@ function shellAbsoluteHref(siteUrl: string, path: string): string {
   return githubPagesAbsoluteUrl(siteUrl, p);
 }
 
-/** Visible crawlable shell (SEO-10) — not clipped; removed after React mounts a live H1. */
+/** Crawlable shell (SEO-10) — visible without JS; hidden via `html.js` CSS for JS visitors. */
 const STATIC_SEO_SHELL_STYLES =
   "max-width:42rem;margin:1.5rem auto;padding:0 1rem 1.25rem;font-family:system-ui,sans-serif;line-height:1.55;color:#111";
 
 /**
- * Crawlable HTML for this route: one visible H1 in `#static-seo-shell` (removed when React mounts).
- * Enriched with route-specific paragraphs/links when available. Readable without JavaScript.
+ * Crawlable HTML for this route: one H1 in `#static-seo-shell` for no-JS crawlers / Markdown worker.
+ * Sighted JS visitors never see it (`html.js` CSS). `RemoveStaticSeoShell` drops the node only after
+ * a live `#root h1` mounts so lazy routes do not lose crawl HTML before content paints.
  */
 export function buildStaticShellBodyFallback(meta: ShellPageMeta, siteUrl: string): string {
   const h1 = escapeHtmlPcdata(meta.h1);

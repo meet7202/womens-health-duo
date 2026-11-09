@@ -40,3 +40,7 @@ google-indexing-service-account.json
 *.njsproj
 *.sln
 *.sw?
+
+# This repo is npm-primary (package-lock.json). Stale bun.lockb made Cloudflare Workers Builds run `bun install --frozen-lockfile` and fail after lovable-tagger was removed.
+bun.lockb
+bun.lock

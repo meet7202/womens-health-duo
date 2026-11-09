@@ -2,7 +2,12 @@ import { m } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Star, Quote, ExternalLink } from "lucide-react";
-import { PUBLIC_REVIEW_PROVENANCE, publicReviewHasAggregate } from "@/config/publicReviews";
+import {
+  PUBLIC_REVIEW_PROVENANCE,
+  publicReviewCount,
+  publicReviewHasAggregate,
+  publicReviewRating,
+} from "@/config/publicReviews";
 
 type Testimonial = {
   name: string;
@@ -72,16 +77,16 @@ function ReviewSummaryCard({
 }) {
   const provenance = PUBLIC_REVIEW_PROVENANCE[slug];
   const hasAggregate = publicReviewHasAggregate(provenance);
+  const rating = publicReviewRating(provenance);
+  const reviewCount = publicReviewCount(provenance);
   const sourceUrl = provenance.sourceUrl;
   const sourceLabel = provenance.sourceLabel ?? "Google reviews";
 
   const body = (
     <>
-      {hasAggregate ? (
+      {hasAggregate && rating != null ? (
         <div>
-          <p className="font-heading text-3xl font-semibold text-foreground">
-            {provenance.rating!.toFixed(1)}
-          </p>
+          <p className="font-heading text-3xl font-semibold text-foreground">{rating.toFixed(1)}</p>
           <div className="flex gap-0.5" aria-hidden>
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-4 h-4 fill-primary text-primary" />
@@ -97,9 +102,9 @@ function ReviewSummaryCard({
       )}
       <div className="text-left">
         <p className="font-medium text-foreground">{doctorLabel}</p>
-        {hasAggregate ? (
+        {hasAggregate && reviewCount != null ? (
           <p className="text-sm text-muted-foreground">
-            {provenance.reviewCount} {sourceLabel}
+            {reviewCount} {sourceLabel}
             {provenance.asOf ? ` (as of ${provenance.asOf})` : ""}
           </p>
         ) : sourceUrl ? (
@@ -125,8 +130,8 @@ function ReviewSummaryCard({
         rel="noopener noreferrer"
         className={`${cardClass} hover:border-primary/30 hover:shadow-card transition-all text-left no-underline outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background`}
         aria-label={
-          hasAggregate
-            ? `${doctorLabel}: ${provenance.rating!.toFixed(1)} stars, ${provenance.reviewCount} reviews (opens ${sourceLabel} in a new tab)`
+          hasAggregate && rating != null && reviewCount != null
+            ? `${doctorLabel}: ${rating.toFixed(1)} stars, ${reviewCount} reviews (opens ${sourceLabel} in a new tab)`
             : `${doctorLabel}: open ${sourceLabel} in a new tab`
         }
       >

@@ -10,6 +10,7 @@ import {
   KEYWORDS,
   OG_IMAGE_PATH,
   SITE_NAME,
+  GTM_CONTAINER_ID,
 } from "./src/config/site.defaults.ts";
 import {
   SITEMAP_PATHS,
@@ -66,7 +67,27 @@ function vitePublicBase(siteUrl: string): string {
   }
 }
 
-function htmlSeoReplacements(siteUrl: string) {
+/** Public GTM container ids look like `GTM-XXXXXXX` (alphanumeric). */
+const GTM_CONTAINER_ID_RE = /^GTM-[A-Z0-9]+$/i;
+
+function isValidGtmContainerId(id: string): boolean {
+  return GTM_CONTAINER_ID_RE.test(id.trim());
+}
+
+function resolveGtmContainerId(mode: string): string {
+  const env = loadEnv(mode, process.cwd(), "");
+  const fromEnv = (env.VITE_GTM_ID || "").trim();
+  const candidate = fromEnv || GTM_CONTAINER_ID;
+  if (!isValidGtmContainerId(candidate)) {
+    console.warn(
+      `[seo] Invalid GTM container id ${JSON.stringify(candidate)}; omitting GTM loader snippets.`,
+    );
+    return "";
+  }
+  return candidate;
+}
+
+function htmlSeoReplacements(siteUrl: string, gtmId: string = GTM_CONTAINER_ID) {
   return {
     SITE_URL: siteUrl,
     SITE_NAME,
@@ -78,15 +99,50 @@ function htmlSeoReplacements(siteUrl: string) {
     LLMS_TXT_URL: `${siteUrl}/llms.txt`,
     AGENT_SKILLS_INDEX_URL: `${siteUrl}/.well-known/agent-skills/index.json`,
     CONTENT_CATALOG_URL: `${siteUrl}/.well-known/content-catalog.json`,
+    GTM_CONTAINER_ID: gtmId,
   };
 }
 
-function applyHtmlReplacements(html: string, siteUrl: string) {
-  const r = htmlSeoReplacements(siteUrl);
-  return Object.entries(r).reduce(
+/**
+ * Remove GTM loader + noscript iframe when the container id is missing/invalid so a literal
+ * `@@SEO_GTM_CONTAINER_ID@@` placeholder never ships as a request URL.
+ * Keeps the dataLayer / gtag shim (whatsapp_click) intact.
+ */
+function stripGtmLoaderSnippets(html: string): string {
+  return html
+    .replace(
+      /\n?\s*<script>\s*\(function \(w, d, s, l, i\) \{[\s\S]*?\}\)\(window, document, "script", "dataLayer", "@@SEO_GTM_CONTAINER_ID@@"\);\s*<\/script>/i,
+      "",
+    )
+    .replace(/\n?\s*<!-- Google Tag Manager \(noscript\) -->\s*<noscript[\s\S]*?<\/noscript>/i, "")
+    .replaceAll("@@SEO_GTM_CONTAINER_ID@@", "");
+}
+
+function applyHtmlReplacements(html: string, siteUrl: string, gtmId: string = GTM_CONTAINER_ID) {
+  const safeGtmId = isValidGtmContainerId(gtmId) ? gtmId.trim() : "";
+  if (!safeGtmId) {
+    const stripped = stripGtmLoaderSnippets(html);
+    const r = htmlSeoReplacements(siteUrl, "");
+    const withoutGtmKey = Object.fromEntries(
+      Object.entries(r).filter(([key]) => key !== "GTM_CONTAINER_ID"),
+    );
+    return Object.entries(withoutGtmKey).reduce(
+      (acc, [key, value]) => acc.replaceAll(`@@SEO_${key}@@`, value),
+      stripped,
+    );
+  }
+
+  const r = htmlSeoReplacements(siteUrl, safeGtmId);
+  const replaced = Object.entries(r).reduce(
     (acc, [key, value]) => acc.replaceAll(`@@SEO_${key}@@`, value),
     html,
   );
+  if (replaced.includes("@@SEO_GTM_CONTAINER_ID@@")) {
+    throw new Error(
+      "[seo] @@SEO_GTM_CONTAINER_ID@@ was not replaced — refusing to emit HTML with a literal GTM placeholder.",
+    );
+  }
+  return replaced;
 }
 
 function escapeXml(text: string): string {
@@ -323,6 +379,7 @@ Sitemap: ${siteUrl}/sitemap-videos.xml
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
   const siteUrl = resolveSiteUrl(mode);
+  const gtmContainerId = resolveGtmContainerId(mode);
   const indexNowKey = env.INDEXNOW_KEY?.trim() ?? "";
 
   let outDirAbs = path.resolve(rootDir, "dist");
@@ -378,7 +435,7 @@ export default defineConfig(({ mode }) => {
           outDirAbs = path.resolve(config.root, config.build.outDir);
         },
         transformIndexHtml(html, ctx) {
-          const withSeo = applyHtmlReplacements(html, siteUrl);
+          const withSeo = applyHtmlReplacements(html, siteUrl, gtmContainerId);
           // Dev server only: resolve PAGE_* so raw placeholders never flash.
           // Production `vite build` must keep `@@PAGE_*@@` for writeStaticSpaShells (closeBundle).
           // Prefer argv over ctx.server — some Vite paths expose a server-like ctx during build.

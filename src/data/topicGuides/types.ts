@@ -22,10 +22,16 @@ export type TopicGuideSection = {
 
 /**
  * Editorial review gate (SEO-14).
- * Do not invent approvals: default existing guides to `pending` until a real clinician review.
- * Byline/review UI renders only when `reviewStatus === "approved"` and supporting fields are present.
+ * Default is `pending` — never invent `approved` without per-guide clinician confirmation.
+ * Byline/review UI renders only when `reviewStatus === "approved"` and author/reviewer fields are present.
+ *
+ * To approve a guide: set `reviewStatus: "approved"` plus verified `authorId` / `reviewerId` / dates on the row.
+ * Temporary withhold of an approved row: add the slug to `TOPIC_GUIDE_REVIEW_HOLDS`.
  */
 export type TopicGuideReviewStatus = "pending" | "draft" | "needs-review" | "approved";
+
+/** Non-approved statuses used for per-guide clinical holds. */
+export type TopicGuideReviewHoldStatus = Exclude<TopicGuideReviewStatus, "approved">;
 
 export type TopicGuideAuthorId = "charmi" | "zalak";
 
@@ -59,7 +65,10 @@ export type TopicGuideRow = {
   publishedAt?: string;
   updatedAt?: string;
   reviewedAt?: string;
-  /** Defaults to `pending` for existing guides; never invent `approved`. */
+  /**
+   * Optional per-guide gate. When omitted, registry default is `pending`.
+   * Set `approved` only after clinician confirmation (with author/reviewer/dates on the row).
+   */
   reviewStatus?: TopicGuideReviewStatus;
   references?: readonly TopicGuideReference[];
   /**
@@ -94,7 +103,7 @@ export type TopicGuidePageModel = {
   reviewedAt?: string;
   reviewStatus?: TopicGuideReviewStatus;
   references: readonly TopicGuideReference[];
-  /** SEO-12 uniqueness scaffolding when present (still `reviewStatus: pending`). */
+  /** SEO-12 uniqueness scaffolding when present. */
   primaryQuestion?: string;
   directAnswer?: string;
 };

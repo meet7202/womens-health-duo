@@ -1,0 +1,2 @@
+requested_url,retrieval_timestamp,response_status,redirect_chain,final_url,content_type,title,description,canonical,robots_meta,x_robots_tag,h1,meaningful_body,json_ld_parse,notes
+,pending-after-deploy,,,,,,,,,,"SEO-38 pending: run bounded sample (≤50 URLs) after release per docs/seo-launch-checklist.md; do not invent production HTTP results"

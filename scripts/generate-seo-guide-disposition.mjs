@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * SEO-12 / SEO-36: guide editorial disposition ledger from TOPIC_GUIDE_ROWS.
- * Writes docs/seo-guide-disposition.csv (decision keep-improve, status pending).
+ * Writes docs/seo-guide-disposition.csv (decision keep-improve; reviewStatus from registry).
  *
  * Usage: node scripts/generate-seo-guide-disposition.mjs
  */
@@ -85,6 +85,10 @@ async function main() {
       const hasScaffoldFlag = scaffoldYes ? "yes" : "no";
       if (scaffoldYes) scaffolded += 1;
 
+      // Prefer registry-resolved status (includes TOPIC_GUIDE_REVIEW_HOLDS). Keep `status` and
+      // `reviewStatus` identical so the CSV never collapses draft/needs-review into "pending".
+      const reviewStatus = guide?.reviewStatus ?? row.reviewStatus ?? "pending";
+
       lines.push(
         [
           `/${row.slug}`,
@@ -93,9 +97,9 @@ async function main() {
           primaryQuestion,
           "keep-improve",
           clinicalReviewerRequired(row.cluster, row.primaryConsult),
-          "pending",
+          reviewStatus,
           hasScaffoldFlag,
-          row.reviewStatus ?? guide?.reviewStatus ?? "pending",
+          reviewStatus,
         ]
           .map(csvEscape)
           .join(","),

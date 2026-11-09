@@ -32,6 +32,7 @@
     "test:indexnow-change-manifest": "node scripts/test-indexnow-change-manifest.mjs",
     "audit:seo-inventory": "node scripts/generate-seo-inventory.mjs",
     "generate:seo-guide-disposition": "node scripts/generate-seo-guide-disposition.mjs",
+    "generate:seo-virtual-service-disposition": "node scripts/generate-seo-virtual-service-disposition.mjs",
     "generate:seo-page-status": "node scripts/generate-seo-page-status.mjs",
     "generate:seo-media-disposition": "node scripts/generate-seo-media-disposition.mjs",
     "test:seo-page-status": "node scripts/test-seo-page-status.mjs",
