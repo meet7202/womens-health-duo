@@ -34,11 +34,7 @@ function originFetchInit(env: Env): RequestInit {
 }
 
 /** Same-zone fetch with Rocket Loader disabled; long-cache hashed static assets. */
-async function fetchPassthrough(
-  request: Request,
-  pathname: string,
-  env: Env,
-): Promise<Response> {
+async function fetchPassthrough(request: Request, pathname: string, env: Env): Promise<Response> {
   const response = await fetch(request, originFetchInit(env));
   if (isLongCachePath(pathname) && response.ok) {
     return withImmutableCache(response);
