@@ -20,6 +20,13 @@ exhaust subrequests (dashboard errors / 1102). Optional `ORIGIN_RESOLVE_OVERRIDE
 - Zone `womenshealthduo.com` on your Cloudflare account.
 - [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/) (`npm install` runs in this folder).
 
+## Cloudflare Workers Builds note
+
+This monorepo is **npm-primary** (`package-lock.json`). Do not commit a root `bun.lockb` —
+Workers Builds auto-detects Bun and runs `bun install --frozen-lockfile`, which fails when the
+Bun lockfile drifts from `package.json`. Prefer dashboard deploy via Wrangler CLI from this
+folder, or set the build root/`package manager` to npm if using Workers Builds CI.
+
 ## One-time deploy
 
 ```sh
