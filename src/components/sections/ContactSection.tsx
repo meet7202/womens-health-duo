@@ -21,6 +21,8 @@ import { CONTACT } from "@/config/site";
 import { AppLink as Link } from "@/components/router/AppLink";
 import {
   PRACTICE_CHARMI_LOCATIONS_LINE,
+  PRACTICE_HOURS_LINE,
+  PRACTICE_IN_PERSON_BOOKING_LINE,
   PRACTICE_ZALAK_LOCATIONS_LINE,
 } from "@/config/practiceLocations";
 import { trackWhatsAppClick } from "@/lib/analytics";
@@ -291,7 +293,7 @@ Sent from Women's Health Duo Website`;
                 </div>
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <Clock className="w-5 h-5 text-primary" />
-                  Mon-Fri: 10am-7pm | Sat: 10am-1pm
+                  {PRACTICE_HOURS_LINE}
                 </div>
               </div>
             </div>
@@ -325,10 +327,14 @@ Sent from Women's Health Duo Website`;
                 </div>
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <Clock className="w-5 h-5 text-primary" />
-                  Mon-Sat: 9am-5pm
+                  {PRACTICE_HOURS_LINE}
                 </div>
               </div>
             </div>
+
+            <p className="text-sm text-muted-foreground leading-relaxed px-1">
+              {PRACTICE_IN_PERSON_BOOKING_LINE}
+            </p>
 
             {/* Social */}
             <div className="bg-primary/5 rounded-2xl p-6 border border-primary/10">

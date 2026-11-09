@@ -24,9 +24,9 @@ After this branch is deployed:
 
 ## O3. Confirm or configure GA4 without duplication
 
-- Confirm existing Web stream Measurement ID and any GTM/edge injection with the implementer before adding tags.
-- Verify Realtime/DebugView for home, a doctor page, booking, and client-side navigation; one event per intended WhatsApp click (`whatsapp_click` fields only — never intake text).
-- If creating a new property, use the real Measurement ID in the shared tag path; do not invent an ID.
+- **Code (9 Nov 2026):** GTM container `GTM-57NMVQVN` is wired in `index.html` / `site.defaults` (`VITE_GTM_ID` optional override). `whatsapp_click` still pushes to `dataLayer`.
+- Owner: confirm GTM publishes the intended GA4 tag; verify Realtime/DebugView for home, a doctor page, booking, and SPA navigation (one event per WhatsApp click — never intake text).
+- Do not add a second hard-coded GA Measurement ID alongside this container unless GTM is empty.
 
 ## O4. Link Search Console to GA4 (optional)
 
@@ -36,8 +36,7 @@ After this branch is deployed:
 
 ## O5. Confirm Bing Webmaster Tools
 
-- Inspect existing sites or Import from Google Search Console when available.
-- Check approved sitemap, crawl/indexing findings, and URL Inspection.
+- **Owner (9 Nov 2026):** Bing Webmaster is set up. Re-check sitemap + URL Inspection after the next deploy.
 - After SEO-40 change-manifest is live, prefer IndexNow for **changed** URLs only — do not resubmit the full sitemap after every build.
 
 ## O6. Google search AI settings / optional reports
@@ -61,14 +60,16 @@ After this branch is deployed:
 
 Supply verified values only (no invention):
 
-| Need                                                                                     | Why                                                             |
-| ---------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| Facility address + hours for Mumbai, Ahmedabad, Valsad, Bangalore                        | SEO-17 local trust / schema                                     |
-| Dr. Charmi Google Business / reviews URL + dated aggregate counts                        | SEO-18 before re-showing star badges (`publicReviews.ts` gated) |
-| Clinical sign-off to lift ovarian-reserve hold on `YE9qPLTptRw` + `ig-c9ppwbmplho`       | SEO-15 (code hold already live)                                 |
-| Decision on dates/posters if `ig-cr1otdannn4` / `ig-dbtawiyp_m_` should become indexable | SEO-16 currently noindex / no VideoObject                       |
-| Query×page GSC segments for Appendix B priorities                                        | SEO-31 content targeting                                        |
-| Authentic practitioner/clinic directory updates where eligible                           | SEO-42                                                          |
+| Need                                                                                     | Status (9 Nov 2026)                                                                                                                |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Shared practice hours                                                                    | **Done in code** — Mon–Sat 9:00 AM–6:00 PM (India); online-first + appointment-based in-person note                                |
+| Street addresses for Mumbai, Ahmedabad, Valsad, Bangalore                                | **Still needed** if local schema/maps copy should list facilities                                                                  |
+| Dr. Charmi Google Business / reviews URL                                                 | **No URL** (owner). On-page badges restored from prior figures 4.9★ / 41 (as of 2026-11-09); no AggregateRating schema without URL |
+| Dr. Zalak review aggregates                                                              | **Done in code** — 5.0★ / 27 + existing Google share URL (as of 2026-11-09)                                                        |
+| Clinical sign-off to lift ovarian-reserve hold on `YE9qPLTptRw` + `ig-c9ppwbmplho`       | **Hold kept** — both platform links still return 200; remove only if a link goes dead                                              |
+| Decision on dates/posters if `ig-cr1otdannn4` / `ig-dbtawiyp_m_` should become indexable | SEO-16 currently noindex / no VideoObject                                                                                          |
+| Query×page GSC segments for Appendix B priorities                                        | SEO-31 content targeting                                                                                                           |
+| Authentic practitioner/clinic directory updates where eligible                           | SEO-42                                                                                                                             |
 
 ## O10. Hosting / Cloudflare before and after release
 

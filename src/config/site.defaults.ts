@@ -31,6 +31,12 @@ export const CONTACT = {
   whatsappUrl: "https://wa.me/917990550754",
 } as const;
 
+/**
+ * Google Tag Manager container (public ID). Override with `VITE_GTM_ID` in `.env` if needed.
+ * Loads in `index.html`; `whatsapp_click` still pushes to `dataLayer` via `analytics.ts`.
+ */
+export const GTM_CONTAINER_ID = "GTM-57NMVQVN";
+
 /** Target ~60 characters (Bing warns above 70). Used when a page omits `SeoHead` title. */
 export const DEFAULT_TITLE = "Dr. Charmi Shah & Dr. Zalak Shah: Women's Health Duo";
 
