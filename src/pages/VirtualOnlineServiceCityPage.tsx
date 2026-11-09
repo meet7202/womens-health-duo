@@ -45,7 +45,7 @@ function buildMetaDescription(
     doctor === "charmi"
       ? "Dr. Charmi Shah (OB-GYN, IVF, laparoscopy)"
       : "Dr. Zalak Shah (women's health physiotherapy, Mat Pilates online, STOTT Pilates)";
-  return `${serviceTitle} via online consultation for patients in ${city}, ${country} with ${who}. ${PRACTICE_BOTH_DOCTORS_IN_PERSON} WhatsApp or email to book.`;
+  return `${serviceTitle} via online consultation for patients in ${city}, ${country} with ${who}. Video care for this city — not a local clinic. India in-person separately in ${PRACTICE_CHARMI_IN_PERSON} / ${PRACTICE_ZALAK_IN_PERSON}. WhatsApp or email to book.`;
 }
 
 export function VirtualOnlineServiceCityPage() {
