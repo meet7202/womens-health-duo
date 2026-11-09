@@ -3,9 +3,9 @@ import { EXTERNAL } from "@/config/externalProfiles";
 
 /**
  * Optional public-review provenance for on-page trust signals (SEO-18).
- * On-page star badges need rating + reviewCount + asOf (owner-authorized).
- * Prefer a live Google Business / reviews `sourceUrl` when available; Charmi has no share URL yet.
- * Do not emit AggregateRating JSON-LD from these figures without a verifiable source URL.
+ * Numeric aggregate badges require rating + reviewCount + asOf + a verifiable `sourceUrl`.
+ * Do not emit AggregateRating JSON-LD (or on-page rating/count copy) without that URL.
+ * Charmi’s figures may be stored for a future GBP link; they must not show as aggregates until sourced.
  */
 export type PublicReviewProvenance = {
   /** ISO date (YYYY-MM-DD) when rating/count were last checked. */
@@ -16,13 +16,14 @@ export type PublicReviewProvenance = {
   reviewCount?: number;
 };
 
-/** Owner-confirmed prior on-page figures (9 Nov 2026): Charmi 4.9 / 41; Zalak 5.0 / 27. */
+/** Owner-confirmed prior figures (9 Nov 2026). Zalak has a share URL; Charmi does not yet. */
 export const PUBLIC_REVIEW_PROVENANCE: Record<DoctorSlug, PublicReviewProvenance> = {
   charmi: {
     asOf: "2026-11-09",
     sourceLabel: "Google reviews",
     rating: 4.9,
     reviewCount: 41,
+    // No verified Google Business share URL — omit aggregate badge until owner adds sourceUrl.
   },
   zalak: {
     asOf: "2026-11-09",
@@ -33,7 +34,9 @@ export const PUBLIC_REVIEW_PROVENANCE: Record<DoctorSlug, PublicReviewProvenance
   },
 };
 
-/** True when on-page aggregate badge copy is authorized. */
+/** True when on-page aggregate rating/count copy is authorized (requires live source URL). */
 export function publicReviewHasAggregate(p: PublicReviewProvenance): boolean {
-  return Boolean(p.asOf && typeof p.rating === "number" && typeof p.reviewCount === "number");
+  return Boolean(
+    p.asOf && p.sourceUrl && typeof p.rating === "number" && typeof p.reviewCount === "number",
+  );
 }

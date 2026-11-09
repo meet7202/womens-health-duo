@@ -90,7 +90,8 @@
     <!--
       Crawl `#static-seo-shell` stays in HTML for no-JS agents / Markdown worker.
       JS visitors must not see it (esp. when GitHub Pages serves 404.html for a SPA path).
-      Mark <html> early so CSS can hide the shell before React boots; RemoveStaticSeoShell deletes it.
+      Mark <html> early so CSS can hide the shell before React boots; RemoveStaticSeoShell
+      removes the node only after a live #root h1 mounts (lazy routes / Markdown still OK).
     -->
     <script>
       document.documentElement.classList.add("js");
