@@ -60,17 +60,17 @@ After this branch is deployed:
 
 Supply verified values only (no invention):
 
-| Need                                                                                     | Status (9 Nov 2026)                                                                                                                |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Shared practice hours                                                                    | **Done in code** — Mon–Sat 9:00 AM–6:00 PM (India); online-first + appointment-based in-person note                                |
-| Street addresses for Mumbai, Ahmedabad, Valsad, Bangalore                                | **Still needed** if local schema/maps copy should list facilities                                                                  |
-| Dr. Charmi Google Business / reviews URL                                                 | **No URL** (owner). On-page badges restored from prior figures 4.9★ / 41 (as of 2026-11-09); no AggregateRating schema without URL |
-| Dr. Zalak review aggregates                                                              | **Done in code** — 5.0★ / 27 + existing Google share URL (as of 2026-11-09)                                                        |
-| Topic guide clinical approval                                                            | **Done (9 Nov)** — doctors author all guides; `reviewStatus=approved` with lane attribution                                        |
-| Clinical sign-off to lift ovarian-reserve hold on `YE9qPLTptRw` + `ig-c9ppwbmplho`       | **Hold kept** — both platform links still return 200; remove only if a link goes dead                                              |
-| Decision on dates/posters if `ig-cr1otdannn4` / `ig-dbtawiyp_m_` should become indexable | SEO-16 currently noindex / no VideoObject                                                                                          |
-| Query×page GSC segments for Appendix B priorities                                        | SEO-31 content targeting                                                                                                           |
-| Authentic practitioner/clinic directory updates where eligible                           | SEO-42                                                                                                                             |
+| Need                                                                                     | Status (9 Nov 2026)                                                                                                                    |
+| ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Shared practice hours                                                                    | **Done in code** — Mon–Sat 9:00 AM–6:00 PM (India); online-first + appointment-based in-person note                                    |
+| Street addresses for Mumbai, Ahmedabad, Valsad, Bangalore                                | **Still needed** if local schema/maps copy should list facilities                                                                      |
+| Dr. Charmi Google Business / reviews URL                                                 | **No URL** (owner). On-page badges restored from prior figures 4.9★ / 41 (as of 2026-11-09); no AggregateRating schema without URL     |
+| Dr. Zalak review aggregates                                                              | **Done in code** — 5.0★ / 27 + existing Google share URL (as of 2026-11-09)                                                            |
+| Topic guide clinical approval                                                            | **Pending per guide** — registry defaults to `pending`; set `reviewStatus=approved` + author/reviewer/dates on each row when confirmed |
+| Clinical sign-off to lift ovarian-reserve hold on `YE9qPLTptRw` + `ig-c9ppwbmplho`       | **Hold kept** — both platform links still return 200; remove only if a link goes dead                                                  |
+| Decision on dates/posters if `ig-cr1otdannn4` / `ig-dbtawiyp_m_` should become indexable | SEO-16 currently noindex / no VideoObject                                                                                              |
+| Query×page GSC segments for Appendix B priorities                                        | SEO-31 content targeting                                                                                                               |
+| Authentic practitioner/clinic directory updates where eligible                           | SEO-42                                                                                                                                 |
 
 ## O10. Hosting / Cloudflare before and after release
 

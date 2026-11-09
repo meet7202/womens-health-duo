@@ -6,7 +6,6 @@ import { buildTopicGuideFaqs, clusterConfig } from "./clusterContent";
 import { guideUniquenessOverrideForSlug } from "./guideUniquenessOverrides";
 import { TOPIC_GUIDE_ROWS } from "./topicGuideRows";
 import type {
-  TopicGuideAuthorId,
   TopicGuideClusterId,
   TopicGuidePageModel,
   TopicGuideReviewHoldStatus,
@@ -16,15 +15,8 @@ import type {
 } from "./types";
 
 /**
- * Owner-authorized editorial stamp (9 Nov 2026): clinicians author/review all topic guides.
- * Per-row fields still win when set. Do not invent future review dates on rebuild.
- */
-const TOPIC_GUIDE_OWNER_APPROVED_AT = "2026-11-09";
-
-/**
- * Per-slug clinical holds. Entries force a non-approved `reviewStatus` even when the set default
- * is `approved`, so incomplete / withheld guides never show an approval byline.
- * Prefer this map for temporary holds; use row `reviewStatus` for durable per-guide state.
+ * Per-slug clinical holds. Force a non-approved status even when a row is marked `approved`
+ * (temporary withhold of the byline). Prefer row `reviewStatus` for durable per-guide state.
  */
 export const TOPIC_GUIDE_REVIEW_HOLDS: ReadonlyMap<string, TopicGuideReviewHoldStatus> = new Map([
   // Example: ["some-slug", "needs-review"],
@@ -32,23 +24,14 @@ export const TOPIC_GUIDE_REVIEW_HOLDS: ReadonlyMap<string, TopicGuideReviewHoldS
 
 /**
  * Resolve editorial gate for one guide.
- * Precedence: `TOPIC_GUIDE_REVIEW_HOLDS` → explicit row `reviewStatus` → owner default `approved`.
+ * Precedence: `TOPIC_GUIDE_REVIEW_HOLDS` → explicit row `reviewStatus` → default `pending`.
+ * Never invent `approved` (or review dates / author stamps) without per-row confirmation.
  */
 export function resolveTopicGuideReviewStatus(row: TopicGuideRow): TopicGuideReviewStatus {
   const hold = TOPIC_GUIDE_REVIEW_HOLDS.get(row.slug);
   if (hold) return hold;
   if (row.reviewStatus) return row.reviewStatus;
-  return "approved";
-}
-
-function editorialAttribution(consult: "charmi" | "zalak" | "both"): {
-  authorId: TopicGuideAuthorId;
-  reviewerId: TopicGuideAuthorId;
-} {
-  if (consult === "zalak") return { authorId: "zalak", reviewerId: "zalak" };
-  if (consult === "charmi") return { authorId: "charmi", reviewerId: "charmi" };
-  // Duo-led topics: OB-GYN authors; physio sister reviews.
-  return { authorId: "charmi", reviewerId: "zalak" };
+  return "pending";
 }
 const QUESTION_FIRST = new Set([
   "what",
@@ -391,9 +374,6 @@ const GUIDE_BY_SLUG: ReadonlyMap<string, TopicGuidePageModel> = new Map(
     const path = publicPathname(`/${row.slug}`);
     const relatedSlugs = computeRelated(row, BY_CLUSTER);
     const reviewStatus = resolveTopicGuideReviewStatus(row);
-    const approved = reviewStatus === "approved";
-    // Only stamp clinician byline fields when the guide is actually approved (or row overrides).
-    const attribution = approved ? editorialAttribution(consult) : undefined;
     const model: TopicGuidePageModel = {
       slug: row.slug,
       path,
@@ -408,11 +388,13 @@ const GUIDE_BY_SLUG: ReadonlyMap<string, TopicGuidePageModel> = new Map(
       primaryConsult: consult,
       serviceSlugs: services,
       relatedSlugs,
-      authorId: row.authorId ?? attribution?.authorId,
-      reviewerId: row.reviewerId ?? attribution?.reviewerId,
-      publishedAt: row.publishedAt ?? (approved ? TOPIC_GUIDE_OWNER_APPROVED_AT : undefined),
-      updatedAt: row.updatedAt ?? (approved ? TOPIC_GUIDE_OWNER_APPROVED_AT : undefined),
-      reviewedAt: row.reviewedAt ?? (approved ? TOPIC_GUIDE_OWNER_APPROVED_AT : undefined),
+      // Attribution + dates come only from verified per-row fields — never invent approval metadata.
+      authorId: row.authorId,
+      reviewerId: row.reviewerId,
+      publishedAt: row.publishedAt,
+      updatedAt: row.updatedAt,
+      reviewedAt: row.reviewedAt,
+      /** Existing guides default to pending — never invent reviewed/approved status. */
       reviewStatus,
       references: row.references ?? [],
       primaryQuestion: uniqueness.primaryQuestion,

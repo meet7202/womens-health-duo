@@ -1,7 +1,7 @@
 /**
  * SEO-12 scaffolding: title-specific primaryQuestion + directAnswer for priority guides.
  * Copy is rewritten from existing cluster / FAQ pool text only — no new protocols,
- * timelines, or success rates. Guide reviewStatus is owner-approved separately in the registry.
+ * timelines, or success rates. Guide `reviewStatus` is set per row in the registry (default pending).
  *
  * Priority set: six SEO-13 FAQ regression guides + Zalak care hubs present in TOPIC_GUIDE_ROWS.
  */

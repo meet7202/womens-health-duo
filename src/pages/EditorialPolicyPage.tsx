@@ -92,17 +92,16 @@ export function EditorialPolicyPage() {
             </h2>
             <p>
               About <strong className="font-medium text-foreground">100</strong> written topic
-              guides (articles and common questions linked from Learn) are authored by Women&apos;s
+              guides (articles and common questions linked from Learn) are prepared by Women&apos;s
               Health Duo clinicians. Editorial fields support author, reviewer,
               published/updated/reviewed dates, review status, and references. Guides default to{" "}
-              <strong className="font-medium text-foreground">approved</strong> with the correct
-              doctor for the topic (Dr. Charmi Shah for OB-GYN / IVF lanes; Dr. Zalak Shah for
-              physiotherapy / Pilates lanes; duo-led pages name both). A specific guide may still be
-              held as <strong className="font-medium text-foreground">pending</strong>,{" "}
-              <strong className="font-medium text-foreground">draft</strong>, or{" "}
-              <strong className="font-medium text-foreground">needs-review</strong> when flagged. We
-              do not invent credentials. Approved pages show a byline, reviewer name, and dates that
-              match those fields.
+              <strong className="font-medium text-foreground">pending</strong> until a clinician
+              confirms review for that URL (Dr. Charmi Shah for OB-GYN / IVF lanes; Dr. Zalak Shah
+              for physiotherapy / Pilates lanes; duo-led pages name both). Status may also be{" "}
+              <strong className="font-medium text-foreground">draft</strong> or{" "}
+              <strong className="font-medium text-foreground">needs-review</strong>. We do not
+              invent credentials or approval dates. Approved pages show a byline, reviewer name, and
+              dates that match those verified fields.
             </p>
           </div>
 

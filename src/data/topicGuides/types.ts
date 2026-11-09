@@ -22,12 +22,11 @@ export type TopicGuideSection = {
 
 /**
  * Editorial review gate (SEO-14).
- * Owner-authorized default for WHD topic guides is `approved` (clinicians author the set).
+ * Default is `pending` — never invent `approved` without per-guide clinician confirmation.
  * Byline/review UI renders only when `reviewStatus === "approved"` and author/reviewer fields are present.
  *
- * To withhold a specific guide without flipping the set default:
- * 1. Set `reviewStatus` on that row (`pending` | `draft` | `needs-review`), or
- * 2. Add the slug to `TOPIC_GUIDE_REVIEW_HOLDS` in `topicGuideRegistry.ts` (holds win over the default).
+ * To approve a guide: set `reviewStatus: "approved"` plus verified `authorId` / `reviewerId` / dates on the row.
+ * Temporary withhold of an approved row: add the slug to `TOPIC_GUIDE_REVIEW_HOLDS`.
  */
 export type TopicGuideReviewStatus = "pending" | "draft" | "needs-review" | "approved";
 
@@ -67,9 +66,8 @@ export type TopicGuideRow = {
   updatedAt?: string;
   reviewedAt?: string;
   /**
-   * Optional per-guide gate. When omitted, registry default is `approved` unless the slug is in
-   * `TOPIC_GUIDE_REVIEW_HOLDS`. Set explicitly to `pending` / `draft` / `needs-review` to withhold
-   * the approval byline for that URL.
+   * Optional per-guide gate. When omitted, registry default is `pending`.
+   * Set `approved` only after clinician confirmation (with author/reviewer/dates on the row).
    */
   reviewStatus?: TopicGuideReviewStatus;
   references?: readonly TopicGuideReference[];
