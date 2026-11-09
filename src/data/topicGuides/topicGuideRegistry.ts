@@ -232,39 +232,107 @@ function byClusterMap(): Map<TopicGuideClusterId, string[]> {
   return m;
 }
 const BY_CLUSTER = byClusterMap();
+function normalizeGuideKey(raw: string): string {
+  return raw
+    .toLowerCase()
+    .replace(/['']/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function defaultPrimaryQuestion(title: string): string {
+  const t = title.trim();
+  if (!t) return "What should I know before booking?";
+  if (t.endsWith("?")) return t;
+  const first = t.split(/\s+/)[0]?.toLowerCase() ?? "";
+  if (QUESTION_FIRST.has(first)) return `${t.replace(/\?*$/, "")}?`;
+  return `What should I know about ${t}?`;
+}
+
+function doctorAttribution(consult: "charmi" | "zalak" | "both"): string {
+  if (consult === "zalak") {
+    return "Dr. Zalak Shah (women's health physiotherapy / STOTT Pilates)";
+  }
+  if (consult === "charmi") {
+    return "Dr. Charmi Shah (OB-GYN / IVF / laparoscopy)";
+  }
+  return "Dr. Charmi Shah (OB-GYN / IVF) and Dr. Zalak Shah (women's health physiotherapy / STOTT Pilates)";
+}
+
+/**
+ * SEO-12: every retained guide gets a title-led first section.
+ * Priority: row fields → curated override → matching FAQ pool answer → cluster first paragraph + metaBlurb.
+ * Always `reviewStatus: pending` until clinician approval — do not invent protocols or success claims.
+ */
 function sectionsWithUniquenessScaffold(
   title: string,
   clusterSections: TopicGuideSection[],
   row: TopicGuideRow,
+  opts: {
+    consult: "charmi" | "zalak" | "both";
+    metaBlurb: string;
+    faqPool: { id?: string; question: string; answer: string }[];
+  },
 ): {
   sections: TopicGuideSection[];
-  primaryQuestion?: string;
-  directAnswer?: string;
+  primaryQuestion: string;
+  directAnswer: string;
 } {
   const override = guideUniquenessOverrideForSlug(row.slug);
-  const primaryQuestion = row.primaryQuestion ?? override?.primaryQuestion;
-  const directAnswer = row.directAnswer ?? override?.directAnswer;
+  let primaryQuestion = row.primaryQuestion ?? override?.primaryQuestion;
+  let directAnswer = row.directAnswer ?? override?.directAnswer;
+  let followOn = override?.followOn;
+  let firstHeading = override?.firstSectionHeading;
+
   if (!primaryQuestion?.trim() || !directAnswer?.trim()) {
-    return { sections: clusterSections };
+    const slugKey = normalizeGuideKey(row.slug);
+    const titleNorm = title.toLowerCase().replace(/[?'']/g, "").replace(/\s+/g, " ").trim();
+    const faqMatch =
+      opts.faqPool.find((f) => f.id && normalizeGuideKey(f.id) === slugKey) ??
+      opts.faqPool.find((f) => {
+        const q = f.question.toLowerCase().replace(/[?'']/g, "").replace(/\s+/g, " ").trim();
+        return q === titleNorm || q.includes(titleNorm) || titleNorm.includes(q);
+      });
+    if (faqMatch) {
+      primaryQuestion = primaryQuestion?.trim() || faqMatch.question;
+      directAnswer = directAnswer?.trim() || faqMatch.answer;
+      followOn =
+        followOn ??
+        `A visit with ${doctorAttribution(opts.consult)} can place this in your individual context. This page is education for that conversation, not a diagnosis or treatment plan.`;
+    } else {
+      const clusterLead = clusterSections[0]?.paragraphs[0]?.trim();
+      primaryQuestion = primaryQuestion?.trim() || defaultPrimaryQuestion(title);
+      directAnswer =
+        directAnswer?.trim() ||
+        clusterLead ||
+        `${title.replace(/\?+$/, "")} is a topic patients ask about at Women's Health Duo. ${opts.metaBlurb}`;
+      followOn =
+        followOn ??
+        `${opts.metaBlurb} Discuss next steps with ${doctorAttribution(opts.consult)} — this page prepares questions; it does not replace individualized care.`;
+      firstHeading = firstHeading ?? primaryQuestion;
+    }
   }
-  const paragraphs = [directAnswer.trim()];
-  if (override?.followOn?.trim()) paragraphs.push(override.followOn.trim());
+
+  const pq = primaryQuestion!.trim();
+  const da = directAnswer!.trim();
+  const paragraphs = [da];
+  if (followOn?.trim()) paragraphs.push(followOn.trim());
   const first: TopicGuideSection = {
-    heading: override?.firstSectionHeading?.trim() || primaryQuestion.trim(),
+    heading: firstHeading?.trim() || pq,
     paragraphs,
   };
   // Drop a cluster first section that only restates the same title heading.
   const rest = clusterSections.filter((sec, idx) => {
     if (idx !== 0) return true;
     const h = sec.heading.trim().toLowerCase();
-    const q = primaryQuestion.trim().toLowerCase().replace(/\?+$/, "");
+    const q = pq.toLowerCase().replace(/\?+$/, "");
     const titleLow = title.trim().toLowerCase().replace(/\?+$/, "");
     return h !== q && h !== titleLow && !h.startsWith(`${titleLow}:`);
   });
   return {
     sections: [first, ...rest],
-    primaryQuestion: primaryQuestion.trim(),
-    directAnswer: directAnswer.trim(),
+    primaryQuestion: pq,
+    directAnswer: da,
   };
 }
 
@@ -275,7 +343,11 @@ const GUIDE_BY_SLUG: ReadonlyMap<string, TopicGuidePageModel> = new Map(
     const consult = row.primaryConsult ?? cc.defaultConsult;
     const services = row.serviceSlugs ?? cc.defaultServiceSlugs;
     const learnTopicLabels = filterLearnTopics(row.learnTopics ?? cc.defaultLearnTopics);
-    const uniqueness = sectionsWithUniquenessScaffold(title, cc.buildSections(title), row);
+    const uniqueness = sectionsWithUniquenessScaffold(title, cc.buildSections(title), row, {
+      consult,
+      metaBlurb: cc.metaBlurb,
+      faqPool: cc.faqPool,
+    });
     const faqs = buildTopicGuideFaqs(row.slug, title, consult, cc.faqPool, row.faqIds);
     const path = publicPathname(`/${row.slug}`);
     const relatedSlugs = computeRelated(row, BY_CLUSTER);

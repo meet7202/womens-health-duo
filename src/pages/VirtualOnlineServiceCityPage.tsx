@@ -25,8 +25,12 @@ import { virtualServiceCityOfferSchema } from "@/components/seo/schema/virtualSe
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { InclusiveSeoListFootnote } from "@/components/seo/InclusiveSeoListFootnote";
 import { Button } from "@/components/ui/button";
-import { PRACTICE_BOTH_DOCTORS_IN_PERSON } from "@/config/practiceLocations";
+import {
+  PRACTICE_BOTH_DOCTORS_IN_PERSON,
+  PRACTICE_IN_PERSON_BOOKING_LINE,
+} from "@/config/practiceLocations";
 import { onlineServiceCityFaqs } from "@/data/contextualFaqs";
+import { bookConsultationPath } from "@/lib/bookingIntent";
 import { virtualServiceCityDocumentTitle, virtualServiceCityH1 } from "@/lib/pageSeoCopy";
 import { TelemedicineComplianceBlock } from "@/components/compliance/TelemedicineComplianceBlock";
 
@@ -110,42 +114,52 @@ export function VirtualOnlineServiceCityPage() {
         <TelemedicineComplianceBlock className="mb-8" showLimitations={false} />
 
         <p className="rounded-lg border border-primary/20 bg-primary/5 px-4 py-3 text-sm text-foreground mb-6">
-          {service.summary} <strong className="text-foreground">In person:</strong>{" "}
-          {PRACTICE_BOTH_DOCTORS_IN_PERSON} Book through the practice, see{" "}
-          <Link to={ROUTES.drCharmi} className="text-primary underline underline-offset-4">
-            Dr. Charmi Shah
-          </Link>{" "}
-          and{" "}
-          <Link to={ROUTES.drZalak} className="text-primary underline underline-offset-4">
-            Dr. Zalak Shah
-          </Link>{" "}
-          for details, or ask on WhatsApp.
+          {service.summary} This is{" "}
+          <strong className="text-foreground">online advice / video consultation</strong> with an
+          India-trained clinician — not a claim that we operate a physical clinic in {city.city}.
+          Availability and suitability for your location are confirmed when you enquire.
         </p>
         <div className="space-y-4 text-muted-foreground leading-relaxed mb-8">
           <p>
+            Written for people in <strong className="text-foreground">{city.city}</strong>,{" "}
+            <strong className="text-foreground">{city.country}</strong> who want{" "}
+            <strong className="text-foreground">{service.shortTitle}</strong> guidance online.
+            Prefer starting from the{" "}
             <Link
-              to={
-                countryHub ? virtualConsultationCountryPath(countryHub) : ROUTES.onlineConsultation
-              }
+              to={ROUTES.onlineConsultation}
               className="text-primary underline underline-offset-4"
             >
-              All virtual locations in {city.country}
-            </Link>{" "}
-            , see other cities, then open a city page for every online service URL.
+              online consultation hub
+            </Link>
+            {countryHub ? (
+              <>
+                {" "}
+                or{" "}
+                <Link
+                  to={virtualConsultationCountryPath(countryHub)}
+                  className="text-primary underline underline-offset-4"
+                >
+                  all virtual locations in {city.country}
+                </Link>
+              </>
+            ) : null}
+            , then book with your time zone and a short summary of your concern.
           </p>
           <p>
-            This page is written for people in{" "}
-            <strong className="text-foreground">{city.city}</strong>,{" "}
-            <strong className="text-foreground">{city.country}</strong> searching for India-trained
-            women&apos;s health clinicians online. Booking is the same as every other city page:
-            WhatsApp or email with your time zone and a short summary of your concern.
+            <strong className="text-foreground">In person (India):</strong>{" "}
+            {PRACTICE_BOTH_DOCTORS_IN_PERSON} {PRACTICE_IN_PERSON_BOOKING_LINE}
           </p>
         </div>
 
         <div className="flex flex-wrap gap-3 mb-12">
+          <Button asChild>
+            <Link to={bookConsultationPath({ doctor: service.doctor, service: service.slug })}>
+              Book consultation
+            </Link>
+          </Button>
           <Button variant="secondary" asChild>
             <Link to={profilePath}>
-              {service.doctor === "charmi" ? "Dr. Charmi ,  profile" : "Dr. Zalak ,  profile"}
+              {service.doctor === "charmi" ? "Dr. Charmi Shah profile" : "Dr. Zalak Shah profile"}
             </Link>
           </Button>
           <Button variant="outline" asChild>
