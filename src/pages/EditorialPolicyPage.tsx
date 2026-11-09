@@ -92,17 +92,17 @@ export function EditorialPolicyPage() {
             </h2>
             <p>
               About <strong className="font-medium text-foreground">100</strong> written topic
-              guides (articles and common questions linked from Learn) already exist as educational
-              routing pages. Editorial fields support author, reviewer, published/updated/reviewed
-              dates, review status, and references. Existing guides default to{" "}
-              <strong className="font-medium text-foreground">pending</strong> (or stay in{" "}
-              <strong className="font-medium text-foreground">draft</strong> /{" "}
-              <strong className="font-medium text-foreground">needs-review</strong>): they are not
-              marked as clinician-approved authorship or medical review unless a guide explicitly
-              carries <strong className="font-medium text-foreground">approved</strong> status with
-              verified author/reviewer fields. We do not backdate review stamps or invent
-              credentials. When a guide is approved, the page can show a byline, reviewer name, and
-              dates that match those fields.
+              guides (articles and common questions linked from Learn) are authored by Women&apos;s
+              Health Duo clinicians. Editorial fields support author, reviewer,
+              published/updated/reviewed dates, review status, and references. Guides default to{" "}
+              <strong className="font-medium text-foreground">approved</strong> with the correct
+              doctor for the topic (Dr. Charmi Shah for OB-GYN / IVF lanes; Dr. Zalak Shah for
+              physiotherapy / Pilates lanes; duo-led pages name both). A specific guide may still be
+              held as <strong className="font-medium text-foreground">pending</strong>,{" "}
+              <strong className="font-medium text-foreground">draft</strong>, or{" "}
+              <strong className="font-medium text-foreground">needs-review</strong> when flagged. We
+              do not invent credentials. Approved pages show a byline, reviewer name, and dates that
+              match those fields.
             </p>
           </div>
 

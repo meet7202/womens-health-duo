@@ -6,11 +6,28 @@ import { buildTopicGuideFaqs, clusterConfig } from "./clusterContent";
 import { guideUniquenessOverrideForSlug } from "./guideUniquenessOverrides";
 import { TOPIC_GUIDE_ROWS } from "./topicGuideRows";
 import type {
+  TopicGuideAuthorId,
   TopicGuideClusterId,
   TopicGuidePageModel,
   TopicGuideRow,
   TopicGuideSection,
 } from "./types";
+
+/**
+ * Owner-authorized editorial stamp (9 Nov 2026): clinicians author/review all topic guides.
+ * Per-row fields still win when set. Do not invent future review dates on rebuild.
+ */
+const TOPIC_GUIDE_OWNER_APPROVED_AT = "2026-11-09";
+
+function editorialAttribution(consult: "charmi" | "zalak" | "both"): {
+  authorId: TopicGuideAuthorId;
+  reviewerId: TopicGuideAuthorId;
+} {
+  if (consult === "zalak") return { authorId: "zalak", reviewerId: "zalak" };
+  if (consult === "charmi") return { authorId: "charmi", reviewerId: "charmi" };
+  // Duo-led topics: OB-GYN authors; physio sister reviews.
+  return { authorId: "charmi", reviewerId: "zalak" };
+}
 const QUESTION_FIRST = new Set([
   "what",
   "why",
@@ -262,7 +279,7 @@ function doctorAttribution(consult: "charmi" | "zalak" | "both"): string {
 /**
  * SEO-12: every retained guide gets a title-led first section.
  * Priority: row fields → curated override → matching FAQ pool answer → cluster first paragraph + metaBlurb.
- * Always `reviewStatus: pending` until clinician approval — do not invent protocols or success claims.
+ * Owner approved the guide set clinically; uniqueness copy still avoids inventing protocols/rates.
  */
 function sectionsWithUniquenessScaffold(
   title: string,
@@ -351,6 +368,7 @@ const GUIDE_BY_SLUG: ReadonlyMap<string, TopicGuidePageModel> = new Map(
     const faqs = buildTopicGuideFaqs(row.slug, title, consult, cc.faqPool, row.faqIds);
     const path = publicPathname(`/${row.slug}`);
     const relatedSlugs = computeRelated(row, BY_CLUSTER);
+    const attribution = editorialAttribution(consult);
     const model: TopicGuidePageModel = {
       slug: row.slug,
       path,
@@ -365,13 +383,13 @@ const GUIDE_BY_SLUG: ReadonlyMap<string, TopicGuidePageModel> = new Map(
       primaryConsult: consult,
       serviceSlugs: services,
       relatedSlugs,
-      authorId: row.authorId,
-      reviewerId: row.reviewerId,
-      publishedAt: row.publishedAt,
-      updatedAt: row.updatedAt,
-      reviewedAt: row.reviewedAt,
-      /** Existing guides default to pending — never invent reviewed/approved status. */
-      reviewStatus: row.reviewStatus ?? "pending",
+      authorId: row.authorId ?? attribution.authorId,
+      reviewerId: row.reviewerId ?? attribution.reviewerId,
+      publishedAt: row.publishedAt ?? TOPIC_GUIDE_OWNER_APPROVED_AT,
+      updatedAt: row.updatedAt ?? TOPIC_GUIDE_OWNER_APPROVED_AT,
+      reviewedAt: row.reviewedAt ?? TOPIC_GUIDE_OWNER_APPROVED_AT,
+      /** Owner (9 Nov 2026): doctors author these guides — default approved with attribution. */
+      reviewStatus: row.reviewStatus ?? "approved",
       references: row.references ?? [],
       primaryQuestion: uniqueness.primaryQuestion,
       directAnswer: uniqueness.directAnswer,

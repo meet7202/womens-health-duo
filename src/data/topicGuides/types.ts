@@ -22,8 +22,9 @@ export type TopicGuideSection = {
 
 /**
  * Editorial review gate (SEO-14).
- * Do not invent approvals: default existing guides to `pending` until a real clinician review.
- * Byline/review UI renders only when `reviewStatus === "approved"` and supporting fields are present.
+ * Owner-authorized default for WHD topic guides is `approved` (clinicians author the set).
+ * Byline/review UI renders only when `reviewStatus === "approved"` and author/reviewer fields are present.
+ * Per-row overrides may still use pending/draft/needs-review when a guide is held.
  */
 export type TopicGuideReviewStatus = "pending" | "draft" | "needs-review" | "approved";
 
@@ -59,7 +60,7 @@ export type TopicGuideRow = {
   publishedAt?: string;
   updatedAt?: string;
   reviewedAt?: string;
-  /** Defaults to `pending` for existing guides; never invent `approved`. */
+  /** Defaults to `approved` (owner-authorized clinician authorship); override for holds. */
   reviewStatus?: TopicGuideReviewStatus;
   references?: readonly TopicGuideReference[];
   /**
@@ -94,7 +95,7 @@ export type TopicGuidePageModel = {
   reviewedAt?: string;
   reviewStatus?: TopicGuideReviewStatus;
   references: readonly TopicGuideReference[];
-  /** SEO-12 uniqueness scaffolding when present (still `reviewStatus: pending`). */
+  /** SEO-12 uniqueness scaffolding when present. */
   primaryQuestion?: string;
   directAnswer?: string;
 };

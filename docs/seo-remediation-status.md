@@ -11,21 +11,21 @@ Progress ledger for the evidence-led remediation prompt. Status values: `not-sta
 
 ## Artifacts
 
-| Artifact                        | Path                                                                                                            |
-| ------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Protected GSC clicked URLs (79) | [`docs/seo-url-migration.csv`](seo-url-migration.csv)                                                           |
-| Full route inventory            | [`docs/seo-route-inventory.csv`](seo-route-inventory.csv) (generated)                                           |
-| Guide disposition (SEO-12/36)   | [`docs/seo-guide-disposition.csv`](seo-guide-disposition.csv) (`npm run generate:seo-guide-disposition`)        |
+| Artifact                          | Path                                                                                                                                   |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Protected GSC clicked URLs (79)   | [`docs/seo-url-migration.csv`](seo-url-migration.csv)                                                                                  |
+| Full route inventory              | [`docs/seo-route-inventory.csv`](seo-route-inventory.csv) (generated)                                                                  |
+| Guide disposition (SEO-12/36)     | [`docs/seo-guide-disposition.csv`](seo-guide-disposition.csv) (`npm run generate:seo-guide-disposition`)                               |
 | Virtual service families (SEO-11) | [`docs/seo-virtual-service-disposition.csv`](seo-virtual-service-disposition.csv) (`npm run generate:seo-virtual-service-disposition`) |
-| Page status ledger (SEO-32)     | [`docs/seo-page-status.csv`](seo-page-status.csv) (`npm run generate:seo-page-status` / `test:seo-page-status`) |
-| Media disposition (SEO-36)      | [`docs/seo-media-disposition.csv`](seo-media-disposition.csv) (`npm run generate:seo-media-disposition`)        |
-| Launch checklist (L01–W10)      | [`docs/seo-launch-checklist.md`](seo-launch-checklist.md)                                                       |
-| Owner / clinician actions       | [`docs/seo-owner-actions.md`](seo-owner-actions.md)                                                             |
-| Production crawl (SEO-38)       | [`docs/seo-production-crawl.csv`](seo-production-crawl.csv) — **pending after deploy**                          |
-| Browser coverage (SEO-38)       | [`docs/seo-browser-coverage.csv`](seo-browser-coverage.csv) — **pending after deploy**                          |
-| Cloudflare redirect prep        | [`docs/seo-cloudflare-redirects.md`](seo-cloudflare-redirects.md)                                               |
-| Route disposition model         | [`src/config/routeDisposition.ts`](../src/config/routeDisposition.ts)                                           |
-| Guide uniqueness overrides      | [`src/data/topicGuides/guideUniquenessOverrides.ts`](../src/data/topicGuides/guideUniquenessOverrides.ts)       |
+| Page status ledger (SEO-32)       | [`docs/seo-page-status.csv`](seo-page-status.csv) (`npm run generate:seo-page-status` / `test:seo-page-status`)                        |
+| Media disposition (SEO-36)        | [`docs/seo-media-disposition.csv`](seo-media-disposition.csv) (`npm run generate:seo-media-disposition`)                               |
+| Launch checklist (L01–W10)        | [`docs/seo-launch-checklist.md`](seo-launch-checklist.md)                                                                              |
+| Owner / clinician actions         | [`docs/seo-owner-actions.md`](seo-owner-actions.md)                                                                                    |
+| Production crawl (SEO-38)         | [`docs/seo-production-crawl.csv`](seo-production-crawl.csv) — **pending after deploy**                                                 |
+| Browser coverage (SEO-38)         | [`docs/seo-browser-coverage.csv`](seo-browser-coverage.csv) — **pending after deploy**                                                 |
+| Cloudflare redirect prep          | [`docs/seo-cloudflare-redirects.md`](seo-cloudflare-redirects.md)                                                                      |
+| Route disposition model           | [`src/config/routeDisposition.ts`](../src/config/routeDisposition.ts)                                                                  |
+| Guide uniqueness overrides        | [`src/data/topicGuides/guideUniquenessOverrides.ts`](../src/data/topicGuides/guideUniquenessOverrides.ts)                              |
 
 ## GSC export wave (5 Nov 2026)
 
@@ -58,10 +58,10 @@ Exports under `~/Downloads/womenshealthduo.com-*-2026-11-05.zip` (Coverage, Vide
 | SEO-08 | verified-local     | Removed synthetic AggregateRating/5-star emission from class pages (GSC Review snippets: invalid parent/itemReviewed + reviews without aggregateRating).                                                                                                                                                                                         |
 | SEO-09 | verified-local     | Sitemap `<lastmod>` omitted until verified content revisions; audit no longer requires build-day equality; video dates remain `postedAt` only.                                                                                                                                                                                                   |
 | SEO-10 | verified-local     | React 18 `renderToString` + `StaticRouter` covers every indexable **template** (43 priority paths: home/section, doctors, cities, classes, Learn filters/watch, policies, intl, virtual hub/country/city/service×city, topic care hubs). Soft-fail per path; `WHD_PRERENDER=0` skips. Long-tail matrix/watch/guides remain shell-only by design. |
-| SEO-11 | verified-local     | Freeze + service-family disposition CSV (`generate:seo-virtual-service-disposition`); city×service pages keep/improve (protect GSC clicks); template now hub-first with eligibility note + book CTA (no invented local clinics; no mass-noindex).                                                                                                 |
-| SEO-12 | verified-local     | All 100 guides get title-led `primaryQuestion`+`directAnswer` (curated overrides → FAQ pool match → cluster lead); disposition CSV scaffold=yes; `reviewStatus` remains `pending` (not medically approved). Deeper clinician rewrite still owner queue.                                                                                            |
+| SEO-11 | verified-local     | Freeze + service-family disposition CSV (`generate:seo-virtual-service-disposition`); city×service pages keep/improve (protect GSC clicks); template now hub-first with eligibility note + book CTA (no invented local clinics; no mass-noindex).                                                                                                |
+| SEO-12 | verified-local     | All 100 guides get title-led uniqueness scaffold; owner-approved (9 Nov): `reviewStatus=approved` with lane-correct author/reviewer + dates; disposition CSV updated.                                                                                                                                                                            |
 | SEO-13 | verified-local     | `faqIds` on hub + regression guides; pool ids; slug/title match preference; registry wires `row.faqIds`.                                                                                                                                                                                                                                         |
-| SEO-14 | verified-local     | Optional author/reviewer/dates/references + `reviewStatus` (`pending`\|`draft`\|`needs-review`\|`approved`); default `pending`; byline only when `approved`; Editorial Policy notes ~100 guides.                                                                                                                                                 |
+| SEO-14 | verified-local     | Author/reviewer/dates + `reviewStatus`; owner default `approved` with Charmi/Zalak attribution by lane; byline when approved; Editorial Policy updated.                                                                                                                                                                                           |
 | SEO-15 | needs-owner-data   | Hold kept (9 Nov): YouTube + IG links still HTTP 200 — do not remove. Display override + ASRM note remain until clinician lifts hold.                                                                                                                                                                                                            |
 | SEO-16 | verified-local     | `ig-cr1otdannn4` / `ig-dbtawiyp_m_`: no VideoObject; noindex watch pages; empty/error captions rejected at display title; hub poster→watch.                                                                                                                                                                                                      |
 | SEO-17 | verified-local     | Hours + online-first booking note in `practiceLocations` / Contact (Mon–Sat 9–6 India). Street addresses still omitted (owner did not supply).                                                                                                                                                                                                   |
