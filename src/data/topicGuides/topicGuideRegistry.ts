@@ -9,6 +9,8 @@ import type {
   TopicGuideAuthorId,
   TopicGuideClusterId,
   TopicGuidePageModel,
+  TopicGuideReviewHoldStatus,
+  TopicGuideReviewStatus,
   TopicGuideRow,
   TopicGuideSection,
 } from "./types";
@@ -18,6 +20,26 @@ import type {
  * Per-row fields still win when set. Do not invent future review dates on rebuild.
  */
 const TOPIC_GUIDE_OWNER_APPROVED_AT = "2026-11-09";
+
+/**
+ * Per-slug clinical holds. Entries force a non-approved `reviewStatus` even when the set default
+ * is `approved`, so incomplete / withheld guides never show an approval byline.
+ * Prefer this map for temporary holds; use row `reviewStatus` for durable per-guide state.
+ */
+export const TOPIC_GUIDE_REVIEW_HOLDS: ReadonlyMap<string, TopicGuideReviewHoldStatus> = new Map([
+  // Example: ["some-slug", "needs-review"],
+]);
+
+/**
+ * Resolve editorial gate for one guide.
+ * Precedence: `TOPIC_GUIDE_REVIEW_HOLDS` → explicit row `reviewStatus` → owner default `approved`.
+ */
+export function resolveTopicGuideReviewStatus(row: TopicGuideRow): TopicGuideReviewStatus {
+  const hold = TOPIC_GUIDE_REVIEW_HOLDS.get(row.slug);
+  if (hold) return hold;
+  if (row.reviewStatus) return row.reviewStatus;
+  return "approved";
+}
 
 function editorialAttribution(consult: "charmi" | "zalak" | "both"): {
   authorId: TopicGuideAuthorId;
@@ -368,7 +390,10 @@ const GUIDE_BY_SLUG: ReadonlyMap<string, TopicGuidePageModel> = new Map(
     const faqs = buildTopicGuideFaqs(row.slug, title, consult, cc.faqPool, row.faqIds);
     const path = publicPathname(`/${row.slug}`);
     const relatedSlugs = computeRelated(row, BY_CLUSTER);
-    const attribution = editorialAttribution(consult);
+    const reviewStatus = resolveTopicGuideReviewStatus(row);
+    const approved = reviewStatus === "approved";
+    // Only stamp clinician byline fields when the guide is actually approved (or row overrides).
+    const attribution = approved ? editorialAttribution(consult) : undefined;
     const model: TopicGuidePageModel = {
       slug: row.slug,
       path,
@@ -383,13 +408,12 @@ const GUIDE_BY_SLUG: ReadonlyMap<string, TopicGuidePageModel> = new Map(
       primaryConsult: consult,
       serviceSlugs: services,
       relatedSlugs,
-      authorId: row.authorId ?? attribution.authorId,
-      reviewerId: row.reviewerId ?? attribution.reviewerId,
-      publishedAt: row.publishedAt ?? TOPIC_GUIDE_OWNER_APPROVED_AT,
-      updatedAt: row.updatedAt ?? TOPIC_GUIDE_OWNER_APPROVED_AT,
-      reviewedAt: row.reviewedAt ?? TOPIC_GUIDE_OWNER_APPROVED_AT,
-      /** Owner (9 Nov 2026): doctors author these guides — default approved with attribution. */
-      reviewStatus: row.reviewStatus ?? "approved",
+      authorId: row.authorId ?? attribution?.authorId,
+      reviewerId: row.reviewerId ?? attribution?.reviewerId,
+      publishedAt: row.publishedAt ?? (approved ? TOPIC_GUIDE_OWNER_APPROVED_AT : undefined),
+      updatedAt: row.updatedAt ?? (approved ? TOPIC_GUIDE_OWNER_APPROVED_AT : undefined),
+      reviewedAt: row.reviewedAt ?? (approved ? TOPIC_GUIDE_OWNER_APPROVED_AT : undefined),
+      reviewStatus,
       references: row.references ?? [],
       primaryQuestion: uniqueness.primaryQuestion,
       directAnswer: uniqueness.directAnswer,

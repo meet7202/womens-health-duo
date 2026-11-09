@@ -111,6 +111,8 @@
     </script>
     <script>
       (function (w, d, s, l, i) {
+        // Fail closed: never request gtm.js with a missing/placeholder id.
+        if (!i || i.indexOf("@@") !== -1 || !/^GTM-[A-Z0-9]+$/i.test(i)) return;
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
         var f = d.getElementsByTagName(s)[0],
