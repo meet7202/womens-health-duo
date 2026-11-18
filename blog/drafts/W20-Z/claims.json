@@ -1,0 +1,30 @@
+{
+  "id": "W20-Z",
+  "openClinicalQuestions": [
+    "Dr. Zalak: preferred wording when patients attribute pain solely to epidural—how firmly to reassure versus when to escalate for medical review.",
+    "Confirm local Indian emergency phrasing preference (112 only vs also name nearest hospital maternity triage)."
+  ],
+  "claimLedger": [
+    {
+      "claim": "Back pain may relate to pregnancy/birth/caregiving; practical feeding and lifting tips; ask for help anytime.",
+      "sourceUrl": "https://www.nhs.uk/conditions/baby/support-and-services/your-post-pregnancy-body/",
+      "sourceSection": "NHS · Your post-pregnancy body · not stated on fetched page",
+      "limitations": "UK tips; home layout and equipment access vary",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Stay active; urgent/emergency pathways for bilateral leg symptoms, saddle numbness, bladder/bowel changes; physiotherapy may help.",
+      "sourceUrl": "https://www.nhs.uk/conditions/back-pain/",
+      "sourceSection": "NHS · Back pain · Page last reviewed 05 March 2026",
+      "limitations": "General back-pain page; apply carefully in early postnatal context with local emergency number",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Feeding/lifting loads can strain back/pelvis after birth; pacing and position tips; urgent care for bilateral leg symptoms or bladder/bowel/saddle changes.",
+      "sourceUrl": "https://thepogp.co.uk/patient_information/womens_health/pregnancy_pgp_lbp.aspx",
+      "sourceSection": "POGP · Pregnancy related Pelvic girdle pain and low back pain during pregnancy and after having a baby · not stated",
+      "limitations": "UK leaflet; not every postpartum back pain is PGP",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

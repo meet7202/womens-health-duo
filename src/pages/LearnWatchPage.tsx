@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { PageShell } from "@/components/layout/PageShell";
+import { ContentAuthors } from "@/components/seo/ContentAuthors";
 import { ROUTES } from "@/config/routes";
 import { SITE_URL } from "@/config/site";
 import { TrackedWhatsAppLink } from "@/components/cta/TrackedWhatsAppLink";
@@ -175,6 +176,7 @@ export function LearnWatchPage() {
           </TrackedWhatsAppLink>{" "}
           to book a consultation.
         </p>
+        <ContentAuthors />
       </article>
     </PageShell>
   );

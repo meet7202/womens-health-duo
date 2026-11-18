@@ -1,0 +1,837 @@
+{
+  "style": "Soft editorial health-education illustration in blush pink, sage green and cream, modest and non-graphic, respectful, warm lighting. No text, no labels, no letters, no logos.",
+  "articles": {
+    "W01-Z": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her thirties in workout clothes pauses mid-exercise in a bright living room, hand on lower abdomen, thoughtful; translucent circular inset shows a simplified bladder above a supportive pelvic floor muscle band.",
+        "alt": "Woman pausing during exercise with an inset of the bladder and pelvic floor muscles",
+        "caption": "Leakage with coughing, sneezing or exercise (stress urinary incontinence) happens when abdominal pressure briefly exceeds bladder outlet support."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Translucent seated human silhouette in side view coughing, simplified internal view of a round bladder resting on a curved hammock of pelvic floor muscles between the pelvic bones, gentle downward arrows showing abdominal pressure.",
+        "alt": "Side-view diagram of abdominal pressure from a cough pressing on the bladder and pelvic floor",
+        "caption": "Physiology: a cough raises intra-abdominal pressure; the pelvic floor and urethral sphincter normally contract in time to keep the bladder outlet closed.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W01-C": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her twenties sitting on a sofa looking at a paper calendar with some dates circled at uneven intervals, phone beside her, calm and curious; translucent inset over lower abdomen shows a simplified womb and two ovaries.",
+        "alt": "Woman reviewing an uneven period calendar with an inset of the womb and ovaries",
+        "caption": "Irregular periods often reflect changes in ovulation; recording dates helps your gynaecologist see your own pattern."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Clean textbook-style diagram of a simplified pear-shaped womb with two almond-shaped ovaries, one ovary showing a single maturing follicle with a soft glow, small circular arrows around it suggesting a monthly cycle.",
+        "alt": "Diagram of the womb and ovaries with one maturing follicle",
+        "caption": "In an ovulatory cycle, a follicle in the ovary matures and releases an egg. When ovulation is delayed or does not happen, cycle length can change.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W02-Z": [
+      {
+        "key": "scene",
+        "prompt": "A pregnant Indian woman in her second trimester walking briskly in a leafy park in comfortable clothes and trainers, water bottle in hand, relaxed smile; translucent inset shows the growing womb and baby within the abdomen.",
+        "alt": "Pregnant woman walking in a park with an inset of the growing womb",
+        "caption": "Moderate activity such as walking is commonly discussed in pregnancy; your maternity team confirms what suits your pregnancy."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Translucent standing pregnant silhouette in side view showing a simplified womb with baby, the spine with a gentle forward curve, and the pelvic floor beneath, soft arrows showing weight shifting forward.",
+        "alt": "Side-view diagram of pregnancy posture changes with the womb, spine and pelvic floor",
+        "caption": "As the bump grows, posture and balance change and pregnancy hormones affect connective tissue, so exercise is usually adapted rather than stopped.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W02-C": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her late twenties sitting with a notebook at a sunny desk, gently touching her chin, thoughtful; translucent inset shows a simplified womb with two ovaries dotted with many small round follicles.",
+        "alt": "Woman making notes with an inset of ovaries showing many small follicles",
+        "caption": "PCOS, now renamed PMOS (polyendocrine metabolic ovarian syndrome), can involve irregular ovulation, androgen-related symptoms and metabolic features. An ultrasound is only one part of assessment."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "School biology textbook diagram of a simplified womb with two almond-shaped ovaries, each ovary containing a ring of many tiny round follicles around the edge, calm educational style.",
+        "alt": "Diagram of ovaries with multiple small follicles around the edge",
+        "caption": "Polycystic ovarian morphology means many small follicles that have not developed to ovulation. Diagnosis also considers cycles, androgen signs and other possible causes.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W03-Z": [
+      {
+        "key": "scene",
+        "prompt": "An Indian mother in her thirties doing a gentle supported stretch on a yoga mat at home while her baby lies on a play mat beside her, calm and smiling; translucent inset shows simplified abdominal muscles and pelvic floor.",
+        "alt": "New mother doing gentle exercise at home beside her baby, with an inset of core and pelvic floor muscles",
+        "caption": "Returning to exercise after birth is gradual: pelvic floor and abdominal recovery guide progression more than a fixed date."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Translucent standing female silhouette front view showing simplified abdominal wall muscles as vertical bands above a supportive pelvic floor hammock, gentle upward arrows suggesting recovery and support.",
+        "alt": "Diagram of abdominal wall muscles and pelvic floor working together after birth",
+        "caption": "The deep abdominal muscles, diaphragm and pelvic floor work as a pressure system; postnatal rehab rebuilds their coordination before impact exercise.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W03-C": [
+      {
+        "key": "scene",
+        "prompt": "An Indian couple in their early thirties sitting together at a kitchen table with a checklist and a cup of tea, smiling and planning; translucent inset over the woman's lower abdomen shows a simplified womb and ovaries.",
+        "alt": "Couple planning pregnancy together at a kitchen table",
+        "caption": "A preconception review covers health history, medicines, vaccinations and supplements before trying to conceive."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Clean textbook diagram of a simplified womb and two ovaries with a soft-glowing healthy womb lining, small leaf motifs around it suggesting preparation and wellbeing.",
+        "alt": "Diagram of the womb lining and ovaries prepared for pregnancy",
+        "caption": "The endometrium (womb lining) thickens each cycle to support implantation; general health before conception supports early pregnancy.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W04-Z": [
+      {
+        "key": "scene",
+        "prompt": "An Indian mother in her thirties lying on her back on a mat with knees bent, gently placing fingers along the middle of her tummy, baby nearby, calm; translucent inset shows the two vertical abdominal muscle bands slightly separated at the midline.",
+        "alt": "New mother checking her tummy with an inset of separated abdominal muscles",
+        "caption": "Diastasis recti is widening of the linea alba between the two rectus abdominis muscles, common after pregnancy."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Front-view textbook illustration of a simplified torso showing two vertical abdominal muscle bands (six-pack muscles) with a widened soft connective strip down the centre, comparison of narrow versus wider gap side by side.",
+        "alt": "Diagram comparing a normal and widened gap between the abdominal muscles",
+        "caption": "The linea alba is connective tissue joining the rectus abdominis; tension and function matter as much as gap width.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W04-C": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her late twenties sitting on her bed in the morning with a cycle-tracking notebook and a basal thermometer on the bedside table, focused; translucent inset shows an ovary releasing an egg toward the womb.",
+        "alt": "Woman tracking her cycle in the morning with an inset of ovulation",
+        "caption": "Ovulation tracking methods estimate when an egg is released; irregular cycles make estimates less certain."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Clean textbook diagram of a simplified ovary releasing a single round egg from a mature follicle, the egg travelling along a tube toward a pear-shaped womb, soft glow at the point of release.",
+        "alt": "Diagram of an egg being released from the ovary during ovulation",
+        "caption": "At ovulation, an LH surge triggers the mature follicle to release an egg, which can be fertilised for roughly a day.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W05-Z": [
+      {
+        "key": "scene",
+        "prompt": "Two Indian women in a bright airy studio, one doing a controlled mat Pilates exercise and one on a reformer machine with springs and a sliding carriage, calm focused instructor-led atmosphere, no faces in close-up.",
+        "alt": "Pilates studio showing a mat exercise beside a reformer machine",
+        "caption": "STOTT Pilates is a contemporary Pilates method taught on the mat and on equipment such as the reformer."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Translucent female silhouette in a side-lying Pilates position showing a neutral spine, deep abdominal muscle band, diaphragm and pelvic floor highlighted in soft glow, arrows suggesting coordinated breathing.",
+        "alt": "Diagram of neutral spine, deep core muscles and breathing during Pilates",
+        "caption": "Pilates cues breathing, neutral spine alignment and deep core activation (transversus abdominis and pelvic floor).",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W05-C": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her twenties looking into a bathroom mirror, lightly touching her jawline, calm and reflective, a cycle diary on the counter; translucent inset shows simplified ovaries with many small follicles.",
+        "alt": "Woman looking in a mirror and reflecting on skin changes, with an ovary inset",
+        "caption": "PCOS can present with acne, excess hair or scalp hair thinning even when periods seem regular."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Educational diagram showing a simplified ovary on one side connected by soft arrows to icons of a hair follicle and skin pore on the other side, illustrating hormone signalling, textbook style.",
+        "alt": "Diagram linking ovarian hormones to hair and skin changes",
+        "caption": "Higher androgen levels (hyperandrogenism) from the ovaries can affect hair follicles and oil glands.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W06-Z": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her thirties seated upright on a chair at home with eyes closed, one hand on her belly, practising calm breathing; translucent inset shows the pelvic floor muscle band gently lifting.",
+        "alt": "Woman seated practising pelvic floor awareness with an inset of the pelvic floor",
+        "caption": "Kegels are pelvic floor muscle contractions; relaxing the muscles fully matters as much as squeezing."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Three side-by-side simplified side-view pelvis diagrams of a curved pelvic floor muscle hammock: one lifting upward, one relaxed lower, one with balanced arrows, clean textbook style.",
+        "alt": "Three diagrams showing pelvic floor contraction, relaxation and coordination",
+        "caption": "Pelvic floor function depends on contraction, full relaxation and timing (coordination) — not strength alone.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W06-C": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her twenties curled on a sofa under a light blanket holding a hot water bottle to her lower abdomen, a diary beside her; translucent inset shows a simplified womb with soft red glow of cramping.",
+        "alt": "Woman resting with a hot water bottle during period pain, with a womb inset",
+        "caption": "Period pain (dysmenorrhoea) that stops you working or studying deserves assessment."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Textbook diagram of a simplified pear-shaped womb with its muscular wall shown contracting via small inward arrows, a soft warm glow representing prostaglandin signals.",
+        "alt": "Diagram of the womb muscle contracting during a period",
+        "caption": "Prostaglandins make the myometrium (womb muscle) contract to shed the lining, causing cramping pain.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W07-Z": [
+      {
+        "key": "scene",
+        "prompt": "A pregnant Indian woman in her third trimester sitting on a dining chair with a cushion supporting her lower back, feet flat, hand on her back, comfortable home setting; translucent inset shows the lower spine and pelvis.",
+        "alt": "Pregnant woman sitting with lumbar support and an inset of the lower spine",
+        "caption": "Back pain is common in pregnancy. Changing position often, pacing tasks and adjusting how you lift are reasonable things to try."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Translucent pregnant silhouette in side view showing the lumbar spine with an increased curve, the pelvis, and the growing womb, soft arrows showing load on the lower back.",
+        "alt": "Side-view diagram of the lower back and pelvis during pregnancy",
+        "caption": "Changes in posture, weight distribution and connective tissue during pregnancy can add load to the lower back and pelvis. How much each contributes varies from person to person.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W07-C": [
+      {
+        "key": "scene",
+        "prompt": "An Indian couple in their thirties holding hands while seated in a calm clinic waiting area, hopeful expressions; translucent inset over the woman shows a simplified ovary releasing an egg.",
+        "alt": "Couple waiting at a clinic with an inset of ovulation",
+        "caption": "Many people with PCOS conceive; the key conversation is about how regularly ovulation happens."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Textbook diagram of two ovaries: one with many small paused follicles, the other with a single follicle maturing and releasing an egg toward the womb, soft glow on the released egg.",
+        "alt": "Diagram comparing paused follicles with a follicle releasing an egg",
+        "caption": "In PCOS, follicles may pause before maturing (anovulation); treatment discussions focus on supporting ovulation.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W08-Z": [
+      {
+        "key": "scene",
+        "prompt": "An Indian mother in her thirties carefully rolling onto her side to get out of bed, supporting her lower tummy with a small pillow, baby cot beside the bed, morning light; translucent inset shows a low horizontal healed line on the lower abdomen and abdominal muscle layers.",
+        "alt": "Mother getting out of bed after a caesarean using a pillow for support",
+        "caption": "After a caesarean birth, log-rolling and supporting the abdomen can ease everyday movements while tissues heal."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Simplified textbook cross-section of abdominal wall layers (skin, fat, fascia, muscle) showing a neatly healing low horizontal incision line, soft green glow suggesting healing, non-graphic.",
+        "alt": "Diagram of abdominal wall layers healing after a caesarean section",
+        "caption": "Simplified view of the tissue layers between the skin and the womb in a caesarean birth. Each layer heals at its own pace; your obstetric team can explain the approach used in your operation.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W08-C": [
+      {
+        "key": "scene",
+        "prompt": "An Indian couple in their early thirties sitting on a sofa looking at a calendar together, slightly concerned but supportive of each other; translucent inset shows a simplified womb and ovaries.",
+        "alt": "Couple reviewing a calendar while trying to conceive",
+        "caption": "Timing for fertility evaluation depends on age, history and symptoms; both partners may be assessed."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Side-by-side textbook diagrams: a simplified womb with ovaries and tubes on one side and a simple sperm cell illustration on the other, joined by a soft arc, educational style.",
+        "alt": "Diagram of female reproductive organs and sperm, representing a couple's fertility assessment",
+        "caption": "Fertility assessment looks at ovulation, tubes and womb, and semen analysis for the partner.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W09-Z": [
+      {
+        "key": "scene",
+        "prompt": "An Indian mother in her thirties lying on her back on a mat with knees bent, head slightly lifted, fingers placed at her belly button, baby on a play mat beside her; translucent inset shows separated abdominal muscle bands.",
+        "alt": "Mother doing a tummy self-check lying down, with an abdominal muscle inset",
+        "caption": "A self-check can show how the midline feels, but it cannot diagnose diastasis recti or rule out a hernia."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Front-view textbook diagram of the abdominal muscles with fingers shown at the midline measuring a gap, with a small inset showing tissue tension as a taut versus soft band.",
+        "alt": "Diagram of finger-width measurement of abdominal separation with tissue tension",
+        "caption": "Finger-width checks give only a rough distance. How firm the midline feels and how you manage load also matter.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W09-C": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her late twenties at a kitchen counter holding a small supplement tablet and a glass of water, fresh vegetables and leafy greens nearby, calm morning light; translucent inset shows a simplified womb.",
+        "alt": "Woman taking a folic acid tablet with leafy greens nearby",
+        "caption": "Folic acid taken before conception and in early pregnancy lowers the risk of neural tube defects. Some people need a higher, prescribed dose."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Gentle textbook illustration of a very early embryo curled like a small comma inside the womb, with a soft glow along its developing spine (neural tube), non-graphic.",
+        "alt": "Diagram of an early embryo with the developing neural tube",
+        "caption": "The neural tube, which becomes the brain and spinal cord, closes in the first weeks — often before pregnancy is known.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W10-Z": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her thirties standing tall in a bright room, hands resting on her hips, confident; translucent inset shows the bowl-shaped pelvis with the pelvic floor muscle hammock supporting the bladder and womb.",
+        "alt": "Woman standing with an inset of the pelvic floor supporting the pelvic organs",
+        "caption": "The pelvic floor is a group of muscles across the base of the pelvis supporting the bladder, uterus and bowel."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Textbook view looking down into a simplified pelvic bowl showing a hammock of layered pelvic floor muscles stretching between the pubic bone at the front and the tailbone at the back.",
+        "alt": "Top-down diagram of the pelvic floor muscles between pubic bone and tailbone",
+        "caption": "The levator ani muscles span from the pubic bone to the coccyx, supporting organs and controlling continence.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W10-C": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her thirties sitting at a desk in an office looking tired, discreetly checking her watch, a bag beside her; translucent inset shows a simplified womb with a thickened lining.",
+        "alt": "Tired woman at work with an inset of a thickened womb lining",
+        "caption": "Heavy periods (menorrhagia) can cause tiredness and affect daily life; clots and flooding warrant review."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Textbook diagram of a simplified womb comparing a normal lining with a thicker lining and a small rounded growth within the wall, educational style.",
+        "alt": "Diagram comparing normal and thickened womb lining with a small fibroid",
+        "caption": "Causes include fibroids, polyps, adenomyosis, hormonal changes and bleeding disorders.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W11-Z": [
+      {
+        "key": "scene",
+        "prompt": "A pregnant Indian woman stepping carefully out of a car keeping her knees together, hand on her hip, calm; translucent inset shows the front of the pelvis and the pubic joint.",
+        "alt": "Pregnant woman getting out of a car carefully with an inset of the pelvic joints",
+        "caption": "Pelvic girdle pain often flares with asymmetric movements such as getting out of a car."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Front-view textbook illustration of a pelvis highlighting the joint at the front (pubic symphysis) and the two joints at the back near the spine (sacroiliac joints) with a soft glow.",
+        "alt": "Diagram of the pelvis highlighting the pubic symphysis and sacroiliac joints",
+        "caption": "Pelvic girdle pain involves the pubic symphysis and sacroiliac joints.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W11-C": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her early thirties reading a lab report on her phone in a calm clinic corridor, thoughtful; translucent inset shows a simplified ovary with small follicles.",
+        "alt": "Woman reading a blood test result with an ovary inset",
+        "caption": "AMH reflects ovarian reserve — the number of follicles — not egg quality."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Textbook diagram of an ovary with many tiny early follicles glowing softly, with a small blood droplet icon beside it representing a hormone blood test.",
+        "alt": "Diagram of ovarian follicles producing a hormone measured in a blood test",
+        "caption": "Anti-Müllerian hormone (AMH) is made by small growing follicles and measured in blood.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W12-Z": [
+      {
+        "key": "scene",
+        "prompt": "An Indian mother in her thirties holding her baby while bending to pick up a basket of laundry, a small surprised pause; translucent inset shows the bladder and stretched pelvic floor.",
+        "alt": "Mother lifting laundry while holding her baby, with a pelvic floor inset",
+        "caption": "Leaking urine after childbirth is common and treatable; pelvic floor physiotherapy is a first-line option."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Side-by-side textbook side-view diagrams of the pelvic floor hammock: one taut and supportive, one stretched lower after birth, beneath a round bladder.",
+        "alt": "Diagram comparing a supportive and stretched pelvic floor after childbirth",
+        "caption": "Vaginal birth can stretch the pelvic floor muscles and nerves; most regain function with targeted rehab.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W12-C": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her twenties preparing a colourful balanced meal in a bright kitchen, walking shoes by the door, smiling; translucent inset shows simplified ovaries.",
+        "alt": "Woman preparing a balanced meal with an ovary inset",
+        "caption": "Daily PCOS management includes nutrition, movement, sleep and stress — chosen to fit your life."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Educational diagram connecting a simplified ovary, a pancreas shape and a muscle icon with gentle arrows, illustrating hormone and metabolic links, clean textbook style.",
+        "alt": "Diagram linking the ovaries, pancreas and muscles in PCOS metabolism",
+        "caption": "Insulin from the pancreas and activity in muscles influence ovarian hormone production in PCOS.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W13-Z": [
+      {
+        "key": "scene",
+        "prompt": "An Indian mother in her thirties doing a gentle supported exercise with breath on a mat while her toddler plays nearby, determined calm expression; translucent inset shows abdominal muscle bands drawing toward the midline.",
+        "alt": "Mother doing core rehab exercise with an inset of abdominal muscles closing toward the midline",
+        "caption": "Diastasis recti often improves in the months after birth; physiotherapy guides function-based progress."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Front-view textbook diagram showing deep abdominal muscle wrapping horizontally like a corset beneath the two vertical abdominal bands, arrows showing gentle drawing in toward the centre.",
+        "alt": "Diagram of the deep abdominal muscles supporting the midline",
+        "caption": "The transversus abdominis tensions the linea alba; load management matters more than closing the gap completely.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W13-C": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her late twenties sitting on the edge of a bed holding a pregnancy test, hand on her chest, emotional smile; translucent inset shows a tiny early pregnancy sac in the womb.",
+        "alt": "Woman holding a positive pregnancy test with an early pregnancy inset",
+        "caption": "After a positive test, book early antenatal care and review medicines and folic acid."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Gentle textbook illustration of a simplified womb with a tiny implanted pregnancy sac in the upper lining, soft glow, non-graphic.",
+        "alt": "Diagram of early pregnancy implanted in the womb lining",
+        "caption": "The embryo implants in the endometrium; hCG from early placenta tissue is what tests detect.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W14-Z": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her forties sitting on a sofa writing a short list in a notebook, calm and organised, tea beside her; translucent inset shows the pelvic floor beneath the bladder and bowel.",
+        "alt": "Woman writing symptoms in a notebook with a pelvic floor inset",
+        "caption": "Bladder, bowel, pain and activity symptoms together help decide if a pelvic floor assessment is needed."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Side-view textbook diagram of a pelvis showing the bladder at front, womb in middle and bowel at back, all resting on a curved pelvic floor muscle hammock, gentle highlights on each organ.",
+        "alt": "Side-view diagram of the bladder, womb and bowel supported by the pelvic floor",
+        "caption": "The pelvic floor supports three compartments: bladder (anterior), uterus (middle) and rectum (posterior).",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W14-C": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her twenties sitting on a bed hugging a cushion to her lower abdomen, wincing slightly, a symptom diary open beside her; translucent inset shows a womb with small patches of tissue on nearby surfaces.",
+        "alt": "Woman with pelvic pain holding a cushion, with an endometriosis inset",
+        "caption": "Endometriosis is tissue similar to the womb lining growing outside the uterus, often causing painful periods."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Textbook diagram of a simplified womb and ovaries with several small reddish patches on the outer surfaces of the ovaries and nearby pelvic lining, educational and non-graphic.",
+        "alt": "Diagram of endometriosis patches on the ovaries and pelvic lining",
+        "caption": "Endometriosis lesions can appear on the ovaries and peritoneum; scans may not show small deposits.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W15-Z": [
+      {
+        "key": "scene",
+        "prompt": "Three pregnant Indian women at different pregnancy stages (early, middle, late) doing gentle exercise side by side in a bright studio: walking on the spot, seated stretch, supported squat.",
+        "alt": "Three pregnant women at different trimesters doing adapted exercises",
+        "caption": "Exercise is adapted through each trimester as the body and comfort change."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Three translucent pregnant silhouettes in side view in a row showing a progressively growing womb and baby, with the centre of gravity marked by a soft dot moving forward.",
+        "alt": "Diagram of the growing womb and changing posture across three trimesters",
+        "caption": "Uterine growth, blood volume and joint laxity change through the first, second and third trimesters.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W15-C": [
+      {
+        "key": "scene",
+        "prompt": "An Indian couple in their thirties sitting together in a calm clinic consultation room looking at a simple step diagram on a tablet held by a clinician whose face is not shown, hopeful.",
+        "alt": "Couple reviewing the IVF steps on a tablet in a clinic",
+        "caption": "IVF steps include ovarian stimulation, egg retrieval, fertilisation, embryo culture and embryo transfer."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Educational step illustration: an ovary with several follicles, a lab dish with a few round eggs, a small early embryo, and a womb receiving the embryo, connected by soft arrows, non-graphic.",
+        "alt": "Diagram of IVF steps from ovary to lab dish to embryo transfer into the womb",
+        "caption": "In vitro fertilisation joins eggs and sperm in the laboratory before transferring an embryo to the uterus.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W16-Z": [
+      {
+        "key": "scene",
+        "prompt": "An Indian mother in her thirties walking slowly with a pram in a neighbourhood park, sunlight, calm, partner beside her; translucent inset shows a womb returning to smaller size.",
+        "alt": "Mother walking with a pram with an inset of the womb returning to size",
+        "caption": "Postpartum recovery is gradual and individual; function and support needs guide milestones."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Textbook series of three simplified womb outlines shrinking in size from after birth to weeks later, with soft arrows, alongside a pelvic floor hammock regaining shape.",
+        "alt": "Diagram of the womb shrinking after birth and the pelvic floor recovering",
+        "caption": "Uterine involution, pelvic floor healing and abdominal wall recovery progress at different rates.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W16-C": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her late twenties taking an evening walk after dinner in a quiet lane, relaxed; translucent inset shows simplified ovaries and a pancreas shape.",
+        "alt": "Woman walking after a meal with an inset of ovaries and pancreas",
+        "caption": "Insulin resistance is common in PCOS and can be influenced by activity, sleep and nutrition."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Educational diagram of a cell with small key-shaped insulin molecules approaching lock-shaped receptors on its surface, some locks partially blocked, soft colours, textbook style.",
+        "alt": "Diagram of insulin binding to cell receptors with reduced response",
+        "caption": "In insulin resistance, cells respond less to insulin, so the pancreas makes more; high insulin can raise ovarian androgens.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W17-Z": [
+      {
+        "key": "scene",
+        "prompt": "An Indian mother in her thirties doing a slow supported bridge exercise on a mat at home, breathing out, baby asleep in a bassinet nearby; translucent inset shows the deep core muscles and pelvic floor.",
+        "alt": "Mother doing a bridge exercise with an inset of deep core muscles",
+        "caption": "Rebuilding core strength after pregnancy starts with breathing, pelvic floor and deep abdominal coordination."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Translucent standing female silhouette showing the core as a cylinder: diaphragm on top, pelvic floor at the base, deep abdominal muscle wrapping the front, and spinal muscles at the back, soft glow.",
+        "alt": "Diagram of the core cylinder: diaphragm, pelvic floor, deep abdominals and back muscles",
+        "caption": "The core cylinder — diaphragm, pelvic floor, transversus abdominis and multifidus — manages pressure and load.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W17-C": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her twenties in a bathroom looking at a negative pregnancy test, calendar on the wall, puzzled but calm; translucent inset shows a womb and ovaries.",
+        "alt": "Woman checking a negative pregnancy test with a calendar nearby",
+        "caption": "A late period with a negative test may reflect testing too early, delayed ovulation or other causes."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Simple textbook timeline illustration of a cycle wheel with ovulation marked later than usual and a period arriving later, alongside a small womb diagram.",
+        "alt": "Cycle diagram showing late ovulation delaying a period",
+        "caption": "If ovulation happens later, the period also comes later; hCG rises only after implantation.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W18-Z": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her forties sitting in a calm physiotherapy room talking with a physiotherapist whose face is turned away, a pelvic model on the table, relaxed; translucent inset shows the bladder and pelvic floor.",
+        "alt": "Woman talking with a physiotherapist beside a pelvis model",
+        "caption": "Pelvic floor muscle training supervised by a physiotherapist is a first-line treatment for stress urinary incontinence."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Side-view textbook diagram of the bladder and urethra with the pelvic floor hammock lifting and closing around the urethra, small arrows showing support during a cough.",
+        "alt": "Diagram of the pelvic floor closing around the urethra to prevent leakage",
+        "caption": "Trained pelvic floor muscles lift and close the urethra during increases in abdominal pressure.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W18-C": [
+      {
+        "key": "scene",
+        "prompt": "An Indian couple in their thirties sitting at a desk in a bright clinic comparing two simple illustrated cards, thoughtful and supportive of each other; clinician hands only visible.",
+        "alt": "Couple comparing two treatment option cards in a fertility clinic",
+        "caption": "IUI and IVF differ in where fertilisation happens and how much monitoring is involved."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Side-by-side educational diagrams: left, a thin tube placing sperm into a womb with eggs meeting in the tube; right, eggs and sperm joined in a lab dish with an embryo then placed in the womb.",
+        "alt": "Diagram comparing IUI inside the body and IVF in the laboratory",
+        "caption": "IUI places prepared sperm in the uterus; IVF fertilises eggs in the lab before embryo transfer.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W19-Z": [
+      {
+        "key": "scene",
+        "prompt": "A pregnant Indian woman doing a supported side-lying exercise on a mat in a calm physiotherapy studio, physiotherapist hands guiding her hip gently, face of clinician not shown; translucent inset shows pelvis and spine.",
+        "alt": "Pregnant woman doing guided side-lying exercise in a physiotherapy studio",
+        "caption": "Prenatal physiotherapy addresses pregnancy-related pain, pelvic floor and movement concerns."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Translucent pregnant silhouette side view highlighting lower spine, pelvic joints and pelvic floor in soft glow, with gentle support arrows.",
+        "alt": "Diagram of the spine, pelvic joints and pelvic floor in pregnancy",
+        "caption": "Prenatal physiotherapy focuses on the lumbar spine, pelvic girdle and pelvic floor as pregnancy progresses.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W19-C": [
+      {
+        "key": "scene",
+        "prompt": "A pregnant Indian woman in early pregnancy resting on a sofa sipping water, plain crackers beside her, slightly tired but calm; translucent inset shows a tiny early pregnancy in the womb.",
+        "alt": "Woman in early pregnancy resting with water and crackers",
+        "caption": "Nausea and vomiting are common in early pregnancy; inability to keep fluids down needs medical care."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Educational diagram linking a small early placenta in the womb with soft arrows to a simplified brain and stomach, representing pregnancy hormone signals, textbook style.",
+        "alt": "Diagram of pregnancy hormones signalling the brain and stomach",
+        "caption": "Rising hCG and other hormones are linked to pregnancy nausea; severe cases (hyperemesis gravidarum) need treatment.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W20-Z": [
+      {
+        "key": "scene",
+        "prompt": "An Indian mother in her thirties breastfeeding on a supportive chair with a pillow under her baby and a cushion behind her lower back, relaxed posture; translucent inset shows the upper and lower spine.",
+        "alt": "Mother feeding her baby with cushions supporting her back, with a spine inset",
+        "caption": "Feeding, lifting and carrying positions can contribute to back pain after pregnancy."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Translucent seated silhouette side view showing the full spine with soft highlights on the upper back and lower back, arrows showing load from holding a baby.",
+        "alt": "Diagram of spinal load while holding a baby",
+        "caption": "Repeated forward-flexed postures load the thoracic and lumbar spine while core recovery continues.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W20-C": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her twenties sitting by a window with a journal, looking low and reflective, a friend's supportive hand on her shoulder; soft calendar on the wall.",
+        "alt": "Woman journaling her mood with a friend's supportive hand on her shoulder",
+        "caption": "PMDD causes severe mood symptoms in the days before a period that improve after it starts."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Educational diagram of a simplified brain connected by soft arrows to a cycle wheel showing hormone levels rising and falling, textbook style.",
+        "alt": "Diagram linking the menstrual cycle hormone changes to the brain",
+        "caption": "PMDD is thought to involve heightened brain sensitivity to normal cyclical changes in oestrogen and progesterone.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W21-Z": [
+      {
+        "key": "scene",
+        "prompt": "Two pregnant Indian women in a bright small-group prenatal Pilates class doing a gentle seated exercise with a ball, instructor partly visible from behind, calm.",
+        "alt": "Pregnant women in a small prenatal Pilates class using exercise balls",
+        "caption": "Prenatal Pilates is adapted to your pregnancy; tell the instructor about pain, bleeding or pelvic symptoms."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Translucent pregnant silhouette seated on an exercise ball highlighting deep abdominal muscles, pelvic floor and diaphragm with soft glow, arrows showing breathing.",
+        "alt": "Diagram of core and pelvic floor muscles during prenatal Pilates",
+        "caption": "Prenatal Pilates focuses on breathing, pelvic floor awareness and supported core work.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W21-C": [
+      {
+        "key": "scene",
+        "prompt": "An Indian couple in their thirties arriving at a fertility clinic reception carrying a folder of reports, holding hands, calm and hopeful.",
+        "alt": "Couple arriving at a fertility clinic with their medical records",
+        "caption": "Bring cycle history, previous tests and both partners' medical history to the first fertility visit."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Educational panel of simple icons: a womb with ovaries, a blood droplet, an ultrasound probe outline and a sperm cell, arranged in a soft circle.",
+        "alt": "Diagram of common first fertility tests: blood tests, ultrasound and semen analysis",
+        "caption": "Initial tests often include hormone blood tests, pelvic ultrasound, tubal assessment and semen analysis.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W22-Z": [
+      {
+        "key": "scene",
+        "prompt": "A pregnant Indian woman in late pregnancy sitting on a birthing ball with eyes closed breathing slowly, her partner gently supporting her shoulders, calm dim warm room.",
+        "alt": "Pregnant woman practising labour breathing on a birthing ball with her partner",
+        "caption": "Breathing techniques can support comfort and focus during labour alongside other pain-relief options."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Translucent pregnant silhouette in side view showing the diaphragm moving down on the in-breath and the pelvic floor softening, soft arrows indicating breath flow.",
+        "alt": "Diagram of the diaphragm and pelvic floor moving with breathing in late pregnancy",
+        "caption": "The diaphragm and pelvic floor move together; slow exhalation can help the pelvic floor relax.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W22-C": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her mid-thirties reading health information on a laptop at home, a cup of tea and a notebook beside her, sceptical thoughtful expression.",
+        "alt": "Woman researching egg quality information on a laptop",
+        "caption": "Egg quality depends largely on age; be cautious of products promising to improve it."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Textbook diagram of a single egg cell with its nucleus and chromosomes shown as soft paired shapes, next to a small ovary, educational style.",
+        "alt": "Diagram of an egg cell with its chromosomes",
+        "caption": "Egg quality mainly reflects chromosomal normality, which declines with age.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W23-Z": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her thirties sitting in a private, calm consultation room listening to a physiotherapist whose face is turned away, a box of tissues and a pelvis model on the desk, respectful atmosphere.",
+        "alt": "Woman in a private consultation talking with a physiotherapist",
+        "caption": "Painful sex (dyspareunia) deserves a respectful assessment; examination happens only with your consent."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Side-view textbook diagram of the pelvic floor muscle hammock shown tense and shortened on one side and relaxed on the other, beneath the pelvic organs.",
+        "alt": "Diagram comparing tense and relaxed pelvic floor muscles",
+        "caption": "Overactive (high-tone) pelvic floor muscles are one possible contributor to pain; medical causes are checked too.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W23-C": [
+      {
+        "key": "scene",
+        "prompt": "A woman in early pregnancy sitting on a sofa holding her phone to her ear calling for medical advice, one hand on her lower abdomen, concerned but composed, overnight bag beside her.",
+        "alt": "Pregnant woman phoning for medical advice with her hand on her abdomen",
+        "caption": "Bleeding in early pregnancy should be discussed promptly; heavy bleeding or severe pain needs urgent care."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Gentle textbook diagram of a simplified womb with an early pregnancy sac inside, and a separate small outline of a tube with a soft caution glow, non-graphic.",
+        "alt": "Diagram of an early pregnancy in the womb and a tube outline representing ectopic risk",
+        "caption": "Causes range from implantation bleeding to miscarriage or ectopic pregnancy, which needs urgent assessment.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W24-Z": [
+      {
+        "key": "scene",
+        "prompt": "An Indian mother in her thirties in a bright postnatal Pilates class doing a gentle supine exercise, her baby lying on a mat next to her, calm supportive atmosphere.",
+        "alt": "Mother in a postnatal Pilates class with her baby beside her",
+        "caption": "Postnatal Pilates is started after checking pelvic floor and abdominal recovery."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Translucent supine female silhouette with knees bent showing deep abdominal muscles and pelvic floor highlighted, soft arrows showing gentle activation.",
+        "alt": "Diagram of deep abdominals and pelvic floor in a postnatal Pilates position",
+        "caption": "Early postnatal Pilates targets transversus abdominis and pelvic floor coordination before load increases.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W24-C": [
+      {
+        "key": "scene",
+        "prompt": "An Indian couple in their thirties sitting close on a sofa, the woman resting her head on her partner's shoulder, a folder of medical papers on the table, quiet and supportive.",
+        "alt": "Couple comforting each other after an IVF cycle",
+        "caption": "After an unsuccessful IVF cycle, a review appointment can go through what happened and options."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Gentle educational diagram of a small early embryo beside a womb lining, connected by a soft question-mark-free dotted line, non-graphic textbook style.",
+        "alt": "Diagram of an embryo and the womb lining at implantation",
+        "caption": "Implantation depends on the embryo and the endometrium; many factors cannot be predicted in advance.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W25-Z": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her fifties standing in her kitchen pausing with a hand on her lower abdomen, calm and thoughtful; translucent inset shows pelvic organs sitting lower than usual on the pelvic floor.",
+        "alt": "Woman in her kitchen with an inset of pelvic organs sitting lower",
+        "caption": "A feeling of heaviness or a bulge can be pelvic organ prolapse; assessment guides options."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Side-by-side side-view textbook diagrams of the pelvis: one with bladder and womb well supported by the pelvic floor hammock, one with the organs sitting lower and the hammock stretched.",
+        "alt": "Diagram comparing supported pelvic organs and pelvic organ prolapse",
+        "caption": "Prolapse occurs when pelvic floor and connective tissue support weakens and organs descend.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W25-C": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her mid-forties fanning herself at a desk during a warm flush, a water glass and symptom diary nearby, calm and composed.",
+        "alt": "Woman in her forties experiencing a hot flush at her desk",
+        "caption": "Perimenopause can bring cycle changes, hot flushes, sleep and mood changes."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Educational diagram of an ovary with fewer follicles linked by a soft wavy line showing fluctuating hormone levels, beside a small brain icon, textbook style.",
+        "alt": "Diagram of ovarian follicles declining with fluctuating hormone levels",
+        "caption": "In perimenopause, oestrogen fluctuates as follicles decline, before periods stop at menopause.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W26-Z": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her thirties seated in a bright calm physiotherapy room talking with a physiotherapist whose back is to the viewer, an intake form and a pelvis model on the desk, relaxed.",
+        "alt": "Woman at her first pelvic health physiotherapy appointment",
+        "caption": "A first pelvic health appointment starts with your history and goals; examination is always optional and consented."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Clean educational illustration of a pelvis model showing the bony ring and a layered pelvic floor muscle hammock, the kind used for patient education.",
+        "alt": "Pelvis model showing pelvic floor muscles used for patient education",
+        "caption": "Physiotherapists often use a pelvis model to explain pelvic floor anatomy before any assessment.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W26-C": [
+      {
+        "key": "scene",
+        "prompt": "An Indian woman in her early fifties sitting at a consultation desk with a written list of questions, attentive and calm, clinician hands only visible.",
+        "alt": "Woman bringing a list of questions about HRT to a consultation",
+        "caption": "HRT decisions weigh symptoms, personal risks and preferences with your doctor."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Educational diagram of a simplified female silhouette with soft glows at the brain, bones and heart, connected to a small ovary icon, illustrating oestrogen's effects, textbook style.",
+        "alt": "Diagram of oestrogen effects on brain, bones and heart",
+        "caption": "Oestrogen affects temperature regulation, bone density, the urogenital tissues and more.",
+        "approvalStatus": "approved",
+        "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ]
+  }
+}

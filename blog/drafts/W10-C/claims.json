@@ -1,0 +1,23 @@
+{
+  "id": "W10-C",
+  "openClinicalQuestions": [
+    "Should WHD name a preferred first-line medical category for nulliparous patients seeking future fertility in India-facing copy?",
+    "What local haemoglobin threshold triggers same-week vs routine review in WHD clinics?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Heavy periods may include changing pad/tampon every 1–2 hours, dual products, >7-day bleeds, clots >~2.5 cm, soaking clothes, activity limits, tiredness/breathlessness; lists fibroids, endometriosis, adenomyosis, PMOS/PCOS, bleeding disorders and rare womb cancer among causes.",
+      "sourceUrl": "https://www.nhs.uk/conditions/heavy-periods/",
+      "sourceSection": "NHS · Heavy periods · Page last reviewed: 19 September 2024",
+      "limitations": "UK public advice; Indian product brands and referral routes differ.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Prioritise quality-of-life impact; full blood count for all with HMB; LNG-IUS and other pharmacological categories; investigate based on history/examination.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng88/chapter/Recommendations",
+      "sourceSection": "NICE · Heavy menstrual bleeding: assessment and management (NG88) · Recommendations include 2007/2018 updates (page fetched 2026)",
+      "limitations": "UK pathway; LNG-IUS off-label notes apply to some devices; prescribing remains clinician-led in India.",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

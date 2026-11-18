@@ -1,0 +1,30 @@
+{
+  "id": "W18-C",
+  "openClinicalQuestions": [
+    "How many empirical IUI cycles does Dr. Charmi typically discuss before IVF when tubes and semen are favourable?",
+    "Should WHD quote any India registry outcome figures, or keep readers pointed to personalised counselling only?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "IUI injects prepared sperm into uterus; less invasive/cheaper than IVF but lower success per cycle; unsuitable for blocked tubes, severe endometriosis, low reserve, male factor",
+      "sourceUrl": "https://www.hfea.gov.uk/treatments/explore-all-treatments/intrauterine-insemination-iui/",
+      "sourceSection": "HFEA · Intrauterine insemination (IUI) · Publication date listed 11 March 2016; fetched this session",
+      "limitations": "UK regulator information; NHS funding rules are not Indian practice rules",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "IUI places sperm in womb at ovulation; unlikely to help blocked tubes, unexplained infertility, endometriosis, poor sperm; stimulation risks include multiples and OHSS",
+      "sourceUrl": "https://www.nhs.uk/tests-and-treatments/intrauterine-insemination-iui/",
+      "sourceSection": "NHS · Intrauterine insemination (IUI) · Page last reviewed: 25 June 2024",
+      "limitations": "UK service eligibility; Indian clinic pathways differ",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "IVF fertilises outside the body with stimulation, retrieval, lab culture and transfer",
+      "sourceUrl": "https://www.hfea.gov.uk/treatments/explore-all-treatments/in-vitro-fertilisation-ivf/",
+      "sourceSection": "HFEA · In vitro fertilisation (IVF) · Publication date listed 9 March 2016",
+      "limitations": "Process overview only; personal prognosis requires clinical counselling",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

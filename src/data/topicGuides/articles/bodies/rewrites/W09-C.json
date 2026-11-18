@@ -1,0 +1,119 @@
+{
+  "id": "W09-C",
+  "title": "When Should I Start Folic Acid Before Pregnancy?",
+  "seoTitle": "When to start folic acid before pregnancy",
+  "description": "Start 400 micrograms folic acid daily when trying—ideally before conception—until 12 weeks; who may need prescribed 5 mg, and what to do if already pregnant.",
+  "primaryQuestion": "When should I start folic acid before pregnancy?",
+  "directAnswer": "Take a standard folic acid supplement of 400 micrograms each day when pregnancy is a near-term goal, and continue into early pregnancy. India's National Health Mission recommends 400 mcg from preconception into the first trimester. WHO recommends 400 μg starting when you begin trying to conceive and continuing until 12 weeks of gestation. UK NHS guidance adds an ideal lead-in of three months before pregnancy, continuing until 12 weeks. If you only find out you are pregnant later, start as soon as you know. Prescribed 5 mg is reserved for selected risk groups—your doctor decides.",
+  "sections": [
+    {
+      "heading": "Why timing matters around conception",
+      "paragraphs": [
+        "Folate supports early development of the neural tube—the structure that becomes the baby's brain and spinal cord. That development starts in the earliest weeks, often before a missed period, which is why waiting until the first scan to think about folic acid misses the window most guidance targets. Folic acid lowers the chance of neural-tube defects when used as recommended; it does not prevent every pregnancy complication.",
+        "Folic acid is one step inside wider preconception planning—medicines, vaccines, chronic conditions and habits—not a substitute for that checklist. Our preconception planning guide covers the broader list."
+      ]
+    },
+    {
+      "heading": "Standard dose, start interval and how long to continue",
+      "paragraphs": [
+        "The usual daily amount is 400 micrograms (also written as 400 mcg or 400 μg). Anaemia Mukt Bharat guidance from India's National Health Mission tells reproductive-age women to use 400 mcg folic acid tablets daily during preconception and the first trimester. WHO’s eLENA recommendation is that women take 400 μg folic acid daily from the moment they begin trying to conceive until 12 weeks of gestation.",
+        "UK NHS pages state the same 400 microgram daily amount, ideally beginning three months before you conceive, or as soon as you learn you are pregnant, and continuing for the first 12 weeks. That three-month lead-in is UK guidance; Indian NHM wording centres on preconception through the first trimester. If trying stretches over many months, keep the standard daily amount unless your clinician changes the plan."
+      ]
+    },
+    {
+      "heading": "When a higher prescribed dose may be discussed",
+      "paragraphs": [
+        "A higher dose of 5 milligrams (5 mg) is prescribed—not chosen from an open shelf—for selected people. WHO advises offering 5 mg daily to women who have had a fetus or baby affected by a neural-tube defect. UK NHS guidance lists a broader set of criteria for prescribed 5 mg when planning pregnancy or before 12 weeks: you or the baby's father has a neural-tube defect; you or the baby's father has a relative with one; a previous pregnancy affected by a neural-tube defect; diabetes; sickle cell anaemia or thalassaemia; or medicines for epilepsy or HIV.",
+        "Those NHS criteria are UK criteria. In India, which higher-dose indications apply to you is a decision for your doctor after reviewing your history—do not borrow a relative's high-dose tablets because the stories sound similar. Taking more than prescribed is not automatically safer."
+      ]
+    },
+    {
+      "heading": "If you are already pregnant, and food versus supplements",
+      "paragraphs": [
+        "If you discover you are already pregnant and have not been taking folic acid, start the appropriate product as soon as you know, after checking with your clinician which strength fits your history. Early pregnancy is still within the window when supplementation is routinely continued. Arrange antenatal booking according to local guidance; vitamins alone are not antenatal care.",
+        "Leafy greens, pulses and fortified foods contribute folate, yet the NHS states it is difficult to get the amount you need from food alone—which is why a supplement is recommended around conception. Homemade remedies are not a measured substitute for the tablet dose discussed here."
+      ]
+    },
+    {
+      "heading": "Avoid doubling up on labels",
+      "paragraphs": [
+        "Check your prenatal multivitamin and any iron–folic acid (IFA) tablet for folic acid content so you do not stack several products without advice. Chemist “women's multivitamins,” hair supplements and prenatals can each contain folic acid. Ask a pharmacist to help read labels; ask your doctor before combining prescription-strength folic acid with another folate-containing product.",
+        "Do not stop other prescribed medicines to “make space” for a vitamin. Bring every strip to clinic so timing can be reviewed. Methylfolate and high-dose over-the-counter products are not routinely preferred over standard folic acid; ask before switching."
+      ]
+    },
+    {
+      "heading": "When a vitamin question becomes urgent",
+      "paragraphs": [
+        "Folic acid does not treat abdominal pain, bleeding or dizziness. Seek emergency care for severe pain, fainting or heavy bleeding in pregnancy. If a new tablet causes rash, swelling or breathing difficulty, stop it and get urgent help. Ordinary questions about dose and timing belong in a scheduled consult."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What if I only remember vitamins once I see a positive test?",
+      "answer": "Start folic acid as soon as you know you are pregnant, using the strength your clinician advises, and continue through the first 12 weeks as guided. Be honest at the first antenatal visit about what you took before conception so the plan can be adjusted."
+    },
+    {
+      "question": "Does my partner also need folic acid tablets?",
+      "answer": "The neural-tube prevention advice summarised here centres on the person who may become pregnant. General healthy eating helps everyone; any separate male-health supplements should be checked with a clinician rather than sharing a prescription strip."
+    }
+  ],
+  "references": [
+    {
+      "label": "India National Health Mission — Anaemia Mukt Bharat (400 mcg folic acid preconception to first trimester)",
+      "url": "https://nhm.gov.in/index1.php?lang=1&level=3&lid=797&sublinkid=1448"
+    },
+    {
+      "label": "WHO eLENA — Periconceptional folic acid supplementation to prevent neural tube defects",
+      "url": "https://www.who.int/tools/elena/interventions/folate-periconceptional"
+    },
+    {
+      "label": "NHS — Pregnancy vitamins and supplements (folic acid dose and higher-dose criteria)",
+      "url": "https://www.nhs.uk/pregnancy/keeping-well/pregnancy-vitamins-and-supplements/"
+    }
+  ],
+  "conversionCopy": "If you are unsure which folic acid strength fits your history, you can discuss it with Dr. Charmi Shah.",
+  "explainerAlt": "Timeline showing folic acid from trying to conceive through 12 weeks of pregnancy.",
+  "storytellingNote": "",
+  "review": {
+    "corrections": [
+      "Removed ‘the brief requires…’, symptom-diary language, illustrative chemist anecdotes and generic urgent padding.",
+      "Stated verified 400 mcg/μg dose with NHM, WHO and NHS UK start/continue intervals side by side.",
+      "Distinguished WHO 5 mg (prior NTD pregnancy) from broader NHS UK 5 mg criteria; deferred Indian indication list to openQuestion.",
+      "Added already-pregnant start advice, food-vs-supplement NHS quote, and label/IFA duplicate warnings; linked preconception checklist instead of duplicating it.",
+      "Avoided universal methylfolate or high-dose OTC recommendations."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "NHS",
+        "title": "Pregnancy vitamins and supplements",
+        "url": "https://www.nhs.uk/pregnancy/keeping-well/pregnancy-vitamins-and-supplements/",
+        "date": "Media last reviewed: 2 February 2026",
+        "recommendation": "400 micrograms daily ideally 3 months before pregnancy or as soon as pregnant, until 12 weeks; difficult to get enough from food alone; prescribed 5 mg for listed UK risk groups",
+        "passage": "It's important to take a folic acid supplement during pregnancy as it's difficult to get the amount you need from food alone.",
+        "limitations": "UK higher-dose indication list; Indian clinicians may apply a different risk set"
+      },
+      {
+        "organisation": "India National Health Mission",
+        "title": "Anaemia Mukt Bharat",
+        "url": "https://nhm.gov.in/index1.php?lang=1&level=3&lid=797&sublinkid=1448",
+        "date": "not stated; confirmed in operational guidelines PDF",
+        "recommendation": "400 mcg folic acid daily preconception through first trimester",
+        "passage": "All women in the reproductive age group in the pre-conception period and upto the first trimester of the pregnancy are advised to have 400 mcg of Folic Acid tablets, daily",
+        "limitations": "Public-health tablet programme; does not itself list every 5 mg indication"
+      },
+      {
+        "organisation": "WHO",
+        "title": "Periconceptional folic acid supplementation to prevent neural tube defects (eLENA)",
+        "url": "https://www.who.int/tools/elena/interventions/folate-periconceptional",
+        "date": "last updated 9 Aug 2023 (parent-verified; live fetch timed out — search extract matched)",
+        "recommendation": "400 μg from trying until 12 weeks; offer 5 mg after previous NTD-affected pregnancy",
+        "passage": "All women, from the moment they begin trying to conceive until 12 weeks of gestation, should take a folic acid supplement (400 μg folic acid daily).",
+        "limitations": "WHO high-dose wording centres on prior NTD pregnancy; other risk groups are jurisdiction-specific"
+      }
+    ],
+    "openQuestions": [
+      "Which higher-dose (5 mg) folic acid indications does Dr. Charmi want listed for Indian readers beyond WHO’s previous NTD-affected pregnancy criterion—e.g. diabetes, haemoglobinopathies, epilepsy or HIV medicines as on the NHS UK list?"
+    ]
+  }
+}

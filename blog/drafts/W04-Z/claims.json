@@ -1,0 +1,29 @@
+{
+  "id": "W04-Z",
+  "openClinicalQuestions": [
+    "Clinician review of escalation wording: acutely painful, firm lump that will not reduce, especially with vomiting → urgent care for possible strangulated hernia—confirm preferred patient-facing phrasing for Indian emergency pathways."
+  ],
+  "claimLedger": [
+    {
+      "claim": "Defines DRAM as rectus halves moving apart with pregnancy stretch; lists doming, gap feeling, discomfort; advises graded core work and physio referral.",
+      "sourceUrl": "https://thepogp.co.uk/patient_information/womens_health/tummy_muscle_separation.aspx",
+      "sourceSection": "POGP · Tummy muscle separation (DRAM) in pregnancy · not stated",
+      "limitations": "UK patient leaflet; symptom lists are not diagnostic criteria",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Hernia is organ/tissue through muscle gap; pain around hernia with nausea/vomiting warrants urgent advice pathway.",
+      "sourceUrl": "https://www.nhs.uk/conditions/hernia/",
+      "sourceSection": "NHS · Hernia · not stated on fetched page",
+      "limitations": "General hernia overview; not specific to postpartum diastasis",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Strangulated hernia (blocked blood supply) is a medical emergency; call emergency services for severe pain, vomiting, colour change, inability to pass wind/stool.",
+      "sourceUrl": "https://www.nhs.uk/conditions/umbilical-hernia/",
+      "sourceSection": "NHS · Umbilical hernia · Page last reviewed 24 November 2025",
+      "limitations": "Umbilical-hernia page; apply carefully when counselling midline lumps",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

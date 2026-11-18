@@ -1,0 +1,125 @@
+{
+  "id": "W10-Z",
+  "title": "What is the pelvic floor, and what does it do?",
+  "seoTitle": "What is the pelvic floor and what it does",
+  "description": "The pelvic floor is a supportive muscle layer for bladder, bowel and sexual function. Learn where it sits, what it does, and when to seek review.",
+  "primaryQuestion": "What is the pelvic floor?",
+  "directAnswer": "The pelvic floor is a layered group of muscles and connective tissue that forms a supportive hammock across the base of the pelvis, stretching from the pubic bone at the front to the coccyx at the back. It helps hold the bladder, bowel and uterus in place, closes the outlets until you choose to empty, then relaxes so voiding and stool passage can happen. It also contributes to sexual sensation and pressure control when you cough, lift or change posture. Knowing this anatomy makes later advice about symptoms, training and assessment easier to use.",
+  "sections": [
+    {
+      "heading": "Where these muscles sit in the pelvis",
+      "paragraphs": [
+        "University Hospitals Sussex pelvic-health information describes the pelvic floor as a group of muscles at the base of the pelvis that stretches from the pubic bone to the tail bone. NHS Greater Glasgow and Clyde uses similar language: a hammock beneath the pelvis that supports the bladder, bowel and uterus. In people with a vagina, the urethra, vagina and anus pass through openings in this layer, so the muscles must both close and open well.",
+        "Think of a trampoline mesh rather than a single “button” under the bladder. Deep and more superficial fibres work together with fascia and ligaments. Breathing and abdominal wall activity change the pressure above the floor, which is why posture and breath often appear in pelvic-health sessions even when the complaint is bladder control."
+      ]
+    },
+    {
+      "heading": "Everyday jobs the pelvic floor supports",
+      "paragraphs": [
+        "NIDDK explains that these muscles support the bladder, rectum and uterus and can help you avoid releasing urine, stool or gas at the wrong times. Continence is not only strength: timing, endurance and a full release after a squeeze all matter. Sexual comfort and orgasmic response also involve this muscle system, alongside hormones, skin health and psychological factors.",
+        "UK NICE NG210 defines pelvic floor dysfunction as pelvic-floor muscles around the bladder, anal canal and vagina that do not work properly. The guideline lists urinary incontinence, bladder or bowel emptying problems, faecal incontinence, pelvic organ prolapse, sexual dysfunction and chronic pelvic pain among associated symptoms. That list is vocabulary for what can go wrong—not a self-diagnosis checklist."
+      ]
+    },
+    {
+      "heading": "Why relaxation and timing matter as much as squeeze",
+      "paragraphs": [
+        "A useful contraction feels like a gentle lift and close, then a complete let-go. If the floor stays half-clenched, emptying can feel incomplete, tampon use can sting, and intercourse can hurt even when someone has been told to “strengthen more”. NICE NG210 asks supervised programmes to assess contraction and relaxation and to tailor training to ability, discomfort and goals.",
+        "Reading about whether repeated squeezes suit every symptom helps explain why online challenges skip suitability checks. Our guide to urine leakage with coughing explains effort-linked leaks in more detail."
+      ]
+    },
+    {
+      "heading": "Symptoms worth mentioning to a clinician",
+      "paragraphs": [
+        "UH Sussex notes that pelvic-floor-related problems can include leaking urine, bowel control changes, painful sex or altered sexual sensation. Heaviness or a bulge sensation may raise questions about organ support and belongs in a medical or physiotherapy history rather than in an internet self-grade. Stop home guessing and seek same-day medical care for burning with fever, blood in urine, or sudden inability to void.",
+        "NICE NG210 also asks clinicians to raise awareness of symptoms, when to get help and where to go for help. Mentioning bowel habits, cough, constipation, pregnancies and prior pelvic surgery helps the history even when you are unsure which muscle is involved."
+      ]
+    },
+    {
+      "heading": "How assessment fits once vocabulary is clear",
+      "paragraphs": [
+        "A women’s health physiotherapist such as Dr. Zalak Shah (PT) uses this anatomy language to map symptoms to function, then teaches strategies that match findings. An internal examination is optional and always needs consent; our guide to a first physiotherapy session covers that process. Medical causes—infection, neurological change, a pelvic mass—belong with a doctor such as Dr. Charmi Shah when red flags or diagnostic uncertainty appear.",
+        "You do not need a perfect anatomy diagram before booking. Bringing a short note of triggers, fluid habits and what you have already tried is enough to start a useful conversation."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is the pelvic floor only important after childbirth?",
+      "answer": "No. Pregnancy and birth are common risk periods, yet NICE NG210 also highlights age, constipation, chronic cough, gynaecological surgery and other factors. People who have never given birth can still have continence, prolapse or pain symptoms linked to this muscle system."
+    },
+    {
+      "question": "Can I feel the pelvic floor working without an internal exam?",
+      "answer": "Many people notice a lift when they imagine stopping wind or urine. That cue is only a starting point. Formal assessment may still be offered because superficial squeezing of buttocks or breath-holding can feel similar and mislead unsupervised programmes."
+    }
+  ],
+  "references": [
+    {
+      "label": "NICE — NG210 Pelvic floor dysfunction: prevention and non-surgical management (Recommendations)",
+      "url": "https://www.nice.org.uk/guidance/ng210/chapter/Recommendations"
+    },
+    {
+      "label": "NIDDK — Kegel Exercises",
+      "url": "https://www.niddk.nih.gov/health-information/urologic-diseases/kegel-exercises"
+    },
+    {
+      "label": "University Hospitals Sussex NHS Foundation Trust — Your pelvic health physiotherapy appointment",
+      "url": "https://www.uhsussex.nhs.uk/resources/your-pelvic-health-physiotherapy-appointment/"
+    },
+    {
+      "label": "NHS Greater Glasgow and Clyde — Pelvic floor physiotherapy",
+      "url": "https://www.nhsggc.scot/your-health/obstetrics-gynaecology-and-pelvic-floor-physiotherapy/pelvic-floor-physiotherapy/"
+    }
+  ],
+  "conversionCopy": "If you want help connecting pelvic-floor anatomy to your bladder, bowel or pain symptoms, you can book with Dr. Zalak Shah (PT).",
+  "explainerAlt": "Simplified pelvic anatomy showing the pelvic floor beneath the bladder, uterus and bowel.",
+  "storytellingNote": "",
+  "review": {
+    "corrections": [
+      "New rewrite: foundational anatomy only; no treatment sequences or Kegel protocols.",
+      "Attributed hammock/support language to NIDDK, UH Sussex and NHS GGC; dysfunction scope to NICE NG210.",
+      "Pointed to sibling guides for cough-leakage and Kegel suitability instead of repeating them."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "NICE",
+        "title": "NG210 Pelvic floor dysfunction: prevention and non-surgical management — Recommendations",
+        "url": "https://www.nice.org.uk/guidance/ng210/chapter/Recommendations",
+        "date": "Published 9 December 2021",
+        "recommendation": "Defines pelvic floor dysfunction and lists associated symptoms including urinary/faecal incontinence, emptying disorders, prolapse, sexual dysfunction and chronic pelvic pain; supervised PFMT should assess contraction and relaxation.",
+        "passage": "Pelvic floor dysfunction is a condition in which the pelvic floor muscles around the bladder, anal canal, and vagina do not work properly.",
+        "limitations": "UK NICE guidance; service access in India differs."
+      },
+      {
+        "organisation": "NIDDK",
+        "title": "Kegel Exercises",
+        "url": "https://www.niddk.nih.gov/health-information/urologic-diseases/kegel-exercises",
+        "date": "Last Reviewed November 2021",
+        "recommendation": "Pelvic floor muscles support bladder, rectum and uterus and help avoid releasing urine, stool or gas at the wrong times.",
+        "passage": "These muscles—which stretch like a hammock from the front to the back of your pelvis—can help you avoid releasing urine, stool, or gas at the wrong times.",
+        "limitations": "US patient education; not a substitute for individual assessment."
+      },
+      {
+        "organisation": "University Hospitals Sussex NHS Foundation Trust",
+        "title": "Your pelvic health physiotherapy appointment",
+        "url": "https://www.uhsussex.nhs.uk/resources/your-pelvic-health-physiotherapy-appointment/",
+        "date": "Page last reviewed: 6 Oct 2026",
+        "recommendation": "Describes pelvic floor location and symptom categories (bladder, bowel, sexual dysfunction).",
+        "passage": "Your pelvic floor is a group of muscles at the base of your pelvis. It stretches from your pubic bone to the ‘tail bone’ at the bottom of your back (spine).",
+        "limitations": "Local NHS Trust leaflet; appointment logistics are UK-specific."
+      },
+      {
+        "organisation": "NHS Greater Glasgow and Clyde",
+        "title": "Pelvic floor physiotherapy – bladder, Bowel and Pelvic Health",
+        "url": "https://www.nhsggc.scot/your-health/obstetrics-gynaecology-and-pelvic-floor-physiotherapy/pelvic-floor-physiotherapy/",
+        "date": "not stated",
+        "recommendation": "Hammock description and continence/emptying roles of the pelvic floor.",
+        "passage": "The pelvic floor muscles are a hammock of muscles that lie beneath your pelvis. They support the bladder, bowel, and the uterus (in women).",
+        "limitations": "Regional NHS service page."
+      }
+    ],
+    "openQuestions": [
+      "Which labelled explainer diagram will clinical review approve for publication?",
+      "Should Indian emergency number 112 be named on anatomy pages that only list medical red flags briefly?"
+    ]
+  }
+}

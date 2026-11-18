@@ -1,0 +1,91 @@
+{
+  "id": "W10-C",
+  "title": "Why Are My Periods Heavy and Passing Clots?",
+  "seoTitle": "Heavy periods and clots: when to seek care",
+  "description": "Heavy periods may mean changing pads every 1–2 hours or clots over 2.5 cm. See NHS signs, common causes, and when bleeding needs urgent care.",
+  "primaryQuestion": "What causes heavy periods and blood clots?",
+  "directAnswer": "Periods feel heavy when flow interferes with daily life—changing a pad or tampon every one to two hours, using two products together, bleeding longer than seven days, soaking through clothes, or passing clots larger than about 2.5 cm. Clots can appear in heavy flow and do not diagnose a single disease by themselves. Causes range from no identifiable pathology to fibroids, adenomyosis, endometriosis, bleeding disorders, medicines that increase bleeding, and, rarely, womb cancer. Assessment focuses on how bleeding affects you, related symptoms, and whether anaemia or a structural cause needs checking.",
+  "sections": [
+    {
+      "heading": "How to recognise heavy menstrual bleeding",
+      "paragraphs": [
+        "UK NHS guidance lists practical markers of heavy periods: needing to change a pad or tampon every 1 to 2 hours or empty a menstrual cup more often than recommended; using two period products together; periods lasting more than seven days; clots larger than about 2.5 cm (roughly a 10p coin); bleeding through to clothes or bedding; avoiding exercise or missing work; and feeling tired or short of breath a lot. NICE NG88 stresses that heavy menstrual bleeding has a major impact on quality of life, so care should aim to improve that impact rather than chase a millilitre count alone.",
+        "Compare the pattern with your own baseline. A flow that has always been heavy may still deserve help if it limits life or causes iron deficiency. A sudden step-up after years of manageable bleeds is also a reason to be assessed. Our guide to irregular periods covers timing problems separately; this page is about volume, clots and related fatigue."
+      ]
+    },
+    {
+      "heading": "Causes clinicians commonly consider",
+      "paragraphs": [
+        "NHS notes that heavy periods can be normal for some people, and may be heavier soon after periods start, after pregnancy, or approaching menopause. Conditions affecting the womb or ovaries—such as fibroids, endometriosis, adenomyosis, pelvic inflammatory disease and polycystic ovary syndrome—can contribute. Bleeding disorders such as von Willebrand disease, and some anticoagulants or chemotherapy medicines, also feature on the NHS list. Rarely, heavy periods can signal womb cancer.",
+        "You cannot sort these causes from clot size alone. Persistent bleeding between periods, pelvic pain or pressure symptoms, and personal or family clues to a clotting problem change how urgently imaging or specialist review is considered. NICE advises taking a history that covers the nature of the bleeding, related symptoms, quality-of-life impact, and factors that affect treatment choices."
+      ]
+    },
+    {
+      "heading": "What assessment and treatment categories may involve",
+      "paragraphs": [
+        "NICE NG88 recommends a full blood count for all women with heavy menstrual bleeding, in parallel with treatment offered, because anaemia is common. Coagulation testing may be considered when heavy bleeding has been present since periods began and personal or family history suggests a clotting disorder. Hormone or thyroid blood tests are not routine for heavy bleeding alone unless other signs of thyroid disease are present.",
+        "Depending on history and examination, investigation may include ultrasound or outpatient hysteroscopy when cavity problems, polyps or endometrial pathology are suspected. Treatment categories UK guidance discusses include a levonorgestrel-releasing intrauterine system, non-hormonal options such as antifibrinolytic medicine or anti-inflammatory pain relief, hormonal contraception or cyclical progestogens, and, when needed, procedures such as fibroid treatment, endometrial ablation or hysterectomy. Suitability depends on fertility plans, fibroid size and location, other symptoms and your preferences—no regimen is prescribed from an article."
+      ]
+    },
+    {
+      "heading": "When heavy bleeding needs urgent care",
+      "paragraphs": [
+        "Seek emergency care if you are soaking through protection with dizziness, fainting, severe weakness or breathlessness, or if bleeding in a possible pregnancy comes with collapse, sudden severe one-sided tummy pain or shoulder-tip pain. Call local emergency services (112 in India) rather than waiting for a routine clinic slot.",
+        "Arrange prompt outpatient review if heavy periods disrupt work or study, clots larger than about 2.5 cm recur, periods last beyond seven days, you bleed between periods or after sex, or tiredness and breathlessness suggest anaemia. Dr. Charmi Shah can interpret pattern, examination and blood results together and discuss options that fit your fertility goals."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do blood clots during a period always mean something is wrong?",
+      "answer": "Not always. Clots can form when flow is heavy. NHS lists clots larger than about 2.5 cm among signs that periods may be heavy enough to need assessment, especially with soaking, long bleeds or tiredness. Persistent large clots deserve a clinical review rather than self-labelling."
+    },
+    {
+      "question": "Will I always need a scan for heavy periods?",
+      "answer": "Not always. NICE notes that pharmacological treatment can sometimes start when history and examination suggest low risk of fibroids or cavity disease. Related symptoms, inconclusive examination or unsuccessful treatment often lead to ultrasound or hysteroscopy. The sequence is individual."
+    }
+  ],
+  "references": [
+    {
+      "label": "NHS — Heavy periods",
+      "url": "https://www.nhs.uk/conditions/heavy-periods/"
+    },
+    {
+      "label": "NICE NG88 — Heavy menstrual bleeding: assessment and management",
+      "url": "https://www.nice.org.uk/guidance/ng88/chapter/Recommendations"
+    }
+  ],
+  "conversionCopy": "If heavy periods, large clots or anaemia symptoms are disrupting your life, you can book a consultation with Dr. Charmi Shah.",
+  "explainerAlt": "Checklist of heavy-period signs including pad changes and clot size for a clinic visit.",
+  "storytellingNote": "",
+  "review": {
+    "corrections": [
+      "New rewrite from padded live text; used NHS operational heavy-bleeding markers and NICE NG88 quality-of-life and investigation framing.",
+      "Named treatment categories only (no doses); separated urgent flooding/pregnancy pain from outpatient anaemia review."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "NHS",
+        "title": "Heavy periods",
+        "url": "https://www.nhs.uk/conditions/heavy-periods/",
+        "date": "Page last reviewed: 19 September 2024",
+        "recommendation": "Heavy periods may include changing pad/tampon every 1–2 hours, dual products, >7-day bleeds, clots >~2.5 cm, soaking clothes, activity limits, tiredness/breathlessness; lists fibroids, endometriosis, adenomyosis, PMOS/PCOS, bleeding disorders and rare womb cancer among causes.",
+        "passage": "need to change your pad or tampon every 1 to 2 hours, or empty your menstrual cup more often than is recommended",
+        "limitations": "UK public advice; Indian product brands and referral routes differ."
+      },
+      {
+        "organisation": "NICE",
+        "title": "Heavy menstrual bleeding: assessment and management (NG88)",
+        "url": "https://www.nice.org.uk/guidance/ng88/chapter/Recommendations",
+        "date": "Recommendations include 2007/2018 updates (page fetched 2026)",
+        "recommendation": "Prioritise quality-of-life impact; full blood count for all with HMB; LNG-IUS and other pharmacological categories; investigate based on history/examination.",
+        "passage": "Recognise that heavy menstrual bleeding (HMB) has a major impact on a woman's quality of life, and ensure that any intervention aims to improve this rather than focusing on blood loss.",
+        "limitations": "UK pathway; LNG-IUS off-label notes apply to some devices; prescribing remains clinician-led in India."
+      }
+    ],
+    "openQuestions": [
+      "Should WHD name a preferred first-line medical category for nulliparous patients seeking future fertility in India-facing copy?",
+      "What local haemoglobin threshold triggers same-week vs routine review in WHD clinics?"
+    ]
+  }
+}

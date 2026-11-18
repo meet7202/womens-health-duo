@@ -1,0 +1,30 @@
+{
+  "id": "W16-C",
+  "openClinicalQuestions": [
+    "Which glucose test sequence should WHD standardise for non-pregnant adults with PCOS in India?",
+    "Should acanthosis photography guidance be offered for telehealth visits?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Defines insulin resistance; links to diabetes risk and acanthosis nigricans; notes insulin-sensitising drugs as a treatment category.",
+      "sourceUrl": "https://www.acog.org/womens-health/faqs/polycystic-ovary-syndrome-pcos",
+      "sourceSection": "ACOG · Polycystic Ovary Syndrome (PCOS) FAQ121 · Last updated January 2022; last reviewed April 2025",
+      "limitations": "US patient FAQ; laboratory cut-offs and drug licences differ in India.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Increased CVD risk factors/disease; high risks of early IFG/IGT/type 2 diabetes; pregnancy cardiometabolic risks; evidence-based screening outlined in supporting information.",
+      "sourceUrl": "https://www.mja.com.au/journal/2024/221/7/summary-2023-international-evidence-based-guideline-assessment-and-management",
+      "sourceSection": "Medical Journal of Australia · Summary of the 2023 international evidence-based guideline for the assessment and management of polycystic ovary syndrome · Published online 23 September 2024",
+      "limitations": "Summary article; exact screening intervals live in full guideline algorithms.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Use PMOS rename alongside PCOS for discoverability.",
+      "sourceUrl": "https://www.asrm.org/news-and-events/asrm-news/latest-news/may-27-2026-pcos-is-now-pmos-understanding-the-name-change/",
+      "sourceSection": "ASRM · PCOS is Now PMOS: Understanding the Name Change · 27 May 2026",
+      "limitations": "Terminology transition period.",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Menu, X, MessageCircle, ExternalLink } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import whdLogo96 from "@/assets/whd-logo-96w.jpg";
 import whdLogo192 from "@/assets/whd-logo-192w.jpg";
@@ -102,13 +102,6 @@ export const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
-      <a
-        href="https://womenshealthduo.com"
-        className="flex min-h-10 items-center justify-center gap-2 bg-primary px-4 py-2 text-center text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
-      >
-        Visit our official website: womenshealthduo.com
-        <ExternalLink className="h-4 w-4 shrink-0" aria-hidden="true" />
-      </a>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex min-w-0 flex-1 items-center gap-3 md:flex-initial">

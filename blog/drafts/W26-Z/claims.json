@@ -1,0 +1,37 @@
+{
+  "id": "W26-Z",
+  "openClinicalQuestions": [
+    "What exact chaperone and virtual-exam policies should WHD publish as practice-specific (not NHS copies)?",
+    "Which languages can WHD arrange interpretation for in Bangalore and Ahmedabad clinics?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Detailed history; optional internal exam with consent; right to decline; bladder diary; plan discussed after findings.",
+      "sourceUrl": "https://thepogp.co.uk/patients/pelvic_health_advice/physiotherapy_assessment.aspx",
+      "sourceSection": "POGP · Physiotherapy Assessment · not stated",
+      "limitations": "UK professional body page; WHD process may differ in scheduling details.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "History; optional internal exam with consent; chaperone; may refuse exam and still have treatment; interpreter advice.",
+      "sourceUrl": "https://www.uhsussex.nhs.uk/resources/your-pelvic-health-physiotherapy-appointment/",
+      "sourceSection": "University Hospitals Sussex NHS Foundation Trust · Your pelvic health physiotherapy appointment · Page last reviewed: 6 Oct 2026",
+      "limitations": "Local NHS durations and discharge rules were not adopted as WHD policy.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "History, discussion of concerns, examination if appropriate with clear explanation.",
+      "sourceUrl": "https://www.nhsggc.scot/your-health/obstetrics-gynaecology-and-pelvic-floor-physiotherapy/pelvic-floor-physiotherapy/",
+      "sourceSection": "NHS Greater Glasgow and Clyde · Pelvic floor physiotherapy · not stated",
+      "limitations": "Regional service page.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Discuss and agree a management plan; supervised PFMT programmes include progress reviews.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng210/chapter/Recommendations",
+      "sourceSection": "NICE · NG210 Pelvic floor dysfunction — Recommendations · Published 9 December 2021",
+      "limitations": "UK guideline.",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

@@ -16,6 +16,7 @@ import {
   virtualConsultationCountryPath,
 } from "@/lib/virtualConsultation";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
+import { ContentAuthors } from "@/components/seo/ContentAuthors";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { InclusiveSeoListFootnote } from "@/components/seo/InclusiveSeoListFootnote";
 import { Button } from "@/components/ui/button";
@@ -135,6 +136,7 @@ export function VirtualConsultationCountryPage() {
         ) : null}
 
         <div className="mt-12">
+          <ContentAuthors />
           <DirectoryPresence />
         </div>
       </article>

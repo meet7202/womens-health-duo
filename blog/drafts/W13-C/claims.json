@@ -1,0 +1,30 @@
+{
+  "id": "W13-C",
+  "openClinicalQuestions": [
+    "Which India-specific first-trimester booking blood panel does Dr. Charmi want named for average-risk readers?",
+    "Any preferred local emergency phrasing beyond 112 for metro clinic pages?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Tell maternity services soon; see GP/specialist promptly if long-term condition or medicines; do not stop prescribed medicine without talking to a doctor; take recommended vitamins; avoid alcohol and smoking",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/finding-out/what-to-do-when-you-find-out-you-are-pregnant/",
+      "sourceSection": "NHS · What to do when you find out you're pregnant · Page last reviewed: 3 February 2026",
+      "limitations": "UK NHS pathway; Indian antenatal booking routes differ",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Seek advice for symptom combinations if you might be pregnant even without a positive test; emergency care for sudden intense pain with dizziness/fainting",
+      "sourceUrl": "https://www.nhs.uk/conditions/ectopic-pregnancy/",
+      "sourceSection": "NHS · Ectopic pregnancy — Overview · Page last reviewed: 23 August 2022",
+      "limitations": "UK emergency numbers; use 112 / local ED in India",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Seek medical help immediately with concerning symptoms after recent sexual activity, even if pregnancy seems unlikely",
+      "sourceUrl": "https://www.rcog.org.uk/for-the-public/browse-our-patient-information/ectopic-pregnancy/",
+      "sourceSection": "RCOG · Ectopic pregnancy (patient information) · not stated on page extract",
+      "limitations": "UK patient leaflet; local EPAU pathways do not map one-to-one in India",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

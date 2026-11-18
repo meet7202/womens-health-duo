@@ -2,8 +2,10 @@ import { learnHubTopicLabels, learnHubFilteredPath } from "../../lib/learnHubUrl
 import { publicPathname } from "../../lib/githubPagesPublicUrl";
 import { bookConsultationPath } from "../../lib/bookingIntent";
 import { SEO_ONLINE_SERVICES } from "../seoOnlineServices";
+import { CALENDAR_ARTICLE_BY_SLUG, publishedArticleForSlug } from "./articles";
 import { buildTopicGuideFaqs, clusterConfig } from "./clusterContent";
 import { guideUniquenessOverrideForSlug } from "./guideUniquenessOverrides";
+import { isTopicGuideIndexable } from "./topicGuideSitemapPaths";
 import { TOPIC_GUIDE_ROWS } from "./topicGuideRows";
 import type {
   TopicGuideClusterId,
@@ -358,58 +360,107 @@ function sectionsWithUniquenessScaffold(
   };
 }
 
+/**
+ * Local draft preview (`npm run dev:blogs`). Production builds leave this unset,
+ * so unpublished calendar bodies stay off the public site.
+ */
+const previewMeta = import.meta as { env?: { VITE_PREVIEW_BLOG_DRAFTS?: string } };
+const PREVIEW_BLOG_DRAFTS =
+  typeof import.meta !== "undefined" && previewMeta.env?.VITE_PREVIEW_BLOG_DRAFTS === "1";
+
+function articleRevisionForSlug(slug: string) {
+  if (PREVIEW_BLOG_DRAFTS) return CALENDAR_ARTICLE_BY_SLUG.get(slug);
+  return publishedArticleForSlug(slug);
+}
+
+function buildGuideModel(row: TopicGuideRow): TopicGuidePageModel {
+  const cc = clusterConfig(row.cluster);
+  const published = articleRevisionForSlug(row.slug);
+  const title = published?.title ?? row.title ?? topicGuideTitleFromSlug(row.slug);
+  const consult = published?.proposedLeadId ?? row.primaryConsult ?? cc.defaultConsult;
+  const services = row.serviceSlugs ?? cc.defaultServiceSlugs;
+  const learnTopicLabels = filterLearnTopics(row.learnTopics ?? cc.defaultLearnTopics);
+  const uniqueness = sectionsWithUniquenessScaffold(title, cc.buildSections(title), row, {
+    consult,
+    metaBlurb: cc.metaBlurb,
+    faqPool: cc.faqPool,
+  });
+  const faqs =
+    published?.faqs ?? buildTopicGuideFaqs(row.slug, title, consult, cc.faqPool, row.faqIds);
+  const path = publicPathname(`/${row.slug}`);
+  const relatedSlugs = computeRelated(row, BY_CLUSTER);
+  const reviewerIds = published?.reviewerIds?.length ? published.reviewerIds : undefined;
+  const hold = TOPIC_GUIDE_REVIEW_HOLDS.get(row.slug);
+  const reviewStatus = hold ?? (reviewerIds ? "approved" : resolveTopicGuideReviewStatus(row));
+
+  // Unique calendar body when publicationStatus is published.
+  // Drafts keep the live cluster/uniqueness scaffold.
+  const sections = published?.sections?.length ? published.sections : uniqueness.sections;
+  const primaryQuestion = published?.primaryQuestion ?? uniqueness.primaryQuestion;
+  const directAnswer = published?.directAnswer ?? uniqueness.directAnswer;
+  const metaDescription = published?.description ?? buildMetaDescription(title, cc.metaBlurb);
+  const introParagraph = published
+    ? published.directAnswer
+    : buildTopicGuideIntroParagraph(title, cc.metaBlurb);
+  const references = published?.references?.length ? published.references : (row.references ?? []);
+
+  return {
+    slug: row.slug,
+    path,
+    tier: row.tier,
+    cluster: row.cluster,
+    title,
+    seoTitle: published?.seoTitle,
+    introParagraph,
+    metaDescription,
+    sections,
+    faqs,
+    learnTopicLabels,
+    primaryConsult: consult,
+    serviceSlugs: services,
+    relatedSlugs,
+    authorId: published?.authorId ?? row.authorId,
+    reviewerId: published?.reviewerId ?? row.reviewerId,
+    reviewerIds,
+    publishedAt: published?.publishedAt ?? row.publishedAt,
+    reviewStatus,
+    references,
+    primaryQuestion,
+    directAnswer,
+    indexable: isTopicGuideIndexable(row),
+    calendarArticleId: published?.id ?? row.calendarArticleId,
+    figures: published?.figures?.map((f) => ({
+      src: f.src,
+      srcSet: f.srcSet,
+      alt: f.alt,
+      caption: f.caption,
+      width: f.width,
+      height: f.height,
+    })),
+    conversionCopy: published?.conversionCopy,
+    conversionPath: published?.conversionPath,
+    storytellingNote: published?.storytellingNote,
+    bodyFingerprintText: published?.bodyFingerprintText,
+    internalLinks: published?.internalLinks,
+  };
+}
+
 const GUIDE_BY_SLUG: ReadonlyMap<string, TopicGuidePageModel> = new Map(
-  TOPIC_GUIDE_ROWS.map((row) => {
-    const cc = clusterConfig(row.cluster);
-    const title = row.title ?? topicGuideTitleFromSlug(row.slug);
-    const consult = row.primaryConsult ?? cc.defaultConsult;
-    const services = row.serviceSlugs ?? cc.defaultServiceSlugs;
-    const learnTopicLabels = filterLearnTopics(row.learnTopics ?? cc.defaultLearnTopics);
-    const uniqueness = sectionsWithUniquenessScaffold(title, cc.buildSections(title), row, {
-      consult,
-      metaBlurb: cc.metaBlurb,
-      faqPool: cc.faqPool,
-    });
-    const faqs = buildTopicGuideFaqs(row.slug, title, consult, cc.faqPool, row.faqIds);
-    const path = publicPathname(`/${row.slug}`);
-    const relatedSlugs = computeRelated(row, BY_CLUSTER);
-    const reviewStatus = resolveTopicGuideReviewStatus(row);
-    const model: TopicGuidePageModel = {
-      slug: row.slug,
-      path,
-      tier: row.tier,
-      cluster: row.cluster,
-      title,
-      introParagraph: buildTopicGuideIntroParagraph(title, cc.metaBlurb),
-      metaDescription: buildMetaDescription(title, cc.metaBlurb),
-      sections: uniqueness.sections,
-      faqs,
-      learnTopicLabels,
-      primaryConsult: consult,
-      serviceSlugs: services,
-      relatedSlugs,
-      // Attribution + dates come only from verified per-row fields — never invent approval metadata.
-      authorId: row.authorId,
-      reviewerId: row.reviewerId,
-      publishedAt: row.publishedAt,
-      updatedAt: row.updatedAt,
-      reviewedAt: row.reviewedAt,
-      /** Existing guides default to pending — never invent reviewed/approved status. */
-      reviewStatus,
-      references: row.references ?? [],
-      primaryQuestion: uniqueness.primaryQuestion,
-      directAnswer: uniqueness.directAnswer,
-    };
-    return [row.slug, model] as const;
-  }),
+  TOPIC_GUIDE_ROWS.map((row) => [row.slug, buildGuideModel(row)] as const),
 );
+
 export function getTopicGuide(slug: string | undefined): TopicGuidePageModel | undefined {
   if (!slug) return undefined;
-  return GUIDE_BY_SLUG.get(slug);
+  const guide = GUIDE_BY_SLUG.get(slug);
+  // Unpublished new calendar URLs stay out of the public route (404).
+  if (!guide || (!guide.indexable && !PREVIEW_BLOG_DRAFTS)) return undefined;
+  return guide;
 }
 /** Main entry slugs highlighted on the Learn hub (subset of all guides). */
 export function topicGuideHubSlugs(): string[] {
-  return TOPIC_GUIDE_ROWS.filter((r) => r.tier === 1).map((r) => r.slug);
+  return TOPIC_GUIDE_ROWS.filter((r) => r.tier === 1 && isTopicGuideIndexable(r)).map(
+    (r) => r.slug,
+  );
 }
 
 const CLUSTER_INDEX_LABEL: Record<TopicGuideClusterId, string> = {
@@ -450,6 +501,7 @@ export type TopicGuideIndexGroup = {
 export function topicGuidesGroupedForIndex(): TopicGuideIndexGroup[] {
   const byCluster = new Map<TopicGuideClusterId, TopicGuideRow[]>();
   for (const row of TOPIC_GUIDE_ROWS) {
+    if (!isTopicGuideIndexable(row) && !PREVIEW_BLOG_DRAFTS) continue;
     const arr = byCluster.get(row.cluster) ?? [];
     arr.push(row);
     byCluster.set(row.cluster, arr);

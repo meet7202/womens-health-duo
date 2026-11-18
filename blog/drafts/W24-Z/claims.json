@@ -1,0 +1,30 @@
+{
+  "id": "W24-Z",
+  "openClinicalQuestions": [
+    "Dr. Zalak: confirm how she wants the POGP ‘from 4 weeks’ line presented on WHD so it never reads as a blanket clinic policy.",
+    "Confirm current online Mat versus in-person Reformer options for postnatal clients in Bangalore/Ahmedabad."
+  ],
+  "claimLedger": [
+    {
+      "claim": "Gentle Pilates from ~4 weeks if no bleeding/wound/pelvic-floor concerns; seek specialist physio for diastasis or concerns; wait for post-op check after surgery; seek help if pain during/after exercises.",
+      "sourceUrl": "https://thepogp.co.uk/_userfiles/pages/files/resources/pogppilates_final.pdf",
+      "sourceSection": "POGP · Pilates in Women's Health Physiotherapy · Publication date on catalogue page 29 Nov 2022",
+      "limitations": "UK booklet; not a personal medical clearance; class demand still varies widely",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Gentle exercise when ready after straightforward birth; advice at 6-week check before high-impact; longer recovery after caesarean/complicated birth.",
+      "sourceUrl": "https://www.nhs.uk/conditions/baby/support-and-services/keeping-fit-and-healthy-with-a-baby/",
+      "sourceSection": "NHS · Keeping fit and healthy with a baby · Media last reviewed 2 August 2026",
+      "limitations": "UK pathway; Pilates class intensity not specified",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Confirms booklet availability and publication metadata for the Pilates-in-WH physiotherapy resource.",
+      "sourceUrl": "https://thepogp.co.uk/resources/124/pilates_in_womens_health_physiotherapy/",
+      "sourceSection": "POGP · Pilates in Women's Health Physiotherapy (resource page) · Publication date 29 Nov 2022",
+      "limitations": "Catalogue page; clinical detail is in the PDF",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

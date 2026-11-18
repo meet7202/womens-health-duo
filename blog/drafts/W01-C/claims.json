@@ -1,0 +1,37 @@
+{
+  "id": "W01-C",
+  "openClinicalQuestions": [
+    "Which amenorrhoea threshold should WHD use in India-facing copy when NHS (3 missed periods) and other guidelines differ?",
+    "Should adolescent-specific cycle cut-offs from the PCOS/PMOS guideline be cross-linked more prominently from this page?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Normal menstrual frequency described as predictable cyclic menses every 24–38 days; regularity uses shortest-to-longest variation of about 7–9 days by age band.",
+      "sourceUrl": "https://obgyn.onlinelibrary.wiley.com/doi/full/10.1002/ijgo.12666",
+      "sourceSection": "FIGO · The two FIGO systems for normal and abnormal uterine bleeding symptoms… (2018 revisions) · 2018 (page correction note 12 November 2018)",
+      "limitations": "International nomenclature system; public UK NHS cut-offs (21/35 days) differ and are also cited for patient-facing simplicity.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Irregular if gap <21 or >35 days; more likely at puberty and near menopause; see a GP for irregular periods, >7-day bleeds, intermenstrual bleeding, associated symptoms, or difficulty conceiving.",
+      "sourceUrl": "https://www.nhs.uk/conditions/irregular-periods/",
+      "sourceSection": "NHS · Irregular periods · not stated on fetched page header",
+      "limitations": "UK primary-care advice; Indian access routes and specialist timing may differ.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "See a GP if you have missed your period 3 times in a row (among other prompts); lists pregnancy, breastfeeding, contraception, PMOS/PCOS, menopause and other causes.",
+      "sourceUrl": "https://www.nhs.uk/conditions/stopped-or-missed-periods/",
+      "sourceSection": "NHS · Missed or late periods · not stated on fetched page header",
+      "limitations": "Open clinical question for India: local clinics may use different amenorrhoea thresholds; article attributes the 3-missed-period prompt to NHS.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Seek advice for symptom combinations if you might be pregnant even without a positive test; emergency care for sudden intense tummy pain with dizziness/fainting.",
+      "sourceUrl": "https://www.nhs.uk/conditions/ectopic-pregnancy/",
+      "sourceSection": "NHS · Ectopic pregnancy — Overview · Page last reviewed: 23 August 2022",
+      "limitations": "UK emergency numbers; readers in India should use local emergency services.",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

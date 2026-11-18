@@ -1,0 +1,22 @@
+{
+  "id": "W05-Z",
+  "openClinicalQuestions": [
+    "Dr. Zalak: confirm current online versus in-person formats (e.g. whether Reformer remains in-person only in Bangalore/Ahmedabad, and how Mat online is currently delivered)."
+  ],
+  "claimLedger": [
+    {
+      "claim": "Lists five principles: Breathing; Pelvic placement; Rib cage placement; Scapular movement and stabilization; Head and neck placement.",
+      "sourceUrl": "https://www.merrithew.com/stott-pilates/warmup/en/principles/five-basic-principles",
+      "sourceSection": "Merrithew · STOTT PILATES Five Basic Principles · not stated",
+      "limitations": "Manufacturer education page; not independent outcome evidence",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Defines STOTT as contemporary anatomically based approach; FAQ also uses ‘Head and cervical placement’ wording for the fifth principle.",
+      "sourceUrl": "https://www.merrithew.com/about/education-programs/stott-pilates/faqs",
+      "sourceSection": "Merrithew · STOTT PILATES FAQs · not stated",
+      "limitations": "Includes promotional ‘safest and most effective’ language—not used as comparative fact here",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

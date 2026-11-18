@@ -1,0 +1,106 @@
+{
+  "id": "W11-C",
+  "title": "What Does My AMH Test Tell Me About Fertility?",
+  "seoTitle": "What an AMH test means for fertility",
+  "description": "AMH reflects ovarian reserve quantity, not egg quality or a natural-conception verdict—how to read a result with age and other fertility factors.",
+  "primaryQuestion": "Can I get pregnant with low AMH?",
+  "directAnswer": "A low AMH result does not prove that pregnancy is impossible, and a high result does not prove that conception will be easy. Anti-Müllerian hormone mainly helps estimate ovarian reserve—roughly how many recruitable follicles remain—and may guide counselling about response if assisted conception is planned. ASRM’s 2020 ovarian-reserve opinion states that these markers assess quantity, not quality, of the remaining oocyte pool. NICE NG257 advises against using AMH to predict clinical pregnancy through spontaneous conception.",
+  "sections": [
+    {
+      "heading": "What the blood test is measuring",
+      "paragraphs": [
+        "AMH is made by cells in small growing ovarian follicles. A serum level is used as an indirect marker of ovarian reserve—the remaining pool of oocytes—rather than a photograph of each egg or a calendar for when fertility will end. ASRM defines ovarian reserve as oocyte quantity (number), and notes that quantity is different from oocyte quality, which relates to the potential of a fertilised oocyte to result in a live-born infant.",
+        "Unlike some day-3 hormones, AMH can usually be drawn on most cycle days. Laboratories use different assays and reference ranges, so comparing a result from one lab with a chart from another can mislead. Age still shapes fertility counselling even when AMH looks reassuring."
+      ]
+    },
+    {
+      "heading": "Quantity, quality and natural pregnancy chances",
+      "paragraphs": [
+        "ASRM’s committee opinion is explicit: ovarian reserve testing assesses only quantity, not quality, of the remaining oocyte pool. The same document states that markers of ovarian reserve should not be used as a fertility test for women who are not infertile or who have untested fertility, and should not be the sole reason to deny access to treatment.",
+        "NICE guideline NG257 says not to use AMH measurement as a predictor of clinical pregnancy through spontaneous conception. NICE does allow AMH or antral follicle count as predictors of ovarian response to inform counselling about assisted conception. In plain terms: a low number may change how a clinic plans stimulation; it does not, by itself, write your chance of conceiving without treatment.",
+        "ASRM’s patient education on ovarian reserve adds that abnormal reserve results suggest fertility potential has declined but do not tell who will or will not conceive, and that no single ovarian-reserve test can definitively predict ability to get pregnant. Egg-quality myths and supplement claims are covered in our guide on improving egg quality."
+      ]
+    },
+    {
+      "heading": "Reading a low or high result in context",
+      "paragraphs": [
+        "Extremely low AMH may prompt counselling about a likely lower egg yield if IVF is considered; ASRM notes that very low values should not be used to refuse treatment. High AMH can appear with conditions that affect ovulation patterns—our PCOS guides explain those pathways separately—and may raise questions about ovarian response and monitoring if medicines are used later.",
+        "A useful clinic conversation names what question the test was meant to answer: estimating response to stimulation, supporting timing of fertility care, or investigating irregular cycles alongside other tests. It is not a substitute for checking ovulation, tubes, uterine factors or semen when those questions are open. Our guide on when to see a fertility specialist covers how long to try before assessment."
+      ]
+    },
+    {
+      "heading": "Questions worth asking after the report",
+      "paragraphs": [
+        "Ask which laboratory method was used and whether the result will change any decision this month. Ask whether antral follicle count or other tests would add clarity, and whether both partners’ factors have been considered. Ask how age, cycle pattern and previous pregnancies sit beside the number on the page.",
+        "Seek emergency care for severe one-sided pelvic pain, shoulder-tip pain, fainting or heavy bleeding if pregnancy is possible—those problems are not answered by repeating AMH. Routine booking with Dr. Charmi Shah remains appropriate for interpreting a confusing reserve result within a full fertility plan."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Does high AMH mean I am more fertile?",
+      "answer": "Not by itself. Higher AMH usually points toward a larger recruitable follicle pool and may relate to response in treatment settings, but pregnancy still depends on ovulation, tubes, sperm, age and other factors. NICE advises against using AMH to predict spontaneous clinical pregnancy."
+    },
+    {
+      "question": "Should I start IVF solely because AMH is low?",
+      "answer": "No automatic leap follows from one blood value. ASRM advises that reserve markers should not alone deny or dictate care. Discuss duration of trying, age, semen findings, tubal status and your goals before choosing a treatment pathway."
+    }
+  ],
+  "references": [
+    {
+      "label": "ASRM Practice Committee — Testing and interpreting measures of ovarian reserve (2020)",
+      "url": "https://www.asrm.org/practice-guidance/practice-committee-documents/testing-and-interpreting-measures-of-ovarian-reserve-a-committee-opinion-2020/"
+    },
+    {
+      "label": "NICE NG257 — Fertility problems: ovarian reserve testing recommendations",
+      "url": "https://www.nice.org.uk/guidance/NG257/chapter/investigation-of-fertility-problems-and-management-strategies"
+    },
+    {
+      "label": "ReproductiveFacts.org (ASRM) — Ovarian reserve patient fact sheet (revised 2023)",
+      "url": "https://www.reproductivefacts.org/news-and-publications/patient-fact-sheets-and-booklets/documents/fact-sheets-and-info-booklets/ovarian-reserve/"
+    }
+  ],
+  "conversionCopy": "If an AMH result has left you unsure what it means for natural conception or treatment planning, you can discuss it with Dr. Charmi Shah.",
+  "explainerAlt": "Diagram separating ovarian reserve quantity, egg quality and pregnancy chance.",
+  "storytellingNote": "",
+  "review": {
+    "corrections": [
+      "Rewrote padded live body; removed illustrative anecdote and clinician narration.",
+      "Centred ASRM quantity-not-quality and not-a-standalone-fertility-test language; added NICE NG257 spontaneous-conception warning.",
+      "Kept high/low framing without universal cut-offs; linked egg-quality and fertility-specialist guides."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "ASRM",
+        "title": "Testing and interpreting measures of ovarian reserve: a committee opinion (2020)",
+        "url": "https://www.asrm.org/practice-guidance/practice-committee-documents/testing-and-interpreting-measures-of-ovarian-reserve-a-committee-opinion-2020/",
+        "date": "Fertil Steril 2020;114:1151–7",
+        "recommendation": "Ovarian reserve equals oocyte quantity; markers test quantity not quality; should not be used as a fertility test for women with unproven fertility or as sole reason to deny ART",
+        "passage": "ovarian reserve testing is testing only quantity, not quality, of the remaining oocyte pool",
+        "limitations": "US society opinion; assay cut-offs vary by laboratory"
+      },
+      {
+        "organisation": "NICE",
+        "title": "NG257 investigation of fertility problems — ovarian reserve testing",
+        "url": "https://www.nice.org.uk/guidance/NG257/chapter/investigation-of-fertility-problems-and-management-strategies",
+        "date": "Published 31 March 2026",
+        "recommendation": "Do not use AMH to predict clinical pregnancy through spontaneous conception; AMH/AFC may inform ovarian response counselling for assisted conception",
+        "passage": "Do not use anti-Müllerian hormone (AMH) measurement as a predictor of clinical pregnancy through spontaneous conception.",
+        "limitations": "UK guidance; Indian clinics may use AMH differently in local protocols"
+      },
+      {
+        "organisation": "ReproductiveFacts.org / ASRM",
+        "title": "Ovarian reserve (predicting fertility potential in women)",
+        "url": "https://www.reproductivefacts.org/news-and-publications/patient-fact-sheets-and-booklets/documents/fact-sheets-and-info-booklets/ovarian-reserve/",
+        "date": "Revised 2023",
+        "recommendation": "Abnormal reserve tests suggest decline but do not identify who will or will not conceive; no single test definitively predicts ability to get pregnant",
+        "passage": "Abnormal ovarian reserve test results suggest that fertility potential has declined but they do not tell who will or who will not conceive.",
+        "limitations": "Patient education sheet; not a treatment protocol"
+      }
+    ],
+    "openQuestions": [
+      "Does Dr. Charmi want any India-specific AMH assay or unit conventions named in patient copy?",
+      "Should high-AMH counselling always cross-link PCOS/PMOS pages, or only when cycles are irregular?"
+    ]
+  }
+}

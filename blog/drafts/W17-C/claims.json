@@ -1,0 +1,37 @@
+{
+  "id": "W17-C",
+  "openClinicalQuestions": [
+    "Should WHD recommend a specific interval before clinic serum hCG after two negative home tests?",
+    "Any FOGSI wording preferred over NHS three-missed-period threshold for India-facing copy?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Most reliable from first day of missed period (or ≥21 days after unprotected sex if timing unknown); positive almost certainly correct; negative less reliable if early/incorrect use; retest and see GP if still no period.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/trying-for-a-baby/doing-a-pregnancy-test/",
+      "sourceSection": "NHS · Doing a pregnancy test · Media last reviewed: 2 February 2026",
+      "limitations": "UK access to free tests; brand sensitivity varies.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Lists non-pregnancy causes; see GP after 3 missed periods in a row among other prompts.",
+      "sourceUrl": "https://www.nhs.uk/conditions/stopped-or-missed-periods/",
+      "sourceSection": "NHS · Missed or late periods · not stated on fetched header",
+      "limitations": "UK primary-care threshold; Indian clinics may use different amenorrhoea cut-offs.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "See GP if pregnancy test negative and three consecutive periods missed.",
+      "sourceUrl": "https://www.nhs.uk/conditions/periods/",
+      "sourceSection": "NHS · Periods — Overview · Page last reviewed: 05 January 2023",
+      "limitations": "UK advice.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Seek advice for symptom combinations if you might be pregnant even without positive test; emergency care for sudden intense pain with dizziness/fainting.",
+      "sourceUrl": "https://www.nhs.uk/conditions/ectopic-pregnancy/",
+      "sourceSection": "NHS · Ectopic pregnancy — Overview · Page last reviewed: 23 August 2022",
+      "limitations": "UK emergency numbers; India readers should use 112 / local emergency care.",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

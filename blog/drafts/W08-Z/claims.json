@@ -1,0 +1,22 @@
+{
+  "id": "W08-Z",
+  "openClinicalQuestions": [
+    "Dr. Charmi: confirm patient-facing wording on whether, in the usual low horizontal (Pfannenstiel) approach, the rectus muscles are separated rather than cut—avoid stating this until verified for this site."
+  ],
+  "claimLedger": [
+    {
+      "claim": "Encourage early mobilisation; daily walk for clot risk; resume driving/exercise/heavy carrying/sex when able—may not be for 6 weeks; contact for listed infection/clot symptoms.",
+      "sourceUrl": "https://www.nhs.uk/conditions/caesarean-section/recovery/",
+      "sourceSection": "NHS · Caesarean section – Recovery · Page last reviewed 04 January 2023",
+      "limitations": "UK NHS pathway; local discharge leaflets may add detail",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Describes 10–20 cm cut in tummy and womb, usually horizontal below bikini line; does not detail muscle separation vs cutting in the fetched text.",
+      "sourceUrl": "https://www.nhs.uk/conditions/caesarean-section/what-happens/",
+      "sourceSection": "NHS · Caesarean section – What happens · Page last reviewed 04 January 2023",
+      "limitations": "Procedure overview; muscle-layer technique not specified on this page",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

@@ -11,11 +11,14 @@
  *   npm run submit:indexnow -- --feed=primary --dry-run
  *   npm run submit:indexnow -- --changed-only --dry-run
  *   npm run submit:indexnow -- --feed=all --batch-size=10000
+ *   npm run submit:indexnow -- --urls=https://womenshealthduo.com/path/
+ *   npm run submit:indexnow -- --urls-file=./urls.txt
  *
  * SEO-40: build writes a content fingerprint manifest. `--changed-only` submits
  * added/updated URLs vs `.cache/indexnow-content-manifest.prev.json` (created after
  * a successful non-dry-run submit, or seed manually). Dry-run never POSTs.
  */
+import fs from "node:fs";
 import { getIndexNowKey } from "./lib/indexnow-key.mjs";
 import { hostFromSiteUrl, loadIndexableUrls, readSitemapBuildMeta } from "./lib/sitemapUrls.mjs";
 import {
@@ -37,6 +40,8 @@ function parseArgs(argv) {
     dryRun: false,
     changedOnly: false,
     batchSize: DEFAULT_BATCH_SIZE,
+    urls: [],
+    urlsFile: null,
   };
 
   for (const arg of argv) {
@@ -45,6 +50,14 @@ function parseArgs(argv) {
     else if (arg.startsWith("--feed=")) opts.feed = arg.slice("--feed=".length);
     else if (arg.startsWith("--batch-size=")) {
       opts.batchSize = Number.parseInt(arg.slice("--batch-size=".length), 10);
+    } else if (arg.startsWith("--urls=")) {
+      opts.urls = arg
+        .slice("--urls=".length)
+        .split(",")
+        .map((u) => u.trim())
+        .filter(Boolean);
+    } else if (arg.startsWith("--urls-file=")) {
+      opts.urlsFile = arg.slice("--urls-file=".length);
     } else if (arg === "--help" || arg === "-h") {
       printHelp();
       process.exit(0);
@@ -70,6 +83,8 @@ Options:
   --feed=primary|virtual|video|all   Sitemap feed(s) to submit (default: all)
   --batch-size=N                   URLs per IndexNow request (max 10000, default 10000)
   --changed-only                   Submit only added/updated URLs vs baseline manifest (SEO-40)
+  --urls=URL[,URL...]              Submit exact absolute URL(s) (skips sitemap feed selection)
+  --urls-file=PATH                 Submit URLs listed one-per-line in a text file
   --dry-run                        Print change report / counts without POSTing
   -h, --help                       Show this help
 
@@ -110,7 +125,27 @@ async function submitBatch({ host, key, keyLocation, urlList, dryRun }) {
   };
 }
 
+function resolveExplicitUrls(opts) {
+  const list = [...opts.urls];
+  if (opts.urlsFile) {
+    const text = fs.readFileSync(opts.urlsFile, "utf8");
+    for (const line of text.split(/\r?\n/)) {
+      const u = line.trim();
+      if (u && !u.startsWith("#")) list.push(u);
+    }
+  }
+  return [...new Set(list)];
+}
+
 function resolveUrlList(opts) {
+  const explicit = resolveExplicitUrls(opts);
+  if (explicit.length > 0) {
+    if (opts.changedOnly) {
+      throw new Error("submit-indexnow: --urls/--urls-file cannot be combined with --changed-only");
+    }
+    return { urls: explicit, diff: null, baselineMissing: false };
+  }
+
   const feedUrls = loadIndexableUrls(opts.feed);
   const feedSet = new Set(feedUrls);
 

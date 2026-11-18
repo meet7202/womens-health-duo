@@ -14,6 +14,7 @@ import { ContextualDeepLinks } from "@/components/learn/ContextualDeepLinks";
 import { JsonLdFaq } from "@/components/seo/JsonLdFaq";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
+import { ContentAuthors } from "@/components/seo/ContentAuthors";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { Youtube, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -195,6 +196,7 @@ export function LearnPage() {
           .
         </p>
 
+        <ContentAuthors />
         <DirectoryPresence />
       </article>
     </PageShell>

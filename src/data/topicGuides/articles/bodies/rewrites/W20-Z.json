@@ -1,0 +1,115 @@
+{
+  "id": "W20-Z",
+  "title": "Why does my back hurt after pregnancy, and when should I get help?",
+  "seoTitle": "Postpartum Back Pain and When to Get Help",
+  "description": "Postpartum back pain often tracks feeding, carrying and sleep loss. Learn load tweaks, what physio assesses, and which symptoms need urgent care.",
+  "primaryQuestion": "Why do I have postpartum back pain?",
+  "directAnswer": "Back pain after birth often reflects new daily loads—long feeding holds, lifting a growing baby, bending to the floor, sleep loss and residual pregnancy changes in joints and muscles—not an automatic verdict that an epidural, “bad posture” or diastasis is to blame. UK NHS advice notes that back pain after having a baby may relate to pregnancy, birth or caregiving tasks such as lifting and bending, and that learning to look after your back plus strengthening exercises can help. The pattern, examination and red flags decide whether self-care, physiotherapy or urgent medical care comes first.",
+  "sections": [
+    {
+      "heading": "Details that clarify the pain pattern",
+      "paragraphs": [
+        "Note where the pain sits (lower back, buttock, pubic bone, hip), whether it travels into a leg, what starts or eases it, and whether numbness, weakness, bladder or bowel change, fever or night pain are present. Birth type, stitches or caesarean wound, prior back problems and how you are sleeping all matter.",
+        "POGP notes that for people who have just had a baby, sitting a long time to feed, plus lifting and carrying the baby and equipment, can strain the back and pelvis. Pregnancy-related pelvic girdle pain can continue or appear after birth for a smaller group, and lumbopelvic pain is common in pregnancy—so postpartum pain needs a fresh look rather than one inherited label.",
+        "Do not assume the cause is an epidural, a single “wrong” posture photo, or abdominal separation alone. Diastasis can coexist with back discomfort, but our diastasis overview explains why width alone does not prove the wall is the driver."
+      ]
+    },
+    {
+      "heading": "Feeding, carrying and rest adjustments",
+      "paragraphs": [
+        "UK NHS post-pregnancy tips for an aching back include sitting to feed with the back supported and feet reaching the floor, using a small cushion behind the waist, kneeling or squatting for floor tasks instead of bending the spine, changing nappies on a raised surface, bending the knees when lifting, and keeping the back straighter when pushing a pram—or using a well-fitting sling. Never leave a baby unattended on a raised surface.",
+        "POGP adds pacing: break up chores, take rests, avoid pushing through tasks that flare pain, slow walking if needed, and consider a feeding pillow. Supportive footwear and keeping knees together when turning in bed or getting into a car can reduce pelvic strain for some people.",
+        "These adjustments are experiments, not moral rules. If pain still limits sleep or basic care after sensible changes, ask for assessment rather than enduring it because “everyone has a sore back with a newborn.”"
+      ]
+    },
+    {
+      "heading": "What a physiotherapy assessment can look at",
+      "paragraphs": [
+        "Dr. Zalak Shah (PT) reviews the movements and positions that provoke symptoms—feeding set-ups, lifting strategy, walking and stairs—then looks at strength, joint comfort and pelvic-floor contribution where relevant. Treatment may include graded exercise, pacing advice and temporary activity tweaks matched to your findings.",
+        "If the pattern suggests a medical problem rather than a musculoskeletal load issue, she will direct you to medical review. At Women’s Health Duo, obstetric or gynaecology questions sit with Dr. Charmi Shah. Physiotherapy does not replace imaging or emergency care when red flags are present."
+      ]
+    },
+    {
+      "heading": "How exercise is adapted to symptoms",
+      "paragraphs": [
+        "NHS back-pain guidance encourages staying active and continuing daily activities where possible, rather than long bed rest, and notes that walking, swimming, yoga and pilates may help some people—stop if pain worsens and seek advice. After birth, layer that idea onto wound healing and pelvic-floor symptoms: short walks and gentle mobility often come before harder strength or impact.",
+        "Our guides on rebuilding core strength and returning to exercise after delivery cover progression principles. Here the rule is simple: choose loads you can repeat without a sharp flare the same day or the next morning, then build. Persistent postpartum pelvic pain has its own pathway when the pelvis, not only the lumbar spine, is the main site."
+      ]
+    },
+    {
+      "heading": "Symptoms that need urgent assessment",
+      "paragraphs": [
+        "POGP advises calling a doctor straight away or going to emergency care for pain or numbness in both legs at the same time, difficulty passing urine, leakage of stool you cannot control, or numbness around the vagina or back passage. NHS back-pain emergency lists similarly include pain, tingling, weakness or numbness in both legs, loss of feeling around the genitals or anus, and new bladder or bowel control changes—plus chest pain or pain after a serious accident.",
+        "Ask for urgent medical advice if severe back pain starts suddenly or escalates quickly, or if you feel feverish and systemically unwell with back pain. In India, use emergency number 112 when those severe patterns appear. Routine physiotherapy booking is for musculoskeletal load-related pain after urgent causes are excluded or treated."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Does postpartum back pain mean my epidural caused nerve damage?",
+      "answer": "Not by default. New caregiving loads, sleep loss and pregnancy-related joint and muscle changes are common contributors. Sudden severe neurological symptoms need urgent medical assessment, but ordinary ache with feeding and lifting is usually approached as a musculoskeletal load problem first."
+    },
+    {
+      "question": "Should I stay in bed until the pain settles?",
+      "answer": "UK NHS back-pain advice generally discourages long periods in bed and encourages staying active within comfort. After birth, keep walks and position changes gentle, respect wounds, and stop if symptoms worsen or red flags appear."
+    }
+  ],
+  "references": [
+    {
+      "label": "NHS — Your post-pregnancy body",
+      "url": "https://www.nhs.uk/conditions/baby/support-and-services/your-post-pregnancy-body/"
+    },
+    {
+      "label": "NHS — Back pain",
+      "url": "https://www.nhs.uk/conditions/back-pain/"
+    },
+    {
+      "label": "POGP — Pregnancy related pelvic girdle pain and low back pain",
+      "url": "https://thepogp.co.uk/patient_information/womens_health/pregnancy_pgp_lbp.aspx"
+    }
+  ],
+  "conversionCopy": "If feeding, carrying or daily movement is limited by postpartum back pain, you can book a physiotherapy assessment with Dr. Zalak Shah (PT).",
+  "explainerAlt": "Supported feeding setup example discussed in postnatal physiotherapy for back comfort",
+  "storytellingNote": "",
+  "review": {
+    "corrections": [
+      "Rewrote from padded live text; removed illustrative anecdotes and template filler.",
+      "Avoided automatic blame of epidurals, posture or diastasis; centred caregiving loads and verified NHS/POGP tips.",
+      "One urgent section with POGP and NHS neurological/bladder-bowel red flags; India 112 noted.",
+      "Linked related core and exercise guides instead of duplicating them."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "NHS",
+        "title": "Your post-pregnancy body",
+        "url": "https://www.nhs.uk/conditions/baby/support-and-services/your-post-pregnancy-body/",
+        "date": "not stated on fetched page",
+        "recommendation": "Back pain may relate to pregnancy/birth/caregiving; practical feeding and lifting tips; ask for help anytime.",
+        "passage": "Also, if you have back pain, you may need to learn how to look after your back and do some exercises to strengthen it.",
+        "limitations": "UK tips; home layout and equipment access vary"
+      },
+      {
+        "organisation": "NHS",
+        "title": "Back pain",
+        "url": "https://www.nhs.uk/conditions/back-pain/",
+        "date": "Page last reviewed 05 March 2026",
+        "recommendation": "Stay active; urgent/emergency pathways for bilateral leg symptoms, saddle numbness, bladder/bowel changes; physiotherapy may help.",
+        "passage": "Call 999 or go to A&E if: You have back pain and: pain, tingling, weakness or numbness in both legs; a loss of feeling around your genitals or anus; changes in your bladder or bowels",
+        "limitations": "General back-pain page; apply carefully in early postnatal context with local emergency number"
+      },
+      {
+        "organisation": "POGP",
+        "title": "Pregnancy related Pelvic girdle pain and low back pain during pregnancy and after having a baby",
+        "url": "https://thepogp.co.uk/patient_information/womens_health/pregnancy_pgp_lbp.aspx",
+        "date": "not stated",
+        "recommendation": "Feeding/lifting loads can strain back/pelvis after birth; pacing and position tips; urgent care for bilateral leg symptoms or bladder/bowel/saddle changes.",
+        "passage": "For women who have just had a baby, sitting in one position for a long-time feeding, lifting and carrying your baby and baby equipment can put a large amount of strain on your back and pelvis and cause pain.",
+        "limitations": "UK leaflet; not every postpartum back pain is PGP"
+      }
+    ],
+    "openQuestions": [
+      "Dr. Zalak: preferred wording when patients attribute pain solely to epidural—how firmly to reassure versus when to escalate for medical review.",
+      "Confirm local Indian emergency phrasing preference (112 only vs also name nearest hospital maternity triage)."
+    ]
+  }
+}

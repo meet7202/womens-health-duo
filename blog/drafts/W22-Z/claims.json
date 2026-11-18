@@ -1,0 +1,16 @@
+{
+  "id": "W22-Z",
+  "openClinicalQuestions": [
+    "Dr. Charmi: any India-specific labour pain-relief menu wording to add in a later medical review.",
+    "Dr. Zalak: which breathing cues she uses in WHD antenatal sessions that should be named on-page."
+  ],
+  "claimLedger": [
+    {
+      "claim": "Learn to relax, stay calm and breathe deeply; keep moving; partner support; keep open mind as you may want more pain relief; gas and air best with slow deep breaths; alternative methods mostly unproven.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/labour-and-birth/pain-relief-in-labour/",
+      "sourceSection": "NHS · Pain relief in labour · Page last reviewed: 13 March 2023",
+      "limitations": "UK labour-ward options (Entonox, pethidine, remifentanil) differ from some Indian hospital formularies—categories matter more than brand names here.",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

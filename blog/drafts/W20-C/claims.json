@@ -1,0 +1,30 @@
+{
+  "id": "W20-C",
+  "openClinicalQuestions": [
+    "Should WHD co-list a specific local psychiatry pathway alongside Tele-MANAS for Ahmedabad/Mumbai patients?",
+    "Any FOGSI or Indian psychiatric society PMDD leaflet preferred for secondary linking?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Severe emotional/physical symptoms 1–2 weeks before period; diary ≥2 cycles; treatments include SSRIs, hormonal options, CBT; lifestyle measures listed.",
+      "sourceUrl": "https://www.nhs.uk/conditions/pmdd-premenstrual-dysphoric-disorder/",
+      "sourceSection": "NHS · PMDD (premenstrual dysphoric disorder) · not stated on fetched header",
+      "limitations": "UK crisis routes differ; India Tele-MANAS/112 used in article for local readers.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "PMS diagnostic timing pattern; overlap with depression/anxiety; PMDD as severe form; SSRIs as treatment category for PMDD.",
+      "sourceUrl": "https://www.acog.org/womens-health/faqs/premenstrual-syndrome",
+      "sourceSection": "ACOG · Premenstrual Syndrome (PMS) FAQ057 · Last updated May 2021; last reviewed November 2025",
+      "limitations": "US FAQ; prescribing details clinician-led.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Toll-free counsellor access via 14416 and 1-800-891-4416.",
+      "sourceUrl": "https://telemanas.mohfw.gov.in/",
+      "sourceSection": "Ministry of Health and Family Welfare, Government of India · Tele-MANAS · not stated on fetched homepage",
+      "limitations": "Helpline availability and language options vary by state; not a substitute for emergency 112 when immediate danger.",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

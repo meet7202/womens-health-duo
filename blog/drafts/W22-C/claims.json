@@ -1,0 +1,27 @@
+{
+  "id": "W22-C",
+  "openClinicalQuestions": [],
+  "claimLedger": [
+    {
+      "claim": "AMH and antral follicle count estimate reserve and predict stimulation response; they do not measure egg quality or reliably predict natural conception.",
+      "sourceUrl": "https://www.reproductivefacts.org/news-and-publications/patient-fact-sheets-and-booklets/documents/fact-sheets-and-info-booklets/ovarian-reserve/",
+      "sourceSection": "ASRM ReproductiveFacts · Testing and interpreting measures of ovarian reserve",
+      "limitations": "Reserve markers need interpretation with age and clinical context.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Avoid smoking, keep a healthy weight, limit alcohol, moderate caffeine; age is the major factor in fertility.",
+      "sourceUrl": "https://prod.reproductivefacts.org/news-and-publications/fact-sheets-and-infographics/optimizing-natural-fertility/",
+      "sourceSection": "ASRM ReproductiveFacts · Optimizing natural fertility",
+      "limitations": "General associations do not prove that a specific change improves egg quality.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Evaluation after 12 months (under 35) or 6 months (35 and over), earlier with risk factors; tests selected clinically.",
+      "sourceUrl": "https://www.asrm.org/practice-guidance/practice-committee-documents/fertility-evaluation-of-infertile-women-a-committee-opinion-2026",
+      "sourceSection": "ASRM Practice Committee · Fertility evaluation of infertile women: a committee opinion",
+      "limitations": "Does not endorse a universal supplement or testing package.",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

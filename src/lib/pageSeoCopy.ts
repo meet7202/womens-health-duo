@@ -137,7 +137,11 @@ export function learnWatchMetaDescription(video: KnowledgeHubVideo): string {
 }
 
 export function topicGuideDocumentTitle(guideTitle: string): string {
-  return formatDocumentTitle(guideTitle);
+  const branded = formatDocumentTitle(guideTitle);
+  if (!branded.includes("…")) return branded;
+  // A complete question reads better in results than a truncated one with the brand suffix.
+  const plain = guideTitle.trim();
+  return plain.length <= DOCUMENT_TITLE_MAX_LEN ? plain : branded;
 }
 
 export const FAQ_DOCUMENT_TITLE = formatDocumentTitle("FAQ – OB-GYN, IVF & physio");

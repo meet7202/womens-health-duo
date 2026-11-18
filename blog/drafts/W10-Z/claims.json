@@ -1,0 +1,37 @@
+{
+  "id": "W10-Z",
+  "openClinicalQuestions": [
+    "Which labelled explainer diagram will clinical review approve for publication?",
+    "Should Indian emergency number 112 be named on anatomy pages that only list medical red flags briefly?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Defines pelvic floor dysfunction and lists associated symptoms including urinary/faecal incontinence, emptying disorders, prolapse, sexual dysfunction and chronic pelvic pain; supervised PFMT should assess contraction and relaxation.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng210/chapter/Recommendations",
+      "sourceSection": "NICE · NG210 Pelvic floor dysfunction: prevention and non-surgical management — Recommendations · Published 9 December 2021",
+      "limitations": "UK NICE guidance; service access in India differs.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Pelvic floor muscles support bladder, rectum and uterus and help avoid releasing urine, stool or gas at the wrong times.",
+      "sourceUrl": "https://www.niddk.nih.gov/health-information/urologic-diseases/kegel-exercises",
+      "sourceSection": "NIDDK · Kegel Exercises · Last Reviewed November 2021",
+      "limitations": "US patient education; not a substitute for individual assessment.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Describes pelvic floor location and symptom categories (bladder, bowel, sexual dysfunction).",
+      "sourceUrl": "https://www.uhsussex.nhs.uk/resources/your-pelvic-health-physiotherapy-appointment/",
+      "sourceSection": "University Hospitals Sussex NHS Foundation Trust · Your pelvic health physiotherapy appointment · Page last reviewed: 6 Oct 2026",
+      "limitations": "Local NHS Trust leaflet; appointment logistics are UK-specific.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Hammock description and continence/emptying roles of the pelvic floor.",
+      "sourceUrl": "https://www.nhsggc.scot/your-health/obstetrics-gynaecology-and-pelvic-floor-physiotherapy/pelvic-floor-physiotherapy/",
+      "sourceSection": "NHS Greater Glasgow and Clyde · Pelvic floor physiotherapy – bladder, Bowel and Pelvic Health · not stated",
+      "limitations": "Regional NHS service page.",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

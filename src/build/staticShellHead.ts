@@ -544,7 +544,7 @@ export function resolveShellPageMeta(siteUrl: string, pathname: string): ShellPa
       const intro = guide.introParagraph?.trim();
       return {
         canonicalHref: canonicalHrefForPath(siteUrl, guide.path),
-        title: topicGuideDocumentTitle(guide.title),
+        title: topicGuideDocumentTitle(guide.seoTitle ?? guide.title),
         h1: guide.title,
         metaDescription: guide.metaDescription,
         ...(intro ? { shellExtraParagraphs: [intro] } : {}),

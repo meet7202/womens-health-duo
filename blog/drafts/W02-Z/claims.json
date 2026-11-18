@@ -1,0 +1,30 @@
+{
+  "id": "W02-Z",
+  "openClinicalQuestions": [
+    "Which absolute contraindications does Dr. Zalak want listed verbatim for India-facing prenatal physio intake?",
+    "Should WHD name specific local maternity triage numbers on this page?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Aim for 150 minutes moderate activity weekly including muscle strengthening; talk but not sing; start gently if new; do not start new vigorous activity such as running; avoid fall/impact sports and scuba; avoid prolonged supine lying later in pregnancy; stop if uncomfortable, too hot or unwell.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/keeping-well/exercise/",
+      "sourceSection": "NHS · Exercise in pregnancy · Media last reviewed: 3 February 2026",
+      "limitations": "UK public guidance; local maternity protocols in India may add condition-specific limits.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "If healthy with a normal pregnancy, continue or start regular activity; aim for ≥150 minutes moderate aerobic activity weekly; lists activities to avoid and warning signs to stop and call your ob-gyn.",
+      "sourceUrl": "https://www.acog.org/womens-health/faqs/exercise-during-pregnancy",
+      "sourceSection": "ACOG · Exercise During Pregnancy (FAQ119) · Last updated: September 2024; Last reviewed: November 2025",
+      "limitations": "US patient FAQ; discuss local antenatal advice in India.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "In the absence of obstetric or medical complications or contraindications, physical activity in pregnancy is safe and desirable; evaluate women with complications carefully before recommending activity.",
+      "sourceUrl": "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2020/04/physical-activity-and-exercise-during-pregnancy-and-the-postpartum-period",
+      "sourceSection": "ACOG · Committee Opinion 804 — Physical Activity and Exercise During Pregnancy and the Postpartum Period · April 2020 (October 2021 correction noted on page)",
+      "limitations": "Full absolute-contraindication box was only partially visible on the fetched abstract page; patient FAQ warning signs used for the stop list.",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

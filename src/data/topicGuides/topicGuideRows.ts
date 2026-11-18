@@ -1,3 +1,4 @@
+import { NEW_CALENDAR_GUIDE_ROWS } from "./articles/newGuideRows";
 import type { TopicGuideClusterId, TopicGuideRow, TopicGuideTier } from "./types";
 
 function rows(
@@ -397,4 +398,6 @@ export const TOPIC_GUIDE_ROWS: TopicGuideRow[] = [
       },
     },
   ),
+  // Calendar URLs added by the 52-article programme. Published and indexable.
+  ...NEW_CALENDAR_GUIDE_ROWS,
 ];

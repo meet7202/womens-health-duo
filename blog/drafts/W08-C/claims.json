@@ -1,0 +1,37 @@
+{
+  "id": "W08-C",
+  "openClinicalQuestions": [
+    "Which Indian society or FOGSI timing thresholds (if any) should be cited alongside ASRM for local readers?",
+    "Does Dr. Charmi want male-factor ‘up to about half of couples’ epidemiology quoted, or keep to ‘semen analysis early’ without percentages?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Evaluate at 12 months if female partner <35, at 6 months if ≥35; more immediate if >40; no delay with known infertility-related conditions; include semen evaluation; parallel male evaluation when applicable",
+      "sourceUrl": "https://www.asrm.org/practice-guidance/practice-committee-documents/fertility-evaluation-of-infertile-women-a-committee-opinion-2026",
+      "sourceSection": "ASRM · Fertility evaluation of infertile women: a committee opinion (2026) · 2026 committee opinion (Fertil Steril DOI listed by ASRM)",
+      "limitations": "US society opinion; local referral pathways in India may use different service names",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Ovarian reserve tests reflect oocyte quantity not quality; should not be used as a fertility test for women with unproven fertility",
+      "sourceUrl": "https://www.asrm.org/practice-guidance/practice-committee-documents/testing-and-interpreting-measures-of-ovarian-reserve-a-committee-opinion-2020/",
+      "sourceSection": "ASRM · Testing and interpreting measures of ovarian reserve: a committee opinion (2020) · 2020 committee opinion",
+      "limitations": "Does not replace age-based counselling; weak link to pregnancy outcomes",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "RPL defined as two or more pregnancy losses; excludes ectopic and molar pregnancy",
+      "sourceUrl": "https://www.eshre.eu/-/media/sitecore-files/Guidelines/Recurrent-pregnancy-loss/2022/ESHRE-RPL-Guideline-_-Update-2022_-Final-Version-January-2023_v2.pdf",
+      "sourceSection": "ESHRE · Guideline on recurrent pregnancy loss (2022 update / Jan 2023 version) · Issued / updated material dated January 2023 on ESHRE site",
+      "limitations": "European society definition; some older local protocols still used three losses",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Do not use AMH as a predictor of clinical pregnancy through spontaneous conception",
+      "sourceUrl": "https://www.nice.org.uk/guidance/NG257/chapter/investigation-of-fertility-problems-and-management-strategies",
+      "sourceSection": "NICE · NG257 investigation of fertility problems — ovarian reserve testing · Published 31 March 2026",
+      "limitations": "UK guidance; AMH still used for counselling about ovarian response in assisted conception",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

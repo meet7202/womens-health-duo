@@ -1,0 +1,20 @@
+{
+  "id": "W24-C",
+  "openClinicalQuestions": [],
+  "claimLedger": [
+    {
+      "claim": "Describes IVF stages (stimulation, collection, fertilisation, embryo culture, transfer) and that success depends strongly on age.",
+      "sourceUrl": "https://www.hfea.gov.uk/treatments/explore-all-treatments/in-vitro-fertilisation-ivf/",
+      "sourceSection": "HFEA · In vitro fertilisation (IVF)",
+      "limitations": "Overview cannot assign a cause to an unsuccessful cycle.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Most add-ons lack good evidence of improving live birth rates; some carry risks; patients should ask about evidence, risk and cost.",
+      "sourceUrl": "https://www.hfea.gov.uk/treatments/treatment-add-ons/",
+      "sourceSection": "HFEA · Treatment add-ons with evidence ratings",
+      "limitations": "UK regulator ratings; availability and pricing differ in India.",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

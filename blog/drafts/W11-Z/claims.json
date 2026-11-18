@@ -1,0 +1,23 @@
+{
+  "id": "W11-Z",
+  "openClinicalQuestions": [
+    "Dr. Charmi: preferred India-facing wording for pelvic pain with bleeding versus PGP-only mobility pain.",
+    "Dr. Zalak: which support-belt brands or tape methods (if any) she wants named on the live page."
+  ],
+  "claimLedger": [
+    {
+      "claim": "Defines PGP/SPD; not harmful to baby; lists aggravating tasks; midwife/GP contact if mobility hard; physio referral; coping tips including pillow between legs and knees together for car transfers; affects up to 1 in 5.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/common-symptoms/pelvic-pain/",
+      "sourceSection": "NHS · Pelvic pain in pregnancy · Page last reviewed: 12 December 2022",
+      "limitations": "UK public guidance; Indian maternity pathways and equipment access may differ.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "PGP affects 1 in 5; not harmful to baby; early physio; pacing and position advice; most can have vaginal birth; caesarean not normally for PGP; ~1 in 10 ongoing after birth; clot risk if mobility very limited.",
+      "sourceUrl": "https://www.rcog.org.uk/for-the-public/browse-our-patient-information/pelvic-girdle-pain-and-pregnancy/",
+      "sourceSection": "RCOG · Pelvic girdle pain and pregnancy · Published: June 2015",
+      "limitations": "Older patient leaflet; still widely cited—confirm local obstetric advice for induction/caesarean decisions.",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

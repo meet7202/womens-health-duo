@@ -1,0 +1,93 @@
+[
+  {
+    "id": "W09-C",
+    "slug": "folic-acid-before-pregnancy",
+    "title": "When Should I Start Folic Acid Before Pregnancy?",
+    "proposedLeadId": "charmi",
+    "indexable": false
+  },
+  {
+    "id": "W11-C",
+    "slug": "amh-test-fertility",
+    "title": "What Does My AMH Test Tell Me About Fertility?",
+    "proposedLeadId": "charmi",
+    "indexable": false
+  },
+  {
+    "id": "W13-C",
+    "slug": "positive-pregnancy-test-next-steps",
+    "title": "What Should I Do After a Positive Pregnancy Test?",
+    "proposedLeadId": "charmi",
+    "indexable": false
+  },
+  {
+    "id": "W14-C",
+    "slug": "endometriosis-symptoms-diagnosis",
+    "title": "Could My Period Pain Be Endometriosis?",
+    "proposedLeadId": "charmi",
+    "indexable": false
+  },
+  {
+    "id": "W16-C",
+    "slug": "pcos-insulin-resistance",
+    "title": "How Are PCOS and Insulin Resistance Connected?",
+    "proposedLeadId": "charmi",
+    "indexable": false
+  },
+  {
+    "id": "W17-C",
+    "slug": "late-period-negative-pregnancy-test",
+    "title": "Why Is My Period Late If My Pregnancy Test Is Negative?",
+    "proposedLeadId": "charmi",
+    "indexable": false
+  },
+  {
+    "id": "W18-C",
+    "slug": "iui-vs-ivf",
+    "title": "What Is the Difference Between IUI and IVF?",
+    "proposedLeadId": "charmi",
+    "indexable": false
+  },
+  {
+    "id": "W19-C",
+    "slug": "pregnancy-nausea-when-to-seek-care",
+    "title": "What Helps Pregnancy Nausea, and When Do I Need Care?",
+    "proposedLeadId": "charmi",
+    "indexable": false
+  },
+  {
+    "id": "W21-C",
+    "slug": "first-fertility-appointment-tests",
+    "title": "What Happens at the First Fertility Appointment?",
+    "proposedLeadId": "charmi",
+    "indexable": false
+  },
+  {
+    "id": "W23-C",
+    "slug": "bleeding-in-early-pregnancy",
+    "title": "When Does Bleeding in Early Pregnancy Need Urgent Help?",
+    "proposedLeadId": "charmi",
+    "indexable": false
+  },
+  {
+    "id": "W24-C",
+    "slug": "after-unsuccessful-ivf-cycle",
+    "title": "What Should I Ask After an Unsuccessful IVF Cycle?",
+    "proposedLeadId": "charmi",
+    "indexable": false
+  },
+  {
+    "id": "W25-C",
+    "slug": "perimenopause-symptoms",
+    "title": "Could My Symptoms Be Perimenopause?",
+    "proposedLeadId": "charmi",
+    "indexable": false
+  },
+  {
+    "id": "W26-C",
+    "slug": "menopause-hrt-questions",
+    "title": "Is HRT Right for Me? Questions to Discuss With a Doctor",
+    "proposedLeadId": "charmi",
+    "indexable": false
+  }
+]

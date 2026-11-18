@@ -1,0 +1,30 @@
+{
+  "id": "W14-C",
+  "openClinicalQuestions": [
+    "Should WHD name specific Ahmedabad/Mumbai imaging protocols for deep endometriosis suspicion?",
+    "When should pelvic-health physiotherapy be introduced as adjunct for muscle guarding on this page?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Suspect on suggestive symptoms; offer examination and transvaginal ultrasound; do not exclude if exam/ultrasound normal; consider laparoscopy even if imaging normal.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng73/chapter/Recommendations",
+      "sourceSection": "NICE · Endometriosis: diagnosis and management (NG73) Recommendations · Last updated 11 November 2024 (fetched 2026)",
+      "limitations": "UK guideline; local laparoscopy access and specialist centre criteria vary in India.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Diagnostic delay of 4–10 years can occur between first reporting symptoms and confirming diagnosis.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng73/chapter/Context",
+      "sourceSection": "NICE · Endometriosis: diagnosis and management (NG73) Context · Guideline context (fetched 2026)",
+      "limitations": "Context statement based on UK experience; Indian delay ranges may differ.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Lists period pain limiting activities, heavy bleeding, pelvic pain, pain with sex/pee/poo, fatigue; medicines and surgery as management categories; no cure stated.",
+      "sourceUrl": "https://www.nhs.uk/conditions/endometriosis/",
+      "sourceSection": "NHS · Endometriosis · not stated on fetched overview header",
+      "limitations": "UK patient page; referral pathways differ.",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

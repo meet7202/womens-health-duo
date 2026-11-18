@@ -1,0 +1,29 @@
+{
+  "id": "W17-Z",
+  "openClinicalQuestions": [
+    "Dr. Zalak: which entry-level cues (if any) she wants named on-site versus reserved for supervised sessions, given the guardrail against publishing specific exercises without contraindication review."
+  ],
+  "claimLedger": [
+    {
+      "claim": "Core = tummy, diaphragm, pelvic floor; avoid early sit-ups/crunches/plank; build walking and gentle core work; graded physio programme.",
+      "sourceUrl": "https://thepogp.co.uk/patient_information/womens_health/tummy_muscle_separation.aspx",
+      "sourceSection": "POGP · Tummy muscle separation (DRAM) in pregnancy · not stated",
+      "limitations": "UK leaflet; not a full exercise prescription",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Avoid sit-ups, planks and high-impact early; pelvic-floor and deep stomach exercises may help; seek GP if gap still obvious around 8 weeks.",
+      "sourceUrl": "https://www.nhs.uk/conditions/baby/support-and-services/your-post-pregnancy-body/",
+      "sourceSection": "NHS · Your post-pregnancy body · not stated on fetched page",
+      "limitations": "UK public advice; individual wounds/symptoms alter timing",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Start a little early and build slowly; strengthen abdominal and pelvic-floor muscles to help reduce leakage, heaviness and back/pelvic pain.",
+      "sourceUrl": "https://thepogp.co.uk/_userfiles/pages/files/resources/pogp_ea_after_pregnancy.pdf",
+      "sourceSection": "POGP · Exercise and Advice After Pregnancy · Publication date on catalogue page 29 Nov 2022",
+      "limitations": "Booklet exercises still need personal screening for wounds and pelvic-floor dysfunction",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

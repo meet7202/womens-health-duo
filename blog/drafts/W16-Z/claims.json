@@ -1,0 +1,44 @@
+{
+  "id": "W16-Z",
+  "openClinicalQuestions": [
+    "Dr. Charmi / Dr. Zalak: preferred India-facing wording for where to go for the routine postnatal medical review when NHS GP language does not map 1:1.",
+    "Confirm whether Tele-MANAS should be named on this recovery page or reserved for dedicated mental-health articles."
+  ],
+  "claimLedger": [
+    {
+      "claim": "Physical problems after birth may relate to pregnancy, birth or caregiving loads; ask GP/health visitor anytime; postnatal check ~6–8 weeks is a good time to raise issues.",
+      "sourceUrl": "https://www.nhs.uk/conditions/baby/support-and-services/your-post-pregnancy-body/",
+      "sourceSection": "NHS · Your post-pregnancy body · not stated on fetched page",
+      "limitations": "UK primary-care model",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Postnatal check 6–8 weeks after birth to confirm recovery; invite discussion of continence, perineal pain, mental health.",
+      "sourceUrl": "https://www.nhs.uk/conditions/baby/support-and-services/your-6-week-postnatal-check/",
+      "sourceSection": "NHS · Your 6-week postnatal check · Page last reviewed 9 October 2026",
+      "limitations": "UK pathway; local Indian timing may differ",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Baby blues usually within 2 weeks; seek help if low mood continues or you struggle; urgent help for thoughts of harm to self or baby.",
+      "sourceUrl": "https://www.nhs.uk/mental-health/conditions/post-natal-depression/overview/",
+      "sourceSection": "NHS · Postnatal depression · Page last reviewed 18 March 2026",
+      "limitations": "UK services listed; crisis pathways differ in India—use local emergency numbers",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Recovery takes time; strengthen abdominal and pelvic-floor muscles to help avoid leakage, heaviness and back/pelvic pain.",
+      "sourceUrl": "https://thepogp.co.uk/_userfiles/pages/files/resources/pogp_ea_after_pregnancy.pdf",
+      "sourceSection": "POGP · Exercise and Advice After Pregnancy · Publication date on catalogue page 29 Nov 2022",
+      "limitations": "UK booklet; exercise examples still need individual screening",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Hormonal ligament effects can last 6 months or more postnatally; return to exercise should be gradual.",
+      "sourceUrl": "https://thepogp.co.uk/patient_information/womens_health/advice_guidance_for_exercise_in_the_childbearing_years.aspx",
+      "sourceSection": "POGP · Advice & Guidance for Exercise in the Childbearing Years · not stated",
+      "limitations": "UK physiotherapy network advice",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

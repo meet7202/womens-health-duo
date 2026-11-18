@@ -1,0 +1,27 @@
+{
+  "id": "W06-Z",
+  "openClinicalQuestions": [],
+  "claimLedger": [
+    {
+      "claim": "Offer ≥3 months supervised PFMT first-line for stress or mixed UI; ≥8 contractions 3× daily; consider PFMT for some stage 1–2 prolapse.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng123/chapter/Recommendations",
+      "sourceSection": "NICE · NG123 Urinary incontinence and pelvic organ prolapse in women: management · recommendations include 2019 updates",
+      "limitations": "UK NICE pathway; access to supervised programmes varies",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Supervised PFMT should assess contraction and relaxation and tailor to discomfort/goals; offer ≥3 months for stress/mixed UI.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng210/chapter/Recommendations",
+      "sourceSection": "NICE · NG210 Pelvic floor dysfunction: prevention and non-surgical management · Published 9 December 2021",
+      "limitations": "UK guidance; prevention and non-surgical scope",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Do not practise stopping urine midstream as exercise.",
+      "sourceUrl": "https://www.nbt.nhs.uk/our-services/a-z-services/physiotherapy/physiotherapy-patient-information/pelvic-floor-exercises-women",
+      "sourceSection": "North Bristol NHS Trust · Pelvic floor exercises for women · not stated",
+      "limitations": "Local NHS Trust leaflet",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

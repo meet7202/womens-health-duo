@@ -1,0 +1,23 @@
+{
+  "id": "W01-Z",
+  "openClinicalQuestions": [
+    "How does Dr. Zalak typically schedule and document the 3-month supervised PFMT review in WHD practice (in-person vs hybrid)?",
+    "Which local urgent pathways should the site name for suspected cauda equina-type red flags in Ahmedabad/Bangalore?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Categorise UI as stress, mixed or urgency/OAB; offer supervised PFMT of at least 3 months as first-line for stress or mixed UI; confirm contraction digitally before supervised PFMT; continue exercises if beneficial; offer ≥6 weeks bladder training for urgency/mixed.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng123/chapter/Recommendations",
+      "sourceSection": "NICE · NG123 Urinary incontinence and pelvic organ prolapse in women: management — Recommendations · not stated on Recommendations chapter fetch (NG123)",
+      "limitations": "UK NICE pathway; Indian service structure and referral routes may differ.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Defines stress vs urge incontinence and notes mixed incontinence is possible; pelvic floor exercises and bladder training are among initial non-surgical options.",
+      "sourceUrl": "https://www.nhs.uk/conditions/urinary-incontinence/",
+      "sourceSection": "NHS · Urinary incontinence — Overview · Page last reviewed: 15 June 2023",
+      "limitations": "UK public advice; does not replace local examination or specialist pathways in India.",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

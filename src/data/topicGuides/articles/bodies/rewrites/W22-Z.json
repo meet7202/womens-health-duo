@@ -1,0 +1,88 @@
+{
+  "id": "W22-Z",
+  "title": "How can breathing techniques support comfort during labour?",
+  "seoTitle": "Breathing for labour comfort and preparation",
+  "description": "NHS labour advice includes calm, deep breathing as self-help. It can support focus alongside movement and medical pain relief—not replace them.",
+  "primaryQuestion": "Do breathing exercises help during labour?",
+  "directAnswer": "Calm, steady breathing is one of the self-help tools UK NHS labour pages recommend so you feel more able to relax and cope with contractions. It may steady focus and reduce unused muscle tension. It does not promise a pain-free labour, a shorter labour, or a birth without other pain relief. Keep an open mind: NHS guidance notes you may want more pain relief than you planned, or staff may suggest stronger options to help the birth.",
+  "sections": [
+    {
+      "heading": "What breathing practice can prepare you for",
+      "paragraphs": [
+        "NHS pain-relief information says you are likely to feel more relaxed in labour and better placed to cope if you learn about labour, learn how to relax, stay calm and breathe deeply, and keep moving in positions that help. Antenatal classes and conversations with your midwife or doctor are the usual places to rehearse those skills before the day.",
+        "Practice is about familiarity under mild stress—for example slowing the exhale while walking or during a Braxton Hicks tighten—not about memorising one perfect pattern you must perform. If a pattern increases panic or light-headedness, simplify to an easy in-breath through the nose and a longer out-breath through the mouth while you change position.",
+        "Dr. Zalak Shah (PT) may include breathing and pacing drills within prenatal physiotherapy or antenatal movement sessions as comfort preparation. That coaching does not replace midwifery labour care or anaesthesia decisions."
+      ]
+    },
+    {
+      "heading": "How a birth partner can support practice",
+      "paragraphs": [
+        "NHS advice highlights that whoever will be with you should know the pain-relief options and how they can support you. A partner or support person can cue a slower breath, offer a drink, help you change position, or call the midwife—without policing whether you are “doing breathing correctly”.",
+        "Agree beforehand that you may reject touch or coaching mid-contraction. NHS self-help notes that massage can help, yet you may find you do not want to be touched. Permission to change your mind is part of useful support.",
+        "Write preferred comfort strategies in your birth plan while accepting they may shift in labour."
+      ]
+    },
+    {
+      "heading": "Breathing beside other pain-relief choices",
+      "paragraphs": [
+        "Breathing sits alongside movement, water, TENS in early labour where available, gas and air, injected opioids, remifentanil and epidural anaesthesia—NHS pages describe these as a menu, not a ladder you must climb only after “failing” at breathing. For gas and air, NHS advice is to take slow, deep breaths timed as a contraction begins; that is technique for using a medicine, not proof that breath alone removes pain.",
+        "Choosing an epidural or other medicine is not a failure of preparation. NHS guidance is explicit that plans should stay flexible and that staff may suggest more effective relief to help the delivery."
+      ]
+    },
+    {
+      "heading": "What antenatal classes usually rehearse",
+      "paragraphs": [
+        "Classes typically combine information about labour stages with simple breathing, positioning and partner cues you can try while you are still pregnant. Ask whether the session is education-only or includes supervised movement, and whether pelvic pain adaptations are available if stairs or parting the legs already hurt.",
+        "Prenatal physiotherapy can link breathing to comfortable positions if pelvic girdle pain is already limiting how you move—see our pelvic-pain guide—while maternity classes cover the wider birth-unit pathway."
+      ]
+    },
+    {
+      "heading": "Claims and expectations to leave aside",
+      "paragraphs": [
+        "Be wary of marketing that says a branded breathing method prevents caesarean birth, delivers a calm labour every time, or makes medicine unnecessary. NHS wording treats breathing as one comfort strategy among several, and states that most alternative techniques such as hypnosis or aromatherapy are not proven to provide effective pain relief.",
+        "If labour pain comes with heavy bleeding, a sudden severe headache, marked breathing difficulty or collapse, that is an emergency for clinical staff—not a cue to breathe through a medical crisis. After birth, ongoing pelvic pain or leakage can be reviewed in postnatal physiotherapy once maternity follow-up is underway."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Should I practise only one breathing pattern?",
+      "answer": "No. NHS advice emphasises calm, deep breathing and staying flexible about pain relief. Having two or three simple options—and permission to abandon them—usually works better than one rigid script."
+    },
+    {
+      "question": "Can breathing replace an epidural?",
+      "answer": "No. Breathing may help you cope and stay calmer; an epidural is a medical anaesthetic option when you want stronger pain relief. NHS guidance encourages keeping an open mind about using more relief than you first planned."
+    }
+  ],
+  "references": [
+    {
+      "label": "NHS — Pain relief in labour",
+      "url": "https://www.nhs.uk/pregnancy/labour-and-birth/pain-relief-in-labour/"
+    }
+  ],
+  "conversionCopy": "If you want to rehearse labour comfort strategies such as breathing and positioning during pregnancy, you can discuss prenatal preparation with Dr. Zalak Shah (PT).",
+  "explainerAlt": "Antenatal breathing practice for labour comfort shown as preparation, not a pain-free promise",
+  "storytellingNote": "",
+  "review": {
+    "corrections": [
+      "New rewrite framed breathing as NHS self-help comfort only; explicitly rejected pain-free/shorter-labour promises.",
+      "Verified calm deep breathing, partner support, open-mind pain-relief wording and gas-and-air slow deep breaths from NHS pain-relief page.",
+      "Removed illustrative ‘perfect performance’ anecdote; no drug doses."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "NHS",
+        "title": "Pain relief in labour",
+        "url": "https://www.nhs.uk/pregnancy/labour-and-birth/pain-relief-in-labour/",
+        "date": "Page last reviewed: 13 March 2023",
+        "recommendation": "Learn to relax, stay calm and breathe deeply; keep moving; partner support; keep open mind as you may want more pain relief; gas and air best with slow deep breaths; alternative methods mostly unproven.",
+        "passage": "learn how to relax, stay calm and breathe deeply",
+        "limitations": "UK labour-ward options (Entonox, pethidine, remifentanil) differ from some Indian hospital formularies—categories matter more than brand names here."
+      }
+    ],
+    "openQuestions": [
+      "Dr. Charmi: any India-specific labour pain-relief menu wording to add in a later medical review.",
+      "Dr. Zalak: which breathing cues she uses in WHD antenatal sessions that should be named on-page."
+    ]
+  }
+}

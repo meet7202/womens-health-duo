@@ -1,0 +1,323 @@
+{
+  "note": "Google Images click hooks for watermarked SVG explainers. Exactly 4 short QUESTION lines per article—curiosity hooks, not answer spoilers. Each question must be answered in the matching article body (section or FAQ). Keep each line ≤40 characters so SVG cards do not truncate.",
+  "articles": {
+    "W01-C": [
+      "What counts as an irregular period?",
+      "Can stress alone change my cycle?",
+      "What should I track before a visit?",
+      "When does bleeding need urgent care?"
+    ],
+    "W01-Z": [
+      "Why do I leak when I cough?",
+      "Is this different from sudden urge?",
+      "What can conservative care include?",
+      "When do leaks need medical help?"
+    ],
+    "W02-C": [
+      "What is PCOS—and what is PMOS?",
+      "How is PCOS diagnosed in adults?",
+      "Are teens assessed differently?",
+      "Can AMH diagnose PCOS alone?"
+    ],
+    "W02-Z": [
+      "Is exercise safe in pregnancy?",
+      "How hard should workouts feel?",
+      "Which activities should I avoid?",
+      "When should I stop and call?"
+    ],
+    "W03-C": [
+      "What does a preconception review cover?",
+      "Do I need folic acid before trying?",
+      "What can I skip by default?",
+      "Should my partner join the visit?"
+    ],
+    "W03-Z": [
+      "What exercise can start soon after birth?",
+      "Does a 6-week check mean I can run?",
+      "How does birth type change the pace?",
+      "When should I pause or seek care?"
+    ],
+    "W04-C": [
+      "Can I predict ovulation—or only confirm?",
+      "Which tracking method fits irregular cycles?",
+      "Do LH kits prove I ovulated?",
+      "When is tracking not enough?"
+    ],
+    "W04-Z": [
+      "What is diastasis recti, really?",
+      "Does a wider gap mean worse function?",
+      "What will a physiotherapist assess?",
+      "When does a bulge need urgent care?"
+    ],
+    "W05-C": [
+      "Can I have PCOS with regular periods?",
+      "Which skin or hair clues matter?",
+      "Does ultrasound alone diagnose PCOS?",
+      "When is assessment worth booking?"
+    ],
+    "W05-Z": [
+      "What does STOTT Pilates mean?",
+      "How do Mat and Reformer differ?",
+      "What happens in a first session?",
+      "Is a class the same as physiotherapy?"
+    ],
+    "W06-C": [
+      "How much period pain is too much?",
+      "Primary or secondary period pain?",
+      "Can endometriosis hide on a scan?",
+      "When does pelvic pain need urgent care?"
+    ],
+    "W06-Z": [
+      "Are Kegels right for everyone?",
+      "Why does relaxation matter too?",
+      "What if squeezing hurts?",
+      "Should I stop urine mid-stream?"
+    ],
+    "W07-C": [
+      "Can I get pregnant with PCOS?",
+      "What usually gets in the way?",
+      "Should my partner be tested too?",
+      "When should I not wait a full year?"
+    ],
+    "W07-Z": [
+      "What helps pregnancy backache?",
+      "What can physiotherapy add?",
+      "Should I stop all activity?",
+      "Which red flags need prompt care?"
+    ],
+    "W08-C": [
+      "How long should I try if under 35?",
+      "What if I am 35 or older?",
+      "Do irregular cycles change the wait?",
+      "Does a first visit mean starting IVF?"
+    ],
+    "W08-Z": [
+      "What can start early after a C-section?",
+      "When does graded rehab usually begin?",
+      "When is scar massage appropriate?",
+      "Which wound signs need urgent care?"
+    ],
+    "W09-C": [
+      "When should I start folic acid?",
+      "What dose is usually discussed?",
+      "Who may need a higher dose?",
+      "What if I am already pregnant?"
+    ],
+    "W09-Z": [
+      "What can a diastasis self-check show?",
+      "Can finger-width prove severity?",
+      "When should I stop a home check?",
+      "When does a lump need urgent care?"
+    ],
+    "W10-C": [
+      "When are heavy periods a concern?",
+      "Do clots always mean something is wrong?",
+      "What history and tests may be needed?",
+      "Will I always need a scan?"
+    ],
+    "W10-Z": [
+      "What does the pelvic floor actually do?",
+      "Is it only important after childbirth?",
+      "Can symptoms mean more than weakness?",
+      "When do symptoms need assessment?"
+    ],
+    "W11-C": [
+      "What does an AMH test actually measure?",
+      "Does low AMH mean poor egg quality?",
+      "Does high AMH mean I am more fertile?",
+      "Should low AMH alone push me to IVF?"
+    ],
+    "W11-Z": [
+      "Is pelvic girdle pain the same as backache?",
+      "What daily changes can help?",
+      "Will PGP harm the baby?",
+      "When does pain need urgent review?"
+    ],
+    "W12-C": [
+      "Can lifestyle changes cure PCOS?",
+      "Is there one PCOS diet to follow?",
+      "What day-to-day habits are worth trying?",
+      "When is medical follow-up still needed?"
+    ],
+    "W12-Z": [
+      "Why am I leaking after childbirth?",
+      "Can caesarean births cause leaks too?",
+      "Who can help—and what should I note?",
+      "Must I wait for my 6-week check?"
+    ],
+    "W13-C": [
+      "What should I do after a positive test?",
+      "Do I need to retest before calling?",
+      "What if the pregnancy was unplanned?",
+      "Which symptoms need urgent help?"
+    ],
+    "W13-Z": [
+      "Can diastasis improve on its own?",
+      "Does a smaller gap mean full recovery?",
+      "What can physiotherapy add?",
+      "Is it too late months or years later?"
+    ],
+    "W14-C": [
+      "Could my period pain be endometriosis?",
+      "Can endometriosis hide on scans?",
+      "How is suspected endo assessed?",
+      "Does diagnosis always need surgery?"
+    ],
+    "W14-Z": [
+      "Does leaking mean a weak pelvic floor?",
+      "Which symptoms deserve a physio review?",
+      "What does assessment actually check?",
+      "Can a home finger test diagnose me?"
+    ],
+    "W15-C": [
+      "What are the stages of an IVF cycle?",
+      "Does every cycle end with a transfer?",
+      "Is ICSI the same as IVF?",
+      "What should I ask before I commit?"
+    ],
+    "W15-Z": [
+      "Do workouts change each trimester?",
+      "How hard should pregnancy exercise feel?",
+      "When should I stop lying flat?",
+      "Which symptoms change the plan?"
+    ],
+    "W16-C": [
+      "How are PCOS and insulin linked?",
+      "Can lean people still be affected?",
+      "Do dark skin folds prove insulin resistance?",
+      "What should I discuss at assessment?"
+    ],
+    "W16-Z": [
+      "How long does postpartum recovery take?",
+      "Does feeling better at 6 weeks mean done?",
+      "Which areas of recovery should I track?",
+      "When is earlier help needed?"
+    ],
+    "W17-C": [
+      "Late period, negative test—what next?",
+      "Can I still be pregnant?",
+      "When should I retest or see a clinician?",
+      "What else can delay a period?"
+    ],
+    "W17-Z": [
+      "How do I rebuild core after pregnancy?",
+      "Should I start with sit-ups?",
+      "Can function improve with a remaining gap?",
+      "Which symptoms change the plan?"
+    ],
+    "W18-C": [
+      "How do IUI and IVF each work?",
+      "How do monitoring and burden differ?",
+      "Is IUI always tried before IVF?",
+      "What should I ask before choosing?"
+    ],
+    "W18-Z": [
+      "Can physio help bladder leakage?",
+      "Does the leakage type change the plan?",
+      "What does supervised care include?",
+      "When does surgery enter the conversation?"
+    ],
+    "W19-C": [
+      "Is pregnancy nausea only in the morning?",
+      "What self-care steps are often tried first?",
+      "When does nausea need assessment?",
+      "Which signs are more urgent?"
+    ],
+    "W19-Z": [
+      "What is prenatal physiotherapy for?",
+      "How is it different from a fitness class?",
+      "Do I need pain before I book?",
+      "When does obstetric care come first?"
+    ],
+    "W20-C": [
+      "How do PMS and PMDD differ?",
+      "Why does a symptom diary matter?",
+      "How long should I track before a visit?",
+      "When is crisis support the priority?"
+    ],
+    "W20-Z": [
+      "Why does my back hurt after pregnancy?",
+      "Can feeding and carrying make it worse?",
+      "Did my epidural cause the pain?",
+      "When should I get help?"
+    ],
+    "W21-C": [
+      "What happens at the first fertility visit?",
+      "Must both partners attend day one?",
+      "Will every test happen on the first day?",
+      "Which records make the hour useful?"
+    ],
+    "W21-Z": [
+      "What makes a prenatal Pilates class appropriate?",
+      "Can I stay in my usual Pilates class?",
+      "Which positions often need changing?",
+      "When should I stop and get checked?"
+    ],
+    "W22-C": [
+      "What do people mean by egg quality?",
+      "Does low AMH mean poor-quality eggs?",
+      "Can supplements make eggs younger?",
+      "Which habits help—and what are the limits?"
+    ],
+    "W22-Z": [
+      "What can breathing prepare me for in labour?",
+      "How can a birth partner help?",
+      "How does breathing fit with pain relief?",
+      "Can breathing replace an epidural?"
+    ],
+    "W23-C": [
+      "Which early bleeding needs emergency care?",
+      "Does spotting always mean miscarriage?",
+      "When should I call the same day?",
+      "What might assessment involve?"
+    ],
+    "W23-Z": [
+      "Can pelvic floor physio help painful sex?",
+      "Is painful sex always a tight floor?",
+      "What might physiotherapy involve?",
+      "Do I have to accept an internal exam?"
+    ],
+    "W24-C": [
+      "Does one failed IVF cycle mean IVF never works?",
+      "Which records should I request next?",
+      "How long before another cycle?",
+      "What should I ask about add-ons?"
+    ],
+    "W24-Z": [
+      "When can I start Pilates after pregnancy?",
+      "Is 4 weeks a safe start for everyone?",
+      "How can a class be adapted?",
+      "Can I jump back to advanced Reformer?"
+    ],
+    "W25-C": [
+      "Could my symptoms be perimenopause?",
+      "How is it different from menopause?",
+      "Do I need a hormone blood test?",
+      "Can I still get pregnant?"
+    ],
+    "W25-Z": [
+      "What can a vaginal bulge or heaviness mean?",
+      "Can I stage prolapse from a home check?",
+      "What care options might be discussed?",
+      "Where can pelvic physio fit?"
+    ],
+    "W26-C": [
+      "What is HRT trying to treat?",
+      "Which option categories exist?",
+      "Do patches avoid tablet clot risk?",
+      "Is vaginal oestrogen the same as HRT?"
+    ],
+    "W26-Z": [
+      "What should I prepare before I arrive?",
+      "Will I have an internal exam on visit one?",
+      "What consent and chaperone choices exist?",
+      "Online visit or in-person—what's different?"
+    ]
+  },
+  "approval": {
+    "imageApproval": "approved",
+    "approvedOn": "2026-11-19",
+    "reviewers": ["zalak", "charmi"],
+    "note": "Owner confirmed on 19 Nov 2026 that Dr. Zalak Shah and Dr. Charmi Shah approved these question-style explainer cards and the matching SVG explainers."
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "W05-C",
+  "openClinicalQuestions": [
+    "What local threshold should prompt same-week vs routine review for suspected virilisation?",
+    "Should dermatology co-management pathways be named on this page for Ahmedabad/Mumbai?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Adults need two of three features; if only irregular cycles or only hyperandrogenism is present, ultrasound or AMH can supply the third feature—so regular cycles do not exclude diagnosis when other criteria are met.",
+      "sourceUrl": "https://www.mja.com.au/journal/2024/221/7/summary-2023-international-evidence-based-guideline-assessment-and-management",
+      "sourceSection": "Medical Journal of Australia · Summary of the 2023 international evidence-based guideline for the assessment and management of polycystic ovary syndrome · Published online 23 September 2024",
+      "limitations": "Summary article; full algorithms on Monash guideline site.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Use renamed PMOS alongside discoverable PCOS wording.",
+      "sourceUrl": "https://www.asrm.org/news-and-events/asrm-news/latest-news/may-27-2026-pcos-is-now-pmos-understanding-the-name-change/",
+      "sourceSection": "ASRM · PCOS is Now PMOS: Understanding the Name Change · 27 May 2026",
+      "limitations": "Terminology transition; patient records may still say PCOS.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Confirms PMOS as new name for PCOS and points to 2023 international guideline documents.",
+      "sourceUrl": "https://www.monash.edu/medicine/mchri/pcos/guideline",
+      "sourceSection": "Monash MCHRI · International evidence-based guideline hub (PCOS/PMOS) · Hub notes PMOS rename 12 May 2026",
+      "limitations": "Hub page; detailed criteria taken from guideline summary/PDF.",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

@@ -16,6 +16,7 @@ import { ROUTES } from "@/config/routes";
 import { SITE_URL } from "@/config/site";
 import { WHATSAPP_COMMUNITY_INVITE_URL } from "@/config/whatsappCommunity";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
+import { ContentAuthors } from "@/components/seo/ContentAuthors";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { COMMUNITY_DOCUMENT_TITLE, COMMUNITY_H1 } from "@/lib/pageSeoCopy";
@@ -283,6 +284,7 @@ export function FreeWomensHealthCommunityPage() {
       </div>
 
       <div className="max-w-3xl mt-12">
+        <ContentAuthors />
         <DirectoryPresence />
       </div>
     </PageShell>

@@ -1,0 +1,29 @@
+{
+  "id": "W09-C",
+  "openClinicalQuestions": [
+    "Which higher-dose (5 mg) folic acid indications does Dr. Charmi want listed for Indian readers beyond WHO’s previous NTD-affected pregnancy criterion—e.g. diabetes, haemoglobinopathies, epilepsy or HIV medicines as on the NHS UK list?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "400 micrograms daily ideally 3 months before pregnancy or as soon as pregnant, until 12 weeks; difficult to get enough from food alone; prescribed 5 mg for listed UK risk groups",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/keeping-well/pregnancy-vitamins-and-supplements/",
+      "sourceSection": "NHS · Pregnancy vitamins and supplements · Media last reviewed: 2 February 2026",
+      "limitations": "UK higher-dose indication list; Indian clinicians may apply a different risk set",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "400 mcg folic acid daily preconception through first trimester",
+      "sourceUrl": "https://nhm.gov.in/index1.php?lang=1&level=3&lid=797&sublinkid=1448",
+      "sourceSection": "India National Health Mission · Anaemia Mukt Bharat · not stated; confirmed in operational guidelines PDF",
+      "limitations": "Public-health tablet programme; does not itself list every 5 mg indication",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "400 μg from trying until 12 weeks; offer 5 mg after previous NTD-affected pregnancy",
+      "sourceUrl": "https://www.who.int/tools/elena/interventions/folate-periconceptional",
+      "sourceSection": "WHO · Periconceptional folic acid supplementation to prevent neural tube defects (eLENA) · last updated 9 Aug 2023 (parent-verified; live fetch timed out — search extract matched)",
+      "limitations": "WHO high-dose wording centres on prior NTD pregnancy; other risk groups are jurisdiction-specific",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

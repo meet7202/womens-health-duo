@@ -1,0 +1,30 @@
+{
+  "id": "W23-Z",
+  "openClinicalQuestions": [
+    "Which lubricant or topical categories may WHD mention without naming doses or brands?",
+    "When does Dr. Zalak co-manage with sexual counselling services versus medical referral alone?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Defines vulvodynia/vestibulodynia, vaginismus and dyspareunia; lists medical and psychosocial contributors; physiotherapy addresses soft-tissue sensitivity and muscle behaviour; relaxation recognition important.",
+      "sourceUrl": "https://dynamichealth.nhs.uk/help-and-advice/pelvic-health/female-genital-pain/",
+      "sourceSection": "NHS Dynamic Health · Female genital pain · not stated",
+      "limitations": "UK MSK advice page; local anaesthetic ointment dose mentioned on source was not copied into WHD prose.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Internal exam only with consent; may refuse and still have treatment; chaperone available.",
+      "sourceUrl": "https://www.uhsussex.nhs.uk/resources/your-pelvic-health-physiotherapy-appointment/",
+      "sourceSection": "University Hospitals Sussex NHS Foundation Trust · Your pelvic health physiotherapy appointment · Page last reviewed: 6 Oct 2026",
+      "limitations": "Local NHS leaflet; WHD must use its own consent workflow.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Right to decline vaginal/rectal examination; chaperone or companion allowed; treatment may still be offered.",
+      "sourceUrl": "https://thepogp.co.uk/patients/pelvic_health_advice/physiotherapy_assessment.aspx",
+      "sourceSection": "POGP · Physiotherapy Assessment · not stated",
+      "limitations": "UK professional body wording.",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

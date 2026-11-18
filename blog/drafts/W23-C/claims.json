@@ -1,0 +1,13 @@
+{
+  "id": "W23-C",
+  "openClinicalQuestions": [],
+  "claimLedger": [
+    {
+      "claim": "Bleeding can be common in early pregnancy but should be checked; seek emergency care for heavy bleeding, severe pain, shoulder-tip pain, dizziness or fainting; otherwise contact midwife, GP or early pregnancy unit.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/common-symptoms/vaginal-bleeding/",
+      "sourceSection": "NHS · Vaginal bleeding in pregnancy",
+      "limitations": "UK service routes are not used. Cause, urgency and any treatment cannot be decided from this page.",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}

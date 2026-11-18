@@ -1,0 +1,37 @@
+{
+  "id": "W04-C",
+  "openClinicalQuestions": [
+    "Does Dr. Charmi want follicle-tracking ultrasound described as commonly available in her Indian clinics, or kept as ‘when arranged’ only?",
+    "Any preferred home LH-kit brand disclaimers beyond PCOS/PMOS false-positive caution?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Mid-luteal progesterone day 21 of 28-day cycle; later and weekly repeats in prolonged irregular cycles; do not use BBT charts to confirm ovulation",
+      "sourceUrl": "https://www.nice.org.uk/guidance/NG257/chapter/investigation-of-fertility-problems-and-management-strategies",
+      "sourceSection": "NICE · Fertility problems: assessment and treatment (NG257) — investigation chapter · Published 31 March 2026 (recommendations tagged [2004]/CG156 lineage)",
+      "limitations": "UK NICE pathway; CG156 page now redirects to NG257—same progesterone recommendations retained",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Regular unprotected sex every 2 or 3 days; most under-40 couples conceive within a year",
+      "sourceUrl": "https://www.nhs.uk/conditions/infertility/",
+      "sourceSection": "NHS · Infertility — Overview · Page last reviewed: 09 August 2023",
+      "limitations": "UK population figures; individual history can shorten the wait before assessment",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Temperature rises after ovulation; fertile mucus becomes clearer and slippery; apps not completely reliable; PCOS can change fertility signs",
+      "sourceUrl": "https://www.nhsinform.scot/healthy-living/contraception/natural-family-planning-fertility-awareness",
+      "sourceSection": "NHS Inform · Natural family planning (fertility awareness) · Last updated: 26 March 2026",
+      "limitations": "Written mainly for contraception/fertility awareness; still useful for describing mucus and BBT physiology",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Ovulation usually about 14 days before next period depending on cycle length",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/trying-for-a-baby/planning-your-pregnancy/",
+      "sourceSection": "NHS · Trying to get pregnant · fetched session date; media review not shown",
+      "limitations": "UK plain-language overview",
+      "reviewerDecision": "accepted"
+    }
+  ]
+}
