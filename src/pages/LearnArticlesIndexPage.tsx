@@ -4,6 +4,7 @@ import { AppLink as Link } from "@/components/router/AppLink";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { PageShell } from "@/components/layout/PageShell";
+import { ContentAuthors } from "@/components/seo/ContentAuthors";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { ROUTES } from "@/config/routes";
@@ -113,6 +114,7 @@ export function LearnArticlesIndexPage() {
           .
         </p>
 
+        <ContentAuthors />
         <DirectoryPresence />
       </article>
     </PageShell>

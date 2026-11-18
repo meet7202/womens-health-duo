@@ -5,7 +5,7 @@ import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { JsonLdFaq } from "@/components/seo/JsonLdFaq";
 import { PageShell } from "@/components/layout/PageShell";
 import { FaqSection } from "@/components/sections/FaqSection";
-import { DoctorNameList } from "@/components/seo/ContentAuthors";
+import { ContentAuthors, DoctorNameList } from "@/components/seo/ContentAuthors";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { ROUTES } from "@/config/routes";
 import { SITE_URL } from "@/config/site";
@@ -20,6 +20,7 @@ import {
   topicGuideLearnLinks,
 } from "@/data/topicGuides/topicGuideRegistry";
 import type { TopicGuideFigure } from "@/data/topicGuides/types";
+import { INLINE_LINK_BUDGET, linkInlineTerms } from "@/lib/inlineGuideLinks";
 import { topicGuideDocumentTitle } from "@/lib/pageSeoCopy";
 import NotFound from "@/pages/NotFound";
 
@@ -125,7 +126,7 @@ export function TopicGuidePage() {
       breadcrumbListSchema(crumbs),
       webPageSchema({
         path: guide.path,
-        name: topicGuideDocumentTitle(guide.title),
+        name: topicGuideDocumentTitle(guide.seoTitle ?? guide.title),
         description: guide.metaDescription,
       }),
     ];
@@ -134,6 +135,7 @@ export function TopicGuidePage() {
       const imageUrls = (guide.figures ?? [])
         .filter((f) => !f.src.endsWith(".svg"))
         .map((f) => githubPagesAbsoluteUrl(SITE_URL, f.src));
+      const approved = guide.reviewStatus === "approved";
       nodes.push(
         articleSchema({
           path: guide.path,
@@ -141,8 +143,8 @@ export function TopicGuidePage() {
           description: guide.metaDescription,
           datePublished: guide.publishedAt,
           dateModified: guide.updatedAt ?? guide.publishedAt,
-          authorId: guide.reviewStatus === "approved" ? guide.authorId : undefined,
-          reviewerIds: guide.reviewStatus === "approved" ? guide.reviewerIds : undefined,
+          authorId: approved ? guide.authorId : undefined,
+          reviewerIds: approved ? guide.reviewerIds : undefined,
           imageUrls,
         }),
       );
@@ -160,6 +162,20 @@ export function TopicGuidePage() {
     [guide],
   );
 
+  const linkedCopy = useMemo(() => {
+    if (!guide) return null;
+    const usedSlugs = new Set<string>();
+    const budget = { left: INLINE_LINK_BUDGET };
+    return {
+      intro: linkInlineTerms(guide.introParagraph, guide.slug, usedSlugs, budget),
+      sections: guide.sections.map((sec) =>
+        sec.paragraphs.map((paragraph) =>
+          linkInlineTerms(paragraph, guide.slug, usedSlugs, budget),
+        ),
+      ),
+    };
+  }, [guide]);
+
   const relatedGuides = useMemo(() => {
     if (!guide) return [];
     return guide.relatedSlugs
@@ -173,7 +189,7 @@ export function TopicGuidePage() {
 
   const [heroFigure, ...inlineFigures] = guide.figures ?? [];
   const inlineFigureBySection = placeInlineFigures(inlineFigures, guide.sections.length);
-  const docTitle = topicGuideDocumentTitle(guide.title);
+  const docTitle = topicGuideDocumentTitle(guide.seoTitle ?? guide.title);
   const faqHeadingBase = guide.title.endsWith("?") ? guide.title.slice(0, -1) : guide.title;
   // SEO-14: show byline/review only for approved guides with real attribution fields.
   const showEditorialByline =
@@ -188,7 +204,9 @@ export function TopicGuidePage() {
     <PageShell breadcrumbs={crumbs}>
       <SeoHead title={docTitle} metaDescription={guide.metaDescription} path={guide.path} />
       <JsonLdGraph graph={graph} />
-      <JsonLdFaq items={guide.faqs} pageUrl={githubPagesAbsoluteUrl(SITE_URL, guide.path)} />
+      {guide.faqs.length > 0 ? (
+        <JsonLdFaq items={guide.faqs} pageUrl={githubPagesAbsoluteUrl(SITE_URL, guide.path)} />
+      ) : null}
 
       <article>
         <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground mb-4 text-balance">
@@ -222,7 +240,7 @@ export function TopicGuidePage() {
             Published {publishedLabel}.
           </p>
         ) : null}
-        <p className="text-lg text-muted-foreground leading-relaxed mb-8">{guide.introParagraph}</p>
+        <p className="text-lg text-muted-foreground leading-relaxed mb-8">{linkedCopy?.intro}</p>
 
         {heroFigure ? <GuideFigure figure={heroFigure} priority className="mb-10" /> : null}
 
@@ -236,9 +254,9 @@ export function TopicGuidePage() {
                 <h2 className="font-heading text-xl font-semibold text-foreground mb-3">
                   {sec.heading}
                 </h2>
-                {sec.paragraphs.map((p, idx) => (
+                {(linkedCopy?.sections[secIdx] ?? sec.paragraphs).map((paragraph, idx) => (
                   <p key={idx} className="text-muted-foreground leading-relaxed mb-3 last:mb-0">
-                    {p}
+                    {paragraph}
                   </p>
                 ))}
               </section>
@@ -313,13 +331,15 @@ export function TopicGuidePage() {
           </p>
         ) : null}
 
-        <FaqSection
-          items={guide.faqs}
-          sectionId="topic-guide-faq"
-          headingLabel="FAQ"
-          headingTitle={`Questions about ${faqHeadingBase}`}
-          headingIntro="These answers are for general orientation only. Your own care plan belongs in a visit with your doctor, especially if you are pregnant, bleeding heavily, or in severe pain."
-        />
+        {guide.faqs.length > 0 ? (
+          <FaqSection
+            items={guide.faqs}
+            sectionId="topic-guide-faq"
+            headingLabel="FAQ"
+            headingTitle={`Questions about ${faqHeadingBase}`}
+            headingIntro="These answers are for general orientation only. Your own care plan belongs in a visit with your doctor, especially if you are pregnant, bleeding heavily, or in severe pain."
+          />
+        ) : null}
 
         <section className="mt-14 mb-12 rounded-2xl border border-primary/25 bg-primary/5 p-6 sm:p-8">
           <h2 className="font-heading text-xl font-semibold text-foreground mb-3">
@@ -361,8 +381,16 @@ export function TopicGuidePage() {
         <section className="mb-12 rounded-2xl border border-border/50 bg-card p-6 sm:p-8 shadow-soft">
           <h2 className="font-heading text-xl font-semibold text-foreground mb-3">Book a visit</h2>
           <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-            You can start from either doctor, or message us with a short summary and we will point
-            you to the right first call.
+            For more about your own situation,{" "}
+            <Link
+              to={ROUTES.bookConsultation}
+              className="text-primary font-medium underline underline-offset-4"
+            >
+              book a consultation
+            </Link>{" "}
+            with Dr. Zalak Shah (PT) for physiotherapy, pelvic health or movement, or with Dr.
+            Charmi Shah for obstetrics, gynaecology, fertility or laparoscopy, when you need
+            individual advice.
           </p>
           <ul className="space-y-2 text-sm mb-5">
             <li>
@@ -466,6 +494,11 @@ export function TopicGuidePage() {
           .
         </p>
 
+        <ContentAuthors
+          leadId={guide.primaryConsult === "both" ? undefined : guide.primaryConsult}
+          reviewerIds={showEditorialByline ? guide.reviewerIds : undefined}
+          reviewedLabel={showEditorialByline ? reviewedLabel : undefined}
+        />
         <DirectoryPresence />
       </article>
     </PageShell>

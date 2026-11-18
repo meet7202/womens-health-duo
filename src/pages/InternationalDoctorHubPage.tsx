@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { PageShell } from "@/components/layout/PageShell";
+import { ContentAuthors } from "@/components/seo/ContentAuthors";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { ROUTES } from "@/config/routes";
 import { DOCTOR_BY_SLUG } from "@/data/doctorProfiles";
@@ -96,6 +97,7 @@ export function InternationalDoctorHubPage() {
         </p>
 
         <div className="mt-10">
+          <ContentAuthors />
           <DirectoryPresence />
         </div>
       </article>

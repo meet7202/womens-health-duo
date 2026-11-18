@@ -385,7 +385,8 @@ function buildGuideModel(row: TopicGuideRow): TopicGuidePageModel {
     metaBlurb: cc.metaBlurb,
     faqPool: cc.faqPool,
   });
-  const faqs = buildTopicGuideFaqs(row.slug, title, consult, cc.faqPool, row.faqIds);
+  const faqs =
+    published?.faqs ?? buildTopicGuideFaqs(row.slug, title, consult, cc.faqPool, row.faqIds);
   const path = publicPathname(`/${row.slug}`);
   const relatedSlugs = computeRelated(row, BY_CLUSTER);
   const reviewerIds = published?.reviewerIds?.length ? published.reviewerIds : undefined;
@@ -409,6 +410,7 @@ function buildGuideModel(row: TopicGuideRow): TopicGuidePageModel {
     tier: row.tier,
     cluster: row.cluster,
     title,
+    seoTitle: published?.seoTitle,
     introParagraph,
     metaDescription,
     sections,

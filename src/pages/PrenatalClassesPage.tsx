@@ -5,6 +5,7 @@ import { JsonLdFaq } from "@/components/seo/JsonLdFaq";
 import { PageShell } from "@/components/layout/PageShell";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { Button } from "@/components/ui/button";
+import { ContentAuthors } from "@/components/seo/ContentAuthors";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { ROUTES } from "@/config/routes";
 import { CONTACT, SITE_URL } from "@/config/site";
@@ -264,6 +265,7 @@ export function PrenatalClassesPage() {
         </div>
 
         <div className="mt-10">
+          <ContentAuthors />
           <DirectoryPresence />
         </div>
       </article>

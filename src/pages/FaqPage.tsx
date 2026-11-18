@@ -7,6 +7,7 @@ import { ROUTES } from "@/config/routes";
 import { SITE_URL } from "@/config/site";
 import { SITE_FAQ } from "@/data/siteFaq";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
+import { ContentAuthors } from "@/components/seo/ContentAuthors";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { AppLink as Link } from "@/components/router/AppLink";
@@ -70,6 +71,7 @@ export function FaqPage() {
       </div>
 
       <div className="max-w-3xl mt-12">
+        <ContentAuthors />
         <DirectoryPresence />
       </div>
     </PageShell>

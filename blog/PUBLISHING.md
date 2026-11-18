@@ -18,6 +18,7 @@ Bodies: `src/data/topicGuides/articles/`
 - One intent, one H1; title ~50–60 chars; meta description 25–160 chars
 - Natural internal links (hub, related guides, doctor profile, book consultation)
 - Watermarked explainer figure with accurate alt/caption
+- Google Images explainer cards (`blog/drafts/explainer-cards.json`): exactly **4** short, answer-forward lines that match what searchers want and that the article body already answers (section or FAQ)—regenerate with `npm run blog:generate-drafts -- --svg-only`
 - Sources list aligned with claim ledger
 - Urgent-care guidance separated from routine booking CTAs
 - IndexNow submit only for promoted, deployed URLs

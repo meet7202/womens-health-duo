@@ -3,9 +3,21 @@ import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { DOCTOR_BY_SLUG } from "@/data/doctorProfiles";
 import type { TopicGuideAuthorId } from "@/data/topicGuides/types";
 
+function person(id: TopicGuideAuthorId | undefined) {
+  const doctor = id ? DOCTOR_BY_SLUG[id] : undefined;
+  if (!doctor) return undefined;
+  return {
+    "@type": "Person" as const,
+    name: doctor.name,
+    jobTitle: doctor.jobTitle,
+    url: githubPagesAbsoluteUrl(SITE_URL, doctor.path),
+  };
+}
+
 /**
  * Article JSON-LD for published editorial guides.
- * Only call when visible attribution/dates are truthful (approved revision).
+ * `authorId` / `reviewerIds` must be recorded contributions (approved revision);
+ * otherwise the Organization is the author and `reviewedBy` is omitted.
  */
 export function articleSchema(params: {
   path: string;
@@ -18,32 +30,14 @@ export function articleSchema(params: {
   imageUrls?: readonly string[];
 }) {
   const url = githubPagesAbsoluteUrl(SITE_URL, params.path);
-  const author =
-    params.authorId && DOCTOR_BY_SLUG[params.authorId]
-      ? {
-          "@type": "Person" as const,
-          name: DOCTOR_BY_SLUG[params.authorId].name,
-          url: githubPagesAbsoluteUrl(SITE_URL, DOCTOR_BY_SLUG[params.authorId].path),
-        }
-      : {
-          "@type": "Organization" as const,
-          name: SITE_NAME,
-          url: githubPagesAbsoluteUrl(SITE_URL, "/"),
-        };
-
-  const reviewers = (params.reviewerIds ?? []).flatMap((id) => {
-    const doctor = DOCTOR_BY_SLUG[id];
-    return doctor
-      ? [
-          {
-            "@type": "Person" as const,
-            name: doctor.name,
-            jobTitle: doctor.jobTitle,
-            url: githubPagesAbsoluteUrl(SITE_URL, doctor.path),
-          },
-        ]
-      : [];
-  });
+  const reviewers = (params.reviewerIds ?? [])
+    .map((id) => person(id))
+    .filter((p): p is NonNullable<ReturnType<typeof person>> => Boolean(p));
+  const author = person(params.authorId) ?? {
+    "@type": "Organization" as const,
+    name: SITE_NAME,
+    url: githubPagesAbsoluteUrl(SITE_URL, "/"),
+  };
 
   const node: Record<string, unknown> = {
     "@type": "Article",

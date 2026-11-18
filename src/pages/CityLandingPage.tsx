@@ -13,6 +13,7 @@ import { CITY_PAGES, type CityKey, type CityPageData } from "@/data/cityPages";
 import { indiaCityFaqs } from "@/data/contextualFaqs";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { medicalClinicForCity } from "@/components/seo/schema/cityClinic";
+import { ContentAuthors } from "@/components/seo/ContentAuthors";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { SITE_URL } from "@/config/site";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
@@ -121,6 +122,7 @@ export function CityLandingPage({ cityKey }: CityLandingPageProps) {
           headingIntro="Booking, in-person and video options, and how we coordinate care in this city."
         />
 
+        <ContentAuthors />
         <DirectoryPresence />
       </article>
     </PageShell>

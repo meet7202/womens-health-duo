@@ -102,6 +102,8 @@ export type TopicGuidePageModel = {
   tier: TopicGuideTier;
   cluster: TopicGuideClusterId;
   title: string;
+  /** Shorter `<title>` text from the published article; the H1 stays `title`. */
+  seoTitle?: string;
   /** Lead under the H1: title, cluster blurb, short booking line; trimmed at sentence boundaries when long. */
   introParagraph: string;
   /** Shorter description for `<meta name="description">` and JSON-LD; trimmed at sentence boundaries when long. */

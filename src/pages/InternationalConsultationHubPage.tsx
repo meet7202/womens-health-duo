@@ -4,6 +4,7 @@ import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { JsonLdFaq } from "@/components/seo/JsonLdFaq";
 import { PageShell } from "@/components/layout/PageShell";
 import { FaqSection } from "@/components/sections/FaqSection";
+import { ContentAuthors } from "@/components/seo/ContentAuthors";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { ROUTES } from "@/config/routes";
 import { SITE_URL } from "@/config/site";
@@ -137,6 +138,7 @@ export function InternationalConsultationHubPage() {
           headingTitle="International consultation FAQ"
         />
         <div className="mt-10">
+          <ContentAuthors />
           <DirectoryPresence />
         </div>
       </article>
