@@ -9,6 +9,7 @@
     "check": "tsc --noEmit"
   },
   "devDependencies": {
+    "@types/node": "^22.16.5",
     "typescript": "^5.8.3",
     "wrangler": "^4.14.0"
   }
