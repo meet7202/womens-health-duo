@@ -228,8 +228,7 @@ export function TopicGuidePage() {
                 Medically reviewed by <DoctorNameList slugs={reviewers} />
               </>
             ) : null}
-            {publishedLabel ? `. Published ${publishedLabel}` : null}
-            .
+            {publishedLabel ? `. Published ${publishedLabel}` : null}.
           </p>
         ) : publishedLabel ? (
           <p className="text-sm text-muted-foreground leading-relaxed mb-4">

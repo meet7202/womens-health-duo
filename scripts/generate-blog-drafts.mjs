@@ -288,7 +288,10 @@ function buildArticle(article, bodyPacks) {
     const fromPack = Array.isArray(pack?.explainerCards) ? pack.explainerCards : null;
     const fromFile = explainerCardsById?.[article.id];
     const chosen = (fromPack?.length ? fromPack : fromFile) || [];
-    const cleaned = chosen.map((t) => String(t || "").trim()).filter(Boolean).slice(0, 4);
+    const cleaned = chosen
+      .map((t) => String(t || "").trim())
+      .filter(Boolean)
+      .slice(0, 4);
     return cleaned.length === 4 ? cleaned : undefined;
   })();
 
@@ -397,7 +400,10 @@ function resolveExplainerCardTexts(built, planArticle) {
   const fromPack = built.explainerCards;
   const fromFile = explainerCardsById?.[planArticle.id];
   const preferred = (Array.isArray(fromPack) && fromPack.length ? fromPack : fromFile) || [];
-  const cleaned = preferred.map((t) => String(t || "").trim()).filter(Boolean).slice(0, 4);
+  const cleaned = preferred
+    .map((t) => String(t || "").trim())
+    .filter(Boolean)
+    .slice(0, 4);
   if (cleaned.length === 4) return cleaned;
   const fromHeadings = (built.sections || [])
     .slice(0, 4)

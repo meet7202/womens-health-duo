@@ -4,3 +4,5 @@ coverage
 package-lock.json
 *.min.js
 .cursor/**/*.mdc
+src/data/topicGuides/articles/catalog.generated.ts
+blog/drafts/STATUS.json

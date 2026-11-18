@@ -317,10 +317,7 @@
   "approval": {
     "imageApproval": "approved",
     "approvedOn": "2026-11-19",
-    "reviewers": [
-      "zalak",
-      "charmi"
-    ],
+    "reviewers": ["zalak", "charmi"],
     "note": "Owner confirmed on 19 Nov 2026 that Dr. Zalak Shah and Dr. Charmi Shah approved these question-style explainer cards and the matching SVG explainers."
   }
 }

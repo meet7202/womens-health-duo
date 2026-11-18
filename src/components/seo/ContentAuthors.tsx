@@ -41,10 +41,7 @@ function DoctorLink({ slug }: { slug: DoctorSlug }) {
  * Names link to the doctor profiles. Registration numbers stay off this block.
  * Authorship and medical review are never implied: review appears only when recorded.
  */
-export function ContentAuthors({
-  leadId,
-  reviewerIds,
-}: ContentAuthorsProps = {}) {
+export function ContentAuthors({ leadId, reviewerIds }: ContentAuthorsProps = {}) {
   const order = leadId ? [leadId, ...DEFAULT_ORDER.filter((s) => s !== leadId)] : DEFAULT_ORDER;
   return (
     <section className="mb-10 mt-12" aria-labelledby="content-authors">
@@ -60,8 +57,7 @@ export function ContentAuthors({
         ) : null}
         {reviewerIds?.length ? (
           <>
-            Medically reviewed by <DoctorNameList slugs={reviewerIds} />
-            .{" "}
+            Medically reviewed by <DoctorNameList slugs={reviewerIds} />.{" "}
           </>
         ) : null}
         <DoctorLink slug="zalak" /> leads women&apos;s health physiotherapy and STOTT Pilates.{" "}
