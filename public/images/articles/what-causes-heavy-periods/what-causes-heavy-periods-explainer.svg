@@ -14,13 +14,13 @@
   <text x="60" y="168" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#7a6670">Topic lead: Dr. Charmi Shah · Patient education, not a diagnosis</text>
   
   <rect x="60" y="210" width="500" height="130" rx="18" fill="#fff" stroke="#e8d5d8" stroke-width="2"/>
-  <text x="84" y="262" font-family="Georgia, serif" font-size="20" fill="#5c2a3a"><tspan x="84" dy="0">1. When heavy periods need review</tspan></text>
+  <text x="84" y="262" font-family="Georgia, serif" font-size="20" fill="#5c2a3a"><tspan x="84" dy="0">1. When are heavy periods a concern?</tspan></text>
 
   <rect x="600" y="210" width="500" height="130" rx="18" fill="#fff" stroke="#e8d5d8" stroke-width="2"/>
-  <text x="624" y="262" font-family="Georgia, serif" font-size="20" fill="#5c2a3a"><tspan x="624" dy="0">2. Do clots always mean a problem?</tspan></text>
+  <text x="624" y="262" font-family="Georgia, serif" font-size="20" fill="#5c2a3a"><tspan x="624" dy="0">2. Do clots always mean something is wrong?</tspan></text>
 
   <rect x="60" y="370" width="500" height="130" rx="18" fill="#fff" stroke="#e8d5d8" stroke-width="2"/>
-  <text x="84" y="422" font-family="Georgia, serif" font-size="20" fill="#5c2a3a"><tspan x="84" dy="0">3. What history and tests may cover</tspan></text>
+  <text x="84" y="422" font-family="Georgia, serif" font-size="20" fill="#5c2a3a"><tspan x="84" dy="0">3. What history and tests may be needed?</tspan></text>
 
   <rect x="600" y="370" width="500" height="130" rx="18" fill="#fff" stroke="#e8d5d8" stroke-width="2"/>
   <text x="624" y="422" font-family="Georgia, serif" font-size="20" fill="#5c2a3a"><tspan x="624" dy="0">4. Will I always need a scan?</tspan></text>

@@ -66,7 +66,11 @@ function main() {
   console.log("");
   console.log("Counts by publicationStatus:", counts);
   console.log("");
-  console.log("Promote only when clinicalApproval=approved: npm run blog:promote -- --id=W01-Z");
+  const approved = rows.filter(
+    (r) => r.clinicalApproval === "approved" && r.imageApproval === "approved",
+  ).length;
+  console.log(`Clinical and image approval recorded: ${approved}/${rows.length}`);
+  console.log("Publication is recorded in blog/drafts/STATUS.json. Regeneration does not publish.");
 }
 
 main();

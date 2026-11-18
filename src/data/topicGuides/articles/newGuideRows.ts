@@ -2,8 +2,8 @@ import type { TopicGuideRow } from "../types";
 
 /**
  * Calendar URLs added with the 52-article programme (13).
- * Published 18 November 2026 at the owner's request. `reviewStatus` stays pending,
- * so these pages do not show a medically-reviewed byline.
+ * Published 19 November 2026 and indexable. The medically-reviewed byline
+ * comes from the catalog reviewer ids, not from `reviewStatus` on these rows.
  */
 export const NEW_CALENDAR_GUIDE_ROWS: TopicGuideRow[] = [
   {

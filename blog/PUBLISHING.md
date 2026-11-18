@@ -1,40 +1,38 @@
-# Blog publishing (human-gated)
+# Blog publishing
 
 Calendar source: `WHD_AGENT_ARTICLE_PROMPTS/WHD_BLOG_PLAN.json`  
 Draft status: `drafts/STATUS.json`  
 Bodies: `src/data/topicGuides/articles/`
 
+All 52 articles are published as of 19 November 2026. There is no promote script. `blog/drafts/STATUS.json` is the publication record, and `npm run blog:generate-drafts` copies `publicationStatus`, `publishedAt`, and reviewer ids into the catalog. Regeneration does not publish a draft and does not change a recorded publish date.
+
 ## Rules (YMYL / E-E-A-T)
 
 - Drafts are written in **Dr. Zalak Shah (PT)** or **Dr. Charmi Shah** clinical voice for the matching lane (Indian English, patient-education tone, unique per URL).
-- Public “Written by / Clinically reviewed by” and Article `author` schema appear **only after** that clinician actually reviews and `clinicalApproval` is set to `approved`, then `blog:promote` runs. Do not invent approval.
+- The public byline is “Medically reviewed by” both doctors when `clinicalApproval` is `approved` and `clinicalReviewers` lists `zalak` and `charmi`. Do not set a single `authorId`. Do not invent approval.
+- The only public date is `publishedAt` (`actualPublishDate` in STATUS). There is no updated date and no reviewed date.
 - Avoid formulaic multi-article boilerplate, keyword stuffing, fake reviews, guaranteed outcomes, or invented doses/timelines.
-- Do **not** run `blog:promote` on unreviewed medical copy for production.
-- Refreshes keep the **current live page** until promote swaps in the approved revision.
-- New URLs stay `indexable: false` (404 / out of sitemap) until promote.
+- A draft stays `publicationStatus: "draft"` and off the public body until the owner sets `published` and `actualPublishDate` in STATUS, then regenerates the catalog.
 
 ### SEO practices enforced per article
 
 - One intent, one H1; title ~50–60 chars; meta description 25–160 chars
 - Natural internal links (hub, related guides, doctor profile, book consultation)
 - Watermarked explainer figure with accurate alt/caption
-- Google Images explainer cards (`blog/drafts/explainer-cards.json`): exactly **4** short, answer-forward lines that match what searchers want and that the article body already answers (section or FAQ)—regenerate with `npm run blog:generate-drafts -- --svg-only`
+- Google Images explainer cards (`blog/drafts/explainer-cards.json`): exactly **4** short **question** hooks (curiosity only—no answer spoilers) that match what searchers want and that the article body already answers (section or FAQ)—regenerate with `npm run blog:generate-drafts -- --svg-only`
 - Sources list aligned with claim ledger
 - Urgent-care guidance separated from routine booking CTAs
-- IndexNow submit only for promoted, deployed URLs
+- IndexNow submit only for deployed published URLs
 
 ## Commands
 
 ```sh
-# Regenerate draft scaffolds + watermarked SVG explainers from the plan
+# Regenerate the catalog from approved bodies. Keeps recorded publication and approval.
 npm run blog:generate-drafts
 npm run blog:watermark
 
 # Calendar vs approval state (Asia/Kolkata)
 npm run blog:status
-
-# After clinician sets clinicalApproval=approved in drafts/STATUS.json:
-npm run blog:promote -- --id=W01-Z
 
 # After merge to main + Pages deploy:
 npm run blog:submit-index -- --id=W01-Z
@@ -42,9 +40,9 @@ npm run blog:submit-index -- --id=W01-Z
 
 ## Release loop
 
-1. Clinician reviews draft body, claim ledger (`drafts/<id>/claims.json`), and image.
-2. Set `clinicalApproval: "approved"` (and `imageApproval: "approved"` when the graphic is cleared) in `drafts/STATUS.json`.
-3. `npm run blog:promote -- --id=Wxx-Y`
+1. Clinician reviews the draft body, claim ledger (`drafts/<id>/claims.json`), and image.
+2. Set `clinicalApproval: "approved"`, `clinicalReviewers`, and `imageApproval: "approved"` in `drafts/STATUS.json`.
+3. To publish, set `publicationStatus: "published"` and `actualPublishDate` (the public date). Then `npm run blog:generate-drafts`.
 4. Open a PR → merge to `main` → GitHub Pages deploy.
 5. `npm run blog:submit-index -- --id=Wxx-Y` (IndexNow for that URL).
 

@@ -398,6 +398,6 @@ export const TOPIC_GUIDE_ROWS: TopicGuideRow[] = [
       },
     },
   ),
-  // Calendar new URLs — non-indexable until blog:promote after clinical approval.
+  // Calendar URLs added by the 52-article programme. Published and indexable.
   ...NEW_CALENDAR_GUIDE_ROWS,
 ];

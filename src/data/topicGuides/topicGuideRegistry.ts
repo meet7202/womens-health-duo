@@ -393,8 +393,8 @@ function buildGuideModel(row: TopicGuideRow): TopicGuidePageModel {
   const hold = TOPIC_GUIDE_REVIEW_HOLDS.get(row.slug);
   const reviewStatus = hold ?? (reviewerIds ? "approved" : resolveTopicGuideReviewStatus(row));
 
-  // Unique calendar body only after promote sets publicationStatus to published.
-  // Until then, refreshes keep the live cluster/uniqueness scaffold.
+  // Unique calendar body when publicationStatus is published.
+  // Drafts keep the live cluster/uniqueness scaffold.
   const sections = published?.sections?.length ? published.sections : uniqueness.sections;
   const primaryQuestion = published?.primaryQuestion ?? uniqueness.primaryQuestion;
   const directAnswer = published?.directAnswer ?? uniqueness.directAnswer;

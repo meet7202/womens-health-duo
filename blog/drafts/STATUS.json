@@ -1,7 +1,7 @@
 {
   "timezone": "Asia/Kolkata",
-  "generatedAt": "2026-11-18T17:07:07.682Z",
-  "note": "All 52 articles published 2026-11-18 as patient education. Clinical and image approval recorded 2026-11-18: reviewed by Dr. Zalak Shah and Dr. Charmi Shah, approved as written.",
+  "generatedAt": "2026-11-18T17:14:14.210Z",
+  "note": "All 52 articles published 2026-11-19 as patient education. Clinical approval recorded 2026-11-18. Image approval re-recorded 2026-11-19, including the question-style explainer cards. Reviewed by Dr. Zalak Shah and Dr. Charmi Shah, approved as written.",
   "articles": [
     {
       "id": "W01-Z",
@@ -12,12 +12,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W01-C",
@@ -28,12 +29,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W02-Z",
@@ -44,12 +46,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W02-C",
@@ -60,12 +63,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W03-Z",
@@ -76,12 +80,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W03-C",
@@ -92,12 +97,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W04-Z",
@@ -108,12 +114,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W04-C",
@@ -124,12 +131,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W05-Z",
@@ -140,12 +148,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W05-C",
@@ -156,12 +165,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W06-Z",
@@ -172,12 +182,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W06-C",
@@ -188,12 +199,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W07-Z",
@@ -204,12 +216,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W07-C",
@@ -220,12 +233,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W08-Z",
@@ -236,12 +250,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W08-C",
@@ -252,12 +267,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W09-Z",
@@ -268,12 +284,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W09-C",
@@ -284,12 +301,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W10-Z",
@@ -300,12 +318,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W10-C",
@@ -316,12 +335,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W11-Z",
@@ -332,12 +352,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W11-C",
@@ -348,12 +369,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W12-Z",
@@ -364,12 +386,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W12-C",
@@ -380,12 +403,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W13-Z",
@@ -396,12 +420,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W13-C",
@@ -412,12 +437,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W14-Z",
@@ -428,12 +454,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W14-C",
@@ -444,12 +471,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W15-Z",
@@ -460,12 +488,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W15-C",
@@ -476,12 +505,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W16-Z",
@@ -492,12 +522,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W16-C",
@@ -508,12 +539,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W17-Z",
@@ -524,12 +556,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W17-C",
@@ -540,12 +573,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W18-Z",
@@ -556,12 +590,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W18-C",
@@ -572,12 +607,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W19-Z",
@@ -588,12 +624,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W19-C",
@@ -604,12 +641,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W20-Z",
@@ -620,12 +658,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W20-C",
@@ -636,12 +675,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W21-Z",
@@ -652,12 +692,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W21-C",
@@ -668,12 +709,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W22-Z",
@@ -684,12 +726,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W22-C",
@@ -700,12 +743,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W23-Z",
@@ -716,12 +760,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W23-C",
@@ -732,12 +777,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W24-Z",
@@ -748,12 +794,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W24-C",
@@ -764,12 +811,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W25-Z",
@@ -780,12 +828,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W25-C",
@@ -796,12 +845,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W26-Z",
@@ -812,12 +862,13 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     },
     {
       "id": "W26-C",
@@ -828,13 +879,14 @@
       "imageApproval": "approved",
       "clinicalApproval": "approved",
       "proposedLeadId": "charmi",
-      "actualPublishDate": "2026-11-18",
+      "actualPublishDate": "2026-11-19",
       "clinicalReviewers": [
         "zalak",
         "charmi"
       ],
-      "clinicalApprovedOn": "2026-11-18"
+      "clinicalApprovedOn": "2026-11-18",
+      "imageApprovedOn": "2026-11-19"
     }
   ],
-  "ownerPublishDate": "2026-11-18"
+  "ownerPublishDate": "2026-11-19"
 }

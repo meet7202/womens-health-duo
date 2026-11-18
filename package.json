@@ -33,7 +33,6 @@
     "blog:generate-drafts": "npm run blog:export-bodies && node scripts/generate-blog-drafts.mjs",
     "blog:watermark": "node scripts/blog-watermark-images.mjs",
     "blog:status": "node scripts/blog-status.mjs",
-    "blog:promote": "node scripts/blog-promote.mjs",
     "blog:submit-index": "node scripts/blog-submit-index.mjs",
     "test:google-indexing-guard": "node scripts/test-google-indexing-guard.mjs",
     "test:indexnow-change-manifest": "node scripts/test-indexnow-change-manifest.mjs",

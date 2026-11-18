@@ -5344,10 +5344,10 @@
     "primaryQuestion": "How long should I try before seeing a fertility specialist?",
     "directAnswer": "How long to try before a fertility assessment depends on age and whether either partner already has a factor that can impair conception. The ASRM 2026 committee opinion advises evaluation after about 12 months of regular unprotected intercourse when the female partner is under 35, after about 6 months from age 35, and more immediate evaluation may be warranted after 40—or straight away with a known infertility-related condition. A first consultation explains options; it does not commit anyone to IVF.",
     "explainerCards": [
-      "Under 35? Assess after ~12 months",
-      "Age 35+? Check after ~6 months",
-      "Irregular cycles? Don’t wait a year",
-      "First visit is not starting IVF"
+      "How long should I try if under 35?",
+      "What if I am 35 or older?",
+      "Do irregular cycles change the wait?",
+      "Does a first visit mean starting IVF?"
     ],
     "sections": [
       {
@@ -5415,7 +5415,7 @@
       }
     ],
     "conversionCopy": "If you are unsure whether your trying interval or history warrants assessment now, you can discuss timing with Dr. Charmi Shah.",
-    "explainerAlt": "Under 35 try about 12 months, 35+ about 6 months; irregular cycles mean do not wait a year; a first visit is not starting IVF.",
+    "explainerAlt": "Questions on how long to try under 35 or from 35, whether irregular cycles change the wait, and whether a first visit means starting IVF.",
     "storytellingNote": "",
     "review": {
       "corrections": [
