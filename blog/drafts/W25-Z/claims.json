@@ -1,22 +1,30 @@
 {
   "id": "W25-Z",
   "openClinicalQuestions": [
-    "Which examination and referral details should Dr. Charmi Shah confirm?",
-    "How should pessary care be described without selecting treatment?",
-    "Which activity advice can Dr. Zalak Shah state without unnecessary restriction?"
+    "How should WHD describe pessary follow-up logistics in India without inventing clinic protocols?",
+    "Which urgent retention pathway should be named for Ahmedabad and Bangalore readers?"
   ],
   "claimLedger": [
     {
-      "claim": "Pelvic organ prolapse can cause bulge, heaviness and bladder or bowel symptoms.",
+      "claim": "Lists heaviness/bulge/sex/bladder/bowel symptoms; see GP for lump or other symptoms; outlines examination, grading 1–4, and options including pessary, physio, hormones, surgery; monitoring if not bothered.",
       "sourceUrl": "https://www.nhs.uk/conditions/pelvic-organ-prolapse/",
-      "limitations": "Symptoms do not confirm type or stage.",
-      "reviewerDecision": "pending"
+      "sourceSection": "NHS · Pelvic organ prolapse · Media last reviewed: 20 October 2023 (exercise video section)",
+      "limitations": "UK NHS pathway; mesh policy statements are UK-specific.",
+      "reviewerDecision": "accepted"
     },
     {
-      "claim": "Management may include conservative care, pessary or surgery according to individual needs.",
-      "sourceUrl": "https://www.nice.org.uk/guidance/ng210/chapter/recommendations",
-      "limitations": "Treatment selection requires medical assessment and local context.",
-      "reviewerDecision": "pending"
+      "claim": "History and exam for prolapse; POP-Q in specialist care; discuss no/non-surgical/surgical options; consider ≥16 weeks supervised PFMT for symptomatic stage 1 or 2.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng123/chapter/Recommendations",
+      "sourceSection": "NICE · NG123 Urinary incontinence and pelvic organ prolapse in women: management — Recommendations · not stated on Recommendations chapter fetch",
+      "limitations": "UK NICE; staging requires clinician examination.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Consider ≥4 months supervised PFMT for symptomatic prolapse not extending >1 cm beyond hymen on straining.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng210/chapter/Recommendations",
+      "sourceSection": "NICE · NG210 Pelvic floor dysfunction — Recommendations · Published 9 December 2021",
+      "limitations": "UK guidance; measurement is clinical.",
+      "reviewerDecision": "accepted"
     }
   ]
 }

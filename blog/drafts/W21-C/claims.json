@@ -1,22 +1,30 @@
 {
   "id": "W21-C",
   "openClinicalQuestions": [
-    "Which records does Dr. Charmi Shah specifically ask patients to upload or bring?",
-    "Which tests are commonly deferred until after the first consultation?",
-    "How should male-partner assessment be coordinated locally?"
+    "Does Dr. Charmi routinely examine both partners at visit one in her Indian clinics, or stagger male testing?",
+    "Any mandatory infection-screening list she wants named before uterine instrumentation?"
   ],
   "claimLedger": [
     {
-      "claim": "Fertility evaluation includes history and assessment of both partners where applicable.",
+      "claim": "First visit: detailed history and physical; tests selected afterward; semen analysis for men; female labs/imaging as indicated",
       "sourceUrl": "https://www.acog.org/womens-health/faqs/evaluating-infertility",
-      "limitations": "US overview; timing and test access vary in India.",
-      "reviewerDecision": "pending"
+      "sourceSection": "ACOG · Evaluating Infertility · Published April 2020; last reviewed May 2026",
+      "limitations": "US patient FAQ; Indian test availability and insurance rules differ",
+      "reviewerDecision": "accepted"
     },
     {
-      "claim": "Tests should be selected according to history and likely clinical utility rather than as a universal panel.",
+      "claim": "Systematic, expeditious, cost-effective evaluation; include ovulation, tract structure/patency, semen; do not delay with known infertility factors",
       "sourceUrl": "https://www.asrm.org/practice-guidance/practice-committee-documents/fertility-evaluation-of-infertile-women-a-committee-opinion-2026",
-      "limitations": "Committee guidance requires individual and local interpretation.",
-      "reviewerDecision": "pending"
+      "sourceSection": "ASRM · Fertility evaluation of infertile women: a committee opinion (2026) · 2026 committee opinion",
+      "limitations": "US society opinion; local sequencing may vary",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Examples of targeted tests (progesterone, tubal screening) and avoidance of non-contributory routine tests",
+      "sourceUrl": "https://www.nice.org.uk/guidance/NG257/chapter/investigation-of-fertility-problems-and-management-strategies",
+      "sourceSection": "NICE · NG257 investigation of fertility problems · Published 31 March 2026",
+      "limitations": "UK pathway details",
+      "reviewerDecision": "accepted"
     }
   ]
 }

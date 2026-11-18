@@ -1,0 +1,117 @@
+{
+  "id": "W17-C",
+  "title": "Why Is My Period Late If My Pregnancy Test Is Negative?",
+  "seoTitle": "Late period, negative pregnancy test: why?",
+  "description": "A negative home test is less reliable than a positive one. See NHS timing advice, other reasons for a late period, and symptoms that need emergency care.",
+  "primaryQuestion": "Why is my period late if my pregnancy test is negative?",
+  "directAnswer": "A late period with a negative home pregnancy test can still mean pregnancy if you tested too early or did not follow the instructions, because negative results are less reliable than positive ones. NHS advice is that most tests are most reliable from the first day of a missed period, or at least 21 days after unprotected sex if you do not know when the next period is due. Other common reasons for delay include stress, contraception effects, breastfeeding, weight or training shifts, thyroid problems, approaching menopause, and PCOS/PMOS. Persistent missed periods need clinical review; urgent pain or bleeding needs emergency care even if today’s stick is negative.",
+  "sections": [
+    {
+      "heading": "What a negative home test can and cannot show",
+      "paragraphs": [
+        "Home tests detect the pregnancy hormone hCG in urine. NHS explains that a positive result is almost certainly correct, while a negative result is less reliable—especially if instructions were not followed or the test was taken too early. Some medicines can affect results. If you still think you might be pregnant after a negative result, wait a few days and repeat the test; speak to a GP if a second test is negative but the period has still not arrived.",
+        "Hormonal contraception does not stop a pregnancy test from working. No method is completely effective, so testing remains appropriate when pregnancy is possible. Read the packet timing carefully; very sensitive kits sometimes claim earlier use, but the NHS public rule of thumb remains the missed-period day for most kits."
+      ]
+    },
+    {
+      "heading": "Other reasons periods run late",
+      "paragraphs": [
+        "NHS missed-period pages list pregnancy first, then stress, perimenopause (often between about 45 and 55), polycystic ovary syndrome now known as polyendocrine metabolic ovarian syndrome, sudden weight loss, being overweight, very high exercise load, hormonal contraception such as the pill, injection or intrauterine system, and breastfeeding. Medical conditions including thyroid disorders can also stop or delay bleeds.",
+        "Our guide to why periods become irregular explains how to describe a changing pattern over months. This page answers the immediate puzzle of a late bleed plus a negative stick, not the full differential of chronic irregularity."
+      ]
+    },
+    {
+      "heading": "When to repeat the test and when to seek review",
+      "paragraphs": [
+        "If your period is only a few days late and the first test was early, retest after a short wait or from the day your period was due, using first-morning urine if the packet suggests it. Keep the used kit or a photo of the result window if you will discuss it in clinic.",
+        "UK NHS advice on periods and missed periods suggests seeing a doctor if you have missed three consecutive periods after negative testing, among other prompts. Also seek review sooner if you have associated symptoms such as marked weight change, unwanted facial hair, extreme tiredness, or if cycles have become newly irregular. Thresholds and access routes differ by country; treat the three-missed-period prompt as NHS wording when you use it."
+      ]
+    },
+    {
+      "heading": "Urgent symptoms—do not wait on another home test",
+      "paragraphs": [
+        "NHS ectopic-pregnancy advice says to seek help for a combination of symptoms if you might be pregnant—even without a positive test. Warning features include one-sided lower tummy pain, vaginal bleeding or brown watery discharge, shoulder-tip pain, and discomfort when peeing or pooing. Emergency care is needed for sudden intense tummy pain with dizziness, fainting, looking very pale or feeling very sick—signs that a tube rupture may be occurring.",
+        "In India, call emergency services on 112 for those acute features rather than messaging a routine booking line. A negative stick does not rule out an early pregnancy complication. Dr. Charmi Shah can help with non-urgent delayed periods once pregnancy emergencies are excluded."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can I be pregnant if two home tests are negative?",
+      "answer": "It is less likely if both tests were done from the missed-period day onward and instructions were followed, but NHS still advises speaking to a GP if periods have not arrived after a second negative test. Blood testing or clinical assessment may be needed."
+    },
+    {
+      "question": "Should I keep testing every day until my period comes?",
+      "answer": "Daily testing rarely adds clarity and can increase anxiety. Retest after a few days if the first attempt was early, then arrange clinical review if bleeding stays away or urgent symptoms appear."
+    }
+  ],
+  "references": [
+    {
+      "label": "NHS — Doing a pregnancy test",
+      "url": "https://www.nhs.uk/pregnancy/trying-for-a-baby/doing-a-pregnancy-test/"
+    },
+    {
+      "label": "NHS — Missed or late periods",
+      "url": "https://www.nhs.uk/conditions/stopped-or-missed-periods/"
+    },
+    {
+      "label": "NHS — Periods overview (missed periods after negative test)",
+      "url": "https://www.nhs.uk/conditions/periods/"
+    },
+    {
+      "label": "NHS — Ectopic pregnancy overview",
+      "url": "https://www.nhs.uk/conditions/ectopic-pregnancy/"
+    }
+  ],
+  "conversionCopy": "If periods stay late after negative tests and you need a clear next step, you can book a consultation with Dr. Charmi Shah.",
+  "explainerAlt": "Timeline showing when to repeat a home pregnancy test after a missed period.",
+  "storytellingNote": "",
+  "review": {
+    "corrections": [
+      "New rewrite prioritising NHS test reliability and timing; separated other delay causes from W01-C full irregularity essay.",
+      "Ectopic urgent advice does not require a positive home test; India 112 named for emergencies."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "NHS",
+        "title": "Doing a pregnancy test",
+        "url": "https://www.nhs.uk/pregnancy/trying-for-a-baby/doing-a-pregnancy-test/",
+        "date": "Media last reviewed: 2 February 2026",
+        "recommendation": "Most reliable from first day of missed period (or ≥21 days after unprotected sex if timing unknown); positive almost certainly correct; negative less reliable if early/incorrect use; retest and see GP if still no period.",
+        "passage": "A positive test result is almost certainly correct. However, a negative test result is less reliable.",
+        "limitations": "UK access to free tests; brand sensitivity varies."
+      },
+      {
+        "organisation": "NHS",
+        "title": "Missed or late periods",
+        "url": "https://www.nhs.uk/conditions/stopped-or-missed-periods/",
+        "date": "not stated on fetched header",
+        "recommendation": "Lists non-pregnancy causes; see GP after 3 missed periods in a row among other prompts.",
+        "passage": "you've missed your period 3 times in a row",
+        "limitations": "UK primary-care threshold; Indian clinics may use different amenorrhoea cut-offs."
+      },
+      {
+        "organisation": "NHS",
+        "title": "Periods — Overview",
+        "url": "https://www.nhs.uk/conditions/periods/",
+        "date": "Page last reviewed: 05 January 2023",
+        "recommendation": "See GP if pregnancy test negative and three consecutive periods missed.",
+        "passage": "See your GP if you've taken a pregnancy test and the result is negative (you're not pregnant) and you've missed 3 consecutive periods.",
+        "limitations": "UK advice."
+      },
+      {
+        "organisation": "NHS",
+        "title": "Ectopic pregnancy — Overview",
+        "url": "https://www.nhs.uk/conditions/ectopic-pregnancy/",
+        "date": "Page last reviewed: 23 August 2022",
+        "recommendation": "Seek advice for symptom combinations if you might be pregnant even without positive test; emergency care for sudden intense pain with dizziness/fainting.",
+        "passage": "Contact your GP or call NHS 111 if you have a combination of any of the above symptoms and you might be pregnant – even if you haven't had a positive pregnancy test.",
+        "limitations": "UK emergency numbers; India readers should use 112 / local emergency care."
+      }
+    ],
+    "openQuestions": [
+      "Should WHD recommend a specific interval before clinic serum hCG after two negative home tests?",
+      "Any FOGSI wording preferred over NHS three-missed-period threshold for India-facing copy?"
+    ]
+  }
+}

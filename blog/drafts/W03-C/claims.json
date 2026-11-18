@@ -1,22 +1,30 @@
 {
   "id": "W03-C",
   "openClinicalQuestions": [
-    "Which India-relevant vaccination and infection-screening prompts should be named?",
-    "Which histories should trigger genetic counselling in the clinic pathway?",
-    "What folic-acid wording should remain pending until W09-C is reviewed?"
+    "Which India-specific vaccination panel (beyond rubella/MMR discussion) should Dr. Charmi routinely list for preconception visits?",
+    "Any FOGSI-preferred preconception blood tests she wants named for average-risk couples?"
   ],
   "claimLedger": [
     {
-      "claim": "Prepregnancy care includes reviewing health conditions, medicines, vaccinations and lifestyle before conception.",
-      "sourceUrl": "https://www.acog.org/womens-health/faqs/good-health-before-pregnancy-prepregnancy-care",
-      "limitations": "US guidance; vaccination schedules and local services need India-specific review.",
-      "reviewerDecision": "pending"
+      "claim": "400 mcg folic acid daily for women of reproductive age in the preconception period up to the first trimester",
+      "sourceUrl": "https://nhm.gov.in/index1.php?lang=1&level=3&lid=797&sublinkid=1448",
+      "sourceSection": "India National Health Mission · Anaemia Mukt Bharat · not stated on page; also confirmed in Anaemia Mukt Bharat Operational Guidelines PDF",
+      "limitations": "Indian public-health programme wording; individual medical risks may need a prescribed higher dose decided by a clinician",
+      "reviewerDecision": "accepted"
     },
     {
-      "claim": "Prescribed medicines should be reviewed rather than stopped without clinical advice.",
-      "sourceUrl": "https://www.acog.org/womens-health/faqs/good-health-before-pregnancy-prepregnancy-care",
-      "limitations": "Individual risk-benefit decisions require the prescribing clinician.",
-      "reviewerDecision": "pending"
+      "claim": "400 μg folic acid daily from trying to conceive until 12 weeks; 5 mg offered after a previous NTD-affected pregnancy",
+      "sourceUrl": "https://www.who.int/tools/elena/interventions/folate-periconceptional",
+      "sourceSection": "WHO · Periconceptional folic acid supplementation to prevent neural tube defects (eLENA) · last updated 9 Aug 2023 (parent-verified; live fetch timed out this session — wording matched WHO eLENA search extract)",
+      "limitations": "Global recommendation; higher-dose criteria beyond prior NTD pregnancy are jurisdiction-specific",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "MMR before pregnancy if needed; stop smoking; no alcohol; do not stop prescribed medicines until talking to GP/specialist; speak to GP with epilepsy, diabetes, sickle cell, HIV or fertility concerns",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/trying-for-a-baby/planning-your-pregnancy/",
+      "sourceSection": "NHS · Trying to get pregnant · page live at fetch; review date not shown in extract",
+      "limitations": "UK pathway; Indian vaccine schedules and referral routes may differ",
+      "reviewerDecision": "accepted"
     }
   ]
 }

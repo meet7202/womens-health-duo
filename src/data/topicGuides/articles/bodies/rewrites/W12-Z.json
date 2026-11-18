@@ -1,0 +1,125 @@
+{
+  "id": "W12-Z",
+  "title": "Why am I leaking urine after childbirth, and who can help?",
+  "seoTitle": "Why urine leaks after childbirth and who helps",
+  "description": "Postnatal urine leakage is common and deserves support. See what to tell your care team, how birth type informs assessment, and physiotherapy next steps.",
+  "primaryQuestion": "Why am I leaking urine after childbirth?",
+  "directAnswer": "Urine leakage after birth often reflects temporary or longer-lasting change in pelvic-floor support, muscle timing, tissue healing, cough or constipation load, and bladder habits while caring for a newborn. It can follow vaginal or caesarean birth. The NHS post-pregnancy body page notes that a leaky bladder may need pelvic-floor exercises and that help from a GP or health visitor is appropriate whenever physical problems bother you—not only at the six-to-eight-week check. Persistent leaking is not something you must quietly accept.",
+  "sections": [
+    {
+      "heading": "What to tell your postnatal care team",
+      "paragraphs": [
+        "Describe when leaks started, whether they appear with coughing, lifting the baby, laughing or a sudden urge, how often pads are needed, and whether nights or intimacy are affected. Note bowel straining, wound pain, catheter use in hospital, or any feeling of heaviness. NICE NG210 recommends that health visitors, midwives and GPs discuss pelvic floor dysfunction at each postnatal contact, and that women who recently gave birth are asked about symptoms during routine postnatal care.",
+        "Write a three-day fluid and toilet note if you can: drinks, toilet visits, urgency and leaks. The NHS urinary incontinence overview explains that a GP may suggest such a diary and that you should not feel embarrassed discussing the problem. Bring the note to maternity follow-up, a GP visit or physiotherapy so the history is not reduced to “a bit of leaking”."
+      ]
+    },
+    {
+      "heading": "How birth type shapes the conversation",
+      "paragraphs": [
+        "NICE NG210 lists pregnancy- and labour-related factors that raise pelvic-floor risk, including assisted vaginal birth with forceps or vacuum, a longer active second stage, and injury to the anal sphincter. Being over 30 at first birth and having given birth before are also listed. Caesarean birth avoids some vaginal trauma but pregnancy itself loads the pelvic floor, and early recovery still involves lifting, coughing and constipation.",
+        "Share mode of birth, tears or episiotomy, instrumental assistance, twin pregnancy, and any intensive-care stay for you or the baby. That history guides how soon loading, running or high-impact classes are discussed. It does not let an online article grade your recovery or declare one birth type “safer” for every continence outcome."
+      ]
+    },
+    {
+      "heading": "Other bladder clues that need checking",
+      "paragraphs": [
+        "Burning, fever, cloudy or bloody urine, new difficulty starting the stream, or a painful inability to empty need medical assessment rather than more home squeezes. Sudden large changes in control together with severe lumbar pain, weak legs, or numbness in the saddle region need emergency care. If you are still in the early weeks and notice heavy bleeding, wound problems or feeling very unwell, contact maternity or emergency services.",
+        "Urgency that arrives without effort, key-in-the-door rushing, or night waking points toward different questions than drops only when you sneeze while changing a nappy. Mixed patterns are common. Our guide to leakage with coughing explains stress-type triggers in general; after birth, add feeding positions, lifting technique and sleep disruption to the picture."
+      ]
+    },
+    {
+      "heading": "How pelvic health physiotherapy can help",
+      "paragraphs": [
+        "UK NICE NG123 places a clinician-supervised pelvic-floor programme of three months or longer as the opening treatment for stress or mixed urinary incontinence, after routine digital assessment confirms a contraction. NICE NG210 mirrors that minimum duration for the same incontinence patterns, including in pregnancy, and asks programmes to review progress mid-way and at completion.",
+        "With Dr. Zalak Shah (PT), postnatal sessions often practise lift-and-release skills timed to baby care—picking up a car seat, coughing with mastitis, returning to walking—without replacing medical review when infection or neurological red flags appear. The NHS post-pregnancy page also links leaky bladder and a heavy feeling between vagina and anus with strengthening the muscles around the bladder, while still directing people to ask a clinician for help when problems bother them."
+      ]
+    },
+    {
+      "heading": "How progress is reviewed after birth",
+      "paragraphs": [
+        "Agree simple goals: fewer leaks when laughing, walking to the park without changing pads, or coughing without fear. NICE NG210 advises that if a supervised programme helps, training should continue afterwards rather than stopping the week symptoms ease. Reassess if symptoms plateau, worsen, or if heaviness, pain or emptying difficulty appear.",
+        "Involve an obstetrician–gynaecologist such as Dr. Charmi Shah when wounds, bleeding patterns, suspected prolapse or other medical issues need medical input. Physiotherapy booking is for ongoing recovery once urgent causes are excluded—not for emergency symptoms."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is leaking after a caesarean still worth mentioning?",
+      "answer": "Yes. Pregnancy loads the pelvic floor even without a vaginal birth, and early postnatal life adds lifting and constipation. Mention symptoms at postnatal contacts so you are not left waiting for an arbitrary deadline before help is offered."
+    },
+    {
+      "question": "Should I wait until my six-week check before saying anything?",
+      "answer": "No. NHS postnatal advice says physical problems can be raised with a GP or health visitor whenever they bother you, and the six-to-eight-week check is simply one planned moment—not the only door."
+    }
+  ],
+  "references": [
+    {
+      "label": "NHS — Your post-pregnancy body",
+      "url": "https://www.nhs.uk/baby/support-and-services/your-post-pregnancy-body/"
+    },
+    {
+      "label": "NICE — NG210 Pelvic floor dysfunction: prevention and non-surgical management (Recommendations)",
+      "url": "https://www.nice.org.uk/guidance/ng210/chapter/Recommendations"
+    },
+    {
+      "label": "NICE — NG123 Urinary incontinence and pelvic organ prolapse in women: management (Recommendations)",
+      "url": "https://www.nice.org.uk/guidance/ng123/chapter/Recommendations"
+    },
+    {
+      "label": "NHS — Urinary incontinence overview",
+      "url": "https://www.nhs.uk/conditions/urinary-incontinence/"
+    }
+  ],
+  "conversionCopy": "If postnatal urine leakage is limiting baby care or activity, you can discuss a recovery plan with Dr. Zalak Shah (PT).",
+  "explainerAlt": "A postpartum bladder-symptom note sheet to take to an appointment.",
+  "storytellingNote": "",
+  "review": {
+    "corrections": [
+      "New rewrite focused on postnatal history, birth factors and care access rather than general stress-incontinence mechanics.",
+      "Used NHS post-pregnancy body wording that help can be sought any time; NICE NG210 postnatal discussion duties.",
+      "Attributed supervised PFMT trial length to NICE NG123/NG210 without promising cure rates."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "NHS",
+        "title": "Your post-pregnancy body",
+        "url": "https://www.nhs.uk/baby/support-and-services/your-post-pregnancy-body/",
+        "date": "not stated on fetch",
+        "recommendation": "Leaky bladder may need pelvic floor exercises; ask GP or health visitor any time; postnatal check around 6–8 weeks is a good time to raise problems.",
+        "passage": "If a physical problem is bothering you, ask a GP or health visitor for help at any time.",
+        "limitations": "UK maternity pathway timing; Indian postnatal visit schedules differ."
+      },
+      {
+        "organisation": "NICE",
+        "title": "NG210 Pelvic floor dysfunction — Recommendations",
+        "url": "https://www.nice.org.uk/guidance/ng210/chapter/Recommendations",
+        "date": "Published 9 December 2021",
+        "recommendation": "Discuss pelvic floor dysfunction at each postnatal contact; ask recently delivered women about symptoms; list labour-related risk factors; offer ≥3 months supervised PFMT for stress/mixed UI.",
+        "passage": "Health visitors, midwives and GPs should discuss pelvic floor dysfunction with women at each postnatal contact.",
+        "limitations": "UK service roles; local Indian staffing models vary."
+      },
+      {
+        "organisation": "NICE",
+        "title": "NG123 Urinary incontinence and pelvic organ prolapse in women: management — Recommendations",
+        "url": "https://www.nice.org.uk/guidance/ng123/chapter/Recommendations",
+        "date": "not stated on Recommendations chapter fetch",
+        "recommendation": "Offer ≥3 months supervised PFMT as first-line for stress or mixed UI after digital confirmation of contraction.",
+        "passage": "Offer a trial of supervised pelvic floor muscle training of at least 3 months' duration as first-line treatment to women with stress or mixed urinary incontinence.",
+        "limitations": "UK NICE pathway."
+      },
+      {
+        "organisation": "NHS",
+        "title": "Urinary incontinence — Overview",
+        "url": "https://www.nhs.uk/conditions/urinary-incontinence/",
+        "date": "Page last reviewed: 15 June 2023",
+        "recommendation": "See a GP for any type of incontinence; diary of fluids and urination may be suggested; pregnancy and vaginal birth listed among risk factors.",
+        "passage": "See a GP if you have any type of urinary incontinence. Urinary incontinence is a common problem and you should not feel embarrassed talking to them about your symptoms.",
+        "limitations": "UK primary-care first step."
+      }
+    ],
+    "openQuestions": [
+      "What local Ahmedabad/Bangalore postnatal referral route should WHD name when leakage persists beyond early recovery?",
+      "How does Dr. Zalak schedule the mid-programme and end-programme PFMT reviews for new parents?"
+    ]
+  }
+}

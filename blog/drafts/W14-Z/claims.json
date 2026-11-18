@@ -1,22 +1,37 @@
 {
   "id": "W14-Z",
   "openClinicalQuestions": [
-    "Which parts of Dr. Zalak Shah’s actual assessment process can be described publicly?",
-    "Which local urgent referral wording should accompany new bladder or bowel dysfunction?",
-    "Should Dr. Charmi Shah add gynaecological differentials to the routine-review list?"
+    "Which symptom diary template does Dr. Zalak prefer patients to complete before a first visit?",
+    "When should WHD insist on same-week medical review versus physiotherapy-first triage?"
   ],
   "claimLedger": [
     {
-      "claim": "Pelvic floor symptoms are not proof of simple muscle weakness.",
-      "sourceUrl": "https://www.nice.org.uk/guidance/ng210/chapter/recommendations",
-      "limitations": "UK guidance; individual diagnosis and Indian referral pathways require clinician review.",
-      "reviewerDecision": "pending"
+      "claim": "Primary-care/physio initial history should cover UI, emptying disorders, faecal incontinence, prolapse, sexual dysfunction and chronic pelvic pain; exclude other medical causes; digital assessment of contraction/relaxation is a listed competency.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng210/chapter/Recommendations",
+      "sourceSection": "NICE · NG210 Pelvic floor dysfunction — Recommendations · Published 9 December 2021",
+      "limitations": "UK team structures; Indian clinics may organise assessment differently.",
+      "reviewerDecision": "accepted"
     },
     {
-      "claim": "Assessment can include history, movement and a consent-based pelvic examination.",
+      "claim": "Detailed symptom history; optional vaginal/rectal exam with consent; right to decline and still receive treatment when appropriate.",
       "sourceUrl": "https://thepogp.co.uk/patients/pelvic_health_advice/physiotherapy_assessment.aspx",
-      "limitations": "Professional framework, not confirmation of this clinic’s exact process.",
-      "reviewerDecision": "pending"
+      "sourceSection": "POGP · Physiotherapy Assessment · not stated",
+      "limitations": "UK professional body patient page.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Lists bladder, bowel and sexual dysfunction symptoms; consent required for internal exam; chaperone available.",
+      "sourceUrl": "https://www.uhsussex.nhs.uk/resources/your-pelvic-health-physiotherapy-appointment/",
+      "sourceSection": "University Hospitals Sussex NHS Foundation Trust · Your pelvic health physiotherapy appointment · Page last reviewed: 6 Oct 2026",
+      "limitations": "Local NHS process; durations and booking rules are UK-specific and not copied as WHD policy.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Protective muscle tightening with pain; relaxation recognition is important; physiotherapy can address pelvic muscle behaviour.",
+      "sourceUrl": "https://dynamichealth.nhs.uk/help-and-advice/pelvic-health/female-genital-pain/",
+      "sourceSection": "NHS Dynamic Health · Female genital pain · not stated",
+      "limitations": "UK MSK service page; not a full differential for all pelvic pain.",
+      "reviewerDecision": "accepted"
     }
   ]
 }

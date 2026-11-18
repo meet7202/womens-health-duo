@@ -1,22 +1,20 @@
 {
   "id": "W24-C",
-  "openClinicalQuestions": [
-    "Which laboratory data does Dr. Charmi Shah consider essential for review?",
-    "How should treatment add-on evidence be linked and updated?",
-    "What emotional-support referrals are available and verified?"
-  ],
+  "openClinicalQuestions": [],
   "claimLedger": [
     {
-      "claim": "IVF cycles include several stages whose records can inform a follow-up discussion.",
+      "claim": "Describes IVF stages (stimulation, collection, fertilisation, embryo culture, transfer) and that success depends strongly on age.",
       "sourceUrl": "https://www.hfea.gov.uk/treatments/explore-all-treatments/in-vitro-fertilisation-ivf/",
-      "limitations": "The overview cannot assign a cause to an unsuccessful cycle.",
-      "reviewerDecision": "pending"
+      "sourceSection": "HFEA · In vitro fertilisation (IVF)",
+      "limitations": "Overview cannot assign a cause to an unsuccessful cycle.",
+      "reviewerDecision": "accepted"
     },
     {
-      "claim": "An unsuccessful cycle does not by itself establish a single diagnosis or guarantee that a protocol change will help.",
-      "sourceUrl": "https://www.hfea.gov.uk/treatments/explore-all-treatments/in-vitro-fertilisation-ivf/",
-      "limitations": "A dedicated add-ons source should be added during clinical review if specific add-ons are named.",
-      "reviewerDecision": "pending"
+      "claim": "Most add-ons lack good evidence of improving live birth rates; some carry risks; patients should ask about evidence, risk and cost.",
+      "sourceUrl": "https://www.hfea.gov.uk/treatments/treatment-add-ons/",
+      "sourceSection": "HFEA · Treatment add-ons with evidence ratings",
+      "limitations": "UK regulator ratings; availability and pricing differ in India.",
+      "reviewerDecision": "accepted"
     }
   ]
 }

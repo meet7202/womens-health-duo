@@ -1,0 +1,104 @@
+{
+  "id": "W20-C",
+  "title": "Is It PMS or PMDD, and How Can I Tell?",
+  "seoTitle": "PMS vs PMDD: how can I tell?",
+  "description": "PMDD is a severe premenstrual mood condition. Compare timing with PMS, track two cycles, and use Tele-MANAS or 112 if you have thoughts of self-harm.",
+  "primaryQuestion": "What is the difference between PMS and PMDD?",
+  "directAnswer": "PMS describes physical and mood changes in the days before a period that recur and interfere with normal life. PMDD is a more intense premenstrual condition with severe emotional symptoms—such as depression, hopelessness, marked anxiety, rage or feeling out of control—that can disrupt work, relationships and daily functioning, and may include suicidal thoughts. Timing matters: symptoms cluster in the week or two before bleeding and ease after the period starts. A two-cycle diary helps assessment. Crisis support is separate from routine booking.",
+  "sections": [
+    {
+      "heading": "How PMS and PMDD differ in practice",
+      "paragraphs": [
+        "ACOG defines PMS as month-after-month physical or mood changes before menstruation that affect normal life. Common features include irritability, low mood, breast tenderness, bloating, fatigue and food cravings. NHS period pages similarly describe bloating, breast tenderness, mood swings and irritability that usually improve once bleeding begins.",
+        "NHS describes PMDD as causing severe emotional and physical symptoms, usually starting around one or two weeks before each period and improving a few days after bleeding starts. Emotional features can include feeling depressed or hopeless, anxious, angry or irritable, losing interest in usual activities, feeling overwhelmed, and having suicidal thoughts. Physical features may include breast tenderness, joint or muscle pain, sleep change, tiredness and bloating. Intensity and life impact—not the mere presence of premenstrual irritability—separate PMDD conversations from milder PMS."
+      ]
+    },
+    {
+      "heading": "Why timing and a symptom diary matter",
+      "paragraphs": [
+        "ACOG’s PMS criteria require symptoms in the five days before a period for at least three cycles in a row, ending within four days after bleeding starts, and interfering with some normal activities. NHS notes that a GP may diagnose PMDD when symptoms happen every month in the premenstrual window and have been present for at least two months, and recommends keeping a diary for at least two menstrual cycles.",
+        "Record mood, sleep, anxiety, anger, suicidal thoughts if present, physical symptoms, and period dates daily. Patterns that persist all month point more toward ongoing depression or anxiety—which ACOG notes often overlap with PMS presentations—than toward a purely premenstrual disorder. Thyroid disease and perimenopause can also mimic the picture."
+      ]
+    },
+    {
+      "heading": "Support and treatment categories",
+      "paragraphs": [
+        "NHS lists regular exercise, balanced eating with smaller meals every few hours for some people, sleep, mindfulness, reducing alcohol, and stopping smoking as self-care measures that may ease PMDD symptoms. ACOG similarly highlights aerobic exercise, relaxation methods and dietary pattern changes for PMS.",
+        "Medical categories discussed for PMDD include psychological talking therapies such as cognitive behavioural therapy, SSRI medicines used for mood symptoms, hormonal options such as combined contraception, and pain relief for aches. Surgery that ends ovarian cycles is reserved for selected severe cases when other approaches fail and future pregnancy is not desired. No doses or personal regimens belong in an article—suitability is a clinical decision."
+      ]
+    },
+    {
+      "heading": "Crisis support and urgent physical symptoms",
+      "paragraphs": [
+        "If you have thoughts of harming yourself or feel unable to stay safe, contact India’s Tele-MANAS mental health helpline on 14416 or 1-800-891-4416 (verified on the Ministry of Health Tele-MANAS site), or call emergency services on 112. Do not wait for a routine gynaecology appointment or WhatsApp reply when you are in crisis.",
+        "Seek emergency physical care for fainting with heavy bleeding, sudden severe pelvic pain, or possible-pregnancy complications. For non-crisis but disruptive premenstrual symptoms, a planned visit with Dr. Charmi Shah can review diaries, exclude lookalike conditions and discuss treatment categories with mental-health colleagues when needed."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is PMDD just severe PMS?",
+      "answer": "PMDD sits on the severe end of premenstrual disorders. NHS describes more intense emotional symptoms that can include suicidal thoughts and major disruption to work and relationships. Assessment still needs timed diaries because other mood disorders can look similar."
+    },
+    {
+      "question": "How long should I track symptoms before seeing a doctor?",
+      "answer": "NHS suggests a diary of at least two menstrual cycles for PMDD assessment; ACOG recommends two to three months of daily ratings for PMS pattern confirmation. Seek help sooner if safety is at risk—do not delay crisis care to finish a diary."
+    }
+  ],
+  "references": [
+    {
+      "label": "NHS — PMDD (premenstrual dysphoric disorder)",
+      "url": "https://www.nhs.uk/conditions/pmdd-premenstrual-dysphoric-disorder/"
+    },
+    {
+      "label": "ACOG — Premenstrual Syndrome (PMS) FAQ",
+      "url": "https://www.acog.org/womens-health/faqs/premenstrual-syndrome"
+    },
+    {
+      "label": "Government of India — Tele-MANAS National Tele Mental Health Programme",
+      "url": "https://telemanas.mohfw.gov.in/"
+    }
+  ],
+  "conversionCopy": "If premenstrual mood or physical symptoms are disrupting your months, you can discuss assessment with Dr. Charmi Shah once you are safe.",
+  "explainerAlt": "Two-cycle symptom diary template comparing PMS and PMDD timing across the month.",
+  "storytellingNote": "",
+  "review": {
+    "corrections": [
+      "New rewrite comparing ACOG PMS timing criteria with NHS PMDD intensity features; treatment categories only.",
+      "Verified Tele-MANAS 14416 / 1-800-891-4416 and named India emergency 112; crisis pathway separated from booking CTA."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "NHS",
+        "title": "PMDD (premenstrual dysphoric disorder)",
+        "url": "https://www.nhs.uk/conditions/pmdd-premenstrual-dysphoric-disorder/",
+        "date": "not stated on fetched header",
+        "recommendation": "Severe emotional/physical symptoms 1–2 weeks before period; diary ≥2 cycles; treatments include SSRIs, hormonal options, CBT; lifestyle measures listed.",
+        "passage": "Symptoms of PMDD can be similar to symptoms of PMS (premenstrual syndrome), but are more intense. They can make it difficult to work, socialise and maintain relationships.",
+        "limitations": "UK crisis routes differ; India Tele-MANAS/112 used in article for local readers."
+      },
+      {
+        "organisation": "ACOG",
+        "title": "Premenstrual Syndrome (PMS) FAQ057",
+        "url": "https://www.acog.org/womens-health/faqs/premenstrual-syndrome",
+        "date": "Last updated May 2021; last reviewed November 2025",
+        "recommendation": "PMS diagnostic timing pattern; overlap with depression/anxiety; PMDD as severe form; SSRIs as treatment category for PMDD.",
+        "passage": "be present in the 5 days before a period for at least three menstrual cycles in a row",
+        "limitations": "US FAQ; prescribing details clinician-led."
+      },
+      {
+        "organisation": "Ministry of Health and Family Welfare, Government of India",
+        "title": "Tele-MANAS",
+        "url": "https://telemanas.mohfw.gov.in/",
+        "date": "not stated on fetched homepage",
+        "recommendation": "Toll-free counsellor access via 14416 and 1-800-891-4416.",
+        "passage": "Dial the Toll-Free numbers below to get in touch with our Counsellor 14416 1-800 891 4416",
+        "limitations": "Helpline availability and language options vary by state; not a substitute for emergency 112 when immediate danger."
+      }
+    ],
+    "openQuestions": [
+      "Should WHD co-list a specific local psychiatry pathway alongside Tele-MANAS for Ahmedabad/Mumbai patients?",
+      "Any FOGSI or Indian psychiatric society PMDD leaflet preferred for secondary linking?"
+    ]
+  }
+}

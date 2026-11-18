@@ -388,7 +388,9 @@ function buildGuideModel(row: TopicGuideRow): TopicGuidePageModel {
   const faqs = buildTopicGuideFaqs(row.slug, title, consult, cc.faqPool, row.faqIds);
   const path = publicPathname(`/${row.slug}`);
   const relatedSlugs = computeRelated(row, BY_CLUSTER);
-  const reviewStatus = resolveTopicGuideReviewStatus(row);
+  const reviewerIds = published?.reviewerIds?.length ? published.reviewerIds : undefined;
+  const hold = TOPIC_GUIDE_REVIEW_HOLDS.get(row.slug);
+  const reviewStatus = hold ?? (reviewerIds ? "approved" : resolveTopicGuideReviewStatus(row));
 
   // Unique calendar body only after promote sets publicationStatus to published.
   // Until then, refreshes keep the live cluster/uniqueness scaffold.
@@ -417,6 +419,7 @@ function buildGuideModel(row: TopicGuideRow): TopicGuidePageModel {
     relatedSlugs,
     authorId: published?.authorId ?? row.authorId,
     reviewerId: published?.reviewerId ?? row.reviewerId,
+    reviewerIds,
     publishedAt: published?.publishedAt ?? row.publishedAt,
     updatedAt: published?.updatedAt ?? row.updatedAt,
     reviewedAt: published?.reviewedAt ?? row.reviewedAt,

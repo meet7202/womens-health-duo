@@ -1,0 +1,105 @@
+{
+  "id": "W21-C",
+  "title": "What Happens at the First Fertility Appointment?",
+  "seoTitle": "First fertility appointment: what to expect",
+  "description": "What a first fertility visit usually covers: history for both partners, why tests are chosen case by case, and which records to bring along.",
+  "primaryQuestion": "What happens at the first fertility appointment?",
+  "directAnswer": "A first fertility appointment usually gathers a detailed medical and reproductive history, reviews any records you already have, and plans only the assessments that answer your questions. ACOG’s evaluating-infertility FAQ describes history, examination and then targeted laboratory, imaging or procedural tests—not an automatic full catalogue. ASRM’s 2026 committee opinion likewise frames evaluation as systematic and cost-conscious, covering ovulatory status, the female reproductive tract and semen analysis when a male partner is involved. Walking in does not commit you to IVF.",
+  "sections": [
+    {
+      "heading": "History both people may be asked",
+      "paragraphs": [
+        "ACOG lists questions about menstrual patterns, abnormal bleeding or discharge, pelvic pain, thyroid disease, medicines and herbal products, past infections or surgery, pregnancy outcomes, tobacco, alcohol and drug use, contraception history, how long you have been trying, intercourse frequency or difficulty, and lubricants. Parallel questions apply to a partner’s genital health, ejaculation and prior fertility.",
+        "If you are in a female couple, planning solo parenthood or using donor sperm or eggs, the history is shaped around that route instead, and the months-of-trying rule written for heterosexual sex may not fit. Mention your plan early in the visit. Our guide on when to see a fertility specialist explains age-based timing and reasons to seek help sooner."
+      ]
+    },
+    {
+      "heading": "Categories of assessment, chosen to fit",
+      "paragraphs": [
+        "ASRM summarises that evaluation should include ovulatory status, structure and patency of the female reproductive tract, and semen evaluation of the male partner when relevant. ACOG notes male testing often starts with semen analysis, while female testing may include progesterone timing, selected hormone checks, ultrasound, and tubal or uterine imaging when indicated.",
+        "NICE NG257 also sequences common tools—for example mid-luteal progesterone to support ovulation assessment, and tubal screening methods such as hysterosalpingography when comorbidities are not already known—while advising against routine tests that do not change care. You should leave knowing why each suggested test was picked."
+      ]
+    },
+    {
+      "heading": "Why nobody needs every test on day one",
+      "paragraphs": [
+        "Pace depends on age, how long you have been trying, known conditions and your preferences. ASRM states diagnostic testing should proceed without delay when a condition known to impair fertility is already present, yet also that evaluation should stay systematic and cost-effective, starting with less invasive methods for common causes.",
+        "Ovarian-reserve blood tests such as AMH are adjuncts for counselling in some pathways; they are not a standalone fertility verdict. Our AMH guide explains quantity-versus-quality limits so a single number does not dominate the first visit."
+      ]
+    },
+    {
+      "heading": "Records and questions that help the hour",
+      "paragraphs": [
+        "Helpful items include a simple list of period start dates, previous pregnancy outcomes, surgery notes, medicine names, allergy lists, and any semen or hormone reports already done. Photographs of labels beat guessing spellings. If a partner cannot attend, agree which questions they still need answered afterward.",
+        "Ask what the clinician thinks the main uncertainties are, which tests are first-line for you, what can wait, and what would change the plan if results are normal or abnormal. Seek emergency care for severe pelvic pain with fainting or heavy bleeding that leaves you light-headed—those crises are not first-visit scheduling problems."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Must both partners attend the first visit?",
+      "answer": "When pregnancy involves sperm from a partner, joint history and early semen analysis save time. If schedules clash, send records and plan a follow-up so one person’s factors are not investigated alone for months."
+    },
+    {
+      "question": "Will invasive tests happen on the same day?",
+      "answer": "Often the first visit is conversation and planning. Procedures such as hysteroscopy or laparoscopy are selective, usually after history and simpler tests point to a reason—not a default for every new patient."
+    }
+  ],
+  "references": [
+    {
+      "label": "ACOG — Evaluating Infertility (FAQ136)",
+      "url": "https://www.acog.org/womens-health/faqs/evaluating-infertility"
+    },
+    {
+      "label": "ASRM Practice Committee — Fertility evaluation of infertile women (2026)",
+      "url": "https://www.asrm.org/practice-guidance/practice-committee-documents/fertility-evaluation-of-infertile-women-a-committee-opinion-2026"
+    },
+    {
+      "label": "NICE NG257 — Investigation of fertility problems",
+      "url": "https://www.nice.org.uk/guidance/NG257/chapter/investigation-of-fertility-problems-and-management-strategies"
+    }
+  ],
+  "conversionCopy": "If you are preparing for a first fertility consultation and want help prioritising questions, you can book with Dr. Charmi Shah.",
+  "explainerAlt": "Checklist of history topics and test categories for a first fertility visit.",
+  "storytellingNote": "",
+  "review": {
+    "corrections": [
+      "Removed universal test-panel marketing tone and padded template text.",
+      "Anchored visit content in ACOG FAQ history items and ASRM systematic evaluation domains.",
+      "Linked timing and AMH articles instead of repeating full referral or AMH explanations."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "ACOG",
+        "title": "Evaluating Infertility",
+        "url": "https://www.acog.org/womens-health/faqs/evaluating-infertility",
+        "date": "Published April 2020; last reviewed May 2026",
+        "recommendation": "First visit: detailed history and physical; tests selected afterward; semen analysis for men; female labs/imaging as indicated",
+        "passage": "The first visit with a fertility specialist usually involves a detailed medical history and a physical exam.",
+        "limitations": "US patient FAQ; Indian test availability and insurance rules differ"
+      },
+      {
+        "organisation": "ASRM",
+        "title": "Fertility evaluation of infertile women: a committee opinion (2026)",
+        "url": "https://www.asrm.org/practice-guidance/practice-committee-documents/fertility-evaluation-of-infertile-women-a-committee-opinion-2026",
+        "date": "2026 committee opinion",
+        "recommendation": "Systematic, expeditious, cost-effective evaluation; include ovulation, tract structure/patency, semen; do not delay with known infertility factors",
+        "passage": "The infertility evaluation should include an evaluation of ovulatory status, the structure and patency of the female reproductive tract, and semen evaluation of the male partner.",
+        "limitations": "US society opinion; local sequencing may vary"
+      },
+      {
+        "organisation": "NICE",
+        "title": "NG257 investigation of fertility problems",
+        "url": "https://www.nice.org.uk/guidance/NG257/chapter/investigation-of-fertility-problems-and-management-strategies",
+        "date": "Published 31 March 2026",
+        "recommendation": "Examples of targeted tests (progesterone, tubal screening) and avoidance of non-contributory routine tests",
+        "passage": "Offer women… a blood test to measure serum progesterone in the mid-luteal phase of their cycle (day 21 of a 28-day cycle) to confirm ovulation even if they have regular menstrual cycles.",
+        "limitations": "UK pathway details"
+      }
+    ],
+    "openQuestions": [
+      "Does Dr. Charmi routinely examine both partners at visit one in her Indian clinics, or stagger male testing?",
+      "Any mandatory infection-screening list she wants named before uterine instrumentation?"
+    ]
+  }
+}

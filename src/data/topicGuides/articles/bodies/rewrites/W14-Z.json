@@ -1,0 +1,125 @@
+{
+  "id": "W14-Z",
+  "title": "How do I know if my pelvic floor needs an assessment?",
+  "seoTitle": "When your pelvic floor needs an assessment",
+  "description": "Leakage, heaviness, pain or emptying trouble can justify a pelvic-floor review. Symptoms do not prove weakness—assessment sorts function and next steps.",
+  "primaryQuestion": "How do I know if my pelvic floor is weak?",
+  "directAnswer": "You cannot reliably decide “weak pelvic floor” from a social post or a single symptom. Leakage, urgency, heaviness, bowel difficulty, pelvic pain or painful sex can each justify a conversation with a pelvic-health physiotherapist or doctor, yet the same complaints may reflect underactivity, overactivity, poor timing, tissue support change or a separate medical cause. An assessment is a structured history and, if you consent, examination—not a quiz that awards a weakness score online.",
+  "sections": [
+    {
+      "heading": "Symptom patterns that deserve attention",
+      "paragraphs": [
+        "NICE NG210 expects initial assessment to take a history covering urinary incontinence, bladder emptying problems, faecal incontinence, bowel emptying difficulty, pelvic organ prolapse symptoms, sexual dysfunction and chronic pelvic pain when these may link to pelvic-floor dysfunction. You do not need every item on that list. One persistent problem that changes work, travel, exercise or intimacy is enough reason to ask for help.",
+        "POGP patient advice notes that specialist physiotherapists explore onset, triggers, easing positions, earlier investigations and day-to-day demands from job or hobbies. UH Sussex lists bladder leaks, bowel control changes and painful or altered sex among reasons people attend pelvic-health physiotherapy. Capture those details in your own words before the visit."
+      ]
+    },
+    {
+      "heading": "Why “weakness” is an incomplete label",
+      "paragraphs": [
+        "A floor that cannot generate a strong lift may leak with a sneeze. A floor that cannot relax may also leak, ache or make penetration difficult. NHS Dynamic Health materials on genital pain explain that when pain is present, surrounding muscles often tighten protectively, and that recognising how to release matters for many symptoms. Guessing “I am weak, so I will squeeze harder” can worsen an overactive pattern.",
+        "Our guide on whether Kegels are right for everyone covers why unsupervised challenge routines fail suitability checks. The question here is different: whether your current symptoms are enough to justify a proper review rather than another month of silent self-diagnosis."
+      ]
+    },
+    {
+      "heading": "What a physiotherapist actually looks at",
+      "paragraphs": [
+        "History comes first: bladder and bowel diaries, obstetric background, surgeries, medicines, and goals such as returning to running or sitting through a workday. With consent, a vaginal or rectal examination may assess contraction, relaxation, coordination and tenderness. POGP states you may decline examination, take time to decide, or ask for a chaperone, and that declining does not automatically remove access to helpful treatment.",
+        "NICE NG210 community-team competencies include digital assessment of contraction and relaxation and supervising training programmes. Watching how you breathe, stand and handle a sneeze or pick-up can still shape advice when an internal exam is declined. Video visits can cover education and movement screening; they cannot replace hands-on internal assessment."
+      ]
+    },
+    {
+      "heading": "A simple record to bring with you",
+      "paragraphs": [
+        "Note drinks, toilet frequency, urgency, leaks, stool consistency, straining, pelvic pain scores, and activities you have stopped. Add pregnancies, births, tears, menopause status and any prior pelvic scans or surgeries. Two or three ordinary days of notes usually beat a perfect spreadsheet.",
+        "List questions you want answered: Is strengthening appropriate? Do I need medical tests first? What can I do while waiting? Our guide to a first physiotherapy session explains consent and examination choices in more detail."
+      ]
+    },
+    {
+      "heading": "When medical review should come first",
+      "paragraphs": [
+        "NICE NG210 asks clinicians to exclude other causes such as pelvic masses, neurological disease, urinary infection, medication effects, diabetes, cancer red flags, fistula, inflammatory bowel or bladder disease, endometriosis, and mobility or cognitive issues when history suggests them. Visible blood in urine, fever with pelvic pain, sudden retention, or brand-new incontinence paired with genital-area numbness or weak legs need urgent medical care—not a routine physio slot.",
+        "Dr. Zalak Shah (PT) works within a physiotherapy lane: function, load management and supervised training. Suspected infection, masses or complex gynaecological disease need a doctor. Coordination with Dr. Charmi Shah is appropriate when medical differentials sit alongside pelvic-floor symptoms."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "If I leak, does that automatically mean my pelvic floor is weak?",
+      "answer": "No. Leakage has several mechanisms, including stress-related control problems, urgency, incomplete emptying and mixed patterns. Strength, timing, relaxation and medical factors all need sorting before a squeeze routine is prescribed."
+    },
+    {
+      "question": "Can I assess myself at home with a finger test?",
+      "answer": "Some educational resources describe feeling a squeeze, but home checks cannot safely diagnose weakness, overactivity or prolapse. They also risk frustration or injury if pain is present. Use notes for your clinician instead of self-grading."
+    }
+  ],
+  "references": [
+    {
+      "label": "NICE — NG210 Pelvic floor dysfunction: prevention and non-surgical management (Recommendations)",
+      "url": "https://www.nice.org.uk/guidance/ng210/chapter/Recommendations"
+    },
+    {
+      "label": "POGP — Physiotherapy Assessment",
+      "url": "https://thepogp.co.uk/patients/pelvic_health_advice/physiotherapy_assessment.aspx"
+    },
+    {
+      "label": "University Hospitals Sussex NHS Foundation Trust — Your pelvic health physiotherapy appointment",
+      "url": "https://www.uhsussex.nhs.uk/resources/your-pelvic-health-physiotherapy-appointment/"
+    },
+    {
+      "label": "NHS Dynamic Health — Female genital pain",
+      "url": "https://dynamichealth.nhs.uk/help-and-advice/pelvic-health/female-genital-pain/"
+    }
+  ],
+  "conversionCopy": "If pelvic symptoms are disrupting daily life and you want a functional assessment, you can book with Dr. Zalak Shah (PT).",
+  "explainerAlt": "Symptom categories that can help prepare for a pelvic health assessment.",
+  "storytellingNote": "",
+  "review": {
+    "corrections": [
+      "New rewrite reframes the weak-floor search query as an assessment decision, not a self-diagnosis of weakness.",
+      "Used NICE NG210 history domains and exclusion list; POGP/UH Sussex consent language for examination choice.",
+      "Avoided publishing self-treatment or internal self-exam instructions."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "NICE",
+        "title": "NG210 Pelvic floor dysfunction — Recommendations",
+        "url": "https://www.nice.org.uk/guidance/ng210/chapter/Recommendations",
+        "date": "Published 9 December 2021",
+        "recommendation": "Primary-care/physio initial history should cover UI, emptying disorders, faecal incontinence, prolapse, sexual dysfunction and chronic pelvic pain; exclude other medical causes; digital assessment of contraction/relaxation is a listed competency.",
+        "passage": "At initial assessment in primary care (which may include assessments by physiotherapists, bladder and bowel team members and continence advisors), take a general history from the woman about current and past symptoms or disorders associated with pelvic floor dysfunction",
+        "limitations": "UK team structures; Indian clinics may organise assessment differently."
+      },
+      {
+        "organisation": "POGP",
+        "title": "Physiotherapy Assessment",
+        "url": "https://thepogp.co.uk/patients/pelvic_health_advice/physiotherapy_assessment.aspx",
+        "date": "not stated",
+        "recommendation": "Detailed symptom history; optional vaginal/rectal exam with consent; right to decline and still receive treatment when appropriate.",
+        "passage": "You may prefer not to have an examination at all, and you have the right to decline and does not mean you will not be offered treatment if the physiotherapist feels it will help you.",
+        "limitations": "UK professional body patient page."
+      },
+      {
+        "organisation": "University Hospitals Sussex NHS Foundation Trust",
+        "title": "Your pelvic health physiotherapy appointment",
+        "url": "https://www.uhsussex.nhs.uk/resources/your-pelvic-health-physiotherapy-appointment/",
+        "date": "Page last reviewed: 6 Oct 2026",
+        "recommendation": "Lists bladder, bowel and sexual dysfunction symptoms; consent required for internal exam; chaperone available.",
+        "passage": "You do not have to have an internal examination if you would prefer not to and are free to say that you do not want one. You can still have treatment if you do not want an internal examination.",
+        "limitations": "Local NHS process; durations and booking rules are UK-specific and not copied as WHD policy."
+      },
+      {
+        "organisation": "NHS Dynamic Health",
+        "title": "Female genital pain",
+        "url": "https://dynamichealth.nhs.uk/help-and-advice/pelvic-health/female-genital-pain/",
+        "date": "not stated",
+        "recommendation": "Protective muscle tightening with pain; relaxation recognition is important; physiotherapy can address pelvic muscle behaviour.",
+        "passage": "Naturally, when pain is present, the muscles around the area try to protect it by tightening up.",
+        "limitations": "UK MSK service page; not a full differential for all pelvic pain."
+      }
+    ],
+    "openQuestions": [
+      "Which symptom diary template does Dr. Zalak prefer patients to complete before a first visit?",
+      "When should WHD insist on same-week medical review versus physiotherapy-first triage?"
+    ]
+  }
+}

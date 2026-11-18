@@ -1,22 +1,29 @@
 {
   "id": "W07-Z",
   "openClinicalQuestions": [
-    "Which daily-task adaptations does Dr. Zalak demonstrate?",
-    "Which obstetric warning symptoms should Dr. Charmi prioritise?",
-    "How should PGP versus lumbar pain be explained without self-diagnosis?"
+    "Dr. Charmi: confirm preferred patient-facing list for early-pregnancy back/pelvic pain with bleeding versus later-pregnancy labour-related back pain wording for Indian readers."
   ],
   "claimLedger": [
     {
-      "claim": "Back pain is common in pregnancy and may be supported with activity and movement advice.",
-      "sourceUrl": "https://www.nhs.uk/pregnancy/common-symptoms/back-pain/",
-      "limitations": "General guidance; it does not exclude obstetric, urinary or neurological causes.",
-      "reviewerDecision": "pending"
+      "claim": "Lifting with bent knees/straight back; avoid heavy loads; flat shoes; supported sitting; rest; urgent contact for fever/bleeding/painful peeing/side pain; emergency for loss of feeling in legs/bum/genitals.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/related-conditions/common-symptoms/back-pain/",
+      "sourceSection": "NHS · Back pain in pregnancy · Page last reviewed 10 January 2024",
+      "limitations": "UK advice; paracetamol note is UK OTC guidance—confirm locally",
+      "reviewerDecision": "accepted"
     },
     {
-      "claim": "Pregnancy-related pelvic pain can affect movement and may benefit from assessment.",
+      "claim": "Pillow between legs in bed; supportive shoes; keep active but avoid aggravating tasks; physio may suggest support belt.",
       "sourceUrl": "https://www.nhs.uk/pregnancy/common-symptoms/pelvic-pain/",
-      "limitations": "Pain location alone cannot establish pelvic girdle pain.",
-      "reviewerDecision": "pending"
+      "sourceSection": "NHS · Pelvic pain in pregnancy · Page last reviewed 12 December 2022",
+      "limitations": "PGP-focused page; overlaps with backache",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Side-lying preferred; pillow between legs; support bump.",
+      "sourceUrl": "https://www.nhs.uk/best-start-in-life/pregnancy/week-by-week-guide-to-pregnancy/2nd-trimester/week-27/",
+      "sourceSection": "NHS Best Start in Life · Week 27 — best sleeping positions during pregnancy · not stated on fetched page",
+      "limitations": "General pregnancy sleep tips; stillbirth risk wording relates to later pregnancy back-sleeping research",
+      "reviewerDecision": "accepted"
     }
   ]
 }

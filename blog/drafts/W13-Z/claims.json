@@ -1,22 +1,30 @@
 {
   "id": "W13-Z",
   "openClinicalQuestions": [
-    "Which functional outcomes does Dr. Zalak routinely track?",
-    "How should expected postpartum tissue change be described without a deadline?",
-    "Which hernia features need Dr. Charmi’s review?"
+    "Dr. Zalak: confirm preferred patient-facing wording when citing NHS ‘usually by 8 weeks’ so it remains an attributed UK statement without sounding like a WHD recovery deadline.",
+    "Clinician review: whether to mention Cleveland Clinic’s >2 cm threshold at all in India-facing copy, or keep width talk qualitative only."
   ],
   "claimLedger": [
     {
-      "claim": "Tummy-muscle separation may change after pregnancy and can be supported with individual physiotherapy.",
+      "claim": "Defines DRAM; common in pregnancy/after birth (up to 60%); seek women’s health physio; graded core work, posture and lifestyle advice; avoid early sit-ups/crunches/plank.",
       "sourceUrl": "https://thepogp.co.uk/patient_information/womens_health/tummy_muscle_separation.aspx",
-      "limitations": "The source does not support guaranteed closure or a fixed recovery time.",
-      "reviewerDecision": "pending"
+      "sourceSection": "POGP · Tummy muscle separation (DRAM) in pregnancy · not stated",
+      "limitations": "UK patient leaflet; symptom lists are not diagnostic criteria",
+      "reviewerDecision": "accepted"
     },
     {
-      "claim": "Diastasis management may consider symptoms and function as well as separation.",
+      "claim": "Separation usually returns toward normal by about 8 weeks; if still obvious then, contact GP for possible physio referral; avoid early sit-ups/planks/high-impact.",
+      "sourceUrl": "https://www.nhs.uk/conditions/baby/support-and-services/your-post-pregnancy-body/",
+      "sourceSection": "NHS · Your post-pregnancy body · not stated on fetched page",
+      "limitations": "UK guidance; not a guarantee for every person; Indian follow-up timing may differ",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "May improve on its own depending on severity and steps taken; never too late to work on with proper exercises; binders do not heal diastasis.",
       "sourceUrl": "https://my.clevelandclinic.org/health/diseases/22346-diastasis-recti",
-      "limitations": "General overview; outcomes vary.",
-      "reviewerDecision": "pending"
+      "sourceSection": "Cleveland Clinic · Diastasis Recti · Last updated on 04/21/2025",
+      "limitations": "US patient education; uses finger/cm thresholds that should not become home diagnosis rules here",
+      "reviewerDecision": "accepted"
     }
   ]
 }

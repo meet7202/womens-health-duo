@@ -1,28 +1,30 @@
 {
   "id": "W19-Z",
   "openClinicalQuestions": [
-    "What is Dr. Zalak Shah’s verified prenatal appointment process?",
-    "Which concerns are accepted online versus in person?",
-    "Which obstetric escalation wording does Dr. Charmi Shah approve?"
+    "Dr. Zalak: confirm current online versus in-person prenatal physio intake steps to list on the service page.",
+    "Whether WHD wants a printable pre-appointment checklist attached later."
   ],
   "claimLedger": [
     {
-      "claim": "Activity in pregnancy should be adapted to symptoms and medical advice.",
-      "sourceUrl": "https://www.nhs.uk/pregnancy/keeping-well/exercise/",
-      "limitations": "General guidance does not provide individual clearance.",
-      "reviewerDecision": "pending"
-    },
-    {
-      "claim": "Pelvic health physiotherapy assessment begins with history and may include consent-based examination.",
+      "claim": "Details history, musculoskeletal assessment for PGP/LBP, optional internal exam with consent/chaperone/right to decline, shared treatment planning, escalation to GP if not PGP/LBP.",
       "sourceUrl": "https://thepogp.co.uk/patients/pelvic_health_advice/physiotherapy_assessment.aspx",
-      "limitations": "The clinic’s exact process remains to be confirmed.",
-      "reviewerDecision": "pending"
+      "sourceSection": "POGP · Physiotherapy Assessment · not stated on fetched page",
+      "limitations": "UK professional patient page; clinic processes in India may vary in diary tools and chaperone logistics.",
+      "reviewerDecision": "accepted"
     },
     {
-      "claim": "Pregnancy-related pelvic pain can warrant assessment and practical management.",
+      "claim": "May be referred to physiotherapy specialising in obstetric pelvic joint problems; physio aims to ease pain and improve stability.",
       "sourceUrl": "https://www.nhs.uk/pregnancy/common-symptoms/pelvic-pain/",
-      "limitations": "This does not exclude obstetric or other medical causes.",
-      "reviewerDecision": "pending"
+      "sourceSection": "NHS · Pelvic pain in pregnancy · Page last reviewed: 12 December 2022",
+      "limitations": "UK referral wording; private self-referral common in Indian urban practice.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Exercise is generally safe in pregnancy with listed cautions; tell instructors you are pregnant; stop if unwell.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/keeping-well/exercise/",
+      "sourceSection": "NHS · Exercise in pregnancy · Media last reviewed: 3 February 2026",
+      "limitations": "General activity advice—not a substitute for physio assessment when symptomatic.",
+      "reviewerDecision": "accepted"
     }
   ]
 }

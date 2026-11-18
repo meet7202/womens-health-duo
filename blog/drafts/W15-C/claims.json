@@ -1,22 +1,23 @@
 {
   "id": "W15-C",
   "openClinicalQuestions": [
-    "Which protocol-neutral monitoring details should remain in the final copy?",
-    "What local after-hours route should IVF patients use for urgent symptoms?",
-    "Which outcome denominators does Dr. Charmi Shah want patients to ask clinics for?"
+    "Which stimulation protocol names does Dr. Charmi want listed for Indian patients beyond long vs antagonist?",
+    "Any India-specific OHSS admission thresholds she wants mentioned beyond HFEA symptom list?"
   ],
   "claimLedger": [
     {
-      "claim": "IVF commonly includes stimulation, monitoring, egg retrieval, laboratory fertilisation and embryo transfer or freezing.",
+      "claim": "IVF fertilises outside the body; typical stages stimulation–collection–lab–transfer; embryos cultured 2–6 days; cycle often 3–6 weeks; freeze surplus embryos; risks include OHSS, multiples, ectopic",
       "sourceUrl": "https://www.hfea.gov.uk/treatments/explore-all-treatments/in-vitro-fertilisation-ivf/",
-      "limitations": "The HFEA describes UK practice; individual protocols and Indian regulation may differ.",
-      "reviewerDecision": "pending"
+      "sourceSection": "HFEA · In vitro fertilisation (IVF) · Publication date listed 9 March 2016; page content fetched this session",
+      "limitations": "UK regulator patient information; Indian clinic protocols and costs differ",
+      "reviewerDecision": "accepted"
     },
     {
-      "claim": "An IVF pathway and timing vary between patients and cycles.",
-      "sourceUrl": "https://www.hfea.gov.uk/treatments/explore-all-treatments/in-vitro-fertilisation-ivf/",
-      "limitations": "The source cannot predict this clinic’s protocol or an individual outcome.",
-      "reviewerDecision": "pending"
+      "claim": "OHSS symptoms include swollen painful stomach, nausea/vomiting, shortness of breath, faintness, reduced urine; contact clinic; multiples and ectopic are key risks",
+      "sourceUrl": "https://www.hfea.gov.uk/treatments/explore-all-treatments/risks-of-fertility-treatment/",
+      "sourceSection": "HFEA · Risks of fertility treatment · Publication date listed 7 April 2016; page content fetched this session",
+      "limitations": "UK clinic contact pathways; use local emergency services for severe breathing or chest symptoms in India",
+      "reviewerDecision": "accepted"
     }
   ]
 }

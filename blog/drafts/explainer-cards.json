@@ -1,0 +1,317 @@
+{
+  "note": "Google Images click hooks for watermarked SVG explainers. Exactly 4 short lines per article. Each line must be answered in the matching article body (section or FAQ). Prefer answer-forward search intent over abstract H2 labels. Keep each line ≤40 characters so SVG cards do not truncate.",
+  "articles": {
+    "W01-C": [
+      "What counts as an irregular period?",
+      "Stress, life stage or something else?",
+      "What should I track before a visit?",
+      "When does bleeding need urgent care?"
+    ],
+    "W01-Z": [
+      "Why cough or exercise causes leaks",
+      "Stress leak vs sudden urge to pee",
+      "What conservative care can include",
+      "When bladder leaks need medical help"
+    ],
+    "W02-C": [
+      "What PCOS is—and why PMOS appears",
+      "How adult PCOS/PMOS is diagnosed",
+      "Why teens are assessed differently",
+      "Can AMH diagnose PCOS by itself?"
+    ],
+    "W02-Z": [
+      "Is exercise safe in pregnancy?",
+      "How hard should workouts feel?",
+      "Activities to favour or avoid",
+      "Warning signs to stop and call"
+    ],
+    "W03-C": [
+      "What a preconception review covers",
+      "Folic acid and priority prep steps",
+      "What you do not need by default",
+      "Should your partner join the visit?"
+    ],
+    "W03-Z": [
+      "What can start soon after birth?",
+      "Does a 6-week check mean run again?",
+      "How birth type changes the pace",
+      "When to pause or seek urgent care"
+    ],
+    "W04-C": [
+      "Predicting vs confirming ovulation",
+      "LH kits, mucus, apps—compared",
+      "Do irregular cycles break tracking?",
+      "When tracking is not enough"
+    ],
+    "W04-Z": [
+      "What diastasis recti actually is",
+      "Is a wider gap always worse?",
+      "What a physio assesses in clinic",
+      "When a bulge needs urgent care"
+    ],
+    "W05-C": [
+      "Can PCOS exist with regular periods?",
+      "Skin, hair and metabolic clues",
+      "Does ultrasound alone diagnose it?",
+      "When assessment is worth booking"
+    ],
+    "W05-Z": [
+      "What STOTT Pilates refers to",
+      "Mat vs Reformer—key differences",
+      "What a first session involves",
+      "Class fitness vs physiotherapy"
+    ],
+    "W06-C": [
+      "When period pain is too much",
+      "Primary vs secondary period pain",
+      "Normal scan ≠ no endometriosis",
+      "When pelvic pain needs urgent care"
+    ],
+    "W06-Z": [
+      "Are Kegels right for everyone?",
+      "Why relaxation matters too",
+      "What if squeezing hurts?",
+      "Stop mid-stream? Usually no"
+    ],
+    "W07-C": [
+      "Yes—many people with PCOS conceive",
+      "Ovulation is often the main barrier",
+      "Partner testing still matters",
+      "When not to wait a full year"
+    ],
+    "W07-Z": [
+      "Comfort steps for pregnancy backache",
+      "What physio can add beyond rest",
+      "Should I stop all activity?",
+      "Red flags that need prompt care"
+    ],
+    "W08-C": [
+      "Under 35? Assess after ~12 months",
+      "Age 35+? Check after ~6 months",
+      "Irregular cycles? Don’t wait a year",
+      "First visit is not starting IVF"
+    ],
+    "W08-Z": [
+      "Early mobility after a C-section",
+      "When graded rehab usually starts",
+      "Scar care timing—what to ask",
+      "Wound, infection and clot warnings"
+    ],
+    "W09-C": [
+      "Start folic acid before conception",
+      "Usual dose and how long to continue",
+      "When a higher dose may be discussed",
+      "Already pregnant? Don’t double doses"
+    ],
+    "W09-Z": [
+      "What a gentle self-check can show",
+      "What finger-width cannot prove",
+      "Stop signs during a home check",
+      "When a lump needs urgent care"
+    ],
+    "W10-C": [
+      "When heavy periods need review",
+      "Do clots always mean a problem?",
+      "What history and tests may cover",
+      "Will I always need a scan?"
+    ],
+    "W10-Z": [
+      "What the pelvic floor supports",
+      "More than “just after childbirth”",
+      "Leakage, support and coordination",
+      "When symptoms need assessment"
+    ],
+    "W11-C": [
+      "What AMH measures—and what it skips",
+      "Low AMH ≠ poor egg quality alone",
+      "High AMH ≠ guaranteed fertility",
+      "When AMH should not decide IVF"
+    ],
+    "W11-Z": [
+      "PGP vs ordinary pregnancy backache",
+      "Daily-task changes that can help",
+      "Will pelvic girdle pain harm baby?",
+      "When pain needs urgent review"
+    ],
+    "W12-C": [
+      "Lifestyle helps—does not “cure” PCOS",
+      "Food, movement, sleep without rigid rules",
+      "Is there one PCOS diet?",
+      "When medical follow-up still matters"
+    ],
+    "W12-Z": [
+      "Why leaks are common after birth",
+      "Caesarean births can leak too",
+      "Who can help—and what to note",
+      "Don’t wait for a 6-week check alone"
+    ],
+    "W13-C": [
+      "Confirm the test, then book care",
+      "First calls and early appointments",
+      "What if the pregnancy was unplanned?",
+      "Urgent symptoms after a positive test"
+    ],
+    "W13-Z": [
+      "Can diastasis improve with time?",
+      "Gap size ≠ full recovery",
+      "What physiotherapy can add",
+      "Is it too late months or years later?"
+    ],
+    "W14-C": [
+      "Pain patterns that raise concern",
+      "Can endometriosis hide on scans?",
+      "How suspected endo is assessed",
+      "Surgery is not always day-one"
+    ],
+    "W14-Z": [
+      "Leakage does not prove “weak floor”",
+      "Symptoms worth a physio review",
+      "What assessment can check",
+      "Home finger tests have limits"
+    ],
+    "W15-C": [
+      "IVF stages from start to transfer",
+      "Why every cycle calendar differs",
+      "Is ICSI the same as IVF?",
+      "Questions before you commit"
+    ],
+    "W15-Z": [
+      "Do workouts change each trimester?",
+      "Effort cues that still make sense",
+      "When to stop long flat-lying work",
+      "Symptoms that change the plan"
+    ],
+    "W16-C": [
+      "How PCOS links to insulin resistance",
+      "Lean people can still be affected",
+      "Dark skin folds ≠ proof alone",
+      "What to discuss at assessment"
+    ],
+    "W16-Z": [
+      "No single postpartum finish line",
+      "6 weeks ≠ fully recovered",
+      "Areas of recovery to track",
+      "When earlier help is needed"
+    ],
+    "W17-C": [
+      "Negative test + late period: next steps",
+      "Can pregnancy still be possible?",
+      "When to retest or see a clinician",
+      "Other common reasons periods delay"
+    ],
+    "W17-Z": [
+      "Core recovery is more than sit-ups",
+      "Breathing and load come first",
+      "Gap can remain while function improves",
+      "Symptoms that change the plan"
+    ],
+    "W18-C": [
+      "How IUI and IVF each work",
+      "Monitoring and day-to-day burden",
+      "Is IUI always tried before IVF?",
+      "What to ask before choosing"
+    ],
+    "W18-Z": [
+      "Match the leakage type first",
+      "What supervised physio may include",
+      "Realistic goals and timelines",
+      "When surgery talk belongs later"
+    ],
+    "W19-C": [
+      "Not only “morning” sickness",
+      "Self-care steps often tried first",
+      "When nausea needs assessment",
+      "Urgent signs beyond ordinary nausea"
+    ],
+    "W19-Z": [
+      "What prenatal physio can help with",
+      "Different from a general fitness class",
+      "Pain is not the only reason to book",
+      "When obstetric care comes first"
+    ],
+    "W20-C": [
+      "PMS vs PMDD—how they differ",
+      "Why a symptom diary matters",
+      "How long to track before a visit",
+      "Crisis support vs routine review"
+    ],
+    "W20-Z": [
+      "Why backs ache after pregnancy",
+      "Feeding and carrying load tips",
+      "Epidural is rarely the cause",
+      "When postpartum pain needs help"
+    ],
+    "W21-C": [
+      "What history both partners share",
+      "Must both people attend day one?",
+      "Why not every test happens first",
+      "Records that make the hour useful"
+    ],
+    "W21-Z": [
+      "What makes a prenatal class appropriate",
+      "Can I stay in my usual Pilates class?",
+      "Positions that often need changing",
+      "When to stop and get checked"
+    ],
+    "W22-C": [
+      "What “egg quality” usually means",
+      "Low AMH ≠ poor-quality eggs alone",
+      "Supplements cannot make eggs younger",
+      "Habits that help—and their limits"
+    ],
+    "W22-Z": [
+      "What breathing can prepare you for",
+      "How a birth partner can help",
+      "Breathing beside other pain relief",
+      "Can breathing replace an epidural?"
+    ],
+    "W23-C": [
+      "Emergency bleeding signs—go now",
+      "Does spotting always mean miscarriage?",
+      "Same-day call for lighter bleeding",
+      "What assessment may involve"
+    ],
+    "W23-Z": [
+      "Painful sex deserves a proper review",
+      "Not always a “tight pelvic floor”",
+      "When physio may fit the plan",
+      "Exam choices are always consensual"
+    ],
+    "W24-C": [
+      "One failed cycle ≠ IVF never works",
+      "Records worth requesting next",
+      "How long before another cycle?",
+      "Questions on add-ons and next steps"
+    ],
+    "W24-Z": [
+      "No universal 4-week start date",
+      "Symptoms that change readiness",
+      "How classes can be adapted",
+      "Limits of jumping back to advanced"
+    ],
+    "W25-C": [
+      "Perimenopause vs menopause",
+      "Common first symptoms—and how they vary",
+      "Do you need a hormone blood test?",
+      "Can you still get pregnant?"
+    ],
+    "W25-Z": [
+      "Bulge or heaviness—what it can mean",
+      "Home “stage” checks are unreliable",
+      "Care options clinicians may discuss",
+      "Where pelvic physio can fit"
+    ],
+    "W26-C": [
+      "What HRT is trying to treat",
+      "Option categories—not a prescription",
+      "Patches vs tablets: clot risk questions",
+      "Vaginal oestrogen ≠ systemic HRT"
+    ],
+    "W26-Z": [
+      "What to prepare before you arrive",
+      "Internal exam is not automatic",
+      "Consent, chaperones and choices",
+      "Online visit vs in-person care"
+    ]
+  }
+}

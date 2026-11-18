@@ -1,0 +1,133 @@
+{
+  "id": "W08-C",
+  "title": "When Should I See a Fertility Specialist?",
+  "seoTitle": "When to see a fertility specialist",
+  "description": "ASRM timing by age, reasons to seek help sooner, both-partner semen analysis, and why a first visit is not an IVF commitment—or an AMH verdict.",
+  "primaryQuestion": "How long should I try before seeing a fertility specialist?",
+  "directAnswer": "How long to try before a fertility assessment depends on age and whether either partner already has a factor that can impair conception. The ASRM 2026 committee opinion advises evaluation after about 12 months of regular unprotected intercourse when the female partner is under 35, after about 6 months from age 35, and more immediate evaluation may be warranted after 40—or straight away with a known infertility-related condition. A first consultation explains options; it does not commit anyone to IVF.",
+  "explainerCards": [
+    "Under 35? Assess after ~12 months",
+    "Age 35+? Check after ~6 months",
+    "Irregular cycles? Don’t wait a year",
+    "First visit is not starting IVF"
+  ],
+  "sections": [
+    {
+      "heading": "Under 35 or 35+: how long to try first",
+      "paragraphs": [
+        "ASRM’s 2026 fertility-evaluation committee opinion states that when couples have regular unprotected intercourse and no known cause of impaired fertility, evaluation should begin at 12 months if the female partner is younger than 35, and at 6 months if she is 35 or older. In women older than 40, more immediate evaluation and treatment may be warranted.",
+        "“Trying” assumes opportunity: roughly regular ovulation chances and intercourse (or insemination) without long gaps that remove those chances. If periods are missing or highly irregular, the usual month-count is a poor fit—you may not be releasing eggs often enough for another quiet year to mean much. Ovulation-tracking details belong in our ovulation tracking guide."
+      ]
+    },
+    {
+      "heading": "Irregular cycles and other reasons not to wait a year",
+      "paragraphs": [
+        "ASRM advises starting diagnostic testing without delay when a condition known to cause infertility is already present. Examples in that opinion include irregular cycles outside roughly 25–35 days, intermenstrual bleeding, absent periods, known or suspected uterine or tubal disease or endometriosis, known or suspected male subfertility, sexual dysfunction, and prior chemotherapy or radiation. Recurrent pregnancy loss also warrants targeted evaluation rather than watching a trying-duration clock alone.",
+        "Recurrent pregnancy loss is a separate clinical pathway from “how long have we been trying.” The ESHRE 2022 guideline defines recurrent pregnancy loss as the loss of two or more pregnancies (excluding ectopic and molar pregnancies). If that is your history, say so clearly so care is not delayed while someone restarts a 12-month timer meant for a different problem."
+      ]
+    },
+    {
+      "heading": "Should both partners be assessed together?",
+      "paragraphs": [
+        "When a male partner is contributing to pregnancy, ASRM recommends beginning evaluation of both partners at the same time, including a reproductive and medical history and at least one semen analysis early in the work-up. Testing both partners together avoids months of investigating one person while a sperm-related factor goes unnoticed.",
+        "Same-sex couples, single parents by choice and people using donor gametes still need clear pathways; timing then centres on available options and known medical factors rather than a heterosexual month-count alone. Tell your clinician which route you are using so advice fits."
+      ]
+    },
+    {
+      "heading": "Is a first fertility visit the same as starting IVF?",
+      "paragraphs": [
+        "Expect history, examination planning and a discussion of which tests answer your questions—ovulation, uterine or tubal factors, and semen findings where relevant. Many first visits clarify next steps without starting IVF. Ask what each test can and cannot show, and what would make treatment rather than more waiting the wiser choice.",
+        "Anti-Müllerian hormone (AMH) measures aspects of ovarian reserve related to oocyte quantity. ASRM’s committee opinion on ovarian-reserve testing states that markers of ovarian reserve test quantity, not quality, of the remaining oocyte pool, and that they should not be used as a standalone fertility test for women with unproven fertility or to deny treatment. NICE NG257 likewise advises against using AMH as a predictor of clinical pregnancy through spontaneous conception. See our AMH and fertility guide for that detail—AMH alone should not decide whether you “can” conceive naturally."
+      ]
+    },
+    {
+      "heading": "Urgent care versus a fertility booking",
+      "paragraphs": [
+        "Go straight to hospital emergency services for severe pelvic pain with collapse, severe one-sided pain or fainting when you could be pregnant, or heavy bleeding that leaves you light-headed. Those presentations can signal acute problems such as ectopic pregnancy; they are not managed by bringing forward a routine infertility slot.",
+        "Schedule a fertility discussion when your trying interval matches your age band, when bleeds are missing or chaotic, or when known risks make early testing sensible. Bring cycle dates, prior reports and partner history where relevant."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Does a first fertility visit mean we are starting IVF?",
+      "answer": "No. A first consultation is for history, examination planning and choosing proportionate tests. Many couples leave with a timed investigation plan or expectant advice. IVF is one possible later option when indicated—not the automatic next step after walking through the door."
+    },
+    {
+      "question": "We had two miscarriages—do we still wait a year of trying?",
+      "answer": "Recurrent pregnancy loss is assessed on a different pathway. ESHRE defines it as two or more pregnancy losses. Tell your clinician that history so evaluation is not delayed by applying a trying-duration rule meant for a different problem."
+    }
+  ],
+  "references": [
+    {
+      "label": "ASRM Practice Committee — Fertility evaluation of infertile women: a committee opinion (2026)",
+      "url": "https://www.asrm.org/practice-guidance/practice-committee-documents/fertility-evaluation-of-infertile-women-a-committee-opinion-2026"
+    },
+    {
+      "label": "ASRM Practice Committee — Testing and interpreting measures of ovarian reserve: a committee opinion (2020)",
+      "url": "https://www.asrm.org/practice-guidance/practice-committee-documents/testing-and-interpreting-measures-of-ovarian-reserve-a-committee-opinion-2020/"
+    },
+    {
+      "label": "ESHRE — Guideline on recurrent pregnancy loss (2022 update)",
+      "url": "https://www.eshre.eu/Guidelines-and-Legal/Guidelines/Recurrent-Pregnancy-Loss.aspx"
+    },
+    {
+      "label": "NICE NG257 — Fertility problems (AMH not for predicting spontaneous conception)",
+      "url": "https://www.nice.org.uk/guidance/NG257/chapter/investigation-of-fertility-problems-and-management-strategies"
+    }
+  ],
+  "conversionCopy": "If you are unsure whether your trying interval or history warrants assessment now, you can discuss timing with Dr. Charmi Shah.",
+  "explainerAlt": "Under 35 try about 12 months, 35+ about 6 months; irregular cycles mean do not wait a year; a first visit is not starting IVF.",
+  "storytellingNote": "",
+  "review": {
+    "corrections": [
+      "Removed illustrative delay anecdote and padded relationship/insurance filler.",
+      "Stated ASRM 2026 12-month / 6-month / >40 thresholds and earlier assessment with known factors.",
+      "Added both-partner semen analysis from the start; clarified first visit is not an IVF commitment.",
+      "Separated recurrent pregnancy loss (ESHRE ≥2 losses) from trying-duration pathway.",
+      "Corrected AMH framing using ASRM ovarian-reserve opinion and NICE NG257—not egg quality or standalone natural-pregnancy predictor; linked AMH article."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "ASRM",
+        "title": "Fertility evaluation of infertile women: a committee opinion (2026)",
+        "url": "https://www.asrm.org/practice-guidance/practice-committee-documents/fertility-evaluation-of-infertile-women-a-committee-opinion-2026",
+        "date": "2026 committee opinion (Fertil Steril DOI listed by ASRM)",
+        "recommendation": "Evaluate at 12 months if female partner <35, at 6 months if ≥35; more immediate if >40; no delay with known infertility-related conditions; include semen evaluation; parallel male evaluation when applicable",
+        "passage": "evaluation should be initiated at 12 months when the female partner is <35 years of age and at 6 months when the female partner is ≥35 years of age or older. … In women >40 years of age, more immediate evaluation and treatment may be warranted",
+        "limitations": "US society opinion; local referral pathways in India may use different service names"
+      },
+      {
+        "organisation": "ASRM",
+        "title": "Testing and interpreting measures of ovarian reserve: a committee opinion (2020)",
+        "url": "https://www.asrm.org/practice-guidance/practice-committee-documents/testing-and-interpreting-measures-of-ovarian-reserve-a-committee-opinion-2020/",
+        "date": "2020 committee opinion",
+        "recommendation": "Ovarian reserve tests reflect oocyte quantity not quality; should not be used as a fertility test for women with unproven fertility",
+        "passage": "ovarian reserve testing is testing only quantity, not quality, of the remaining oocyte pool.",
+        "limitations": "Does not replace age-based counselling; weak link to pregnancy outcomes"
+      },
+      {
+        "organisation": "ESHRE",
+        "title": "Guideline on recurrent pregnancy loss (2022 update / Jan 2023 version)",
+        "url": "https://www.eshre.eu/-/media/sitecore-files/Guidelines/Recurrent-pregnancy-loss/2022/ESHRE-RPL-Guideline-_-Update-2022_-Final-Version-January-2023_v2.pdf",
+        "date": "Issued / updated material dated January 2023 on ESHRE site",
+        "recommendation": "RPL defined as two or more pregnancy losses; excludes ectopic and molar pregnancy",
+        "passage": "Recurrent Pregnancy Loss (RPL) is defined as the loss of two or more pregnancies. It excludes ectopic pregnancy and molar pregnancy.",
+        "limitations": "European society definition; some older local protocols still used three losses"
+      },
+      {
+        "organisation": "NICE",
+        "title": "NG257 investigation of fertility problems — ovarian reserve testing",
+        "url": "https://www.nice.org.uk/guidance/NG257/chapter/investigation-of-fertility-problems-and-management-strategies",
+        "date": "Published 31 March 2026",
+        "recommendation": "Do not use AMH as a predictor of clinical pregnancy through spontaneous conception",
+        "passage": "Do not use anti-Müllerian hormone (AMH) measurement as a predictor of clinical pregnancy through spontaneous conception.",
+        "limitations": "UK guidance; AMH still used for counselling about ovarian response in assisted conception"
+      }
+    ],
+    "openQuestions": [
+      "Which Indian society or FOGSI timing thresholds (if any) should be cited alongside ASRM for local readers?",
+      "Does Dr. Charmi want male-factor ‘up to about half of couples’ epidemiology quoted, or keep to ‘semen analysis early’ without percentages?"
+    ]
+  }
+}

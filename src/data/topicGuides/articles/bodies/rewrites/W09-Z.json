@@ -1,0 +1,100 @@
+{
+  "id": "W09-Z",
+  "title": "What Can a Diastasis Recti Self-Check Tell You?",
+  "seoTitle": "What a Diastasis Recti Self-Check Can Tell You",
+  "description": "A gentle midline self-check can hint at softness or doming, but it cannot diagnose diastasis, grade severity, or rule out a hernia—know when to stop.",
+  "primaryQuestion": "What can a diastasis recti self-check tell you?",
+  "directAnswer": "A gentle look at your abdominal midline can help you notice softness, a ridge or doming during light effort so you can describe it in clinic. It cannot diagnose diastasis recti, grade severity with a universal finger-width score, clear you for exercise, or rule out a hernia. Stop if you have pain, feel a worrying lump, or feel unwell, and seek assessment when function suffers or findings unsettle you. For what separation means anatomically, see what diastasis recti is.",
+  "sections": [
+    {
+      "heading": "What a gentle observation can—and cannot—show",
+      "paragraphs": [
+        "A self-check has a limited purpose: to notice whether the midline softens, bulges or cones during a gentle effort so you can say “I feel a ridge when I sit up” rather than guessing a severity grade from a video. Lighting, bloating, breath-holding and how hard you curl all change what you feel. That is why repeated forceful checking often confuses more than it clarifies.",
+        "A home observation cannot confirm diastasis, measure progress in standard units, or exclude hernia or other medical causes of a lump. Finger widths are not a universal threshold—hand size and technique differ—so no finger count can tell you whether you have diastasis or how significant it is. A physiotherapist can demonstrate a check during an assessment and explain what your findings mean.",
+        "Function usually tells you more than what you feel at rest: how you roll out of bed, lift a toddler, cough on the stairs, or return to exercise. Note those situations for your visit. Photos can show how appearance changes through the day, but they still do not replace examination."
+      ]
+    },
+    {
+      "heading": "Stop criteria and safer next steps",
+      "paragraphs": [
+        "Stop checking and seek advice if the attempt causes sharp pain, if you find a firm focal lump, or if you feel sick, feverish or generally unwell. Do not dig into a healing caesarean incision or early postnatal wound to “find a gap.” Checking repeatedly through the day does not add useful information.",
+        "Book a routine in-person assessment with Dr. Zalak Shah (PT) if doming or midline softness limits lifting, exercise confidence or daily comfort, if leakage or pelvic pressure sits alongside abdominal concerns, or if conflicting self-checks are driving anxiety. She assesses movement and abdominal-wall behaviour; she does not diagnose hernia. Bring two or three real tasks that bother you rather than a self-assigned finger score.",
+        "During pregnancy, the very early postpartum weeks, or soon after abdominal surgery, ask your maternity or surgical team before exploring the midline with effortful curls. Tissue is adapting, so avoid forceful self-testing while wounds or stitches are still healing."
+      ]
+    },
+    {
+      "heading": "When a lump needs urgent medical care",
+      "paragraphs": [
+        "A soft ridge that comes and goes with effort is different from a hard, acutely painful swelling that will not settle when you lie down. If a lump is firm, very painful and will not go back in—especially if you are vomiting, have severe tummy pain, or cannot pass wind or stool—seek urgent or emergency medical care. UK NHS hernia pages treat that pattern as a possible strangulated hernia emergency.",
+        "After acute medical problems are excluded or treated, you can return to functional abdominal-wall rehab with clear boundaries. Read the diastasis overview for definition and rehab goals."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can a self-check prove I do not have a hernia?",
+      "answer": "No. Feeling a soft midline gap or dome does not exclude a hernia. Painful, firm or non-reducing lumps need medical assessment. A home check cannot rule out a hernia."
+    },
+    {
+      "question": "Can a finger-width measurement tell me how severe my diastasis is?",
+      "answer": "Finger size and technique vary, and width alone is a poor stand-in for function. A physiotherapist judges severity from how your abdominal wall behaves during real tasks, not from a home finger count."
+    }
+  ],
+  "references": [
+    {
+      "label": "POGP — Tummy muscle separation (DRAM) in pregnancy",
+      "url": "https://thepogp.co.uk/patient_information/womens_health/tummy_muscle_separation.aspx"
+    },
+    {
+      "label": "NHS — Umbilical hernia",
+      "url": "https://www.nhs.uk/conditions/umbilical-hernia/"
+    },
+    {
+      "label": "NHS — Hernia",
+      "url": "https://www.nhs.uk/conditions/hernia/"
+    }
+  ],
+  "conversionCopy": "If midline changes or conflicting self-checks are worrying you, you can book an abdominal-wall assessment with Dr. Zalak Shah (PT).",
+  "explainerAlt": "Limits of a home midline observation versus a physiotherapy abdominal-wall assessment",
+  "storytellingNote": "",
+  "review": {
+    "corrections": [
+      "Retitled exactly to ‘What Can a Diastasis Recti Self-Check Tell You?’; removed draft/step-by-step instructions and finger-width thresholds.",
+      "Removed illustrative video anecdotes and ‘this article deliberately’ meta wording.",
+      "Focused on can/cannot of observation; linked W04 for definition instead of duplicating anatomy.",
+      "Added stop criteria and differently worded painful non-reducible lump escalation with openQuestion for clinician review."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "POGP",
+        "title": "Tummy muscle separation (DRAM) in pregnancy",
+        "url": "https://thepogp.co.uk/patient_information/womens_health/tummy_muscle_separation.aspx",
+        "date": "not stated",
+        "recommendation": "Describes bulging/doming and feeling a gap as possible observations; advises seeking women’s health physiotherapy rather than self-grading alone.",
+        "passage": "A bulging or doming in the centre of your tummy when you sit up from laying down",
+        "limitations": "Does not authorise a WHD step-by-step protocol"
+      },
+      {
+        "organisation": "NHS",
+        "title": "Umbilical hernia",
+        "url": "https://www.nhs.uk/conditions/umbilical-hernia/",
+        "date": "Page last reviewed 24 November 2025",
+        "recommendation": "Emergency care for severe pain, vomiting, colour change, inability to pass wind/stool with hernia—strangulation risk.",
+        "passage": "you get very bad tummy pain that does not go away … you feel sick (nausea), are being sick",
+        "limitations": "Hernia-specific; adapted carefully for midline lump counselling"
+      },
+      {
+        "organisation": "NHS",
+        "title": "Hernia",
+        "url": "https://www.nhs.uk/conditions/hernia/",
+        "date": "not stated on fetched page",
+        "recommendation": "Urgent advice pathway for hernia with pain, nausea/vomiting, constipation, fever or confusion.",
+        "passage": "pain in or around the hernia … you feel sick (nausea) or you're being sick (vomiting)",
+        "limitations": "General hernia page"
+      }
+    ],
+    "openQuestions": [
+      "Clinician review of escalation wording for a painful, firm, non-reducible abdominal lump (possible strangulated hernia)—confirm preferred phrasing distinct from W04-Z."
+    ]
+  }
+}

@@ -5,6 +5,7 @@ import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { JsonLdFaq } from "@/components/seo/JsonLdFaq";
 import { PageShell } from "@/components/layout/PageShell";
 import { FaqSection } from "@/components/sections/FaqSection";
+import { DoctorNameList } from "@/components/seo/ContentAuthors";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { ROUTES } from "@/config/routes";
 import { SITE_URL } from "@/config/site";
@@ -141,6 +142,7 @@ export function TopicGuidePage() {
           datePublished: guide.publishedAt,
           dateModified: guide.updatedAt ?? guide.publishedAt,
           authorId: guide.reviewStatus === "approved" ? guide.authorId : undefined,
+          reviewerIds: guide.reviewStatus === "approved" ? guide.reviewerIds : undefined,
           imageUrls,
         }),
       );
@@ -175,9 +177,9 @@ export function TopicGuidePage() {
   const faqHeadingBase = guide.title.endsWith("?") ? guide.title.slice(0, -1) : guide.title;
   // SEO-14: show byline/review only for approved guides with real attribution fields.
   const showEditorialByline =
-    guide.reviewStatus === "approved" && Boolean(guide.authorId || guide.reviewerId);
+    guide.reviewStatus === "approved" && Boolean(guide.authorId || guide.reviewerIds?.length);
   const authorName = guide.authorId ? DOCTOR_BY_SLUG[guide.authorId]?.name : undefined;
-  const reviewerName = guide.reviewerId ? DOCTOR_BY_SLUG[guide.reviewerId]?.name : undefined;
+  const reviewers = showEditorialByline ? (guide.reviewerIds ?? []) : [];
   const publishedLabel = formatGuideDate(guide.publishedAt);
   const updatedLabel = formatGuideDate(guide.updatedAt);
   const reviewedLabel = formatGuideDate(guide.reviewedAt);
@@ -205,16 +207,10 @@ export function TopicGuidePage() {
                 </Link>
               </>
             ) : null}
-            {authorName && reviewerName ? ". " : null}
-            {reviewerName ? (
+            {authorName && reviewers.length ? ". " : null}
+            {reviewers.length ? (
               <>
-                Medically reviewed by{" "}
-                <Link
-                  to={DOCTOR_BY_SLUG[guide.reviewerId!].path}
-                  className="text-primary underline underline-offset-4"
-                >
-                  {reviewerName}
-                </Link>
+                Medically reviewed by <DoctorNameList slugs={reviewers} />
               </>
             ) : null}
             {publishedLabel ? `. Published ${publishedLabel}` : null}

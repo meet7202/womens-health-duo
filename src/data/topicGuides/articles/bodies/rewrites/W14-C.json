@@ -1,0 +1,111 @@
+{
+  "id": "W14-C",
+  "title": "Could My Period Pain Be Endometriosis?",
+  "seoTitle": "Could period pain be endometriosis?",
+  "description": "Endometriosis can cause period pain that limits daily life, pain with sex or bowel habits, and fertility concerns. Clear scans still may not end assessment.",
+  "primaryQuestion": "Could my period pain be endometriosis?",
+  "directAnswer": "Yes—endometriosis is one important cause of period and pelvic pain, especially when pain stops usual activities, lasts beyond the first days of bleeding, or comes with pain during sex, bowel or bladder symptoms, fatigue or difficulty conceiving. It occurs when tissue similar to the womb lining grows outside the uterus. Our painful-periods guide explains primary versus secondary cramps in general; here the focus is disease-specific patterns, why imaging can look normal, and what assessment may involve. Suspicion is not the same as confirmation.",
+  "sections": [
+    {
+      "heading": "Symptom patterns that raise the question",
+      "paragraphs": [
+        "NHS describes endometriosis as cells similar to the womb lining growing elsewhere—often around ovaries, tubes and pelvis, sometimes bladder or bowel. Period-related clues include severe period pain that stops normal activities and heavy bleeding that needs pad or tampon changes every one to two hours. Other symptoms can appear any time: pelvic or lower-back pain, pain when peeing or pooing, pain during or after sex, and marked tiredness.",
+        "NICE NG73 says to suspect endometriosis in women (including those aged 17 and under) who present with one or more suggestive symptoms or signs, and notes the condition’s links with pelvic pain, painful periods and subfertility. Not everyone with endometriosis has every symptom, and some people have lesions found incidentally. Timing relative to bleeding, depth of functional impact, and associated bowel or bladder pain help the history more than a single pain score."
+      ]
+    },
+    {
+      "heading": "Why diagnosis is often delayed",
+      "paragraphs": [
+        "NICE’s context for NG73 states that delayed diagnosis is a significant problem. Self-help groups emphasise that professionals may not recognise symptoms or consider endometriosis, and women may delay seeking help because pelvic pain is treated as normal. Delays of 4 to 10 years can occur between first reporting symptoms and confirming the diagnosis, which can mean longer suffering and disease that is harder to treat.",
+        "If pain has been dismissed for years, a clear symptom diary still helps: which days hurt most, what you miss (school, work, sex, exercise), remedies tried, and any family history. Wanting a structured assessment after years of “just bad periods” is a reasonable reason to see a gynaecologist."
+      ]
+    },
+    {
+      "heading": "Examination, scans and what a normal result means",
+      "paragraphs": [
+        "NICE recommends offering abdominal and pelvic examination when endometriosis is suspected, and offering a transvaginal ultrasound even if examination is normal, to identify endometriomas and deep disease markers that guide referral. If transvaginal scanning is declined or unsuitable, a transabdominal pelvic scan may be considered.",
+        "NICE is clear that unremarkable examination findings and a clear ultrasound still leave endometriosis possible, and that referral can remain appropriate. Laparoscopy may still be considered after normal ultrasound or MRI, with systematic inspection of the pelvis. Imaging helps planning; it does not close the question on its own."
+      ]
+    },
+    {
+      "heading": "Management discussions and fertility goals",
+      "paragraphs": [
+        "NHS and NICE describe medicines—pain relief such as paracetamol or anti-inflammatory medicines, and hormonal options that suppress cycles—as common first approaches when pregnancy is not the immediate goal. Surgery to remove or treat lesions may be discussed when symptoms persist, disease is extensive, or fertility is a priority. There is currently no cure that permanently erases the condition for everyone; plans change as priorities change.",
+        "Tell the clinician whether pain control, fertility, or both sit at the top of your list this year. Hormonal treatments that act as contraception are unsuitable when you are actively trying to conceive. Dr. Charmi Shah can outline which pathway fits your goals without forcing a one-size plan."
+      ]
+    },
+    {
+      "heading": "Urgent symptoms versus planned review",
+      "paragraphs": [
+        "Get emergency help for abrupt severe pelvic pain unlike your usual pattern, fever with pelvic pain, flooding bleeds with dizziness, or possible pregnancy with pain, fainting or shoulder-tip pain—even before a home test if you feel profoundly unwell.",
+        "Arrange gynaecology review when period or pelvic pain regularly limits life, sex or bowel symptoms persist, fertility is delayed, or earlier treatment has not helped. Bring a short symptom timeline and prior scan reports so the visit starts from evidence rather than guesswork."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can endometriosis still be present when scans look clear?",
+      "answer": "Yes. NICE guidance keeps endometriosis possible after normal examination and imaging, and says referral may still be needed. Laparoscopy can remain an option when clinical suspicion stays high."
+    },
+    {
+      "question": "Does endometriosis always need surgery to diagnose?",
+      "answer": "Not always as a first step. Assessment usually starts with history, examination and ultrasound, often with a trial of pain or hormonal treatment. Laparoscopy remains an important diagnostic and treatment tool when indicated, but current NICE guidance does not treat surgery as the only way to begin care."
+    }
+  ],
+  "references": [
+    {
+      "label": "NICE NG73 — Endometriosis: diagnosis and management (Recommendations)",
+      "url": "https://www.nice.org.uk/guidance/ng73/chapter/Recommendations"
+    },
+    {
+      "label": "NICE NG73 — Context (diagnostic delay)",
+      "url": "https://www.nice.org.uk/guidance/ng73/chapter/Context"
+    },
+    {
+      "label": "NHS — Endometriosis",
+      "url": "https://www.nhs.uk/conditions/endometriosis/"
+    }
+  ],
+  "conversionCopy": "If period or pelvic pain raises the question of endometriosis, you can discuss assessment options with Dr. Charmi Shah.",
+  "explainerAlt": "Symptom map for possible endometriosis including period pain, sex pain and bowel symptoms.",
+  "storytellingNote": "",
+  "review": {
+    "corrections": [
+      "New rewrite centred on NICE suspicion criteria, 4–10 year delay context, and normal-scan caveat; linked W06-C painful-periods guide instead of repeating primary dysmenorrhoea theory.",
+      "Treatment described as categories only; fertility goals called out without surgical success promises."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "NICE",
+        "title": "Endometriosis: diagnosis and management (NG73) Recommendations",
+        "url": "https://www.nice.org.uk/guidance/ng73/chapter/Recommendations",
+        "date": "Last updated 11 November 2024 (fetched 2026)",
+        "recommendation": "Suspect on suggestive symptoms; offer examination and transvaginal ultrasound; do not exclude if exam/ultrasound normal; consider laparoscopy even if imaging normal.",
+        "passage": "Do not exclude the possibility of endometriosis if the abdominal or pelvic examination and ultrasound scan are normal, and recognise that referral may still be necessary even with a normal scan.",
+        "limitations": "UK guideline; local laparoscopy access and specialist centre criteria vary in India."
+      },
+      {
+        "organisation": "NICE",
+        "title": "Endometriosis: diagnosis and management (NG73) Context",
+        "url": "https://www.nice.org.uk/guidance/ng73/chapter/Context",
+        "date": "Guideline context (fetched 2026)",
+        "recommendation": "Diagnostic delay of 4–10 years can occur between first reporting symptoms and confirming diagnosis.",
+        "passage": "Delays of 4 to 10 years can occur between first reporting symptoms and confirming the diagnosis.",
+        "limitations": "Context statement based on UK experience; Indian delay ranges may differ."
+      },
+      {
+        "organisation": "NHS",
+        "title": "Endometriosis",
+        "url": "https://www.nhs.uk/conditions/endometriosis/",
+        "date": "not stated on fetched overview header",
+        "recommendation": "Lists period pain limiting activities, heavy bleeding, pelvic pain, pain with sex/pee/poo, fatigue; medicines and surgery as management categories; no cure stated.",
+        "passage": "severe period pain, that stops you from doing your normal activities",
+        "limitations": "UK patient page; referral pathways differ."
+      }
+    ],
+    "openQuestions": [
+      "Should WHD name specific Ahmedabad/Mumbai imaging protocols for deep endometriosis suspicion?",
+      "When should pelvic-health physiotherapy be introduced as adjunct for muscle guarding on this page?"
+    ]
+  }
+}

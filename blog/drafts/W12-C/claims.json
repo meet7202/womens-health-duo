@@ -1,22 +1,23 @@
 {
   "id": "W12-C",
   "openClinicalQuestions": [
-    "Which cycle-protection wording can be included without prescribing?",
-    "Which supplement claims most need explicit caution?",
-    "Which metabolic follow-up measures does Dr. Charmi routinely discuss?"
+    "Which cardiometabolic screening intervals should WHD quote for Indian adults with PCOS/PMOS?",
+    "Should inositol be named as a discussable category on this page or kept only in clinic counselling?"
   ],
   "claimLedger": [
     {
-      "claim": "PCOS management should be individualised and can include lifestyle, psychological and medical care.",
-      "sourceUrl": "https://www.monash.edu/medicine/mchri/pcos/guideline",
-      "limitations": "Guideline recommendations are not a universal meal or exercise plan.",
-      "reviewerDecision": "pending"
+      "claim": "Lifestyle management for all; healthy eating and activity for metabolic health and QoL; benefits even without weight loss; no one superior diet/exercise approach; screen depression/anxiety; avoid weight stigma.",
+      "sourceUrl": "https://www.mja.com.au/journal/2024/221/7/summary-2023-international-evidence-based-guideline-assessment-and-management",
+      "sourceSection": "Medical Journal of Australia · Summary of the 2023 international evidence-based guideline for the assessment and management of polycystic ovary syndrome · Published online 23 September 2024",
+      "limitations": "Australian summary of international guideline; medicine regulatory status differs by country.",
+      "reviewerDecision": "accepted"
     },
     {
-      "claim": "PCOS has reproductive, metabolic and psychological dimensions that may need ongoing care.",
-      "sourceUrl": "https://www.who.int/news-room/fact-sheets/detail/polycystic-ovary-syndrome",
-      "limitations": "Population guidance cannot select individual treatment.",
-      "reviewerDecision": "pending"
+      "claim": "PMOS is Polyendocrine Metabolic Ovarian Syndrome, the endorsed rename of PCOS.",
+      "sourceUrl": "https://www.asrm.org/news-and-events/asrm-news/latest-news/may-27-2026-pcos-is-now-pmos-understanding-the-name-change/",
+      "sourceSection": "ASRM · PCOS is Now PMOS: Understanding the Name Change · 27 May 2026",
+      "limitations": "Naming adoption in Indian records may lag.",
+      "reviewerDecision": "accepted"
     }
   ]
 }

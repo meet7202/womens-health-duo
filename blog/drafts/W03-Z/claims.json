@@ -1,22 +1,29 @@
 {
   "id": "W03-Z",
   "openClinicalQuestions": [
-    "Which readiness checks does Dr. Zalak Shah use before return to running or impact?",
-    "Which postnatal bleeding and wound changes should Dr. Charmi Shah classify as prompt versus emergency?",
-    "How should advice differ after assisted vaginal birth and C-section?"
+    "Dr. Zalak: refine patient-facing wording on abdominal doming so it does not overstate harm from every visible midline change, while still prompting assessment when symptoms or load intolerance appear."
   ],
   "claimLedger": [
     {
-      "claim": "Postnatal activity should return gradually and be adjusted to birth recovery and symptoms.",
-      "sourceUrl": "https://www.nhs.uk/baby/support-and-services/keeping-fit-and-healthy-with-a-baby/",
-      "limitations": "General guidance cannot clear an individual for impact exercise.",
-      "reviewerDecision": "pending"
+      "claim": "After straightforward birth, gentle exercise (walking, stretches, pelvic floor) when ready; usually get advice at 6-week check before high-impact; longer recovery and talk to midwife/GP before strenuous activity after complicated birth or caesarean; swimming after bleeding stopped 7 days.",
+      "sourceUrl": "https://www.nhs.uk/conditions/baby/support-and-services/keeping-fit-and-healthy-with-a-baby/",
+      "sourceSection": "NHS · Keeping fit and healthy with a baby · Media last reviewed 2 August 2026",
+      "limitations": "UK NHS pathway; Indian postnatal follow-up timing may differ",
+      "reviewerDecision": "accepted"
     },
     {
-      "claim": "Pelvic-floor, abdominal and musculoskeletal symptoms can inform postnatal exercise progression.",
-      "sourceUrl": "https://thepogp.co.uk/Resources/113/exercise_and_advice_after_pregnancy",
-      "limitations": "Patient guidance requires clinician interpretation for each birth and complication history.",
-      "reviewerDecision": "pending"
+      "claim": "Postnatal check at 6–8 weeks reviews recovery and invites discussion of continence, perineal pain and related concerns; not framed as sport clearance.",
+      "sourceUrl": "https://www.nhs.uk/conditions/baby/support-and-services/your-6-week-postnatal-check/",
+      "sourceSection": "NHS · Your 6-week postnatal check · Page last reviewed 9 October 2026",
+      "limitations": "UK primary-care model",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Suggests low-impact focus in first 3 postnatal months and return to running 3–6 months at earliest; designed to assist clinical reasoning, not prescribe one path.",
+      "sourceUrl": "https://www.absolute.physio/wp-content/uploads/2019/09/returning-to-running-postnatal-guidelines.pdf",
+      "sourceSection": "Goom, Donnelly & Brockwell · Returning to running postnatal – guidelines for medical, health and fitness professionals · Published March 2019",
+      "limitations": "Expert consensus / limited direct evidence; for professionals managing runners",
+      "reviewerDecision": "accepted"
     }
   ]
 }

@@ -1,0 +1,125 @@
+{
+  "id": "W26-Z",
+  "title": "What happens at your first pelvic health physiotherapy appointment?",
+  "seoTitle": "What happens at a first pelvic physio visit",
+  "description": "A first pelvic-health physio visit starts with history and goals. Learn consent for optional exams, chaperones, and online versus in-person limits.",
+  "primaryQuestion": "What happens at a pelvic health physiotherapy session?",
+  "directAnswer": "A first visit centres on your story: when symptoms began, what aggravates or eases them, pregnancies or surgeries, bladder and bowel habits, and what you want to do again. The physiotherapist explains assessment options. An internal vaginal or rectal examination is offered only with clear consent and can be declined; a chaperone can be requested. You should leave with an initial plan, home strategies that match findings, and clarity on follow-up or medical referral—not with a surprise procedure.",
+  "sections": [
+    {
+      "heading": "What to prepare before you arrive",
+      "paragraphs": [
+        "POGP suggests arriving ready to describe when trouble began, what flares or settles it, earlier investigations, wider health, and how your job or hobbies load the pelvis. A short bladder diary over about three days—drinks, toilet visits, volumes if measured, urgency and leaks—helps if continence is the issue. Loose, comfortable clothes make movement screening easier.",
+        "Write questions in advance: Do I need an internal exam today? What can I do this week? When should I see a doctor instead? Bring a list of medicines and prior reports if you have them. You do not need perfect paperwork to be taken seriously."
+      ]
+    },
+    {
+      "heading": "How the conversation usually starts",
+      "paragraphs": [
+        "UH Sussex describes a first pelvic-health appointment that gathers detail on urinary, gynaecological, bowel and obstetric history as relevant. NHS GGC notes that a specialist physiotherapist takes a detailed history, discusses concerns, and carries out an examination if appropriate, explaining steps so you can ask questions at any time.",
+        "Expect privacy and confidentiality. Say if topics feel difficult. Dr. Zalak Shah (PT) uses this history to decide whether physiotherapy is the right lane or whether medical review should come first for infection signs, unexplained bleeding or neurological red flags."
+      ]
+    },
+    {
+      "heading": "Examination choices, consent and chaperones",
+      "paragraphs": [
+        "For bladder, bowel or pelvic-pain problems, an internal examination may be offered to assess pelvic-floor strength, coordination and tenderness. UH Sussex states the process is explained first, consent is required, you may refuse and still receive treatment, and a chaperone can be provided. POGP adds that you may take time to decide or bring a friend or family member.",
+        "Nothing should proceed because you feel awkward saying no. You can pause or stop during an examination. Coaching that stays outside the vagina—breathing drills, posture cues, and practice clearing a cough—can still start when internal assessment is declined."
+      ]
+    },
+    {
+      "heading": "Online visits versus in-person care",
+      "paragraphs": [
+        "Video appointments can cover history, education, bladder and bowel advice, and external movement coaching. They cannot include a hands-on internal pelvic-floor examination. If your goals depend on confirming contraction quality, tenderness mapping or prolapse findings, an in-person slot is the clearer route.",
+        "Hybrid care is common: education online, examination in clinic later. Ask which parts of your plan truly need travel and which can be reviewed remotely after the first assessment."
+      ]
+    },
+    {
+      "heading": "Goals, follow-up and referrals",
+      "paragraphs": [
+        "Agree what success looks like in your words—fewer leaks, less heaviness after standing, comfortable intimacy steps, or return to a chosen activity. NICE NG210 expects a management plan to be discussed and agreed, and supervised training programmes to include progress review during and at the end of the programme when that pathway is used.",
+        "POGP notes that if the problem seems outside physiotherapy scope, you may be directed to another professional such as your GP. Hand-off to a gynaecologist such as Dr. Charmi Shah fits when medical differentials dominate. Seek urgent medical care for retention with pain, fever with severe pelvic pain, or sudden continence change plus genital numbness or weak legs rather than waiting for the next therapy visit."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Will I have an internal examination on the first visit?",
+      "answer": "Only if it is appropriate and you consent after an explanation. Many services offer it at a first or later visit. You can decline, postpone, or request a chaperone without losing access to other advice."
+    },
+    {
+      "question": "Can a family member interpret for me?",
+      "answer": "UH Sussex strongly advises against using a family member or friend as interpreter and asks you to request a professional interpreter when needed. Ask the clinic how language support is arranged before the day."
+    }
+  ],
+  "references": [
+    {
+      "label": "POGP — Physiotherapy Assessment",
+      "url": "https://thepogp.co.uk/patients/pelvic_health_advice/physiotherapy_assessment.aspx"
+    },
+    {
+      "label": "University Hospitals Sussex NHS Foundation Trust — Your pelvic health physiotherapy appointment",
+      "url": "https://www.uhsussex.nhs.uk/resources/your-pelvic-health-physiotherapy-appointment/"
+    },
+    {
+      "label": "NHS Greater Glasgow and Clyde — Pelvic floor physiotherapy",
+      "url": "https://www.nhsggc.scot/your-health/obstetrics-gynaecology-and-pelvic-floor-physiotherapy/pelvic-floor-physiotherapy/"
+    },
+    {
+      "label": "NICE — NG210 Pelvic floor dysfunction: prevention and non-surgical management (Recommendations)",
+      "url": "https://www.nice.org.uk/guidance/ng210/chapter/Recommendations"
+    }
+  ],
+  "conversionCopy": "If you want to know what a first pelvic-health visit would involve for your symptoms, you can book with Dr. Zalak Shah (PT).",
+  "explainerAlt": "Dr. Zalak explains assessment options in a physiotherapy consultation.",
+  "storytellingNote": "",
+  "review": {
+    "corrections": [
+      "New rewrite on appointment process, consent and online limits without copying NHS durations, prices or local booking rules as WHD policy.",
+      "Used POGP, UH Sussex and NHS GGC for assessment flow; NICE NG210 for agreed plans and programme reviews.",
+      "Kept Zalak in physiotherapy lane; medical red flags routed to urgent care."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "POGP",
+        "title": "Physiotherapy Assessment",
+        "url": "https://thepogp.co.uk/patients/pelvic_health_advice/physiotherapy_assessment.aspx",
+        "date": "not stated",
+        "recommendation": "Detailed history; optional internal exam with consent; right to decline; bladder diary; plan discussed after findings.",
+        "passage": "At the first appointment the physiotherapist will carry out a detailed assessment, including when and how your symptoms started, what may aggravate or make them worse or if there are any positions or situations that ease the symptoms.",
+        "limitations": "UK professional body page; WHD process may differ in scheduling details."
+      },
+      {
+        "organisation": "University Hospitals Sussex NHS Foundation Trust",
+        "title": "Your pelvic health physiotherapy appointment",
+        "url": "https://www.uhsussex.nhs.uk/resources/your-pelvic-health-physiotherapy-appointment/",
+        "date": "Page last reviewed: 6 Oct 2026",
+        "recommendation": "History; optional internal exam with consent; chaperone; may refuse exam and still have treatment; interpreter advice.",
+        "passage": "You do not have to have an internal examination if you would prefer not to and are free to say that you do not want one. You can still have treatment if you do not want an internal examination.",
+        "limitations": "Local NHS durations and discharge rules were not adopted as WHD policy."
+      },
+      {
+        "organisation": "NHS Greater Glasgow and Clyde",
+        "title": "Pelvic floor physiotherapy",
+        "url": "https://www.nhsggc.scot/your-health/obstetrics-gynaecology-and-pelvic-floor-physiotherapy/pelvic-floor-physiotherapy/",
+        "date": "not stated",
+        "recommendation": "History, discussion of concerns, examination if appropriate with clear explanation.",
+        "passage": "At your appointment, a specialist pelvic health physiotherapist will: Take a detailed history; Discuss your symptoms and concerns; If appropriate, carry out an examination",
+        "limitations": "Regional service page."
+      },
+      {
+        "organisation": "NICE",
+        "title": "NG210 Pelvic floor dysfunction — Recommendations",
+        "url": "https://www.nice.org.uk/guidance/ng210/chapter/Recommendations",
+        "date": "Published 9 December 2021",
+        "recommendation": "Discuss and agree a management plan; supervised PFMT programmes include progress reviews.",
+        "passage": "Discuss and agree a management plan with women who have suspected or confirmed pelvic floor dysfunction.",
+        "limitations": "UK guideline."
+      }
+    ],
+    "openQuestions": [
+      "What exact chaperone and virtual-exam policies should WHD publish as practice-specific (not NHS copies)?",
+      "Which languages can WHD arrange interpretation for in Bangalore and Ahmedabad clinics?"
+    ]
+  }
+}

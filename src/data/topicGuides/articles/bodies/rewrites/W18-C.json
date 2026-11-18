@@ -1,0 +1,105 @@
+{
+  "id": "W18-C",
+  "title": "What Is the Difference Between IUI and IVF?",
+  "seoTitle": "IUI and IVF compared for fertility care",
+  "description": "IUI places prepared sperm in the uterus near ovulation; IVF fertilises eggs in a lab. How procedures, monitoring and decision factors differ.",
+  "primaryQuestion": "What is the difference between IUI and IVF?",
+  "directAnswer": "Intrauterine insemination (IUI) places prepared sperm directly into the uterus around ovulation so fertilisation still happens inside the body. In vitro fertilisation (IVF) collects eggs, fertilises them in a laboratory, and transfers an embryo later. The UK HFEA notes that IUI is less invasive and usually costs less per cycle than IVF, yet is also less successful per cycle and is unlikely to help when tubes are blocked, endometriosis is severe, ovarian reserve is very low, or male factor infertility is significant. Choice depends on test results and goals—not a generic cheaper-versus-stronger ranking.",
+  "sections": [
+    {
+      "heading": "How each procedure works",
+      "paragraphs": [
+        "NHS information describes IUI as putting sperm into the womb when you are ovulating, after the sample is prepared. Timing may follow natural ovulation checks or, in some pathways, medicines and scans to stimulate and time release of an egg. The catheter procedure itself is usually brief.",
+        "HFEA describes IVF as stimulating the ovaries, collecting eggs, combining them with sperm in the lab (or using ICSI), culturing embryos, then transferring an embryo—often freezing extras. Our step-by-step IVF guide walks those stages in order. The practical difference: IUI assists sperm delivery; IVF moves fertilisation and early embryo selection into the laboratory."
+      ]
+    },
+    {
+      "heading": "Monitoring, medicines and day-to-day burden",
+      "paragraphs": [
+        "IUI may need little more than ovulation timing when cycles are predictable, or it may include stimulation drugs plus scans to count follicles. NHS and HFEA both warn that stimulation raises the chance of multiples if too many follicles develop, and cycles may be cancelled when follicle numbers are high.",
+        "IVF typically involves more injections, more monitoring visits, an egg-collection procedure, and a laboratory wait before transfer. Emotional load and time off work are often greater. Neither route is “light” for everyone; ask your clinic what a realistic calendar looks like for your protocol."
+      ]
+    },
+    {
+      "heading": "When history and tests steer the choice",
+      "paragraphs": [
+        "HFEA states IUI is not appropriate if fallopian tubes are blocked, endometriosis is severe, egg numbers are very low, or male factor infertility is present. NHS pages similarly note IUI is not likely to raise pregnancy chances with blocked tubes, unexplained infertility, endometriosis, or poor sperm findings, and that IVF is usually recommended when people are having difficulty getting pregnant in those settings.",
+        "Open tubes, donor-sperm pathways, or difficulty with vaginal intercourse are among situations where IUI is commonly discussed. Age, duration of trying, previous treatment and preference for information from a lab cycle also matter. ASRM’s fertility-evaluation opinion emphasises assessing ovulation, the reproductive tract and semen together before locking a treatment label."
+      ]
+    },
+    {
+      "heading": "Questions for a shared decision",
+      "paragraphs": [
+        "Ask what each option can and cannot fix in your specific results. Ask how many IUI cycles would be tried before reconsidering IVF, what monitoring happens with stimulation, and how multiple-pregnancy risk will be limited. Ask how clinic outcome figures are defined—HFEA publishes UK data; Indian clinic dashboards are not interchangeable with those tables.",
+        "If stimulation medicines are used, know OHSS warning signs such as painful bloating, persistent vomiting, faintness or reduced urine, and seek urgent clinic or emergency review if they appear. Our first fertility appointment guide covers how baseline tests are chosen before any treatment label is applied."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can I compare published success rates between IUI and IVF directly?",
+      "answer": "Only with care. Denominators differ (per cycle, per patient, age bands, diagnosis mix). HFEA notes IUI success per cycle is generally lower than IVF. Ask your clinician for figures that match your age and diagnosis rather than a single headline percentage from a poster."
+    },
+    {
+      "question": "Is IUI always tried before IVF?",
+      "answer": "No. Blocked tubes, significant sperm problems or other findings may point straight to IVF. Shared decision-making uses your test results and timeline—not a fixed ladder every couple must climb."
+    }
+  ],
+  "references": [
+    {
+      "label": "HFEA — Intrauterine insemination (IUI)",
+      "url": "https://www.hfea.gov.uk/treatments/explore-all-treatments/intrauterine-insemination-iui/"
+    },
+    {
+      "label": "NHS — Intrauterine insemination (IUI)",
+      "url": "https://www.nhs.uk/tests-and-treatments/intrauterine-insemination-iui/"
+    },
+    {
+      "label": "HFEA — In vitro fertilisation (IVF)",
+      "url": "https://www.hfea.gov.uk/treatments/explore-all-treatments/in-vitro-fertilisation-ivf/"
+    }
+  ],
+  "conversionCopy": "If you are weighing IUI against IVF after fertility tests, you can review the options with Dr. Charmi Shah.",
+  "explainerAlt": "Side-by-side outline of IUI sperm placement versus IVF laboratory fertilisation.",
+  "storytellingNote": "",
+  "review": {
+    "corrections": [
+      "Replaced padded comparison filler with procedure, burden and indication contrasts from HFEA/NHS.",
+      "Avoided universal success-rate tables; attributed HFEA qualitative ‘lower per cycle than IVF’ language only.",
+      "Linked IVF process and first-appointment guides; named OHSS vigilance when stimulation is used."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "HFEA",
+        "title": "Intrauterine insemination (IUI)",
+        "url": "https://www.hfea.gov.uk/treatments/explore-all-treatments/intrauterine-insemination-iui/",
+        "date": "Publication date listed 11 March 2016; fetched this session",
+        "recommendation": "IUI injects prepared sperm into uterus; less invasive/cheaper than IVF but lower success per cycle; unsuitable for blocked tubes, severe endometriosis, low reserve, male factor",
+        "passage": "If you have blocked fallopian tubes, severe endometriosis, low quality eggs, a low number of eggs (low ovarian reserve), or male factor infertility, IUI will not be appropriate for you.",
+        "limitations": "UK regulator information; NHS funding rules are not Indian practice rules"
+      },
+      {
+        "organisation": "NHS",
+        "title": "Intrauterine insemination (IUI)",
+        "url": "https://www.nhs.uk/tests-and-treatments/intrauterine-insemination-iui/",
+        "date": "Page last reviewed: 25 June 2024",
+        "recommendation": "IUI places sperm in womb at ovulation; unlikely to help blocked tubes, unexplained infertility, endometriosis, poor sperm; stimulation risks include multiples and OHSS",
+        "passage": "IUI is not likely to increase your chances of getting pregnant if you or your partner have any fertility problems, such as: blocked fallopian tubes",
+        "limitations": "UK service eligibility; Indian clinic pathways differ"
+      },
+      {
+        "organisation": "HFEA",
+        "title": "In vitro fertilisation (IVF)",
+        "url": "https://www.hfea.gov.uk/treatments/explore-all-treatments/in-vitro-fertilisation-ivf/",
+        "date": "Publication date listed 9 March 2016",
+        "recommendation": "IVF fertilises outside the body with stimulation, retrieval, lab culture and transfer",
+        "passage": "IVF is a type of fertility treatment where fertilisation takes place outside the body.",
+        "limitations": "Process overview only; personal prognosis requires clinical counselling"
+      }
+    ],
+    "openQuestions": [
+      "How many empirical IUI cycles does Dr. Charmi typically discuss before IVF when tubes and semen are favourable?",
+      "Should WHD quote any India registry outcome figures, or keep readers pointed to personalised counselling only?"
+    ]
+  }
+}

@@ -1,22 +1,30 @@
 {
   "id": "W06-C",
   "openClinicalQuestions": [
-    "Which urgent bleeding language should accompany acute pelvic pain?",
-    "How should a normal ultrasound’s limitations be phrased for endometriosis?",
-    "Which treatment categories can be named without medication detail?"
+    "Should pelvic-health physiotherapy (Dr. Zalak) be named briefly as an adjunct for muscle guarding, or kept off this gynaecology-led page?",
+    "Any FOGSI first-line NSAID preferences Dr. Charmi wants named as examples without doses?"
   ],
   "claimLedger": [
     {
-      "claim": "Painful periods that interfere with daily life merit clinical assessment.",
-      "sourceUrl": "https://www.acog.org/womens-health/faqs/dysmenorrhea-painful-periods",
-      "limitations": "Patient guidance does not identify the cause in an individual.",
-      "reviewerDecision": "pending"
+      "claim": "Heat, gentle exercise, painkillers such as paracetamol or ibuprofen; see GP if pain stops daily activities; contraception and anti-inflammatory medicines may be discussed",
+      "sourceUrl": "https://www.nhs.uk/conditions/period-pain/",
+      "sourceSection": "NHS · Period pain · Page last reviewed: 18 March 2026",
+      "limitations": "UK first-line pathway; Indian OTC brand availability differs",
+      "reviewerDecision": "accepted"
     },
     {
-      "claim": "Endometriosis should be considered among possible causes of persistent or significant period-related pain.",
+      "claim": "Primary vs secondary definitions; NSAIDs and hormonal birth control as treatment categories; heat and exercise as home measures",
+      "sourceUrl": "https://www.acog.org/womens-health/faqs/dysmenorrhea-painful-periods",
+      "sourceSection": "ACOG · Dysmenorrhea: Painful Periods (FAQ046) · Last updated December 2020; last reviewed January 2022",
+      "limitations": "US patient FAQ; prescribing details remain clinician-led",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Do not exclude endometriosis when examination and ultrasound are normal",
       "sourceUrl": "https://www.nice.org.uk/guidance/ng73/chapter/Recommendations",
-      "limitations": "Severe pain is not synonymous with endometriosis; assessment is required.",
-      "reviewerDecision": "pending"
+      "sourceSection": "NICE · Endometriosis: diagnosis and management (NG73) · Last updated 11 November 2024 (recommendation tagged 2017, amended 2024)",
+      "limitations": "UK guideline; laparoscopy decisions remain individual",
+      "reviewerDecision": "accepted"
     }
   ]
 }

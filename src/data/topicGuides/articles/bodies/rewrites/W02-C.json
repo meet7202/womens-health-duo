@@ -1,0 +1,116 @@
+{
+  "id": "W02-C",
+  "title": "What Is PCOS, and Why Is It Now Called PMOS?",
+  "seoTitle": "What is PCOS? Now renamed PMOS explained",
+  "description": "PCOS is now renamed PMOS (Polyendocrine Metabolic Ovarian Syndrome). See 2023 adult and adolescent criteria, AMH limits, and why one scan is not enough.",
+  "primaryQuestion": "What is PCOS and how is it diagnosed?",
+  "directAnswer": "Polycystic ovary syndrome (PCOS) is a hormonal and metabolic condition. In May 2026 ASRM endorsed renaming it Polyendocrine Metabolic Ovarian Syndrome (PMOS) so the name better reflects endocrine and metabolic features—not simply “cysts on the ovary.” Diagnosis is a clinical synthesis: in adults, two of three features after other causes are excluded; adolescents need both irregular cycles and hyperandrogenism, without relying on ultrasound or AMH within eight years of menarche. You will still see PCOS on older records; that does not mean a second disease.",
+  "sections": [
+    {
+      "heading": "What is PCOS, and what does the PMOS rename mean?",
+      "paragraphs": [
+        "Despite the older wording, the ovaries do not have to contain true cysts like a simple fluid-filled cyst on an ultrasound report, and the condition involves more than the ovaries alone. Reproductive hormone patterns, ovulation, skin and hair changes, and metabolic health can all form part of the clinical picture. That is why a single feature rarely tells the whole story.",
+        "On 27 May 2026, ASRM announced that it has endorsed the name change from polycystic ovary syndrome (PCOS) to Polyendocrine Metabolic Ovarian Syndrome (PMOS), developed through global engagement that included dozens of patient organisations and societies. The Monash-hosted international guideline pages now use PMOS as the updated name for the same condition. The rename does not mean you suddenly have a new illness, and an existing diagnosis does not need to be repeated because of the new name.",
+        "Until naming is consistent across hospitals, pharmacies and insurance systems, clinic notes may still say PCOS, PMOS, or both. In India you may also hear “PCOD” in casual speech; that shorthand often treats a scan comment as a separate disease. Careful assessment still looks at cycles, androgen features and exclusions, not the acronym on a report."
+      ]
+    },
+    {
+      "heading": "How is PCOS/PMOS diagnosed in adults?",
+      "paragraphs": [
+        "The 2023 International Evidence-based Guideline (updated Rotterdam framework) diagnoses PCOS/PMOS in adults when two of three are present after other causes are excluded: irregular cycles or ovulatory dysfunction; clinical or biochemical hyperandrogenism; and polycystic ovarian morphology on ultrasound or raised anti-Müllerian hormone (AMH) as an alternative marker of that ovarian feature in adults.",
+        "If irregular cycles and hyperandrogenism are both clearly present, ultrasound or AMH is not required for the adult diagnosis. If only one of those clinical features is present, either ultrasound or AMH (not both) may be used to look for the ovarian criterion. AMH must not be used as a single stand-alone test for PCOS/PMOS.",
+        "Exclusion of other explanations is part of the framework. The guideline recommends considering thyroid disease (TSH), raised prolactin, and non-classic congenital adrenal hyperplasia (17-hydroxyprogesterone), with further evaluation when amenorrhoea or more severe features raise other endocrine questions."
+      ]
+    },
+    {
+      "heading": "How does diagnosis differ in adolescents?",
+      "paragraphs": [
+        "In adolescents, both irregular cycles/ovulatory dysfunction and hyperandrogenism are required. Ultrasound and AMH are not recommended for diagnosis within eight years of menarche because polycystic-appearing ovaries and AMH overlap with normal pubertal physiology and lack specificity at that life stage.",
+        "Young people who have only one feature may be considered “at increased risk” and reassessed toward full reproductive maturity rather than labelled prematurely. Normal pubertal acne and cycle variation can look similar to adult criteria if those caveats are ignored.",
+        "Weight does not decide whether someone can have PCOS/PMOS. People across a wide range of body sizes receive the diagnosis when criteria are met. Rapid virilisation (for example deepening voice, clitoral enlargement or abruptly accelerating hair growth) is a different concern from long-standing mild hair patterning and needs prompt medical review."
+      ]
+    },
+    {
+      "heading": "Why symptoms and tests still need context",
+      "paragraphs": [
+        "A person may have regular-looking bleeds yet still need an ovulation discussion; another may have irregular cycles for a reason unrelated to PCOS/PMOS. Hormonal contraception can change both bleeding patterns and ovarian appearance, which is one reason method history matters before interpreting results. An ultrasound line that says “polycystic ovaries” is not, by itself, a complete diagnosis.",
+        "AMH (anti-Müllerian hormone) can support the ovarian morphology criterion in selected adults, but laboratories and clinicians must allow for age, body mass index, recent combined pill use and cycle-day variation. It does not grade severity, and it is most useful when it answers a specific diagnostic question.",
+        "Separate guides cover recognising symptoms when periods look regular, and planning pregnancy with PCOS/PMOS. A PCOS overview hub can help you navigate services once the naming and diagnostic questions are clearer."
+      ]
+    },
+    {
+      "heading": "Questions for a first appointment, and urgent symptoms",
+      "paragraphs": [
+        "Bring cycle dates, symptom timing, current medicines and supplements, previous reports, and your priorities for the visit. Ask which adult or adolescent criteria are being applied; whether another cause needs exclusion; what each proposed test could change; and how follow-up will address cycle care, skin or hair symptoms, metabolic health or pregnancy planning rather than only a scan appearance.",
+        "Routine review is appropriate for persistent cycle changes, troublesome androgen-type skin or hair symptoms, or fertility and pregnancy-planning concerns. Seek urgent care for severe pelvic pain, faintness, very heavy bleeding, or symptoms linked to a possible pregnancy—including severe one-sided pain, shoulder-tip pain or fainting when pregnancy is possible. Those problems are not explained safely by a PCOS/PMOS label and should not wait for routine booking."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is PMOS a different disease from PCOS?",
+      "answer": "No. PMOS is the renamed term for the same condition previously called PCOS. ASRM endorsed Polyendocrine Metabolic Ovarian Syndrome in May 2026 so the name better reflects endocrine and metabolic features. Older records that say PCOS still refer to this condition."
+    },
+    {
+      "question": "Can AMH diagnose PCOS/PMOS by itself?",
+      "answer": "No. In adults, raised AMH can help define polycystic ovarian morphology as one of the diagnostic features, but the 2023 international guideline says AMH should not be used as a single test, and it is not recommended for adolescent diagnosis within eight years of menarche."
+    }
+  ],
+  "references": [
+    {
+      "label": "ASRM — PCOS is Now PMOS: Understanding the Name Change (27 May 2026)",
+      "url": "https://www.asrm.org/news-and-events/asrm-news/latest-news/may-27-2026-pcos-is-now-pmos-understanding-the-name-change/"
+    },
+    {
+      "label": "Monash MCHRI — International evidence-based guideline for the assessment and management of PCOS/PMOS (2023)",
+      "url": "https://www.monash.edu/medicine/mchri/pcos/guideline"
+    },
+    {
+      "label": "Medical Journal of Australia — Summary of the 2023 international PCOS guideline (Australian perspective)",
+      "url": "https://www.mja.com.au/journal/2024/221/7/summary-2023-international-evidence-based-guideline-assessment-and-management"
+    }
+  ],
+  "conversionCopy": "If you want a clear review of whether PCOS/PMOS criteria apply to your cycles and symptoms, you can book a consultation with Dr. Charmi Shah.",
+  "explainerAlt": "Diagram of PCOS/PMOS diagnostic features with a note on the 2026 rename.",
+  "storytellingNote": "",
+  "review": {
+    "corrections": [
+      "Corrected PMOS expansion to Polyendocrine Metabolic Ovarian Syndrome; removed wrong 'polycystic ovary metabolic syndrome' and 'proposed' wording.",
+      "Replaced vague assessment copy with verified 2023 adult 2-of-3 criteria, adolescent dual-feature rule, and 8-years-from-menarche ultrasound/AMH limits.",
+      "Removed claims about which acronym Dr. Charmi personally uses; cut illustrative anecdotes and duplicated prep padding."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "ASRM",
+        "title": "PCOS is Now PMOS: Understanding the Name Change",
+        "url": "https://www.asrm.org/news-and-events/asrm-news/latest-news/may-27-2026-pcos-is-now-pmos-understanding-the-name-change/",
+        "date": "27 May 2026",
+        "recommendation": "ASRM endorsed renaming PCOS to Polyendocrine Metabolic Ovarian Syndrome (PMOS).",
+        "passage": "ASRM has endorsed the name change for the condition previously known as Polycystic Ovary Syndrome (PCOS). The new name is Polyendocrine Metabolic Ovarian Syndrome (PMOS).",
+        "limitations": "Name adoption across Indian records and insurers may lag."
+      },
+      {
+        "organisation": "Monash MCHRI / International Guideline Consortium",
+        "title": "International evidence-based guideline for the assessment and management of polycystic ovary syndrome / PMOS (2023 full guideline PDF)",
+        "url": "https://www.monash.edu/__data/assets/pdf_file/0003/3379521/Evidence-Based-Guidelines-2023.pdf",
+        "date": "2023 guideline (PMOS name update noted on Monash hub May 2026)",
+        "recommendation": "Adults: two of three features after exclusions, with AMH as alternative to ultrasound for PCOM; adolescents: both irregular cycles and hyperandrogenism; ultrasound/AMH not for diagnosis within 8 years of menarche; exclude thyroid disease, hyperprolactinaemia, non-classic CAH.",
+        "passage": "ultrasound and anti-mullerian (AMH) levels are not recommended in diagnosis in those within 8 years of menarche",
+        "limitations": "International guideline; local test availability and laboratory AMH cut-offs vary."
+      },
+      {
+        "organisation": "Medical Journal of Australia",
+        "title": "Summary of the 2023 international evidence-based guideline for the assessment and management of polycystic ovary syndrome: an Australian perspective",
+        "url": "https://www.mja.com.au/journal/2024/221/7/summary-2023-international-evidence-based-guideline-assessment-and-management",
+        "date": "Published online 23 September 2024",
+        "recommendation": "Restates adult two-of-three criteria including AMH alternative; adolescents require both hyperandrogenism and ovulatory dysfunction; ultrasound and AMH not recommended in adolescents.",
+        "passage": "The presence of at least two of the following points is required in adults: (i) clinical or biochemical hyperandrogenism, (ii) ovulatory dysfunction or irregular cycles, and (iii) polycystic ovarian appearance or morphology (PCOM) identified through ultrasound or anti-Müllerian hormone (AMH) levels.",
+        "limitations": "Australian implementation lens; regulatory status of medicines discussed elsewhere differs by country."
+      }
+    ],
+    "openQuestions": [
+      "Which local laboratory AMH assay and cut-offs should WHD quote, if any, beyond the guideline’s qualitative role?",
+      "How should bilingual clinic letters present PCOS vs PMOS during the transition period?"
+    ]
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "W23-C",
+  "title": "When Does Bleeding in Early Pregnancy Need Urgent Help?",
+  "seoTitle": "Bleeding in early pregnancy: when to get urgent help",
+  "description": "Bleeding in early pregnancy is common and not always serious. How urgent it is depends on your symptoms, so a doctor needs to advise you personally.",
+  "primaryQuestion": "Is bleeding in early pregnancy normal?",
+  "directAnswer": "Light bleeding or spotting in early pregnancy is fairly common and does not always mean something is wrong, but a doctor should check it. How quickly you need to be seen depends on how heavy the bleeding is and how you feel, which this page cannot judge. If you feel seriously unwell, get urgent in-person care rather than waiting for an online reply. If you feel well, book a consultation so a doctor can advise you.",
+  "sections": [
+    {
+      "heading": "Urgency depends on how unwell you are",
+      "paragraphs": [
+        "Bleeding in early pregnancy can be a few spots, or it can be heavy and painful and leave you feeling faint. Those are not the same situation. This page cannot tell you which local service to use, because that depends on your symptoms and how quickly they are changing.",
+        "Heavy bleeding, severe or one-sided tummy pain, pain at the tip of the shoulder, dizziness or fainting can occur with an ectopic pregnancy, where the pregnancy grows outside the womb, usually in a fallopian tube. A rupture can cause dangerous internal bleeding even when vaginal bleeding looks light. Emergency care, which can include a hospital emergency department, is used when our doctors judge it clinically required after assessing how severe your symptoms are. If you already feel seriously unwell, do not wait for an online reply.",
+        "If you are unsure how severe things are, contact a doctor straight away. When bleeding is light and you feel well, book a consultation with Dr. Charmi Shah so she can advise on the next step for you."
+      ]
+    },
+    {
+      "heading": "What to note before you speak to a doctor",
+      "paragraphs": [
+        "Whether you need to be seen today or can wait for a planned consultation is a clinical judgement. It is not the same for every person, and it cannot be decided from a description on a website.",
+        "It helps to note when the bleeding started, its colour, roughly how much there is, whether you have passed clots or tissue, and any pain. Use pads rather than tampons so the amount can be described. A doctor may ask you to bring tissue if you pass it."
+      ]
+    },
+    {
+      "heading": "Why bleeding happens in early pregnancy",
+      "paragraphs": [
+        "Causes vary. Some people have light bleeding around the time the pregnancy implants, and changes to the cervix can cause spotting, especially after sex or an internal examination. Infections can also cause bleeding.",
+        "Bleeding can also be the first sign of a miscarriage or an ectopic pregnancy. Less commonly, it is linked to a molar pregnancy. The amount, colour or timing of bleeding cannot tell you which of these is happening, so an online symptom description or someone else's story cannot replace an assessment.",
+        "Many people who bleed in the first trimester go on to have a healthy pregnancy. That is a reason to stay calm while seeking care, not a reason to skip it."
+      ]
+    },
+    {
+      "heading": "What an assessment may involve",
+      "paragraphs": [
+        "A clinician will usually ask about your last period, any previous pregnancies, pain and how much you have bled. They may check your pulse and blood pressure, examine your tummy, and sometimes perform a speculum or internal examination.",
+        "An ultrasound scan, often transvaginal in early pregnancy, can show where the pregnancy is and whether a heartbeat is visible. Very early on, a scan may not give a clear answer, and blood tests for the pregnancy hormone hCG may be repeated over a few days to see how levels change.",
+        "Your blood group may be checked. If you are Rh negative, an anti-D injection is sometimes used, but only when our doctors decide it is clinically required after assessing the cause of the bleeding, how far along you are and any procedure you have had. It is not given for every bleed."
+      ]
+    },
+    {
+      "heading": "After the assessment",
+      "paragraphs": [
+        "Sometimes the result is clear on the first visit. Other times you may be asked to return for a repeat scan or blood test, which can be hard to wait through. Ask what symptoms should bring you back sooner and who to call out of hours.",
+        "If the pregnancy is continuing, your usual antenatal care carries on, and our guide to next steps after a positive pregnancy test may help. If you have had a miscarriage, follow-up and support are part of care. For questions that are not urgent, book a consultation with Dr. Charmi Shah."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is brown spotting in early pregnancy safe to ignore?",
+      "answer": "Colour alone cannot show whether spotting is harmless or needs urgent care. How soon you should be seen depends on the amount of bleeding and how you feel. Contact a doctor rather than ignoring it."
+    },
+    {
+      "question": "Does bleeding mean I am having a miscarriage?",
+      "answer": "Not necessarily. Many people bleed in early pregnancy and continue to a healthy birth. Only an assessment, often with a scan and blood tests, can show what is happening."
+    },
+    {
+      "question": "Can I wait to see if the bleeding stops on its own?",
+      "answer": "How long it is reasonable to wait depends on how heavy the bleeding is and whether you feel unwell, which cannot be judged here. If you feel seriously unwell, get urgent in-person care. Otherwise speak to a doctor rather than waiting to see if it stops."
+    }
+  ],
+  "references": [
+    {
+      "label": "NHS — Vaginal bleeding in pregnancy",
+      "url": "https://www.nhs.uk/pregnancy/common-symptoms/vaginal-bleeding/"
+    }
+  ],
+  "conversionCopy": "Bleeding in pregnancy needs advice based on your own symptoms. Book a consultation with Dr. Charmi Shah.",
+  "explainerAlt": "Help-seeking guide for bleeding in early pregnancy, with emergency symptoms listed first.",
+  "storytellingNote": "",
+  "review": {
+    "corrections": [
+      "Emergency care and anti-D are named only as options our doctors use when clinically required after assessment, not as advice for every person.",
+      "No local emergency number or pad-count rule. People who feel seriously unwell are told not to wait; others are asked to book a consultation."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "NHS",
+        "title": "Vaginal bleeding in pregnancy",
+        "url": "https://www.nhs.uk/pregnancy/common-symptoms/vaginal-bleeding/",
+        "recommendation": "Bleeding can be common in early pregnancy but should be checked; seek emergency care for heavy bleeding, severe pain, shoulder-tip pain, dizziness or fainting; otherwise contact midwife, GP or early pregnancy unit.",
+        "limitations": "UK service routes are not used. Cause, urgency and any treatment cannot be decided from this page."
+      }
+    ],
+    "openQuestions": []
+  }
+}

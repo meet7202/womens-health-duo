@@ -1,0 +1,125 @@
+{
+  "id": "W18-Z",
+  "title": "Can pelvic floor physiotherapy help with bladder leakage?",
+  "seoTitle": "Can pelvic floor physio help bladder leaks?",
+  "description": "Supervised pelvic-floor care can help many stress or mixed leaks. See what assessment comes first, what therapy involves, and when other care is needed.",
+  "primaryQuestion": "Can pelvic floor therapy help bladder leakage?",
+  "directAnswer": "Yes—for many people, especially when leakage fits a stress or mixed pattern and training is supervised rather than copied from a video. UK NICE guidance positions supervised pelvic-floor muscle training as first-line non-surgical care for stress or mixed urinary incontinence, and bladder training as first-line when urgency dominates. Physiotherapy does not treat every cause of wetting, and it does not replace medical tests when infection, neurological change or another disease is possible.",
+  "sections": [
+    {
+      "heading": "Matching the leakage pattern before promising help",
+      "paragraphs": [
+        "The NHS groups unintentional urine loss into several patterns: stress-type leaks when pressure rises (cough, laugh, impact), urge-type leaks tied to a hard-to-defer need to void, overflow from incomplete emptying, and rarer total incontinence. Mixed pictures are possible. NICE NG123 asks clinicians to categorise symptoms early and to aim initial treatment at the predominant problem.",
+        "Physiotherapy is most clearly aligned with stress and mixed presentations and with urgency care that includes bladder training. Overflow from obstruction, fistula-related total leakage, or new neurological loss sits outside a home exercise sheet. Our guide to coughing leaks unpacks stress triggers; here the question is whether a physio-led plan is a sensible next step."
+      ]
+    },
+    {
+      "heading": "What happens before a treatment plan is set",
+      "paragraphs": [
+        "Expect questions about fluids, toilet habits, constipation, cough, pregnancies, surgeries, medicines and goals. A short bladder diary is often useful. NICE NG123 requires routine digital assessment to confirm a pelvic-floor contraction before supervised training for incontinence. You can decline an internal exam; alternatives and limits should be explained first.",
+        "NICE NG210 also expects assessors to think about other explanations—infection, medication effects, diabetes, neurological disease, pelvic masses and related problems—before assuming every drip is a muscle-training issue. Bring prior reports if you have them, without waiting for a perfect file."
+      ]
+    },
+    {
+      "heading": "What supervised care may include",
+      "paragraphs": [
+        "Under NICE NG123, the opening non-surgical step for stress or mixed urinary incontinence is a clinician-supervised pelvic-floor programme lasting a minimum of three months, often using eight or more squeezes in three daily sets when that pattern suits the person, then continuing if it helps. For urgency or mixed incontinence, bladder training for a minimum of six weeks is first-line care.",
+        "NICE NG210 adds that supervision should check contraction and relaxation, tailor work to discomfort and goals, offer progress reviews during and after the programme, and consider adjuncts such as biofeedback when an effective voluntary contraction cannot be performed. NHS advice also lists lifestyle steps such as reviewing caffeine, alcohol and weight alongside pelvic-floor exercises and bladder training. Dr. Zalak Shah (PT) teaches technique and task practice; medicines remain a doctor’s decision."
+      ]
+    },
+    {
+      "heading": "Goals, timelines and realistic limits",
+      "paragraphs": [
+        "Choose outcomes you can notice: fewer leaks on stairs, surviving a cold without pad changes, or delaying urgency long enough to reach the toilet. NIDDK patient information notes that bladder-control improvement from pelvic-floor training may take several weeks of consistent practice. Plateau after a proper supervised trial is useful information, not personal failure.",
+        "No responsible clinic can quote a personal success percentage from an internet article. If symptoms worsen, pain rises, or emptying becomes harder, stop escalating unsupervised squeezes and return for review."
+      ]
+    },
+    {
+      "heading": "When another clinician or pathway is needed",
+      "paragraphs": [
+        "Seek urgent medical care for blood in the urine, fever with burning, painful retention, or abrupt continence loss with genital numbness or new leg weakness. Same-day medical advice fits marked pelvic pain that feels different from your usual leaks.",
+        "If conservative care is incomplete, NICE pathways discuss medicines, devices and surgical options through appropriate medical teams. Gynaecology input from a clinician such as Dr. Charmi Shah matters when prolapse, post-surgical issues or other pelvic disease complicates the picture. Physiotherapy can continue as part of a shared plan rather than as a rival treatment."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Will physiotherapy fix every type of incontinence?",
+      "answer": "No. It is a first-line option for many stress and mixed presentations and supports urgency care with bladder training, but overflow, fistula-related leakage and neurological emergencies need different medical pathways."
+    },
+    {
+      "question": "Do I need surgery if three months of training is incomplete?",
+      "answer": "Not automatically. Incomplete improvement should trigger review of diagnosis, technique, lifestyle factors and whether medical or surgical options are appropriate—not an immediate assumption that muscle work “failed forever”."
+    }
+  ],
+  "references": [
+    {
+      "label": "NICE — NG123 Urinary incontinence and pelvic organ prolapse in women: management (Recommendations)",
+      "url": "https://www.nice.org.uk/guidance/ng123/chapter/Recommendations"
+    },
+    {
+      "label": "NICE — NG210 Pelvic floor dysfunction: prevention and non-surgical management (Recommendations)",
+      "url": "https://www.nice.org.uk/guidance/ng210/chapter/Recommendations"
+    },
+    {
+      "label": "NHS — Urinary incontinence overview",
+      "url": "https://www.nhs.uk/conditions/urinary-incontinence/"
+    },
+    {
+      "label": "NIDDK — Kegel Exercises",
+      "url": "https://www.niddk.nih.gov/health-information/urologic-diseases/kegel-exercises"
+    }
+  ],
+  "conversionCopy": "If bladder leakage is limiting activity and you want supervised pelvic-floor care, you can book with Dr. Zalak Shah (PT).",
+  "explainerAlt": "Pathway from bladder assessment to supervised training, review and referral when needed.",
+  "storytellingNote": "",
+  "review": {
+    "corrections": [
+      "New rewrite answers treatment-fit expectations without success-rate promises.",
+      "Separated stress/urge pathways using NHS definitions and NICE NG123 first-line recommendations.",
+      "Clarified physiotherapy limits and medical/urgent routes; no drug doses."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "NICE",
+        "title": "NG123 Urinary incontinence and pelvic organ prolapse in women: management — Recommendations",
+        "url": "https://www.nice.org.uk/guidance/ng123/chapter/Recommendations",
+        "date": "not stated on Recommendations chapter fetch",
+        "recommendation": "Categorise UI; digital assessment before supervised PFMT; ≥3 months PFMT first-line for stress/mixed; ≥6 weeks bladder training for urgency/mixed; continue if beneficial.",
+        "passage": "Offer a trial of supervised pelvic floor muscle training of at least 3 months' duration as first-line treatment to women with stress or mixed urinary incontinence.",
+        "limitations": "UK NICE pathway; access to supervised programmes varies."
+      },
+      {
+        "organisation": "NICE",
+        "title": "NG210 Pelvic floor dysfunction — Recommendations",
+        "url": "https://www.nice.org.uk/guidance/ng210/chapter/Recommendations",
+        "date": "Published 9 December 2021",
+        "recommendation": "Supervised PFMT assesses contraction/relaxation; offer ≥3 months for stress/mixed UI; review during and after programme.",
+        "passage": "Offer a programme of supervised pelvic floor muscle training for at least 3 months to women (including pregnant women) with stress urinary incontinence or mixed urinary incontinence.",
+        "limitations": "UK guidance."
+      },
+      {
+        "organisation": "NHS",
+        "title": "Urinary incontinence — Overview",
+        "url": "https://www.nhs.uk/conditions/urinary-incontinence/",
+        "date": "Page last reviewed: 15 June 2023",
+        "recommendation": "Defines stress and urge incontinence; lists pelvic floor exercises and bladder training among non-surgical options.",
+        "passage": "stress incontinence – when urine leaks out at times when your bladder is under pressure; for example, when you cough or laugh",
+        "limitations": "UK public advice."
+      },
+      {
+        "organisation": "NIDDK",
+        "title": "Kegel Exercises",
+        "url": "https://www.niddk.nih.gov/health-information/urologic-diseases/kegel-exercises",
+        "date": "Last Reviewed November 2021",
+        "recommendation": "Improvement may take 3–6 weeks of consistent practice; do not overdo exercises.",
+        "passage": "You may not feel your bladder control improve until after 3 to 6 weeks.",
+        "limitations": "US patient education; timelines vary."
+      }
+    ],
+    "openQuestions": [
+      "Which local urology/gynaecology referral partners should be named when conservative care plateaus?",
+      "Does WHD use group PFMT sessions as NG210 allows, or only individual sessions?"
+    ]
+  }
+}

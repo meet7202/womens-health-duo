@@ -1,22 +1,23 @@
 {
   "id": "W25-C",
   "openClinicalQuestions": [
-    "Which bleeding patterns should be described more specifically after review?",
-    "When does Dr. Charmi Shah use laboratory testing in this transition?",
-    "Which non-hormonal and local-care options belong in a later reviewed section?"
+    "Should WHD quote India-specific average menopause age if a MoHFW source is agreed?",
+    "When to order TSH/ferritin panels routinely in midlife symptom visits at WHD?"
   ],
   "claimLedger": [
     {
-      "claim": "Perimenopause can involve changing periods and a range of physical and psychological symptoms.",
+      "claim": "Cycle change often first; lists flushes, sleep, mood, vaginal, UTI, other symptoms; menopause after 12 months without period; postmenopausal bleeding needs review; contraception intervals after final period.",
       "sourceUrl": "https://www.nhs.uk/conditions/menopause-and-perimenopause/symptoms/",
-      "limitations": "Symptoms overlap with other conditions and do not establish diagnosis alone.",
-      "reviewerDecision": "pending"
+      "sourceSection": "NHS · Symptoms of menopause and perimenopause · Page last reviewed: 19 May 2026",
+      "limitations": "UK average menopause age; ethnic variation noted on page.",
+      "reviewerDecision": "accepted"
     },
     {
-      "claim": "Bleeding after menopause is not a routine perimenopause symptom and requires assessment.",
-      "sourceUrl": "https://www.nhs.uk/conditions/menopause-and-perimenopause/symptoms/",
-      "limitations": "The source is introductory; detailed bleeding triage needs clinician review.",
-      "reviewerDecision": "pending"
+      "claim": "Age ≥45: identify perimenopause from vasomotor symptoms + cycle change without lab tests; do not use AMH/oestradiol/AFC etc.; limited FSH use under 45.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng23/chapter/Recommendations",
+      "sourceSection": "NICE · Menopause: identification and management (NG23) · Updated recommendations including 2024 (fetched 2026)",
+      "limitations": "UK guideline; premature ovarian insufficiency pathways differ under 40.",
+      "reviewerDecision": "accepted"
     }
   ]
 }

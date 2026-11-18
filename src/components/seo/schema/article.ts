@@ -14,6 +14,7 @@ export function articleSchema(params: {
   datePublished?: string;
   dateModified?: string;
   authorId?: TopicGuideAuthorId;
+  reviewerIds?: readonly TopicGuideAuthorId[];
   imageUrls?: readonly string[];
 }) {
   const url = githubPagesAbsoluteUrl(SITE_URL, params.path);
@@ -30,6 +31,20 @@ export function articleSchema(params: {
           url: githubPagesAbsoluteUrl(SITE_URL, "/"),
         };
 
+  const reviewers = (params.reviewerIds ?? []).flatMap((id) => {
+    const doctor = DOCTOR_BY_SLUG[id];
+    return doctor
+      ? [
+          {
+            "@type": "Person" as const,
+            name: doctor.name,
+            jobTitle: doctor.jobTitle,
+            url: githubPagesAbsoluteUrl(SITE_URL, doctor.path),
+          },
+        ]
+      : [];
+  });
+
   const node: Record<string, unknown> = {
     "@type": "Article",
     "@id": `${url}#article`,
@@ -37,6 +52,7 @@ export function articleSchema(params: {
     description: params.description,
     mainEntityOfPage: { "@type": "WebPage", "@id": `${url}#webpage` },
     author,
+    ...(reviewers.length ? { reviewedBy: reviewers } : {}),
     publisher: {
       "@type": "Organization",
       name: SITE_NAME,

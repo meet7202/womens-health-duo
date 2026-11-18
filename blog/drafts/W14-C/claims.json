@@ -1,22 +1,30 @@
 {
   "id": "W14-C",
   "openClinicalQuestions": [
-    "Which first-line options should be named for the clinic’s patient population?",
-    "How should access to specialist imaging and laparoscopy be described?",
-    "Which fertility referral triggers should be included?"
+    "Should WHD name specific Ahmedabad/Mumbai imaging protocols for deep endometriosis suspicion?",
+    "When should pelvic-health physiotherapy be introduced as adjunct for muscle guarding on this page?"
   ],
   "claimLedger": [
     {
-      "claim": "Normal examination and ultrasound do not exclude endometriosis.",
+      "claim": "Suspect on suggestive symptoms; offer examination and transvaginal ultrasound; do not exclude if exam/ultrasound normal; consider laparoscopy even if imaging normal.",
       "sourceUrl": "https://www.nice.org.uk/guidance/ng73/chapter/Recommendations",
-      "limitations": "Imaging performance varies and this statement does not diagnose an individual.",
-      "reviewerDecision": "pending"
+      "sourceSection": "NICE · Endometriosis: diagnosis and management (NG73) Recommendations · Last updated 11 November 2024 (fetched 2026)",
+      "limitations": "UK guideline; local laparoscopy access and specialist centre criteria vary in India.",
+      "reviewerDecision": "accepted"
     },
     {
-      "claim": "Initial treatment and investigation may proceed without diagnostic surgery in every case.",
-      "sourceUrl": "https://www.nice.org.uk/guidance/ng73/chapter/Recommendations",
-      "limitations": "Treatment choice and local availability need Dr. Charmi Shah’s review.",
-      "reviewerDecision": "pending"
+      "claim": "Diagnostic delay of 4–10 years can occur between first reporting symptoms and confirming diagnosis.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng73/chapter/Context",
+      "sourceSection": "NICE · Endometriosis: diagnosis and management (NG73) Context · Guideline context (fetched 2026)",
+      "limitations": "Context statement based on UK experience; Indian delay ranges may differ.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Lists period pain limiting activities, heavy bleeding, pelvic pain, pain with sex/pee/poo, fatigue; medicines and surgery as management categories; no cure stated.",
+      "sourceUrl": "https://www.nhs.uk/conditions/endometriosis/",
+      "sourceSection": "NHS · Endometriosis · not stated on fetched overview header",
+      "limitations": "UK patient page; referral pathways differ.",
+      "reviewerDecision": "accepted"
     }
   ]
 }

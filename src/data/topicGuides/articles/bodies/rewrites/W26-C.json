@@ -1,0 +1,111 @@
+{
+  "id": "W26-C",
+  "title": "Is HRT Right for Me? Questions to Discuss With a Doctor",
+  "seoTitle": "Is HRT right for me? Questions to ask",
+  "description": "HRT can ease flushes, sleep and vaginal symptoms. Prepare questions on benefits, clot and breast-cancer risks, patches versus tablets, and alternatives.",
+  "primaryQuestion": "How do I decide whether HRT is right for me?",
+  "directAnswer": "Hormone replacement therapy (HRT) replaces oestrogen—and usually progestogen if you still have a womb—to relieve menopause-associated symptoms such as hot flushes, night sweats, sleep disturbance, low mood linked to menopause, and vaginal dryness. NHS advice is that for many people under 60 with bothersome symptoms and without high breast-cancer or clot risk, benefits are likely to outweigh risks, but the balance is personal. No article can declare HRT universally safe or unsafe. Shared decisions use your symptom burden, age, medical history and preferences.",
+  "sections": [
+    {
+      "heading": "What HRT is trying to treat",
+      "paragraphs": [
+        "Systemic HRT (tablets, patches, gel or spray) is used for whole-body menopause symptoms. NICE recommends offering HRT for vasomotor symptoms associated with menopause. Local vaginal oestrogen treats genitourinary symptoms such as dryness or pain with sex and, per NHS, does not carry the same breast-cancer or clot risk profile as systemic therapy because little hormone reaches the bloodstream.",
+        "Our perimenopause symptoms guide helps you name what is bothering you before the HRT conversation. Bone protection is another NHS-listed benefit of systemic HRT, especially important if periods stopped before 45. Muscle strength support is also described on NHS benefits pages alongside the need to keep exercising."
+      ]
+    },
+    {
+      "heading": "Option categories—not a personal prescription",
+      "paragraphs": [
+        "NHS explains combined HRT (oestrogen plus progestogen) when you have a womb, and oestrogen-only HRT after hysterectomy. Delivery methods include tablets, skin patches, gel, spray, and intrauterine progestogen paired with oestrogen. Sequential combined regimens are often used while periods are still occurring; continuous combined regimens are usual after 12 months without periods. Testosterone gel may be considered by specialists for persistent low sexual desire after menopause when HRT alone is not enough—licensing and access vary.",
+        "NICE advises discussing benefits and risks of combined versus oestrogen-only treatment, transdermal versus oral routes, sequential versus continuous combined schedules, and dose and duration, tailored to age and risk factors. Patches, gel and spray do not increase blood-clot risk the way tablets can, which matters if clot risk is elevated."
+      ]
+    },
+    {
+      "heading": "Benefits, risks and history to put on the table",
+      "paragraphs": [
+        "NHS lists symptom relief and osteoporosis prevention among key benefits, and notes serious risks are usually low and depend on type, duration and personal factors. Combined HRT slightly increases breast-cancer risk with longer use; oestrogen-only HRT has little or no increase in that risk after hysterectomy. Tablet HRT can slightly raise clot and stroke risk; transdermal oestrogen does not increase clot risk in the same way. Overall, NICE states that taking combined or oestrogen-only HRT is unlikely to affect life expectancy.",
+        "Bring personal or family history of breast cancer, clotting disorders, heart disease or stroke, migraine with aura, unexplained vaginal bleeding, and liver disease. NICE recommends specialist pathways when arterial disease history is present, and non-HRT first approaches when personal breast-cancer history or high risk exists. Unlicensed compounded “bioidentical” products marketed online are not the same as regulated HRT discussed in NICE and NHS materials."
+      ]
+    },
+    {
+      "heading": "Questions worth asking in the appointment",
+      "paragraphs": [
+        "Useful prompts include: Which symptoms are most likely to improve with systemic versus vaginal treatment? Given my history, is a patch or gel preferable to a tablet? How will we review bleeding on HRT in the first months? What non-hormonal options exist if I decline HRT or need an add-on for flushes? How long might I continue, and what happens if symptoms return when I stop?",
+        "Also ask about cervical and breast screening plans, contraception if you are still perimenopausal, and how to report new breast lumps, calf pain, chest pain or sudden shortness of breath. Dr. Charmi Shah can walk through these choices without promising a risk-free path."
+      ]
+    },
+    {
+      "heading": "When to seek urgent care while using or considering HRT",
+      "paragraphs": [
+        "Seek emergency care for symptoms of a possible clot or stroke—sudden chest pain, coughing blood, severe calf swelling and pain, sudden weakness, speech difficulty or collapse—or for heavy bleeding with fainting. Any bleeding after confirmed menopause still needs prompt assessment even if you are not on HRT.",
+        "Book a non-urgent review if side effects persist, bleeding on HRT stays irregular beyond the early adjustment window your clinician described, or symptoms are uncontrolled. Alternatives and follow-up timing belong in that visit, not in self-adjustment of doses."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do HRT patches avoid the blood-clot risk of tablets?",
+      "answer": "NHS states that patches, sprays and gels do not increase the risk of blood clots, whereas tablets can increase clot risk (still usually low overall). Choice still depends on your wider history and symptom needs."
+    },
+    {
+      "question": "Is vaginal oestrogen the same as systemic HRT?",
+      "answer": "No. Vaginal oestrogen treats local dryness and related symptoms with minimal whole-body absorption. NHS notes it does not increase breast-cancer or clot risk like systemic HRT and will not treat hot flushes or mood symptoms."
+    }
+  ],
+  "references": [
+    {
+      "label": "NHS — Benefits and risks of hormone replacement therapy (HRT)",
+      "url": "https://www.nhs.uk/medicines/hormone-replacement-therapy-hrt/benefits-and-risks-of-hormone-replacement-therapy-hrt/"
+    },
+    {
+      "label": "NHS — Types of hormone replacement therapy (HRT)",
+      "url": "https://www.nhs.uk/medicines/hormone-replacement-therapy-hrt/types-of-hormone-replacement-therapy-hrt/"
+    },
+    {
+      "label": "NICE NG23 — Menopause: identification and management (Recommendations)",
+      "url": "https://www.nice.org.uk/guidance/ng23/chapter/Recommendations"
+    }
+  ],
+  "conversionCopy": "If you want a structured HRT discussion tailored to your history and symptoms, you can book a consultation with Dr. Charmi Shah.",
+  "explainerAlt": "Shared-decision checklist of HRT benefits, risks and questions for a menopause visit.",
+  "storytellingNote": "",
+  "review": {
+    "corrections": [
+      "New rewrite framed as decision questions with NHS/NICE benefit–risk and route categories; no regimens or compounded-product endorsement.",
+      "Linked W25-C for symptom identification; urgent clot/stroke and postmenopausal bleeding flagged."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "NHS",
+        "title": "Benefits and risks of hormone replacement therapy (HRT)",
+        "url": "https://www.nhs.uk/medicines/hormone-replacement-therapy-hrt/benefits-and-risks-of-hormone-replacement-therapy-hrt/",
+        "date": "Page last reviewed: 8 February 2023",
+        "recommendation": "Benefits often outweigh risks under 60 without high breast/clot risk; lists symptom and bone benefits; combined HRT small breast-cancer increase; tablets raise clot/stroke risk; patches/gel/spray do not raise clot risk; vaginal oestrogen local safety profile.",
+        "passage": "If you're under 60 years old, have menopause symptoms, and are not at high risk of breast cancer or blood clots, the benefits of HRT are likely to outweigh the risks.",
+        "limitations": "UK absolute risk figures; individual Indian risk counselling still required."
+      },
+      {
+        "organisation": "NHS",
+        "title": "Types of hormone replacement therapy (HRT)",
+        "url": "https://www.nhs.uk/medicines/hormone-replacement-therapy-hrt/types-of-hormone-replacement-therapy-hrt/",
+        "date": "Page last reviewed: 9 March 2023",
+        "recommendation": "Combined vs oestrogen-only; tablets/patches/gel/spray/IUS/vaginal oestrogen; sequential vs continuous routines; testosterone specialist use notes.",
+        "passage": "If you still have your womb you'll need to take both oestrogen and progestogen. Taking both helps to protect against the risk of womb cancer.",
+        "limitations": "Brand availability differs in India."
+      },
+      {
+        "organisation": "NICE",
+        "title": "Menopause: identification and management (NG23)",
+        "url": "https://www.nice.org.uk/guidance/ng23/chapter/Recommendations",
+        "date": "Updated 2024 recommendations (fetched 2026)",
+        "recommendation": "Offer HRT for vasomotor symptoms; discuss route and regimen trade-offs; overall life expectancy unlikely changed; specialist discussion with CVD history; breast-cancer pathways.",
+        "passage": "When discussing HRT as a treatment option for menopause-associated symptoms, explain that, overall, taking either combined HRT or oestrogen-only HRT is unlikely to affect life expectancy.",
+        "limitations": "UK licensed-dose framing; off-label notes apply to some uses."
+      }
+    ],
+    "openQuestions": [
+      "Which regulated HRT brands should WHD mention as examples in India, if any?",
+      "Preferred review interval after starting HRT in WHD clinics?"
+    ]
+  }
+}

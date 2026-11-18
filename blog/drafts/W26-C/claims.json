@@ -1,22 +1,30 @@
 {
   "id": "W26-C",
   "openClinicalQuestions": [
-    "Which absolute benefit-and-risk examples can be included after review?",
-    "How should local vaginal therapy and progestogen need be explained for Indian readers?",
-    "Which follow-up schedule reflects Dr. Charmi Shah’s practice without becoming universal advice?"
+    "Which regulated HRT brands should WHD mention as examples in India, if any?",
+    "Preferred review interval after starting HRT in WHD clinics?"
   ],
   "claimLedger": [
     {
-      "claim": "Menopause hormone therapy can treat selected systemic and genitourinary symptoms.",
-      "sourceUrl": "https://www.acog.org/womens-health/faqs/hormone-therapy-for-menopause",
-      "limitations": "US patient guidance; available products and local practice differ.",
-      "reviewerDecision": "pending"
+      "claim": "Benefits often outweigh risks under 60 without high breast/clot risk; lists symptom and bone benefits; combined HRT small breast-cancer increase; tablets raise clot/stroke risk; patches/gel/spray do not raise clot risk; vaginal oestrogen local safety profile.",
+      "sourceUrl": "https://www.nhs.uk/medicines/hormone-replacement-therapy-hrt/benefits-and-risks-of-hormone-replacement-therapy-hrt/",
+      "sourceSection": "NHS · Benefits and risks of hormone replacement therapy (HRT) · Page last reviewed: 8 February 2023",
+      "limitations": "UK absolute risk figures; individual Indian risk counselling still required.",
+      "reviewerDecision": "accepted"
     },
     {
-      "claim": "Benefits and risks vary with route, symptoms and personal medical history.",
-      "sourceUrl": "https://www.acog.org/womens-health/faqs/hormone-therapy-for-menopause",
-      "limitations": "The source cannot determine individual suitability or provide a regimen.",
-      "reviewerDecision": "pending"
+      "claim": "Combined vs oestrogen-only; tablets/patches/gel/spray/IUS/vaginal oestrogen; sequential vs continuous routines; testosterone specialist use notes.",
+      "sourceUrl": "https://www.nhs.uk/medicines/hormone-replacement-therapy-hrt/types-of-hormone-replacement-therapy-hrt/",
+      "sourceSection": "NHS · Types of hormone replacement therapy (HRT) · Page last reviewed: 9 March 2023",
+      "limitations": "Brand availability differs in India.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Offer HRT for vasomotor symptoms; discuss route and regimen trade-offs; overall life expectancy unlikely changed; specialist discussion with CVD history; breast-cancer pathways.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng23/chapter/Recommendations",
+      "sourceSection": "NICE · Menopause: identification and management (NG23) · Updated 2024 recommendations (fetched 2026)",
+      "limitations": "UK licensed-dose framing; off-label notes apply to some uses.",
+      "reviewerDecision": "accepted"
     }
   ]
 }

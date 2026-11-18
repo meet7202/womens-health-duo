@@ -114,6 +114,8 @@ export type TopicGuidePageModel = {
   relatedSlugs: string[];
   authorId?: TopicGuideAuthorId;
   reviewerId?: TopicGuideAuthorId;
+  /** Approved reviewers for the byline (set from a recorded clinical approval). */
+  reviewerIds?: TopicGuideAuthorId[];
   publishedAt?: string;
   updatedAt?: string;
   reviewedAt?: string;

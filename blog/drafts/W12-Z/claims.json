@@ -1,28 +1,37 @@
 {
   "id": "W12-Z",
   "openClinicalQuestions": [
-    "When does Dr. Zalak recommend postpartum assessment after different births?",
-    "Which birth details materially change her examination?",
-    "Which urinary red flags does Dr. Charmi want retained?"
+    "What local Ahmedabad/Bangalore postnatal referral route should WHD name when leakage persists beyond early recovery?",
+    "How does Dr. Zalak schedule the mid-programme and end-programme PFMT reviews for new parents?"
   ],
   "claimLedger": [
     {
-      "claim": "Stress and urgency are distinct urinary-incontinence patterns that can also coexist.",
-      "sourceUrl": "https://www.nhs.uk/conditions/urinary-incontinence/",
-      "limitations": "Pattern recognition does not diagnose an individual.",
-      "reviewerDecision": "pending"
-    },
-    {
-      "claim": "Pelvic-floor muscle training is recommended for selected urinary symptoms after assessment.",
-      "sourceUrl": "https://www.nice.org.uk/guidance/ng210/chapter/recommendations",
-      "limitations": "Suitability and supervision depend on presentation.",
-      "reviewerDecision": "pending"
-    },
-    {
-      "claim": "Post-pregnancy body changes can include bladder symptoms that deserve support.",
+      "claim": "Leaky bladder may need pelvic floor exercises; ask GP or health visitor any time; postnatal check around 6–8 weeks is a good time to raise problems.",
       "sourceUrl": "https://www.nhs.uk/baby/support-and-services/your-post-pregnancy-body/",
-      "limitations": "Brief guidance; persistent or acute symptoms need individual review.",
-      "reviewerDecision": "pending"
+      "sourceSection": "NHS · Your post-pregnancy body · not stated on fetch",
+      "limitations": "UK maternity pathway timing; Indian postnatal visit schedules differ.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Discuss pelvic floor dysfunction at each postnatal contact; ask recently delivered women about symptoms; list labour-related risk factors; offer ≥3 months supervised PFMT for stress/mixed UI.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng210/chapter/Recommendations",
+      "sourceSection": "NICE · NG210 Pelvic floor dysfunction — Recommendations · Published 9 December 2021",
+      "limitations": "UK service roles; local Indian staffing models vary.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Offer ≥3 months supervised PFMT as first-line for stress or mixed UI after digital confirmation of contraction.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng123/chapter/Recommendations",
+      "sourceSection": "NICE · NG123 Urinary incontinence and pelvic organ prolapse in women: management — Recommendations · not stated on Recommendations chapter fetch",
+      "limitations": "UK NICE pathway.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "See a GP for any type of incontinence; diary of fluids and urination may be suggested; pregnancy and vaginal birth listed among risk factors.",
+      "sourceUrl": "https://www.nhs.uk/conditions/urinary-incontinence/",
+      "sourceSection": "NHS · Urinary incontinence — Overview · Page last reviewed: 15 June 2023",
+      "limitations": "UK primary-care first step.",
+      "reviewerDecision": "accepted"
     }
   ]
 }

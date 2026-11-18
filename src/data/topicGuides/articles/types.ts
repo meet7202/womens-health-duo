@@ -1,3 +1,4 @@
+import type { FaqItem } from "../../siteFaq";
 import type { TopicGuideAuthorId, TopicGuideReference, TopicGuideSection } from "../types";
 
 /** Publication lifecycle — separate from editorial `reviewStatus` (byline gate). */
@@ -46,9 +47,19 @@ export type CalendarArticleRevision = {
   directAnswer: string;
   storytellingNote: string;
   sections: TopicGuideSection[];
+  /**
+   * Four Google Images click-hook lines for the watermarked SVG explainer.
+   * Must be answered in `sections` or `faqs`; sourced from `blog/drafts/explainer-cards.json`.
+   */
+  explainerCards?: [string, string, string, string];
   figures: ArticleFigure[];
   references: TopicGuideReference[];
   internalLinks: ArticleInlineLink[];
+  /**
+   * Article-specific FAQs. When present (even empty) they replace the pooled cluster
+   * FAQs and the automatic booking questions on the article page.
+   */
+  faqs?: FaqItem[];
   conversionCopy: string;
   conversionPath: string;
   parentHubPath: string;
@@ -62,4 +73,6 @@ export type CalendarArticleRevision = {
   /** Only set after real clinician confirmation — do not invent. */
   authorId?: TopicGuideAuthorId;
   reviewerId?: TopicGuideAuthorId;
+  /** Clinicians who reviewed and approved this text (both shown on the byline). */
+  reviewerIds?: TopicGuideAuthorId[];
 };

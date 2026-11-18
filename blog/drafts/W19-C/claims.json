@@ -1,22 +1,23 @@
 {
   "id": "W19-C",
   "openClinicalQuestions": [
-    "Which antiemetic categories, if any, should be named after clinical review?",
-    "What local maternity route should patients use after hours?",
-    "Which dehydration indicators should be retained in final triage copy?"
+    "Which antiemetic categories does Dr. Charmi want named for Indian readers beyond the generic ‘anti-sickness medicines’ phrasing?",
+    "Any FOGSI hyperemesis pathway details to add once verified?"
   ],
   "claimLedger": [
     {
-      "claim": "Pregnancy nausea can occur at any time, and small frequent intake may help some people.",
+      "claim": "Symptoms any time of day; usually eases by 16–20 weeks; self-care diet/rest/ginger/acupressure; call if dark urine/not peed >8h, unable to keep fluids 24h, faint, pain, fever, blood in vomit, weight loss; antiemetics if needed",
       "sourceUrl": "https://www.nhs.uk/pregnancy/common-symptoms/vomiting-and-morning-sickness/",
-      "limitations": "Supportive strategies are not a substitute for assessment when intake is poor.",
-      "reviewerDecision": "pending"
+      "sourceSection": "NHS · Vomiting and morning sickness · Media last reviewed dates on page; content fetched this session",
+      "limitations": "UK call pathways (111/GP/midwife); use local maternity/emergency contacts in India",
+      "reviewerDecision": "accepted"
     },
     {
-      "claim": "Persistent vomiting with dehydration or inability to keep fluids down needs medical advice.",
-      "sourceUrl": "https://www.nhs.uk/pregnancy/common-symptoms/vomiting-and-morning-sickness/",
-      "limitations": "Urgency depends on severity and clinical context.",
-      "reviewerDecision": "pending"
+      "claim": "NVP affects up to 90%; onset before 16 weeks; morning sickness label inaccurate; HG affects 0.3–3.6% and interferes with eating and drinking",
+      "sourceUrl": "https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/the-management-of-nausea-and-vomiting-of-pregnancy-and-hyperemesis-gravidarum-green-top-guideline-no-69/",
+      "sourceSection": "RCOG · The Management of Nausea and Vomiting of Pregnancy and Hyperemesis Gravidarum (Green-top Guideline No.69) · First edition; next review date 2027 (page statement)",
+      "limitations": "UK clinical guideline landing page; full Wiley PDF not required for these prevalence/definition points",
+      "reviewerDecision": "accepted"
     }
   ]
 }

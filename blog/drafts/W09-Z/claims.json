@@ -1,22 +1,29 @@
 {
   "id": "W09-Z",
   "openClinicalQuestions": [
-    "What exact demonstration sequence will Dr. Zalak approve?",
-    "Which measurements are documented in clinic?",
-    "How should hernia escalation be worded by Dr. Charmi?"
+    "Clinician review of escalation wording for a painful, firm, non-reducible abdominal lump (possible strangulated hernia)—confirm preferred phrasing distinct from W04-Z."
   ],
   "claimLedger": [
     {
-      "claim": "Post-pregnancy abdominal separation can be observed, but persistent concerns may need physiotherapy.",
-      "sourceUrl": "https://www.nhs.uk/baby/support-and-services/your-post-pregnancy-body/",
-      "limitations": "Brief patient guidance does not validate a diagnostic self-test.",
-      "reviewerDecision": "pending"
+      "claim": "Describes bulging/doming and feeling a gap as possible observations; advises seeking women’s health physiotherapy rather than self-grading alone.",
+      "sourceUrl": "https://thepogp.co.uk/patient_information/womens_health/tummy_muscle_separation.aspx",
+      "sourceSection": "POGP · Tummy muscle separation (DRAM) in pregnancy · not stated",
+      "limitations": "Does not authorise a WHD step-by-step protocol",
+      "reviewerDecision": "accepted"
     },
     {
-      "claim": "Diastasis assessment considers more than a visible bulge or self-measured gap.",
-      "sourceUrl": "https://my.clevelandclinic.org/health/diseases/22346-diastasis-recti",
-      "limitations": "General overview; clinician assessment is still required.",
-      "reviewerDecision": "pending"
+      "claim": "Emergency care for severe pain, vomiting, colour change, inability to pass wind/stool with hernia—strangulation risk.",
+      "sourceUrl": "https://www.nhs.uk/conditions/umbilical-hernia/",
+      "sourceSection": "NHS · Umbilical hernia · Page last reviewed 24 November 2025",
+      "limitations": "Hernia-specific; adapted carefully for midline lump counselling",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Urgent advice pathway for hernia with pain, nausea/vomiting, constipation, fever or confusion.",
+      "sourceUrl": "https://www.nhs.uk/conditions/hernia/",
+      "sourceSection": "NHS · Hernia · not stated on fetched page",
+      "limitations": "General hernia page",
+      "reviewerDecision": "accepted"
     }
   ]
 }

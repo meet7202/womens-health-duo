@@ -1,0 +1,98 @@
+{
+  "id": "W25-C",
+  "title": "Could My Symptoms Be Perimenopause?",
+  "seoTitle": "Could these be perimenopause symptoms?",
+  "description": "Perimenopause often starts with cycle changes, hot flushes and sleep or mood shifts. From 45, NICE usually diagnoses clinically without hormone blood tests.",
+  "primaryQuestion": "What are the first signs of perimenopause?",
+  "directAnswer": "Perimenopause is the transition toward menopause, when periods become less predictable and hormone-related symptoms may appear. NHS notes that a change in periods—more often, less often, heavier or lighter—is often one of the first signs, alongside hot flushes, night sweats, sleep problems, mood changes, brain fog, vaginal dryness and other features that vary widely. Menopause itself is reached after 12 months without a period (when not using hormonal contraception). From age 45, NICE advises identifying perimenopause from symptoms and cycle changes without routine hormone blood tests in otherwise healthy people.",
+  "sections": [
+    {
+      "heading": "Perimenopause versus menopause",
+      "paragraphs": [
+        "Menopause means periods have stopped. NHS defines menopause as not having a period for 12 months; after that you are postmenopausal. Perimenopause is the lead-in years when ovarian hormone patterns fluctuate and symptoms can start—sometimes while bleeds are still happening. Symptoms may continue after the final period.",
+        "NHS timing language places menopause commonly between the mid-40s and mid-50s (average around 51 in the UK). People from some ethnic backgrounds and people with some lifelong conditions may experience menopause younger, which NICE also flags. Pregnancy is still possible in perimenopause, so contraception advice remains relevant until the recommended post-period intervals are met."
+      ]
+    },
+    {
+      "heading": "Common symptoms and how much they vary",
+      "paragraphs": [
+        "Besides cycle change, NHS lists hot flushes and night sweats, sleep disturbance, mood swings or low mood, memory or concentration problems, weight gain often around the trunk, vaginal dryness or discomfort with sex, more urinary infections or urgency, palpitations, joint aches, hair and skin changes, and lower sex drive. Some people have intense symptoms that affect work and relationships; others notice very little.",
+        "Hormonal contraception can mask the natural bleeding pattern, making it harder to spot the transition. Combined pills create scheduled bleeds; progestogen-only methods may stop or scatter bleeding. Tell your clinician what you use before interpreting a “regular” calendar as proof you are not in perimenopause."
+      ]
+    },
+    {
+      "heading": "Why age and symptoms guide assessment",
+      "paragraphs": [
+        "NICE NG23 recommends identifying perimenopause without laboratory tests in otherwise healthy people aged 45 or over who have recently started vasomotor symptoms plus any menstrual-cycle change. Do not use AMH, inhibin, oestradiol, antral follicle count or ovarian volume to identify perimenopause or menopause in that age group. FSH blood testing is considered mainly for ages 40–45 with symptoms and cycle change, or under 40 when premature ovarian insufficiency is suspected—not as a routine screen at 48 with classic flushes.",
+        "Not every midlife symptom is hormonal. Thyroid disease, iron deficiency, depression, medicines and sleep apnoea can overlap. Our irregular-periods guide helps describe bleeding changes; postmenopausal bleeding—any bleed after 12 months without periods—needs prompt medical review even if light or once-only, because NHS advises checking it."
+      ]
+    },
+    {
+      "heading": "What to bring to a consultation",
+      "paragraphs": [
+        "Note how cycles have shifted, flush frequency, sleep quality, mood, vaginal comfort, contraception, cervical screening status, and your main goals (symptom relief, bone health discussion, bleeding control). Mentions of migraine, clotting history, breast disease or heart disease help frame treatment options later.",
+        "Our HRT questions guide covers shared decision-making if you want to explore hormone therapy. Dr. Charmi Shah can sort likely perimenopause from lookalike causes and outline next steps without requiring a stack of unnecessary hormone panels when NICE criteria already fit."
+      ]
+    },
+    {
+      "heading": "Bleeding and other reasons to seek care promptly",
+      "paragraphs": [
+        "See a clinician promptly for bleeding after 12 months without periods, newly very heavy periods with dizziness, bleeding after sex, or flushes with concerning palpitations you cannot explain. Emergency care is for collapse, severe acute pain or flooding loss with faintness.",
+        "Routine review is appropriate when midlife symptoms disrupt life and you want options explained. Early advice, as NHS notes, can reduce effects on health, relationships and work."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do I need a hormone blood test to confirm perimenopause at 47?",
+      "answer": "Usually not if you are otherwise healthy. NICE advises diagnosing perimenopause from vasomotor symptoms and cycle changes from age 45 without routine laboratory tests, and specifically advises against several hormone and ultrasound ovary markers for identification in that age group."
+    },
+    {
+      "question": "Can I still get pregnant during perimenopause?",
+      "answer": "Yes. NHS advises contraception for one year after the final period if you are 50 or over, and for two years if your final period was between 40 and 49. Discuss suitable methods with a clinician."
+    }
+  ],
+  "references": [
+    {
+      "label": "NHS — Symptoms of menopause and perimenopause",
+      "url": "https://www.nhs.uk/conditions/menopause-and-perimenopause/symptoms/"
+    },
+    {
+      "label": "NICE NG23 — Menopause: identification and management (Recommendations)",
+      "url": "https://www.nice.org.uk/guidance/ng23/chapter/Recommendations"
+    }
+  ],
+  "conversionCopy": "If changing cycles or midlife symptoms sound like perimenopause, you can book a consultation with Dr. Charmi Shah.",
+  "explainerAlt": "Checklist of common perimenopause symptoms and cycle changes to discuss in clinic.",
+  "storytellingNote": "",
+  "review": {
+    "corrections": [
+      "New rewrite using NHS symptom list and NICE age-45 clinical diagnosis without routine bloods; postmenopausal bleeding flagged.",
+      "Linked irregular-periods and HRT sibling pages instead of duplicating full HRT risk tables."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "NHS",
+        "title": "Symptoms of menopause and perimenopause",
+        "url": "https://www.nhs.uk/conditions/menopause-and-perimenopause/symptoms/",
+        "date": "Page last reviewed: 19 May 2026",
+        "recommendation": "Cycle change often first; lists flushes, sleep, mood, vaginal, UTI, other symptoms; menopause after 12 months without period; postmenopausal bleeding needs review; contraception intervals after final period.",
+        "passage": "One of the first signs of perimenopause is usually a change to your periods. They may happen more often or less often, and bleeding may get heavier or lighter.",
+        "limitations": "UK average menopause age; ethnic variation noted on page."
+      },
+      {
+        "organisation": "NICE",
+        "title": "Menopause: identification and management (NG23)",
+        "url": "https://www.nice.org.uk/guidance/ng23/chapter/Recommendations",
+        "date": "Updated recommendations including 2024 (fetched 2026)",
+        "recommendation": "Age ≥45: identify perimenopause from vasomotor symptoms + cycle change without lab tests; do not use AMH/oestradiol/AFC etc.; limited FSH use under 45.",
+        "passage": "Identify the following, without laboratory tests, in otherwise healthy women, trans men and non-binary people registered female at birth who are aged 45 or over and have menopause-associated symptoms",
+        "limitations": "UK guideline; premature ovarian insufficiency pathways differ under 40."
+      }
+    ],
+    "openQuestions": [
+      "Should WHD quote India-specific average menopause age if a MoHFW source is agreed?",
+      "When to order TSH/ferritin panels routinely in midlife symptom visits at WHD?"
+    ]
+  }
+}

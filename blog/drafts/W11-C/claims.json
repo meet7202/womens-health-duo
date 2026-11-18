@@ -1,22 +1,30 @@
 {
   "id": "W11-C",
   "openClinicalQuestions": [
-    "Which assay and laboratory caveats should be retained?",
-    "How should AMH use in treatment-response prediction be described?",
-    "Should hormonal contraception and ovarian surgery effects be listed?"
+    "Does Dr. Charmi want any India-specific AMH assay or unit conventions named in patient copy?",
+    "Should high-AMH counselling always cross-link PCOS/PMOS pages, or only when cycles are irregular?"
   ],
   "claimLedger": [
     {
-      "claim": "AMH can contribute to ovarian-reserve assessment but does not directly measure egg quality.",
-      "sourceUrl": "https://www.reproductivefacts.org/news-and-publications/patient-fact-sheets-and-booklets/documents/fact-sheets-and-info-booklets/ovarian-reserve/",
-      "limitations": "Patient guidance; assay and clinical context affect interpretation.",
-      "reviewerDecision": "pending"
+      "claim": "Ovarian reserve equals oocyte quantity; markers test quantity not quality; should not be used as a fertility test for women with unproven fertility or as sole reason to deny ART",
+      "sourceUrl": "https://www.asrm.org/practice-guidance/practice-committee-documents/testing-and-interpreting-measures-of-ovarian-reserve-a-committee-opinion-2020/",
+      "sourceSection": "ASRM · Testing and interpreting measures of ovarian reserve: a committee opinion (2020) · Fertil Steril 2020;114:1151–7",
+      "limitations": "US society opinion; assay cut-offs vary by laboratory",
+      "reviewerDecision": "accepted"
     },
     {
-      "claim": "Ovarian-reserve tests are adjuncts and should not be used alone to predict natural conception.",
-      "sourceUrl": "https://www.asrm.org/practice-guidance/practice-committee-documents/fertility-evaluation-of-infertile-women-a-committee-opinion-2026",
-      "limitations": "The precise use depends on the clinical question.",
-      "reviewerDecision": "pending"
+      "claim": "Do not use AMH to predict clinical pregnancy through spontaneous conception; AMH/AFC may inform ovarian response counselling for assisted conception",
+      "sourceUrl": "https://www.nice.org.uk/guidance/NG257/chapter/investigation-of-fertility-problems-and-management-strategies",
+      "sourceSection": "NICE · NG257 investigation of fertility problems — ovarian reserve testing · Published 31 March 2026",
+      "limitations": "UK guidance; Indian clinics may use AMH differently in local protocols",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Abnormal reserve tests suggest decline but do not identify who will or will not conceive; no single test definitively predicts ability to get pregnant",
+      "sourceUrl": "https://www.reproductivefacts.org/news-and-publications/patient-fact-sheets-and-booklets/documents/fact-sheets-and-info-booklets/ovarian-reserve/",
+      "sourceSection": "ReproductiveFacts.org / ASRM · Ovarian reserve (predicting fertility potential in women) · Revised 2023",
+      "limitations": "Patient education sheet; not a treatment protocol",
+      "reviewerDecision": "accepted"
     }
   ]
 }

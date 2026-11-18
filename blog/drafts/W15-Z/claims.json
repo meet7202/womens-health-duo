@@ -1,22 +1,30 @@
 {
   "id": "W15-Z",
   "openClinicalQuestions": [
-    "Which stop-exercise wording does Dr. Charmi Shah approve?",
-    "Which adaptations can Dr. Zalak Shah demonstrate without implying universal clearance?",
-    "Should an effort-monitoring method be named?"
+    "Dr. Zalak: any WHD-specific trimester handout timings that differ from the NHS/POGP supine wording?",
+    "Dr. Charmi: preferred list of obstetric conditions that must pause class attendance in this practice."
   ],
   "claimLedger": [
     {
-      "claim": "People with uncomplicated pregnancies can often remain active with appropriate adaptation.",
+      "claim": "Start new exercise gently; do not start new vigorous activity such as running; change activity as bump grows; avoid lying flat on back more than a few minutes later in pregnancy; stop if uncomfortable, too hot or unwell.",
       "sourceUrl": "https://www.nhs.uk/pregnancy/keeping-well/exercise/",
-      "limitations": "General public guidance; contraindications and individual clearance require maternity review.",
-      "reviewerDecision": "pending"
+      "sourceSection": "NHS · Exercise in pregnancy · Media last reviewed: 3 February 2026",
+      "limitations": "UK guidance; local Indian maternity limits may be stricter for complications.",
+      "reviewerDecision": "accepted"
     },
     {
-      "claim": "Exercise should stop and advice be sought when concerning symptoms occur.",
-      "sourceUrl": "https://www.nhs.uk/pregnancy/keeping-well/exercise/",
-      "limitations": "Exact local triage language remains pending obstetric review.",
-      "reviewerDecision": "pending"
+      "claim": "Account for joint laxity, balance change and oxygen need; prefer walking, swimming, stationary cycling, modified yoga/Pilates; avoid hot Pilates and fall-risk sports; stop for listed warning signs.",
+      "sourceUrl": "https://www.acog.org/womens-health/faqs/exercise-during-pregnancy",
+      "sourceSection": "ACOG · Exercise During Pregnancy (FAQ119) · Last updated: September 2024; Last reviewed: November 2025",
+      "limitations": "US patient FAQ; confirm antenatal advice locally.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Avoid lying on back after 20 weeks for listed supine exercises; prop upper body or use alternatives; seek obstetric clearance with listed contraindications.",
+      "sourceUrl": "https://thepogp.co.uk/_userfiles/pages/files/resources/pogppilates_final.pdf",
+      "sourceSection": "POGP · Pilates in Women’s Health Physiotherapy · Publication date on landing page: 29 Nov 2022; PDF © POGP 2018, 2022 for review 2025",
+      "limitations": "UK physiotherapy booklet; exercise lists are examples, not a WHD class plan.",
+      "reviewerDecision": "accepted"
     }
   ]
 }

@@ -1,0 +1,92 @@
+{
+  "id": "W19-C",
+  "title": "What Helps Pregnancy Nausea, and When Do I Need Care?",
+  "seoTitle": "Pregnancy nausea help and warning signs",
+  "description": "Practical steps for pregnancy nausea, why ‘morning sickness’ can last all day, and red flags like not keeping fluids down that need prompt review.",
+  "primaryQuestion": "What helps nausea and vomiting in pregnancy?",
+  "directAnswer": "For milder nausea, NHS advice includes rest, avoiding personal trigger smells and foods, small frequent plain carbohydrate meals, sipping fluids often, trying cold foods if hot smells worsen sickness, and discussing ginger or wrist acupressure with a pharmacist or midwife. Symptoms can occur any time of day—not only mornings. Contact maternity care promptly if you cannot keep food or fluids down for 24 hours, pass very dark urine or have not peed for more than eight hours, feel faint on standing, have tummy pain, fever, blood in vomit, or weight loss. Anti-sickness medicines are a clinician decision when self-care is not enough—no doses here.",
+  "sections": [
+    {
+      "heading": "How wide the experience can be",
+      "paragraphs": [
+        "Nausea and vomiting in early pregnancy are common. The RCOG Green-top Guideline No. 69 notes that nausea and vomiting of pregnancy can affect up to 90% of pregnant women, with onset before 16 weeks when other causes are excluded, and that the lay label “morning sickness” is inaccurate because symptoms occur before and after noon. NHS pages likewise say sickness may last all day.",
+        "NHS information states ordinary morning sickness usually eases by weeks 16 to 20 and does not put the baby at increased risk. A severe form—hyperemesis gravidarum—can lead to dehydration or malnutrition and may need specialist or hospital care. RCOG estimates hyperemesis affects roughly 0.3% to 3.6% of pregnancies."
+      ]
+    },
+    {
+      "heading": "Self-care steps clinicians often suggest first",
+      "paragraphs": [
+        "NHS suggestions include getting plenty of rest, steering clear of smells that trigger you, eating something plain such as dry toast on waking, choosing small frequent low-fat carbohydrate foods, preferring cold meals when steam worsens nausea, and sipping water little and often. Ginger foods or drinks have some evidence for reducing nausea—check with a pharmacist before using ginger supplements in pregnancy. Wrist acupressure bands or finger pressure may help some people.",
+        "Track roughly how much you keep down, urine colour, and any dizziness. That record helps a clinician judge severity faster than a vague “I feel sick” description. Urinary tract infection can also cause nausea—mention pain on peeing or fever so infection is not missed."
+      ]
+    },
+    {
+      "heading": "When to seek assessment and treatment categories",
+      "paragraphs": [
+        "NHS non-urgent advice is to call your midwife, GP or equivalent if you are vomiting and have very dark urine or have not peed for more than eight hours, cannot keep food or fluids down for 24 hours, feel very weak, dizzy or faint when standing, have abdominal pain, a high temperature, vomit blood, or have lost weight.",
+        "If lifestyle measures fail or symptoms are severe, clinicians may offer anti-sickness medicines (antiemetics) judged suitable in pregnancy—often as tablets, sometimes other forms in hyperemesis. Which medicine and how it is given is an individual prescribing decision; do not borrow someone else’s tablets. Fluids, electrolyte care and hospital pathways are arranged when dehydration risk is high."
+      ]
+    },
+    {
+      "heading": "Urgent symptoms beyond ordinary nausea",
+      "paragraphs": [
+        "Severe one-sided pain, shoulder-tip pain, fainting or heavy bleeding are not “bad morning sickness”—seek emergency care on 112 in India or at hospital emergency services, because ectopic pregnancy and other acute problems can present with vomiting. Our guide on next steps after a positive pregnancy test covers early booking; keep using that route for routine care while treating collapse-level symptoms as emergencies.",
+        "Ordinary follow-up with Dr. Charmi Shah is appropriate when nausea disrupts work or eating but you can still take small sips and pass urine—bring your symptom notes to that visit."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Does pregnancy nausea only happen in the morning?",
+      "answer": "No. NHS and RCOG both note that symptoms can occur throughout the day. The phrase morning sickness is a common label, not a timetable your body must follow."
+    },
+    {
+      "question": "Will vomiting harm the baby if it is not hyperemesis?",
+      "answer": "NHS advice is that typical morning sickness does not put the baby at increased risk. Persistent inability to keep fluids down, dark urine, fainting or weight loss needs assessment because dehydration and malnutrition are the concerns to rule out."
+    }
+  ],
+  "references": [
+    {
+      "label": "NHS — Vomiting and morning sickness",
+      "url": "https://www.nhs.uk/pregnancy/common-symptoms/vomiting-and-morning-sickness/"
+    },
+    {
+      "label": "RCOG — Green-top Guideline No. 69: Nausea and vomiting of pregnancy and hyperemesis gravidarum",
+      "url": "https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/the-management-of-nausea-and-vomiting-of-pregnancy-and-hyperemesis-gravidarum-green-top-guideline-no-69/"
+    }
+  ],
+  "conversionCopy": "If pregnancy nausea is disrupting eating, work or sleep, you can discuss assessment and treatment options with Dr. Charmi Shah.",
+  "explainerAlt": "Notes sheet for pregnancy nausea: fluids kept down, urine, and warning signs.",
+  "storytellingNote": "",
+  "review": {
+    "corrections": [
+      "Removed padded template paragraphs; centred NHS self-care and red-flag list with RCOG NVP/HG framing.",
+      "Named antiemetics as a category only—no drug regimens or doses.",
+      "Separated ectopic-style emergencies from hyperemesis hydration warnings; India 112 for collapse-level symptoms."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "NHS",
+        "title": "Vomiting and morning sickness",
+        "url": "https://www.nhs.uk/pregnancy/common-symptoms/vomiting-and-morning-sickness/",
+        "date": "Media last reviewed dates on page; content fetched this session",
+        "recommendation": "Symptoms any time of day; usually eases by 16–20 weeks; self-care diet/rest/ginger/acupressure; call if dark urine/not peed >8h, unable to keep fluids 24h, faint, pain, fever, blood in vomit, weight loss; antiemetics if needed",
+        "passage": "are unable to keep food or fluids down for 24 hours",
+        "limitations": "UK call pathways (111/GP/midwife); use local maternity/emergency contacts in India"
+      },
+      {
+        "organisation": "RCOG",
+        "title": "The Management of Nausea and Vomiting of Pregnancy and Hyperemesis Gravidarum (Green-top Guideline No.69)",
+        "url": "https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/the-management-of-nausea-and-vomiting-of-pregnancy-and-hyperemesis-gravidarum-green-top-guideline-no-69/",
+        "date": "First edition; next review date 2027 (page statement)",
+        "recommendation": "NVP affects up to 90%; onset before 16 weeks; morning sickness label inaccurate; HG affects 0.3–3.6% and interferes with eating and drinking",
+        "passage": "NVP affects up to 90% of pregnant women and is one of the most common indications for hospital admission among pregnant women.",
+        "limitations": "UK clinical guideline landing page; full Wiley PDF not required for these prevalence/definition points"
+      }
+    ],
+    "openQuestions": [
+      "Which antiemetic categories does Dr. Charmi want named for Indian readers beyond the generic ‘anti-sickness medicines’ phrasing?",
+      "Any FOGSI hyperemesis pathway details to add once verified?"
+    ]
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "id": "W06-C",
+  "title": "How Much Period Pain Is Too Much?",
+  "seoTitle": "How much period pain is too much?",
+  "description": "Pain that stops school or work deserves assessment—primary vs secondary causes, self-care options, and why a normal ultrasound is not the whole answer.",
+  "primaryQuestion": "Why are my periods so painful?",
+  "directAnswer": "Period cramps are common, but pain that regularly stops you attending school or work, or that is not helped by usual measures, is not something you must silently endure. Pain may be primary—linked to natural chemicals that make the uterus contract—or secondary to another condition such as endometriosis, adenomyosis, fibroids or infection. Impact on your life matters as much as a pain score. A normal ultrasound does not rule endometriosis out.",
+  "sections": [
+    {
+      "heading": "When common cramps become a functional problem",
+      "paragraphs": [
+        "Prostaglandins released as the uterus sheds its lining can cause cramping, loose stools, nausea and lower-back ache. ACOG notes that more than half of women who menstruate have some pain for one to two days each month, usually mild—but for some the pain is severe enough to stop normal activities for several days. NHS period-pain pages likewise say pain can affect daily activities and advise seeing a GP when period pain stops you doing your usual routine.",
+        "If you cancel exams, miss shifts, avoid commuting because you fear vomiting, or spend periods unable to leave bed, that functional hit belongs in the medical history. Pain that wakes you at night, lasts long after bleeding ends, or steadily worsens after years of manageable cramps also deserves attention. Wanting assessment is not weakness."
+      ]
+    },
+    {
+      "heading": "Primary versus secondary period pain",
+      "paragraphs": [
+        "Primary dysmenorrhoea is cramping pain before or during a period without another identified pelvic disease. ACOG explains it is driven by prostaglandins that tighten uterine muscle; levels are high on the first day and often fall as bleeding continues, which is why pain may ease after the first few days.",
+        "Secondary dysmenorrhoea is pain caused by a disorder in the reproductive organs. ACOG notes it often worsens over time and may last longer than typical cramps—sometimes starting days before bleeding and continuing after it ends. Conditions that can contribute include endometriosis, adenomyosis, fibroids and pelvic infection. You cannot reliably sort primary from secondary from an article alone; history, examination and selected tests do that work."
+      ]
+    },
+    {
+      "heading": "Self-care and treatment categories—not a personal prescription",
+      "paragraphs": [
+        "NHS and ACOG both describe heat (warm bath, heat pad or hot water bottle on the tummy), gentle activity such as walking or swimming when you can manage it, and painkillers from the NSAID family (anti-inflammatory pain relief such as ibuprofen-type medicines) as common first approaches—used as labelled, and only if they are suitable for you. Ask a doctor or pharmacist which medicine and dose suit you, especially if you have asthma, stomach ulcers, kidney problems or may be pregnant.",
+        "When pain is severe or ongoing, clinicians may discuss other categories: stronger anti-inflammatory options, and hormonal methods that thin the womb lining—such as combined hormonal contraception or certain progestin-only methods, including some hormonal intrauterine devices—when pregnancy is not the immediate goal. Suitability depends on your history, migraine or clotting risk, fertility plans and preference. Choices are individual; declining hormones does not make you difficult, and choosing them does not mean you failed at being “natural.”",
+        "If another condition is suspected, the plan may include targeted imaging, infection testing or further procedures. Suspicion is not confirmation. Avoid assuming the worst label from a single painful month."
+      ]
+    },
+    {
+      "heading": "Why a normal ultrasound is not the end of the story",
+      "paragraphs": [
+        "Ultrasound is often used when structure needs a look. A normal scan is useful information, yet NICE endometriosis guidance (NG73) is explicit: do not exclude the possibility of endometriosis if abdominal or pelvic examination and ultrasound are normal, and recognise that referral may still be necessary even with a normal scan. Persistent, activity-limiting period pain still warrants a clear plan.",
+        "Bring dates of recent periods, how long the worst pain lasts, where you feel it, remedies tried, and how often you miss school or work. Say what you hope for—better pain control, clearer diagnosis, or advice before trying to conceive. Disease-specific pathways, including endometriosis assessment, sit in our endometriosis symptoms and diagnosis guide."
+      ]
+    },
+    {
+      "heading": "Urgent care for pelvic pain and bleeding",
+      "paragraphs": [
+        "Get emergency help for abrupt pelvic pain that feels unlike your usual cramps; possible pregnancy with pain or fainting (a home test is not required first if you feel profoundly unwell); fever together with pelvic pain; or flooding bleeds with dizziness or collapse.",
+        "Book a prompt outpatient review if pain escalates cycle on cycle, repeatedly stops daily activities, or usual measures no longer help. Crisis care stops immediate danger; outpatient care prevents the next year from looking identical."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is it normal for period pain to make me miss work or college?",
+      "answer": "Occasional mild cramps are common, but pain that regularly stops usual activities is a reason to seek assessment. NHS advice is to see a GP when period pain stops you doing daily activities or becomes more painful, heavier or irregular."
+    },
+    {
+      "question": "If my ultrasound is normal, can I still have endometriosis?",
+      "answer": "Yes. NICE guidance says a normal abdominal or pelvic examination and ultrasound do not exclude endometriosis, and referral may still be needed. Persistent, disruptive symptoms should still be discussed with a gynaecologist."
+    }
+  ],
+  "references": [
+    {
+      "label": "NHS — Period pain (self-care, when to see a GP, treatments)",
+      "url": "https://www.nhs.uk/conditions/period-pain/"
+    },
+    {
+      "label": "ACOG FAQ — Dysmenorrhea: Painful Periods",
+      "url": "https://www.acog.org/womens-health/faqs/dysmenorrhea-painful-periods"
+    },
+    {
+      "label": "NICE NG73 — Endometriosis: diagnosis and management (normal ultrasound does not exclude)",
+      "url": "https://www.nice.org.uk/guidance/ng73/chapter/Recommendations"
+    }
+  ],
+  "conversionCopy": "If period pain keeps disrupting school or work, you can discuss assessment options with Dr. Charmi Shah.",
+  "explainerAlt": "Period-pain impact checklist noting missed activities and when to seek gynaecology review.",
+  "storytellingNote": "",
+  "review": {
+    "corrections": [
+      "Removed illustrative student anecdote and padded cultural/remote-work filler.",
+      "Centred functional impact (school/work; not helped by usual measures) and simple primary vs secondary dysmenorrhoea using ACOG.",
+      "Added self-care and treatment categories (heat, activity, NSAID class, hormonal options) from NHS/ACOG without personalised doses.",
+      "Stated NICE NG73 normal-ultrasound caveat and linked endometriosis guide.",
+      "Tightened urgent-care list: sudden severe pain, possible pregnancy with pain/fainting without requiring a positive test, fever with pelvic pain, very heavy bleeding."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "NHS",
+        "title": "Period pain",
+        "url": "https://www.nhs.uk/conditions/period-pain/",
+        "date": "Page last reviewed: 18 March 2026",
+        "recommendation": "Heat, gentle exercise, painkillers such as paracetamol or ibuprofen; see GP if pain stops daily activities; contraception and anti-inflammatory medicines may be discussed",
+        "passage": "your period pain is stopping you doing your usual daily activities",
+        "limitations": "UK first-line pathway; Indian OTC brand availability differs"
+      },
+      {
+        "organisation": "ACOG",
+        "title": "Dysmenorrhea: Painful Periods (FAQ046)",
+        "url": "https://www.acog.org/womens-health/faqs/dysmenorrhea-painful-periods",
+        "date": "Last updated December 2020; last reviewed January 2022",
+        "recommendation": "Primary vs secondary definitions; NSAIDs and hormonal birth control as treatment categories; heat and exercise as home measures",
+        "passage": "Primary dysmenorrhea is the cramping pain that comes before or during a period. This pain is caused by natural chemicals called prostaglandins that are made in the lining of the uterus.",
+        "limitations": "US patient FAQ; prescribing details remain clinician-led"
+      },
+      {
+        "organisation": "NICE",
+        "title": "Endometriosis: diagnosis and management (NG73)",
+        "url": "https://www.nice.org.uk/guidance/ng73/chapter/Recommendations",
+        "date": "Last updated 11 November 2024 (recommendation tagged 2017, amended 2024)",
+        "recommendation": "Do not exclude endometriosis when examination and ultrasound are normal",
+        "passage": "Do not exclude the possibility of endometriosis if the abdominal or pelvic examination and ultrasound scan are normal, and recognise that referral may still be necessary even with a normal scan.",
+        "limitations": "UK guideline; laparoscopy decisions remain individual"
+      }
+    ],
+    "openQuestions": [
+      "Should pelvic-health physiotherapy (Dr. Zalak) be named briefly as an adjunct for muscle guarding, or kept off this gynaecology-led page?",
+      "Any FOGSI first-line NSAID preferences Dr. Charmi wants named as examples without doses?"
+    ]
+  }
+}

@@ -1,22 +1,30 @@
 {
   "id": "W21-Z",
   "openClinicalQuestions": [
-    "Which Pilates positions can be shown after clinical and image review?",
-    "What class-screening process does Dr. Zalak Shah actually use?",
-    "Which obstetric stop criteria does Dr. Charmi Shah approve?"
+    "Dr. Zalak: which Reformer settings or moves she wants explicitly retired in WHD prenatal classes.",
+    "Whether hot-studio Pilates needs a named local example for Indian readers."
   ],
   "claimLedger": [
     {
-      "claim": "Pregnancy activity should be comfortable and adapted as pregnancy changes.",
-      "sourceUrl": "https://www.nhs.uk/pregnancy/keeping-well/exercise/",
-      "limitations": "General guidance is not individual clearance for Pilates.",
-      "reviewerDecision": "pending"
+      "claim": "Modified Pilates among safer exercises; avoid poses with long stillness or back-lying; avoid hot Pilates; stop for listed warning signs.",
+      "sourceUrl": "https://www.acog.org/womens-health/faqs/exercise-during-pregnancy",
+      "sourceSection": "ACOG · Exercise During Pregnancy (FAQ119) · Last updated: September 2024; Last reviewed: November 2025",
+      "limitations": "US FAQ; class quality still depends on local instructor skill.",
+      "reviewerDecision": "accepted"
     },
     {
-      "claim": "Pilates may be used within women’s health physiotherapy when appropriately selected and modified.",
-      "sourceUrl": "https://thepogp.co.uk/resources/124/pilates_in_womens_health_physiotherapy/",
-      "limitations": "This does not establish superiority or suitability for every pregnancy.",
-      "reviewerDecision": "pending"
+      "claim": "Tell instructor you are pregnant; avoid prolonged supine lying later in pregnancy; stop if uncomfortable, too hot or unwell.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/keeping-well/exercise/",
+      "sourceSection": "NHS · Exercise in pregnancy · Media last reviewed: 3 February 2026",
+      "limitations": "UK public page; does not grade Pilates brands.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Pilates as gentle non-impact option; continue prior exercise if comfortable without obstetric/medical conditions; lists contraindications; seek physio if PGP or pain with exercises; avoid flat supine after 20 weeks for listed drills.",
+      "sourceUrl": "https://thepogp.co.uk/_userfiles/pages/files/resources/pogppilates_final.pdf",
+      "sourceSection": "POGP · Pilates in Women’s Health Physiotherapy · Landing page publication date: 29 Nov 2022",
+      "limitations": "Booklet also cites birth-outcome associations for general exercise—not used here as a Pilates-specific promise.",
+      "reviewerDecision": "accepted"
     }
   ]
 }

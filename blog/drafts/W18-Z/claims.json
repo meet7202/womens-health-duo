@@ -1,22 +1,37 @@
 {
   "id": "W18-Z",
   "openClinicalQuestions": [
-    "Which supervised treatment elements reflect Dr. Zalak Shah’s actual practice?",
-    "What review interval can be stated without promising an outcome?",
-    "Which urology or gynaecology referral triggers should Dr. Charmi Shah refine?"
+    "Which local urology/gynaecology referral partners should be named when conservative care plateaus?",
+    "Does WHD use group PFMT sessions as NG210 allows, or only individual sessions?"
   ],
   "claimLedger": [
     {
-      "claim": "Urinary incontinence includes different symptom patterns that require assessment.",
-      "sourceUrl": "https://www.nhs.uk/conditions/urinary-incontinence/",
-      "limitations": "Patient information cannot identify the type or cause for an individual.",
-      "reviewerDecision": "pending"
+      "claim": "Categorise UI; digital assessment before supervised PFMT; ≥3 months PFMT first-line for stress/mixed; ≥6 weeks bladder training for urgency/mixed; continue if beneficial.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng123/chapter/Recommendations",
+      "sourceSection": "NICE · NG123 Urinary incontinence and pelvic organ prolapse in women: management — Recommendations · not stated on Recommendations chapter fetch",
+      "limitations": "UK NICE pathway; access to supervised programmes varies.",
+      "reviewerDecision": "accepted"
     },
     {
-      "claim": "Supervised pelvic floor muscle training is a recommended conservative option for appropriate incontinence presentations.",
-      "sourceUrl": "https://www.nice.org.uk/guidance/ng210/chapter/recommendations",
-      "limitations": "Suitability, supervision and duration require clinical assessment.",
-      "reviewerDecision": "pending"
+      "claim": "Supervised PFMT assesses contraction/relaxation; offer ≥3 months for stress/mixed UI; review during and after programme.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng210/chapter/Recommendations",
+      "sourceSection": "NICE · NG210 Pelvic floor dysfunction — Recommendations · Published 9 December 2021",
+      "limitations": "UK guidance.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Defines stress and urge incontinence; lists pelvic floor exercises and bladder training among non-surgical options.",
+      "sourceUrl": "https://www.nhs.uk/conditions/urinary-incontinence/",
+      "sourceSection": "NHS · Urinary incontinence — Overview · Page last reviewed: 15 June 2023",
+      "limitations": "UK public advice.",
+      "reviewerDecision": "accepted"
+    },
+    {
+      "claim": "Improvement may take 3–6 weeks of consistent practice; do not overdo exercises.",
+      "sourceUrl": "https://www.niddk.nih.gov/health-information/urologic-diseases/kegel-exercises",
+      "sourceSection": "NIDDK · Kegel Exercises · Last Reviewed November 2021",
+      "limitations": "US patient education; timelines vary.",
+      "reviewerDecision": "accepted"
     }
   ]
 }

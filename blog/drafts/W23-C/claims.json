@@ -1,22 +1,13 @@
 {
   "id": "W23-C",
-  "openClinicalQuestions": [
-    "Which local emergency and early-pregnancy routes should replace generic wording?",
-    "What bleeding description, if any, is safe to include without false reassurance?",
-    "How should Rh-negative care be mentioned after clinician review?"
-  ],
+  "openClinicalQuestions": [],
   "claimLedger": [
     {
-      "claim": "Bleeding in early pregnancy has multiple causes and warrants advice.",
+      "claim": "Bleeding can be common in early pregnancy but should be checked; seek emergency care for heavy bleeding, severe pain, shoulder-tip pain, dizziness or fainting; otherwise contact midwife, GP or early pregnancy unit.",
       "sourceUrl": "https://www.nhs.uk/pregnancy/common-symptoms/vaginal-bleeding/",
-      "limitations": "General guidance cannot determine cause or pregnancy viability.",
-      "reviewerDecision": "pending"
-    },
-    {
-      "claim": "Heavy bleeding, severe pain, shoulder pain, dizziness or fainting require urgent assessment.",
-      "sourceUrl": "https://www.nhs.uk/pregnancy/common-symptoms/vaginal-bleeding/",
-      "limitations": "Local emergency routing must be verified before publication.",
-      "reviewerDecision": "pending"
+      "sourceSection": "NHS · Vaginal bleeding in pregnancy",
+      "limitations": "UK service routes are not used. Cause, urgency and any treatment cannot be decided from this page.",
+      "reviewerDecision": "accepted"
     }
   ]
 }
