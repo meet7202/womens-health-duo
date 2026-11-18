@@ -51,7 +51,7 @@ const Index = () => {
         Skip to main content
       </a>
       <Header />
-      <main id="main-content" className="pt-10 pb-28">
+      <main id="main-content" className="pb-28">
         <HeroSection />
         <Suspense fallback={<div className="min-h-[40vh] bg-background" aria-hidden="true" />}>
           <HomeBelowFold />

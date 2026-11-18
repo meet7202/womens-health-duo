@@ -17,7 +17,7 @@ export function PageShell({ children, breadcrumbs }: PageShellProps) {
       <Header />
       <main
         id="main-content"
-        className="container mx-auto max-w-3xl px-4 pt-36 pb-28 sm:px-6 lg:px-8 lg:max-w-4xl"
+        className="container mx-auto max-w-3xl px-4 pt-28 pb-28 sm:px-6 lg:px-8 lg:max-w-4xl"
       >
         {breadcrumbs && breadcrumbs.length > 0 ? <PageBreadcrumbs items={breadcrumbs} /> : null}
         {children}

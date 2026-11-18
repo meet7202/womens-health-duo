@@ -1,2 +1,0 @@
-- [x] Add a prominent link to the official womenshealthduo.com website.
-- [x] Verify the canonical URL already points to womenshealthduo.com and confirm all website and SEO checks pass.
