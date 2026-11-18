@@ -1,527 +1,580 @@
 {
   "timezone": "Asia/Kolkata",
   "generatedAt": "2026-11-18T09:00:38.830Z",
-  "note": "Draft packages only. publicationStatus stays draft until clinical approval + blog:promote.",
+  "note": "All 52 articles published 2026-11-18 at owner request as patient education. clinicalApproval stays pending, so no medically-reviewed byline is shown. publishedAt is the real publish day.",
   "articles": [
     {
       "id": "W01-Z",
       "slug": "why-do-i-leak-urine-when-i-cough",
       "action": "Refresh",
       "scheduledAt": "2026-11-24T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W01-C",
       "slug": "why-are-my-periods-irregular",
       "action": "Refresh",
       "scheduledAt": "2026-11-27T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W02-Z",
       "slug": "is-exercise-safe-during-pregnancy",
       "action": "Refresh",
       "scheduledAt": "2026-12-01T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W02-C",
       "slug": "what-is-pcos",
       "action": "Refresh",
       "scheduledAt": "2026-12-04T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W03-Z",
       "slug": "when-can-i-exercise-after-delivery",
       "action": "Refresh",
       "scheduledAt": "2026-12-08T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W03-C",
       "slug": "what-is-preconception-planning",
       "action": "Refresh",
       "scheduledAt": "2026-12-11T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W04-Z",
       "slug": "what-is-diastasis-recti",
       "action": "Refresh",
       "scheduledAt": "2026-12-15T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W04-C",
       "slug": "how-to-track-ovulation",
       "action": "Refresh",
       "scheduledAt": "2026-12-18T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W05-Z",
       "slug": "what-is-stott-pilates",
       "action": "Refresh",
       "scheduledAt": "2026-12-22T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W05-C",
       "slug": "symptoms-of-pcos",
       "action": "Refresh",
       "scheduledAt": "2026-12-25T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W06-Z",
       "slug": "are-kegels-right-for-everyone",
       "action": "Refresh",
       "scheduledAt": "2026-12-29T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W06-C",
       "slug": "why-are-my-periods-painful",
       "action": "Refresh",
       "scheduledAt": "2027-01-01T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W07-Z",
       "slug": "how-to-relieve-back-pain-during-pregnancy",
       "action": "Refresh",
       "scheduledAt": "2027-01-05T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W07-C",
       "slug": "can-i-get-pregnant-with-pcos",
       "action": "Refresh",
       "scheduledAt": "2027-01-08T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W08-Z",
       "slug": "how-to-recover-after-c-section",
       "action": "Refresh",
       "scheduledAt": "2027-01-12T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W08-C",
       "slug": "when-to-see-a-fertility-specialist",
       "action": "Refresh",
       "scheduledAt": "2027-01-15T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W09-Z",
       "slug": "how-to-check-for-diastasis-recti",
       "action": "Refresh",
       "scheduledAt": "2027-01-19T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W09-C",
       "slug": "folic-acid-before-pregnancy",
       "action": "New",
       "scheduledAt": "2027-01-22T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W10-Z",
       "slug": "what-is-the-pelvic-floor",
       "action": "Refresh",
       "scheduledAt": "2027-01-26T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W10-C",
       "slug": "what-causes-heavy-periods",
       "action": "Refresh",
       "scheduledAt": "2027-01-29T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W11-Z",
       "slug": "how-to-relieve-pelvic-pain-during-pregnancy",
       "action": "Refresh",
       "scheduledAt": "2027-02-02T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W11-C",
       "slug": "amh-test-fertility",
       "action": "New",
       "scheduledAt": "2027-02-05T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W12-Z",
       "slug": "why-am-i-leaking-urine-after-childbirth",
       "action": "Refresh",
       "scheduledAt": "2027-02-09T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W12-C",
       "slug": "how-to-manage-pcos-naturally",
       "action": "Refresh",
       "scheduledAt": "2027-02-12T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W13-Z",
       "slug": "can-diastasis-recti-heal-naturally",
       "action": "Refresh",
       "scheduledAt": "2027-02-16T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W13-C",
       "slug": "positive-pregnancy-test-next-steps",
       "action": "New",
       "scheduledAt": "2027-02-19T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W14-Z",
       "slug": "how-do-i-know-if-my-pelvic-floor-is-weak",
       "action": "Refresh",
       "scheduledAt": "2027-02-23T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W14-C",
       "slug": "endometriosis-symptoms-diagnosis",
       "action": "New",
       "scheduledAt": "2027-02-26T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W15-Z",
       "slug": "pregnancy-exercises-by-trimester",
       "action": "Refresh",
       "scheduledAt": "2027-03-02T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W15-C",
       "slug": "what-is-ivf",
       "action": "Refresh",
       "scheduledAt": "2027-03-05T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W16-Z",
       "slug": "how-long-does-postpartum-recovery-take",
       "action": "Refresh",
       "scheduledAt": "2027-03-09T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W16-C",
       "slug": "pcos-insulin-resistance",
       "action": "New",
       "scheduledAt": "2027-03-12T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W17-Z",
       "slug": "how-to-rebuild-core-after-pregnancy",
       "action": "Refresh",
       "scheduledAt": "2027-03-16T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W17-C",
       "slug": "late-period-negative-pregnancy-test",
       "action": "New",
       "scheduledAt": "2027-03-19T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W18-Z",
       "slug": "can-pelvic-floor-therapy-help-with-bladder-leakage",
       "action": "Refresh",
       "scheduledAt": "2027-03-23T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W18-C",
       "slug": "iui-vs-ivf",
       "action": "New",
       "scheduledAt": "2027-03-26T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W19-Z",
       "slug": "what-is-prenatal-physiotherapy",
       "action": "Refresh",
       "scheduledAt": "2027-03-30T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W19-C",
       "slug": "pregnancy-nausea-when-to-seek-care",
       "action": "New",
       "scheduledAt": "2027-04-02T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W20-Z",
       "slug": "postpartum-back-pain",
       "action": "Refresh",
       "scheduledAt": "2027-04-06T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W20-C",
       "slug": "what-is-pmdd",
       "action": "Refresh",
       "scheduledAt": "2027-04-09T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W21-Z",
       "slug": "is-pilates-safe-during-pregnancy",
       "action": "Refresh",
       "scheduledAt": "2027-04-13T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W21-C",
       "slug": "first-fertility-appointment-tests",
       "action": "New",
       "scheduledAt": "2027-04-16T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W22-Z",
       "slug": "breathing-exercises-for-labour",
       "action": "Refresh",
       "scheduledAt": "2027-04-20T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W22-C",
       "slug": "how-to-improve-egg-quality",
       "action": "Refresh",
       "scheduledAt": "2027-04-23T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W23-Z",
       "slug": "can-pelvic-floor-therapy-help-with-painful-intercourse",
       "action": "Refresh",
       "scheduledAt": "2027-04-27T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W23-C",
       "slug": "bleeding-in-early-pregnancy",
       "action": "New",
       "scheduledAt": "2027-04-30T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W24-Z",
       "slug": "pilates-after-pregnancy",
       "action": "Refresh",
       "scheduledAt": "2027-05-04T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W24-C",
       "slug": "after-unsuccessful-ivf-cycle",
       "action": "New",
       "scheduledAt": "2027-05-07T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W25-Z",
       "slug": "pelvic-organ-prolapse",
       "action": "Refresh",
       "scheduledAt": "2027-05-11T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W25-C",
       "slug": "perimenopause-symptoms",
       "action": "New",
       "scheduledAt": "2027-05-14T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W26-Z",
       "slug": "what-happens-during-a-physiotherapy-session",
       "action": "Refresh",
       "scheduledAt": "2027-05-18T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak"
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-18"
     },
     {
       "id": "W26-C",
       "slug": "menopause-hrt-questions",
       "action": "New",
       "scheduledAt": "2027-05-21T09:00:00+05:30",
-      "publicationStatus": "draft",
+      "publicationStatus": "published",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "charmi"
+      "proposedLeadId": "charmi",
+      "actualPublishDate": "2026-11-18"
     }
-  ]
+  ],
+  "ownerPublishDate": "2026-11-18"
 }

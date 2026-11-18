@@ -1,9 +1,9 @@
 import type { TopicGuideRow } from "../types";
 
 /**
- * Proposed new calendar URLs (13). Kept `indexable: false` until `blog:promote`
- * flips visibility after clinical approval. Catch-all route will 404 via registry
- * until indexable is true.
+ * Calendar URLs added with the 52-article programme (13).
+ * Published 18 November 2026 at the owner's request. `reviewStatus` stays pending,
+ * so these pages do not show a medically-reviewed byline.
  */
 export const NEW_CALENDAR_GUIDE_ROWS: TopicGuideRow[] = [
   {
@@ -12,7 +12,7 @@ export const NEW_CALENDAR_GUIDE_ROWS: TopicGuideRow[] = [
     cluster: "fertility",
     title: "When Should I Start Folic Acid Before Pregnancy?",
     primaryConsult: "charmi",
-    indexable: false,
+    indexable: true,
     calendarArticleId: "W09-C",
   },
   {
@@ -21,7 +21,7 @@ export const NEW_CALENDAR_GUIDE_ROWS: TopicGuideRow[] = [
     cluster: "fertility",
     title: "What Can an AMH Test Tell Me About Fertility?",
     primaryConsult: "charmi",
-    indexable: false,
+    indexable: true,
     calendarArticleId: "W11-C",
   },
   {
@@ -30,7 +30,7 @@ export const NEW_CALENDAR_GUIDE_ROWS: TopicGuideRow[] = [
     cluster: "fertility",
     title: "I Have a Positive Pregnancy Test — What Next?",
     primaryConsult: "charmi",
-    indexable: false,
+    indexable: true,
     calendarArticleId: "W13-C",
   },
   {
@@ -39,7 +39,7 @@ export const NEW_CALENDAR_GUIDE_ROWS: TopicGuideRow[] = [
     cluster: "gyn-general",
     title: "Endometriosis Symptoms and How Diagnosis Is Discussed",
     primaryConsult: "charmi",
-    indexable: false,
+    indexable: true,
     calendarArticleId: "W14-C",
   },
   {
@@ -48,7 +48,7 @@ export const NEW_CALENDAR_GUIDE_ROWS: TopicGuideRow[] = [
     cluster: "pcos",
     title: "PCOS and Insulin Resistance: What to Ask",
     primaryConsult: "charmi",
-    indexable: false,
+    indexable: true,
     calendarArticleId: "W16-C",
   },
   {
@@ -57,7 +57,7 @@ export const NEW_CALENDAR_GUIDE_ROWS: TopicGuideRow[] = [
     cluster: "periods",
     title: "Why Is My Period Late If My Pregnancy Test Is Negative?",
     primaryConsult: "charmi",
-    indexable: false,
+    indexable: true,
     calendarArticleId: "W17-C",
   },
   {
@@ -66,7 +66,7 @@ export const NEW_CALENDAR_GUIDE_ROWS: TopicGuideRow[] = [
     cluster: "fertility",
     title: "What Is the Difference Between IUI and IVF?",
     primaryConsult: "charmi",
-    indexable: false,
+    indexable: true,
     calendarArticleId: "W18-C",
   },
   {
@@ -75,7 +75,7 @@ export const NEW_CALENDAR_GUIDE_ROWS: TopicGuideRow[] = [
     cluster: "online-gyne",
     title: "What Helps Pregnancy Nausea, and When Do I Need Care?",
     primaryConsult: "charmi",
-    indexable: false,
+    indexable: true,
     calendarArticleId: "W19-C",
   },
   {
@@ -84,7 +84,7 @@ export const NEW_CALENDAR_GUIDE_ROWS: TopicGuideRow[] = [
     cluster: "fertility",
     title: "What Happens at the First Fertility Appointment?",
     primaryConsult: "charmi",
-    indexable: false,
+    indexable: true,
     calendarArticleId: "W21-C",
   },
   {
@@ -93,7 +93,7 @@ export const NEW_CALENDAR_GUIDE_ROWS: TopicGuideRow[] = [
     cluster: "online-gyne",
     title: "When Does Bleeding in Early Pregnancy Need Urgent Help?",
     primaryConsult: "charmi",
-    indexable: false,
+    indexable: true,
     calendarArticleId: "W23-C",
   },
   {
@@ -102,7 +102,7 @@ export const NEW_CALENDAR_GUIDE_ROWS: TopicGuideRow[] = [
     cluster: "fertility",
     title: "What Should I Ask After an Unsuccessful IVF Cycle?",
     primaryConsult: "charmi",
-    indexable: false,
+    indexable: true,
     calendarArticleId: "W24-C",
   },
   {
@@ -111,7 +111,7 @@ export const NEW_CALENDAR_GUIDE_ROWS: TopicGuideRow[] = [
     cluster: "gyn-general",
     title: "Could My Symptoms Be Perimenopause?",
     primaryConsult: "charmi",
-    indexable: false,
+    indexable: true,
     calendarArticleId: "W25-C",
   },
   {
@@ -120,7 +120,7 @@ export const NEW_CALENDAR_GUIDE_ROWS: TopicGuideRow[] = [
     cluster: "gyn-general",
     title: "Is HRT Right for Me? Questions to Discuss With a Doctor",
     primaryConsult: "charmi",
-    indexable: false,
+    indexable: true,
     calendarArticleId: "W26-C",
   },
 ];

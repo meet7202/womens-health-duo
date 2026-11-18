@@ -1,5 +1,5 @@
-import { Fragment, useMemo } from "react";
-import { useParams } from "react-router-dom";
+import { Fragment, useEffect, useMemo } from "react";
+import { useLocation, useParams } from "react-router-dom";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { JsonLdFaq } from "@/components/seo/JsonLdFaq";
@@ -21,6 +21,18 @@ import {
 import type { TopicGuideFigure } from "@/data/topicGuides/types";
 import { topicGuideDocumentTitle } from "@/lib/pageSeoCopy";
 import NotFound from "@/pages/NotFound";
+
+/** Stable in-page target so a review link can open the exact section. */
+function sectionAnchor(heading: string): string {
+  const slug = heading
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  return slug || "section";
+}
 
 function formatGuideDate(iso: string | undefined): string | null {
   if (!iso?.trim()) return null;
@@ -83,8 +95,18 @@ function placeInlineFigures(
 
 export function TopicGuidePage() {
   const { topicGuideSlug } = useParams<{ topicGuideSlug: string }>();
+  const { hash } = useLocation();
 
   const guide = useMemo(() => getTopicGuide(topicGuideSlug), [topicGuideSlug]);
+
+  useEffect(() => {
+    const id = hash.replace(/^#/, "");
+    if (!id || !guide) return;
+    const timer = window.setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ block: "start" });
+    }, 0);
+    return () => window.clearTimeout(timer);
+  }, [hash, guide]);
 
   const crumbs = useMemo(() => {
     if (!guide) return [];
@@ -199,6 +221,10 @@ export function TopicGuidePage() {
             {updatedLabel ? `. Updated ${updatedLabel}` : null}
             {reviewedLabel ? `. Reviewed ${reviewedLabel}` : null}.
           </p>
+        ) : publishedLabel ? (
+          <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+            Published {publishedLabel}.
+          </p>
         ) : null}
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">{guide.introParagraph}</p>
 
@@ -207,7 +233,10 @@ export function TopicGuidePage() {
         <div className="space-y-10 mb-12">
           {guide.sections.map((sec, secIdx) => (
             <Fragment key={sec.heading}>
-              <section className="rounded-2xl border border-border/50 bg-card p-6 shadow-soft">
+              <section
+                id={sectionAnchor(sec.heading)}
+                className="scroll-mt-28 rounded-2xl border border-border/50 bg-card p-6 shadow-soft"
+              >
                 <h2 className="font-heading text-xl font-semibold text-foreground mb-3">
                   {sec.heading}
                 </h2>

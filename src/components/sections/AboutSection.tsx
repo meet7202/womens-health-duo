@@ -13,12 +13,7 @@ import {
 import { BRAND_ENTITY_LINE } from "@/config/brandLine";
 import { whatsappMessageDoctorProfile, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 import { DOCTOR_PHOTOS } from "@/config/doctorPhotos";
-import {
-  PUBLIC_REVIEW_PROVENANCE,
-  publicReviewCount,
-  publicReviewHasAggregate,
-  publicReviewRating,
-} from "@/config/publicReviews";
+import { PUBLIC_REVIEW_PROVENANCE, publicReviewStarRating } from "@/config/publicReviews";
 
 const doctors = [
   {
@@ -140,17 +135,11 @@ export const AboutSection = () => {
                     </h3>
                     {(() => {
                       const provenance = PUBLIC_REVIEW_PROVENANCE[doctor.doctorSlug];
-                      const rating = publicReviewRating(provenance);
-                      const reviewCount = publicReviewCount(provenance);
-                      if (
-                        publicReviewHasAggregate(provenance) &&
-                        rating != null &&
-                        reviewCount != null
-                      ) {
+                      const rating = publicReviewStarRating(provenance);
+                      if (rating != null) {
                         return (
                           <span className="bg-primary/10 text-primary text-xs font-medium px-2 py-1 rounded-full">
-                            {rating.toFixed(1)}★ ({reviewCount} reviews
-                            {provenance.asOf ? `, as of ${provenance.asOf}` : ""})
+                            {rating.toFixed(1)}★
                           </span>
                         );
                       }

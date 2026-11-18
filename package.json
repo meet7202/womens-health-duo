@@ -9,6 +9,7 @@
   },
   "scripts": {
     "dev": "vite",
+    "dev:blogs": "VITE_PREVIEW_BLOG_DRAFTS=1 vite",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",

@@ -2,7 +2,7 @@ import { learnHubTopicLabels, learnHubFilteredPath } from "../../lib/learnHubUrl
 import { publicPathname } from "../../lib/githubPagesPublicUrl";
 import { bookConsultationPath } from "../../lib/bookingIntent";
 import { SEO_ONLINE_SERVICES } from "../seoOnlineServices";
-import { publishedArticleForSlug } from "./articles";
+import { CALENDAR_ARTICLE_BY_SLUG, publishedArticleForSlug } from "./articles";
 import { buildTopicGuideFaqs, clusterConfig } from "./clusterContent";
 import { guideUniquenessOverrideForSlug } from "./guideUniquenessOverrides";
 import { isTopicGuideIndexable } from "./topicGuideSitemapPaths";
@@ -360,9 +360,22 @@ function sectionsWithUniquenessScaffold(
   };
 }
 
+/**
+ * Local draft preview (`npm run dev:blogs`). Production builds leave this unset,
+ * so unpublished calendar bodies stay off the public site.
+ */
+const previewMeta = import.meta as { env?: { VITE_PREVIEW_BLOG_DRAFTS?: string } };
+const PREVIEW_BLOG_DRAFTS =
+  typeof import.meta !== "undefined" && previewMeta.env?.VITE_PREVIEW_BLOG_DRAFTS === "1";
+
+function articleRevisionForSlug(slug: string) {
+  if (PREVIEW_BLOG_DRAFTS) return CALENDAR_ARTICLE_BY_SLUG.get(slug);
+  return publishedArticleForSlug(slug);
+}
+
 function buildGuideModel(row: TopicGuideRow): TopicGuidePageModel {
   const cc = clusterConfig(row.cluster);
-  const published = publishedArticleForSlug(row.slug);
+  const published = articleRevisionForSlug(row.slug);
   const title = published?.title ?? row.title ?? topicGuideTitleFromSlug(row.slug);
   const consult = published?.proposedLeadId ?? row.primaryConsult ?? cc.defaultConsult;
   const services = row.serviceSlugs ?? cc.defaultServiceSlugs;
@@ -437,7 +450,7 @@ export function getTopicGuide(slug: string | undefined): TopicGuidePageModel | u
   if (!slug) return undefined;
   const guide = GUIDE_BY_SLUG.get(slug);
   // Unpublished new calendar URLs stay out of the public route (404).
-  if (!guide || !guide.indexable) return undefined;
+  if (!guide || (!guide.indexable && !PREVIEW_BLOG_DRAFTS)) return undefined;
   return guide;
 }
 /** Main entry slugs highlighted on the Learn hub (subset of all guides). */
@@ -485,7 +498,7 @@ export type TopicGuideIndexGroup = {
 export function topicGuidesGroupedForIndex(): TopicGuideIndexGroup[] {
   const byCluster = new Map<TopicGuideClusterId, TopicGuideRow[]>();
   for (const row of TOPIC_GUIDE_ROWS) {
-    if (!isTopicGuideIndexable(row)) continue;
+    if (!isTopicGuideIndexable(row) && !PREVIEW_BLOG_DRAFTS) continue;
     const arr = byCluster.get(row.cluster) ?? [];
     arr.push(row);
     byCluster.set(row.cluster, arr);
