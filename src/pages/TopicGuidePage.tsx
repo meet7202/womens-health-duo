@@ -142,7 +142,6 @@ export function TopicGuidePage() {
           headline: guide.title,
           description: guide.metaDescription,
           datePublished: guide.publishedAt,
-          dateModified: guide.updatedAt ?? guide.publishedAt,
           authorId: approved ? guide.authorId : undefined,
           reviewerIds: approved ? guide.reviewerIds : undefined,
           imageUrls,
@@ -197,8 +196,6 @@ export function TopicGuidePage() {
   const authorName = guide.authorId ? DOCTOR_BY_SLUG[guide.authorId]?.name : undefined;
   const reviewers = showEditorialByline ? (guide.reviewerIds ?? []) : [];
   const publishedLabel = formatGuideDate(guide.publishedAt);
-  const updatedLabel = formatGuideDate(guide.updatedAt);
-  const reviewedLabel = formatGuideDate(guide.reviewedAt);
 
   return (
     <PageShell breadcrumbs={crumbs}>
@@ -232,8 +229,7 @@ export function TopicGuidePage() {
               </>
             ) : null}
             {publishedLabel ? `. Published ${publishedLabel}` : null}
-            {updatedLabel ? `. Updated ${updatedLabel}` : null}
-            {reviewedLabel ? `. Reviewed ${reviewedLabel}` : null}.
+            .
           </p>
         ) : publishedLabel ? (
           <p className="text-sm text-muted-foreground leading-relaxed mb-4">
@@ -497,7 +493,6 @@ export function TopicGuidePage() {
         <ContentAuthors
           leadId={guide.primaryConsult === "both" ? undefined : guide.primaryConsult}
           reviewerIds={showEditorialByline ? guide.reviewerIds : undefined}
-          reviewedLabel={showEditorialByline ? reviewedLabel : undefined}
         />
         <DirectoryPresence />
       </article>

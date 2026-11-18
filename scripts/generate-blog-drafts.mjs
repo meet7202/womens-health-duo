@@ -153,7 +153,6 @@ function publicationFields(id) {
   return {
     publicationStatus: "published",
     publishedAt: prev.actualPublishDate,
-    updatedAt: prev.actualUpdateDate || prev.actualPublishDate,
   };
 }
 
@@ -324,7 +323,6 @@ function buildArticle(article, bodyPacks) {
     ...(approval
       ? {
           reviewerIds: approval.reviewers,
-          ...(approval.approvedOn ? { reviewedAt: approval.approvedOn } : {}),
         }
       : {}),
     claimLedger: reviewedSources.length ? reviewedSources : pack?.claimLedger || claimLedger,

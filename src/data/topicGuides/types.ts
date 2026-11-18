@@ -63,8 +63,6 @@ export type TopicGuideRow = {
   /** Verified medical reviewer only — omit until review is confirmed. */
   reviewerId?: TopicGuideAuthorId;
   publishedAt?: string;
-  updatedAt?: string;
-  reviewedAt?: string;
   /**
    * Optional per-guide gate. When omitted, registry default is `pending`.
    * Set `approved` only after clinician confirmation (with author/reviewer/dates on the row).
@@ -119,8 +117,6 @@ export type TopicGuidePageModel = {
   /** Approved reviewers for the byline (set from a recorded clinical approval). */
   reviewerIds?: TopicGuideAuthorId[];
   publishedAt?: string;
-  updatedAt?: string;
-  reviewedAt?: string;
   reviewStatus?: TopicGuideReviewStatus;
   references: readonly TopicGuideReference[];
   /** SEO-12 uniqueness scaffolding when present. */

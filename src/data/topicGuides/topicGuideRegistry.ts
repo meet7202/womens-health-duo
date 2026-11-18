@@ -423,8 +423,6 @@ function buildGuideModel(row: TopicGuideRow): TopicGuidePageModel {
     reviewerId: published?.reviewerId ?? row.reviewerId,
     reviewerIds,
     publishedAt: published?.publishedAt ?? row.publishedAt,
-    updatedAt: published?.updatedAt ?? row.updatedAt,
-    reviewedAt: published?.reviewedAt ?? row.reviewedAt,
     reviewStatus,
     references,
     primaryQuestion,

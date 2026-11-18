@@ -110,12 +110,11 @@ function main() {
     patchedWindow = patchedWindow.replace(
       /proposedLeadId: "(zalak|charmi)"/,
       (m, lead) =>
-        `${m},\n    authorId: "${lead}",\n    reviewerId: "${lead}",\n    publishedAt: "${today}",\n    updatedAt: "${today}",\n    reviewedAt: "${today}"`,
+        `${m},\n    authorId: "${lead}",\n    reviewerId: "${lead}",\n    publishedAt: "${today}"`,
     );
   } else {
     patchedWindow = patchedWindow
-      .replace(/publishedAt: "[^"]*"/, `publishedAt: "${today}"`)
-      .replace(/updatedAt: "[^"]*"/, `updatedAt: "${today}"`);
+      .replace(/publishedAt: "[^"]*"/, `publishedAt: "${today}"`);
   }
   catalog = catalog.slice(0, idPos) + patchedWindow + catalog.slice(idPos + window.length);
   fs.writeFileSync(CATALOG_PATH, catalog);

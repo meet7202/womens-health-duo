@@ -14,7 +14,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2026-11-24T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "Why do I leak urine when I cough, sneeze or exercise?",
     seoTitle: "Why urine leaks when you cough or exercise",
     description: "Cough or exercise leaks often mean stress incontinence. See how it differs from urgency, NICE pelvic-floor training, and when to seek urgent care.",
@@ -138,7 +137,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Categorise UI as stress, mixed or urgency/OAB; offer supervised PFMT of at least 3 months as first-line for stress or mixed UI; confirm contraction digitally before supervised PFMT; continue exercises if beneficial; offer ≥6 weeks bladder training for urgency/mixed.",
@@ -169,7 +167,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2026-11-27T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "Why Are My Periods Irregular?",
     seoTitle: "Why are my periods irregular? When to check",
     description: "Irregular periods may reflect life stage, contraception or health conditions. See FIGO ranges, what to track, and when NHS advice says to seek review.",
@@ -301,7 +298,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Normal menstrual frequency described as predictable cyclic menses every 24–38 days; regularity uses shortest-to-longest variation of about 7–9 days by age band.",
@@ -346,7 +342,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2026-12-01T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "Is exercise safe during pregnancy?",
     seoTitle: "Is exercise safe in pregnancy? Activities and limits",
     description: "Activity is encouraged in most uncomplicated pregnancies. See NHS 150-minute targets, the talk test, examples, maternity caveats, and stop signs.",
@@ -474,7 +469,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Aim for 150 minutes moderate activity weekly including muscle strengthening; talk but not sing; start gently if new; do not start new vigorous activity such as running; avoid fall/impact sports and scuba; avoid prolonged supine lying later in pregnancy; stop if uncomfortable, too hot or unwell.",
@@ -512,7 +506,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2026-12-04T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "What Is PCOS, and Why Is It Now Called PMOS?",
     seoTitle: "What is PCOS? Now renamed PMOS explained",
     description: "PCOS is now renamed PMOS (Polyendocrine Metabolic Ovarian Syndrome). See 2023 adult and adolescent criteria, AMH limits, and why one scan is not enough.",
@@ -639,7 +632,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "ASRM endorsed renaming PCOS to Polyendocrine Metabolic Ovarian Syndrome (PMOS).",
@@ -677,7 +669,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2026-12-08T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "When Can I Start Exercising After Giving Birth?",
     seoTitle: "When Can I Exercise After Giving Birth?",
     description: "A gradual return to movement after birth: early walking and pelvic-floor work, then strength, then impact—shaped by your recovery, not a fixed week.",
@@ -795,7 +786,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "After straightforward birth, gentle exercise (walking, stretches, pelvic floor) when ready; usually get advice at 6-week check before high-impact; longer recovery and talk to midwife/GP before strenuous activity after complicated birth or caesarean; swimming after bleeding stopped 7 days.",
@@ -832,7 +822,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2026-12-11T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "What Should I Do Before Trying for a Baby?",
     seoTitle: "What to do before trying for a baby",
     description: "A short preconception checklist: folic acid, medicines, vaccines, chronic conditions, tobacco and alcohol, and partner health—without a blanket test stack.",
@@ -948,7 +937,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "400 mcg folic acid daily for women of reproductive age in the preconception period up to the first trimester",
@@ -986,7 +974,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2026-12-15T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "What Is Diastasis Recti, and When Should I Get It Checked?",
     seoTitle: "What Is Diastasis Recti? When to Get Checked",
     description: "Diastasis recti is midline abdominal separation along the linea alba. Learn what it means, what rehab can aim for, and when a lump needs urgent care.",
@@ -1104,7 +1091,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Defines DRAM as rectus halves moving apart with pregnancy stretch; lists doming, gap feeling, discomfort; advises graded core work and physio referral.",
@@ -1141,7 +1127,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2026-12-18T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "How Can I Track Ovulation With Irregular Periods?",
     seoTitle: "Track ovulation with irregular periods",
     description: "Compare mucus, LH kits, basal temperature and clinical tests when cycles vary—and when regular intercourse every 2–3 days is enough without stressful charting.",
@@ -1273,7 +1258,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Mid-luteal progesterone day 21 of 28-day cycle; later and weekly repeats in prolonged irregular cycles; do not use BBT charts to confirm ovulation",
@@ -1318,7 +1302,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2026-12-22T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "What Is STOTT Pilates? Mat vs Reformer and Getting Started",
     seoTitle: "What Is STOTT Pilates? Mat vs Reformer",
     description: "STOTT Pilates is a contemporary teaching method with five stated principles. How Mat and Reformer differ, and what a first session usually involves.",
@@ -1436,7 +1419,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Lists five principles: Breathing; Pelvic placement; Rib cage placement; Scapular movement and stabilization; Head and neck placement.",
@@ -1466,7 +1448,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2026-12-25T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "What Are PCOS Symptoms If My Periods Are Regular?",
     seoTitle: "PCOS symptoms if periods are regular",
     description: "Regular periods do not rule out PCOS/PMOS. See when skin or hair changes warrant review, how contraception can mask cycles, and virilisation red flags.",
@@ -1593,7 +1574,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Adults need two of three features; if only irregular cycles or only hyperandrogenism is present, ultrasound or AMH can supply the third feature—so regular cycles do not exclude diagnosis when other criteria are met.",
@@ -1631,7 +1611,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2026-12-29T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "Are Kegels Right for Everyone?",
     seoTitle: "Are Kegels Right for Everyone?",
     description: "Pelvic-floor training helps many with stress leaks or prolapse symptoms, but some people need relaxation or coordination first—assessment guides the plan.",
@@ -1753,7 +1732,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Offer ≥3 months supervised PFMT first-line for stress or mixed UI; ≥8 contractions 3× daily; consider PFMT for some stage 1–2 prolapse.",
@@ -1788,7 +1766,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-01-01T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "How Much Period Pain Is Too Much?",
     seoTitle: "How much period pain is too much?",
     description: "Pain that stops school or work deserves assessment—primary vs secondary causes, self-care options, and why a normal ultrasound is not the whole answer.",
@@ -1908,7 +1885,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Heat, gentle exercise, painkillers such as paracetamol or ibuprofen; see GP if pain stops daily activities; contraception and anti-inflammatory medicines may be discussed",
@@ -1946,7 +1922,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-01-05T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "How Can I Manage Back Pain During Pregnancy?",
     seoTitle: "How to Ease Back Pain in Pregnancy",
     description: "Practical options for pregnancy backache—lifting, pacing, supportive shoes, side-lying pillows—and clear warning signs that need maternity review.",
@@ -2056,7 +2031,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Lifting with bent knees/straight back; avoid heavy loads; flat shoes; supported sitting; rest; urgent contact for fever/bleeding/painful peeing/side pain; emergency for loss of feeling in legs/bum/genitals.",
@@ -2093,7 +2067,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-01-08T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "Can I Get Pregnant With PCOS?",
     seoTitle: "Can I get pregnant with PCOS or PMOS?",
     description: "Many people with PCOS/PMOS conceive, with or without help. See ovulation checks, partner factors, treatment categories, and earlier referral timing.",
@@ -2229,7 +2202,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Letrozole should be first-line pharmacological ovulation induction for anovulatory infertility in PCOS with no other infertility factors; agents may be off-label; counsel on evidence and side effects.",
@@ -2274,7 +2246,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-01-12T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "How Can Physiotherapy Support Recovery After a C-Section?",
     seoTitle: "Physiotherapy After a Caesarean Birth",
     description: "Early caesarean mobility tips and later graded rehab—wound care stays with your surgical team; physiotherapy helps movement once healing allows.",
@@ -2381,7 +2352,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Encourage early mobilisation; daily walk for clot risk; resume driving/exercise/heavy carrying/sex when able—may not be for 6 weeks; contact for listed infection/clot symptoms.",
@@ -2411,7 +2381,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-01-15T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "When Should I See a Fertility Specialist?",
     seoTitle: "When to see a fertility specialist",
     description: "ASRM timing by age, reasons to seek help sooner, both-partner semen analysis, and why a first visit is not an IVF commitment—or an AMH verdict.",
@@ -2534,7 +2503,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Evaluate at 12 months if female partner <35, at 6 months if ≥35; more immediate if >40; no delay with known infertility-related conditions; include semen evaluation; parallel male evaluation when applicable",
@@ -2579,7 +2547,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-01-19T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "What Can a Diastasis Recti Self-Check Tell You?",
     seoTitle: "What a Diastasis Recti Self-Check Can Tell You",
     description: "A gentle midline self-check can hint at softness or doming, but it cannot diagnose diastasis, grade severity, or rule out a hernia—know when to stop.",
@@ -2690,7 +2657,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Describes bulging/doming and feeling a gap as possible observations; advises seeking women’s health physiotherapy rather than self-grading alone.",
@@ -2727,7 +2693,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-01-22T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "When Should I Start Folic Acid Before Pregnancy?",
     seoTitle: "When to start folic acid before pregnancy",
     description: "Start 400 micrograms folic acid daily when trying—ideally before conception—until 12 weeks; who may need prescribed 5 mg, and what to do if already pregnant.",
@@ -2852,7 +2817,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "400 micrograms daily ideally 3 months before pregnancy or as soon as pregnant, until 12 weeks; difficult to get enough from food alone; prescribed 5 mg for listed UK risk groups",
@@ -2889,7 +2853,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-01-26T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "What is the pelvic floor, and what does it do?",
     seoTitle: "What is the pelvic floor and what it does",
     description: "The pelvic floor is a supportive muscle layer for bladder, bowel and sexual function. Learn where it sits, what it does, and when to seek review.",
@@ -3016,7 +2979,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Defines pelvic floor dysfunction and lists associated symptoms including urinary/faecal incontinence, emptying disorders, prolapse, sexual dysfunction and chronic pelvic pain; supervised PFMT should assess contraction and relaxation.",
@@ -3061,7 +3023,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-01-29T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "Why Are My Periods Heavy and Passing Clots?",
     seoTitle: "Heavy periods and clots: when to seek care",
     description: "Heavy periods may mean changing pads every 1–2 hours or clots over 2.5 cm. See NHS signs, common causes, and when bleeding needs urgent care.",
@@ -3173,7 +3134,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Heavy periods may include changing pad/tampon every 1–2 hours, dual products, >7-day bleeds, clots >~2.5 cm, soaking clothes, activity limits, tiredness/breathlessness; lists fibroids, endometriosis, adenomyosis, PMOS/PCOS, bleeding disorders and rare womb cancer among causes.",
@@ -3204,7 +3164,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-02-02T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "What helps pelvic girdle pain during pregnancy?",
     seoTitle: "Pelvic girdle pain in pregnancy: what helps",
     description: "PGP can make stairs, rolling in bed or getting out of a car painful. See NHS and RCOG coping steps, physiotherapy options and when to seek care.",
@@ -3326,7 +3285,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Defines PGP/SPD; not harmful to baby; lists aggravating tasks; midwife/GP contact if mobility hard; physio referral; coping tips including pillow between legs and knees together for car transfers; affects up to 1 in 5.",
@@ -3357,7 +3315,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-02-05T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "What Does My AMH Test Tell Me About Fertility?",
     seoTitle: "What an AMH test means for fertility",
     description: "AMH reflects ovarian reserve quantity, not egg quality or a natural-conception verdict—how to read a result with age and other fertility factors.",
@@ -3474,7 +3431,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Ovarian reserve equals oocyte quantity; markers test quantity not quality; should not be used as a fertility test for women with unproven fertility or as sole reason to deny ART",
@@ -3512,7 +3468,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-02-09T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "Why am I leaking urine after childbirth, and who can help?",
     seoTitle: "Why urine leaks after childbirth and who helps",
     description: "Postnatal urine leakage is common and deserves support. See what to tell your care team, how birth type informs assessment, and physiotherapy next steps.",
@@ -3639,7 +3594,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Leaky bladder may need pelvic floor exercises; ask GP or health visitor any time; postnatal check around 6–8 weeks is a good time to raise problems.",
@@ -3684,7 +3638,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-02-12T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "How Can I Manage PCOS Day to Day?",
     seoTitle: "How to manage PCOS day to day",
     description: "Day-to-day PCOS care means realistic food, movement, sleep and medical follow-up. See what the 2023 guideline supports—without cure or detox claims.",
@@ -3807,7 +3760,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Lifestyle management for all; healthy eating and activity for metabolic health and QoL; benefits even without weight loss; no one superior diet/exercise approach; screen depression/anxiety; avoid weight stigma.",
@@ -3838,7 +3790,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-02-16T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "Can diastasis recti improve on its own, or do I need physiotherapy?",
     seoTitle: "Can Diastasis Recti Improve Without Physio?",
     description: "Diastasis can change after birth, but gap closure is not promised. What natural recovery may do, what physio adds, and when to seek assessment.",
@@ -3967,7 +3918,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Defines DRAM; common in pregnancy/after birth (up to 60%); seek women’s health physio; graded core work, posture and lifestyle advice; avoid early sit-ups/crunches/plank.",
@@ -4005,7 +3955,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-02-19T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "What Should I Do After a Positive Pregnancy Test?",
     seoTitle: "After a positive pregnancy test: next steps",
     description: "Arrange maternity contact, review medicines without stopping them alone, confirm pregnancy vitamins, and know which pain or bleeding needs emergency care.",
@@ -4124,7 +4073,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Tell maternity services soon; see GP/specialist promptly if long-term condition or medicines; do not stop prescribed medicine without talking to a doctor; take recommended vitamins; avoid alcohol and smoking",
@@ -4162,7 +4110,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-02-23T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "How do I know if my pelvic floor needs an assessment?",
     seoTitle: "When your pelvic floor needs an assessment",
     description: "Leakage, heaviness, pain or emptying trouble can justify a pelvic-floor review. Symptoms do not prove weakness—assessment sorts function and next steps.",
@@ -4293,7 +4240,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Primary-care/physio initial history should cover UI, emptying disorders, faecal incontinence, prolapse, sexual dysfunction and chronic pelvic pain; exclude other medical causes; digital assessment of contraction/relaxation is a listed competency.",
@@ -4338,7 +4284,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-02-26T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "Could My Period Pain Be Endometriosis?",
     seoTitle: "Could period pain be endometriosis?",
     description: "Endometriosis can cause period pain that limits daily life, pain with sex or bowel habits, and fertility concerns. Clear scans still may not end assessment.",
@@ -4465,7 +4410,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Suspect on suggestive symptoms; offer examination and transvaginal ultrasound; do not exclude if exam/ultrasound normal; consider laparoscopy even if imaging normal.",
@@ -4503,7 +4447,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-03-02T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "How should exercise change in each trimester of pregnancy?",
     seoTitle: "Pregnancy exercise by trimester adaptations",
     description: "Trimester labels alone do not clear a workout. See how early symptoms, growing bump, balance and NHS later-pregnancy limits guide adaptation.",
@@ -4629,7 +4572,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Start new exercise gently; do not start new vigorous activity such as running; change activity as bump grows; avoid lying flat on back more than a few minutes later in pregnancy; stop if uncomfortable, too hot or unwell.",
@@ -4667,7 +4609,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-03-05T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "What Happens During IVF, Step by Step?",
     seoTitle: "How IVF works, stage by stage",
     description: "IVF stages explained, from planning and stimulation to egg retrieval, lab fertilisation, transfer or freezing, plus OHSS warning signs.",
@@ -4782,7 +4723,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "IVF fertilises outside the body; typical stages stimulation–collection–lab–transfer; embryos cultured 2–6 days; cycle often 3–6 weeks; freeze surplus embryos; risks include OHSS, multiples, ectopic",
@@ -4813,7 +4753,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-03-09T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "How long does postpartum recovery take? Milestones without a deadline",
     seoTitle: "How Long Does Postpartum Recovery Take?",
     description: "Postpartum recovery has no single finish line. Track bleeding, wounds, pelvic health, strength and mood, and know when earlier help is needed.",
@@ -4945,7 +4884,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Physical problems after birth may relate to pregnancy, birth or caregiving loads; ask GP/health visitor anytime; postnatal check ~6–8 weeks is a good time to raise issues.",
@@ -4997,7 +4935,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-03-12T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "How Are PCOS and Insulin Resistance Connected?",
     seoTitle: "PCOS and insulin resistance explained",
     description: "Insulin resistance often accompanies PCOS/PMOS and raises diabetes risk. See what it means, skin clues, and checks to discuss—not self-diagnose.",
@@ -5120,7 +5057,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Defines insulin resistance; links to diabetes risk and acanthosis nigricans; notes insulin-sensitising drugs as a treatment category.",
@@ -5158,7 +5094,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-03-16T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "How can I rebuild core strength after pregnancy?",
     seoTitle: "How to Rebuild Core Strength After Pregnancy",
     description: "Rebuild postnatal core strength around breathing, pelvic floor and daily loads—not a flat-stomach workout—with clear stop signs and assessment cues.",
@@ -5283,7 +5218,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Core = tummy, diaphragm, pelvic floor; avoid early sit-ups/crunches/plank; build walking and gentle core work; graded physio programme.",
@@ -5320,7 +5254,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-03-19T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "Why Is My Period Late If My Pregnancy Test Is Negative?",
     seoTitle: "Late period, negative pregnancy test: why?",
     description: "A negative home test is less reliable than a positive one. See NHS timing advice, other reasons for a late period, and symptoms that need emergency care.",
@@ -5444,7 +5377,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Most reliable from first day of missed period (or ≥21 days after unprotected sex if timing unknown); positive almost certainly correct; negative less reliable if early/incorrect use; retest and see GP if still no period.",
@@ -5489,7 +5421,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-03-23T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "Can pelvic floor physiotherapy help with bladder leakage?",
     seoTitle: "Can pelvic floor physio help bladder leaks?",
     description: "Supervised pelvic-floor care can help many stress or mixed leaks. See what assessment comes first, what therapy involves, and when other care is needed.",
@@ -5616,7 +5547,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Categorise UI; digital assessment before supervised PFMT; ≥3 months PFMT first-line for stress/mixed; ≥6 weeks bladder training for urgency/mixed; continue if beneficial.",
@@ -5661,7 +5591,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-03-26T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "What Is the Difference Between IUI and IVF?",
     seoTitle: "IUI and IVF compared for fertility care",
     description: "IUI places prepared sperm in the uterus near ovulation; IVF fertilises eggs in a lab. How procedures, monitoring and decision factors differ.",
@@ -5773,7 +5702,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "IUI injects prepared sperm into uterus; less invasive/cheaper than IVF but lower success per cycle; unsuitable for blocked tubes, severe endometriosis, low reserve, male factor",
@@ -5811,7 +5739,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-03-30T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "What is prenatal physiotherapy, and when might I need it?",
     seoTitle: "What prenatal physiotherapy covers in pregnancy",
     description: "Prenatal physiotherapy assesses pregnancy pain, pelvic symptoms and movement limits. How it differs from a fitness class and when obstetric care comes first.",
@@ -5937,7 +5864,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Details history, musculoskeletal assessment for PGP/LBP, optional internal exam with consent/chaperone/right to decline, shared treatment planning, escalation to GP if not PGP/LBP.",
@@ -5975,7 +5901,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-04-02T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "What Helps Pregnancy Nausea, and When Do I Need Care?",
     seoTitle: "Pregnancy nausea help and warning signs",
     description: "Practical steps for pregnancy nausea, why ‘morning sickness’ can last all day, and red flags like not keeping fluids down that need prompt review.",
@@ -6083,7 +6008,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Symptoms any time of day; usually eases by 16–20 weeks; self-care diet/rest/ginger/acupressure; call if dark urine/not peed >8h, unable to keep fluids 24h, faint, pain, fever, blood in vomit, weight loss; antiemetics if needed",
@@ -6114,7 +6038,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-04-06T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "Why does my back hurt after pregnancy, and when should I get help?",
     seoTitle: "Postpartum Back Pain and When to Get Help",
     description: "Postpartum back pain often tracks feeding, carrying and sleep loss. Learn load tweaks, what physio assesses, and which symptoms need urgent care.",
@@ -6239,7 +6162,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Back pain may relate to pregnancy/birth/caregiving; practical feeding and lifting tips; ask for help anytime.",
@@ -6277,7 +6199,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-04-09T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "Is It PMS or PMDD, and How Can I Tell?",
     seoTitle: "PMS vs PMDD: how can I tell?",
     description: "PMDD is a severe premenstrual mood condition. Compare timing with PMS, track two cycles, and use Tele-MANAS or 112 if you have thoughts of self-harm.",
@@ -6393,7 +6314,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Severe emotional/physical symptoms 1–2 weeks before period; diary ≥2 cycles; treatments include SSRIs, hormonal options, CBT; lifestyle measures listed.",
@@ -6431,7 +6351,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-04-13T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "Is Pilates safe during pregnancy? Questions to ask before a class",
     seoTitle: "Is Pilates safe in pregnancy? Questions to ask",
     description: "Pilates can suit many pregnancies when screened and modified. ACOG lists modified Pilates among safer options; hot rooms and some positions need care.",
@@ -6561,7 +6480,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Modified Pilates among safer exercises; avoid poses with long stillness or back-lying; avoid hot Pilates; stop for listed warning signs.",
@@ -6599,7 +6517,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-04-16T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "What Happens at the First Fertility Appointment?",
     seoTitle: "First fertility appointment: what to expect",
     description: "What a first fertility visit usually covers: history for both partners, why tests are chosen case by case, and which records to bring along.",
@@ -6711,7 +6628,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "First visit: detailed history and physical; tests selected afterward; semen analysis for men; female labs/imaging as indicated",
@@ -6749,7 +6665,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-04-20T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "How can breathing techniques support comfort during labour?",
     seoTitle: "Breathing for labour comfort and preparation",
     description: "NHS labour advice includes calm, deep breathing as self-help. It can support focus alongside movement and medical pain relief—not replace them.",
@@ -6866,7 +6781,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Learn to relax, stay calm and breathe deeply; keep moving; partner support; keep open mind as you may want more pain relief; gas and air best with slow deep breaths; alternative methods mostly unproven.",
@@ -6890,7 +6804,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-04-23T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "Can I Improve Egg Quality? What Does the Evidence Say?",
     seoTitle: "Can you improve egg quality? What the evidence shows",
     description: "No test measures egg quality directly, and no supplement is proven to fix it. Here is what age, habits and fertility tests can and cannot tell you.",
@@ -7028,7 +6941,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "AMH and antral follicle count estimate reserve and predict stimulation response; they do not measure egg quality or reliably predict natural conception.",
@@ -7063,7 +6975,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-04-27T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "Can pelvic floor physiotherapy help with painful sex?",
     seoTitle: "Can pelvic floor physio help painful sex?",
     description: "Pelvic-floor physiotherapy may help when muscle guarding or coordination adds to pain with sex. Medical causes need a doctor; exams always need consent.",
@@ -7190,7 +7101,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Defines vulvodynia/vestibulodynia, vaginismus and dyspareunia; lists medical and psychosocial contributors; physiotherapy addresses soft-tissue sensitivity and muscle behaviour; relaxation recognition important.",
@@ -7228,7 +7138,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-04-30T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "When Does Bleeding in Early Pregnancy Need Urgent Help?",
     seoTitle: "Bleeding in early pregnancy: when to get urgent help",
     description: "Bleeding in early pregnancy is common and not always serious. How urgent it is depends on your symptoms, so a doctor needs to advise you personally.",
@@ -7346,7 +7255,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Bleeding can be common in early pregnancy but should be checked; seek emergency care for heavy bleeding, severe pain, shoulder-tip pain, dizziness or fainting; otherwise contact midwife, GP or early pregnancy unit.",
@@ -7367,7 +7275,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-05-04T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "When can I start Pilates after pregnancy?",
     seoTitle: "When Can I Start Pilates After Pregnancy?",
     description: "Pilates after birth has no universal start date. Judge readiness by healing, symptoms and class demand—and know when individual rehab should come first.",
@@ -7494,7 +7401,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Gentle Pilates from ~4 weeks if no bleeding/wound/pelvic-floor concerns; seek specialist physio for diastasis or concerns; wait for post-op check after surgery; seek help if pain during/after exercises.",
@@ -7532,7 +7438,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-05-07T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "What Should I Ask After an Unsuccessful IVF Cycle?",
     seoTitle: "Questions to ask after an unsuccessful IVF cycle",
     description: "A failed IVF cycle raises hard questions. Which records to gather, what one cycle can and cannot show, and how to ask about add-ons or a second opinion.",
@@ -7666,7 +7571,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Describes IVF stages (stimulation, collection, fertilisation, embryo culture, transfer) and that success depends strongly on age.",
@@ -7694,7 +7598,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-05-11T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "What can a vaginal bulge or heaviness mean? Understanding prolapse",
     seoTitle: "Vaginal bulge or heaviness and prolapse signs",
     description: "Heaviness or a vaginal bulge can signal pelvic organ prolapse. See NHS symptom lists, medical assessment, and where physiotherapy may fit without self-grading.",
@@ -7817,7 +7720,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Lists heaviness/bulge/sex/bladder/bowel symptoms; see GP for lump or other symptoms; outlines examination, grading 1–4, and options including pessary, physio, hormones, surgery; monitoring if not bothered.",
@@ -7855,7 +7757,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-05-14T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "Could My Symptoms Be Perimenopause?",
     seoTitle: "Could these be perimenopause symptoms?",
     description: "Perimenopause often starts with cycle changes, hot flushes and sleep or mood shifts. From 45, NICE usually diagnoses clinically without hormone blood tests.",
@@ -7974,7 +7875,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Cycle change often first; lists flushes, sleep, mood, vaginal, UTI, other symptoms; menopause after 12 months without period; postmenopausal bleeding needs review; contraception intervals after final period.",
@@ -8005,7 +7905,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-05-18T09:00:00+05:30",
     proposedLeadId: "zalak",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "What happens at your first pelvic health physiotherapy appointment?",
     seoTitle: "What happens at a first pelvic physio visit",
     description: "A first pelvic-health physio visit starts with history and goals. Learn consent for optional exams, chaperones, and online versus in-person limits.",
@@ -8128,7 +8027,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Detailed history; optional internal exam with consent; right to decline; bladder diary; plan discussed after findings.",
@@ -8173,7 +8071,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     scheduledAt: "2027-05-21T09:00:00+05:30",
     proposedLeadId: "charmi",
     publishedAt: "2026-11-18",
-    updatedAt: "2026-11-18",
     title: "Is HRT Right for Me? Questions to Discuss With a Doctor",
     seoTitle: "Is HRT right for me? Questions to ask",
     description: "HRT can ease flushes, sleep and vaginal symptoms. Prepare questions on benefits, clot and breast-cancer risks, patches versus tablets, and alternatives.",
@@ -8288,7 +8185,6 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "zalak",
       "charmi"
     ],
-    reviewedAt: "2026-11-18",
     claimLedger: [
       {
         claim: "Benefits often outweigh risks under 60 without high breast/clot risk; lists symptom and bone benefits; combined HRT small breast-cancer increase; tablets raise clot/stroke risk; patches/gel/spray do not raise clot risk; vaginal oestrogen local safety profile.",

@@ -9,8 +9,6 @@ type ContentAuthorsProps = {
   leadId?: DoctorSlug;
   /** Only pass reviewers after a recorded, approved clinical review. */
   reviewerIds?: readonly DoctorSlug[];
-  /** Human-readable review date; shown only with `reviewerIds`. */
-  reviewedLabel?: string;
 };
 
 /** Names of one or more clinicians, linked to their profiles: "A", "A and B". */
@@ -46,7 +44,6 @@ function DoctorLink({ slug }: { slug: DoctorSlug }) {
 export function ContentAuthors({
   leadId,
   reviewerIds,
-  reviewedLabel,
 }: ContentAuthorsProps = {}) {
   const order = leadId ? [leadId, ...DEFAULT_ORDER.filter((s) => s !== leadId)] : DEFAULT_ORDER;
   return (
@@ -64,7 +61,7 @@ export function ContentAuthors({
         {reviewerIds?.length ? (
           <>
             Medically reviewed by <DoctorNameList slugs={reviewerIds} />
-            {reviewedLabel ? ` on ${reviewedLabel}` : ""}.{" "}
+            .{" "}
           </>
         ) : null}
         <DoctorLink slug="zalak" /> leads women&apos;s health physiotherapy and STOTT Pilates.{" "}
