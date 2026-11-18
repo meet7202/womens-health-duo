@@ -1,0 +1,22 @@
+{
+  "id": "W07-Z",
+  "openClinicalQuestions": [
+    "Which daily-task adaptations does Dr. Zalak demonstrate?",
+    "Which obstetric warning symptoms should Dr. Charmi prioritise?",
+    "How should PGP versus lumbar pain be explained without self-diagnosis?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Back pain is common in pregnancy and may be supported with activity and movement advice.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/common-symptoms/back-pain/",
+      "limitations": "General guidance; it does not exclude obstetric, urinary or neurological causes.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Pregnancy-related pelvic pain can affect movement and may benefit from assessment.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/common-symptoms/pelvic-pain/",
+      "limitations": "Pain location alone cannot establish pelvic girdle pain.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

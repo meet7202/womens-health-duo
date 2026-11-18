@@ -1,0 +1,22 @@
+{
+  "id": "W03-C",
+  "openClinicalQuestions": [
+    "Which India-relevant vaccination and infection-screening prompts should be named?",
+    "Which histories should trigger genetic counselling in the clinic pathway?",
+    "What folic-acid wording should remain pending until W09-C is reviewed?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Prepregnancy care includes reviewing health conditions, medicines, vaccinations and lifestyle before conception.",
+      "sourceUrl": "https://www.acog.org/womens-health/faqs/good-health-before-pregnancy-prepregnancy-care",
+      "limitations": "US guidance; vaccination schedules and local services need India-specific review.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Prescribed medicines should be reviewed rather than stopped without clinical advice.",
+      "sourceUrl": "https://www.acog.org/womens-health/faqs/good-health-before-pregnancy-prepregnancy-care",
+      "limitations": "Individual risk-benefit decisions require the prescribing clinician.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

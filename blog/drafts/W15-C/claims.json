@@ -1,0 +1,22 @@
+{
+  "id": "W15-C",
+  "openClinicalQuestions": [
+    "Which protocol-neutral monitoring details should remain in the final copy?",
+    "What local after-hours route should IVF patients use for urgent symptoms?",
+    "Which outcome denominators does Dr. Charmi Shah want patients to ask clinics for?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "IVF commonly includes stimulation, monitoring, egg retrieval, laboratory fertilisation and embryo transfer or freezing.",
+      "sourceUrl": "https://www.hfea.gov.uk/treatments/explore-all-treatments/in-vitro-fertilisation-ivf/",
+      "limitations": "The HFEA describes UK practice; individual protocols and Indian regulation may differ.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "An IVF pathway and timing vary between patients and cycles.",
+      "sourceUrl": "https://www.hfea.gov.uk/treatments/explore-all-treatments/in-vitro-fertilisation-ivf/",
+      "limitations": "The source cannot predict this clinic’s protocol or an individual outcome.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

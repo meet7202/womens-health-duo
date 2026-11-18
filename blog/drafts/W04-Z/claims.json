@@ -1,0 +1,22 @@
+{
+  "id": "W04-Z",
+  "openClinicalQuestions": [
+    "Which functional measures does Dr. Zalak Shah want named in the assessment section?",
+    "How should Dr. Charmi Shah phrase hernia red flags?",
+    "Should pregnancy-related and non-pregnancy-related diastasis be separated more explicitly?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Diastasis involves widening of the linea alba between the rectus muscles and is common around pregnancy.",
+      "sourceUrl": "https://thepogp.co.uk/patient_information/womens_health/tummy_muscle_separation.aspx",
+      "limitations": "Patient information does not replace examination or exclude a hernia.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Assessment and management should consider symptoms and function rather than appearance alone.",
+      "sourceUrl": "https://my.clevelandclinic.org/health/diseases/22346-diastasis-recti",
+      "limitations": "General clinical overview; individual management varies.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

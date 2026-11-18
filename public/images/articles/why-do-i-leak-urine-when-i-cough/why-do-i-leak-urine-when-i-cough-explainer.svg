@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Two symptom patterns discussed during a bladder assessment: leakage with activity and sudden urgency.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#faf6f4"/>
+      <stop offset="100%" stop-color="#f3e7ea"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <circle cx="1080" cy="80" r="120" fill="#e8c5cd" opacity="0.35"/>
+  <circle cx="80" cy="600" r="140" fill="#d9e4df" opacity="0.4"/>
+  <text x="60" y="70" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#8a4b5c">Women's Health Duo</text>
+  <text x="60" y="120" font-family="Georgia, serif" font-size="34" fill="#2f2430">Why do I leak urine when I cough, sneeze or exercise?</text>
+  <text x="60" y="165" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#5c4a52">Why do I leak urine when I cough?</text>
+  <text x="60" y="195" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#7a6670">Clinical lead: Dr. Zalak Shah (PT) · Patient education, not a diagnosis</text>
+  
+  <rect x="60" y="210" width="500" height="130" rx="18" fill="#fff" stroke="#e8d5d8" stroke-width="2"/>
+  <text x="84" y="252" font-family="Georgia, serif" font-size="18" fill="#5c2a3a">1. What does leakage with coughing or exercise…</text>
+  <text x="84" y="288" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#6b5a60">Orientation for a clinical conversation</text>
+
+  <rect x="600" y="210" width="500" height="130" rx="18" fill="#fff" stroke="#e8d5d8" stroke-width="2"/>
+  <text x="624" y="252" font-family="Georgia, serif" font-size="18" fill="#5c2a3a">2. How is this different from a sudden urge to…</text>
+  <text x="624" y="288" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#6b5a60">Orientation for a clinical conversation</text>
+
+  <rect x="60" y="370" width="500" height="130" rx="18" fill="#fff" stroke="#e8d5d8" stroke-width="2"/>
+  <text x="84" y="412" font-family="Georgia, serif" font-size="18" fill="#5c2a3a">3. What should I note before an assessment?</text>
+  <text x="84" y="448" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#6b5a60">Orientation for a clinical conversation</text>
+
+  <rect x="600" y="370" width="500" height="130" rx="18" fill="#fff" stroke="#e8d5d8" stroke-width="2"/>
+  <text x="624" y="412" font-family="Georgia, serif" font-size="18" fill="#5c2a3a">4. How can pelvic health physiotherapy fit into…</text>
+  <text x="624" y="448" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#6b5a60">Orientation for a clinical conversation</text>
+  <text x="1160" y="630" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#8a4b5c" opacity="0.75">@womenshealthduo</text>
+  <text x="1160" y="655" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#8a4b5c" opacity="0.75">womenshealthduo.com</text>
+</svg>

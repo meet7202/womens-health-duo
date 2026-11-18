@@ -1,0 +1,22 @@
+{
+  "id": "W20-C",
+  "openClinicalQuestions": [
+    "Which validated diary should be linked or reproduced after permission review?",
+    "What India-specific crisis route can be verified and maintained?",
+    "Which treatment categories can be named without turning this into a regimen?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "PMS symptoms occur in relation to the menstrual cycle and can affect daily life.",
+      "sourceUrl": "https://www.acog.org/womens-health/faqs/premenstrual-syndrome",
+      "limitations": "US patient guidance; diagnosis and treatment need individual review.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "PMDD involves severe premenstrual symptoms, particularly mood symptoms, with substantial impact.",
+      "sourceUrl": "https://www.nhs.uk/conditions/pmdd-premenstrual-dysphoric-disorder/",
+      "limitations": "The page cannot distinguish PMDD from another mental health condition in an individual.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

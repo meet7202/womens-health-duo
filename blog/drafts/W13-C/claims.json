@@ -1,0 +1,22 @@
+{
+  "id": "W13-C",
+  "openClinicalQuestions": [
+    "What first-contact pathway and timing does Dr. Charmi recommend in India?",
+    "Which supplement advice should link to the reviewed folic-acid article?",
+    "Which early-pregnancy red flags should be classified as prompt versus emergency?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "After finding out about pregnancy, early contact with maternity care and review of medicines and supplements are appropriate.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/finding-out/what-to-do-when-you-find-out-you-are-pregnant/",
+      "limitations": "UK referral logistics and schedules must not be copied into India-based advice.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Antenatal appointments review health history, medicines, screening and individual care needs.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/your-pregnancy-care/your-antenatal-care-and-appointments/",
+      "limitations": "Appointment timing and tests vary by country and clinical context.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

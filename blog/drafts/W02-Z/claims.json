@@ -1,0 +1,24 @@
+{
+  "id": "W02-Z",
+  "openClinicalQuestions": [
+    "Which warning symptoms should be aligned with the clinic’s India-based maternity escalation advice?",
+    "Does Dr. Charmi Shah want specific contraindications listed or kept entirely within individual review?",
+    "Which prenatal class formats and online limitations can be stated accurately?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Many people with uncomplicated pregnancies can remain active, with activity adapted to comfort and prior fitness.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/keeping-well/exercise/",
+      "sourceSection": "Exercise in pregnancy",
+      "limitations": "General guidance does not provide individual obstetric clearance.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Pregnancy exercise should stop and medical advice should be sought when warning symptoms occur.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/keeping-well/exercise/",
+      "sourceSection": "Exercise tips when pregnant",
+      "limitations": "The source is UK guidance; the final escalation pathway needs local obstetric review.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

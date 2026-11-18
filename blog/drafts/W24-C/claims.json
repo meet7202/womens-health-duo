@@ -1,0 +1,22 @@
+{
+  "id": "W24-C",
+  "openClinicalQuestions": [
+    "Which laboratory data does Dr. Charmi Shah consider essential for review?",
+    "How should treatment add-on evidence be linked and updated?",
+    "What emotional-support referrals are available and verified?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "IVF cycles include several stages whose records can inform a follow-up discussion.",
+      "sourceUrl": "https://www.hfea.gov.uk/treatments/explore-all-treatments/in-vitro-fertilisation-ivf/",
+      "limitations": "The overview cannot assign a cause to an unsuccessful cycle.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "An unsuccessful cycle does not by itself establish a single diagnosis or guarantee that a protocol change will help.",
+      "sourceUrl": "https://www.hfea.gov.uk/treatments/explore-all-treatments/in-vitro-fertilisation-ivf/",
+      "limitations": "A dedicated add-ons source should be added during clinical review if specific add-ons are named.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

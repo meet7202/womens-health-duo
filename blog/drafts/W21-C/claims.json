@@ -1,0 +1,22 @@
+{
+  "id": "W21-C",
+  "openClinicalQuestions": [
+    "Which records does Dr. Charmi Shah specifically ask patients to upload or bring?",
+    "Which tests are commonly deferred until after the first consultation?",
+    "How should male-partner assessment be coordinated locally?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Fertility evaluation includes history and assessment of both partners where applicable.",
+      "sourceUrl": "https://www.acog.org/womens-health/faqs/evaluating-infertility",
+      "limitations": "US overview; timing and test access vary in India.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Tests should be selected according to history and likely clinical utility rather than as a universal panel.",
+      "sourceUrl": "https://www.asrm.org/practice-guidance/practice-committee-documents/fertility-evaluation-of-infertile-women-a-committee-opinion-2026",
+      "limitations": "Committee guidance requires individual and local interpretation.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

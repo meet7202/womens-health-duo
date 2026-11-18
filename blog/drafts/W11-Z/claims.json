@@ -1,0 +1,22 @@
+{
+  "id": "W11-Z",
+  "openClinicalQuestions": [
+    "Which support devices does Dr. Zalak discuss and under what assessment?",
+    "Which obstetric red flags does Dr. Charmi want prioritised?",
+    "Should SPD be described as older terminology or a specific joint presentation?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Pregnancy-related pelvic girdle pain can affect walking and everyday movements and may benefit from physiotherapy.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/common-symptoms/pelvic-pain/",
+      "limitations": "The source cannot distinguish PGP from every cause of pelvic pain.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Early assessment and individual advice may help manage pregnancy-related pelvic pain.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/common-symptoms/pelvic-pain/",
+      "limitations": "UK care pathways differ from India-based services.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

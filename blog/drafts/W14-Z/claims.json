@@ -1,0 +1,22 @@
+{
+  "id": "W14-Z",
+  "openClinicalQuestions": [
+    "Which parts of Dr. Zalak Shah’s actual assessment process can be described publicly?",
+    "Which local urgent referral wording should accompany new bladder or bowel dysfunction?",
+    "Should Dr. Charmi Shah add gynaecological differentials to the routine-review list?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Pelvic floor symptoms are not proof of simple muscle weakness.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng210/chapter/recommendations",
+      "limitations": "UK guidance; individual diagnosis and Indian referral pathways require clinician review.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Assessment can include history, movement and a consent-based pelvic examination.",
+      "sourceUrl": "https://thepogp.co.uk/patients/pelvic_health_advice/physiotherapy_assessment.aspx",
+      "limitations": "Professional framework, not confirmation of this clinic’s exact process.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "W17-Z",
+  "openClinicalQuestions": [
+    "Which low-load movements can be published after Dr. Zalak Shah’s demonstration review?",
+    "How should abdominal separation findings be described without over-medicalising them?",
+    "Which postpartum medical red flags should Dr. Charmi Shah refine?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Postnatal exercise should progress gradually according to recovery and symptoms.",
+      "sourceUrl": "https://thepogp.co.uk/Resources/113/exercise_and_advice_after_pregnancy",
+      "limitations": "General advice; it cannot prescribe an individual starting level.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Tummy muscle separation should be assessed in the context of symptoms and function.",
+      "sourceUrl": "https://thepogp.co.uk/patient_information/womens_health/tummy_muscle_separation.aspx",
+      "limitations": "Patient information does not establish a single diagnostic threshold or treatment.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

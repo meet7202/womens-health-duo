@@ -1,0 +1,22 @@
+{
+  "id": "W17-C",
+  "openClinicalQuestions": [
+    "Should the final draft specify a repeat-test interval beyond the source wording?",
+    "Which local urgent route should be named for possible ectopic pregnancy symptoms?",
+    "When does Dr. Charmi Shah recommend investigation for recurrent missed periods?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "A home pregnancy test can be falsely negative when taken too early, and repeat testing may be appropriate.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/trying-for-a-baby/doing-a-pregnancy-test/",
+      "limitations": "Test sensitivity and instructions vary; symptoms can override a home result.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Late periods have many possible causes and persistent changes merit review.",
+      "sourceUrl": "https://www.nhs.uk/conditions/periods/",
+      "limitations": "The source provides general causes, not an individual diagnosis.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

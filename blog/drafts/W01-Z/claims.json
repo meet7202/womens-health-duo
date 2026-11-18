@@ -1,0 +1,24 @@
+{
+  "id": "W01-Z",
+  "openClinicalQuestions": [
+    "Which red-flag wording should Dr. Charmi Shah retain for sudden neurological or urinary symptoms?",
+    "Should the symptom-note template use a three-day diary or a flexible 'few typical days' instruction?",
+    "Which examination options does Dr. Zalak Shah (PT) routinely offer in person and online?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Leakage during coughing or exercise is commonly described as stress urinary incontinence.",
+      "sourceUrl": "https://www.nhs.uk/conditions/urinary-incontinence/",
+      "sourceSection": "Types of urinary incontinence",
+      "limitations": "A symptom pattern is not a diagnosis; mixed and other forms of incontinence are possible.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Bladder-control problems can affect activity and quality of life and deserve assessment.",
+      "sourceUrl": "https://www.niddk.nih.gov/health-information/urologic-diseases/bladder-control-problems/definition-facts",
+      "sourceSection": "Definition & Facts",
+      "limitations": "US patient information; local assessment pathways may differ.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

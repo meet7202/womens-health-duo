@@ -1,0 +1,22 @@
+{
+  "id": "W18-Z",
+  "openClinicalQuestions": [
+    "Which supervised treatment elements reflect Dr. Zalak Shah’s actual practice?",
+    "What review interval can be stated without promising an outcome?",
+    "Which urology or gynaecology referral triggers should Dr. Charmi Shah refine?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Urinary incontinence includes different symptom patterns that require assessment.",
+      "sourceUrl": "https://www.nhs.uk/conditions/urinary-incontinence/",
+      "limitations": "Patient information cannot identify the type or cause for an individual.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Supervised pelvic floor muscle training is a recommended conservative option for appropriate incontinence presentations.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng210/chapter/recommendations",
+      "limitations": "Suitability, supervision and duration require clinical assessment.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

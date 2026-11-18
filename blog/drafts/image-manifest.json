@@ -1,0 +1,626 @@
+{
+  "W01-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W01-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W02-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W02-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W03-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W03-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W04-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W04-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W05-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W05-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W06-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W06-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W07-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W07-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W08-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W08-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W09-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W09-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1751
+    }
+  ],
+  "W10-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 2400
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W10-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1280
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1280
+    }
+  ],
+  "W11-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1906
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1280
+    }
+  ],
+  "W11-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W12-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W12-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W13-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W13-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W14-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W14-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W15-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W15-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W16-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W16-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W17-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W17-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W18-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W18-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W19-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W19-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W20-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W20-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W21-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W21-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W22-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W22-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W23-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W23-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W24-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W24-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W25-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W25-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W26-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W26-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ]
+}

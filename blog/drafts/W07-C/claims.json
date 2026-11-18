@@ -1,0 +1,22 @@
+{
+  "id": "W07-C",
+  "openClinicalQuestions": [
+    "Which age-based evaluation intervals from the 2026 ASRM guidance should be quoted?",
+    "Which PCOS-related factors trigger earlier review?",
+    "How should both-partner assessment be worded inclusively?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "PCOS can affect ovulation and fertility but does not mean pregnancy is impossible.",
+      "sourceUrl": "https://www.who.int/news-room/fact-sheets/detail/polycystic-ovary-syndrome",
+      "limitations": "Population information cannot predict an individual pregnancy outcome.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Fertility evaluation is guided by age, duration of trying and relevant history and should consider both partners.",
+      "sourceUrl": "https://www.asrm.org/practice-guidance/practice-committee-documents/fertility-evaluation-of-infertile-women-a-committee-opinion-2026",
+      "limitations": "Exact timing and tests require clinician review.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

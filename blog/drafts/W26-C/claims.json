@@ -1,0 +1,22 @@
+{
+  "id": "W26-C",
+  "openClinicalQuestions": [
+    "Which absolute benefit-and-risk examples can be included after review?",
+    "How should local vaginal therapy and progestogen need be explained for Indian readers?",
+    "Which follow-up schedule reflects Dr. Charmi Shah’s practice without becoming universal advice?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Menopause hormone therapy can treat selected systemic and genitourinary symptoms.",
+      "sourceUrl": "https://www.acog.org/womens-health/faqs/hormone-therapy-for-menopause",
+      "limitations": "US patient guidance; available products and local practice differ.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Benefits and risks vary with route, symptoms and personal medical history.",
+      "sourceUrl": "https://www.acog.org/womens-health/faqs/hormone-therapy-for-menopause",
+      "limitations": "The source cannot determine individual suitability or provide a regimen.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

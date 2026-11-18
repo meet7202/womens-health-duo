@@ -1,0 +1,22 @@
+{
+  "id": "W03-Z",
+  "openClinicalQuestions": [
+    "Which readiness checks does Dr. Zalak Shah use before return to running or impact?",
+    "Which postnatal bleeding and wound changes should Dr. Charmi Shah classify as prompt versus emergency?",
+    "How should advice differ after assisted vaginal birth and C-section?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Postnatal activity should return gradually and be adjusted to birth recovery and symptoms.",
+      "sourceUrl": "https://www.nhs.uk/baby/support-and-services/keeping-fit-and-healthy-with-a-baby/",
+      "limitations": "General guidance cannot clear an individual for impact exercise.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Pelvic-floor, abdominal and musculoskeletal symptoms can inform postnatal exercise progression.",
+      "sourceUrl": "https://thepogp.co.uk/Resources/113/exercise_and_advice_after_pregnancy",
+      "limitations": "Patient guidance requires clinician interpretation for each birth and complication history.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "W19-Z",
+  "openClinicalQuestions": [
+    "What is Dr. Zalak Shah’s verified prenatal appointment process?",
+    "Which concerns are accepted online versus in person?",
+    "Which obstetric escalation wording does Dr. Charmi Shah approve?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Activity in pregnancy should be adapted to symptoms and medical advice.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/keeping-well/exercise/",
+      "limitations": "General guidance does not provide individual clearance.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Pelvic health physiotherapy assessment begins with history and may include consent-based examination.",
+      "sourceUrl": "https://thepogp.co.uk/patients/pelvic_health_advice/physiotherapy_assessment.aspx",
+      "limitations": "The clinic’s exact process remains to be confirmed.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Pregnancy-related pelvic pain can warrant assessment and practical management.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/common-symptoms/pelvic-pain/",
+      "limitations": "This does not exclude obstetric or other medical causes.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "W10-Z",
+  "openClinicalQuestions": [
+    "Which anatomical labels will appear in the reviewed illustration?",
+    "How should sexual function be described inclusively?",
+    "Which assessment details can be stated for telehealth?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Pelvic-floor muscles contribute to bladder control and require both contraction and relaxation.",
+      "sourceUrl": "https://www.niddk.nih.gov/health-information/urologic-diseases/kegel-exercises",
+      "limitations": "The source emphasises exercise and is not a complete anatomy reference.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Pelvic-floor muscle training is used for selected symptoms after assessment.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng210/chapter/recommendations",
+      "limitations": "Recommendations do not mean all symptoms require strengthening.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "W11-C",
+  "openClinicalQuestions": [
+    "Which assay and laboratory caveats should be retained?",
+    "How should AMH use in treatment-response prediction be described?",
+    "Should hormonal contraception and ovarian surgery effects be listed?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "AMH can contribute to ovarian-reserve assessment but does not directly measure egg quality.",
+      "sourceUrl": "https://www.reproductivefacts.org/news-and-publications/patient-fact-sheets-and-booklets/documents/fact-sheets-and-info-booklets/ovarian-reserve/",
+      "limitations": "Patient guidance; assay and clinical context affect interpretation.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Ovarian-reserve tests are adjuncts and should not be used alone to predict natural conception.",
+      "sourceUrl": "https://www.asrm.org/practice-guidance/practice-committee-documents/fertility-evaluation-of-infertile-women-a-committee-opinion-2026",
+      "limitations": "The precise use depends on the clinical question.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

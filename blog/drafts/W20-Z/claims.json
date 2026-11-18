@@ -1,0 +1,22 @@
+{
+  "id": "W20-Z",
+  "openClinicalQuestions": [
+    "Which supported feeding or carrying examples can Dr. Zalak Shah approve?",
+    "Should caesarean and neuraxial anaesthesia concerns be addressed explicitly?",
+    "Which postpartum red flags should Dr. Charmi Shah refine?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Postpartum physical concerns can include back pain and deserve review when persistent.",
+      "sourceUrl": "https://www.nhs.uk/baby/support-and-services/your-post-pregnancy-body/",
+      "limitations": "General patient information cannot identify an individual pain source.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Postnatal activity can be progressively adapted around symptoms and recovery.",
+      "sourceUrl": "https://thepogp.co.uk/Resources/113/exercise_and_advice_after_pregnancy",
+      "limitations": "Specific exercise prescription needs assessment.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

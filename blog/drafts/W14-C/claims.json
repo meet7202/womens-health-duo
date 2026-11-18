@@ -1,0 +1,22 @@
+{
+  "id": "W14-C",
+  "openClinicalQuestions": [
+    "Which first-line options should be named for the clinic’s patient population?",
+    "How should access to specialist imaging and laparoscopy be described?",
+    "Which fertility referral triggers should be included?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Normal examination and ultrasound do not exclude endometriosis.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng73/chapter/Recommendations",
+      "limitations": "Imaging performance varies and this statement does not diagnose an individual.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Initial treatment and investigation may proceed without diagnostic surgery in every case.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng73/chapter/Recommendations",
+      "limitations": "Treatment choice and local availability need Dr. Charmi Shah’s review.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

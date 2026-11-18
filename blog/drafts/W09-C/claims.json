@@ -1,0 +1,22 @@
+{
+  "id": "W09-C",
+  "openClinicalQuestions": [
+    "Which India guideline and standard dose should be cited?",
+    "Which higher-dose indications can be listed safely?",
+    "How long into pregnancy does Dr. Charmi advise continuation?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Folic acid is recommended before conception and in early pregnancy.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/keeping-well/pregnancy-vitamins-and-supplements/",
+      "limitations": "Dose and duration must be aligned to India-relevant guidance.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Prepregnancy care includes discussion of supplements, medicines and individual risk factors.",
+      "sourceUrl": "https://www.acog.org/womens-health/faqs/good-health-before-pregnancy-prepregnancy-care",
+      "limitations": "US guidance; local prescribing differs.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

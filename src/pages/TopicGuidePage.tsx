@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { Fragment, useMemo } from "react";
 import { useParams } from "react-router-dom";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
@@ -8,6 +8,7 @@ import { FaqSection } from "@/components/sections/FaqSection";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { ROUTES } from "@/config/routes";
 import { SITE_URL } from "@/config/site";
+import { articleSchema } from "@/components/seo/schema/article";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { AppLink as Link } from "@/components/router/AppLink";
@@ -17,6 +18,7 @@ import {
   topicGuideExampleConsultPaths,
   topicGuideLearnLinks,
 } from "@/data/topicGuides/topicGuideRegistry";
+import type { TopicGuideFigure } from "@/data/topicGuides/types";
 import { topicGuideDocumentTitle } from "@/lib/pageSeoCopy";
 import NotFound from "@/pages/NotFound";
 
@@ -30,6 +32,53 @@ function formatGuideDate(iso: string | undefined): string | null {
     day: "numeric",
     timeZone: "UTC",
   }).format(new Date(t));
+}
+
+function GuideFigure({
+  figure,
+  priority = false,
+  className,
+}: {
+  figure: TopicGuideFigure;
+  priority?: boolean;
+  className?: string;
+}) {
+  return (
+    <figure className={className}>
+      <img
+        src={figure.src}
+        srcSet={figure.srcSet}
+        sizes={figure.srcSet ? "(min-width: 768px) 768px, 100vw" : undefined}
+        alt={figure.alt}
+        title={figure.alt}
+        width={figure.width}
+        height={figure.height}
+        className="w-full h-auto rounded-2xl border border-border/40 bg-card"
+        loading={priority ? "eager" : "lazy"}
+        decoding="async"
+      />
+      {figure.caption ? (
+        <figcaption className="mt-2 text-sm text-muted-foreground leading-relaxed">
+          {figure.caption}
+        </figcaption>
+      ) : null}
+    </figure>
+  );
+}
+
+/** Spread non-hero figures evenly after sections (never after the last one). */
+function placeInlineFigures(
+  figures: readonly TopicGuideFigure[],
+  sectionCount: number,
+): Map<number, TopicGuideFigure[]> {
+  const placed = new Map<number, TopicGuideFigure[]>();
+  if (figures.length === 0 || sectionCount === 0) return placed;
+  const slots = Math.max(1, sectionCount - 1);
+  figures.forEach((f, i) => {
+    const at = Math.min(slots - 1, Math.floor(((i + 1) * slots) / (figures.length + 1)));
+    placed.set(at, [...(placed.get(at) ?? []), f]);
+  });
+  return placed;
 }
 
 export function TopicGuidePage() {
@@ -49,7 +98,7 @@ export function TopicGuidePage() {
 
   const graph = useMemo(() => {
     if (!guide) return [];
-    return [
+    const nodes: Record<string, unknown>[] = [
       breadcrumbListSchema(crumbs),
       webPageSchema({
         path: guide.path,
@@ -57,6 +106,24 @@ export function TopicGuidePage() {
         description: guide.metaDescription,
       }),
     ];
+    // Article schema only when a published calendar revision supplies truthful dates/attribution fields.
+    if (guide.calendarArticleId && guide.publishedAt) {
+      const imageUrls = (guide.figures ?? [])
+        .filter((f) => !f.src.endsWith(".svg"))
+        .map((f) => githubPagesAbsoluteUrl(SITE_URL, f.src));
+      nodes.push(
+        articleSchema({
+          path: guide.path,
+          headline: guide.title,
+          description: guide.metaDescription,
+          datePublished: guide.publishedAt,
+          dateModified: guide.updatedAt ?? guide.publishedAt,
+          authorId: guide.reviewStatus === "approved" ? guide.authorId : undefined,
+          imageUrls,
+        }),
+      );
+    }
+    return nodes;
   }, [guide, crumbs]);
 
   const learnLinks = useMemo(
@@ -80,6 +147,8 @@ export function TopicGuidePage() {
     return <NotFound />;
   }
 
+  const [heroFigure, ...inlineFigures] = guide.figures ?? [];
+  const inlineFigureBySection = placeInlineFigures(inlineFigures, guide.sections.length);
   const docTitle = topicGuideDocumentTitle(guide.title);
   const faqHeadingBase = guide.title.endsWith("?") ? guide.title.slice(0, -1) : guide.title;
   // SEO-14: show byline/review only for approved guides with real attribution fields.
@@ -131,27 +200,93 @@ export function TopicGuidePage() {
             {reviewedLabel ? `. Reviewed ${reviewedLabel}` : null}.
           </p>
         ) : null}
-        <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-          {guide.introParagraph}
-        </p>
+        <p className="text-lg text-muted-foreground leading-relaxed mb-8">{guide.introParagraph}</p>
+
+        {heroFigure ? <GuideFigure figure={heroFigure} priority className="mb-10" /> : null}
 
         <div className="space-y-10 mb-12">
-          {guide.sections.map((sec) => (
-            <section
-              key={sec.heading}
-              className="rounded-2xl border border-border/50 bg-card p-6 shadow-soft"
-            >
-              <h2 className="font-heading text-xl font-semibold text-foreground mb-3">
-                {sec.heading}
-              </h2>
-              {sec.paragraphs.map((p, idx) => (
-                <p key={idx} className="text-muted-foreground leading-relaxed mb-3 last:mb-0">
-                  {p}
-                </p>
+          {guide.sections.map((sec, secIdx) => (
+            <Fragment key={sec.heading}>
+              <section className="rounded-2xl border border-border/50 bg-card p-6 shadow-soft">
+                <h2 className="font-heading text-xl font-semibold text-foreground mb-3">
+                  {sec.heading}
+                </h2>
+                {sec.paragraphs.map((p, idx) => (
+                  <p key={idx} className="text-muted-foreground leading-relaxed mb-3 last:mb-0">
+                    {p}
+                  </p>
+                ))}
+              </section>
+              {inlineFigureBySection.get(secIdx)?.map((f) => (
+                <GuideFigure key={f.src} figure={f} />
               ))}
-            </section>
+            </Fragment>
           ))}
         </div>
+
+        {guide.references.length > 0 ? (
+          <section className="mb-12" aria-labelledby="topic-guide-sources">
+            <h2
+              id="topic-guide-sources"
+              className="font-heading text-xl font-semibold text-foreground mb-3"
+            >
+              Sources
+            </h2>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+              These public patient-information pages support general orientation. They do not
+              replace an individual clinical assessment.
+            </p>
+            <ul className="list-disc pl-5 space-y-2 text-sm">
+              {guide.references.map((ref) => (
+                <li key={ref.url ?? ref.label}>
+                  {ref.url ? (
+                    <a
+                      href={ref.url}
+                      className="text-primary underline underline-offset-4"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      {ref.label}
+                    </a>
+                  ) : (
+                    <span className="text-muted-foreground">{ref.label}</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
+
+        {guide.internalLinks && guide.internalLinks.length > 0 ? (
+          <section className="mb-10" aria-labelledby="topic-guide-related-reading">
+            <h2
+              id="topic-guide-related-reading"
+              className="font-heading text-xl font-semibold text-foreground mb-3"
+            >
+              Related reading
+            </h2>
+            <ul className="list-disc pl-5 space-y-2 text-sm">
+              {guide.internalLinks.map((l) => (
+                <li key={l.path}>
+                  <Link to={l.path} className="text-primary underline underline-offset-4">
+                    {l.anchor}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
+
+        {guide.conversionCopy && guide.conversionPath ? (
+          <p className="text-base text-foreground leading-relaxed mb-10">
+            <Link
+              to={guide.conversionPath}
+              className="text-primary font-medium underline underline-offset-4"
+            >
+              {guide.conversionCopy}
+            </Link>
+          </p>
+        ) : null}
 
         <FaqSection
           items={guide.faqs}

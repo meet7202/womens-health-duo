@@ -1,0 +1,22 @@
+{
+  "id": "W16-C",
+  "openClinicalQuestions": [
+    "Which glucose assessment should be named after review of the current international guideline?",
+    "What follow-up interval language is appropriate without creating a universal schedule?",
+    "Which symptoms should prompt coordination with a physician or endocrinologist?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Insulin resistance and metabolic risk are common in PCOS, including outside higher-weight groups.",
+      "sourceUrl": "https://www.monash.edu/medicine/mchri/pcos/guideline",
+      "limitations": "Population-level guidance cannot establish insulin resistance in an individual.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "PCOS care can include assessment of diabetes and cardiovascular risk factors.",
+      "sourceUrl": "https://www.acog.org/womens-health/faqs/polycystic-ovary-syndrome-pcos",
+      "limitations": "US patient guidance; testing choices need local clinician review.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

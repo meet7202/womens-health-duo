@@ -1,0 +1,22 @@
+{
+  "id": "W04-C",
+  "openClinicalQuestions": [
+    "Which ovulation-confirmation tests should be described, and with what timing caveats?",
+    "How should PCOS-related false or repeated LH surges be phrased?",
+    "Which histories justify earlier fertility review in this clinic?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Ovulation assessment can use menstrual history, urine LH testing and other clinical methods, each with limitations.",
+      "sourceUrl": "https://prod.reproductivefacts.org/news-and-publications/fact-sheets-and-infographics/am-i-ovulating/",
+      "limitations": "Patient education does not establish an individual fertile window.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Irregular cycles can justify evaluation without relying only on a fixed duration of trying.",
+      "sourceUrl": "https://www.asrm.org/practice-guidance/practice-committee-documents/fertility-evaluation-of-infertile-women-a-committee-opinion-2026",
+      "limitations": "Exact timing depends on age and history and requires clinician review.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

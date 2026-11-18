@@ -1,0 +1,22 @@
+{
+  "id": "W25-C",
+  "openClinicalQuestions": [
+    "Which bleeding patterns should be described more specifically after review?",
+    "When does Dr. Charmi Shah use laboratory testing in this transition?",
+    "Which non-hormonal and local-care options belong in a later reviewed section?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Perimenopause can involve changing periods and a range of physical and psychological symptoms.",
+      "sourceUrl": "https://www.nhs.uk/conditions/menopause-and-perimenopause/symptoms/",
+      "limitations": "Symptoms overlap with other conditions and do not establish diagnosis alone.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Bleeding after menopause is not a routine perimenopause symptom and requires assessment.",
+      "sourceUrl": "https://www.nhs.uk/conditions/menopause-and-perimenopause/symptoms/",
+      "limitations": "The source is introductory; detailed bleeding triage needs clinician review.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

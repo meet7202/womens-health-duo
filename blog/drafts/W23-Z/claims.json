@@ -1,0 +1,28 @@
+{
+  "id": "W23-Z",
+  "openClinicalQuestions": [
+    "What consent wording reflects Dr. Zalak Shah’s actual examination process?",
+    "Which medical differentials and referral triggers should Dr. Charmi Shah add?",
+    "What trauma-informed support routes can be verified locally?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Painful sex can have multiple physical contributors and deserves assessment.",
+      "sourceUrl": "https://dynamichealth.nhs.uk/help-and-advice/pelvic-health/female-genital-pain/",
+      "limitations": "General patient information cannot diagnose the cause of pain.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Pelvic floor physiotherapy may form one part of care for pelvic pain.",
+      "sourceUrl": "https://www.nhsggc.scot/your-health/obstetrics-gynaecology-and-pelvic-floor-physiotherapy/pelvic-floor-physiotherapy/",
+      "limitations": "Suitability depends on medical assessment and individual findings.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Pelvic examination choices should be explained and consented.",
+      "sourceUrl": "https://www.uhsussex.nhs.uk/resources/your-pelvic-health-physiotherapy-appointment/",
+      "limitations": "The clinic’s exact policy and process remain to be confirmed.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

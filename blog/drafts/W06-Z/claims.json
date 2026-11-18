@@ -1,0 +1,22 @@
+{
+  "id": "W06-Z",
+  "openClinicalQuestions": [
+    "Which assessment elements can Dr. Zalak Shah offer online versus in person?",
+    "Should the copy explicitly discourage stop-start urine practice?",
+    "Which neurological red flags require Dr. Charmi Shah’s final wording?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Pelvic-floor exercises require correct contraction and relaxation and are not simply repeated maximal squeezing.",
+      "sourceUrl": "https://www.niddk.nih.gov/health-information/urologic-diseases/kegel-exercises",
+      "limitations": "General instructions do not establish suitability for pain or emptying symptoms.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Supervised pelvic-floor muscle training is recommended for selected incontinence presentations.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng210/chapter/recommendations",
+      "limitations": "Recommendations apply to defined populations and require assessment.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

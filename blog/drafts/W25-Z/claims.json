@@ -1,0 +1,22 @@
+{
+  "id": "W25-Z",
+  "openClinicalQuestions": [
+    "Which examination and referral details should Dr. Charmi Shah confirm?",
+    "How should pessary care be described without selecting treatment?",
+    "Which activity advice can Dr. Zalak Shah state without unnecessary restriction?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Pelvic organ prolapse can cause bulge, heaviness and bladder or bowel symptoms.",
+      "sourceUrl": "https://www.nhs.uk/conditions/pelvic-organ-prolapse/",
+      "limitations": "Symptoms do not confirm type or stage.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Management may include conservative care, pessary or surgery according to individual needs.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng210/chapter/recommendations",
+      "limitations": "Treatment selection requires medical assessment and local context.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

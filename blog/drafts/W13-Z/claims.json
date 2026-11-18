@@ -1,0 +1,22 @@
+{
+  "id": "W13-Z",
+  "openClinicalQuestions": [
+    "Which functional outcomes does Dr. Zalak routinely track?",
+    "How should expected postpartum tissue change be described without a deadline?",
+    "Which hernia features need Dr. Charmi’s review?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Tummy-muscle separation may change after pregnancy and can be supported with individual physiotherapy.",
+      "sourceUrl": "https://thepogp.co.uk/patient_information/womens_health/tummy_muscle_separation.aspx",
+      "limitations": "The source does not support guaranteed closure or a fixed recovery time.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Diastasis management may consider symptoms and function as well as separation.",
+      "sourceUrl": "https://my.clevelandclinic.org/health/diseases/22346-diastasis-recti",
+      "limitations": "General overview; outcomes vary.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

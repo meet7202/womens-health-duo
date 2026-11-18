@@ -1,0 +1,22 @@
+{
+  "id": "W08-C",
+  "openClinicalQuestions": [
+    "Confirm exact 2026 ASRM age thresholds and language.",
+    "Which histories does the clinic use for immediate evaluation?",
+    "How should recurrent pregnancy loss be routed separately?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Fertility evaluation timing varies by age and may be earlier when history indicates.",
+      "sourceUrl": "https://www.acog.org/womens-health/faqs/evaluating-infertility",
+      "limitations": "US guidance; individual and local pathways vary.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Evaluation should be systematic, timely and inclusive of both partners where relevant.",
+      "sourceUrl": "https://www.asrm.org/practice-guidance/practice-committee-documents/fertility-evaluation-of-infertile-women-a-committee-opinion-2026",
+      "limitations": "Clinical application and exact thresholds require reviewer confirmation.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

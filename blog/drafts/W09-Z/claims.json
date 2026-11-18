@@ -1,0 +1,22 @@
+{
+  "id": "W09-Z",
+  "openClinicalQuestions": [
+    "What exact demonstration sequence will Dr. Zalak approve?",
+    "Which measurements are documented in clinic?",
+    "How should hernia escalation be worded by Dr. Charmi?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Post-pregnancy abdominal separation can be observed, but persistent concerns may need physiotherapy.",
+      "sourceUrl": "https://www.nhs.uk/baby/support-and-services/your-post-pregnancy-body/",
+      "limitations": "Brief patient guidance does not validate a diagnostic self-test.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Diastasis assessment considers more than a visible bulge or self-measured gap.",
+      "sourceUrl": "https://my.clevelandclinic.org/health/diseases/22346-diastasis-recti",
+      "limitations": "General overview; clinician assessment is still required.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

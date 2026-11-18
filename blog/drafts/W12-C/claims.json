@@ -1,0 +1,22 @@
+{
+  "id": "W12-C",
+  "openClinicalQuestions": [
+    "Which cycle-protection wording can be included without prescribing?",
+    "Which supplement claims most need explicit caution?",
+    "Which metabolic follow-up measures does Dr. Charmi routinely discuss?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "PCOS management should be individualised and can include lifestyle, psychological and medical care.",
+      "sourceUrl": "https://www.monash.edu/medicine/mchri/pcos/guideline",
+      "limitations": "Guideline recommendations are not a universal meal or exercise plan.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "PCOS has reproductive, metabolic and psychological dimensions that may need ongoing care.",
+      "sourceUrl": "https://www.who.int/news-room/fact-sheets/detail/polycystic-ovary-syndrome",
+      "limitations": "Population guidance cannot select individual treatment.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

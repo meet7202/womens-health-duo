@@ -1,0 +1,31 @@
+{
+  "id": "W02-C",
+  "openClinicalQuestions": [
+    "How should Dr. Charmi Shah describe current Indian adoption of the PMOS terminology?",
+    "Which adult and adolescent diagnostic criteria should be named in the final reviewed copy?",
+    "Which exclusion tests can be mentioned without creating a universal panel?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "International evidence-based guidance treats PCOS as a heterogeneous condition requiring contextual diagnosis and management.",
+      "sourceUrl": "https://www.monash.edu/medicine/mchri/pcos/guideline",
+      "sourceSection": "International evidence-based guideline",
+      "limitations": "The full guideline distinguishes adults from adolescents and must be applied by a clinician.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Professional organisations announced PMOS as a new name intended to reflect metabolic as well as reproductive features.",
+      "sourceUrl": "https://www.asrm.org/news-and-events/asrm-news/latest-news/may-27-2026-pcos-is-now-pmos-understanding-the-name-change/",
+      "sourceSection": "Understanding the name change",
+      "limitations": "Naming adoption may vary by country, clinician and health system.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "PCOS can affect reproductive, metabolic and psychological health.",
+      "sourceUrl": "https://www.who.int/news-room/fact-sheets/detail/polycystic-ovary-syndrome",
+      "sourceSection": "Overview",
+      "limitations": "Population-level information does not diagnose an individual.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

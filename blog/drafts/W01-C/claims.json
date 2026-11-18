@@ -1,0 +1,24 @@
+{
+  "id": "W01-C",
+  "openClinicalQuestions": [
+    "Which adult cycle-variation thresholds, if any, should be stated for the intended population?",
+    "What India-relevant urgent-heavy-bleeding wording should replace subjective product counts?",
+    "Which first-line investigations does Dr. Charmi Shah want described without implying a universal panel?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Cycle timing and flow vary, and a change in the usual pattern can warrant medical advice.",
+      "sourceUrl": "https://www.nhs.uk/conditions/periods/",
+      "sourceSection": "Periods",
+      "limitations": "General UK patient guidance; adult thresholds and local pathways require clinician review.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "PCOS assessment considers a combination of clinical features rather than one symptom alone.",
+      "sourceUrl": "https://www.acog.org/womens-health/faqs/polycystic-ovary-syndrome-pcos",
+      "sourceSection": "How is PCOS diagnosed?",
+      "limitations": "ACOG patient guidance; criteria differ for adolescents and adults.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

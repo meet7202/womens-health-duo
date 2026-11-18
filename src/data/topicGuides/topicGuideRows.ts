@@ -1,3 +1,4 @@
+import { NEW_CALENDAR_GUIDE_ROWS } from "./articles/newGuideRows";
 import type { TopicGuideClusterId, TopicGuideRow, TopicGuideTier } from "./types";
 
 function rows(
@@ -397,4 +398,6 @@ export const TOPIC_GUIDE_ROWS: TopicGuideRow[] = [
       },
     },
   ),
+  // Calendar new URLs — non-indexable until blog:promote after clinical approval.
+  ...NEW_CALENDAR_GUIDE_ROWS,
 ];

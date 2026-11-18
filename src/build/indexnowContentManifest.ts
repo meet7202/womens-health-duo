@@ -7,6 +7,7 @@ import path from "node:path";
 import { createHash } from "node:crypto";
 import { SITEMAP_PATHS } from "../config/routes";
 import { resolveRouteDisposition } from "../config/routeDisposition";
+import { calendarArticleBodyText } from "../data/topicGuides/articles";
 import { githubPagesAbsoluteUrl } from "../lib/githubPagesPublicUrl";
 import { resolveShellPageMeta } from "./staticShellHead";
 
@@ -104,6 +105,13 @@ export function buildIndexNowContentManifest(
     const canonical = extractCanonical(html) || meta.canonicalHref;
     const h1 = extractH1(html) || meta.h1;
     const disposition = dispositionLabel(norm);
+    const slug =
+      norm
+        .replace(/^\/+|\/+$/g, "")
+        .split("/")
+        .filter(Boolean)
+        .pop() ?? "";
+    const articleBody = slug ? calendarArticleBodyText(slug) : undefined;
     const fp = fingerprintPayload({
       title,
       description,
@@ -113,6 +121,7 @@ export function buildIndexNowContentManifest(
       disposition,
       ogType: meta.ogType ?? "website",
       ogImage: meta.ogImage ?? "",
+      ...(articleBody ? { articleBody } : {}),
     });
     const url = githubPagesAbsoluteUrl(siteUrl, norm);
     entries[url] = {

@@ -1,0 +1,22 @@
+{
+  "id": "W16-Z",
+  "openClinicalQuestions": [
+    "Which postpartum red flags need locally specific routing?",
+    "How does Dr. Zalak Shah define readiness for an in-person versus online assessment?",
+    "Which postnatal review details should Dr. Charmi Shah add?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Postpartum recovery includes multiple physical domains and persistent symptoms should be discussed.",
+      "sourceUrl": "https://www.nhs.uk/baby/support-and-services/your-post-pregnancy-body/",
+      "limitations": "General NHS information does not provide an individual recovery timeline.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Postnatal activity should progress according to symptoms and recovery rather than a universal deadline.",
+      "sourceUrl": "https://thepogp.co.uk/Resources/113/exercise_and_advice_after_pregnancy",
+      "limitations": "Exercise progression still requires individual review, especially after complications.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "W08-Z",
+  "openClinicalQuestions": [
+    "When does Dr. Zalak consider scar assessment appropriate?",
+    "Which lifting and driving statements must remain with the surgeon?",
+    "Which wound and clot red flags does Dr. Charmi approve?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "C-section recovery includes graded movement and practical strategies after abdominal surgery.",
+      "sourceUrl": "https://thepogp.co.uk/patient_information/pregnancy_and_early_postnatal/recovery_from_c-section.aspx",
+      "limitations": "Advice must yield to the individual surgical team.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Exercise after caesarean birth should progress gradually with attention to healing and symptoms.",
+      "sourceUrl": "https://www2.hse.ie/pregnancy-birth/birth/health-after-birth/exercise-after-caesarean/",
+      "limitations": "National guidance; local discharge instructions differ.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

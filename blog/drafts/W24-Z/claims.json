@@ -1,0 +1,22 @@
+{
+  "id": "W24-Z",
+  "openClinicalQuestions": [
+    "What screening does Dr. Zalak Shah use before postnatal classes?",
+    "Which class modifications can be photographed and clinically approved?",
+    "Which medical recovery details should Dr. Charmi Shah add?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Postnatal activity should restart gradually according to recovery and symptoms.",
+      "sourceUrl": "https://www.nhs.uk/baby/support-and-services/keeping-fit-and-healthy-with-a-baby/",
+      "limitations": "General advice cannot set an individual Pilates start date.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Pilates in women’s health care should be selected and modified for the person.",
+      "sourceUrl": "https://thepogp.co.uk/resources/124/pilates_in_womens_health_physiotherapy/",
+      "limitations": "The source does not clear every postnatal person for group class.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

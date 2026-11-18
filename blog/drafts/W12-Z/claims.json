@@ -1,0 +1,28 @@
+{
+  "id": "W12-Z",
+  "openClinicalQuestions": [
+    "When does Dr. Zalak recommend postpartum assessment after different births?",
+    "Which birth details materially change her examination?",
+    "Which urinary red flags does Dr. Charmi want retained?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Stress and urgency are distinct urinary-incontinence patterns that can also coexist.",
+      "sourceUrl": "https://www.nhs.uk/conditions/urinary-incontinence/",
+      "limitations": "Pattern recognition does not diagnose an individual.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Pelvic-floor muscle training is recommended for selected urinary symptoms after assessment.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng210/chapter/recommendations",
+      "limitations": "Suitability and supervision depend on presentation.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Post-pregnancy body changes can include bladder symptoms that deserve support.",
+      "sourceUrl": "https://www.nhs.uk/baby/support-and-services/your-post-pregnancy-body/",
+      "limitations": "Brief guidance; persistent or acute symptoms need individual review.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

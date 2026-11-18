@@ -1,0 +1,22 @@
+{
+  "id": "W06-C",
+  "openClinicalQuestions": [
+    "Which urgent bleeding language should accompany acute pelvic pain?",
+    "How should a normal ultrasound’s limitations be phrased for endometriosis?",
+    "Which treatment categories can be named without medication detail?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Painful periods that interfere with daily life merit clinical assessment.",
+      "sourceUrl": "https://www.acog.org/womens-health/faqs/dysmenorrhea-painful-periods",
+      "limitations": "Patient guidance does not identify the cause in an individual.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Endometriosis should be considered among possible causes of persistent or significant period-related pain.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/ng73/chapter/Recommendations",
+      "limitations": "Severe pain is not synonymous with endometriosis; assessment is required.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

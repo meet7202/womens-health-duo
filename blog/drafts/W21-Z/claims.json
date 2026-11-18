@@ -1,0 +1,22 @@
+{
+  "id": "W21-Z",
+  "openClinicalQuestions": [
+    "Which Pilates positions can be shown after clinical and image review?",
+    "What class-screening process does Dr. Zalak Shah actually use?",
+    "Which obstetric stop criteria does Dr. Charmi Shah approve?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Pregnancy activity should be comfortable and adapted as pregnancy changes.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/keeping-well/exercise/",
+      "limitations": "General guidance is not individual clearance for Pilates.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Pilates may be used within women’s health physiotherapy when appropriately selected and modified.",
+      "sourceUrl": "https://thepogp.co.uk/resources/124/pilates_in_womens_health_physiotherapy/",
+      "limitations": "This does not establish superiority or suitability for every pregnancy.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

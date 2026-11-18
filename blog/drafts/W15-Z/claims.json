@@ -1,0 +1,22 @@
+{
+  "id": "W15-Z",
+  "openClinicalQuestions": [
+    "Which stop-exercise wording does Dr. Charmi Shah approve?",
+    "Which adaptations can Dr. Zalak Shah demonstrate without implying universal clearance?",
+    "Should an effort-monitoring method be named?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "People with uncomplicated pregnancies can often remain active with appropriate adaptation.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/keeping-well/exercise/",
+      "limitations": "General public guidance; contraindications and individual clearance require maternity review.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Exercise should stop and advice be sought when concerning symptoms occur.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/keeping-well/exercise/",
+      "limitations": "Exact local triage language remains pending obstetric review.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

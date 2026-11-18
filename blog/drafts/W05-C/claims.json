@@ -1,0 +1,22 @@
+{
+  "id": "W05-C",
+  "openClinicalQuestions": [
+    "Which rapid-androgenisation features should be stated for prompt review?",
+    "How should regular bleeding versus confirmed ovulation be explained?",
+    "Which adult/adolescent distinctions are essential for this page?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "PCOS symptoms and diagnostic features vary, and diagnosis uses a combination of findings.",
+      "sourceUrl": "https://www.acog.org/womens-health/faqs/polycystic-ovary-syndrome-pcos",
+      "limitations": "Patient guidance; adolescent and adult criteria must not be conflated.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "PCOS care should be individualised and include reproductive, metabolic and psychological concerns.",
+      "sourceUrl": "https://www.monash.edu/medicine/mchri/pcos/guideline",
+      "limitations": "Guideline recommendations require clinical application.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

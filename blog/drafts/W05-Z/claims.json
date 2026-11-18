@@ -1,0 +1,22 @@
+{
+  "id": "W05-Z",
+  "openClinicalQuestions": [
+    "Which Mat and Reformer formats does the practice currently provide in person and online?",
+    "What exact STOTT training wording does Dr. Zalak Shah approve?",
+    "Which pregnancy and postpartum exclusions require Dr. Charmi Shah’s review?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "STOTT Pilates is a Merrithew education method rather than a type of Pilates apparatus.",
+      "sourceUrl": "https://www.merrithew.com/about/education-programs/stott-pilates",
+      "limitations": "A vendor source describes its own method and does not prove comparative clinical superiority.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Pilates may be used within women’s health physiotherapy when selected for an individual context.",
+      "sourceUrl": "https://thepogp.co.uk/resources/124/pilates_in_womens_health_physiotherapy/",
+      "limitations": "This does not make every class suitable treatment for every condition.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

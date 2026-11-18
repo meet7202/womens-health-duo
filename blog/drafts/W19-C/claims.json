@@ -1,0 +1,22 @@
+{
+  "id": "W19-C",
+  "openClinicalQuestions": [
+    "Which antiemetic categories, if any, should be named after clinical review?",
+    "What local maternity route should patients use after hours?",
+    "Which dehydration indicators should be retained in final triage copy?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Pregnancy nausea can occur at any time, and small frequent intake may help some people.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/common-symptoms/vomiting-and-morning-sickness/",
+      "limitations": "Supportive strategies are not a substitute for assessment when intake is poor.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Persistent vomiting with dehydration or inability to keep fluids down needs medical advice.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/common-symptoms/vomiting-and-morning-sickness/",
+      "limitations": "Urgency depends on severity and clinical context.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}
