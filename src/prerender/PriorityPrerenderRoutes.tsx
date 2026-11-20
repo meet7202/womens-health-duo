@@ -10,6 +10,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "@/pages/Index";
 import { DoctorProfilePage } from "@/pages/DoctorProfilePage";
 import { CityLandingPage } from "@/pages/CityLandingPage";
+import { LocalInPersonServicePage } from "@/pages/LocalInPersonServicePage";
+import { LOCAL_SERVICE_PATHS } from "@/data/localServicePages";
 import { BookConsultationPage } from "@/pages/BookConsultationPage";
 import { FreeWomensHealthCommunityPage } from "@/pages/FreeWomensHealthCommunityPage";
 import { PrenatalClassesPage } from "@/pages/PrenatalClassesPage";
@@ -53,6 +55,9 @@ export function PriorityPrerenderRoutes() {
         <Route path={ROUTES.mumbai} element={<CityLandingPage cityKey="mumbai" />} />
         <Route path={ROUTES.valsad} element={<CityLandingPage cityKey="valsad" />} />
         <Route path={ROUTES.bangalore} element={<CityLandingPage cityKey="bangalore" />} />
+        {LOCAL_SERVICE_PATHS.map((path) => (
+          <Route key={path} path={path} element={<LocalInPersonServicePage />} />
+        ))}
         <Route
           path={`${VIRTUAL_CONSULTATION_HUB_PATH}/country/:countryCode`}
           element={<VirtualConsultationCountryPage />}

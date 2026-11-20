@@ -8,6 +8,7 @@ import {
 } from "../lib/learnHubUrls";
 import { topicGuideSitemapPaths } from "../data/topicGuides/topicGuideSitemapPaths";
 import { internationalConsultationSitemapPaths } from "../data/internationalServices/internationalConsultationSitemapPaths";
+import { LOCAL_SERVICE_PATHS } from "../data/localServicePages";
 import {
   VIRTUAL_CONSULTATION_HUB_PATH,
   VIRTUAL_CONSULTATION_COUNTRIES,
@@ -121,6 +122,7 @@ export const SITEMAP_SEGMENT_CORE: readonly string[] = [
   ROUTES.mumbai,
   ROUTES.valsad,
   ROUTES.bangalore,
+  ...LOCAL_SERVICE_PATHS,
   ROUTES.learnArticles,
   ROUTES.faq,
   ROUTES.medicalDisclaimer,
@@ -179,6 +181,7 @@ export function sitemapPriorityForPath(pathname: string): string {
   ) {
     return "0.92";
   }
+  if (LOCAL_SERVICE_PATHS.includes(p)) return "0.9";
   if (p === ROUTES.prenatal || p === ROUTES.postnatal || p === ROUTES.pilates) {
     return "0.93";
   }

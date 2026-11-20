@@ -28,6 +28,7 @@ import {
 } from "../data/internationalServices/internationalServiceRegistry";
 import { INTERNATIONAL_HUB } from "../data/internationalServices/hubContent";
 import { homeSectionSeo } from "../lib/homeSectionPaths";
+import { localServicePageByPath } from "../data/localServicePages";
 import { virtualServiceCitySeo } from "../lib/virtualServiceCitySeo";
 import {
   isIndexableLearnHubFilter,
@@ -246,6 +247,15 @@ function zalakClassShellMeta(siteUrl: string, classPath: string): ShellPageMeta 
 export function resolveShellPageMeta(siteUrl: string, pathname: string): ShellPageMeta {
   const path = normalizePathname(pathname);
   const canonicalHref = canonicalHrefForPath(siteUrl, path);
+  const localService = localServicePageByPath(path);
+  if (localService) {
+    return {
+      canonicalHref,
+      title: localService.title,
+      h1: localService.h1,
+      metaDescription: localService.metaDescription,
+    };
+  }
 
   const sectionSeo = homeSectionSeo(path);
   if (sectionSeo) {

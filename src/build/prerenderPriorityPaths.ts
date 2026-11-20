@@ -1,3 +1,5 @@
+import { LOCAL_SERVICE_PATHS } from "../data/localServicePages";
+
 /**
  * SEO-10 — build-time React prerender paths (React 18 `renderToString`).
  *
@@ -54,6 +56,7 @@ export const PRERENDER_PRIORITY_PATHS: readonly string[] = [
   "/online-consultation/valsad",
   "/online-consultation/bengaluru",
   "/online-consultation/mumbai/ivf-fertility-treatments",
+  ...LOCAL_SERVICE_PATHS,
 ];
 
 /** Marker attribute written into `#root` when prerender succeeds (hydration / audits). */

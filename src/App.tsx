@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
 import { ScrollToTop } from "@/components/layout/ScrollToTop";
 import Index from "./pages/Index";
 import { ROUTES, HOME_SECTION_SCROLL_PATHS } from "@/config/routes";
+import { LOCAL_SERVICE_PATHS } from "@/data/localServicePages";
 import { VIRTUAL_CONSULTATION_HUB_PATH } from "@/lib/virtualConsultation";
 import { StickyWhatsAppButton } from "@/components/layout/StickyWhatsAppButton";
 import { NormalizeIndexHtmlUrl } from "@/components/layout/NormalizeIndexHtmlUrl";
@@ -125,6 +126,11 @@ const PilatesClassesPage = lazy(() =>
 const ZalakGroupClassPage = lazy(() =>
   import("./pages/ZalakGroupClassPage").then((m) => ({ default: m.ZalakGroupClassPage })),
 );
+const LocalInPersonServicePage = lazy(() =>
+  import("./pages/LocalInPersonServicePage").then((m) => ({
+    default: m.LocalInPersonServicePage,
+  })),
+);
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 /** Accessible suspense fallback while a route chunk loads (SEO-24). */
@@ -205,6 +211,9 @@ const App = () => (
             path={publicRoutePath(ROUTES.bangalore)}
             element={<CityLandingPage cityKey="bangalore" />}
           />
+          {LOCAL_SERVICE_PATHS.map((path) => (
+            <Route key={path} path={publicRoutePath(path)} element={<LocalInPersonServicePage />} />
+          ))}
           <Route
             path={publicRoutePath(`${VIRTUAL_CONSULTATION_HUB_PATH}/country/:countryCode`)}
             element={<VirtualConsultationCountryPage />}

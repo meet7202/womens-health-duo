@@ -18,6 +18,7 @@ import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { SITE_URL } from "@/config/site";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { indiaCityDocumentTitle } from "@/lib/pageSeoCopy";
+import { localServicePagesForCity } from "@/data/localServicePages";
 import {
   getVirtualConsultationCityBySlug,
   virtualConsultationCityPath,
@@ -47,6 +48,7 @@ export function CityLandingPage({ cityKey }: CityLandingPageProps) {
   const onlineCity = getVirtualConsultationCityBySlug(
     cityKey === "bangalore" ? "bengaluru" : cityKey,
   );
+  const localServices = localServicePagesForCity(cityKey);
 
   return (
     <PageShell breadcrumbs={crumbs}>
@@ -83,6 +85,19 @@ export function CityLandingPage({ cityKey }: CityLandingPageProps) {
         </ul>
 
         <DrZalakGoogleBusinessBlock presentation={city.drZalakGoogleBusinessPresentation} />
+
+        <h2 className="font-heading text-xl font-semibold text-foreground mb-3">
+          In-person services in {city.cityName}
+        </h2>
+        <ul className="grid gap-2 sm:grid-cols-2 text-sm mb-10">
+          {localServices.map((service) => (
+            <li key={service.path}>
+              <Link to={service.path} className="text-primary underline underline-offset-4">
+                {service.service.titleLead} · {service.doctorName}
+              </Link>
+            </li>
+          ))}
+        </ul>
 
         <h2 className="font-heading text-xl font-semibold text-foreground mb-3">Highlights</h2>
         <ul className="list-disc pl-5 space-y-2 text-muted-foreground mb-10">
