@@ -71,7 +71,7 @@ Each phase lists what changes, why the data supports it, and how we will know it
 - Lead Bangalore with in-person women's health physiotherapy and STOTT Pilates with Dr. Zalak Shah (PT); keep Dr. Charmi Shah's line accurate and short.
 - Add verified local details only (area, landmark, hours, Google Business link already in `externalProfiles.ts`). **Needs from you:** the Bangalore and Ahmedabad studio area and hours. Nothing is invented.
 - Remove the “ , ” separators sitewide.
-- **Done (commit 7a4d172 plus the Phase 3 commit):** per-city FAQ (booking, which doctor, physio or OB-GYN scope, emergency), Bangalore rewritten around Dr. Zalak Shah (PT), clinic schema uses the city name, stray separators removed, and the Ahmedabad and Bengaluru Google Business links replaced with the ones the owner supplied. Studio area and hours were not supplied, so none were added.
+- **Done (commit 7a4d172 plus the Phase 3 commit):** per-city FAQ (booking, which doctor, physio or OB-GYN scope, emergency), Bangalore rewritten around Dr. Zalak Shah (PT), clinic schema uses the city name, stray separators removed, and the Ahmedabad and Bengaluru Google Business links replaced with the ones the owner supplied. The Bengaluru listing shows Ahad Euphoria, Ahad Euphoria Road, Kodathi, and open 24 hours; that is now on `/bangalore/`. The Ahmedabad listing has no address and its pin is in Indapur, Pune district, so no Ahmedabad studio line was added.
 - **Check:** `/bangalore/` moves from Soft 404 to “Submitted and indexed”.
 
 ### Phase 3 — Earn the clicks the homepage already ranks for

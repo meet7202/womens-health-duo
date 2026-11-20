@@ -53,6 +53,12 @@ export function CityLandingPage({ cityKey }: CityLandingPageProps) {
           {city.h1}
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">{city.intro}</p>
+        {city.studio ? (
+          <p className="text-muted-foreground leading-relaxed mb-8">
+            <strong className="text-foreground">Studio:</strong> {city.studio.area}.{" "}
+            {city.studio.hours}
+          </p>
+        ) : null}
 
         <h2 className="font-heading text-xl font-semibold text-foreground mb-3">Who to book</h2>
         <ul className="space-y-4 mb-10">

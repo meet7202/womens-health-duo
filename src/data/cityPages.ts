@@ -15,6 +15,11 @@ export type CityPageData = {
   doctors: { name: string; role: string; profilePath: string }[];
   highlights: string[];
   /**
+   * Studio line taken from Dr. Zalak's Google Business listing. Omit when the listing
+   * has no address or its pin is not in this city.
+   */
+  studio?: { area: string; hours: string };
+  /**
    * Surfaces Dr. Zalak's two Google Business listings (Ahmedabad vs Bengaluru).
    * Use `both` when the page is not her primary in-person city (e.g. Mumbai).
    */
@@ -140,6 +145,11 @@ export const CITY_PAGES: Record<CityKey, CityPageData> = {
       "Mat and Reformer STOTT Pilates for progressive strength and mobility",
       "Shared Women's Health Duo contact for booking and questions",
     ],
+    studio: {
+      area: "Ahad Euphoria, Ahad Euphoria Road, Kodathi, Bengaluru 560099",
+      hours:
+        "Google lists the studio as open 24 hours. Visits are by appointment. Messages are answered Monday to Saturday, 9:00 AM to 6:00 PM India time.",
+    },
     drZalakGoogleBusinessPresentation: "bangalore-primary",
   },
 };

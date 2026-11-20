@@ -85,5 +85,31 @@ export function medicalClinicForCity(city: CityPageData) {
     medicalSpecialty: specialty.medicalSpecialty,
     description: specialty.description,
     knowsAbout: specialty.knowsAbout,
+    ...(city.key === "bangalore" && city.studio
+      ? {
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Ahad Euphoria, Ahad Euphoria Road, Kodathi",
+            addressLocality: "Bengaluru",
+            postalCode: "560099",
+            addressRegion: "Karnataka",
+            addressCountry: "IN",
+          },
+          openingHoursSpecification: {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday",
+            ],
+            opens: "00:00",
+            closes: "23:59",
+          },
+        }
+      : {}),
   };
 }
