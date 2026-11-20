@@ -94,9 +94,9 @@ export function VirtualOnlineConsultationCityPage() {
           OB-GYN, pregnancy and high-risk obstetrics advice, gynecology, IVF/IUI discussion,
           laparoscopy-related consults, PCOS/endometriosis, and routine women&apos;s health
           screening (as appropriate remotely). Dr. Zalak Shah provides online women&apos;s health
-          physiotherapy and STOTT Pilates on Mat and Reformer , pelvic floor, prenatal and postnatal
-          care, Mat Pilates online, diastasis recti, incontinence-oriented rehab with physician
-          clearance, and musculoskeletal care for women.
+          physiotherapy and STOTT Pilates on Mat and Reformer, covering pelvic floor, prenatal and
+          postnatal care, Mat Pilates online, diastasis recti, incontinence-oriented rehab with
+          physician clearance, and musculoskeletal care for women.
         </p>
         <div className="space-y-4 text-muted-foreground leading-relaxed mb-8">
           <p>
@@ -133,10 +133,10 @@ export function VirtualOnlineConsultationCityPage() {
 
         <div className="flex flex-wrap gap-3 mb-10">
           <Button variant="secondary" asChild>
-            <Link to={ROUTES.drCharmi}>Dr. Charmi , profile</Link>
+            <Link to={ROUTES.drCharmi}>Dr. Charmi Shah's profile</Link>
           </Button>
           <Button variant="secondary" asChild>
-            <Link to={ROUTES.drZalak}>Dr. Zalak , profile</Link>
+            <Link to={ROUTES.drZalak}>Dr. Zalak Shah's profile</Link>
           </Button>
           <Button variant="outline" asChild>
             <Link to={ROUTES.onlineConsultation}>Virtual hub</Link>

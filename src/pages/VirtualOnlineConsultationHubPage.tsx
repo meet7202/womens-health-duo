@@ -116,7 +116,7 @@ export function VirtualOnlineConsultationHubPage() {
         <TelemedicineLimitations className="mb-10" />
 
         <h2 className="font-heading text-xl font-semibold text-foreground mb-2">
-          Priority metros , virtual consultation from India
+          Priority metros: virtual consultation from India
         </h2>
         <p className="text-sm text-muted-foreground mb-8">
           {ANCHOR_VIRTUAL_CONSULTATION_CITIES.length} highlighted cities below. Open your city for a

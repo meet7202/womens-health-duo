@@ -29,7 +29,7 @@ export const DOCTOR_BY_SLUG: Record<DoctorSlug, DoctorProfile> = {
     credentials: "MBBS, MS (Obstetrics & Gynecology); fellowship training in laparoscopy and IVF",
     jobTitle: "Obstetrician & Gynecologist, IVF Specialist & Laparoscopic Surgeon",
     registration: DOCTOR_REGISTRATION.charmi,
-    metaTitle: "Dr. Charmi Shah | OB-GYN, IVF & Laparoscopy ,  Women's Health Duo",
+    metaTitle: "Dr. Charmi Shah | OB-GYN, IVF & Laparoscopy | Women's Health Duo",
     metaDescription:
       "Dr. Charmi Shah: obstetrics, gynecology, IVF, IUI, high-risk pregnancy, and laparoscopic surgery. Online OB-GYN telehealth worldwide; in person in Mumbai, Ahmedabad, and Valsad.",
     overview: [
@@ -50,7 +50,7 @@ export const DOCTOR_BY_SLUG: Record<DoctorSlug, DoctorProfile> = {
     external: [
       { label: "LinkedIn", href: EXTERNAL.drCharmi.linkedIn },
       {
-        label: "PharmEasy ,  contributing author profile",
+        label: "PharmEasy: contributing author profile",
         href: EXTERNAL.drCharmi.pharmEasyEditorial,
       },
     ],
@@ -62,7 +62,7 @@ export const DOCTOR_BY_SLUG: Record<DoctorSlug, DoctorProfile> = {
     credentials: "BPT, MPT; STOTT Pilates Instructor (Mat & Reformer)",
     jobTitle: "Women's Health Physiotherapist & STOTT Pilates Instructor",
     registration: DOCTOR_REGISTRATION.zalak,
-    metaTitle: "Dr. Zalak Shah | Women's Health Physio & STOTT Pilates ,  Women's Health Duo",
+    metaTitle: "Dr. Zalak Shah | Women's Health Physio & STOTT Pilates | Women's Health Duo",
     metaDescription:
       "Dr. Zalak Shah: women's health physiotherapy, pelvic floor rehab, prenatal and postnatal care, Mat Pilates online, and STOTT Pilates on Mat and Reformer. Online programs worldwide; in person in Bangalore and Ahmedabad.",
     overview: [
@@ -87,11 +87,11 @@ export const DOCTOR_BY_SLUG: Record<DoctorSlug, DoctorProfile> = {
         href: EXTERNAL.drZalak.googleReviewsShare,
       },
       {
-        label: "Google Business Profile ,  Ahmedabad",
+        label: "Google Business Profile (Ahmedabad)",
         href: EXTERNAL.drZalak.googleBusinessAhmedabad,
       },
       {
-        label: "Google Business Profile ,  Bengaluru (Bangalore)",
+        label: "Google Business Profile (Bengaluru)",
         href: EXTERNAL.drZalak.googleBusinessBangalore,
       },
       { label: "LinkedIn", href: EXTERNAL.drZalak.linkedIn },

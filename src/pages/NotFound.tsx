@@ -10,7 +10,7 @@ import { TrackedWhatsAppLink, WHATSAPP_CTA_CLASS } from "@/components/cta/Tracke
 const NotFound = () => {
   const location = useLocation();
   const waMessage = useMemo(
-    () => whatsappMessageGenericPage("404 ,  page not found", location.pathname),
+    () => whatsappMessageGenericPage("404: page not found", location.pathname),
     [location.pathname],
   );
 

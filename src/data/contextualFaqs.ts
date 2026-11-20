@@ -3,10 +3,16 @@ import type { FaqItem } from "@/data/siteFaq";
 import type { SeoOnlineService } from "@/data/seoOnlineServices";
 import type { CityKey } from "@/data/cityPages";
 import { ROUTES } from "@/config/routes";
+import { CONTACT } from "@/config/site.defaults";
+import {
+  PRACTICE_CHARMI_IN_PERSON,
+  PRACTICE_HOURS_LINE,
+  PRACTICE_ZALAK_IN_PERSON,
+} from "@/config/practiceLocations";
 export const MAX_CONTEXT_FAQS = 10 as const;
 function take10(items: FaqItem[]): FaqItem[] {
   return items.slice(0, MAX_CONTEXT_FAQS);
-} /** Learn hub default , booking + what the hub is + online care. */
+} /** Learn hub default: booking + what the hub is + online care. */
 const LEARN_HUB_DEFAULT: FaqItem[] = [
   {
     question: "What is the Women's Health Duo Learn hub?",
@@ -58,7 +64,7 @@ const LEARN_HUB_DEFAULT: FaqItem[] = [
     answer:
       "Yes, sharing public Shorts or Reels is fine. For private medical details, use email or WhatsApp directly with the practice.",
   },
-]; /** STOTT / Pilates , expertise: physio, movement */
+]; /** STOTT / Pilates: expertise: physio, movement */
 const LEARN_STOTT_PILATES: FaqItem[] = [
   {
     question: "What is STOTT Pilates?",
@@ -110,7 +116,7 @@ const LEARN_STOTT_PILATES: FaqItem[] = [
     answer:
       "See the Medical disclaimer and Editorial policy links in the site footer and on this Learn page.",
   },
-]; /** Pregnancy / exercise / workshop clips , expertise: prenatal physio + OB education */
+]; /** Pregnancy / exercise / workshop clips: expertise: prenatal physio + OB education */
 const LEARN_PRENATAL_MOVEMENT: FaqItem[] = [
   {
     question: "What is prenatal physiotherapy?",
@@ -162,7 +168,7 @@ const LEARN_PRENATAL_MOVEMENT: FaqItem[] = [
     answer:
       "Same channels, note that you want prenatal physio or Mat Pilates online and your OB's clearance if applicable.",
   },
-]; /** Pelvic floor + labour education , expertise: pelvic | OB education */
+]; /** Pelvic floor + labour education: expertise: pelvic | OB education */
 const LEARN_PELVIC_LABOR: FaqItem[] = [
   {
     question: "What is the pelvic floor?",
@@ -214,7 +220,7 @@ const LEARN_PELVIC_LABOR: FaqItem[] = [
     answer:
       "Fever with pelvic pain, inability to pass urine, heavy bleeding, or sudden severe pain, use local emergency services.",
   },
-]; /** Fertility clips , expertise: gynecology | fertility */
+]; /** Fertility clips: expertise: gynecology | fertility */
 const LEARN_FERTILITY: FaqItem[] = [
   {
     question: "What fertility tests are commonly used first?",
@@ -922,52 +928,47 @@ export function virtualHubFaqs(): FaqItem[] {
     },
   ]);
 }
-export function indiaCityFaqs(cityKey: CityKey, cityH1: string): FaqItem[] {
-  const label = cityH1;
-  return take10([
+export function indiaCityFaqs(cityKey: CityKey, cityName: string): FaqItem[] {
+  const charmiHere = cityKey !== "bangalore";
+  const zalakHere = cityKey === "bangalore" || cityKey === "ahmedabad";
+  const whoSeesYou =
+    charmiHere && zalakHere
+      ? `Both sisters see patients in person in ${cityName}: Dr. Charmi Shah for obstetrics, gynecology, IVF and laparoscopy, and Dr. Zalak Shah (PT) for women's health physiotherapy and STOTT Pilates.`
+      : charmiHere
+        ? `Dr. Charmi Shah sees patients in person in ${cityName} for obstetrics, gynecology, fertility and IVF, and laparoscopic surgery. Dr. Zalak Shah (PT) offers women's health physiotherapy online, and in person in ${PRACTICE_ZALAK_IN_PERSON}.`
+        : `Dr. Zalak Shah (PT) sees patients in person in ${cityName} for women's health physiotherapy and STOTT Pilates. Dr. Charmi Shah, the OB-GYN, consults online and in person in ${PRACTICE_CHARMI_IN_PERSON}.`;
+
+  const items: FaqItem[] = [
     {
-      question: `How do I book in-person care in ${label}?`,
-      answer: `For ${label}, WhatsApp or email with the doctor name, “${label}” in the subject, and whether you need OB-GYN or physio/Pilates first. We send clinic addresses, parking notes, and slot options that match this ${label} city page.`,
+      question: `How do I book an in-person appointment in ${cityName}?`,
+      answer: `Message Women's Health Duo on WhatsApp (${CONTACT.phoneE164}) or email ${CONTACT.email} with the doctor you want to see and what you need help with. In-person visits are by appointment, and we confirm the location and an available slot when you book. Practice hours are ${PRACTICE_HOURS_LINE}.`,
     },
     {
-      question: `Can I still do video if I live in ${label}?`,
-      answer: `Yes. Many ${label} patients mix in-person visits with online follow-ups for convenience; say “${label} + video” when you message so routing matches this page.`,
+      question: `Which doctor sees patients in ${cityName}?`,
+      answer: whoSeesYou,
     },
-    {
-      question: `Is online follow-up as effective if my home base is ${label}?`,
-      answer: `For stable chronic issues and rehab check-ins while you are in ${label}, video can be excellent. New severe symptoms still need in-person or emergency assessment near ${label}.`,
-    },
-    {
-      question: `Which doctor is based in ${label} for in-person care?`,
+  ];
+
+  if (zalakHere) {
+    items.push({
+      question: `What does women's health physiotherapy in ${cityName} cover?`,
       answer:
-        cityKey === "mumbai"
-          ? `On this ${label} page: Dr. Charmi Shah leads in-person OB-GYN care in Mumbai; Dr. Zalak Shah is primarily online from Mumbai listings with in-person studios in Bangalore and Ahmedabad.`
-          : cityKey === "valsad"
-            ? `On this ${label} page: Dr. Charmi Shah leads in-person OB-GYN care in Valsad; Dr. Zalak Shah is available online and in person in Bangalore and Ahmedabad.`
-            : cityKey === "bangalore"
-              ? `On this ${label} page: Dr. Zalak Shah sees patients in person in Bangalore; Dr. Charmi Shah is available online and in Mumbai, Ahmedabad, and Valsad in person.`
-              : `On this ${label} page: both sisters see patients in Ahmedabad, Dr. Charmi for OB-GYN/IVF and Dr. Zalak for physio and STOTT Pilates.`,
-    },
-    {
-      question: `Do you accept international travelers booking through ${label}?`,
-      answer: `Yes. Families often combine travel to India with booked visits tied to ${label}; mention travel dates when you WhatsApp so this ${label} page context stays in the thread.`,
-    },
-    {
-      question: `How do I send records for an appointment in ${label}?`,
-      answer: `Email summaries or bring imaging to the ${label} visit; avoid unsecured links. Reference ${label} and the doctor name so staff matches this city page.`,
-    },
-    {
-      question: `What about emergencies while I am in ${label}?`,
-      answer: `Call the nearest hospital or labor unit in ${label}, do not rely on messaging for emergencies, even if you found us through this ${label} landing page.`,
-    },
-    {
-      question: `Where are virtual diaspora pages if I split time outside ${label}?`,
-      answer: `Open Virtual online consultations in the menu for global city SEO pages. This ${label} page stays your anchor for in-person care in India.`,
-    },
-    { question: `Is there a site-wide FAQ beyond ${label}?`, answer: `Yes, see ${ROUTES.faq}.` },
-    {
-      question: `How do Learn clips relate to ${label} visits?`,
-      answer: `Use the Learn hub for free education; clinical decisions for ${label} still happen in booked consults linked from this page.`,
-    },
-  ]);
+        "Dr. Zalak Shah (PT) assesses pelvic floor, breathing, posture and movement, then builds a plan for concerns such as bladder leakage, pelvic pain, pregnancy aches, recovery after birth or a C-section, and diastasis recti. STOTT Pilates on Mat or Reformer can be part of that plan once the assessment shows it fits.",
+    });
+  }
+
+  if (charmiHere) {
+    items.push({
+      question: `What OB-GYN care can I get in ${cityName}?`,
+      answer:
+        "Dr. Charmi Shah sees women for pregnancy care including high-risk pregnancy, period and hormone problems such as PCOS, fertility evaluation with IUI and IVF pathways, and laparoscopic surgery for conditions like fibroids, endometriosis and ovarian cysts when it is indicated.",
+    });
+  }
+
+  items.push({
+    question: `What should I do in an emergency in ${cityName}?`,
+    answer: `Go to the nearest hospital emergency department or labour ward in ${cityName}. Do not wait for a reply on WhatsApp or email in an emergency.`,
+  });
+
+  return take10(items);
 }

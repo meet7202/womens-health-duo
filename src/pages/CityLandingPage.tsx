@@ -39,7 +39,7 @@ export function CityLandingPage({ cityKey }: CityLandingPageProps) {
     }),
     medicalClinicForCity(city),
   ];
-  const faqItems = useMemo(() => indiaCityFaqs(cityKey, city.h1), [cityKey, city.h1]);
+  const faqItems = useMemo(() => indiaCityFaqs(cityKey, city.cityName), [cityKey, city.cityName]);
 
   return (
     <PageShell breadcrumbs={crumbs}>
@@ -52,19 +52,7 @@ export function CityLandingPage({ cityKey }: CityLandingPageProps) {
         <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground mb-4">
           {city.h1}
         </h1>
-        <p className="text-lg text-muted-foreground leading-relaxed mb-6">{city.intro}</p>
-
-        <p className="rounded-lg border border-primary/20 bg-primary/5 px-4 py-3 text-sm text-foreground mb-8">
-          <strong>Outside India?</strong> Start on{" "}
-          <Link
-            to={ROUTES.onlineConsultation}
-            className="text-primary underline underline-offset-4"
-          >
-            Virtual online consultations
-          </Link>{" "}
-          for diaspora hubs (Dubai, London, Singapore, Toronto, Sydney, and more), same online
-          OB-GYN and physio booking process worldwide.
-        </p>
+        <p className="text-lg text-muted-foreground leading-relaxed mb-8">{city.intro}</p>
 
         <h2 className="font-heading text-xl font-semibold text-foreground mb-3">Who to book</h2>
         <ul className="space-y-4 mb-10">
@@ -90,15 +78,27 @@ export function CityLandingPage({ cityKey }: CityLandingPageProps) {
           ))}
         </ul>
 
+        <p className="rounded-lg border border-primary/20 bg-primary/5 px-4 py-3 text-sm text-foreground mb-8">
+          <strong>Outside India?</strong> Start on{" "}
+          <Link
+            to={ROUTES.onlineConsultation}
+            className="text-primary underline underline-offset-4"
+          >
+            Virtual online consultations
+          </Link>{" "}
+          for patients in Dubai, London, Singapore, Toronto, Sydney and elsewhere. Online OB-GYN and
+          physio consults are booked the same way worldwide.
+        </p>
+
         <div className="flex flex-wrap gap-3 mb-10">
           <Link to={ROUTES.drCharmi} className="text-sm text-primary underline underline-offset-4">
-            Dr. Charmi Shah , full profile
+            Dr. Charmi Shah: full profile
           </Link>
           <span className="text-muted-foreground" aria-hidden>
             ·
           </span>
           <Link to={ROUTES.drZalak} className="text-sm text-primary underline underline-offset-4">
-            Dr. Zalak Shah , full profile
+            Dr. Zalak Shah: full profile
           </Link>
           <span className="text-muted-foreground" aria-hidden>
             ·
@@ -118,8 +118,8 @@ export function CityLandingPage({ cityKey }: CityLandingPageProps) {
           items={faqItems}
           sectionId={`city-faq-${cityKey}`}
           headingLabel="FAQ"
-          headingTitle={`Common questions: ${city.h1}`}
-          headingIntro="Booking, in-person and video options, and how we coordinate care in this city."
+          headingTitle={`Common questions about care in ${city.cityName}`}
+          headingIntro="Booking, who you will see, and how in-person and online visits fit together."
         />
 
         <ContentAuthors />
@@ -153,7 +153,7 @@ function DrZalakGoogleBusinessBlock({
   if (presentation === "both") {
     return (
       <p className="text-sm text-muted-foreground mb-10">
-        <strong className="text-foreground">Dr. Zalak Shah , Google Business:</strong>{" "}
+        <strong className="text-foreground">Dr. Zalak Shah on Google Business:</strong>{" "}
         <GbpLink href={ahm}>Ahmedabad</GbpLink>
         <span className="text-muted-foreground" aria-hidden>
           {" "}
@@ -167,9 +167,9 @@ function DrZalakGoogleBusinessBlock({
   if (presentation === "ahmedabad-primary") {
     return (
       <p className="text-sm text-muted-foreground mb-10">
-        <strong className="text-foreground">Dr. Zalak Shah , Google Business (this city):</strong>{" "}
+        <strong className="text-foreground">Dr. Zalak Shah on Google Business (this city):</strong>{" "}
         <GbpLink href={ahm}>Ahmedabad listing</GbpLink>
-        <span className="text-muted-foreground"> , also on Google: </span>
+        <span className="text-muted-foreground">; also on Google: </span>
         <GbpLink href={blr}>Bengaluru (Bangalore)</GbpLink>
       </p>
     );
@@ -177,9 +177,9 @@ function DrZalakGoogleBusinessBlock({
 
   return (
     <p className="text-sm text-muted-foreground mb-10">
-      <strong className="text-foreground">Dr. Zalak Shah , Google Business (this city):</strong>{" "}
+      <strong className="text-foreground">Dr. Zalak Shah on Google Business (this city):</strong>{" "}
       <GbpLink href={blr}>Bengaluru (Bangalore) listing</GbpLink>
-      <span className="text-muted-foreground"> , also on Google: </span>
+      <span className="text-muted-foreground">; also on Google: </span>
       <GbpLink href={ahm}>Ahmedabad</GbpLink>
     </p>
   );

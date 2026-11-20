@@ -23,7 +23,7 @@ export function whatsappUrlWithMessage(message: string): string {
 }
 
 function siteRef(path: string) {
-  return `\n\n,  Sent from womenshealthduo.com${path}`;
+  return `\n\nSent from womenshealthduo.com${path}`;
 }
 
 export function whatsappMessageHomepage(sourcePath: string = ROUTES.home): string {

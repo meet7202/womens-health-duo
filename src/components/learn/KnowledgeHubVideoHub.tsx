@@ -148,7 +148,7 @@ export function KnowledgeHubVideoHub() {
           className="rounded-xl border border-border/50 bg-card p-4 text-sm text-foreground hover:border-primary/40 transition-colors"
         >
           <Youtube className="h-6 w-6 text-primary mb-2" aria-hidden />
-          <span className="font-semibold block">@WomensHealthDuo , Shorts</span>
+          <span className="font-semibold block">@WomensHealthDuo: Shorts</span>
           <span className="text-muted-foreground text-xs mt-1 block">
             Shorts-only tab on YouTube.
           </span>
@@ -160,7 +160,7 @@ export function KnowledgeHubVideoHub() {
           className="rounded-xl border border-border/50 bg-card p-4 text-sm text-foreground hover:border-primary/40 transition-colors"
         >
           <Instagram className="h-6 w-6 text-primary mb-2" aria-hidden />
-          <span className="font-semibold block">@womenshealthduo , Reels</span>
+          <span className="font-semibold block">@womenshealthduo: Reels</span>
           <span className="text-muted-foreground text-xs mt-1 block">Instagram Reels tab.</span>
         </a>
       </div>

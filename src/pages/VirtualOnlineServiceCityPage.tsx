@@ -214,7 +214,7 @@ export function VirtualOnlineServiceCityPage() {
             id="similar-cities-heading"
             className="font-heading text-lg font-semibold text-foreground mb-4"
           >
-            {service.title} , other cities
+            {service.title} in other cities
           </h2>
           <p className="text-sm text-muted-foreground mb-4">
             A few other metros with the same online service page (short list for readability).

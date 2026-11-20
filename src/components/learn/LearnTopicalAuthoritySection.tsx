@@ -215,8 +215,8 @@ export function LearnTopicalAuthoritySection() {
                     className="text-primary font-medium underline underline-offset-2"
                   >
                     Read about virtual online consultations here
-                  </Link>{" "}
-                  , same booking path for OB-GYN, IVF discussion, women&apos;s health physiotherapy,
+                  </Link>
+                  : same booking path for OB-GYN, IVF discussion, women&apos;s health physiotherapy,
                   and STOTT Pilates-related care by video.
                 </p>
 
@@ -227,7 +227,7 @@ export function LearnTopicalAuthoritySection() {
                   >
                     Meet our doctors
                   </Link>
-                  {" ,  "}
+                  {": "}
                   Dr. Charmi Shah (OB-GYN / IVF) and Dr. Zalak Shah (women&apos;s health
                   physiotherapy &amp; STOTT Pilates).
                 </p>

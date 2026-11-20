@@ -1,6 +1,6 @@
 import { TELEMEDICINE_FAQ } from "./telemedicineFaq";
 
-/** Visible FAQ copy ,  must match FAQ JSON-LD wherever emitted. */
+/** Visible FAQ copy: must match FAQ JSON-LD wherever emitted. */
 export type FaqItem = {
   /** Optional stable id for topic-guide `faqIds` selection (SEO-13). */
   id?: string;

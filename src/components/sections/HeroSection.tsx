@@ -74,7 +74,7 @@ export const HeroSection = () => {
       id="home"
       className="relative flex min-h-screen items-start gradient-hero overflow-hidden md:items-center"
     >
-      {/* Decorative elements ,  keep low opacity so headline stays crisp */}
+      {/* Decorative elements: keep low opacity so headline stays crisp */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-10 w-96 h-96 bg-rose-light/20 rounded-full blur-3xl" />
@@ -83,7 +83,7 @@ export const HeroSection = () => {
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
         <div className="grid gap-10 md:grid-cols-2 md:gap-12 lg:gap-16 items-center">
-          {/* Copy ,  second on mobile so the photo is above the fold */}
+          {/* Copy: second on mobile so the photo is above the fold */}
           {/* Primary copy stays visible on first paint (SEO-28) — no opacity-0 entrance. */}
           <div className="order-2 text-center md:order-1 md:text-left">
             <div className="inline-flex items-center gap-2 border border-primary/25 bg-primary/15 px-4 py-2 rounded-full mb-6 shadow-sm">
@@ -152,7 +152,7 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          {/* Image ,  first on mobile so it shows without scrolling */}
+          {/* Image: first on mobile so it shows without scrolling */}
           <div className="relative order-1 mx-auto w-full max-w-md md:order-2 md:mx-0 md:max-w-none">
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-elevated">
               <picture>

@@ -1,4 +1,4 @@
-/** One landing page per service × virtual city (sitemap + internal links only ,  not homepage). */
+/** One landing page per service × virtual city (sitemap + internal links only: not homepage). */
 export type SeoOnlineService = {
   slug: string;
   /** H1 / visible title (matches Services section intent). */

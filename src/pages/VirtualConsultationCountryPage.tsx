@@ -93,10 +93,10 @@ export function VirtualConsultationCountryPage() {
             <Link to={ROUTES.onlineConsultation}>Virtual hub (all regions)</Link>
           </Button>
           <Button variant="secondary" asChild>
-            <Link to={ROUTES.drCharmi}>Dr. Charmi , profile</Link>
+            <Link to={ROUTES.drCharmi}>Dr. Charmi Shah's profile</Link>
           </Button>
           <Button variant="secondary" asChild>
-            <Link to={ROUTES.drZalak}>Dr. Zalak , profile</Link>
+            <Link to={ROUTES.drZalak}>Dr. Zalak Shah's profile</Link>
           </Button>
         </div>
 

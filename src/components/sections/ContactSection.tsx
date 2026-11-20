@@ -139,7 +139,7 @@ Sent from Women's Health Duo Website`;
             >
               <span className="inline-flex items-center gap-2">
                 <MessageCircle className="h-5 w-5 shrink-0" aria-hidden />
-                Book on WhatsApp , direct message
+                Book on WhatsApp (direct message)
               </span>
             </a>
           </Button>
