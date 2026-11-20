@@ -51,11 +51,22 @@ export function InternationalServicePage() {
   const path = internationalServicePath(service.slug);
   const pageUrl = githubPagesAbsoluteUrl(SITE_URL, path);
   const TITLE = internationalServiceDocumentTitle(service.shortTitle);
-  const doctorHub = INTERNATIONAL_DOCTOR_HUBS.find((h) => h.doctor === service.doctor)!;
+  const doctorHub =
+    service.doctor === "both"
+      ? undefined
+      : INTERNATIONAL_DOCTOR_HUBS.find((h) => h.doctor === service.doctor);
+  const doctorLabel =
+    service.doctor === "zalak"
+      ? "Dr. Zalak Shah"
+      : service.doctor === "charmi"
+        ? "Dr. Charmi Shah"
+        : "Dr. Charmi Shah and Dr. Zalak Shah";
   const crumbs = [
     { name: "Home", path: ROUTES.home },
     { name: "International consultation", path: INTERNATIONAL_CONSULTATION_BASE },
-    { name: doctorHub.documentTitlePrimary, path: internationalDoctorHubPath(doctorHub) },
+    ...(doctorHub
+      ? [{ name: doctorHub.documentTitlePrimary, path: internationalDoctorHubPath(doctorHub) }]
+      : []),
     { name: service.title, path },
   ];
   const graph = [
@@ -84,12 +95,28 @@ export function InternationalServicePage() {
 
         <InternationalCtaBlock
           whatsappMessage={whatsappMessageInternationalService(service.title, path)}
-          doctor={service.doctor === "zalak" ? "Dr. Zalak Shah" : "Dr. Charmi Shah"}
-          service={service.slug}
+          doctor={doctorLabel}
+          service={service.analyticsService ?? service.slug}
           className="mb-10"
         />
 
         <ScopeSection canHelp={service.canHelp} notFor={service.notFor} />
+
+        {service.waitSection ? (
+          <section className="mb-10" aria-labelledby={`intl-wait-${service.slug}`}>
+            <h2
+              id={`intl-wait-${service.slug}`}
+              className="font-heading text-xl font-semibold text-foreground mb-3"
+            >
+              {service.waitSection.heading}
+            </h2>
+            {service.waitSection.paragraphs.map((p) => (
+              <p key={p.slice(0, 40)} className="text-muted-foreground leading-relaxed mb-3">
+                {p}
+              </p>
+            ))}
+          </section>
+        ) : null}
 
         <HowItWorksSection />
 
@@ -117,12 +144,21 @@ export function InternationalServicePage() {
         )}
 
         <p className="text-sm text-muted-foreground mb-10 leading-relaxed">
-          <Link
-            to={internationalDoctorHubPath(doctorHub)}
-            className="text-primary underline underline-offset-4"
-          >
-            All {doctorHub.documentTitlePrimary.toLowerCase()} services
-          </Link>
+          {doctorHub ? (
+            <Link
+              to={internationalDoctorHubPath(doctorHub)}
+              className="text-primary underline underline-offset-4"
+            >
+              All {doctorHub.documentTitlePrimary.toLowerCase()} services
+            </Link>
+          ) : (
+            <Link
+              to={INTERNATIONAL_CONSULTATION_BASE}
+              className="text-primary underline underline-offset-4"
+            >
+              All international services
+            </Link>
+          )}
           {" · "}
           <Link
             to={ROUTES.telemedicinePolicy}

@@ -10,6 +10,7 @@ import { ROUTES } from "@/config/routes";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { BOOKING_DOCUMENT_TITLE, BOOKING_H1 } from "@/lib/pageSeoCopy";
+import { OVERSEAS_HOURS, OVERSEAS_SPEED } from "@/data/internationalServices/quickAccessServices";
 import { EmergencyDisclaimer } from "@/components/compliance/EmergencyDisclaimer";
 import { TelemedicineLimitations } from "@/components/compliance/TelemedicineLimitations";
 import { TelemedicineTrustBadges } from "@/components/compliance/TelemedicineTrustBadges";
@@ -359,6 +360,20 @@ export function BookConsultationPage() {
                 />
               </div>
               <div className="space-y-2">
+                <Label htmlFor="timeZone">Time zone *</Label>
+                <Input
+                  id="timeZone"
+                  value={data.timeZone}
+                  onChange={(e) => patch({ timeZone: e.target.value })}
+                  required
+                  placeholder="For example, GMT, EST, or GST"
+                  autoComplete="off"
+                />
+              </div>
+              <p className="sm:col-span-2 text-xs text-muted-foreground leading-relaxed">
+                {OVERSEAS_SPEED} {OVERSEAS_HOURS}
+              </p>
+              <div className="space-y-2">
                 <Label htmlFor="emergencyContact">Emergency contact (optional)</Label>
                 <Input
                   id="emergencyContact"
@@ -504,9 +519,9 @@ export function BookConsultationPage() {
               </div>
 
               <p className="rounded-xl border border-border/60 bg-muted/20 p-4 text-xs text-muted-foreground leading-relaxed">
-                Have lab reports, imaging, or prior prescriptions? After the booking message opens
-                in WhatsApp, please attach PDFs or photos in that chat (or email the practice).
-                Government ID may be requested by the clinic when needed.
+                Send lab reports and imaging in the WhatsApp chat before the visit. They are
+                reviewed during the consultation, and questions after the visit can continue in that
+                chat. Government ID may be requested by the clinic when needed.
               </p>
             </div>
           )}
@@ -540,6 +555,13 @@ export function BookConsultationPage() {
                     </dd>
                   </div>
                 ) : null}
+                <div>
+                  <dt className="text-muted-foreground">Country and time zone</dt>
+                  <dd className="font-medium text-foreground">
+                    {data.country}
+                    {data.timeZone ? ` · ${data.timeZone}` : ""}
+                  </dd>
+                </div>
                 <div>
                   <dt className="text-muted-foreground">Mode</dt>
                   <dd className="font-medium text-foreground capitalize">

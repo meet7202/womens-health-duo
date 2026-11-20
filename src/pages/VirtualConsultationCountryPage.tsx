@@ -24,6 +24,8 @@ import { PRACTICE_BOTH_DOCTORS_IN_PERSON } from "@/config/practiceLocations";
 import { virtualCountryFaqs } from "@/data/contextualFaqs";
 import { virtualCountryDocumentTitle, virtualCountryH1 } from "@/lib/pageSeoCopy";
 import { TelemedicineComplianceBlock } from "@/components/compliance/TelemedicineComplianceBlock";
+import { CannotGetSeenLocally } from "@/components/international/InternationalConsultationLayout";
+import { OVERSEAS_QUICK_ACCESS_COUNTRIES } from "@/data/internationalServices/quickAccessServices";
 
 function buildDescription(country: string, cityCount: number) {
   return `Virtual OB-GYN, IVF discussion, laparoscopy consults, women's health physiotherapy, Mat Pilates online, and STOTT Pilates (Mat & Reformer) for patients in ${country}. ${cityCount} city overviews link to each type of online visit, book via WhatsApp or email. ${PRACTICE_BOTH_DOCTORS_IN_PERSON}`;
@@ -87,6 +89,10 @@ export function VirtualConsultationCountryPage() {
           (OB-GYN, IVF, laparoscopy) and Dr. Zalak Shah (women&apos;s health physio, STOTT Pilates)
           and links to every kind of online visit we offer there.
         </p>
+
+        {(OVERSEAS_QUICK_ACCESS_COUNTRIES as readonly string[]).includes(row.country) ? (
+          <CannotGetSeenLocally headingId="country-quick-access" />
+        ) : null}
 
         <div className="flex flex-wrap gap-3 mb-10">
           <Button variant="secondary" asChild>

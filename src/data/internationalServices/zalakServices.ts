@@ -18,6 +18,12 @@ export const ZALAK_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
     intro: [
       "Pelvic floor symptoms respond well to guided physiotherapy — even across time zones. Dr. Zalak Shah, women's health physiotherapist and STOTT Pilates instructor, offers international online pelvic floor consults and home exercise plans.",
     ],
+    waitSection: {
+      heading: "While you wait for a local pelvic floor appointment",
+      paragraphs: [
+        "If the local wait is long, the video visit can start now. The first session covers your history, how symptoms show up in the day, and a home plan you can practise. An internal examination, when one is needed, is still arranged with a clinician near you.",
+      ],
+    },
     canHelp: [
       "Stress or urge incontinence education and exercise progression",
       "Postpartum pelvic floor retraining",
@@ -193,6 +199,12 @@ export const ZALAK_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
     intro: [
       "The fourth trimester deserves structured support. Dr. Zalak Shah helps international clients recover after vaginal or caesarean birth with online physiotherapy and progressive exercise planning.",
     ],
+    waitSection: {
+      heading: "While you wait for a local postnatal appointment",
+      paragraphs: [
+        "Gentle breathing, pelvic-floor awareness, and a graded walking plan can start on video while you wait for a local postnatal check. Medical questions about bleeding, wound care, or fever go to your obstetrician or to Dr. Charmi Shah, not to this physiotherapy visit.",
+      ],
+    },
     canHelp: [
       "Early postpartum movement and breathing",
       "Pelvic floor re-engagement",

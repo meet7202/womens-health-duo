@@ -68,17 +68,17 @@ All four live under `/international-consultation/`, use `InternationalServicePag
 - Book consultation page: ask for the patient's country and time zone and show slot times in that time zone (needs owner input on how slots are offered).
 - Virtual country pages for Singapore, USA, UK, South Africa, Australia, and Canada: link the four new pages. No new city pages.
 
-## Facts needed from the owner before writing
+## Facts confirmed by the owner (20 November 2026)
 
-Do not invent any of these.
+These are written on the four pages, the international hub, the six country pages (Singapore, United States, United Kingdom, South Africa, Australia, Canada), and the booking form. They are usual practice, not a promise that every request gets the same slot or the same fee.
 
-1. How soon an overseas patient can usually be seen (for example "within a week"), or say nothing about speed.
-2. Which time zones or hours each doctor offers for overseas patients.
-3. Fees and how international patients pay.
-4. Online antenatal classes: group or one-to-one, how many sessions, and the schedule.
-5. Which languages each doctor consults in (the site says English, Hindi, and Gujarati are commonly used; confirm per doctor).
-6. Dr. Charmi Shah: confirm the wording that prescriptions come from the patient's local doctor when they live outside India.
-7. Turnaround for written report reviews, if offered.
+1. Overseas patients are usually seen within 1 to 2 days, depending on availability. A same-day visit is offered when a slot is open.
+2. Hours are the same as the clinics, Monday to Saturday, 9:00 AM to 6:00 PM India time, and can move to the patient's time zone when a slot allows.
+3. Fees are competitive and, for many patients outside India, lower than a local specialist visit. The amount and how to pay are confirmed on WhatsApp. No price is printed on the site.
+4. Online antenatal classes are one-to-one. Prenatal and postnatal physiotherapy, pelvic floor care, diastasis recti care, and Pilates can be done by video. Session count and days are agreed at the first visit. An examination that needs hands is local.
+5. Both doctors consult in English, Hindi, and Gujarati.
+6. Dr. Charmi Shah can set out the medicine and its contents when India's telemedicine guidelines and the patient's local law allow it. If an Indian prescription cannot be dispensed locally, the note is for the local doctor. Dr. Zalak Shah does not prescribe.
+7. Reports are sent before the visit, reviewed during the consultation, with follow-up on WhatsApp. There is no separate written-report turnaround.
 
 ## Measurement
 

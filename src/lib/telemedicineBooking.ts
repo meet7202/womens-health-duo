@@ -19,6 +19,7 @@ export type BookingFormData = {
   email: string;
   address: string;
   country: string;
+  timeZone: string;
   emergencyContact: string;
   chiefComplaint: string;
   symptomDuration: string;
@@ -62,6 +63,7 @@ export function defaultBookingFormData(
     email: "",
     address: "",
     country: "",
+    timeZone: "",
     emergencyContact: "",
     chiefComplaint: "",
     symptomDuration: "",
@@ -124,6 +126,7 @@ export function buildBookingWhatsAppMessage(data: BookingFormData): string {
       line("Email", data.email),
       line("Address", data.address),
       line("Country", data.country),
+      line("Time zone", data.timeZone),
       line("Emergency contact", data.emergencyContact),
     ].filter(Boolean),
     "",
@@ -209,6 +212,7 @@ export function validateBookingStep(step: number, data: BookingFormData): string
       if (!data.email.trim()) return "Email is required.";
       if (!data.address.trim()) return "Complete address is required.";
       if (!data.country.trim()) return "Country is required.";
+      if (!data.timeZone.trim()) return "Time zone is required.";
       return null;
     case 3:
       if (!data.chiefComplaint.trim()) return "Chief complaint is required.";

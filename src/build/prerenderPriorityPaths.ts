@@ -48,6 +48,10 @@ export const PRERENDER_PRIORITY_PATHS: readonly string[] = [
   "/international-consultation/dr-zalak",
   "/international-consultation/ivf-second-opinion",
   "/international-consultation/pelvic-floor-physiotherapy-online",
+  "/international-consultation/ob-gyn-second-opinion-online",
+  "/international-consultation/womens-health-physio-online",
+  "/international-consultation/online-antenatal-classes",
+  "/international-consultation/hindi-gujarati-doctor-online",
   // Virtual consultation templates (hub / country / city / service×city)
   "/online-consultation",
   "/online-consultation/country/india",

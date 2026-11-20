@@ -13,6 +13,7 @@ import { AppNavigate as Navigate } from "@/components/router/AppNavigate";
 import {
   getInternationalDoctorHub,
   internationalDoctorHubPath,
+  internationalServicePath,
   internationalServicesForDoctor,
   INTERNATIONAL_CONSULTATION_BASE,
 } from "@/data/internationalServices/internationalServiceRegistry";
@@ -73,6 +74,17 @@ export function InternationalDoctorHubPage() {
           heading={`${doctor.name} — international services`}
           headingId={`intl-services-${hub.pathSegment}`}
         />
+
+        <p className="text-sm text-muted-foreground mb-10 leading-relaxed">
+          Consults are in English, Hindi, and Gujarati.{" "}
+          <Link
+            to={internationalServicePath("hindi-gujarati-doctor-online")}
+            className="text-primary underline underline-offset-4"
+          >
+            Book a Hindi or Gujarati consult
+          </Link>
+          .
+        </p>
 
         <HowItWorksSection />
 

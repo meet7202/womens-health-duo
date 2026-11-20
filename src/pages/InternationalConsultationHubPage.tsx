@@ -26,6 +26,7 @@ import {
   INTERNATIONAL_CONSULTATION_BASE,
 } from "@/data/internationalServices/internationalServiceRegistry";
 import {
+  CannotGetSeenLocally,
   HowItWorksSection,
   InternationalCtaBlock,
   ServiceCardList,
@@ -79,6 +80,8 @@ export function InternationalConsultationHubPage() {
           service="international_consultation"
           className="mb-10"
         />
+
+        <CannotGetSeenLocally headingId="intl-quick-access" />
 
         <section className="mb-10" aria-labelledby="intl-doctor-hubs-heading">
           <h2
