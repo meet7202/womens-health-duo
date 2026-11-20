@@ -161,7 +161,7 @@ const CLINIC_CARD: Record<
 > = {
   zalak: {
     heading: "Women's health physiotherapy clinic",
-    credentials: "BPT, MPT; STOTT Pilates Instructor (Mat & Reformer)",
+    credentials: "BPT, MPT (Women's Health); STOTT Pilates Instructor (Mat & Reformer)",
     service: "womens-health-physiotherapy",
   },
   charmi: {

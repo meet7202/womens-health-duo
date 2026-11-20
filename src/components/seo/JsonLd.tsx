@@ -123,7 +123,7 @@ export function JsonLd() {
         alternateName: [...ZALAK_NAME_ALIASES],
         jobTitle: "Women's Health Physiotherapist & STOTT Pilates Instructor (Mat & Reformer)",
         description:
-          "Women's health physiotherapist (BPT, MPT) and STOTT Pilates Instructor (Mat & Reformer); pelvic floor, prenatal/postnatal rehab, and musculoskeletal physiotherapy for women.",
+          "Women's health physiotherapist (BPT, MPT in women's health) and STOTT Pilates Instructor (Mat & Reformer), including prenatal Pilates; pelvic floor, prenatal/postnatal rehab, and musculoskeletal physiotherapy for women.",
         knowsAbout: [
           "Women's health physiotherapy",
           "Physiotherapy",

@@ -59,14 +59,14 @@ export const DOCTOR_BY_SLUG: Record<DoctorSlug, DoctorProfile> = {
     slug: "zalak",
     path: ROUTES.drZalak,
     name: "Dr. Zalak Shah (PT)",
-    credentials: "BPT, MPT; STOTT Pilates Instructor (Mat & Reformer)",
+    credentials: "BPT, MPT (Women's Health); STOTT Pilates Instructor (Mat & Reformer)",
     jobTitle: "Women's Health Physiotherapist & STOTT Pilates Instructor",
     registration: DOCTOR_REGISTRATION.zalak,
     metaTitle: "Dr. Zalak Shah | Women's Health Physio & STOTT Pilates | Women's Health Duo",
     metaDescription:
       "Dr. Zalak Shah: women's health physiotherapy, pelvic floor rehab, prenatal and postnatal care, Mat Pilates online, and STOTT Pilates on Mat and Reformer. Online programs worldwide; in person in Bangalore and Ahmedabad.",
     overview: [
-      "Dr. Zalak Shah (PT) is a women's health physiotherapist (BPT, MPT) and a STOTT Pilates Instructor for Mat and Reformer, with more than 6 years of clinical experience. She sees women in person in Bangalore and Ahmedabad, and online anywhere in the world.",
+      "Dr. Zalak Shah (PT) is a women's health physiotherapist (BPT, MPT in women's health) and a STOTT Pilates instructor for Mat and Reformer, including prenatal Pilates. She has more than 6 years of clinical experience. She sees women in person in Bangalore and Ahmedabad, and online anywhere in the world.",
       "She treats pelvic floor problems such as urine leakage, pelvic pain, and prolapse symptoms (with medical clearance). She also supports women through pregnancy with prenatal physiotherapy and birth preparation, guides postnatal recovery including diastasis recti and core retraining, and treats back, neck, and joint pain common in women.",
       "Online sessions cover physiotherapy, prenatal and postnatal programmes, and Mat Pilates, which suits women abroad or between cities. She uses Pilates within your physiotherapy plan when it fits, and she tells you when you need a hands-on assessment in person.",
       "Dr. Zalak works alongside her sister, Dr. Charmi Shah, an OB-GYN, at Women's Health Duo, a practice that has treated more than 5,000 patients. When symptoms need a medical review, she coordinates with Dr. Charmi or with your own doctor.",

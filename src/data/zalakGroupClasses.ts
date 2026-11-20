@@ -58,7 +58,7 @@ export const ZALAK_GROUP_CLASS_CONTENT: Record<ZalakGroupClassKey, ZalakGroupCla
       "Women with high-risk pregnancies requiring modified exercise programs",
     ],
     whyJoin: [
-      "Led by Dr. Zalak Shah, a qualified women's health physiotherapist and prenatal Pilates instructor",
+      "Led by Dr. Zalak Shah (PT): BPT, MPT in women's health, and a STOTT Pilates instructor (Mat and Reformer), including prenatal Pilates",
       "Classes are tailored to your trimester, symptoms, comfort level and mobility goals",
       "You receive practical strategies you can use daily, not only during the class",
       "Small group sizes ensure personalized attention and safe progression",

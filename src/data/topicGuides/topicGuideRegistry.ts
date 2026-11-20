@@ -9,8 +9,14 @@ import {
   guideUniquenessOverrideForSlug,
 } from "./guideUniquenessOverrides";
 import { isTopicGuideIndexable } from "./topicGuideSitemapPaths";
+import {
+  GUIDE_SET_APPROVED_SLUGS,
+  GUIDE_SET_REVIEWED_ON,
+  GUIDE_SET_REVIEWERS,
+} from "./clinicalApproval2026-11-20";
 import { TOPIC_GUIDE_ROWS } from "./topicGuideRows";
 import type {
+  TopicGuideAuthorId,
   TopicGuideClusterId,
   TopicGuidePageModel,
   TopicGuideReviewHoldStatus,
@@ -30,13 +36,29 @@ export const TOPIC_GUIDE_REVIEW_HOLDS: ReadonlyMap<string, TopicGuideReviewHoldS
 /**
  * Resolve editorial gate for one guide.
  * Precedence: `TOPIC_GUIDE_REVIEW_HOLDS` → explicit row `reviewStatus` → default `pending`.
- * Never invent `approved` (or review dates / author stamps) without per-row confirmation.
+ * The 20 November 2026 set in `clinicalApproval2026-11-20.ts` is applied in `buildGuideModel`.
+ * A new slug stays pending until it is added to that list.
  */
 export function resolveTopicGuideReviewStatus(row: TopicGuideRow): TopicGuideReviewStatus {
   const hold = TOPIC_GUIDE_REVIEW_HOLDS.get(row.slug);
   if (hold) return hold;
   if (row.reviewStatus) return row.reviewStatus;
   return "pending";
+}
+
+/** Keep any recorded order, then add the topic lead, then both approving doctors. */
+function reviewersForApprovedGuide(
+  existing: readonly TopicGuideAuthorId[],
+  lead: "charmi" | "zalak" | "both",
+): TopicGuideAuthorId[] {
+  const ordered: TopicGuideAuthorId[] = [];
+  const push = (id: TopicGuideAuthorId) => {
+    if (!ordered.includes(id)) ordered.push(id);
+  };
+  for (const id of existing) push(id);
+  if (lead === "charmi" || lead === "zalak") push(lead);
+  for (const id of GUIDE_SET_REVIEWERS) push(id);
+  return ordered;
 }
 const QUESTION_FIRST = new Set([
   "what",
@@ -393,9 +415,21 @@ function buildGuideModel(row: TopicGuideRow): TopicGuidePageModel {
     published?.faqs ?? buildTopicGuideFaqs(row.slug, title, consult, cc.faqPool, row.faqIds);
   const path = publicPathname(`/${row.slug}`);
   const relatedSlugs = computeRelated(row, BY_CLUSTER);
-  const reviewerIds = published?.reviewerIds?.length ? published.reviewerIds : undefined;
   const hold = TOPIC_GUIDE_REVIEW_HOLDS.get(row.slug);
-  const reviewStatus = hold ?? (reviewerIds ? "approved" : resolveTopicGuideReviewStatus(row));
+  const setApproved = !hold && GUIDE_SET_APPROVED_SLUGS.has(row.slug);
+  const recordedReviewers = [
+    ...(published?.reviewerIds ?? []),
+    ...(published?.reviewerId ? [published.reviewerId] : []),
+    ...(row.reviewerId ? [row.reviewerId] : []),
+  ];
+  const reviewerIds = setApproved
+    ? reviewersForApprovedGuide(recordedReviewers, consult)
+    : published?.reviewerIds?.length
+      ? [...published.reviewerIds]
+      : undefined;
+  const reviewStatus =
+    hold ?? (setApproved || reviewerIds?.length ? "approved" : resolveTopicGuideReviewStatus(row));
+  const reviewedAt = setApproved ? GUIDE_SET_REVIEWED_ON : undefined;
 
   // Unique calendar body when publicationStatus is published.
   // Drafts keep the live cluster/uniqueness scaffold.
@@ -428,6 +462,7 @@ function buildGuideModel(row: TopicGuideRow): TopicGuidePageModel {
     authorId: published?.authorId ?? row.authorId,
     reviewerId: published?.reviewerId ?? row.reviewerId,
     reviewerIds,
+    reviewedAt,
     publishedAt: published?.publishedAt ?? row.publishedAt,
     reviewStatus,
     references,

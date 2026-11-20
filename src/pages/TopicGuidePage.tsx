@@ -144,6 +144,7 @@ export function TopicGuidePage() {
           datePublished: guide.publishedAt,
           authorId: approved ? guide.authorId : undefined,
           reviewerIds: approved ? guide.reviewerIds : undefined,
+          dateModified: approved ? guide.reviewedAt : undefined,
           imageUrls,
         }),
       );
@@ -196,6 +197,7 @@ export function TopicGuidePage() {
   const authorName = guide.authorId ? DOCTOR_BY_SLUG[guide.authorId]?.name : undefined;
   const reviewers = showEditorialByline ? (guide.reviewerIds ?? []) : [];
   const publishedLabel = formatGuideDate(guide.publishedAt);
+  const reviewedLabel = formatGuideDate(guide.reviewedAt);
 
   return (
     <PageShell breadcrumbs={crumbs}>
@@ -228,7 +230,11 @@ export function TopicGuidePage() {
                 Medically reviewed by <DoctorNameList slugs={reviewers} />
               </>
             ) : null}
-            {publishedLabel ? `. Published ${publishedLabel}` : null}.
+            {reviewedLabel && publishedLabel && reviewedLabel !== publishedLabel
+              ? `. Last reviewed ${reviewedLabel}`
+              : null}
+            {publishedLabel ? `. Published ${publishedLabel}` : null}
+            {reviewedLabel && !publishedLabel ? ` on ${reviewedLabel}` : null}.
           </p>
         ) : publishedLabel ? (
           <p className="text-sm text-muted-foreground leading-relaxed mb-4">

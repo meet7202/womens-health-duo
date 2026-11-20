@@ -1,5 +1,7 @@
 # Clinician review — 20 November 2026 audit
 
+On the evening of 20 November 2026 both doctors approved the full live topic-guide set for the byline: medically reviewed by Dr. Charmi Shah and Dr. Zalak Shah, last reviewed 20 November 2026. That list is `src/data/topicGuides/clinicalApproval2026-11-20.ts`. Open wording questions below were not rewritten.
+
 The 13 refreshed drafts below were signed off on 20 November 2026 and published that day, reviewed by Dr. Zalak Shah and Dr. Charmi Shah. The other rows in this file are still unsigned. Contested wording stays off new live pages until a named clinician signs that row.
 
 The diastasis recti article (`/what-is-diastasis-recti/`) shows “Medically reviewed by Dr. Zalak Shah (PT) and Dr. Charmi Shah” because `reviewerIds` are set. It has no `authorId`, so there is no “Written by” line. That is intentional. Do not invent an author.
