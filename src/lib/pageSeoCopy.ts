@@ -2,6 +2,7 @@
  * Shared document titles and on-page H1 strings for static shells and React pages.
  * Must not use `@/` imports (imported from `staticShellHead.ts` in Node).
  */
+import { CONTACT } from "../config/site.defaults";
 import { DOCUMENT_TITLE_MAX_LEN, formatDocumentTitle } from "./seoTitle";
 import { capMetaDescription, LEARN_WATCH_META_FALLBACK } from "./seoDescription";
 import type { LearnHubParsed } from "./learnHubUrls";
@@ -22,11 +23,15 @@ export function homeSectionDocumentTitle(label: string): string {
 }
 
 export function virtualHubDocumentTitle(): string {
-  return formatDocumentTitle("Online OB-GYN & physio worldwide");
+  return formatDocumentTitle("Online gynecologist & physio consult");
 }
 
 export function virtualHubH1(): string {
-  return "Virtual online consultations";
+  return "Online gynecologist and physiotherapy consults";
+}
+
+export function virtualHubMetaDescription(): string {
+  return `Online gynecologist consultation with Dr. Charmi Shah and online physiotherapy with Dr. Zalak Shah. Video worldwide. WhatsApp ${CONTACT.phoneE164}.`;
 }
 
 export function virtualCountryDocumentTitle(country: string): string {
@@ -243,7 +248,7 @@ export function indiaCityDocumentTitle(
     case "mumbai":
       return formatDocumentTitle("Gynecologist & IVF in Mumbai");
     case "valsad":
-      return formatDocumentTitle("Gynecologist in Valsad: Dr. Charmi Shah");
+      return formatDocumentTitle("Gynecology in Valsad: Dr. Charmi Shah");
     case "ahmedabad":
       return formatDocumentTitle("Ahmedabad OB-GYN, Physio & Pilates");
     default:

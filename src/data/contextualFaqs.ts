@@ -878,9 +878,9 @@ export function virtualCountryFaqs(country: string): FaqItem[] {
 export function virtualHubFaqs(): FaqItem[] {
   return take10([
     {
-      question: "What is this Virtual online consultations hub page?",
+      question: "Can I book an online gynecologist or physiotherapy consult here?",
       answer:
-        "This hub is the top-level directory of city and country URLs for patients abroad who want India-trained women's health clinicians by video, OB-GYN, IVF discussion, physio, and STOTT/Mat Pilates online. Start here, then drill into a city or country page.",
+        "Yes. An online gynecologist consultation is with Dr. Charmi Shah (OB-GYN, IVF, and laparoscopy). An online physiotherapy consultation is with Dr. Zalak Shah (PT), including pelvic floor, prenatal and postnatal physiotherapy, and Pilates. Pick your city below, then the service. The visit is by video from India.",
     },
     {
       question: "How do I start from this hub page?",

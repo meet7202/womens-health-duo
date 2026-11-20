@@ -99,7 +99,7 @@ const SERVICES: readonly ServiceTemplate[] = [
     bookingService: "antenatal-postnatal-care",
     onlineSlug: "antenatal-postnatal-care",
     intro:
-      "In-person prenatal classes for pregnancy movement, birth preparation, and pelvic-floor awareness. Dr. Zalak Shah (PT) teaches them. This is physiotherapy-led education, not an obstetric visit.",
+      "In-person prenatal classes and prenatal physiotherapy for pregnancy movement, birth preparation, and pelvic-floor awareness. Dr. Zalak Shah (PT) teaches them in Ahmedabad and Bangalore. This is physiotherapy-led education, not an obstetric visit.",
     covers: [
       "Trimester-by-trimester movement that is comfortable for your pregnancy",
       "Positions and breathing to practise before labour",
@@ -153,7 +153,7 @@ const SERVICES: readonly ServiceTemplate[] = [
     slug: "pelvic-floor-physiotherapy",
     doctor: "zalak",
     cities: ["ahmedabad", "bangalore"],
-    titleLead: "Pelvic floor physio",
+    titleLead: "Pelvic floor physiotherapy",
     h1Lead: "Pelvic floor physiotherapy with Dr. Zalak Shah",
     analyticsService: "incontinence",
     bookingService: "pelvic-floor-rehabilitation",

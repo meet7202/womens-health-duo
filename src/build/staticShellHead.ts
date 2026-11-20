@@ -85,6 +85,7 @@ import {
   virtualCountryH1,
   virtualHubDocumentTitle,
   virtualHubH1,
+  virtualHubMetaDescription,
 } from "../lib/pageSeoCopy";
 import {
   VIRTUAL_CONSULTATION_HUB_PATH,
@@ -98,7 +99,7 @@ import { githubPagesAbsoluteUrl } from "../lib/githubPagesPublicUrl";
 import { knowledgeHubPosterAlt, knowledgeHubVideoThumbnailAbsolute } from "../lib/mediaSeo";
 import { capMetaDescription } from "../lib/seoDescription";
 
-const VIRTUAL_HUB_DESCRIPTION = `Video visits from India with Dr. Charmi Shah (OB-GYN, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapy, Mat Pilates online, STOTT Pilates on Mat and Reformer). We serve families in India and abroad, pick your city below, then choose the type of care. ${PRACTICE_BOTH_DOCTORS_IN_PERSON} See each doctor's profile for hours and how to book.`;
+const VIRTUAL_HUB_DESCRIPTION = virtualHubMetaDescription();
 
 const FAQ_DESCRIPTION =
   "Frequently asked questions about Women's Health Duo: Dr. Charmi Shah (OB-GYN, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapy, Mat Pilates online, STOTT Pilates), cities served, and online consultations.";

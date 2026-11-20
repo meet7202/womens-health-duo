@@ -94,10 +94,10 @@ export const CITY_PAGES: Record<CityKey, CityPageData> = {
     cityName: "Valsad",
     title: "Women's Health Duo in Valsad | OB-GYN, IVF & Laparoscopy",
     metaDescription:
-      "Gynecologist in Valsad: Dr. Charmi Shah (MBBS, MS OB-GYN) for pregnancy, PCOS, IVF and laparoscopy, in person and online. WhatsApp +917990550754.",
-    h1: "Gynecologist and IVF specialist in Valsad",
+      "Gynecology in Valsad with Dr. Charmi Shah, gynecologist for pregnancy, PCOS, IVF and laparoscopy, in person. WhatsApp +917990550754.",
+    h1: "Gynecologist in Valsad",
     intro:
-      "In Valsad, Dr. Charmi Shah sees women in person as a gynecologist and obstetrician (MBBS, MS Obstetrics & Gynecology, with fellowship training in laparoscopy and IVF). Visits cover pregnancy and high-risk pregnancy care, period and hormone problems such as PCOS, fertility evaluation with IUI and IVF pathways, and laparoscopic surgery when it is indicated. Families who live away from Gujarat can start with an online consult and plan in-person visits around their trips. Dr. Zalak Shah's physiotherapy and STOTT Pilates work is available online worldwide and in person in Bangalore and Ahmedabad.",
+      "Gynecology in Valsad is with Dr. Charmi Shah, a gynecologist and obstetrician (MBBS, MS Obstetrics & Gynecology, with fellowship training in laparoscopy and IVF). She sees patients in person for periods, pelvic pain, pregnancy and high-risk pregnancy, PCOS, fertility evaluation with IUI and IVF, and laparoscopic surgery when it is indicated. Families who live away from Gujarat can start with an online consult and plan an in-person visit around a trip. Dr. Zalak Shah's physiotherapy is online worldwide and in person in Bangalore and Ahmedabad.",
     doctors: [
       {
         name: "Dr. Charmi Shah",
@@ -111,7 +111,7 @@ export const CITY_PAGES: Record<CityKey, CityPageData> = {
       },
     ],
     highlights: [
-      "OB-GYN-led pregnancy and high-risk obstetrics planning",
+      "Gynecology visits in Valsad for periods, pregnancy, PCOS, and routine care",
       "IVF, IUI, and infertility evaluation consults",
       "Laparoscopic surgery for fibroids, endometriosis, cysts, and related conditions when indicated",
       "Same practice contact channels for both sisters (phone, WhatsApp, email)",
@@ -124,10 +124,10 @@ export const CITY_PAGES: Record<CityKey, CityPageData> = {
     cityName: "Bengaluru (Bangalore)",
     title: "Women's Health Duo in Bangalore | Women's Health Physio & STOTT Pilates",
     metaDescription:
-      "Women's health physiotherapy and STOTT Pilates in Bengaluru with Dr. Zalak Shah (PT): pelvic floor, prenatal, postnatal, diastasis recti. Book on WhatsApp.",
+      "Pelvic floor physiotherapy and prenatal physiotherapy in Bengaluru with Dr. Zalak Shah (PT), plus postnatal care and Pilates. WhatsApp +917990550754.",
     h1: "Women's health physiotherapy and Pilates in Bengaluru (Bangalore)",
     intro:
-      "In Bengaluru (Bangalore), Dr. Zalak Shah (PT) sees women in person for women's health physiotherapy and STOTT Pilates on Mat and Reformer. Care covers pelvic floor rehabilitation, prenatal and postnatal physiotherapy, diastasis recti, and musculoskeletal rehab for women. Visits are by appointment, and follow-up sessions can continue online. When you need medical input, Dr. Charmi Shah (OB-GYN, IVF and laparoscopy) consults online and sees patients in person in Mumbai, Ahmedabad and Valsad.",
+      "Pelvic floor physiotherapy in Bangalore and prenatal physiotherapy are with Dr. Zalak Shah (PT), in person in Bengaluru. She also sees women for postnatal physiotherapy, diastasis recti, and Pilates on Mat and Reformer. Visits are by appointment, and follow-up can continue online. When you need medical input, Dr. Charmi Shah (OB-GYN, IVF and laparoscopy) consults online and sees patients in person in Mumbai, Ahmedabad and Valsad.",
     doctors: [
       {
         name: "Dr. Zalak Shah (PT)",
