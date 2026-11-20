@@ -1,7 +1,7 @@
 {
   "timezone": "Asia/Kolkata",
   "generatedAt": "2026-11-18T17:14:14.210Z",
-  "note": "All 52 articles published 2026-11-19 as patient education. Clinical approval recorded 2026-11-18. Image approval re-recorded 2026-11-19, including the question-style explainer cards. Reviewed by Dr. Zalak Shah and Dr. Charmi Shah, approved as written. The 13 refreshed drafts were clinically approved and published 2026-11-20. What-is-pilates (W35-Z) stays in clinical review. Image approval for the 13 remains pending.",
+  "note": "All 52 articles published 2026-11-19 as patient education. Clinical approval recorded 2026-11-18. Image approval re-recorded 2026-11-19, including the question-style explainer cards. Reviewed by Dr. Zalak Shah and Dr. Charmi Shah, approved as written. The 13 refreshed drafts were clinically approved and published 2026-11-20. On 21 November 2026 the owner recorded both doctors' approval of what-is-pilates (W35-Z), published that day, and of every article image.",
   "articles": [
     {
       "id": "W01-Z",
@@ -1113,11 +1113,17 @@
       "slug": "what-is-pilates",
       "action": "New",
       "scheduledAt": "2026-11-20T09:00:00+05:30",
-      "publicationStatus": "in_clinical_review",
+      "publicationStatus": "published",
       "imageApproval": "approved",
-      "clinicalApproval": "pending",
+      "clinicalApproval": "approved",
       "proposedLeadId": "zalak",
-      "imageApprovedOn": "2026-11-20"
+      "imageApprovedOn": "2026-11-21",
+      "actualPublishDate": "2026-11-21",
+      "clinicalReviewers": [
+        "zalak",
+        "charmi"
+      ],
+      "clinicalApprovedOn": "2026-11-21"
     }
   ],
   "ownerPublishDate": "2026-11-19"

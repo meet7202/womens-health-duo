@@ -778,5 +778,17 @@
       "width": 1600,
       "height": 1067
     }
+  ],
+  "W35-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
   ]
 }

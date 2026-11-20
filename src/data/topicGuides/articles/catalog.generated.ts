@@ -76,7 +76,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Leakage with coughing, sneezing or exercise (stress urinary incontinence) happens when abdominal pressure briefly exceeds bladder outlet support.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/why-do-i-leak-urine-when-i-cough/why-do-i-leak-urine-when-i-cough-anatomy.webp",
@@ -93,7 +93,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -229,7 +229,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Irregular periods often reflect changes in ovulation; recording dates helps your gynaecologist see your own pattern.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/why-are-my-periods-irregular/why-are-my-periods-irregular-anatomy.webp",
@@ -246,7 +246,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -404,7 +404,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Moderate activity such as walking is commonly discussed in pregnancy; your maternity team confirms what suits your pregnancy.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/is-exercise-safe-during-pregnancy/is-exercise-safe-during-pregnancy-anatomy.webp",
@@ -421,7 +421,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -567,7 +567,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "PCOS, now renamed PMOS (polyendocrine metabolic ovarian syndrome), can involve irregular ovulation, androgen-related symptoms and metabolic features. An ultrasound is only one part of assessment.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/what-is-pcos/what-is-pcos-anatomy.webp",
@@ -584,7 +584,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -721,7 +721,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Returning to exercise after birth is gradual: pelvic floor and abdominal recovery guide progression more than a fixed date.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/when-can-i-exercise-after-delivery/when-can-i-exercise-after-delivery-anatomy.webp",
@@ -738,7 +738,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -876,7 +876,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "A preconception review covers health history, medicines, vaccinations and supplements before trying to conceive.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/what-is-preconception-planning/what-is-preconception-planning-anatomy.webp",
@@ -893,7 +893,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -1026,7 +1026,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Diastasis recti is widening of the linea alba between the two rectus abdominis muscles, common after pregnancy.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/what-is-diastasis-recti/what-is-diastasis-recti-anatomy.webp",
@@ -1043,7 +1043,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -1181,7 +1181,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Ovulation tracking methods estimate when an egg is released; irregular cycles make estimates less certain.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/how-to-track-ovulation/how-to-track-ovulation-anatomy.webp",
@@ -1198,7 +1198,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -1354,7 +1354,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "STOTT Pilates is a contemporary Pilates method taught on the mat and on equipment such as the reformer.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/what-is-stott-pilates/what-is-stott-pilates-anatomy.webp",
@@ -1371,7 +1371,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -1505,7 +1505,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "PCOS can present with acne, excess hair or scalp hair thinning even when periods seem regular.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/symptoms-of-pcos/symptoms-of-pcos-anatomy.webp",
@@ -1522,7 +1522,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -1663,7 +1663,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Kegels are pelvic floor muscle contractions; relaxing the muscles fully matters as much as squeezing.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/are-kegels-right-for-everyone/are-kegels-right-for-everyone-anatomy.webp",
@@ -1680,7 +1680,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -1820,7 +1820,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Period pain (dysmenorrhoea) that stops you working or studying deserves assessment.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/why-are-my-periods-painful/why-are-my-periods-painful-anatomy.webp",
@@ -1837,7 +1837,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -1962,7 +1962,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Back pain is common in pregnancy. Changing position often, pacing tasks and adjusting how you lift are reasonable things to try.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/how-to-relieve-back-pain-during-pregnancy/how-to-relieve-back-pain-during-pregnancy-anatomy.webp",
@@ -1979,7 +1979,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -2125,7 +2125,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Many people with PCOS conceive; the key conversation is about how regularly ovulation happens.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/can-i-get-pregnant-with-pcos/can-i-get-pregnant-with-pcos-anatomy.webp",
@@ -2142,7 +2142,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -2287,7 +2287,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "After a caesarean birth, log-rolling and supporting the abdomen can ease everyday movements while tissues heal.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/how-to-recover-after-c-section/how-to-recover-after-c-section-anatomy.webp",
@@ -2304,7 +2304,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -2434,7 +2434,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Timing for fertility evaluation depends on age, history and symptoms; both partners may be assessed.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/when-to-see-a-fertility-specialist/when-to-see-a-fertility-specialist-anatomy.webp",
@@ -2451,7 +2451,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -2588,7 +2588,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "A self-check can show how the midline feels, but it cannot diagnose diastasis recti or rule out a hernia.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/how-to-check-for-diastasis-recti/how-to-check-for-diastasis-recti-anatomy.webp",
@@ -2605,7 +2605,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -2752,7 +2752,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Folic acid taken before conception and in early pregnancy lowers the risk of neural tube defects. Some people need a higher, prescribed dose.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/folic-acid-before-pregnancy/folic-acid-before-pregnancy-anatomy.webp",
@@ -2769,7 +2769,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -2906,7 +2906,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "The pelvic floor is a group of muscles across the base of the pelvis supporting the bladder, uterus and bowel.",
         width: 1600,
         height: 2400,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/what-is-the-pelvic-floor/what-is-the-pelvic-floor-anatomy.webp",
@@ -2923,7 +2923,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -3069,7 +3069,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Heavy periods (menorrhagia) can cause tiredness and affect daily life; clots and flooding warrant review.",
         width: 1600,
         height: 1280,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/what-causes-heavy-periods/what-causes-heavy-periods-anatomy.webp",
@@ -3086,7 +3086,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -3220,7 +3220,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Pelvic girdle pain often flares with asymmetric movements such as getting out of a car.",
         width: 1600,
         height: 1906,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/how-to-relieve-pelvic-pain-during-pregnancy/how-to-relieve-pelvic-pain-during-pregnancy-anatomy.webp",
@@ -3237,7 +3237,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -3362,7 +3362,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "AMH reflects ovarian reserve — the number of follicles — not egg quality.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/amh-test-fertility/amh-test-fertility-anatomy.webp",
@@ -3379,7 +3379,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -3521,7 +3521,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Leaking urine after childbirth is common and treatable; pelvic floor physiotherapy is a first-line option.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/why-am-i-leaking-urine-after-childbirth/why-am-i-leaking-urine-after-childbirth-anatomy.webp",
@@ -3538,7 +3538,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -3691,7 +3691,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Daily PCOS management includes nutrition, movement, sleep and stress — chosen to fit your life.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/how-to-manage-pcos-naturally/how-to-manage-pcos-naturally-anatomy.webp",
@@ -3708,7 +3708,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -3845,7 +3845,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Diastasis recti often improves in the months after birth; physiotherapy guides function-based progress.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/can-diastasis-recti-heal-naturally/can-diastasis-recti-heal-naturally-anatomy.webp",
@@ -3862,7 +3862,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -4004,7 +4004,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "After a positive test, book early antenatal care and review medicines and folic acid.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/positive-pregnancy-test-next-steps/positive-pregnancy-test-next-steps-anatomy.webp",
@@ -4021,7 +4021,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -4163,7 +4163,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Bladder, bowel, pain and activity symptoms together help decide if a pelvic floor assessment is needed.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/how-do-i-know-if-my-pelvic-floor-is-weak/how-do-i-know-if-my-pelvic-floor-is-weak-anatomy.webp",
@@ -4180,7 +4180,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -4337,7 +4337,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Endometriosis is tissue similar to the womb lining growing outside the uterus, often causing painful periods.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/endometriosis-symptoms-diagnosis/endometriosis-symptoms-diagnosis-anatomy.webp",
@@ -4354,7 +4354,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -4503,7 +4503,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Exercise is adapted through each trimester as the body and comfort change.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/pregnancy-exercises-by-trimester/pregnancy-exercises-by-trimester-anatomy.webp",
@@ -4520,7 +4520,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -4658,7 +4658,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "IVF steps include ovarian stimulation, egg retrieval, fertilisation, embryo culture and embryo transfer.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/what-is-ivf/what-is-ivf-anatomy.webp",
@@ -4675,7 +4675,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -4807,7 +4807,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Postpartum recovery is gradual and individual; function and support needs guide milestones.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/how-long-does-postpartum-recovery-take/how-long-does-postpartum-recovery-take-anatomy.webp",
@@ -4824,7 +4824,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -4988,7 +4988,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Insulin resistance is common in PCOS and can be influenced by activity, sleep and nutrition.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/pcos-insulin-resistance/pcos-insulin-resistance-anatomy.webp",
@@ -5005,7 +5005,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -5149,7 +5149,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Rebuilding core strength after pregnancy starts with breathing, pelvic floor and deep abdominal coordination.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/how-to-rebuild-core-after-pregnancy/how-to-rebuild-core-after-pregnancy-anatomy.webp",
@@ -5166,7 +5166,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -5300,7 +5300,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "A late period with a negative test may reflect testing too early, delayed ovulation or other causes.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/late-period-negative-pregnancy-test/late-period-negative-pregnancy-test-anatomy.webp",
@@ -5317,7 +5317,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -5474,7 +5474,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Pelvic floor muscle training supervised by a physiotherapist is a first-line treatment for stress urinary incontinence.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/can-pelvic-floor-therapy-help-with-bladder-leakage/can-pelvic-floor-therapy-help-with-bladder-leakage-anatomy.webp",
@@ -5491,7 +5491,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -5637,7 +5637,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "IUI and IVF differ in where fertilisation happens and how much monitoring is involved.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/iui-vs-ivf/iui-vs-ivf-anatomy.webp",
@@ -5654,7 +5654,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -5795,7 +5795,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Prenatal physiotherapy addresses pregnancy-related pain, pelvic floor and movement concerns.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/what-is-prenatal-physiotherapy/what-is-prenatal-physiotherapy-anatomy.webp",
@@ -5812,7 +5812,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -5947,7 +5947,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Nausea and vomiting are common in early pregnancy; inability to keep fluids down needs medical care.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/pregnancy-nausea-when-to-seek-care/pregnancy-nausea-when-to-seek-care-anatomy.webp",
@@ -5964,7 +5964,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -6093,7 +6093,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Feeding, lifting and carrying positions can contribute to back pain after pregnancy.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/postpartum-back-pain/postpartum-back-pain-anatomy.webp",
@@ -6110,7 +6110,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -6245,7 +6245,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "PMDD causes severe mood symptoms in the days before a period that improve after it starts.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/what-is-pmdd/what-is-pmdd-anatomy.webp",
@@ -6262,7 +6262,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -6407,7 +6407,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Prenatal Pilates is adapted to your pregnancy; tell the instructor about pain, bleeding or pelvic symptoms.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/is-pilates-safe-during-pregnancy/is-pilates-safe-during-pregnancy-anatomy.webp",
@@ -6424,7 +6424,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -6563,7 +6563,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Bring cycle history, previous tests and both partners' medical history to the first fertility visit.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/first-fertility-appointment-tests/first-fertility-appointment-tests-anatomy.webp",
@@ -6580,7 +6580,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -6720,7 +6720,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Breathing techniques can support comfort and focus during labour alongside other pain-relief options.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/breathing-exercises-for-labour/breathing-exercises-for-labour-anatomy.webp",
@@ -6737,7 +6737,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -6868,7 +6868,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Egg quality depends largely on age; be cautious of products promising to improve it.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/how-to-improve-egg-quality/how-to-improve-egg-quality-anatomy.webp",
@@ -6885,7 +6885,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -7028,7 +7028,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Painful sex (dyspareunia) deserves a respectful assessment; examination happens only with your consent.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/can-pelvic-floor-therapy-help-with-painful-intercourse/can-pelvic-floor-therapy-help-with-painful-intercourse-anatomy.webp",
@@ -7045,7 +7045,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -7194,7 +7194,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Bleeding in early pregnancy should be discussed promptly; heavy bleeding or severe pain needs urgent care.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/bleeding-in-early-pregnancy/bleeding-in-early-pregnancy-anatomy.webp",
@@ -7211,7 +7211,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -7328,7 +7328,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Postnatal Pilates is started after checking pelvic floor and abdominal recovery.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/pilates-after-pregnancy/pilates-after-pregnancy-anatomy.webp",
@@ -7345,7 +7345,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -7502,7 +7502,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "After an unsuccessful IVF cycle, a review appointment can go through what happened and options.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/after-unsuccessful-ivf-cycle/after-unsuccessful-ivf-cycle-anatomy.webp",
@@ -7519,7 +7519,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -7651,7 +7651,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "A feeling of heaviness or a bulge can be pelvic organ prolapse; assessment guides options.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/pelvic-organ-prolapse/pelvic-organ-prolapse-anatomy.webp",
@@ -7668,7 +7668,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -7810,7 +7810,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Perimenopause can bring cycle changes, hot flushes, sleep and mood changes.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/perimenopause-symptoms/perimenopause-symptoms-anatomy.webp",
@@ -7827,7 +7827,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -7958,7 +7958,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "A first pelvic health appointment starts with your history and goals; examination is always optional and consented.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/what-happens-during-a-physiotherapy-session/what-happens-during-a-physiotherapy-session-anatomy.webp",
@@ -7975,7 +7975,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -8124,7 +8124,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "HRT decisions weigh symptoms, personal risks and preferences with your doctor.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/menopause-hrt-questions/menopause-hrt-questions-anatomy.webp",
@@ -8141,7 +8141,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -8269,7 +8269,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "PMS symptoms tend to build in the days before bleeding and ease once a period is underway. A two-cycle diary shows whether that pattern repeats.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/what-is-pms/what-is-pms-anatomy.webp",
@@ -8278,7 +8278,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "The useful clue is timing: symptoms that arrive before bleeding and settle afterwards, rather than a single hormone test.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/what-is-pms/what-is-pms-explainer.svg",
@@ -8286,7 +8286,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -8409,7 +8409,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Hormonal imbalance is a broad phrase. A visit looks for a named pattern, such as cycle changes, thyroid disease or menopause, rather than one panel.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/what-is-hormonal-imbalance/what-is-hormonal-imbalance-anatomy.webp",
@@ -8418,7 +8418,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Thyroid disease, ovarian cycle changes and menopause can feel similar and still need different assessments.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/what-is-hormonal-imbalance/what-is-hormonal-imbalance-explainer.svg",
@@ -8426,7 +8426,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -8549,7 +8549,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Conception is more likely with sex every few days across the fertile part of the cycle than with one predicted day.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/how-to-improve-fertility/how-to-improve-fertility-anatomy.webp",
@@ -8558,7 +8558,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "In an ovulatory cycle a follicle matures and releases an egg. Timing advice follows that pattern and does not replace a fertility assessment.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/how-to-improve-fertility/how-to-improve-fertility-explainer.svg",
@@ -8566,7 +8566,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -8689,7 +8689,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Stress can disturb sleep, cycles or the strain of trying. It does not explain every cause of infertility.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/can-stress-affect-fertility/can-stress-affect-fertility-anatomy.webp",
@@ -8698,7 +8698,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "A clinician separates cycle disruption that may follow stress from medical causes that need their own tests.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/can-stress-affect-fertility/can-stress-affect-fertility-explainer.svg",
@@ -8706,7 +8706,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -8830,7 +8830,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Some bleeding, pain, fever and pregnancy symptoms need same-day or emergency care. Others can wait for a booked gynaecology visit.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/symptoms-women-should-never-ignore/symptoms-women-should-never-ignore-anatomy.webp",
@@ -8839,7 +8839,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Where a symptom sits, and how fast it starts, changes whether care should be urgent or booked.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/symptoms-women-should-never-ignore/symptoms-women-should-never-ignore-explainer.svg",
@@ -8847,7 +8847,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -8970,7 +8970,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Women's health physiotherapy looks at bladder, bowel, pelvic floor and abdominal symptoms alongside medical care.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/what-is-womens-health-physiotherapy/what-is-womens-health-physiotherapy-anatomy.webp",
@@ -8979,7 +8979,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "A session is trying to find which muscles, habits or scars relate to the symptom. An internal examination is not required to start.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/what-is-womens-health-physiotherapy/what-is-womens-health-physiotherapy-explainer.svg",
@@ -8987,7 +8987,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -9110,7 +9110,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Video can cover history, movement coaching and Mat Pilates. It cannot replace a hands-on examination.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/online-womens-health-physiotherapy/online-womens-health-physiotherapy-anatomy.webp",
@@ -9119,7 +9119,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Coaching and education travel over video. Prolapse assessment and other hands-on checks need a room.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/online-womens-health-physiotherapy/online-womens-health-physiotherapy-explainer.svg",
@@ -9127,7 +9127,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -9250,7 +9250,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Pelvic floor dysfunction is a group of symptoms, not one diagnosis. Tightening and releasing are different jobs.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/what-is-pelvic-floor-dysfunction/what-is-pelvic-floor-dysfunction-anatomy.webp",
@@ -9259,7 +9259,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "The pelvic floor has to lift and hold, and also let go. Symptoms alone do not show which job is struggling.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/what-is-pelvic-floor-dysfunction/what-is-pelvic-floor-dysfunction-explainer.svg",
@@ -9267,7 +9267,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -9390,7 +9390,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Pelvic pain has many causes, including cycle-related pain, endometriosis, muscle pain and scars. A normal scan does not end the assessment.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/pelvic-pain-in-women/pelvic-pain-in-women-anatomy.webp",
@@ -9399,7 +9399,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Pain felt in the pelvis can come from the uterus, ovaries, bowel, bladder, muscles or scars. The location alone does not name the cause.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/pelvic-pain-in-women/pelvic-pain-in-women-explainer.svg",
@@ -9407,7 +9407,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -9530,7 +9530,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Frequent urination needs an infection and other medical causes checked before it is treated as a pelvic floor problem.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/frequent-urination-in-women/frequent-urination-in-women-anatomy.webp",
@@ -9539,7 +9539,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Urgency without infection can involve bladder sensation and pelvic floor coordination. Drinking less is not the first fix.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/frequent-urination-in-women/frequent-urination-in-women-explainer.svg",
@@ -9547,7 +9547,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -9670,7 +9670,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Pelvic pain after birth can come from joints, a scar, or the pelvic floor. It is not one injury, and six weeks is not a finish line.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/postpartum-pelvic-pain/postpartum-pelvic-pain-anatomy.webp",
@@ -9679,7 +9679,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "After birth, the pelvic joints and the pelvic floor can each be a source of pain, and a scar can add to it. A physiotherapist looks at them separately.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/postpartum-pelvic-pain/postpartum-pelvic-pain-explainer.svg",
@@ -9687,7 +9687,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -9810,7 +9810,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Back and pelvic aches are common as posture and weight shift in pregnancy. Some symptoms still need same-day maternity care.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/common-pregnancy-discomforts/common-pregnancy-discomforts-anatomy.webp",
@@ -9819,7 +9819,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "As the bump grows, the spine and pelvic joints carry weight differently. That explains many aches and does not explain bleeding, fluid loss or reduced movements.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/common-pregnancy-discomforts/common-pregnancy-discomforts-explainer.svg",
@@ -9827,7 +9827,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -9950,7 +9950,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "An online class can coach form and breathing. It cannot examine the pelvic floor or confirm that a diastasis has closed.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/is-online-pilates-effective/is-online-pilates-effective-anatomy.webp",
@@ -9959,7 +9959,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Mat work can train breath, posture and gentle deep-core control. Hands-on assessment is a separate step when symptoms or a gap need checking.",
         width: 1600,
         height: 1067,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       },
       {
         src: "/images/articles/is-online-pilates-effective/is-online-pilates-effective-explainer.svg",
@@ -9967,7 +9967,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
         width: 1200,
         height: 675,
-        approvalStatus: "pending"
+        approvalStatus: "approved"
       }
     ],
     references: [
@@ -10040,7 +10040,8 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
   id: "W35-Z",
   slug: "what-is-pilates",
   action: "New",
-  publicationStatus: "in_clinical_review",
+  publicationStatus: "published",
+  publishedAt: "2026-11-21",
   scheduledAt: "2026-11-20T09:00:00+05:30",
   proposedLeadId: "zalak",
   title: "What Is Pilates?",
@@ -10088,12 +10089,45 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     {
       heading: "When a class is the wrong first step",
       paragraphs: [
-        "The NHS beginners video says to get advice from a health professional first if you are unsure about your fitness, have an injury or symptoms, have had a recent operation or similar health event, or you are pregnant or recently gave birth. Stop straight away if you feel pain or become unwell. If symptoms worry you, use 111.",
+        "The NHS beginners video says to get advice from a health professional first if you are unsure about your fitness, have an injury or symptoms, have had a recent operation or similar health event, or you are pregnant or recently gave birth. Stop straight away if you feel pain or become unwell. If symptoms worry you, call your own doctor, or local emergency services if they are severe.",
         "Leaking urine, pelvic heaviness, or a new abdominal gap after birth are reasons to start with women’s health physiotherapy rather than any type of mixed class. Dr. Zalak Shah (PT) teaches Pilates, including STOTT Mat and Reformer, and she also assesses those symptoms. Joining her class is still a class, not that assessment."
       ]
     }
   ],
-  figures: [],
+  explainerCards: [
+    "Who started Pilates, and when?",
+    "What is the method meant to train?",
+    "Mat or reformer: what is the difference?",
+    "When is a class the wrong first step?"
+  ],
+  figures: [
+    {
+      src: "/images/articles/what-is-pilates/what-is-pilates-scene.webp",
+      srcSet: "/images/articles/what-is-pilates/what-is-pilates-scene-800.webp 800w, /images/articles/what-is-pilates/what-is-pilates-scene.webp 1600w",
+      alt: "Instructor guiding a small mat Pilates class with a reformer in the background",
+      caption: "Pilates comes in two main formats: mat work on the floor, and apparatus such as the reformer. A class coaches movement; it is not a physiotherapy assessment.",
+      width: 1600,
+      height: 1067,
+      approvalStatus: "approved"
+    },
+    {
+      src: "/images/articles/what-is-pilates/what-is-pilates-anatomy.webp",
+      srcSet: "/images/articles/what-is-pilates/what-is-pilates-anatomy-800.webp 800w, /images/articles/what-is-pilates/what-is-pilates-anatomy.webp 1600w",
+      alt: "Side-view diagram of a neutral spine, deep abdominal muscles and the diaphragm lying on a mat",
+      caption: "Most Pilates teaching starts with breath, spine position and control of the deep abdominal muscles before adding load or speed.",
+      width: 1600,
+      height: 1067,
+      approvalStatus: "approved"
+    },
+    {
+      src: "/images/articles/what-is-pilates/what-is-pilates-explainer.svg",
+      alt: "Mat, reformer, chair and barrel labelled as Pilates equipment types, separate from any one brand",
+      caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
+      width: 1200,
+      height: 675,
+      approvalStatus: "approved"
+    }
+  ],
   references: [
     {
       label: "Pilates Method Alliance — History of Pilates",
@@ -10147,6 +10181,10 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
   conversionCopy: "If you want a Pilates class, or you need symptoms assessed before you join one, you can book with Dr. Zalak Shah (PT).",
   conversionPath: "/book-consultation/",
   parentHubPath: "/pilates/",
+  reviewerIds: [
+    "zalak",
+    "charmi"
+  ],
   claimLedger: [
     {
       claim: "Names Joseph Hubertus Pilates, birth on 9 December 1883 in Mönchengladbach, Contrology, the late-1920s US introduction, Your Health (1934), Return to Life Through Contrology (1945), death in October 1967, and apparatus including the Universal Reformer, Trapeze Table, Wunda Chair, Magic Circle, Spine Corrector and Ladder Barrel. Also records the 2000 ruling that Pilates is a generic exercise name.",
@@ -10173,7 +10211,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
   openClinicalQuestions: [
     "Confirm with Dr. Zalak which WHD sessions are mat, reformer, classical, or specifically STOTT."
   ],
-  bodyFingerprintText: "What Is Pilates?\nJoseph Hubertus Pilates, born in Mönchengladbach in 1883, built the exercise method he called Contrology and introduced that system in the United States in the late 1920s. The NHS describes Pilates today as work for balance, posture, strength and flexibility. Types differ by format: mat work on the floor, and apparatus such as the reformer, trapeze table, chair and barrel. Classical teaching stays closer to his original order. Contemporary schools, including STOTT, adapt it. A class coaches movement. It does not examine you the way a physiotherapy visit does.\nWho started Pilates\nThe Pilates Method Alliance records that Joseph Hubertus Pilates was born in Mönchengladbach, Germany, on 9 December 1883. He taught physical culture, created a system of corrective exercise, and introduced that system to the American market in the late 1920s. He named the work Contrology. He published Your Health in 1934 and Return to Life Through Contrology in 1945. He died in October 1967, aged 83. Clara Pilates continued teaching at their New York studio.\nDancers in New York trained with him, and the signature mat series took shape while he taught at Jacob’s Pillow between 1942 and 1947. That is history of the method, not evidence that a class today will repair an injury. In 2000 a US court held that Pilates is a generic name for this kind of exercise, so one company cannot own the word as a trademark.\nWhat the method is meant to train\nAn NHS beginners video calls Pilates exercise for balance, posture, strength and flexibility, and says a basic session can suit a wide range of ages and fitness. The same page says those videos are general exercise. They are not aimed at treating one cause of pain or a named condition. Contrology, his own word, points to control of how you move, breathe and place the body. It is a teaching aim, not a promise that pain will stop.\nA separate NHS page lists pilates with stretching, yoga and tai chi as flexibility activity. It also describes muscle-strengthening work on at least two days a week for the major muscle groups. That two-day pattern is general strength guidance. It is not a Pilates prescription, and it does not say a class will fix a bad back.\nMat work, the floor type\nMat Pilates uses the floor. Body weight supplies most of the load, and a teacher may add a small ring or band. Return to Life Through Contrology is the book that set out his mat series, so this type is the one people can most often try without a studio machine. Group classes and home videos are usually mat work.\nA mat hour can still be hard. Advanced sequences ask for a lot of control. Learn a pattern with someone who can see you before you copy a long video alone. The NHS caution still applies: stop if it hurts, and get advice first if you are pregnant, newly postnatal, injured, or unsure.\nReformer, chair, barrel and other apparatus\nThe Universal Reformer is the apparatus most often linked with his name. It is a sliding carriage on springs, so the load can be lighter or heavier than body weight. The Pilates Method Alliance also lists apparatus he kept adding: the Trapeze Table, often called a Cadillac, the Wunda Chair, the Magic Circle, the Spine Corrector and the Ladder Barrel. Each one changes the support and the direction of the effort. They are types of equipment, not separate brands and not separate sports.\nYou do not need every machine to be doing Pilates. Many people only ever meet the mat or the reformer, because chairs and barrels are less common and usually need a studio. Cost, space and class size decide what is actually bookable. Ask which piece of equipment the session uses before you pay.\nClassical teaching and later schools\nClassical, or Contrology, teaching stays closer to Joseph Pilates’ original exercise order and to the apparatus he designed. Contemporary teaching keeps the exercises but uses later ideas about how joints and muscles are coached. Both can be mat or apparatus. The label tells you the school of teaching, not whether the hour is safe for you.\nSTOTT Pilates is one contemporary school, tied to Merrithew training. It is not the definition of Pilates, and this page does not rank it above other schools. How that school uses Mat and Reformer is explained on the STOTT page. If a timetable only says Pilates, ask whether it is classical or contemporary, mat or apparatus, and how a movement is changed when it does not suit you.\nWhen a class is the wrong first step\nThe NHS beginners video says to get advice from a health professional first if you are unsure about your fitness, have an injury or symptoms, have had a recent operation or similar health event, or you are pregnant or recently gave birth. Stop straight away if you feel pain or become unwell. If symptoms worry you, use 111.\nLeaking urine, pelvic heaviness, or a new abdominal gap after birth are reasons to start with women’s health physiotherapy rather than any type of mixed class. Dr. Zalak Shah (PT) teaches Pilates, including STOTT Mat and Reformer, and she also assesses those symptoms. Joining her class is still a class, not that assessment."
+  bodyFingerprintText: "What Is Pilates?\nJoseph Hubertus Pilates, born in Mönchengladbach in 1883, built the exercise method he called Contrology and introduced that system in the United States in the late 1920s. The NHS describes Pilates today as work for balance, posture, strength and flexibility. Types differ by format: mat work on the floor, and apparatus such as the reformer, trapeze table, chair and barrel. Classical teaching stays closer to his original order. Contemporary schools, including STOTT, adapt it. A class coaches movement. It does not examine you the way a physiotherapy visit does.\nWho started Pilates\nThe Pilates Method Alliance records that Joseph Hubertus Pilates was born in Mönchengladbach, Germany, on 9 December 1883. He taught physical culture, created a system of corrective exercise, and introduced that system to the American market in the late 1920s. He named the work Contrology. He published Your Health in 1934 and Return to Life Through Contrology in 1945. He died in October 1967, aged 83. Clara Pilates continued teaching at their New York studio.\nDancers in New York trained with him, and the signature mat series took shape while he taught at Jacob’s Pillow between 1942 and 1947. That is history of the method, not evidence that a class today will repair an injury. In 2000 a US court held that Pilates is a generic name for this kind of exercise, so one company cannot own the word as a trademark.\nWhat the method is meant to train\nAn NHS beginners video calls Pilates exercise for balance, posture, strength and flexibility, and says a basic session can suit a wide range of ages and fitness. The same page says those videos are general exercise. They are not aimed at treating one cause of pain or a named condition. Contrology, his own word, points to control of how you move, breathe and place the body. It is a teaching aim, not a promise that pain will stop.\nA separate NHS page lists pilates with stretching, yoga and tai chi as flexibility activity. It also describes muscle-strengthening work on at least two days a week for the major muscle groups. That two-day pattern is general strength guidance. It is not a Pilates prescription, and it does not say a class will fix a bad back.\nMat work, the floor type\nMat Pilates uses the floor. Body weight supplies most of the load, and a teacher may add a small ring or band. Return to Life Through Contrology is the book that set out his mat series, so this type is the one people can most often try without a studio machine. Group classes and home videos are usually mat work.\nA mat hour can still be hard. Advanced sequences ask for a lot of control. Learn a pattern with someone who can see you before you copy a long video alone. The NHS caution still applies: stop if it hurts, and get advice first if you are pregnant, newly postnatal, injured, or unsure.\nReformer, chair, barrel and other apparatus\nThe Universal Reformer is the apparatus most often linked with his name. It is a sliding carriage on springs, so the load can be lighter or heavier than body weight. The Pilates Method Alliance also lists apparatus he kept adding: the Trapeze Table, often called a Cadillac, the Wunda Chair, the Magic Circle, the Spine Corrector and the Ladder Barrel. Each one changes the support and the direction of the effort. They are types of equipment, not separate brands and not separate sports.\nYou do not need every machine to be doing Pilates. Many people only ever meet the mat or the reformer, because chairs and barrels are less common and usually need a studio. Cost, space and class size decide what is actually bookable. Ask which piece of equipment the session uses before you pay.\nClassical teaching and later schools\nClassical, or Contrology, teaching stays closer to Joseph Pilates’ original exercise order and to the apparatus he designed. Contemporary teaching keeps the exercises but uses later ideas about how joints and muscles are coached. Both can be mat or apparatus. The label tells you the school of teaching, not whether the hour is safe for you.\nSTOTT Pilates is one contemporary school, tied to Merrithew training. It is not the definition of Pilates, and this page does not rank it above other schools. How that school uses Mat and Reformer is explained on the STOTT page. If a timetable only says Pilates, ask whether it is classical or contemporary, mat or apparatus, and how a movement is changed when it does not suit you.\nWhen a class is the wrong first step\nThe NHS beginners video says to get advice from a health professional first if you are unsure about your fitness, have an injury or symptoms, have had a recent operation or similar health event, or you are pregnant or recently gave birth. Stop straight away if you feel pain or become unwell. If symptoms worry you, call your own doctor, or local emergency services if they are severe.\nLeaking urine, pelvic heaviness, or a new abdominal gap after birth are reasons to start with women’s health physiotherapy rather than any type of mixed class. Dr. Zalak Shah (PT) teaches Pilates, including STOTT Mat and Reformer, and she also assesses those symptoms. Joining her class is still a class, not that assessment."
 }
 
 ];
