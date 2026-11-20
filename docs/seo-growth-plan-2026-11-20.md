@@ -79,7 +79,7 @@ Each phase lists what changes, why the data supports it, and how we will know it
 - Add descriptive internal links from the homepage hero area to `/pilates/`, `/womens-health-physiotherapy/`, `/dr-zalak-shah/`, `/bangalore/` and `/ahmedabad/`.
 - Replace the share image with a 1200×630 JPEG built from the approved doctor photos already in the repo.
 - Re-check `/diastasis-recti/` after deploy; if still not indexed, fold its unique copy into the calendar diastasis article and redirect.
-- **Done:** homepage title is “Dr. Charmi & Dr. Zalak Shah: OB-GYN, Physio & Pilates”; profile titles are “Dr. Charmi Shah: Gynecologist & IVF” and “Dr. Zalak Shah (PT): Physio & Pilates” (no truncation); slug-derived guide titles now spell “Women's”; `/diastasis-recti/` is retitled “Diastasis Recti After Pregnancy” so it no longer mirrors `/what-is-diastasis-recti/`. The homepage topic cards link to the PCOS, hormones, periods, endometriosis, fertility, pregnancy-planning, physiotherapy, prenatal, postnatal, diastasis, bladder-leakage and Pilates pages instead of four identical “Learn hub” buttons (profiles and city pages were already linked). The default share image is `/images/og-womens-health-duo.jpg` (1200×630, `scripts/generate-og-image.mjs`).
+- **Done:** homepage title is “Dr. Charmi & Dr. Zalak Shah: OB-GYN, Physio & Pilates”; profile titles are “Dr. Charmi Shah: Gynecologist & IVF” and “Dr. Zalak Shah (PT): Physio & Pilates” (no truncation); slug-derived guide titles now spell “Women's”; `/diastasis-recti/` is refocused as “Diastasis Recti Physiotherapy” (assessment and rehab) so it no longer mirrors `/what-is-diastasis-recti/`. The homepage topic cards link to the PCOS, hormones, periods, endometriosis, fertility, pregnancy-planning, physiotherapy, prenatal, postnatal, diastasis, bladder-leakage and Pilates pages instead of four identical “Learn hub” buttons (profiles and city pages were already linked). The default share image is `/images/og-womens-health-duo.jpg` (1200×630, `scripts/generate-og-image.mjs`).
 - **Check:** homepage CTR on the Zalak-lane queries above; profile pages ranking for the doctor-name searches instead of the homepage.
 
 ### Phase 4 — Owner actions outside the repo
@@ -92,3 +92,17 @@ Each phase lists what changes, why the data supports it, and how we will know it
 
 - Pull clicks, impressions and position by page type through the Search Console tool and compare with the baseline above.
 - Baseline (22 Aug–18 Nov): 40 clicks, 3,237 impressions; 12 clicks outside the homepage.
+
+## Indexing and target-query pass (20 November 2026, later)
+
+Search Console URL inspection (about 70 key URLs) and 90-day query × page data:
+
+- **Indexed fine:** almost every topic guide, both profiles, Ahmedabad, Mumbai, Valsad, the physiotherapy hub, `/pilates/`, FAQ, booking and the international hub. Their problem is ranking, not indexing.
+- **Not indexed:** `/bangalore/` (Soft 404, recrawled 20 Nov against the old live copy), `/diastasis-recti/` (crawled, not indexed), Learn filter pages such as `/learn/topic/pregnancy/`, `/learn/topic/exercise/`, `/learn/topic/reels/`, `/learn/dr-zalak/topic/pilates/` (crawled or discovered, not indexed), and many watch pages (discovered or unknown).
+- **Cause on Learn:** 198 of 200 watch pages were empty JavaScript shells, and every filter page shared one intro. Fixed: indexable Learn filters and watch pages are prerendered (337 pages in total), thin or duplicate filters are `noindex, follow` and out of the sitemap, and topic pages have their own intro plus links to the written guides.
+- **`/diastasis-recti/`** is now the physiotherapy page for diastasis recti (assessment and rehab), distinct from `/what-is-diastasis-recti/`.
+- **Target queries:** the city titles and H1s now use the words people search (“gynecologist in Valsad”, “gynecologist … Mumbai”, “physio & Pilates … Ahmedabad / Bangalore”), and `/pilates/` is titled “STOTT Pilates Classes”.
+
+**Google Business Profile finding (owner action):** the “near me” queries (“pilates classes near me” at position 2.3, “women's health physiotherapist near me” 2.8, “pregnancy physiotherapy” 1.4) are reported against `http://womenshealthduo.com/`, which means the Business Profiles link to the plain-HTTP homepage. Set each listing's website to its city page: Ahmedabad → `https://womenshealthduo.com/ahmedabad/`, Bengaluru → `https://womenshealthduo.com/bangalore/`. Searchers then land on the page that matches the listing, and the clicks are attributed correctly.
+
+**After deploy:** request indexing in Search Console for `/bangalore/`, `/diastasis-recti/`, `/valsad/`, `/pilates/` and `/learn/topic/pregnancy/`, and resubmit `sitemap.xml`.

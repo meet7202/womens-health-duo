@@ -121,12 +121,12 @@ export const GUIDE_UNIQUENESS_OVERRIDES: Readonly<
     firstSectionHeading: "Bladder leakage in plain language",
   },
   "diastasis-recti": {
-    primaryQuestion: "What is diastasis recti?",
+    primaryQuestion: "How does physiotherapy help diastasis recti?",
     directAnswer:
-      "Diastasis recti is a widening between the rectus abdominis muscles that is common in pregnancy. Many people improve with time and appropriate loading; others need longer guided rehab, and surgery is uncommon and case-specific.",
+      "A women's health physiotherapist checks the width and depth of the gap along the midline, how the abdomen responds to breathing, lifting and everyday movement, and whether it domes or bulges under load. Rehab then builds breathing and pressure management, deep core and pelvic floor coordination, and gradually heavier loading, rather than avoiding all core work.",
     followOn:
-      "Gentle self-checks can hint at separation, but interpretation is easy to get wrong. Dr. Zalak Shah discusses screening strategies and graded core reloading as part of postpartum recovery education — without guaranteeing a timeline.",
-    firstSectionHeading: "What is diastasis recti?",
+      "Dr. Zalak Shah (PT) sees women for diastasis recti in person in Bengaluru and Ahmedabad and online worldwide, usually as part of postnatal recovery. Many people improve with guided rehab, but no timeline is guaranteed; a wide gap with a hernia, or symptoms that do not settle, may need review by a surgeon.",
+    firstSectionHeading: "How physiotherapy helps diastasis recti",
   },
 };
 

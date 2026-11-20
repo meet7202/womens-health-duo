@@ -269,10 +269,10 @@ export const ZALAK_GROUP_CLASS_CONTENT: Record<ZalakGroupClassKey, ZalakGroupCla
   pilates: {
     key: "pilates",
     slug: "pilates-classes",
-    title: "Pilates Classes with Dr. Zalak Shah",
+    title: "STOTT Pilates Classes: Dr. Zalak Shah",
     eyebrow: "Dr. Zalak Shah · Pilates for strength, posture and mindful movement",
     metaDescription:
-      "Book Dr. Zalak Shah's Mat Pilates and Reformer Pilates classes for posture, core strength, mobility. 1:1 and group classes online & offline in Bangalore, Ahmedabad.",
+      "STOTT Pilates classes with Dr. Zalak Shah (PT): Mat and Reformer, 1:1 or group, in person in Bangalore and Ahmedabad or online. Book on WhatsApp.",
     intro:
       "These Pilates classes combine mindful movement, core strength and body awareness for women who want to feel stronger, more balanced and more capable in everyday life. Dr. Zalak Shah integrates her women's health physiotherapy background with Pilates methodology to create safe, effective classes for all fitness levels.",
     path: ROUTES.pilates,

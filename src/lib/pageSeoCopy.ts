@@ -212,13 +212,13 @@ export function indiaCityDocumentTitle(
 ): string {
   switch (cityKey) {
     case "bangalore":
-      return formatDocumentTitle("Bangalore physio & STOTT Pilates");
+      return formatDocumentTitle("Women's Physio & Pilates in Bangalore");
     case "mumbai":
-      return formatDocumentTitle("Mumbai OB-GYN, IVF & care");
+      return formatDocumentTitle("Gynecologist & IVF in Mumbai");
     case "valsad":
-      return formatDocumentTitle("Valsad OB-GYN & IVF care");
+      return formatDocumentTitle("Gynecologist in Valsad: Dr. Charmi Shah");
     case "ahmedabad":
-      return formatDocumentTitle("Ahmedabad OB-GYN & physio");
+      return formatDocumentTitle("Ahmedabad OB-GYN, Physio & Pilates");
     default:
       return formatDocumentTitle(`${cityKey} women's health care`);
   }

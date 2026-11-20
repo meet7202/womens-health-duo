@@ -75,7 +75,7 @@ export const TOPIC_GUIDE_ROWS: TopicGuideRow[] = [
         ],
       },
       "diastasis-recti": {
-        title: "Diastasis Recti After Pregnancy",
+        title: "Diastasis Recti Physiotherapy",
         related: [
           "what-is-diastasis-recti",
           "how-to-check-for-diastasis-recti",
