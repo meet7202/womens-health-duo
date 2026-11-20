@@ -40,34 +40,54 @@ function shellPathForPathname(pathname) {
 function main() {
   const meta = JSON.parse(readDist(".sitemap-build-meta.json"));
   const primaryXml = readDist("sitemap.xml");
-  const virtualXml = readDist("sitemap-virtual-service-cities.xml");
   const videoXml = readDist("sitemap-videos.xml");
   const robots = readDist("robots.txt");
 
   const errors = [];
 
   const primaryLocs = extractLocs(primaryXml);
-  const virtualLocs = extractLocs(virtualXml);
   const videoLocs = extractLocs(videoXml);
 
   if (primaryLocs.length !== meta.primaryUrlCount) {
     errors.push(`sitemap.xml has ${primaryLocs.length} URLs, expected ${meta.primaryUrlCount}`);
   }
-  if (virtualLocs.length !== meta.virtualServiceCityUrlCount) {
-    errors.push(
-      `sitemap-virtual-service-cities.xml has ${virtualLocs.length} URLs, expected ${meta.virtualServiceCityUrlCount}`,
-    );
-  }
   if (videoLocs.length !== meta.videoUrlCount) {
     errors.push(`sitemap-videos.xml has ${videoLocs.length} URLs, expected ${meta.videoUrlCount}`);
   }
 
-  const primarySet = new Set(primaryLocs);
-  const overlap = virtualLocs.filter((loc) => primarySet.has(loc));
-  if (overlap.length > 0) {
+  if (existsSync(join(DIST, "sitemap-virtual-service-cities.xml"))) {
+    errors.push("sitemap-virtual-service-cities.xml must not be emitted (matrix is noindex)");
+  }
+  if (robots.includes("sitemap-virtual-service-cities.xml")) {
+    errors.push("robots.txt must not list sitemap-virtual-service-cities.xml");
+  }
+
+  const matrixLoc = /\/online-consultation\/(?!country\/)[^/]+\/[^/]+\/?$/;
+  const matrixInPrimary = primaryLocs.filter((loc) => matrixLoc.test(loc));
+  if (matrixInPrimary.length > 0) {
     errors.push(
-      `${overlap.length} URL(s) appear in both primary and virtual-service-cities sitemaps`,
+      `sitemap.xml lists ${matrixInPrimary.length} noindexed service×city URL(s), e.g. ${matrixInPrimary[0]}`,
     );
+  }
+
+  let matrixIndexable = 0;
+  let matrixChecked = 0;
+  const matrixSample = (meta.noindexVirtualServiceCitySample ?? []).slice(0, 25);
+  for (const pathname of matrixSample) {
+    const shell = shellPathForPathname(pathname.endsWith("/") ? pathname : `${pathname}/`);
+    if (!existsSync(shell)) {
+      errors.push(`missing static shell for noindexed matrix page ${pathname}`);
+      continue;
+    }
+    matrixChecked += 1;
+    const html = readFileSync(shell, "utf8");
+    if (!/<meta\s+name="robots"\s+content="noindex, follow"/.test(html)) matrixIndexable += 1;
+  }
+  if (matrixIndexable > 0) {
+    errors.push(`${matrixIndexable} sampled service×city shell(s) are missing noindex, follow`);
+  }
+  if ((meta.noindexVirtualServiceCityCount ?? 0) > 0 && matrixChecked === 0) {
+    errors.push("no service×city shells were sampled for noindex");
   }
 
   const contentSignal = "Content-Signal: search=yes, ai-input=yes, ai-train=no";
@@ -81,11 +101,7 @@ function main() {
     }
   }
 
-  for (const line of [
-    `${meta.siteUrl}/sitemap.xml`,
-    `${meta.siteUrl}/sitemap-virtual-service-cities.xml`,
-    `${meta.siteUrl}/sitemap-videos.xml`,
-  ]) {
+  for (const line of [`${meta.siteUrl}/sitemap.xml`, `${meta.siteUrl}/sitemap-videos.xml`]) {
     if (!robots.includes(line)) {
       errors.push(`robots.txt missing Sitemap: ${line}`);
     }
@@ -95,10 +111,7 @@ function main() {
   // and must not be required to equal the build clock (build-day stamps are not content dates).
   const today = new Date().toISOString().slice(0, 10);
   const isoDay = /^\d{4}-\d{2}-\d{2}$/;
-  for (const [label, xml] of [
-    ["sitemap.xml", primaryXml],
-    ["sitemap-virtual-service-cities.xml", virtualXml],
-  ]) {
+  for (const [label, xml] of [["sitemap.xml", primaryXml]]) {
     for (const d of extractLastmods(xml)) {
       if (!isoDay.test(d)) {
         errors.push(`${label}: invalid <lastmod> ${d}`);
@@ -139,7 +152,7 @@ function main() {
 
   if (errors.length === 0) {
     console.log(
-      `audit-seo-sitemap: OK (lastmodStrategy ${meta.lastmodStrategy ?? "unknown"}; primary ${primaryLocs.length}, virtual ${virtualLocs.length}, video ${videoLocs.length})`,
+      `audit-seo-sitemap: OK (lastmodStrategy ${meta.lastmodStrategy ?? "unknown"}; primary ${primaryLocs.length}, video ${videoLocs.length}; ${meta.noindexVirtualServiceCityCount} service×city pages noindex, ${matrixChecked} sampled)`,
     );
     return;
   }

@@ -426,6 +426,7 @@ export function resolveShellPageMeta(siteUrl: string, pathname: string): ShellPa
           city.country,
           service.doctor,
         ),
+        robots: ROBOTS_NOINDEX_FOLLOW,
       };
     }
   }

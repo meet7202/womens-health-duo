@@ -27,7 +27,6 @@ on:
         options:
           - all
           - primary
-          - virtual
           - video
       dry_run:
         description: "Dry run (no API calls)"

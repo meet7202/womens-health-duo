@@ -5,6 +5,7 @@ import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { JsonLdFaq } from "@/components/seo/JsonLdFaq";
 import { PageShell } from "@/components/layout/PageShell";
 import { FaqSection } from "@/components/sections/FaqSection";
+import { ROBOTS_NOINDEX_FOLLOW } from "@/config/routeDisposition";
 import { ROUTES } from "@/config/routes";
 import { SITE_URL } from "@/config/site";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
@@ -99,7 +100,12 @@ export function VirtualOnlineServiceCityPage() {
 
   return (
     <PageShell breadcrumbs={crumbs}>
-      <SeoHead title={metaTitle} metaDescription={metaDescription} path={path} />
+      <SeoHead
+        title={metaTitle}
+        metaDescription={metaDescription}
+        path={path}
+        robots={ROBOTS_NOINDEX_FOLLOW}
+      />
       <JsonLdGraph graph={graph} />
       {faqItems.length > 0 ? (
         <JsonLdFaq items={faqItems} pageUrl={githubPagesAbsoluteUrl(SITE_URL, path)} />

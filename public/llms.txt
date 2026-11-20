@@ -17,7 +17,6 @@
 - [Women's Health Duo — homepage](https://womenshealthduo.com/)
 - [**Virtual online consultations hub** (NRIs & diaspora cities)](https://womenshealthduo.com/online-consultation)
 - [Example: city overview — Dubai / UAE](https://womenshealthduo.com/online-consultation/dubai-ae)
-- [Example: service × city — IVF & fertility, Dubai](https://womenshealthduo.com/online-consultation/dubai-ae/ivf-fertility-treatments)
 - [Example: online care — London, UK](https://womenshealthduo.com/online-consultation/london)
 - [Example: online care — Singapore](https://womenshealthduo.com/online-consultation/singapore)
 - [Example: online care — Toronto, Canada](https://womenshealthduo.com/online-consultation/toronto)
@@ -62,7 +61,7 @@
 - **Agent skills index:** [`/.well-known/agent-skills/index.json`](https://womenshealthduo.com/.well-known/agent-skills/index.json) — curated SKILL.md entries (site overview, booking, Learn hub, DNS-AID) with SHA-256 digests; regenerated at `npm run build`.
 - **Content discovery linkset:** [`/.well-known/content-catalog.json`](https://womenshealthduo.com/.well-known/content-catalog.json) — RFC 9264 `application/linkset+json` pointing to `llms.txt`, agent skills index, Learn articles, and sitemap (not an API catalog).
 - **Robots:** [`/robots.txt`](https://womenshealthduo.com/robots.txt) — origin rules declare `Content-Signal: search=yes, ai-input=yes, ai-train=no` with **Allow** for Googlebot, Bingbot, and agent-fetch bots (ChatGPT-User, OAI-SearchBot, PerplexityBot, anthropic-ai), while training crawlers remain restricted in managed rules when configured. Lists sitemap URLs.
-- **Sitemap:** [`/sitemap.xml`](https://womenshealthduo.com/sitemap.xml) — at **`npm run build`**, a **single `<urlset>`** (not a sitemap index) lists the **primary** crawl set (core pages, Learn hub filters, **every Learn watch URL**, topic guides, virtual hub/country/city, international consultation, book teleconsultation, free community) with **`<lastmod>`**, **`<changefreq>`**, and **`<priority>`** (`sitemapPriorityForPath()` in `src/config/routes.ts`). Current primary urlset size is on the order of **950+ URLs** (includes **~195** `/learn/watch/…` clip pages). **`robots.txt`** also lists [`/sitemap-virtual-service-cities.xml`](https://womenshealthduo.com/sitemap-virtual-service-cities.xml) (long-tail **service × city** URLs) and [`/sitemap-videos.xml`](https://womenshealthduo.com/sitemap-videos.xml) (**Google Video sitemap** for YouTube Shorts + Instagram Reels watch pages: title, description, thumbnail, embed/player loc).
+- **Sitemap:** [`/sitemap.xml`](https://womenshealthduo.com/sitemap.xml) — at **`npm run build`**, a **single `<urlset>`** (not a sitemap index) lists the **primary** crawl set (core pages, Learn hub filters, **every Learn watch URL**, topic guides, virtual hub/country/city, international consultation, book teleconsultation, free community) with **`<lastmod>`**, **`<changefreq>`**, and **`<priority>`** (`sitemapPriorityForPath()` in `src/config/routes.ts`). Current primary urlset size is on the order of **950+ URLs** (includes **~195** `/learn/watch/…` clip pages). **`robots.txt`** also lists [`/sitemap-videos.xml`](https://womenshealthduo.com/sitemap-videos.xml) (**Google Video sitemap** for YouTube Shorts + Instagram Reels watch pages: title, description, thumbnail, embed/player loc).
 - **HTML head:** root [`index.html`](https://womenshealthduo.com/) receives build-time tokens for title, description, **meta keywords** (comma-separated topics for legacy crawlers), Open Graph, and a **`<link rel="sitemap">`** to the absolute sitemap URL.
 
 ## URL patterns (Learn hub — Shorts, Reels, posts & watch pages)
@@ -78,7 +77,7 @@
 - **Hub:** `/online-consultation`
 - **Country index:** `/online-consultation/country/<countrySlug>` (e.g. `india`, `united-states`)
 - **City overview:** `/online-consultation/<citySlug>` (e.g. `dubai-ae`, `london`, `toronto`)
-- **Service × city:** `/online-consultation/<citySlug>/<serviceSlug>` — one page per combination for long-tail discovery.
+- **Service × city:** `/online-consultation/<citySlug>/<serviceSlug>` still resolves for existing links but is `noindex, follow` and not in any sitemap. Cite the city overview or the service landing under `/international-consultation/` instead.
 - **Legacy:** `/global-online` redirects to `/online-consultation` (preserve old bookmarks).
 
 ## Online service slugs (`<serviceSlug>`)
@@ -105,4 +104,4 @@ Permanent section URLs (same page as `/`; good for sharing) and hash alternative
 
 ## Note for site owners
 
-If the live domain differs, update `VITE_SITE_URL` in `.env`, `src/config/site.defaults.ts` (`SITE_DEFAULT_URL`), and this file so links stay accurate. Marketing URLs live in `src/config/routes.ts`, `src/lib/virtualConsultation.ts`, `src/data/seoOnlineServices.ts`, and `src/data/virtualConsultationCities.json`; Learn clip data in `src/data/knowledgeHubInstagramReels.json`, `knowledgeHubInstagramPosts.json`, and `knowledgeHubVideos.ts`; hub cover images in `public/images/hub-thumbs/` (refresh via `npm run import:instagram` or `npm run retry:hub-thumbnails`). **`dist/sitemap.xml`** (primary) and **`dist/sitemap-virtual-service-cities.xml`** (service×city only) are written at build time. Legacy `/global-online` URLs redirect to `/online-consultation`.
+If the live domain differs, update `VITE_SITE_URL` in `.env`, `src/config/site.defaults.ts` (`SITE_DEFAULT_URL`), and this file so links stay accurate. Marketing URLs live in `src/config/routes.ts`, `src/lib/virtualConsultation.ts`, `src/data/seoOnlineServices.ts`, and `src/data/virtualConsultationCities.json`; Learn clip data in `src/data/knowledgeHubInstagramReels.json`, `knowledgeHubInstagramPosts.json`, and `knowledgeHubVideos.ts`; hub cover images in `public/images/hub-thumbs/` (refresh via `npm run import:instagram` or `npm run retry:hub-thumbnails`). **`dist/sitemap.xml`** and **`dist/sitemap-videos.xml`** are written at build time. Service × city pages (`/online-consultation/{city}/{service}/`) are `noindex, follow`; use the online hub, country and city pages instead. Legacy `/global-online` URLs redirect to `/online-consultation`.

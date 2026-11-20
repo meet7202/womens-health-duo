@@ -16,9 +16,8 @@ import {
   SITEMAP_PATHS,
   SITEMAP_PATHS_PRIMARY_URLSET,
   SITEMAP_SEGMENT_INTERNATIONAL_CONSULTATION,
-  SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES,
+  VIRTUAL_SERVICE_CITY_PATHS,
   sitemapPriorityForPath,
-  sitemapPriorityVirtualServiceCityLongtail,
   sitemapUrlsetKindForPath,
 } from "./src/config/routes.ts";
 import { redirectAliasShellPathnames } from "./src/config/routeDisposition.ts";
@@ -38,7 +37,7 @@ import { ensureHttpsSiteOrigin } from "./src/lib/ensureHttpsSiteOrigin.ts";
 import { buildVideoSitemapXml, videoSitemapEntryCount } from "./src/build/videoSitemap.ts";
 import { writeAgentDiscoveryFiles } from "./src/build/agentDiscovery.ts";
 
-/** Every indexable pathname (primary + supplemental sitemaps); used for static SPA shells. */
+/** Every routable page pathname (sitemap URLs plus the noindexed matrix); used for static SPA shells. */
 function allSitemapPathnames(): string[] {
   return [...SITEMAP_PATHS];
 }
@@ -164,10 +163,6 @@ function sitemapChangefreq(pathname: string, kind: SitemapChildKind): string {
   }
   if (kind === "learn") return "weekly";
   if (kind === "guides") return "monthly";
-  const segs = pathname.split("/").filter(Boolean);
-  if (segs.length >= 3 && segs[0] === "online-consultation" && segs[1] !== "country") {
-    return "monthly";
-  }
   return "weekly";
 }
 
@@ -309,7 +304,6 @@ User-agent: PerplexityBot
 Allow: /
 
 Sitemap: ${siteUrl}/sitemap.xml
-Sitemap: ${siteUrl}/sitemap-virtual-service-cities.xml
 Sitemap: ${siteUrl}/sitemap-videos.xml
 `;
 
@@ -322,25 +316,10 @@ Sitemap: ${siteUrl}/sitemap-videos.xml
       SITEMAP_PATHS_PRIMARY_URLSET,
       siteUrl,
       lastmod,
-      "Primary urlset: full site except service×city matrix (see sitemap-virtual-service-cities.xml).",
+      "Indexable pages. The noindexed service×city matrix is not listed.",
       {
         priority: sitemapPriorityForPath,
         changefreq: (p) => sitemapChangefreq(p, sitemapUrlsetKindForPath(p)),
-      },
-    ),
-    "utf8",
-  );
-
-  fs.writeFileSync(
-    path.join(outDir, "sitemap-virtual-service-cities.xml"),
-    buildUrlsetXml(
-      SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES,
-      siteUrl,
-      lastmod,
-      "Supplemental: service×city URLs only (lower priority; not duplicated in sitemap.xml)",
-      {
-        priority: () => sitemapPriorityVirtualServiceCityLongtail(),
-        changefreq: () => "monthly",
       },
     ),
     "utf8",
@@ -361,7 +340,10 @@ Sitemap: ${siteUrl}/sitemap-videos.xml
         lastmodStrategy: "omit-until-verified-content-revision",
         siteUrl,
         primaryUrlCount: SITEMAP_PATHS_PRIMARY_URLSET.length,
-        virtualServiceCityUrlCount: SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES.length,
+        noindexVirtualServiceCityCount: VIRTUAL_SERVICE_CITY_PATHS.length,
+        noindexVirtualServiceCitySample: VIRTUAL_SERVICE_CITY_PATHS.filter(
+          (_, i) => i % Math.max(1, Math.floor(VIRTUAL_SERVICE_CITY_PATHS.length / 25)) === 0,
+        ).slice(0, 25),
         videoUrlCount: videoSitemapEntryCount(),
         internationalConsultationUrlCount: SITEMAP_SEGMENT_INTERNATIONAL_CONSULTATION.length,
         staticShellCount: staticSpaShellPathnames().length,

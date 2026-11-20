@@ -58,7 +58,7 @@ Dev server: **http://localhost:8080/**
 Default public URL: **`https://womenshealthduo.com`** (see [`src/config/site.defaults.ts`](src/config/site.defaults.ts)).
 
 - Copy [`.env.example`](./.env.example) to `.env` and set **`VITE_SITE_URL`** if you use another domain (no trailing slash).
-- The [GitHub Actions workflow](.github/workflows/deploy-github-pages.yml) sets `VITE_SITE_URL` for CI builds so HTML meta, `robots.txt`, and sitemap files (`sitemap.xml` + `sitemap-virtual-service-cities.xml`) match production.
+- The [GitHub Actions workflow](.github/workflows/deploy-github-pages.yml) sets `VITE_SITE_URL` for CI builds so HTML meta, `robots.txt`, and sitemap files (`sitemap.xml`, `sitemap-videos.xml`) match production.
 
 ## Performance
 
@@ -75,7 +75,7 @@ Large JPEGs in `src/assets/` (hero and doctor photos) dominate payload; compress
 - [`public/CNAME`](./public/CNAME) — custom hostname for Pages.
 - [`public/.nojekyll`](./public/.nojekyll) — disables Jekyll for static assets.
 - Build copies **`index.html` → `404.html`** in `dist/` so unknown URLs still load the app shell (fallback only).
-- Build also writes **`dist/<path>/index.html`** for every pathname in **`SITEMAP_PATHS`** (primary **`sitemap.xml`** ∪ supplemental long-tail; see `src/config/routes.ts`) plus legacy **`/global-online/*`** slugs, so real files exist for each sitemap URL and GitHub Pages returns **HTTP 200** (not only `404.html` with status 404) for crawlers and the Network tab. **Public URLs stay `/path`** (no `index.html`); sitemap and in-app links use those paths only. If something opens `…/index.html`, the app replaces it with the clean path ([`NormalizeIndexHtmlUrl.tsx`](src/components/layout/NormalizeIndexHtmlUrl.tsx)).
+- Build also writes **`dist/<path>/index.html`** for every pathname in **`SITEMAP_PATHS`** (primary **`sitemap.xml`** ∪ the noindexed service×city matrix; see `src/config/routes.ts`) plus legacy **`/global-online/*`** slugs, so real files exist for each sitemap URL and GitHub Pages returns **HTTP 200** (not only `404.html` with status 404) for crawlers and the Network tab. **Public URLs stay `/path`** (no `index.html`); sitemap and in-app links use those paths only. If something opens `…/index.html`, the app replaces it with the clean path ([`NormalizeIndexHtmlUrl.tsx`](src/components/layout/NormalizeIndexHtmlUrl.tsx)).
 
 ### One-time setup
 
@@ -95,7 +95,7 @@ Update [`public/CNAME`](./public/CNAME), `SITE_DEFAULT_URL` in `site.defaults.ts
 
 - **Meta & canonical:** injected at build from `site.defaults` / `VITE_SITE_URL` (see [`index.html`](index.html), [`vite.config.ts`](vite.config.ts)).
 - **Structured data:** Schema.org JSON-LD in [`src/components/seo/JsonLd.tsx`](src/components/seo/JsonLd.tsx) (`MedicalOrganization`, `Physician`, `WebSite`).
-- **Crawlers:** [`public/llms.txt`](./public/llms.txt); `robots.txt` and **`sitemap.xml`** (primary urlset; omits service×city matrix) plus **`sitemap-virtual-service-cities.xml`** (those URLs only) are written into **`dist/`** on build.
+- **Crawlers:** [`public/llms.txt`](./public/llms.txt); `robots.txt` and **`sitemap.xml`** (indexable pages; the service×city matrix is noindex and omitted) and **`sitemap-videos.xml`** are written into **`dist/`** on build.
 - **Indexing:** after deploy, submit built sitemap URLs via **`npm run submit:indexing`** (IndexNow for Bing and partners only). Set **`INDEXNOW_KEY`** in **`.env`** (gitignored); build emits **`dist/{key}.txt`**. Use Google Search Console sitemaps / URL Inspection for Google — do **not** bulk-submit ordinary pages to the Google Indexing API (restricted to JobPosting / livestream). See [`.env.example`](./.env.example) and **Actions → Submit indexing**.
 - **IndexNow change-aware (SEO-40):** `npm run build` writes `dist/.indexnow-content-manifest.json`. Review diffs with `npm run audit:indexnow-manifest` (dry-run; optional `--write` baseline) or `npm run submit:indexnow -- --changed-only --dry-run`, then submit changed URLs with `npm run submit:indexnow -- --changed-only`.
 - **Semantic SEO gate (SEO-30):** after build, `npm run audit:seo-semantic` (keeps existing title/description/H1/sitemap audits).

@@ -74,15 +74,14 @@ export const HOME_SECTION_SCROLL_PATHS: readonly string[] = [
 ];
 
 /**
- * Each online service for every virtual city (supplemental sitemap only).
- * SEO-11: city list is frozen via `VIRTUAL_CONSULTATION_CITY_COUNT_FREEZE` — do not expand
- * cities/services here without disposition review. Long-tail stays indexable at lower
- * priority (`sitemapPriorityVirtualServiceCityLongtail`); default action keep/improve.
+ * Each online service for every virtual city. These pages stay routable with static shells
+ * but are `noindex, follow` and are not listed in any sitemap (scaled-template risk; see
+ * `docs/seo-growth-plan-2026-11-20.md`). Do not re-add them to a sitemap without new
+ * Search Console evidence. SEO-11: city list is frozen via `VIRTUAL_CONSULTATION_CITY_COUNT_FREEZE`.
  */
-export const SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES: readonly string[] =
-  VIRTUAL_CONSULTATION_CITIES.flatMap((c) =>
-    SEO_ONLINE_SERVICES.map((s) => virtualServiceCityPath(c, s.slug)),
-  );
+export const VIRTUAL_SERVICE_CITY_PATHS: readonly string[] = VIRTUAL_CONSULTATION_CITIES.flatMap(
+  (c) => SEO_ONLINE_SERVICES.map((s) => virtualServiceCityPath(c, s.slug)),
+);
 
 const VIRTUAL_COUNTRY_SITEMAP_PATHS: readonly string[] = VIRTUAL_CONSULTATION_COUNTRIES.map((c) =>
   virtualConsultationCountryPath(c),
@@ -93,12 +92,6 @@ export const SITEMAP_SEGMENT_VIRTUAL_HUB_COUNTRY_CITY: readonly string[] = [
   ROUTES.onlineConsultation,
   ...VIRTUAL_COUNTRY_SITEMAP_PATHS,
   ...VIRTUAL_CONSULTATION_CITIES.map((c) => virtualConsultationCityPath(c)),
-];
-
-/** Virtual hub through service×city (full virtual SEO set). */
-export const SITEMAP_SEGMENT_VIRTUAL_CONSULTATION: readonly string[] = [
-  ...SITEMAP_SEGMENT_VIRTUAL_HUB_COUNTRY_CITY,
-  ...SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES,
 ];
 
 /** International consultation hub, doctor sub-hubs, and service landings. */
@@ -219,15 +212,9 @@ export function sitemapPriorityForPath(pathname: string): string {
   return "0.9";
 }
 
-/** Lower `<priority>` for optional supplemental service×city sitemap (duplicate URLs allowed). */
-export function sitemapPriorityVirtualServiceCityLongtail(): string {
-  return "0.58";
-}
-
 /**
- * Paths listed in the primary `sitemap.xml` only (no service×city matrix).
- * Long-tail `/online-consultation/:city/:service` URLs live in
- * `sitemap-virtual-service-cities.xml` instead.
+ * Paths listed in `sitemap.xml`. Excludes the noindexed
+ * `/online-consultation/:city/:service` matrix (`VIRTUAL_SERVICE_CITY_PATHS`).
  */
 export const SITEMAP_PATHS_PRIMARY_URLSET: readonly string[] = [
   ...SITEMAP_SEGMENT_CORE,
@@ -236,8 +223,8 @@ export const SITEMAP_PATHS_PRIMARY_URLSET: readonly string[] = [
   ...SITEMAP_SEGMENT_VIRTUAL_HUB_COUNTRY_CITY,
 ];
 
-/** Every indexable path (primary urlset + supplemental long-tail). Used for static shells. */
+/** Every routable page that gets a static shell: sitemap URLs plus the noindexed matrix. */
 export const SITEMAP_PATHS: readonly string[] = [
   ...SITEMAP_PATHS_PRIMARY_URLSET,
-  ...SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES,
+  ...VIRTUAL_SERVICE_CITY_PATHS,
 ];

@@ -10,12 +10,11 @@ export type VirtualConsultationCity = (typeof virtualConsultationCities)[number]
 /**
  * SEO-11 — freeze city×service matrix expansion.
  *
- * Raising this expands `SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES` (city × every
- * `SEO_ONLINE_SERVICES` slug) and must not happen silently. Disposition default for
- * existing long-tail URLs (including GSC-clicked Appendix A rows in
- * `docs/seo-url-migration.csv`) is **keep/improve** — prefer content quality over
- * mass-noindex or mass-deletion. To expand: update this baseline after explicit review,
- * and set `ALLOW_VIRTUAL_CITY_EXPANSION=1` when regenerating the JSON seed.
+ * Raising this expands `VIRTUAL_SERVICE_CITY_PATHS` (city × every
+ * `SEO_ONLINE_SERVICES` slug) and must not happen silently. Since 20 November 2026 the
+ * city×service pages are `noindex, follow` and out of the sitemap; city overview pages stay
+ * indexable. To expand: update this baseline after explicit review, and set
+ * `ALLOW_VIRTUAL_CITY_EXPANSION=1` when regenerating the JSON seed.
  */
 export const VIRTUAL_CONSULTATION_CITY_COUNT_FREEZE = 505;
 
