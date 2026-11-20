@@ -13,9 +13,26 @@ import { createHash } from "node:crypto";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const PLAN = path.join(ROOT, "blog/WHD_AGENT_ARTICLE_PROMPTS/WHD_BLOG_PLAN.json");
+const REDIRECTS = path.join(ROOT, "src/config/guideConsolidationRedirects.ts");
 const OUT_CATALOG = path.join(ROOT, "src/data/topicGuides/articles/catalog.generated.ts");
 const OUT_STATUS = path.join(ROOT, "blog/drafts/STATUS.json");
 const IMAGES_ROOT = path.join(ROOT, "public/images/articles");
+
+/** Retired guide slugs in the blog plan still resolve to the live page. */
+const GUIDE_CONSOLIDATION = new Map(
+  [
+    ...fs
+      .readFileSync(REDIRECTS, "utf8")
+      .matchAll(/\[\s*"([a-z0-9-]+)"\s*,\s*"([a-z0-9-]+)"\s*\]/g),
+  ].map((m) => [m[1], m[2]]),
+);
+
+function canonicalGuidePath(p) {
+  const raw = String(p || "");
+  const slug = raw.replace(/^\/+|\/+$/g, "");
+  if (!slug || slug.includes("/")) return raw;
+  return `/${GUIDE_CONSOLIDATION.get(slug) || slug}/`;
+}
 
 function esc(s) {
   return String(s ?? "")
@@ -247,10 +264,14 @@ function buildArticle(article, bodyPacks) {
         url,
       }));
 
-  const internalLinks = (article.internal_links || []).map((l) => ({
-    anchor: l.anchor,
-    path: l.path,
-  }));
+  const internalLinks = [];
+  const seenPaths = new Set();
+  for (const link of article.internal_links || []) {
+    const linkPath = canonicalGuidePath(link.path);
+    if (seenPaths.has(linkPath)) continue;
+    seenPaths.add(linkPath);
+    internalLinks.push({ anchor: link.anchor, path: linkPath });
+  }
 
   const approval = clinicalApprovalFor(article.id);
 

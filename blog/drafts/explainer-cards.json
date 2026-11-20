@@ -1,5 +1,5 @@
 {
-  "note": "Google Images click hooks for watermarked SVG explainers. Exactly 4 short QUESTION lines per article: curiosity hooks, not answer spoilers. Each question must be answered in the matching article body (section or FAQ). Keep each line \u226440 characters so SVG cards do not truncate.",
+  "note": "Google Images click hooks for watermarked SVG explainers. Exactly 4 short QUESTION lines per article: curiosity hooks, not answer spoilers. Each question must be answered in the matching article body (section or FAQ). Keep each line ≤40 characters so SVG cards do not truncate.",
   "articles": {
     "W01-C": [
       "What counts as an irregular period?",
@@ -32,14 +32,14 @@
       "Should my partner join the visit?"
     ],
     "W03-Z": [
-      "What exercise can start soon after birth?",
+      "What exercise can start after birth?",
       "Does a 6-week check mean I can run?",
       "How does birth type change the pace?",
       "When should I pause or seek care?"
     ],
     "W04-C": [
       "Predict ovulation, or only confirm it?",
-      "Which tracking method fits irregular cycles?",
+      "Which tracker fits irregular cycles?",
       "Do LH kits prove I ovulated?",
       "When is tracking not enough?"
     ],
@@ -128,7 +128,7 @@
       "Should low AMH alone push me to IVF?"
     ],
     "W11-Z": [
-      "Is pelvic girdle pain the same as backache?",
+      "Is pelvic girdle pain just backache?",
       "What daily changes can help?",
       "Will PGP harm the baby?",
       "When does pain need urgent review?"
@@ -184,12 +184,12 @@
     "W16-C": [
       "How are PCOS and insulin linked?",
       "Can lean people still be affected?",
-      "Do dark skin folds prove insulin resistance?",
+      "Do skin folds prove insulin resistance?",
       "What should I discuss at assessment?"
     ],
     "W16-Z": [
       "How long does postpartum recovery take?",
-      "Does feeling better at 6 weeks mean done?",
+      "Is 6 weeks the end of recovery?",
       "Which areas of recovery should I track?",
       "When is earlier help needed?"
     ],
@@ -202,7 +202,7 @@
     "W17-Z": [
       "How do I rebuild core after pregnancy?",
       "Should I start with sit-ups?",
-      "Can function improve with a remaining gap?",
+      "Can a remaining gap still improve?",
       "Which symptoms change the plan?"
     ],
     "W18-C": [
@@ -215,17 +215,17 @@
       "Can physio help bladder leakage?",
       "Does the leakage type change the plan?",
       "What does supervised care include?",
-      "When does surgery enter the conversation?"
+      "When is surgery discussed?"
     ],
     "W19-C": [
       "Is pregnancy nausea only in the morning?",
-      "What self-care steps are often tried first?",
+      "What self-care is often tried first?",
       "When does nausea need assessment?",
       "Which signs are more urgent?"
     ],
     "W19-Z": [
       "What is prenatal physiotherapy for?",
-      "How is it different from a fitness class?",
+      "How is this unlike a fitness class?",
       "Do I need pain before I book?",
       "When does obstetric care come first?"
     ],
@@ -242,13 +242,13 @@
       "When should I get help?"
     ],
     "W21-C": [
-      "What happens at the first fertility visit?",
+      "What happens at a first fertility visit?",
       "Must both partners attend day one?",
       "Will every test happen on the first day?",
       "Which records make the hour useful?"
     ],
     "W21-Z": [
-      "What makes a prenatal Pilates class appropriate?",
+      "What makes prenatal Pilates suitable?",
       "Can I stay in my usual Pilates class?",
       "Which positions often need changing?",
       "When should I stop and get checked?"
@@ -260,31 +260,31 @@
       "Which habits help? What are the limits?"
     ],
     "W22-Z": [
-      "What can breathing prepare me for in labour?",
+      "What can breathing prepare me for?",
       "How can a birth partner help?",
       "How does breathing fit with pain relief?",
       "Can breathing replace an epidural?"
     ],
     "W23-C": [
-      "Which early bleeding needs emergency care?",
+      "Which early bleeding is an emergency?",
       "Does spotting always mean miscarriage?",
       "When should I call the same day?",
       "What might assessment involve?"
     ],
     "W23-Z": [
-      "Can pelvic floor physio help painful sex?",
+      "Can physio help with painful sex?",
       "Is painful sex always a tight floor?",
       "What might physiotherapy involve?",
       "Do I have to accept an internal exam?"
     ],
     "W24-C": [
-      "Does one failed IVF cycle mean IVF never works?",
+      "Does one failed cycle rule out IVF?",
       "Which records should I request next?",
       "How long before another cycle?",
       "What should I ask about add-ons?"
     ],
     "W24-Z": [
-      "When can I start Pilates after pregnancy?",
+      "When can Pilates start after birth?",
       "Is 4 weeks a safe start for everyone?",
       "How can a class be adapted?",
       "Can I jump back to advanced Reformer?"
@@ -296,7 +296,7 @@
       "Can I still get pregnant?"
     ],
     "W25-Z": [
-      "What can a vaginal bulge or heaviness mean?",
+      "What can a bulge or heaviness mean?",
       "Can I stage prolapse from a home check?",
       "What care options might be discussed?",
       "Where can pelvic physio fit?"
@@ -309,8 +309,8 @@
     ],
     "W26-Z": [
       "What should I prepare before I arrive?",
-      "Will I have an internal exam on visit one?",
-      "What consent and chaperone choices exist?",
+      "Will visit one include an internal exam?",
+      "Can I choose consent and a chaperone?",
       "How is an online visit different?"
     ],
     "W27-C": [

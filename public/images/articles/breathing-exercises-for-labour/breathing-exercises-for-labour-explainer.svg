@@ -14,7 +14,7 @@
   <text x="60" y="168" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#7a6670">Topic lead: Dr. Zalak Shah (PT) · Patient education, not a diagnosis</text>
   
   <rect x="60" y="210" width="500" height="130" rx="18" fill="#fff" stroke="#e8d5d8" stroke-width="2"/>
-  <text x="84" y="262" font-family="Georgia, serif" font-size="20" fill="#5c2a3a"><tspan x="84" dy="0">1. What can breathing prepare me for in</tspan><tspan x="84" dy="26">labour?</tspan></text>
+  <text x="84" y="262" font-family="Georgia, serif" font-size="20" fill="#5c2a3a"><tspan x="84" dy="0">1. What can breathing prepare me for?</tspan></text>
 
   <rect x="600" y="210" width="500" height="130" rx="18" fill="#fff" stroke="#e8d5d8" stroke-width="2"/>
   <text x="624" y="262" font-family="Georgia, serif" font-size="20" fill="#5c2a3a"><tspan x="624" dy="0">2. How can a birth partner help?</tspan></text>

@@ -708,7 +708,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       }
     ],
     explainerCards: [
-      "What exercise can start soon after birth?",
+      "What exercise can start after birth?",
       "Does a 6-week check mean I can run?",
       "How does birth type change the pace?",
       "When should I pause or seek care?"
@@ -1169,7 +1169,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     ],
     explainerCards: [
       "Predict ovulation, or only confirm it?",
-      "Which tracking method fits irregular cycles?",
+      "Which tracker fits irregular cycles?",
       "Do LH kits prove I ovulated?",
       "When is tracking not enough?"
     ],
@@ -3207,7 +3207,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       }
     ],
     explainerCards: [
-      "Is pelvic girdle pain the same as backache?",
+      "Is pelvic girdle pain just backache?",
       "What daily changes can help?",
       "Will PGP harm the baby?",
       "When does pain need urgent review?"
@@ -4795,7 +4795,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     ],
     explainerCards: [
       "How long does postpartum recovery take?",
-      "Does feeling better at 6 weeks mean done?",
+      "Is 6 weeks the end of recovery?",
       "Which areas of recovery should I track?",
       "When is earlier help needed?"
     ],
@@ -4977,7 +4977,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     explainerCards: [
       "How are PCOS and insulin linked?",
       "Can lean people still be affected?",
-      "Do dark skin folds prove insulin resistance?",
+      "Do skin folds prove insulin resistance?",
       "What should I discuss at assessment?"
     ],
     figures: [
@@ -5138,7 +5138,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     explainerCards: [
       "How do I rebuild core after pregnancy?",
       "Should I start with sit-ups?",
-      "Can function improve with a remaining gap?",
+      "Can a remaining gap still improve?",
       "Which symptoms change the plan?"
     ],
     figures: [
@@ -5464,7 +5464,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "Can physio help bladder leakage?",
       "Does the leakage type change the plan?",
       "What does supervised care include?",
-      "When does surgery enter the conversation?"
+      "When is surgery discussed?"
     ],
     figures: [
       {
@@ -5783,7 +5783,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     ],
     explainerCards: [
       "What is prenatal physiotherapy for?",
-      "How is it different from a fitness class?",
+      "How is this unlike a fitness class?",
       "Do I need pain before I book?",
       "When does obstetric care come first?"
     ],
@@ -5935,7 +5935,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     ],
     explainerCards: [
       "Is pregnancy nausea only in the morning?",
-      "What self-care steps are often tried first?",
+      "What self-care is often tried first?",
       "When does nausea need assessment?",
       "Which signs are more urgent?"
     ],
@@ -6394,7 +6394,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       }
     ],
     explainerCards: [
-      "What makes a prenatal Pilates class appropriate?",
+      "What makes prenatal Pilates suitable?",
       "Can I stay in my usual Pilates class?",
       "Which positions often need changing?",
       "When should I stop and get checked?"
@@ -6550,7 +6550,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       }
     ],
     explainerCards: [
-      "What happens at the first fertility visit?",
+      "What happens at a first fertility visit?",
       "Must both partners attend day one?",
       "Will every test happen on the first day?",
       "Which records make the hour useful?"
@@ -6707,7 +6707,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       }
     ],
     explainerCards: [
-      "What can breathing prepare me for in labour?",
+      "What can breathing prepare me for?",
       "How can a birth partner help?",
       "How does breathing fit with pain relief?",
       "Can breathing replace an epidural?"
@@ -7015,7 +7015,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       }
     ],
     explainerCards: [
-      "Can pelvic floor physio help painful sex?",
+      "Can physio help with painful sex?",
       "Is painful sex always a tight floor?",
       "What might physiotherapy involve?",
       "Do I have to accept an internal exam?"
@@ -7181,7 +7181,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       }
     ],
     explainerCards: [
-      "Which early bleeding needs emergency care?",
+      "Which early bleeding is an emergency?",
       "Does spotting always mean miscarriage?",
       "When should I call the same day?",
       "What might assessment involve?"
@@ -7315,7 +7315,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       }
     ],
     explainerCards: [
-      "When can I start Pilates after pregnancy?",
+      "When can Pilates start after birth?",
       "Is 4 weeks a safe start for everyone?",
       "How can a class be adapted?",
       "Can I jump back to advanced Reformer?"
@@ -7489,7 +7489,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       }
     ],
     explainerCards: [
-      "Does one failed IVF cycle mean IVF never works?",
+      "Does one failed cycle rule out IVF?",
       "Which records should I request next?",
       "How long before another cycle?",
       "What should I ask about add-ons?"
@@ -7638,7 +7638,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       }
     ],
     explainerCards: [
-      "What can a vaginal bulge or heaviness mean?",
+      "What can a bulge or heaviness mean?",
       "Can I stage prolapse from a home check?",
       "What care options might be discussed?",
       "Where can pelvic physio fit?"
@@ -7946,8 +7946,8 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     ],
     explainerCards: [
       "What should I prepare before I arrive?",
-      "Will I have an internal exam on visit one?",
-      "What consent and chaperone choices exist?",
+      "Will visit one include an internal exam?",
+      "Can I choose consent and a chaperone?",
       "How is an online visit different?"
     ],
     figures: [

@@ -17,7 +17,7 @@
   <text x="84" y="262" font-family="Georgia, serif" font-size="20" fill="#5c2a3a"><tspan x="84" dy="0">1. Is pregnancy nausea only in the morning?</tspan></text>
 
   <rect x="600" y="210" width="500" height="130" rx="18" fill="#fff" stroke="#e8d5d8" stroke-width="2"/>
-  <text x="624" y="262" font-family="Georgia, serif" font-size="20" fill="#5c2a3a"><tspan x="624" dy="0">2. What self-care steps are often tried</tspan><tspan x="624" dy="26">first?</tspan></text>
+  <text x="624" y="262" font-family="Georgia, serif" font-size="20" fill="#5c2a3a"><tspan x="624" dy="0">2. What self-care is often tried first?</tspan></text>
 
   <rect x="60" y="370" width="500" height="130" rx="18" fill="#fff" stroke="#e8d5d8" stroke-width="2"/>
   <text x="84" y="422" font-family="Georgia, serif" font-size="20" fill="#5c2a3a"><tspan x="84" dy="0">3. When does nausea need assessment?</tspan></text>

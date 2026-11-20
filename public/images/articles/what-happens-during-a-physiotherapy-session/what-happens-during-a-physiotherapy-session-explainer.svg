@@ -17,10 +17,10 @@
   <text x="84" y="262" font-family="Georgia, serif" font-size="20" fill="#5c2a3a"><tspan x="84" dy="0">1. What should I prepare before I arrive?</tspan></text>
 
   <rect x="600" y="210" width="500" height="130" rx="18" fill="#fff" stroke="#e8d5d8" stroke-width="2"/>
-  <text x="624" y="262" font-family="Georgia, serif" font-size="20" fill="#5c2a3a"><tspan x="624" dy="0">2. Will I have an internal exam on visit</tspan><tspan x="624" dy="26">one?</tspan></text>
+  <text x="624" y="262" font-family="Georgia, serif" font-size="20" fill="#5c2a3a"><tspan x="624" dy="0">2. Will visit one include an internal exam?</tspan></text>
 
   <rect x="60" y="370" width="500" height="130" rx="18" fill="#fff" stroke="#e8d5d8" stroke-width="2"/>
-  <text x="84" y="422" font-family="Georgia, serif" font-size="20" fill="#5c2a3a"><tspan x="84" dy="0">3. What consent and chaperone choices</tspan><tspan x="84" dy="26">exist?</tspan></text>
+  <text x="84" y="422" font-family="Georgia, serif" font-size="20" fill="#5c2a3a"><tspan x="84" dy="0">3. Can I choose consent and a chaperone?</tspan></text>
 
   <rect x="600" y="370" width="500" height="130" rx="18" fill="#fff" stroke="#e8d5d8" stroke-width="2"/>
   <text x="624" y="422" font-family="Georgia, serif" font-size="20" fill="#5c2a3a"><tspan x="624" dy="0">4. How is an online visit different?</tspan></text>
