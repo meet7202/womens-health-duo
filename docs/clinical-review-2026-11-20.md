@@ -16,7 +16,7 @@ The diastasis recti article (`/what-is-diastasis-recti/`) shows “Medically rev
 
 ## Draft refreshes
 
-Signed and published 20 November 2026 (`clinicalApproval: approved`, `clinicalApprovedOn: 2026-11-20`, reviewers Dr. Zalak Shah and Dr. Charmi Shah). Image approval is still pending.
+Signed and published 20 November 2026 (`clinicalApproval: approved`, `clinicalApprovedOn: 2026-11-20`, reviewers Dr. Zalak Shah and Dr. Charmi Shah). Image approval was given by the owner on 20 November 2026 (`imageApproval: approved`, `imageApprovedOn: 2026-11-20`).
 
 - Dr. Charmi Shah: `what-is-pms`, `what-is-hormonal-imbalance`, `how-to-improve-fertility`, `can-stress-affect-fertility`, `symptoms-women-should-never-ignore`
 - Dr. Zalak Shah (PT): `what-is-womens-health-physiotherapy`, `online-womens-health-physiotherapy`, `what-is-pelvic-floor-dysfunction`, `pelvic-pain-in-women`, `frequent-urination-in-women`, `postpartum-pelvic-pain`, `common-pregnancy-discomforts`, `is-online-pilates-effective`

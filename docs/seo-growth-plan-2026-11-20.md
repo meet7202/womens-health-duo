@@ -90,7 +90,7 @@ Each phase lists what changes, why the data supports it, and how we will know it
 
 - Google Business Profiles (Ahmedabad and Bengaluru for Dr. Zalak; confirm whether Dr. Charmi has listings): correct primary category, hours, photos, website link to the matching city page, and a steady flow of genuine reviews. This is the main lever for “near me” searches.
 - Cloudflare: enable HSTS; apply the guide-consolidation 301s already listed in `seo-cloudflare-redirects.md`.
-- **Done 20 Nov 2026:** the 13 refreshed drafts are clinically approved and live, with reviewer bylines for Dr. Zalak Shah and Dr. Charmi Shah. Image approval on those 13 is still pending. Still unsigned: the PMOS alias, the PMOS wording and adult/adolescent framing on `/what-is-pcos/`, and the Tele-MANAS numbers on `/what-is-pmdd/`. `what-is-pilates` (W35-Z) stays in clinical review.
+- **Done 20 Nov 2026:** the 13 refreshed drafts are clinically approved and live, with reviewer bylines for Dr. Zalak Shah and Dr. Charmi Shah. Image approval on those 13 was recorded by the owner on 20 Nov 2026 (`imageApproval: approved` in `blog/drafts/STATUS.json`). Still unsigned: the PMOS alias, the PMOS wording and adult/adolescent framing on `/what-is-pcos/`, and the Tele-MANAS numbers on `/what-is-pmdd/`. `what-is-pilates` (W35-Z) stays in clinical review.
 
 ### Phase 5 — Measure every two weeks
 
