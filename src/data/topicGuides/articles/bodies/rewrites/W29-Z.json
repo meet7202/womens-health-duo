@@ -1,0 +1,102 @@
+{
+  "id": "W29-Z",
+  "title": "What Is Pelvic Floor Dysfunction?",
+  "seoTitle": "What is pelvic floor dysfunction?",
+  "description": "Pelvic floor dysfunction means the pelvic muscles are not coordinating for bladder, bowel, support or comfort. It is a description, not one diagnosis.",
+  "primaryQuestion": "What is pelvic floor dysfunction?",
+  "directAnswer": "Pelvic floor dysfunction is an umbrella description, not one disease. It means the muscles and connective tissue at the base of the pelvis are not doing the job you need in that moment: they may not tighten when you cough, may not relax to empty the bladder or bowel, or may ache with sex or sitting. Leaks, urgency, constipation, heaviness and pain can overlap, and they do not all have the same fix. Squeezing harder is not automatically the answer.",
+  "storytellingNote": "",
+  "sections": [
+    {
+      "heading": "What the pelvic floor is being asked to do",
+      "paragraphs": [
+        "NHS information on pelvic floor exercises describes muscles that support the bladder and bowel and help you hold on, then relax so you can empty. Both halves of that job matter. A muscle that cannot let go causes different trouble from a muscle that cannot hold.",
+        "Pregnancy, birth, chronic cough, constipation, heavy lifting, surgery and menopause-related tissue change are common parts of the story. They are context, not a verdict that your muscles have failed."
+      ]
+    },
+    {
+      "heading": "Symptoms people group under this label",
+      "paragraphs": [
+        "Leaking with a cough is a different pattern from a sudden desperate urge. Difficulty starting urine, a stop-start stream, or a feeling of not emptying can point toward poor relaxation or obstruction that needs medical review, not more squeezes.",
+        "Heaviness or a bulge sensation raises prolapse questions, which the prolapse guide covers separately. Pain with penetration can involve muscle tension, scar, hormonal dryness or a medical cause. One label should not swallow all of those."
+      ]
+    },
+    {
+      "heading": "How a physiotherapist sorts the pattern",
+      "paragraphs": [
+        "Dr. Zalak Shah (PT) starts with what you are trying to do: hold on during a laugh, empty without strain, sit without ache, or return to a run. She may watch breathing and movement and, with consent, assess the pelvic floor directly.",
+        "The plan might be coordination and timing, relaxation, strength, or load changes such as how you lift. It might also be a referral to gynaecology if infection, bleeding, or a structural problem is more likely. Physiotherapy does not prescribe hormones."
+      ]
+    },
+    {
+      "heading": "Symptoms that need a doctor urgently",
+      "paragraphs": [
+        "New inability to pass urine, new bowel incontinence, numbness between the legs, blood in the urine, fever with pelvic pain, or severe pain in pregnancy need urgent medical care. Do not stretch or squeeze through those.",
+        "A booked physiotherapy assessment fits ongoing leaks, urgency that is stable, constipation with straining, or pain that has already been checked for urgent causes."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Are Kegels the treatment for pelvic floor dysfunction?",
+      "answer": "Not always. If the muscles are not relaxing, more squeezing can make emptying and pain worse. The kegels guide explains why a blanket squeeze routine is not for everyone."
+    },
+    {
+      "question": "Can I tell which type I have from symptoms alone?",
+      "answer": "Symptoms suggest questions. They do not sort strength from tension or rule out infection and prolapse. An assessment is what separates those."
+    }
+  ],
+  "references": [
+    {
+      "label": "NHS: What are pelvic floor exercises?",
+      "url": "https://www.nhs.uk/common-health-questions/womens-health/what-are-pelvic-floor-exercises/"
+    },
+    {
+      "label": "NHS: Urinary incontinence",
+      "url": "https://www.nhs.uk/conditions/urinary-incontinence/"
+    }
+  ],
+  "conversionCopy": "If leaks, urgency, heaviness or pelvic pain need sorting out, you can book a physiotherapy assessment with Dr. Zalak Shah (PT).",
+  "explainerAlt": "Sketch of the pelvic floor supporting bladder and bowel, with tighten and release as separate jobs",
+  "internalLinks": [
+    {
+      "anchor": "are kegels right for everyone",
+      "path": "/are-kegels-right-for-everyone/"
+    },
+    {
+      "anchor": "pelvic organ prolapse",
+      "path": "/pelvic-organ-prolapse/"
+    },
+    {
+      "anchor": "what the pelvic floor is",
+      "path": "/what-is-the-pelvic-floor/"
+    }
+  ],
+  "parentHub": "/pelvic-floor-therapy/",
+  "review": {
+    "corrections": [
+      "Framed dysfunction as an umbrella, not a diagnosis, and separated holding from relaxing."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "NHS",
+        "title": "What are pelvic floor exercises?",
+        "url": "https://www.nhs.uk/common-health-questions/womens-health/what-are-pelvic-floor-exercises/",
+        "date": "fetched 2026",
+        "limitations": "Exercise page, not a diagnostic classification.",
+        "recommendation": "Pelvic floor muscles support bladder and bowel and must be able to tighten and release."
+      },
+      {
+        "organisation": "NHS",
+        "title": "Urinary incontinence",
+        "url": "https://www.nhs.uk/conditions/urinary-incontinence/",
+        "date": "fetched 2026",
+        "limitations": "Covers leakage types, not every pelvic pain cause.",
+        "recommendation": "Stress and urge leakage are different patterns and need different first questions."
+      }
+    ],
+    "openQuestions": [
+      "Confirm whether WHD wants the phrase pelvic floor dysfunction in patient-facing titles or a plainer wording."
+    ]
+  }
+}

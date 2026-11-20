@@ -9,6 +9,7 @@
  */
 import { KNOWLEDGE_HUB_VIDEOS, knowledgeHubWatchIdAliases } from "../data/knowledgeHubVideos";
 import { learnVideoWatchPath } from "../lib/learnHubUrls";
+import { GUIDE_CONSOLIDATION_REDIRECTS } from "./guideConsolidationRedirects";
 import { ROUTES } from "./routes";
 
 export type RouteDisposition =
@@ -63,11 +64,23 @@ export const EXPLICIT_REDIRECT_ALIASES: readonly PublicRouteRecord[] = [
     disposition: { kind: "redirect", targetPath: ROUTES.pilates, status: 301 },
     contentKey: "class:pilates",
   },
-] as const;
+  ...GUIDE_CONSOLIDATION_REDIRECTS.map(
+    ([from, to]): PublicRouteRecord => ({
+      path: `/${from}`,
+      template: "guide-consolidation",
+      disposition: { kind: "redirect", targetPath: `/${to}`, status: 301 },
+      contentKey: `guide:${from}`,
+    }),
+  ),
+];
 
 const REDIRECT_BY_PATH = new Map(
   EXPLICIT_REDIRECT_ALIASES.map((r) => [normalizeDispositionPath(r.path), r] as const),
 );
+
+export function explicitRedirectAlias(pathname: string): PublicRouteRecord | undefined {
+  return REDIRECT_BY_PATH.get(normalizeDispositionPath(pathname));
+}
 
 /** YouTube / Instagram platform-id watch aliases → canonical hub watch ids. */
 export function learnWatchPlatformAliasShellPathnames(): string[] {

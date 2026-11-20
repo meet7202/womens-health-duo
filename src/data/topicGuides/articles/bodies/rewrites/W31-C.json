@@ -1,0 +1,103 @@
+{
+  "id": "W31-C",
+  "title": "Which Symptoms Should Women Not Ignore?",
+  "seoTitle": "Symptoms women should not ignore",
+  "description": "Sudden severe pain, fainting, very heavy bleeding, bleeding after menopause, and pregnancy pain with bleeding need prompt care. Not every cramp is an emergency.",
+  "primaryQuestion": "Which symptoms should I not wait on?",
+  "directAnswer": "Some symptoms need same-day or emergency care rather than a routine women’s-health appointment. Those include fainting, chest pain, difficulty breathing, sudden severe pelvic or abdominal pain, bleeding so heavy you feel dizzy, a positive pregnancy test with pain and bleeding, and any bleeding after menopause. Many cramps, irregular cycles and mild discharges can wait for a planned visit. This list is not a diagnosis. If you are unsure and the symptom is severe or getting worse quickly, use local emergency services.",
+  "storytellingNote": "",
+  "sections": [
+    {
+      "heading": "Bleeding patterns that should not wait",
+      "paragraphs": [
+        "NHS advice on postmenopausal bleeding is clear: vaginal bleeding 12 months after periods have stopped is not normal and needs assessment, even if it happens once. Do not put that down to a scrape or a supplement.",
+        "Bleeding in pregnancy, especially with pain, also needs prompt local care. NHS ectopic-pregnancy information describes pain low on one side and vaginal bleeding as symptoms to act on, and shoulder-tip pain or collapse as an emergency. A routine video visit cannot rule out ectopic pregnancy.",
+        "Soaking through pads hourly, passing large clots, or bleeding with dizziness is different from a familiar heavy day. If you feel faint, lie down and get urgent help rather than searching for causes."
+      ]
+    },
+    {
+      "heading": "Pain, fever and pregnancy warning signs",
+      "paragraphs": [
+        "Sudden severe tummy or pelvic pain, pain with vomiting, or pain with a fever is not ordinary period cramp until someone has assessed you. A known history of endometriosis or cysts does not make new severe pain safe to ignore.",
+        "In later pregnancy, a severe headache with visual change, sudden swelling, reduced baby movements, or fluid leaking are reasons to contact your maternity unit the same day. This site cannot monitor a pregnancy remotely in an emergency."
+      ]
+    },
+    {
+      "heading": "Symptoms that usually fit a booked visit",
+      "paragraphs": [
+        "Cycle-timed bloating, a familiar cramp that settles with your usual care, a single irregular cycle after travel, or questions about contraception can wait for a planned consultation if you feel otherwise well.",
+        "Still mention them. Patterns become clearer when you bring dates. The point of this page is to separate waiting from not waiting, not to dismiss symptoms that bother you."
+      ]
+    },
+    {
+      "heading": "How to get help without guessing the cause",
+      "paragraphs": [
+        "If the symptom is on the urgent list, go to local emergency or maternity care and say you might be pregnant if that is possible. Take a pregnancy test with you if you have just done one. Do not travel alone if you feel faint.",
+        "For non-urgent questions, Dr. Charmi Shah can review the story in a booked consultation. Write when it started, whether you could be pregnant, and what has changed in the last day."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is spotting between periods always serious?",
+      "answer": "Not always. New bleeding between periods, bleeding after sex, or any bleeding after menopause still needs a clinical check rather than a watch-and-wait message from a website."
+    },
+    {
+      "question": "Can I message the clinic first if the pain is severe?",
+      "answer": "No. Severe pain, fainting, heavy bleeding with dizziness, or pregnancy pain with bleeding belongs in emergency care. Messaging and waiting can delay treatment."
+    }
+  ],
+  "references": [
+    {
+      "label": "NHS: Postmenopausal bleeding",
+      "url": "https://www.nhs.uk/conditions/post-menopausal-bleeding/"
+    },
+    {
+      "label": "NHS: Ectopic pregnancy",
+      "url": "https://www.nhs.uk/conditions/ectopic-pregnancy/"
+    }
+  ],
+  "conversionCopy": "For non-urgent symptoms you can book a consultation with Dr. Charmi Shah. Severe or rapidly worsening symptoms need local emergency care first.",
+  "explainerAlt": "Two-list sketch of symptoms for emergency care versus a booked gynaecology visit",
+  "internalLinks": [
+    {
+      "anchor": "when to see a gynaecologist",
+      "path": "/when-should-i-see-a-gynecologist/"
+    },
+    {
+      "anchor": "bleeding in early pregnancy",
+      "path": "/bleeding-in-early-pregnancy/"
+    },
+    {
+      "anchor": "heavy periods",
+      "path": "/heavy-periods/"
+    }
+  ],
+  "parentHub": "/online-gynecologist/",
+  "review": {
+    "corrections": [
+      "Separated emergency symptoms from booked-visit symptoms and put emergency care above any clinic CTA."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "NHS",
+        "title": "Postmenopausal bleeding",
+        "url": "https://www.nhs.uk/conditions/post-menopausal-bleeding/",
+        "date": "fetched 2026",
+        "limitations": "UK page; any postmenopausal bleeding still needs local assessment.",
+        "recommendation": "Bleeding after periods have stopped for 12 months is not normal and needs checking."
+      },
+      {
+        "organisation": "NHS",
+        "title": "Ectopic pregnancy",
+        "url": "https://www.nhs.uk/conditions/ectopic-pregnancy/",
+        "date": "fetched 2026",
+        "limitations": "Symptom lists are not a rule-out tool.",
+        "recommendation": "One-sided pain with bleeding in pregnancy, or collapse, needs emergency care."
+      }
+    ],
+    "openQuestions": [
+      "Confirm the preferred Indian emergency wording (112 versus asking patients to use the nearest casualty)."
+    ]
+  }
+}

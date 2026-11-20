@@ -27,7 +27,7 @@ import { AppLink as Link } from "@/components/router/AppLink";
 const TITLE = COMMUNITY_DOCUMENT_TITLE;
 const H1 = COMMUNITY_H1;
 const DESCRIPTION =
-  "Join Women's Health Duo's free WhatsApp community: health tips, workshop updates, and supportive conversations on pregnancy, fertility, PCOS, pelvic health, and wellness — led by Dr. Charmi & Dr. Zalak.";
+  "Join Women's Health Duo's free WhatsApp community: health tips, workshop updates, and supportive conversations on pregnancy, fertility, PCOS, pelvic health, and wellness, led by Dr. Charmi & Dr. Zalak.";
 
 function JoinCommunityButton({
   className,
@@ -88,7 +88,7 @@ export function FreeWomensHealthCommunityPage() {
         <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 sm:p-8 mb-10">
           <p className="text-foreground font-medium mb-4">
             A friendly, free space for women who want practical health education, workshop updates,
-            and real conversations — without paying for a membership.
+            and real conversations. There is no membership fee.
           </p>
           <JoinCommunityButton className="w-full sm:w-auto px-8 py-6 text-base" />
           <p className="mt-4 text-xs text-muted-foreground leading-relaxed">
@@ -110,7 +110,7 @@ export function FreeWomensHealthCommunityPage() {
             className="font-heading text-2xl font-semibold text-foreground mb-4 flex items-center gap-2"
           >
             <Sparkles className="h-6 w-6 text-primary shrink-0" aria-hidden />
-            What you get — for free
+            What you get for free
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-5">
             Our community is built for women searching for{" "}
@@ -144,8 +144,8 @@ export function FreeWomensHealthCommunityPage() {
             Topics we talk about
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            Whether you are planning pregnancy, managing PCOS, recovering postpartum, or simply
-            investing in long-term wellness, you will find relevant, approachable content here.
+            Planning pregnancy, managing PCOS, recovering after birth, or looking after your
+            long-term health: the group covers all of these in plain language.
           </p>
           <ul className="flex flex-wrap gap-2">
             {COMMUNITY_TOPICS.map((topic) => (
@@ -166,7 +166,7 @@ export function FreeWomensHealthCommunityPage() {
               Learn together
             </h3>
             <p className="text-xs text-muted-foreground leading-relaxed">
-              Connect with other women on similar journeys in a moderated, respectful WhatsApp
+              Talk with other women going through similar things in a moderated, respectful WhatsApp
               space.
             </p>
           </div>
@@ -201,27 +201,27 @@ export function FreeWomensHealthCommunityPage() {
             More free resources on this site
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            The community complements — but does not replace — our open educational library. Explore
-            these anytime, with or without joining WhatsApp:
+            The community sits alongside our open educational library; it does not replace it. You
+            can use these pages anytime, with or without joining WhatsApp:
           </p>
           <ul className="space-y-2 text-sm">
             <li>
               <Link to={ROUTES.learn} className="text-primary underline underline-offset-4">
                 Learn hub
-              </Link>{" "}
-              — doctor-led YouTube Shorts and Instagram Reels on women&apos;s health topics.
+              </Link>
+              : doctor-led YouTube Shorts and Instagram Reels on women&apos;s health topics.
             </li>
             <li>
               <Link to={ROUTES.learnArticles} className="text-primary underline underline-offset-4">
                 Articles &amp; common questions
-              </Link>{" "}
-              — written guides on fertility, pregnancy, PCOS, pelvic health, and more.
+              </Link>
+              : written guides on fertility, pregnancy, PCOS, pelvic health, and more.
             </li>
             <li>
               <Link to={ROUTES.faq} className="text-primary underline underline-offset-4">
                 FAQ
-              </Link>{" "}
-              — how consultations, cities, and online care work at Women&apos;s Health Duo.
+              </Link>
+              : how consultations, cities, and online care work at Women&apos;s Health Duo.
             </li>
           </ul>
         </section>
@@ -234,12 +234,12 @@ export function FreeWomensHealthCommunityPage() {
             id="community-guidelines-heading"
             className="font-heading text-xl font-semibold text-foreground mb-3"
           >
-            Community vs consultation — please know the difference
+            Community or consultation: know the difference
           </h2>
           <ul className="space-y-2 text-sm text-muted-foreground leading-relaxed list-disc pl-5">
             <li>
               The group is for <strong className="text-foreground">general education</strong>,
-              inspiration, and event updates — not personal diagnoses or prescriptions.
+              inspiration, and event updates. It is not for personal diagnoses or prescriptions.
             </li>
             <li>
               Do not post private medical records or emergency symptoms in the community; use{" "}
@@ -266,7 +266,7 @@ export function FreeWomensHealthCommunityPage() {
             Thousands of women look for a{" "}
             <strong className="text-foreground">free women&apos;s health community</strong> they can
             trust. Ours is led by two sisters who practice OB-GYN and women&apos;s health
-            physiotherapy — and there is a lot waiting for you inside.
+            physiotherapy, and joining is free.
           </p>
           <JoinCommunityButton className="px-10 py-6 text-base" />
         </div>
@@ -279,7 +279,7 @@ export function FreeWomensHealthCommunityPage() {
           tightTop
           headingLabel="Community FAQ"
           headingTitle="Questions about the free WhatsApp community"
-          headingIntro="Everything you need to know before joining Women's Health Duo's free group — and how it differs from booking a consult."
+          headingIntro="Everything you need to know before joining Women's Health Duo's free group, and how it differs from booking a consult."
         />
       </div>
 

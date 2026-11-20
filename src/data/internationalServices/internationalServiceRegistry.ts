@@ -1,5 +1,6 @@
 import { publicPathname } from "../../lib/githubPagesPublicUrl";
 import { CHARMI_INTERNATIONAL_SERVICES } from "./charmiServices";
+import { QUICK_ACCESS_INTERNATIONAL_SERVICES } from "./quickAccessServices";
 import { ZALAK_INTERNATIONAL_SERVICES } from "./zalakServices";
 import {
   INTERNATIONAL_CONSULTATION_BASE,
@@ -13,6 +14,7 @@ export { INTERNATIONAL_CONSULTATION_BASE, INTERNATIONAL_DOCTOR_HUBS, INTERNATION
 export const INTERNATIONAL_SERVICES: readonly InternationalService[] = [
   ...CHARMI_INTERNATIONAL_SERVICES,
   ...ZALAK_INTERNATIONAL_SERVICES,
+  ...QUICK_ACCESS_INTERNATIONAL_SERVICES,
 ];
 
 const serviceBySlug = new Map(INTERNATIONAL_SERVICES.map((s) => [s.slug, s]));
@@ -34,7 +36,7 @@ export function getInternationalDoctorHub(pathSegment: string): InternationalDoc
 }
 
 export function internationalServicesForDoctor(
-  doctor: InternationalService["doctor"],
+  doctor: "charmi" | "zalak",
 ): readonly InternationalService[] {
   return INTERNATIONAL_SERVICES.filter((s) => s.doctor === doctor);
 }

@@ -1,9 +1,12 @@
+import { LOCAL_SERVICE_PATHS } from "../data/localServicePages";
+
 /**
  * SEO-10 — build-time React prerender paths (React 18 `renderToString`).
  *
  * Covers every **indexable content template** with at least one URL (plus priority hubs).
- * Not every matrix/watch/guide URL — long-tail stays on `#static-seo-shell` until a full
- * sitemap prerender pass is warranted. Soft-fail per path in `prerenderPriorityPages.ts`.
+ * Indexable topic guides, Learn filters and watch pages are appended at build time
+ * (see `vite.config.ts`) so their text is in the HTML without JavaScript.
+ * The full service×city matrix is appended from `vite.config.ts`. Soft-fail per path.
  *
  * Must not use `@/` imports (loaded from Node / vite closeBundle).
  */
@@ -45,21 +48,19 @@ export const PRERENDER_PRIORITY_PATHS: readonly string[] = [
   "/international-consultation/dr-zalak",
   "/international-consultation/ivf-second-opinion",
   "/international-consultation/pelvic-floor-physiotherapy-online",
+  "/international-consultation/ob-gyn-second-opinion-online",
+  "/international-consultation/womens-health-physio-online",
+  "/international-consultation/online-antenatal-classes",
+  "/international-consultation/hindi-gujarati-doctor-online",
   // Virtual consultation templates (hub / country / city / service×city)
   "/online-consultation",
   "/online-consultation/country/india",
   "/online-consultation/mumbai",
+  "/online-consultation/ahmedabad",
+  "/online-consultation/valsad",
+  "/online-consultation/bengaluru",
   "/online-consultation/mumbai/ivf-fertility-treatments",
-  // Topic guide care hubs + FAQ-style samples (SEO-12 priority set)
-  "/womens-health-physiotherapy",
-  "/prenatal-physiotherapy",
-  "/postpartum-recovery",
-  "/bladder-leakage",
-  "/diastasis-recti",
-  "/what-is-prenatal-physiotherapy",
-  "/what-is-diastasis-recti",
-  "/what-is-womens-health-physiotherapy",
-  "/can-physiotherapy-help-with-bladder-leakage",
+  ...LOCAL_SERVICE_PATHS,
 ];
 
 /** Marker attribute written into `#root` when prerender succeeds (hydration / audits). */

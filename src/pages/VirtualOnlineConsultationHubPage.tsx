@@ -28,13 +28,17 @@ import { InclusiveSeoListFootnote } from "@/components/seo/InclusiveSeoListFootn
 import { Button } from "@/components/ui/button";
 import { PRACTICE_BOTH_DOCTORS_IN_PERSON } from "@/config/practiceLocations";
 import { virtualHubFaqs } from "@/data/contextualFaqs";
-import { virtualHubDocumentTitle, virtualHubH1 } from "@/lib/pageSeoCopy";
+import {
+  virtualHubDocumentTitle,
+  virtualHubH1,
+  virtualHubMetaDescription,
+} from "@/lib/pageSeoCopy";
 import { TelemedicineComplianceBlock } from "@/components/compliance/TelemedicineComplianceBlock";
 import { TelemedicineLimitations } from "@/components/compliance/TelemedicineLimitations";
 
 const TITLE = virtualHubDocumentTitle();
 const H1 = virtualHubH1();
-const DESCRIPTION = `Video visits from India with Dr. Charmi Shah (OB-GYN, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapy, Mat Pilates online, STOTT Pilates on Mat and Reformer). We serve families in India and abroad, pick your city below, then choose the type of care. ${PRACTICE_BOTH_DOCTORS_IN_PERSON} See each doctor's profile for hours and how to book.`;
+const DESCRIPTION = `Book an online gynecologist consultation with Dr. Charmi Shah (OB-GYN, IVF, laparoscopy) or an online physiotherapy consultation with Dr. Zalak Shah (women's health physiotherapy and Pilates). Video visits are for families in India and abroad. Pick your city below, then choose the type of care. ${PRACTICE_BOTH_DOCTORS_IN_PERSON} Message WhatsApp ${CONTACT.phoneE164}.`;
 
 export function VirtualOnlineConsultationHubPage() {
   const path = VIRTUAL_CONSULTATION_HUB_PATH;
@@ -66,7 +70,7 @@ export function VirtualOnlineConsultationHubPage() {
 
   return (
     <PageShell breadcrumbs={crumbs}>
-      <SeoHead title={TITLE} metaDescription={DESCRIPTION} path={path} />
+      <SeoHead title={TITLE} metaDescription={virtualHubMetaDescription()} path={path} />
       <JsonLdGraph graph={graph} />
       <JsonLdFaq items={hubFaqItems} pageUrl={githubPagesAbsoluteUrl(SITE_URL, path)} />
 
@@ -116,7 +120,7 @@ export function VirtualOnlineConsultationHubPage() {
         <TelemedicineLimitations className="mb-10" />
 
         <h2 className="font-heading text-xl font-semibold text-foreground mb-2">
-          Priority metros , virtual consultation from India
+          Priority metros: virtual consultation from India
         </h2>
         <p className="text-sm text-muted-foreground mb-8">
           {ANCHOR_VIRTUAL_CONSULTATION_CITIES.length} highlighted cities below. Open your city for a

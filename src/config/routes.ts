@@ -1,5 +1,6 @@
 /** Public routes (pathname only; React Router `basename` applies on GitHub Pages). */
 import { SEO_ONLINE_SERVICES } from "../data/seoOnlineServices";
+import { isFeaturedServiceCityPath } from "../data/featuredServiceCities";
 import {
   learnHubSitemapPaths,
   learnWatchSitemapPaths,
@@ -7,6 +8,7 @@ import {
 } from "../lib/learnHubUrls";
 import { topicGuideSitemapPaths } from "../data/topicGuides/topicGuideSitemapPaths";
 import { internationalConsultationSitemapPaths } from "../data/internationalServices/internationalConsultationSitemapPaths";
+import { LOCAL_SERVICE_PATHS } from "../data/localServicePages";
 import {
   VIRTUAL_CONSULTATION_HUB_PATH,
   VIRTUAL_CONSULTATION_COUNTRIES,
@@ -74,15 +76,22 @@ export const HOME_SECTION_SCROLL_PATHS: readonly string[] = [
 ];
 
 /**
- * Each online service for every virtual city (supplemental sitemap only).
- * SEO-11: city list is frozen via `VIRTUAL_CONSULTATION_CITY_COUNT_FREEZE` — do not expand
- * cities/services here without disposition review. Long-tail stays indexable at lower
- * priority (`sitemapPriorityVirtualServiceCityLongtail`); default action keep/improve.
+ * Each online service for every virtual city. The whole matrix is the online brand and is
+ * indexable, including Mumbai, Ahmedabad, Valsad, and Bengaluru. Those four cities also
+ * keep their in-person pages (`/mumbai/`, `/ahmedabad/`, `/valsad/`, `/bangalore/`).
+ * SEO-11: city list is frozen via
+ * `VIRTUAL_CONSULTATION_CITY_COUNT_FREEZE`.
  */
-export const SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES: readonly string[] =
-  VIRTUAL_CONSULTATION_CITIES.flatMap((c) =>
-    SEO_ONLINE_SERVICES.map((s) => virtualServiceCityPath(c, s.slug)),
-  );
+export const VIRTUAL_SERVICE_CITY_PATHS: readonly string[] = VIRTUAL_CONSULTATION_CITIES.flatMap(
+  (c) => SEO_ONLINE_SERVICES.map((s) => virtualServiceCityPath(c, s.slug)),
+);
+
+/** Every service×city page. Historical name; the full matrix is indexable. */
+export const SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITY_FEATURED: readonly string[] =
+  VIRTUAL_SERVICE_CITY_PATHS;
+
+/** Nothing in the matrix is noindex. Kept so build meta and audits fail if this is repopulated. */
+export const VIRTUAL_SERVICE_CITY_NOINDEX_PATHS: readonly string[] = [];
 
 const VIRTUAL_COUNTRY_SITEMAP_PATHS: readonly string[] = VIRTUAL_CONSULTATION_COUNTRIES.map((c) =>
   virtualConsultationCountryPath(c),
@@ -93,12 +102,6 @@ export const SITEMAP_SEGMENT_VIRTUAL_HUB_COUNTRY_CITY: readonly string[] = [
   ROUTES.onlineConsultation,
   ...VIRTUAL_COUNTRY_SITEMAP_PATHS,
   ...VIRTUAL_CONSULTATION_CITIES.map((c) => virtualConsultationCityPath(c)),
-];
-
-/** Virtual hub through service×city (full virtual SEO set). */
-export const SITEMAP_SEGMENT_VIRTUAL_CONSULTATION: readonly string[] = [
-  ...SITEMAP_SEGMENT_VIRTUAL_HUB_COUNTRY_CITY,
-  ...SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES,
 ];
 
 /** International consultation hub, doctor sub-hubs, and service landings. */
@@ -119,6 +122,7 @@ export const SITEMAP_SEGMENT_CORE: readonly string[] = [
   ROUTES.mumbai,
   ROUTES.valsad,
   ROUTES.bangalore,
+  ...LOCAL_SERVICE_PATHS,
   ROUTES.learnArticles,
   ROUTES.faq,
   ROUTES.medicalDisclaimer,
@@ -177,6 +181,7 @@ export function sitemapPriorityForPath(pathname: string): string {
   ) {
     return "0.92";
   }
+  if (LOCAL_SERVICE_PATHS.includes(p)) return "0.9";
   if (p === ROUTES.prenatal || p === ROUTES.postnatal || p === ROUTES.pilates) {
     return "0.93";
   }
@@ -213,31 +218,27 @@ export function sitemapPriorityForPath(pathname: string): string {
     if (segs.length === 1) return "0.96";
     if (segs[1] === "country") return "0.88";
     if (segs.length === 2) return "0.84";
-    return "0.70";
+    // Demand-proven pages sit a little above the rest of the online matrix.
+    return isFeaturedServiceCityPath(p) ? "0.78" : "0.72";
   }
 
   return "0.9";
 }
 
-/** Lower `<priority>` for optional supplemental service×city sitemap (duplicate URLs allowed). */
-export function sitemapPriorityVirtualServiceCityLongtail(): string {
-  return "0.58";
-}
-
 /**
- * Paths listed in the primary `sitemap.xml` only (no service×city matrix).
- * Long-tail `/online-consultation/:city/:service` URLs live in
- * `sitemap-virtual-service-cities.xml` instead.
+ * Paths listed in `sitemap.xml`. Every `/online-consultation/:city/:service` page is listed.
+ * In-person local pages stay the four India city URLs.
  */
 export const SITEMAP_PATHS_PRIMARY_URLSET: readonly string[] = [
   ...SITEMAP_SEGMENT_CORE,
   ...SITEMAP_SEGMENT_LEARN,
   ...SITEMAP_SEGMENT_TOPIC_GUIDES,
   ...SITEMAP_SEGMENT_VIRTUAL_HUB_COUNTRY_CITY,
+  ...SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITY_FEATURED,
 ];
 
-/** Every indexable path (primary urlset + supplemental long-tail). Used for static shells. */
+/** Every routable page that gets a static shell. */
 export const SITEMAP_PATHS: readonly string[] = [
   ...SITEMAP_PATHS_PRIMARY_URLSET,
-  ...SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES,
+  ...VIRTUAL_SERVICE_CITY_NOINDEX_PATHS,
 ];

@@ -28,7 +28,7 @@ export const NEW_CALENDAR_GUIDE_ROWS: TopicGuideRow[] = [
     slug: "positive-pregnancy-test-next-steps",
     tier: 3,
     cluster: "fertility",
-    title: "I Have a Positive Pregnancy Test — What Next?",
+    title: "I Have a Positive Pregnancy Test: What Next?",
     primaryConsult: "charmi",
     indexable: true,
     calendarArticleId: "W13-C",

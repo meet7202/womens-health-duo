@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import { useMemo } from "react";
 import { Activity, HeartPulse, Baby, Dumbbell, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ROUTES } from "@/config/routes";
 import { publicPathname } from "@/lib/githubPagesPublicUrl";
 import { whatsappIntentFromPathname, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 import { AppLink as Link } from "@/components/router/AppLink";
@@ -13,25 +12,48 @@ const topicLanes = [
     id: "hormonal-health",
     title: "Hormonal health",
     icon: Activity,
-    text: "Cycle hormones, PCOS patterns, perimenopause questions, short clips plus a real OB-GYN consult when you're ready.",
+    text: "Cycle hormones, PCOS patterns and perimenopause questions. Start with short clips, then book an OB-GYN consult when you're ready.",
+    links: [
+      { path: "/pcos/", label: "PCOS guide" },
+      { path: "/hormonal-imbalance/", label: "Hormonal imbalance" },
+    ],
   },
   {
     id: "menstrual-health",
     title: "Menstrual health",
     icon: HeartPulse,
-    text: "Heavy or painful periods, fibroids, endometriosis concerns, education first, then structured care with Dr. Charmi.",
+    text: "Heavy or painful periods, fibroids and endometriosis concerns. Read up first, then see Dr. Charmi for a care plan.",
+    links: [
+      { path: "/heavy-periods/", label: "Heavy periods" },
+      { path: "/endometriosis-symptoms-diagnosis/", label: "Endometriosis" },
+      { path: "/valsad/gynecology/", label: "Gynecology in Valsad" },
+    ],
   },
   {
     id: "fertility",
     title: "Fertility",
     icon: Baby,
-    text: "Fertility pathways, IVF/IUI questions, and pregnancy planning, especially helpful for NRIs who want continuity.",
+    text: "Fertility options, IVF/IUI questions, and pregnancy planning. Useful for NRIs who want to keep seeing the same doctor.",
+    links: [
+      { path: "/fertility/", label: "Fertility and IVF" },
+      { path: "/pregnancy-planning/", label: "Pregnancy planning" },
+    ],
   },
   {
     id: "stott-pilates",
     title: "Physio and Pilates",
     icon: Dumbbell,
-    text: "Mat & Reformer work and women's health physiotherapy with Dr. Zalak, pelvic floor, prenatal/postnatal, and recovery.",
+    text: "Women's health physiotherapy with Dr. Zalak Shah: pelvic floor, prenatal and postnatal care, and recovery. Pilates supports that work.",
+    links: [
+      { path: "/womens-health-physiotherapy/", label: "Women's health physiotherapy" },
+      { path: "/prenatal-physiotherapy/", label: "Prenatal physio" },
+      { path: "/postpartum-recovery/", label: "Postnatal recovery" },
+      { path: "/diastasis-recti/", label: "Diastasis recti" },
+      { path: "/bladder-leakage/", label: "Bladder leakage" },
+      { path: "/pilates/", label: "Pilates classes" },
+      { path: "/bangalore/pilates-classes/", label: "Pilates in Bangalore" },
+      { path: "/ahmedabad/pilates-classes/", label: "Pilates in Ahmedabad" },
+    ],
   },
 ] as const;
 
@@ -64,9 +86,9 @@ export function HomeServiceTopicLanes() {
             Four ways people find us
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-            A light overview so you know you&apos;re in the right place, the{" "}
+            A short overview so you know you&apos;re in the right place. The{" "}
             <span className="font-medium text-foreground">full service list by doctor</span> is
-            right below this block.
+            right below.
           </p>
         </div>
 
@@ -88,10 +110,19 @@ export function HomeServiceTopicLanes() {
                 {lane.title}
               </h3>
               <p className="flex-1 text-sm leading-relaxed text-muted-foreground">{lane.text}</p>
+              <ul className="mt-4 flex flex-wrap gap-x-4 gap-y-1.5 text-sm">
+                {lane.links.map((l) => (
+                  <li key={l.path}>
+                    <Link
+                      to={publicPathname(l.path)}
+                      className="text-primary underline underline-offset-4"
+                    >
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
               <div className="mt-5 flex flex-wrap gap-2">
-                <Button variant="outline" size="sm" asChild>
-                  <Link to={publicPathname(ROUTES.learn)}>Learn hub</Link>
-                </Button>
                 <Button variant="ghost" size="sm" className="text-primary" asChild>
                   <a href={bookWhatsAppHref} target="_blank" rel="noopener noreferrer">
                     <span className="inline-flex items-center gap-1.5">

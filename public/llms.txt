@@ -1,47 +1,50 @@
 # Women's Health Duo
 
-> Holistic women's healthcare by two sisters: Dr. Charmi Shah (OB-GYN — obstetrics, gynecology, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapist and STOTT Pilates instructor for **Mat** and **Reformer**, including **Mat Pilates online**). **Primary access for international patients is online** (video OB-GYN, online physio / Pilates programs). **In person:** Dr. Charmi in **Mumbai**, **Ahmedabad**, and **Valsad**; Dr. Zalak in **Bangalore** and **Ahmedabad**—both offer **virtual** visits worldwide.
+> Women's healthcare from two sisters: Dr. Charmi Shah (OB-GYN: obstetrics, gynecology, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapist and STOTT Pilates instructor for **Mat** and **Reformer**, including **Mat Pilates online**). **International patients mostly see us online** (video OB-GYN visits, online physio and Pilates programs). **In person:** Dr. Charmi in **Mumbai**, **Ahmedabad**, and **Valsad**; Dr. Zalak in **Bangalore** and **Ahmedabad**. Both also offer **virtual** visits worldwide.
 >
-> **Entity line (brand ↔ doctors):** Women's Health Duo — Dr. Charmi Shah (OB-GYN / IVF) & Dr. Zalak Shah (women's health physio / STOTT Pilates). **Not a supplement or pill brand:** education + booked consults.
+> **Entity line (brand ↔ doctors):** Women's Health Duo: Dr. Charmi Shah (OB-GYN / IVF) & Dr. Zalak Shah (women's health physio / STOTT Pilates). **Not a supplement or pill brand:** education + booked consults.
 
 ## Summary
 
-- **Brand:** Women's Health Duo
-- **India:** In-person visits for Dr. Charmi in **Mumbai**, **Ahmedabad**, and **Valsad**; for Dr. Zalak in **Bangalore** and **Ahmedabad**; strong emphasis on **online** access for people anywhere.
-- **Dr. Charmi Shah (OB-GYN):** Pregnancy and high-risk obstetrics, gynecology, IVF/IUI and fertility workup, laparoscopic surgery, PCOS, endometriosis, menopause, routine women's health — **online OB-GYN consults** available globally; in person in **Mumbai**, **Ahmedabad**, and **Valsad**.
-- **Dr. Zalak Shah (physio & Pilates):** Women's health physiotherapy, pelvic floor, **prenatal and postnatal** rehab, musculoskeletal care for women, **Mat Pilates online**, **STOTT Pilates on Mat and Reformer**, wellness programs — **online classes and guidance** for international clients; in person in **Bangalore** and **Ahmedabad**.
-- **Delivery:** **Online-first worldwide** (video visits from India); many **city** overview pages plus **service-by-city** pages under `/online-consultation/...` (lists highlight common metros only—**many more cities worldwide** are welcome the same way). Dedicated India city pages (e.g. Ahmedabad, Mumbai, Valsad, Bengaluru) describe local access.
+- **Brand:** Women's Health Duo. Also written Womens Health Duo, WomensHealthDuo, and womens-health-duo. Dr. Charmi Shah is also written Dr Charmi Shah, Dr. Charmi, Charmi Shah, and Dr. Charmi Shah OBG (obstetrician and gynecologist). Dr. Zalak Shah is also written Dr Zalak Shah, Dr. Zalak Shah PT, Dr. Zalak, and Zalak Shah; she teaches Pilates and women's health physiotherapy.
+- **India:** In-person visits for Dr. Charmi in **Mumbai**, **Ahmedabad**, and **Valsad**; for Dr. Zalak in **Bangalore** and **Ahmedabad**. Patients anywhere can also book **online**.
+- **Dr. Charmi Shah (OB-GYN):** Pregnancy and high-risk obstetrics, gynecology, IVF/IUI and fertility workup, laparoscopic surgery, PCOS, endometriosis, menopause, routine women's health. **Online OB-GYN consults** for patients in any country; in person in **Mumbai**, **Ahmedabad**, and **Valsad**.
+- **Dr. Zalak Shah (physio & Pilates):** Women's health physiotherapy, pelvic floor, **prenatal and postnatal** rehab, musculoskeletal care for women, **Mat Pilates online**, **STOTT Pilates on Mat and Reformer**, wellness programs. **Online classes and guidance** for international clients; in person in **Bangalore** and **Ahmedabad**.
+- **Delivery:** **Online-first worldwide** (video visits from India). There are city overview pages plus **service-by-city** pages under `/online-consultation/...`. The lists show common metros only; patients in **many other cities** book the same way. India city pages (e.g. Ahmedabad, Mumbai, Valsad, Bengaluru) describe local access.
 
 ## Primary links
 
-- [Women's Health Duo — homepage](https://womenshealthduo.com/)
-- [**Virtual online consultations hub** (NRIs & diaspora cities)](https://womenshealthduo.com/online-consultation)
-- [Example: city overview — Dubai / UAE](https://womenshealthduo.com/online-consultation/dubai-ae)
-- [Example: service × city — IVF & fertility, Dubai](https://womenshealthduo.com/online-consultation/dubai-ae/ivf-fertility-treatments)
-- [Example: online care — London, UK](https://womenshealthduo.com/online-consultation/london)
-- [Example: online care — Singapore](https://womenshealthduo.com/online-consultation/singapore)
-- [Example: online care — Toronto, Canada](https://womenshealthduo.com/online-consultation/toronto)
-- [Dr. Charmi Shah — profile](https://womenshealthduo.com/dr-charmi-shah)
-- [Dr. Zalak Shah — profile](https://womenshealthduo.com/dr-zalak-shah)
-- [Dr. Zalak Shah — Google Business (Ahmedabad)](https://share.google/Dvx1j3yYqsuo2MvDV)
-- [Dr. Zalak Shah — Google Business (Bengaluru / Bangalore)](https://share.google/kjTkctZb9U7bOcpIE)
-- [Women's health — Ahmedabad](https://womenshealthduo.com/ahmedabad)
-- [Women's health — Mumbai](https://womenshealthduo.com/mumbai)
-- [Women's health — Valsad](https://womenshealthduo.com/valsad)
-- [Women's health — Bangalore](https://womenshealthduo.com/bangalore)
+- [Women's Health Duo: homepage](https://womenshealthduo.com/)
+- [**Online gynecologist and physiotherapy consults** (virtual hub for India and abroad)](https://womenshealthduo.com/online-consultation)
+- [Example: city overview, Dubai / UAE](https://womenshealthduo.com/online-consultation/dubai-ae)
+- [Example: online care, London, UK](https://womenshealthduo.com/online-consultation/london)
+- [Example: online care, Singapore](https://womenshealthduo.com/online-consultation/singapore)
+- [Example: online care, Toronto, Canada](https://womenshealthduo.com/online-consultation/toronto)
+- [Dr. Charmi Shah: profile](https://womenshealthduo.com/dr-charmi-shah)
+- [Dr. Zalak Shah: profile](https://womenshealthduo.com/dr-zalak-shah)
+- [Dr. Zalak Shah: Google Business (Ahmedabad)](https://share.google/XXg8WCWndAn8BN09R)
+- [Dr. Zalak Shah: Google Business (Bengaluru / Bangalore)](https://share.google/O3EXDAPWpTKyQJ242)
+- [Women's health: Ahmedabad](https://womenshealthduo.com/ahmedabad)
+- [Women's health: Mumbai](https://womenshealthduo.com/mumbai)
+- [Women's health: Valsad](https://womenshealthduo.com/valsad)
+- [Women's health: Bangalore](https://womenshealthduo.com/bangalore)
 - [Learn](https://womenshealthduo.com/learn)
-- [Learn — articles & topic guides index](https://womenshealthduo.com/learn/articles)
-- [Learn — Dr. Charmi clips](https://womenshealthduo.com/learn/dr-charmi)
-- [Learn — Dr. Zalak clips](https://womenshealthduo.com/learn/dr-zalak)
-- [Learn — topic: Fertility](https://womenshealthduo.com/learn/topic/fertility)
-- [Learn — Dr. Zalak · Pregnancy](https://womenshealthduo.com/learn/dr-zalak/topic/pregnancy)
-- [Example watch page — Instagram reel](https://womenshealthduo.com/learn/watch/ig-duasgqgemg0/)
-- [Example watch page — Instagram post / carousel](https://womenshealthduo.com/learn/watch/igp-dhltqaop6-k/)
+- [Learn: articles & topic guides index](https://womenshealthduo.com/learn/articles)
+- [Learn: Dr. Charmi clips](https://womenshealthduo.com/learn/dr-charmi)
+- [Learn: Dr. Zalak clips](https://womenshealthduo.com/learn/dr-zalak)
+- [Learn: topic, Fertility](https://womenshealthduo.com/learn/topic/fertility)
+- [Learn: Dr. Zalak · Pregnancy](https://womenshealthduo.com/learn/dr-zalak/topic/pregnancy)
+- [Example watch page: Instagram reel](https://womenshealthduo.com/learn/watch/ig-duasgqgemg0/)
+- [Example watch page: Instagram post / carousel](https://womenshealthduo.com/learn/watch/igp-dhltqaop6-k/)
 - [FAQ](https://womenshealthduo.com/faq)
 - [Book teleconsultation](https://womenshealthduo.com/book-consultation)
 - [**International consultation hub** (second opinion & specialist telehealth)](https://womenshealthduo.com/international-consultation)
-- [International OB-GYN & fertility — Dr. Charmi](https://womenshealthduo.com/international-consultation/dr-charmi)
-- [International physio & Pilates — Dr. Zalak](https://womenshealthduo.com/international-consultation/dr-zalak)
+- [Online OB-GYN second opinion](https://womenshealthduo.com/international-consultation/ob-gyn-second-opinion-online)
+- [Women's health physiotherapy online](https://womenshealthduo.com/international-consultation/womens-health-physio-online)
+- [Online antenatal classes, one-to-one](https://womenshealthduo.com/international-consultation/online-antenatal-classes)
+- [Indian doctor online, Hindi and Gujarati](https://womenshealthduo.com/international-consultation/hindi-gujarati-doctor-online)
+- [International OB-GYN & fertility: Dr. Charmi](https://womenshealthduo.com/international-consultation/dr-charmi)
+- [International physio & Pilates: Dr. Zalak](https://womenshealthduo.com/international-consultation/dr-zalak)
 - [Example: IVF second opinion online](https://womenshealthduo.com/international-consultation/ivf-second-opinion)
 - [Example: pelvic floor physio online](https://womenshealthduo.com/international-consultation/pelvic-floor-physiotherapy-online)
 - [Free women's health community (WhatsApp)](https://womenshealthduo.com/free-womens-health-community)
@@ -51,34 +54,34 @@
 - [Refund policy](https://womenshealthduo.com/refund-policy)
 - [Medical disclaimer](https://womenshealthduo.com/medical-disclaimer)
 - [Editorial policy](https://womenshealthduo.com/editorial-policy)
-- [Email — contact@womenshealthduo.com](mailto:contact@womenshealthduo.com)
-- [WhatsApp — +91 79905 50754](https://wa.me/917990550754)
-- [Instagram — @womenshealthduo](https://www.instagram.com/womenshealthduo)
-- [YouTube — @WomensHealthDuo](https://www.youtube.com/@WomensHealthDuo)
+- [Email: contact@womenshealthduo.com](mailto:contact@womenshealthduo.com)
+- [WhatsApp: +91 79905 50754](https://wa.me/917990550754)
+- [Instagram: @womenshealthduo](https://www.instagram.com/womenshealthduo)
+- [YouTube: @WomensHealthDuo](https://www.youtube.com/@WomensHealthDuo)
 
 ## Discovery & indexing (production)
 
 - **Canonical site:** `https://womenshealthduo.com` (no trailing slash in env defaults).
-- **Agent skills index:** [`/.well-known/agent-skills/index.json`](https://womenshealthduo.com/.well-known/agent-skills/index.json) — curated SKILL.md entries (site overview, booking, Learn hub, DNS-AID) with SHA-256 digests; regenerated at `npm run build`.
-- **Content discovery linkset:** [`/.well-known/content-catalog.json`](https://womenshealthduo.com/.well-known/content-catalog.json) — RFC 9264 `application/linkset+json` pointing to `llms.txt`, agent skills index, Learn articles, and sitemap (not an API catalog).
-- **Robots:** [`/robots.txt`](https://womenshealthduo.com/robots.txt) — origin rules declare `Content-Signal: search=yes, ai-input=yes, ai-train=no` with **Allow** for Googlebot, Bingbot, and agent-fetch bots (ChatGPT-User, OAI-SearchBot, PerplexityBot, anthropic-ai), while training crawlers remain restricted in managed rules when configured. Lists sitemap URLs.
-- **Sitemap:** [`/sitemap.xml`](https://womenshealthduo.com/sitemap.xml) — at **`npm run build`**, a **single `<urlset>`** (not a sitemap index) lists the **primary** crawl set (core pages, Learn hub filters, **every Learn watch URL**, topic guides, virtual hub/country/city, international consultation, book teleconsultation, free community) with **`<lastmod>`**, **`<changefreq>`**, and **`<priority>`** (`sitemapPriorityForPath()` in `src/config/routes.ts`). Current primary urlset size is on the order of **950+ URLs** (includes **~195** `/learn/watch/…` clip pages). **`robots.txt`** also lists [`/sitemap-virtual-service-cities.xml`](https://womenshealthduo.com/sitemap-virtual-service-cities.xml) (long-tail **service × city** URLs) and [`/sitemap-videos.xml`](https://womenshealthduo.com/sitemap-videos.xml) (**Google Video sitemap** for YouTube Shorts + Instagram Reels watch pages: title, description, thumbnail, embed/player loc).
+- **Agent skills index:** [`/.well-known/agent-skills/index.json`](https://womenshealthduo.com/.well-known/agent-skills/index.json). Lists the curated SKILL.md entries (site overview, booking, Learn hub, DNS-AID) with SHA-256 digests; regenerated at `npm run build`.
+- **Content discovery linkset:** [`/.well-known/content-catalog.json`](https://womenshealthduo.com/.well-known/content-catalog.json). An RFC 9264 `application/linkset+json` file pointing to `llms.txt`, the agent skills index, Learn articles, and the sitemap (not an API catalog).
+- **Robots:** [`/robots.txt`](https://womenshealthduo.com/robots.txt). Origin rules declare `Content-Signal: search=yes, ai-input=yes, ai-train=no` with **Allow** for Googlebot, Bingbot, and agent-fetch bots (ChatGPT-User, OAI-SearchBot, PerplexityBot, anthropic-ai). Training crawlers stay restricted in managed rules when configured. The file lists the sitemap URLs.
+- **Sitemap:** [`/sitemap.xml`](https://womenshealthduo.com/sitemap.xml). At **`npm run build`**, a **single `<urlset>`** (not a sitemap index) lists the **primary** crawl set (core pages, Learn hub filters, **every Learn watch URL**, topic guides, virtual hub/country/city, international consultation, book teleconsultation, free community) with **`<changefreq>`** and **`<priority>`** (`sitemapPriorityForPath()` in `src/config/routes.ts`). `<lastmod>` is left out until each URL has a verified content revision date. The primary urlset holds roughly **950+ URLs** (including **~195** `/learn/watch/…` clip pages). **`robots.txt`** also lists [`/sitemap-videos.xml`](https://womenshealthduo.com/sitemap-videos.xml) (**Google Video sitemap** for YouTube Shorts + Instagram Reels watch pages: title, description, thumbnail, embed/player loc) and [`/sitemap-images.xml`](https://womenshealthduo.com/sitemap-images.xml) (content photos on indexable pages: hero, doctor portraits, class photos, guide figures, and Learn watch posters).
 - **HTML head:** root [`index.html`](https://womenshealthduo.com/) receives build-time tokens for title, description, **meta keywords** (comma-separated topics for legacy crawlers), Open Graph, and a **`<link rel="sitemap">`** to the absolute sitemap URL.
 
-## URL patterns (Learn hub — Shorts, Reels, posts & watch pages)
+## URL patterns (Learn hub: Shorts, Reels, posts & watch pages)
 
 - **Hub (filtered carousel):** `/learn`, `/learn/dr-charmi`, `/learn/dr-zalak`, `/learn/topic/<topicSlug>`, `/learn/<doctorSegment>/topic/<topicSlug>` (topic slug from label, e.g. `fertility`, `labor-and-delivery`, `pilates`, `carousel`, `posts`).
-- **Per-clip watch pages (Google Video / one `VideoObject` each):** `/learn/watch/<videoId>/` where `<videoId>` is `ig-…` (Instagram reel), `igp-…` (Instagram post or carousel), or a YouTube id for Shorts. **All hub rows** (~190+ clips: reels, carousels/feed posts, and YouTube Shorts) are in the primary sitemap; **reels + YouTube Shorts** additionally appear in **`sitemap-videos.xml`** with rich video metadata. Watch pages use descriptive poster **`alt`/`title`**, **`og:image`**, and schema **`ImageObject`** + **`VideoObject`** (or **`SocialMediaPosting`** for static Instagram posts).
+- **Per-clip watch pages (Google Video / one `VideoObject` each):** `/learn/watch/<videoId>/` where `<videoId>` is `ig-…` (Instagram reel), `igp-…` (Instagram post or carousel), or a YouTube id for Shorts. **All hub rows** (~190+ clips: reels, carousels/feed posts, and YouTube Shorts) are in the primary sitemap; **reels + YouTube Shorts** also appear in **`sitemap-videos.xml`** with video metadata. Watch pages use descriptive poster **`alt`/`title`**, **`og:image`**, and schema **`ImageObject`** + **`VideoObject`** (or **`SocialMediaPosting`** for static Instagram posts).
 - **Playback:** YouTube Shorts use the official embed. Instagram **reels** use a native `<video>` when a CDN `videoUrl` is available from import (licensed-music reels); otherwise the official `/reel/{id}/embed/` iframe. Instagram **posts/carousels** use the official `/p/{id}/embed/` iframe. Cover images for posters are stored on-site under **`/images/hub-thumbs/`** when import succeeds.
-- **Articles index:** `/learn/articles` — written topic guides (flat paths like `/pcos`, `/endometriosis`, …).
-- **Topical clusters (main `/learn` only):** `/learn#learn-pillars` — **six** Bing-oriented hubs (hormonal health, menstrual health, fertility & ovulation, pregnancy & labor, PCOS, STOTT Pilates) with links into topic filters and example virtual-care URLs.
+- **Articles index:** `/learn/articles` lists the written topic guides (flat paths like `/pcos`, `/what-is-pcos`, …). `/what-is-pilates` explains the exercise; `/what-is-stott-pilates` explains one teaching method. Some older guide URLs are permanent aliases to a surviving article, hub, or class page (see `src/config/guideConsolidationRedirects.ts`); follow the alias rather than treating the old URL as a second condition.
+- **Topical clusters (main `/learn` only):** `/learn#learn-pillars` has **six** Bing-oriented hubs (hormonal health, menstrual health, fertility & ovulation, pregnancy & labor, PCOS, STOTT Pilates) with links into topic filters and example virtual-care URLs.
 
 ## URL patterns (virtual SEO)
 
 - **Hub:** `/online-consultation`
 - **Country index:** `/online-consultation/country/<countrySlug>` (e.g. `india`, `united-states`)
 - **City overview:** `/online-consultation/<citySlug>` (e.g. `dubai-ae`, `london`, `toronto`)
-- **Service × city:** `/online-consultation/<citySlug>/<serviceSlug>` — one page per combination for long-tail discovery.
+- **Service × city:** `/online-consultation/<citySlug>/<serviceSlug>`. Every city and every online service is indexable and in `sitemap.xml`. These pages are virtual video consultations, not a clinic in that city (for example [online pelvic floor physiotherapy for Muscat](https://womenshealthduo.com/online-consultation/muscat/pelvic-floor-rehabilitation/) and [online menopause consultation for Singapore](https://womenshealthduo.com/online-consultation/singapore/menopause-wellness/)). In-person care is Dr. Charmi Shah in Mumbai, Ahmedabad, and Valsad, and Dr. Zalak Shah in Bangalore and Ahmedabad (`/mumbai/`, `/ahmedabad/`, `/valsad/`, `/bangalore/`). Each of those URLs lists the clinic by name (Women's Health Duo plus the city), the doctor who sees patients there, and the services patients book: for Dr. Zalak Shah, women's health physiotherapy, pelvic floor physiotherapy, prenatal classes, postnatal diastasis recti, and Pilates in Ahmedabad and Bangalore; for Dr. Charmi Shah, gynecology, IVF, laparoscopy, pregnancy care, and PCOS in Mumbai, Ahmedabad, and Valsad. The Bangalore studio address is on the Bangalore pages. Ahmedabad, Mumbai, and Valsad visits are by appointment and the room is confirmed when you book. Those same cities also have the online service pages, plus in-person service URLs such as `/ahmedabad/prenatal-classes/`, `/bangalore/pelvic-floor-physiotherapy/`, `/bangalore/postnatal-diastasis-recti/`, `/mumbai/ivf/`, and `/valsad/pcos/`.
 - **Legacy:** `/global-online` redirects to `/online-consultation` (preserve old bookmarks).
 
 ## Online service slugs (`<serviceSlug>`)
@@ -87,8 +90,8 @@ These repeat under every virtual city (see `src/data/seoOnlineServices.ts` in th
 
 ## Topics & queries this site is built for
 
-- **OB-GYN / IVF (Dr. Charmi):** pregnancy & high-risk obstetrics, gynecology, IVF/IUI discussion, laparoscopy-related consults, PCOS/endometriosis, menopause, routine women's health — **telehealth from India** for NRIs and global families; **in person** in **Mumbai**, **Ahmedabad**, and **Valsad**.
-- **Physio / Pilates (Dr. Zalak):** pelvic floor, **prenatal and postnatal** care, **Mat Pilates online**, STOTT **Mat & Reformer**, MSK physio, core/functional training, wellness-style programs — **online-first** worldwide; **in person** in **Bangalore** and **Ahmedabad**.
+- **OB-GYN / IVF (Dr. Charmi):** pregnancy & high-risk obstetrics, gynecology, IVF/IUI discussion, laparoscopy-related consults, PCOS/endometriosis, menopause, routine women's health. **Telehealth from India** for NRIs and families abroad; **in person** in **Mumbai**, **Ahmedabad**, and **Valsad**.
+- **Physio / Pilates (Dr. Zalak):** pelvic floor, **prenatal and postnatal** care, **Mat Pilates online**, STOTT **Mat & Reformer**, MSK physio, core/functional training, wellness-style programs. **Online-first** worldwide; **in person** in **Bangalore** and **Ahmedabad**.
 - **Languages often used on consults:** English, Hindi, Gujarati (request when you message).
 - **Booking:** Structured teleconsultation at **`/book-consultation`** (patient details + mandatory telemedicine consent, then WhatsApp handoff). General questions: WhatsApp and email on the site; **not** emergency services. **Free education community** (public WhatsApp group, not clinical chat): **`/free-womens-health-community`**.
 
@@ -98,11 +101,11 @@ Permanent section URLs (same page as `/`; good for sharing) and hash alternative
 
 - **Home:** [womenshealthduo.com/](https://womenshealthduo.com/) or [/#home](https://womenshealthduo.com/#home)
 - **About:** [/about](https://womenshealthduo.com/about) or [/#about](https://womenshealthduo.com/#about)
-- **Services:** [/services](https://womenshealthduo.com/services) or [/#services](https://womenshealthduo.com/#services) — the first block is a **quick topic map** ([/pillars](https://womenshealthduo.com/pillars) or `#pillars`), then the full doctor-by-doctor service list.
+- **Services:** [/services](https://womenshealthduo.com/services) or [/#services](https://womenshealthduo.com/#services). The first block is a **quick topic map** ([/pillars](https://womenshealthduo.com/pillars) or `#pillars`), then the full doctor-by-doctor service list.
 - **Testimonials:** [/testimonials](https://womenshealthduo.com/testimonials) or [/#testimonials](https://womenshealthduo.com/#testimonials)
 - **Contact:** [/contact](https://womenshealthduo.com/contact) or [/#contact](https://womenshealthduo.com/#contact)
-- **FAQ preview (homepage accordion):** [/quick-answers](https://womenshealthduo.com/quick-answers) or [/#faq](https://womenshealthduo.com/#faq) — distinct from the full FAQ page at `/faq`.
+- **FAQ preview (homepage accordion):** [/quick-answers](https://womenshealthduo.com/quick-answers) or [/#faq](https://womenshealthduo.com/#faq). This is separate from the full FAQ page at `/faq`.
 
 ## Note for site owners
 
-If the live domain differs, update `VITE_SITE_URL` in `.env`, `src/config/site.defaults.ts` (`SITE_DEFAULT_URL`), and this file so links stay accurate. Marketing URLs live in `src/config/routes.ts`, `src/lib/virtualConsultation.ts`, `src/data/seoOnlineServices.ts`, and `src/data/virtualConsultationCities.json`; Learn clip data in `src/data/knowledgeHubInstagramReels.json`, `knowledgeHubInstagramPosts.json`, and `knowledgeHubVideos.ts`; hub cover images in `public/images/hub-thumbs/` (refresh via `npm run import:instagram` or `npm run retry:hub-thumbnails`). **`dist/sitemap.xml`** (primary) and **`dist/sitemap-virtual-service-cities.xml`** (service×city only) are written at build time. Legacy `/global-online` URLs redirect to `/online-consultation`.
+If the live domain differs, update `VITE_SITE_URL` in `.env`, `src/config/site.defaults.ts` (`SITE_DEFAULT_URL`), and this file so links stay accurate. Marketing URLs live in `src/config/routes.ts`, `src/lib/virtualConsultation.ts`, `src/data/seoOnlineServices.ts`, and `src/data/virtualConsultationCities.json`; Learn clip data in `src/data/knowledgeHubInstagramReels.json`, `knowledgeHubInstagramPosts.json`, and `knowledgeHubVideos.ts`; hub cover images in `public/images/hub-thumbs/` (refresh via `npm run import:instagram` or `npm run retry:hub-thumbnails`). **`dist/sitemap.xml`**, **`dist/sitemap-videos.xml`**, and **`dist/sitemap-images.xml`** are written at build time. Every `/online-consultation/{city}/{service}/` page is in `sitemap.xml` as a virtual consult. In-person pages are only `/mumbai/`, `/ahmedabad/`, `/valsad/`, and `/bangalore/`. Legacy `/global-online` URLs redirect to `/online-consultation`.

@@ -16,13 +16,19 @@ import {
   SITEMAP_PATHS,
   SITEMAP_PATHS_PRIMARY_URLSET,
   SITEMAP_SEGMENT_INTERNATIONAL_CONSULTATION,
-  SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES,
+  SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITY_FEATURED,
+  VIRTUAL_SERVICE_CITY_NOINDEX_PATHS,
   sitemapPriorityForPath,
-  sitemapPriorityVirtualServiceCityLongtail,
   sitemapUrlsetKindForPath,
 } from "./src/config/routes.ts";
 import { redirectAliasShellPathnames } from "./src/config/routeDisposition.ts";
-import { learnWatchShellPathnames } from "./src/lib/learnHubUrls.ts";
+import { topicGuideSitemapPaths } from "./src/data/topicGuides/topicGuideSitemapPaths.ts";
+import {
+  learnHubShellPathnames,
+  learnHubSitemapPaths,
+  learnWatchShellPathnames,
+  learnWatchSitemapPaths,
+} from "./src/lib/learnHubUrls.ts";
 import {
   applyShellPageMetaToHtml,
   assertShellPagePlaceholdersPresent,
@@ -35,9 +41,10 @@ import { writeIndexNowContentManifest } from "./src/build/indexnowContentManifes
 import { githubPagesAbsoluteUrl } from "./src/lib/githubPagesPublicUrl.ts";
 import { ensureHttpsSiteOrigin } from "./src/lib/ensureHttpsSiteOrigin.ts";
 import { buildVideoSitemapXml, videoSitemapEntryCount } from "./src/build/videoSitemap.ts";
+import { writeImageSitemap } from "./src/build/imageSitemap.ts";
 import { writeAgentDiscoveryFiles } from "./src/build/agentDiscovery.ts";
 
-/** Every indexable pathname (primary + supplemental sitemaps); used for static SPA shells. */
+/** Every routable page pathname; used for static SPA shells. */
 function allSitemapPathnames(): string[] {
   return [...SITEMAP_PATHS];
 }
@@ -163,10 +170,6 @@ function sitemapChangefreq(pathname: string, kind: SitemapChildKind): string {
   }
   if (kind === "learn") return "weekly";
   if (kind === "guides") return "monthly";
-  const segs = pathname.split("/").filter(Boolean);
-  if (segs.length >= 3 && segs[0] === "online-consultation" && segs[1] !== "country") {
-    return "monthly";
-  }
   return "weekly";
 }
 
@@ -230,6 +233,7 @@ function staticSpaShellPathnames(): string[] {
     ...new Set([
       ...allSitemapPathnames(),
       ...learnWatchShellPathnames(),
+      ...learnHubShellPathnames(),
       ...legacyGlobalOnlineShellPathnames(),
       ...redirectAliasShellPathnames(),
     ]),
@@ -308,8 +312,8 @@ User-agent: PerplexityBot
 Allow: /
 
 Sitemap: ${siteUrl}/sitemap.xml
-Sitemap: ${siteUrl}/sitemap-virtual-service-cities.xml
 Sitemap: ${siteUrl}/sitemap-videos.xml
+Sitemap: ${siteUrl}/sitemap-images.xml
 `;
 
   fs.mkdirSync(outDir, { recursive: true });
@@ -321,25 +325,10 @@ Sitemap: ${siteUrl}/sitemap-videos.xml
       SITEMAP_PATHS_PRIMARY_URLSET,
       siteUrl,
       lastmod,
-      "Primary urlset: full site except service×city matrix (see sitemap-virtual-service-cities.xml).",
+      "Indexable pages, including every virtual service×city page. In-person local SEO stays on Mumbai, Ahmedabad, Valsad, and Bangalore.",
       {
         priority: sitemapPriorityForPath,
         changefreq: (p) => sitemapChangefreq(p, sitemapUrlsetKindForPath(p)),
-      },
-    ),
-    "utf8",
-  );
-
-  fs.writeFileSync(
-    path.join(outDir, "sitemap-virtual-service-cities.xml"),
-    buildUrlsetXml(
-      SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES,
-      siteUrl,
-      lastmod,
-      "Supplemental: service×city URLs only (lower priority; not duplicated in sitemap.xml)",
-      {
-        priority: () => sitemapPriorityVirtualServiceCityLongtail(),
-        changefreq: () => "monthly",
       },
     ),
     "utf8",
@@ -360,7 +349,8 @@ Sitemap: ${siteUrl}/sitemap-videos.xml
         lastmodStrategy: "omit-until-verified-content-revision",
         siteUrl,
         primaryUrlCount: SITEMAP_PATHS_PRIMARY_URLSET.length,
-        virtualServiceCityUrlCount: SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES.length,
+        virtualServiceCityCount: SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITY_FEATURED.length,
+        noindexVirtualServiceCityCount: VIRTUAL_SERVICE_CITY_NOINDEX_PATHS.length,
         videoUrlCount: videoSitemapEntryCount(),
         internationalConsultationUrlCount: SITEMAP_SEGMENT_INTERNATIONAL_CONSULTATION.length,
         staticShellCount: staticSpaShellPathnames().length,
@@ -453,7 +443,12 @@ export default defineConfig(({ mode }) => {
             // SEO-10 foundation: React 18 renderToString into priority shells (soft-fail).
             // Skip with WHD_PRERENDER=0 when debugging shell-only builds.
             if (process.env.WHD_PRERENDER !== "0") {
-              const prerender = await prerenderPriorityPagesIntoShells(outDirAbs, rootDir);
+              const prerender = await prerenderPriorityPagesIntoShells(outDirAbs, rootDir, [
+                ...topicGuideSitemapPaths(),
+                ...learnHubSitemapPaths(),
+                ...learnWatchSitemapPaths(),
+                ...SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITY_FEATURED,
+              ]);
               console.info(
                 `[seo-10] prerender priority pages: ${prerender.succeeded}/${prerender.attempted} ok` +
                   (prerender.failed ? `, ${prerender.failed} failed` : ""),
@@ -467,6 +462,10 @@ export default defineConfig(({ mode }) => {
                 }
               }
             }
+            const images = writeImageSitemap(siteUrl, outDirAbs);
+            console.info(
+              `[seo-images] sitemap-images.xml: ${images.images} photos on ${images.pages} pages`,
+            );
             // SEO-25: prefer prerendered hero picture; otherwise homepage-only responsive preload.
             const heroHint = ensureHomepageHeroLcpHint(outDirAbs);
             console.info(`[seo-25] homepage hero LCP: ${heroHint.mode}`);

@@ -2,14 +2,14 @@
   "id": "W03-C",
   "title": "What Should I Do Before Trying for a Baby?",
   "seoTitle": "What to do before trying for a baby",
-  "description": "A short preconception checklist: folic acid, medicines, vaccines, chronic conditions, tobacco and alcohol, and partner health—without a blanket test stack.",
+  "description": "A short preconception checklist: folic acid, medicines, vaccines, chronic conditions, tobacco and alcohol, and partner health, without a blanket test stack.",
   "primaryQuestion": "What should I do before trying for a baby?",
-  "directAnswer": "Before trying for a baby, review your medicines, vaccination records, chronic conditions, tobacco and alcohol use, and partner health with a clinician—without stopping prescriptions on your own. India's National Health Mission advises 400 mcg folic acid tablets daily through the preconception period and first trimester; WHO also supports 400 μg daily across the trying-to-conceive window into week 12. The aim is safer next steps for your history, not a universal fertility scan or supplement stack.",
+  "directAnswer": "Before trying for a baby, review your medicines, vaccination records, chronic conditions, tobacco and alcohol use, and partner health with a clinician, and do not stop prescriptions on your own. India's National Health Mission advises 400 mcg folic acid tablets daily through the preconception period and first trimester; WHO also supports 400 μg daily across the trying-to-conceive window into week 12. The aim is safer next steps for your history, not a universal fertility scan or supplement stack.",
   "sections": [
     {
       "heading": "What a preconception review is for",
       "paragraphs": [
-        "A preconception visit is a planned conversation before a positive test—or as soon as you decide pregnancy is a near-term goal. It covers cycle patterns, previous pregnancies, long-term conditions, operations, infections, mental health and family history from both sides when relevant. Dr. Charmi Shah uses that history to decide what is useful for you, rather than copying a chemist aisle list or a friend's test package.",
+        "A preconception visit is a planned conversation before a positive test, or as soon as you decide pregnancy is a near-term goal. It covers cycle patterns, previous pregnancies, long-term conditions, operations, infections, mental health and family history from both sides when relevant. Dr. Charmi Shah uses that history to decide what is useful for you, rather than copying a chemist aisle list or a friend's test package.",
         "You do not need perfect health before conception. Earlier review is especially helpful if you take regular medicines, live with diabetes, thyroid disease, hypertension or epilepsy, have had pregnancy complications, or know of an inherited condition in either family. If trying has already begun, the same checklist still organises what to bring and what to ask."
       ]
     },
@@ -17,10 +17,10 @@
       "heading": "A short prioritised action checklist",
       "paragraphs": [
         "Folic acid: under Anaemia Mukt Bharat, India's National Health Mission advises reproductive-age women to take 400 mcg folic acid tablets daily in the preconception period and up to the first trimester. WHO guidance aligns on 400 μg daily while you are trying and through 12 weeks of gestation. Detail on higher prescribed amounts and label checks sits in our folic acid before pregnancy guide.",
-        "Current medicines: list every prescription, over-the-counter product, herbal remedy and supplement, with photos of labels if names are unclear. UK NHS planning advice is clear—do not stop any prescribed medicine until you have talked to your GP or specialist. Abrupt stops can create more risk than a planned change under supervision.",
+        "Current medicines: list every prescription, over-the-counter product, herbal remedy and supplement, with photos of labels if names are unclear. UK NHS planning advice is clear: do not stop any prescribed medicine until you have talked to your GP or specialist. Abrupt stops can create more risk than a planned change under supervision.",
         "Vaccine records: bring what you have, especially rubella/MMR status. NHS guidance recommends the MMR vaccine before pregnancy if you have not already had it, because rubella in pregnancy can harm the baby. Ask which vaccines or blood checks apply to you and when; eligibility follows local guidance and your history.",
         "Chronic conditions: if you live with diabetes, thyroid disease, hypertension, epilepsy or another long-term condition, ask how stable care should look before conception and who will lead monitoring once pregnant. NHS advice is to speak to a GP when planning pregnancy with these conditions or with sickle cell disease or HIV.",
-        "Tobacco and alcohol: stop smoking and do not drink alcohol while trying and in pregnancy—NHS planning pages list both as core preparation steps, with support available if you need help quitting.",
+        "Tobacco and alcohol: stop smoking and do not drink alcohol while trying and in pregnancy. NHS planning pages list both as core preparation steps, with support available if you need help quitting.",
         "Partner considerations: where sperm is involved, ask about the partner's medicines, smoking, alcohol, workplace exposures and any previous fertility or semen evaluation. Preconception care should not place the entire burden on one person."
       ]
     },
@@ -35,7 +35,7 @@
       "heading": "Urgent symptoms versus a routine booking",
       "paragraphs": [
         "Book a routine preconception review when a condition needs optimisation, a medicine needs discussion before conception, cycles are persistently irregular, you have had recurrent pregnancy loss, or a previous pregnancy had a significant complication.",
-        "Seek urgent local care now—not after conception—for chest pain, fainting, very heavy bleeding, acute severe pelvic pain, or sudden neurological symptoms. A planned pregnancy does not convert an emergency into a routine booking. If you conceive before the checklist is finished, contact your clinician promptly rather than stopping medicines alone."
+        "Seek urgent local care now, not after conception, for chest pain, fainting, very heavy bleeding, acute severe pelvic pain, or sudden neurological symptoms. A planned pregnancy does not convert an emergency into a routine booking. If you conceive before the checklist is finished, contact your clinician promptly rather than stopping medicines alone."
       ]
     }
   ],
@@ -51,19 +51,19 @@
   ],
   "references": [
     {
-      "label": "India National Health Mission — Anaemia Mukt Bharat (folic acid for preconception and first trimester)",
+      "label": "India National Health Mission: Anaemia Mukt Bharat (folic acid for preconception and first trimester)",
       "url": "https://nhm.gov.in/index1.php?lang=1&level=3&lid=797&sublinkid=1448"
     },
     {
-      "label": "WHO eLENA — Periconceptional folic acid supplementation to prevent neural tube defects",
+      "label": "WHO eLENA: Periconceptional folic acid supplementation to prevent neural tube defects",
       "url": "https://www.who.int/tools/elena/interventions/folate-periconceptional"
     },
     {
-      "label": "NHS — Trying to get pregnant (planning your pregnancy)",
+      "label": "NHS: Trying to get pregnant (planning your pregnancy)",
       "url": "https://www.nhs.uk/pregnancy/trying-for-a-baby/planning-your-pregnancy/"
     }
   ],
-  "conversionCopy": "If you want a preconception checklist tailored to your medicines and history, you can book a consultation with Dr. Charmi Shah.",
+  "conversionCopy": "If you want a preconception checklist planned around your medicines and history, you can book a consultation with Dr. Charmi Shah.",
   "explainerAlt": "Short preconception checklist covering folic acid, medicines, vaccines and partner health.",
   "storytellingNote": "",
   "review": {

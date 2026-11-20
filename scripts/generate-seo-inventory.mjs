@@ -98,7 +98,7 @@ async function main() {
     }
 
     const primarySet = new Set(routesMod.SITEMAP_PATHS_PRIMARY_URLSET);
-    const virtualSet = new Set(routesMod.SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITIES);
+    const matrixSet = new Set(routesMod.VIRTUAL_SERVICE_CITY_PATHS);
 
     const allPaths = [...new Set([...sitemapPaths, ...aliasShells])].sort();
 
@@ -111,7 +111,7 @@ async function main() {
       "description",
       "h1",
       "in_primary_sitemap",
-      "in_virtual_sitemap",
+      "noindex_matrix",
       "shell_expected",
       "content_status",
       "redirect_to_path",
@@ -124,19 +124,21 @@ async function main() {
       const meta = shellMod.resolveShellPageMeta(siteUrl, pathname);
       titleCounts.set(meta.title, (titleCounts.get(meta.title) ?? 0) + 1);
       const inPrimary = primarySet.has(pathname);
-      const inVirtual = virtualSet.has(pathname);
-      const isAlias = aliasShells.includes(pathname) && !inPrimary && !inVirtual;
+      const inMatrix = matrixSet.has(pathname);
+      const isAlias = aliasShells.includes(pathname) && !inPrimary && !inMatrix;
       rows.push(
         [
           pathname,
           contentFamily(pathname),
           meta.canonicalHref,
-          isAlias || meta.redirectToPath ? "alias_or_redirect" : "index,follow (assumed)",
+          isAlias || meta.redirectToPath
+            ? "alias_or_redirect"
+            : (meta.robots ?? "index,follow (assumed)"),
           meta.title,
           meta.metaDescription,
           meta.h1,
           inPrimary ? "yes" : "no",
-          inVirtual ? "yes" : "no",
+          inMatrix ? "yes" : "no",
           "yes",
           meta.redirectToPath ? "alias_redirect_shell" : "active",
           meta.redirectToPath ?? "",

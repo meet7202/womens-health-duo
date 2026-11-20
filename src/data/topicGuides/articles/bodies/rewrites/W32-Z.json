@@ -1,0 +1,102 @@
+{
+  "id": "W32-Z",
+  "title": "Why Does My Pelvis Still Hurt After Birth?",
+  "seoTitle": "Postpartum pelvic pain: when to check",
+  "description": "Pelvic pain after birth can come from joints, scars, pelvic-floor tension or a medical problem. Fever, heavy bleeding or calf pain need urgent care.",
+  "primaryQuestion": "Why does my pelvis hurt after having a baby?",
+  "directAnswer": "Pelvic pain after birth can come from pelvic-girdle joints that were under load in pregnancy, a healing tear or caesarean scar, pelvic-floor muscle tension, constipation, or less often an infection or a clot. NHS information on your body after birth says aches are common and that you should ask for help if you are worried, rather than waiting in silence. Pain that is worsening, comes with fever or heavy bleeding, or stops you walking is not something to stretch through. A physiotherapy plan is for problems that are stable enough to assess.",
+  "storytellingNote": "",
+  "sections": [
+    {
+      "heading": "What often hurts, and why that is not one injury",
+      "paragraphs": [
+        "The pubic joint and the joints at the back of the pelvis can stay sensitive after pregnancy, especially with stairs, turning in bed or standing on one leg to dress. That pain comes from load on the joints. It does not automatically mean the pelvic floor is damaged.",
+        "A perineal tear, an episiotomy or a caesarean scar can hurt when you sit, feed, or open your bowels. Stinging with urine in the first days can be the wound. New burning, smelly discharge or fever needs a medical check for infection rather than a massage video."
+      ]
+    },
+    {
+      "heading": "How feeding, lifting and constipation keep it going",
+      "paragraphs": [
+        "Twisting to reach a cot, holding a feed in one position, and straining on the toilet all reload the pelvis. Small changes in how you roll, how you hold the baby, and how you manage constipation often matter more than a hard exercise in week two.",
+        "NHS postnatal body pages encourage pelvic-floor and gentle tummy work when you feel able, and rest when you need it. They do not set a day when pain must be gone. Someone else’s week-six photo is not a clinical target."
+      ]
+    },
+    {
+      "heading": "What a physiotherapy visit looks at",
+      "paragraphs": [
+        "Dr. Zalak Shah (PT) asks about the birth, wounds, bleeding, bladder and bowel, and which tasks hurt: stairs, feeding, coughing, sex. She watches how you move and only examines a scar or the pelvic floor with consent, when that would change the plan.",
+        "Medical problems stay with a doctor. If pain might be infection, retained tissue, or a joint that needs imaging, she will say so. Physiotherapy does not clear you for high-impact exercise by a calendar date."
+      ]
+    },
+    {
+      "heading": "Signs to get urgent care instead",
+      "paragraphs": [
+        "Heavy bleeding that soaks pads quickly, fainting, fever, a wound that is opening or smelling strongly, chest pain, or a painful swollen calf need emergency or same-day medical care. A clot or infection will not be fixed by posture cues.",
+        "Book physiotherapy when pain is limiting ordinary movement but you are medically stable, or when leaks and heaviness have joined the pain. Bring the birth notes if you have them."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is pelvic pain six weeks after birth still normal?",
+      "answer": "Common does not mean you should cope alone. Pain that is improving and mild can settle with time and load changes. Pain that is stuck, worsening, or stopping walking deserves a check."
+    },
+    {
+      "question": "Should I start running to strengthen the pelvis?",
+      "answer": "Not while pain, heaviness or leaking is your main limit. Return to impact belongs after those symptoms are assessed, not on a fixed postnatal week."
+    }
+  ],
+  "references": [
+    {
+      "label": "NHS: Your body after the birth",
+      "url": "https://www.nhs.uk/baby/support-and-services/your-body-after-the-birth/"
+    },
+    {
+      "label": "NHS: Pelvic pain",
+      "url": "https://www.nhs.uk/conditions/pelvic-pain/"
+    }
+  ],
+  "conversionCopy": "If postnatal pelvic pain is limiting daily tasks and you are medically stable, you can book a physiotherapy assessment with Dr. Zalak Shah (PT).",
+  "explainerAlt": "Side-view sketch of pelvis after birth marking joints, scar and pelvic floor as separate sources of pain",
+  "internalLinks": [
+    {
+      "anchor": "how long recovery takes",
+      "path": "/how-long-does-postpartum-recovery-take/"
+    },
+    {
+      "anchor": "C-section recovery",
+      "path": "/how-to-recover-after-c-section/"
+    },
+    {
+      "anchor": "postpartum recovery hub",
+      "path": "/postpartum-recovery/"
+    }
+  ],
+  "parentHub": "/postpartum-recovery/",
+  "review": {
+    "corrections": [
+      "Separated joint, scar and medical causes, and kept clot and infection symptoms out of the exercise section."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "NHS",
+        "title": "Your body after the birth",
+        "url": "https://www.nhs.uk/baby/support-and-services/your-body-after-the-birth/",
+        "date": "fetched 2026",
+        "limitations": "General postnatal page, not a pain classification.",
+        "recommendation": "Aches are common after birth, and bothersome symptoms are a reason to ask for help. Pelvic-floor work is encouraged when you feel able."
+      },
+      {
+        "organisation": "NHS",
+        "title": "Pelvic pain",
+        "url": "https://www.nhs.uk/conditions/pelvic-pain/",
+        "date": "fetched 2026",
+        "limitations": "Not specific to the postnatal week.",
+        "recommendation": "Sudden severe pelvic pain needs emergency care."
+      }
+    ],
+    "openQuestions": [
+      "Confirm WHD advice on painful swollen calf and heavy postnatal bleeding wording for Indian emergency routes."
+    ]
+  }
+}

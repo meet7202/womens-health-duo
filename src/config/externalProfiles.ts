@@ -10,8 +10,8 @@ export const EXTERNAL = {
   drZalak: {
     linkedIn: "https://www.linkedin.com/in/izalakshah/",
     /** Google Maps / Business Profile share links (separate listings per city). */
-    googleBusinessAhmedabad: "https://share.google/Dvx1j3yYqsuo2MvDV",
-    googleBusinessBangalore: "https://share.google/kjTkctZb9U7bOcpIE",
+    googleBusinessAhmedabad: "https://share.google/XXg8WCWndAn8BN09R",
+    googleBusinessBangalore: "https://share.google/O3EXDAPWpTKyQJ242",
     /** Patient-facing link to read additional Google reviews (same listing / share hub). */
     googleReviewsShare: "https://share.google/OvzmpQG6sVAO0YPRx",
   },

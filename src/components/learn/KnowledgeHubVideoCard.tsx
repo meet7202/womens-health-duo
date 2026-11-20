@@ -1,6 +1,6 @@
 /**
  * Lightweight Learn hub card (SEO-26): poster + link to the watch page only.
- * Does not import `KnowledgeHubVideoPlayer` — players stay on watch pages.
+ * Does not import `KnowledgeHubVideoPlayer`; players stay on watch pages.
  */
 import { Instagram, Youtube } from "lucide-react";
 import { AppLink as Link } from "@/components/router/AppLink";

@@ -26,8 +26,8 @@ export default function HomeBelowFold() {
         <FaqSection
           items={HOME_PAGE_FAQ}
           tightTop
-          headingTitle={"Women's Health Duo ,  quick answers"}
-          headingIntro="Five common questions about our education platform, clinical lanes, and how to book. Medical decisions belong in a consultation with your clinician."
+          headingTitle="Women's Health Duo: quick answers"
+          headingIntro="Who we are, what each doctor does, and how to book a visit."
         />
         <div className="container mx-auto max-w-3xl px-4 pb-16 text-center sm:px-6 lg:px-8">
           <Button variant="outline" asChild>

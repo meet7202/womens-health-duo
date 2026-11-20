@@ -2,7 +2,7 @@ import { ShieldCheck, ClipboardCheck, UserCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 /**
- * Honest trust signals only — no unverified “encrypted / secure / verified” claims (SEO-18).
+ * Honest trust signals only: no unverified “encrypted / secure / verified” claims (SEO-18).
  * Registration numbers are shown on doctor profiles and the booking identity card; consent + intake
  * are required on `/book-consultation`.
  */
@@ -16,7 +16,7 @@ type TelemedicineTrustBadgesProps = {
   className?: string;
 };
 
-/** Trust signals for telehealth pages — factual practice disclosures only. */
+/** Trust signals for telehealth pages: factual practice disclosures only. */
 export function TelemedicineTrustBadges({ className }: TelemedicineTrustBadgesProps) {
   return (
     <ul

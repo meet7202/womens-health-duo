@@ -1,0 +1,102 @@
+{
+  "id": "W27-Z",
+  "title": "What Is Women's Health Physiotherapy?",
+  "seoTitle": "What is women's health physiotherapy?",
+  "description": "Women's health physiotherapy assesses pelvic floor, pregnancy, birth recovery and bladder symptoms. It does not replace gynaecology or emergency care.",
+  "primaryQuestion": "What is women's health physiotherapy?",
+  "directAnswer": "Women's health physiotherapy is assessment and treatment for problems linked to the pelvic floor, pregnancy, birth recovery, bladder and bowel control, pelvic pain and abdominal-wall changes such as diastasis. A physiotherapist looks at how you move, breathe and load the body, then builds a graded plan. It does not diagnose gynaecological conditions or replace surgery, and it cannot promise that every symptom will go away. Dr. Zalak Shah (PT) leads this lane at Women's Health Duo. Medical questions go to Dr. Charmi Shah.",
+  "storytellingNote": "",
+  "sections": [
+    {
+      "heading": "What this specialty actually covers",
+      "paragraphs": [
+        "POGP, the UK pelvic, obstetric and gynaecological physiotherapy network, publishes patient information on bladder and bowel leakage, pelvic pain, pregnancy and the months after birth. Those are the kinds of problems this specialty is built around. General sports physiotherapy may help a sprained ankle. It is not automatically the same as pelvic-health training.",
+        "Sessions can include a history, observation of posture and movement, and, when you consent and it is appropriate, an internal examination of the pelvic floor. You can decline an internal exam. Declining it does not end the appointment. It changes which tests are possible."
+      ]
+    },
+    {
+      "heading": "What a session is trying to find out",
+      "paragraphs": [
+        "The useful questions are about timing: leaks with cough versus a sudden urge, heaviness that worsens by evening, pain with penetration, or a tummy that domes when you sit up. A single squeeze test does not describe your day.",
+        "NHS pelvic-floor exercise pages describe learning to tighten and release the muscles that support the bladder and bowel. Some people need that. Others are already gripping too hard and need the opposite. That is why a copied online routine is a weak starting point."
+      ]
+    },
+    {
+      "heading": "How it sits next to medical care",
+      "paragraphs": [
+        "Physiotherapy does not diagnose endometriosis, infection, prolapse that needs surgery, or pregnancy complications. If those are possible, you still need a doctor. The two lanes can run together: movement rehab while a gynaecologist investigates pain or bleeding.",
+        "Bring scan reports and a short symptom diary if you have them. Do not stop prescribed medicine because a class felt helpful."
+      ]
+    },
+    {
+      "heading": "When to seek medical care first",
+      "paragraphs": [
+        "Go to urgent or emergency care for sudden inability to pass urine, loss of bowel control that is new, saddle numbness, severe one-sided pain in pregnancy, heavy bleeding, or a fever with pelvic pain. Those are not physiotherapy booking issues.",
+        "A planned physiotherapy visit fits leaks, heaviness, scar discomfort, back or pelvic pain that is stable, or help returning to walking, lifting and exercise after birth once urgent problems are excluded."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do I have to have an internal examination?",
+      "answer": "No. An internal exam can give useful information about the pelvic floor, and you can say no. The visit can still cover symptoms, movement and a plan that does not require it."
+    },
+    {
+      "question": "Is this the same as a Pilates class?",
+      "answer": "No. A class can support strength and coordination later. It does not assess leaks, prolapse symptoms or pain, and it is not a substitute for a physiotherapy assessment."
+    }
+  ],
+  "references": [
+    {
+      "label": "POGP: Patient information",
+      "url": "https://thepogp.co.uk/patient_information/default.aspx"
+    },
+    {
+      "label": "NHS: What are pelvic floor exercises?",
+      "url": "https://www.nhs.uk/common-health-questions/womens-health/what-are-pelvic-floor-exercises/"
+    }
+  ],
+  "conversionCopy": "If you want a physiotherapy assessment for pelvic floor, pregnancy or postnatal symptoms, you can book with Dr. Zalak Shah (PT).",
+  "explainerAlt": "Sketch of pelvic floor, bladder and abdominal wall as areas a women's health physiotherapist may assess",
+  "internalLinks": [
+    {
+      "anchor": "pelvic floor",
+      "path": "/what-is-the-pelvic-floor/"
+    },
+    {
+      "anchor": "bladder leakage",
+      "path": "/bladder-leakage/"
+    },
+    {
+      "anchor": "women's health physiotherapy hub",
+      "path": "/womens-health-physiotherapy/"
+    }
+  ],
+  "parentHub": "/womens-health-physiotherapy/",
+  "review": {
+    "corrections": [
+      "Kept physiotherapy separate from gynaecology diagnosis and from a Pilates class."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "POGP",
+        "title": "Patient information",
+        "url": "https://thepogp.co.uk/patient_information/default.aspx",
+        "date": "fetched 2026",
+        "limitations": "UK professional network index, not a treatment protocol.",
+        "recommendation": "Women's health physiotherapy patient topics include bladder, bowel, pelvic pain and maternity."
+      },
+      {
+        "organisation": "NHS",
+        "title": "What are pelvic floor exercises?",
+        "url": "https://www.nhs.uk/common-health-questions/womens-health/what-are-pelvic-floor-exercises/",
+        "date": "fetched 2026",
+        "limitations": "General exercise description, not an individual programme.",
+        "recommendation": "Pelvic floor exercises train the muscles supporting bladder and bowel, and technique matters."
+      }
+    ],
+    "openQuestions": [
+      "Confirm which symptoms WHD will not accept for a first online physiotherapy booking."
+    ]
+  }
+}

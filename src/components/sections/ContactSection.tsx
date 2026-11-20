@@ -139,7 +139,7 @@ Sent from Women's Health Duo Website`;
             >
               <span className="inline-flex items-center gap-2">
                 <MessageCircle className="h-5 w-5 shrink-0" aria-hidden />
-                Book on WhatsApp , direct message
+                Book on WhatsApp (direct message)
               </span>
             </a>
           </Button>
@@ -382,8 +382,8 @@ Sent from Women's Health Duo Website`;
                   Women&apos;s Health Duo on LinkedIn
                 </a>
                 <p className="text-sm text-muted-foreground">
-                  A holistic approach to women's health! Follow us for tips on pregnancy, fertility,
-                  pelvic health, and wellness.
+                  Follow us for practical tips on pregnancy, fertility, pelvic health, and everyday
+                  wellbeing.
                 </p>
               </div>
             </div>
@@ -406,9 +406,9 @@ Sent from Women's Health Duo Website`;
             </h3>
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-            Come join us for health tips, workshop updates, and real conversations with other women
-            on similar journeys, learning together in a friendly WhatsApp space. This community is
-            for inspiration and connection, not for booking consults or personal medical advice.{" "}
+            Join our free WhatsApp group for health tips, workshop updates, and conversations with
+            other women going through similar things. The group is for general learning and support,
+            not for booking consults or personal medical advice.{" "}
             <strong className="text-foreground">To book, use the direct WhatsApp</strong> buttons
             above (private chat with the practice).
           </p>

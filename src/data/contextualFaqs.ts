@@ -3,15 +3,22 @@ import type { FaqItem } from "@/data/siteFaq";
 import type { SeoOnlineService } from "@/data/seoOnlineServices";
 import type { CityKey } from "@/data/cityPages";
 import { ROUTES } from "@/config/routes";
+import { CONTACT } from "@/config/site.defaults";
+import {
+  BANGALORE_STUDIO,
+  PRACTICE_CHARMI_IN_PERSON,
+  PRACTICE_HOURS_LINE,
+  PRACTICE_ZALAK_IN_PERSON,
+} from "@/config/practiceLocations";
 export const MAX_CONTEXT_FAQS = 10 as const;
 function take10(items: FaqItem[]): FaqItem[] {
   return items.slice(0, MAX_CONTEXT_FAQS);
-} /** Learn hub default , booking + what the hub is + online care. */
+} /** Learn hub default: booking + what the hub is + online care. */
 const LEARN_HUB_DEFAULT: FaqItem[] = [
   {
     question: "What is the Women's Health Duo Learn hub?",
     answer:
-      "It is our library of official YouTube Shorts and Instagram Reels, short clips on pregnancy, pelvic health, fertility, movement, and everyday women's health questions. Clips educate; they do not replace an individualized consultation.",
+      "It is our library of official YouTube Shorts and Instagram Reels: short clips on pregnancy, pelvic health, fertility, movement, and everyday women's health questions. Clips educate; they do not replace an individualized consultation.",
   },
   {
     question: "How do I book a consultation after watching a clip?",
@@ -41,7 +48,7 @@ const LEARN_HUB_DEFAULT: FaqItem[] = [
   {
     question: "What languages can we use on a call?",
     answer:
-      "English, Hindi, and Gujarati are commonly used, mention your preference when you book.",
+      "English, Hindi, and Gujarati are commonly used. Mention your preference when you book.",
   },
   {
     question: "How quickly do you reply on WhatsApp?",
@@ -58,7 +65,7 @@ const LEARN_HUB_DEFAULT: FaqItem[] = [
     answer:
       "Yes, sharing public Shorts or Reels is fine. For private medical details, use email or WhatsApp directly with the practice.",
   },
-]; /** STOTT / Pilates , expertise: physio, movement */
+]; /** STOTT / Pilates: expertise: physio, movement */
 const LEARN_STOTT_PILATES: FaqItem[] = [
   {
     question: "What is STOTT Pilates?",
@@ -83,7 +90,7 @@ const LEARN_STOTT_PILATES: FaqItem[] = [
   {
     question: "Can Pilates help core strength after pregnancy?",
     answer:
-      "Yes, when progression is guided and any diastasis or pelvic floor issues are screened first. Your clinician tailors load and breath strategy.",
+      "Yes, when progression is guided and any diastasis or pelvic floor issues are screened first. Your clinician sets the load and breathing strategy for you.",
   },
   {
     question: "Are online movement sessions effective?",
@@ -98,7 +105,7 @@ const LEARN_STOTT_PILATES: FaqItem[] = [
   {
     question: "How many sessions might I need?",
     answer:
-      "It varies by goal, some patients need a short block for education; others need months of graded training. We outline a realistic plan after the first visit.",
+      "It varies by goal. Some patients need a short block for education; others need months of graded training. We outline a realistic plan after the first visit.",
   },
   {
     question: "How do I book with Dr. Zalak for Pilates or physio?",
@@ -110,7 +117,7 @@ const LEARN_STOTT_PILATES: FaqItem[] = [
     answer:
       "See the Medical disclaimer and Editorial policy links in the site footer and on this Learn page.",
   },
-]; /** Pregnancy / exercise / workshop clips , expertise: prenatal physio + OB education */
+]; /** Pregnancy / exercise / workshop clips: expertise: prenatal physio + OB education */
 const LEARN_PRENATAL_MOVEMENT: FaqItem[] = [
   {
     question: "What is prenatal physiotherapy?",
@@ -120,7 +127,7 @@ const LEARN_PRENATAL_MOVEMENT: FaqItem[] = [
   {
     question: "When should I start prenatal physiotherapy?",
     answer:
-      "Many patients start after the first trimester once OB clearance is documented, or earlier if pain or mobility issues appear, timing is individualized.",
+      "Many patients start after the first trimester once OB clearance is documented, or earlier if pain or mobility issues appear. Timing is decided for each patient.",
   },
   {
     question: "Is exercise safe during pregnancy?",
@@ -135,7 +142,7 @@ const LEARN_PRENATAL_MOVEMENT: FaqItem[] = [
   {
     question: "Is walking enough in pregnancy?",
     answer:
-      "Walking is excellent baseline activity. Some patients also need strength, mobility, or pelvic floor work, clips on this hub explain common trade-offs; a consult personalizes it.",
+      "Walking is a good baseline activity. Some patients also need strength, mobility, or pelvic floor work. Clips on this hub explain the common trade-offs, and a consult fits them to you.",
   },
   {
     question: "Why do I have back or pelvic pain in pregnancy?",
@@ -150,19 +157,19 @@ const LEARN_PRENATAL_MOVEMENT: FaqItem[] = [
   {
     question: "When should I seek urgent help in pregnancy?",
     answer:
-      "Heavy bleeding, severe abdominal pain, leaking fluid, reduced fetal movement, fever, or sudden shortness of breath, go to local emergency services immediately.",
+      "Heavy bleeding, severe abdominal pain, leaking fluid, reduced fetal movement, fever, or sudden shortness of breath: go to local emergency services immediately.",
   },
   {
     question: "How do I book Dr. Charmi for pregnancy medical questions?",
     answer:
-      "Use WhatsApp or email for OB-GYN scheduling, include gestation, city, and prior scan or lab summaries if you have them.",
+      "Use WhatsApp or email for OB-GYN scheduling. Include gestation, city, and prior scan or lab summaries if you have them.",
   },
   {
     question: "How do I book Dr. Zalak for pregnancy movement?",
     answer:
-      "Same channels, note that you want prenatal physio or Mat Pilates online and your OB's clearance if applicable.",
+      "Use the same channels. Note that you want prenatal physio or Mat Pilates online and your OB's clearance if applicable.",
   },
-]; /** Pelvic floor + labour education , expertise: pelvic | OB education */
+]; /** Pelvic floor + labour education: expertise: pelvic | OB education */
 const LEARN_PELVIC_LABOR: FaqItem[] = [
   {
     question: "What is the pelvic floor?",
@@ -187,12 +194,12 @@ const LEARN_PELVIC_LABOR: FaqItem[] = [
   {
     question: "Can pelvic floor therapy help painful intercourse?",
     answer:
-      "It can be part of care when muscle tension or scar tissue contributes, always coordinated with your gynecologist.",
+      "It can be part of care when muscle tension or scar tissue contributes, and it is always coordinated with your gynecologist.",
   },
   {
     question: "What happens during a pelvic floor assessment?",
     answer:
-      "Your clinician reviews history, observes movement and breathing, and may use external palpation or internal assessment where appropriate and consented, online visits focus on education and exercise first.",
+      "Your clinician reviews history, observes movement and breathing, and may use external palpation or internal assessment where appropriate and consented. Online visits focus on education and exercise first.",
   },
   {
     question: "Can online pelvic floor consults work?",
@@ -202,7 +209,7 @@ const LEARN_PELVIC_LABOR: FaqItem[] = [
   {
     question: "What is the biggest myth about Kegels and labour?",
     answer:
-      "That Kegels alone “prepare” everyone for delivery. Labour needs coordinated relaxation, breathing, and obstetric guidance, see our clips and ask your team.",
+      "That Kegels alone “prepare” everyone for delivery. Labour needs coordinated relaxation, breathing, and obstetric guidance. See our clips and ask your team.",
   },
   {
     question: "How do I book pelvic floor care?",
@@ -212,9 +219,9 @@ const LEARN_PELVIC_LABOR: FaqItem[] = [
   {
     question: "When should I seek urgent care for pelvic symptoms?",
     answer:
-      "Fever with pelvic pain, inability to pass urine, heavy bleeding, or sudden severe pain, use local emergency services.",
+      "Fever with pelvic pain, inability to pass urine, heavy bleeding, or sudden severe pain: use local emergency services.",
   },
-]; /** Fertility clips , expertise: gynecology | fertility */
+]; /** Fertility clips: expertise: gynecology | fertility */
 const LEARN_FERTILITY: FaqItem[] = [
   {
     question: "What fertility tests are commonly used first?",
@@ -224,7 +231,7 @@ const LEARN_FERTILITY: FaqItem[] = [
   {
     question: "Does PCOS affect fertility?",
     answer:
-      "It can, through irregular ovulation. Management blends lifestyle, medication, and sometimes assisted reproduction, personalized in consult.",
+      "It can, through irregular ovulation. Management blends lifestyle, medication, and sometimes assisted reproduction, planned for you in a consult.",
   },
   {
     question: "When should I see a gynecologist for fertility?",
@@ -239,7 +246,7 @@ const LEARN_FERTILITY: FaqItem[] = [
   {
     question: "Is online as good as in-person for a second opinion?",
     answer:
-      "For reviewing records and imaging, telehealth is often excellent. Physical exam components may still be needed locally.",
+      "For reviewing records and imaging, telehealth often works well. Physical exam components may still be needed locally.",
   },
   {
     question: "How do I send prior labs securely?",
@@ -249,7 +256,7 @@ const LEARN_FERTILITY: FaqItem[] = [
   {
     question: "What is PCOS in one line?",
     answer:
-      "A hormonal–metabolic pattern with ovulation and androgen features; diagnosis and treatment belong in consultation.",
+      "A hormonal and metabolic pattern with ovulation and androgen features; diagnosis and treatment belong in consultation.",
   },
   {
     question: "Can lifestyle change improve fertility?",
@@ -259,7 +266,7 @@ const LEARN_FERTILITY: FaqItem[] = [
   {
     question: "How do I book Dr. Charmi for fertility questions?",
     answer:
-      "WhatsApp or email with age, months trying, cycle pattern, and prior tests, we suggest next steps.",
+      "WhatsApp or email with age, months trying, cycle pattern, and prior tests, and we will suggest next steps.",
   },
   {
     question: "Where is the practice medical disclaimer?",
@@ -270,17 +277,17 @@ const LEARN_GENERAL_GYN: FaqItem[] = [
   {
     question: "When should I see a gynecologist?",
     answer:
-      "For new pelvic pain, abnormal bleeding, pregnancy planning, screening discussions, menopause symptoms, or infections that recur, earlier if symptoms worry you.",
+      "For new pelvic pain, abnormal bleeding, pregnancy planning, screening discussions, menopause symptoms, or infections that recur. Come earlier if symptoms worry you.",
   },
   {
     question: "How often should women have checkups?",
     answer:
-      "Intervals depend on age, conditions, and national guidelines, your clinician personalizes this.",
+      "Intervals depend on age, conditions, and national guidelines. Your clinician sets the schedule with you.",
   },
   {
     question: "What symptoms should I never ignore?",
     answer:
-      "Heavy bleeding, postmenopausal bleeding, severe pain, fever with pelvic symptoms, or pregnancy pain/bleeding, seek urgent care.",
+      "Heavy bleeding, postmenopausal bleeding, severe pain, fever with pelvic symptoms, or pregnancy pain/bleeding: seek urgent care.",
   },
   {
     question: "Can I consult a gynecologist online?",
@@ -299,7 +306,7 @@ const LEARN_GENERAL_GYN: FaqItem[] = [
   {
     question: "What is PMS vs PMDD?",
     answer:
-      "PMS is bothersome premenstrual symptoms; PMDD is a severe pattern affecting mood and function, both are evaluated clinically.",
+      "PMS is bothersome premenstrual symptoms; PMDD is a severe pattern affecting mood and function. Both are evaluated clinically.",
   },
   {
     question: "Can stress affect my cycle?",
@@ -313,7 +320,7 @@ const LEARN_GENERAL_GYN: FaqItem[] = [
   {
     question: "How do clips relate to my care?",
     answer:
-      "They explain concepts you may hear in clinic; your plan is still individualized after assessment.",
+      "They explain concepts you may hear in clinic; your own plan is still set after assessment.",
   },
 ];
 export function learnHubFaqsForTopic(topic: string | "all"): FaqItem[] {
@@ -338,7 +345,7 @@ export function learnHubFaqHeading(topic: string | "all"): { title: string; intr
   }
   return {
     title: `Questions about “${topic}” on Learn`,
-    intro: "Topic-focused answers; individualized plans still require a booked consultation.",
+    intro: "Answers on this topic. A personal plan still needs a booked consultation.",
   };
 }
 type OnlineServiceFaqContext = {
@@ -374,7 +381,7 @@ function quadVirtualBooking(args: {
     },
     {
       question: `Is video consultation as effective as in-person for ${serviceTitle}?`,
-      answer: `For patients in ${city}, ${country} booking ${serviceTitle}, video works well for history, education, follow-up, and exercise coaching with ${doctorLabel}. Physical exams, procedures, and emergencies still need local in-person care when indicated, we say that plainly when you book from ${city}.`,
+      answer: `For patients in ${city}, ${country} booking ${serviceTitle}, video works well for history, education, follow-up, and exercise coaching with ${doctorLabel}. Physical exams, procedures, and emergencies still need local in-person care when indicated. We say so plainly when you book from ${city}.`,
     },
     {
       question: `What should I send before the first ${serviceTitle} online visit from ${city}?`,
@@ -391,7 +398,7 @@ const SERVICE_BODY: Record<string, FaqItem[]> = {
     {
       question: "What counts as a high-risk pregnancy?",
       answer:
-        "Examples include hypertension in pregnancy, diabetes, growth concerns, multiple pregnancy, prior preterm birth, and other conditions your OB monitors closely, your plan is individualized.",
+        "Examples include hypertension in pregnancy, diabetes, growth concerns, multiple pregnancy, prior preterm birth, and other conditions your OB monitors closely. Your plan is set for your situation.",
     },
     {
       question: "Can I discuss travel or NRI follow-up online?",
@@ -401,7 +408,7 @@ const SERVICE_BODY: Record<string, FaqItem[]> = {
     {
       question: "When should I go to local emergency care?",
       answer:
-        "Heavy bleeding, severe pain, reduced fetal movement, seizures, or sudden breathlessness, always local emergency first.",
+        "Heavy bleeding, severe pain, reduced fetal movement, seizures, or sudden breathlessness: always go to local emergency care first.",
     },
     {
       question: "Will you coordinate with my local OB?",
@@ -423,12 +430,12 @@ const SERVICE_BODY: Record<string, FaqItem[]> = {
     {
       question: "Can we review prior IVF cycles online?",
       answer:
-        "Yes, bring stimulation protocols, embryo counts, and outcome summaries for structured discussion.",
+        "Yes. Bring stimulation protocols, embryo counts, and outcome summaries for structured discussion.",
     },
     {
       question: "What about IUI vs IVF?",
       answer:
-        "Indications differ by age, tubes, sperm counts, and time trying, your consult compares realistic paths.",
+        "Indications differ by age, tubes, sperm counts, and time trying. Your consult compares realistic paths.",
     },
     {
       question: "Do you order new tests remotely?",
@@ -438,7 +445,7 @@ const SERVICE_BODY: Record<string, FaqItem[]> = {
     {
       question: "Is genetic screening discussed?",
       answer:
-        "High-level education yes; formal genetic counseling may need dedicated services locally.",
+        "We give general education; formal genetic counseling may need dedicated services locally.",
     },
     {
       question: "How private is telehealth?",
@@ -447,14 +454,14 @@ const SERVICE_BODY: Record<string, FaqItem[]> = {
     },
     {
       question: "Can partners join the video visit?",
-      answer: "Yes if you want, mention that when booking.",
+      answer: "Yes, if you want. Mention that when booking.",
     },
   ],
   "laparoscopic-surgery": [
     {
       question: "Can fibroids or endometriosis be discussed online?",
       answer:
-        "Yes for understanding options and whether laparoscopy might be indicated, instrumental surgery itself is in-person.",
+        "Yes for understanding options and whether laparoscopy might be indicated. The surgery itself is in person.",
     },
     {
       question: "What imaging helps before a surgical consult?",
@@ -464,7 +471,7 @@ const SERVICE_BODY: Record<string, FaqItem[]> = {
     {
       question: "When is surgery urgent?",
       answer:
-        "Torsion, heavy bleeding with instability, or suspected rupture, local emergency, not telehealth.",
+        "Torsion, heavy bleeding with instability, or suspected rupture: go to local emergency care, not telehealth.",
     },
     {
       question: "Do you offer second opinions on prior operations?",
@@ -476,14 +483,14 @@ const SERVICE_BODY: Record<string, FaqItem[]> = {
     },
     {
       question: "How long are consults?",
-      answer: "Complex surgical history may need a longer slot, ask when booking.",
+      answer: "Complex surgical history may need a longer slot. Ask when booking.",
     },
   ],
   "pcos-hormonal-disorders": [
     {
       question: "What is PCOS?",
       answer:
-        "A common hormonal pattern affecting cycles, metabolism, and skin/hair, diagnosis uses clinical and lab criteria, not one symptom alone.",
+        "A common hormonal pattern affecting cycles, metabolism, and skin/hair. Diagnosis uses clinical and lab criteria, not one symptom alone.",
     },
     {
       question: "Can lifestyle help PCOS?",
@@ -493,11 +500,12 @@ const SERVICE_BODY: Record<string, FaqItem[]> = {
     {
       question: "Does PCOS always mean infertility?",
       answer:
-        "No, some patients conceive spontaneously; others need ovulation support, individualized assessment matters.",
+        "No. Some patients conceive spontaneously; others need ovulation support, so each patient needs her own assessment.",
     },
     {
       question: "Which tests might I need?",
-      answer: "Often hormone panel, metabolic screening, and ultrasound, ordered based on history.",
+      answer:
+        "Often a hormone panel, metabolic screening, and ultrasound, ordered based on your history.",
     },
     {
       question: "Can I manage PCOS without pills?",
@@ -506,14 +514,14 @@ const SERVICE_BODY: Record<string, FaqItem[]> = {
     },
     {
       question: "When should I seek urgent care?",
-      answer: "Very heavy bleeding, fainting, or severe pain, local emergency.",
+      answer: "Very heavy bleeding, fainting, or severe pain: go to local emergency care.",
     },
   ],
   "gynecological-care": [
     {
       question: "What gynecology topics fit telehealth?",
       answer:
-        "Screening discussions, infection recurrences, menstrual changes, contraception counseling, and chronic pelvic pain initial workup, some exams remain local.",
+        "Screening discussions, infection recurrences, menstrual changes, contraception counseling, and the first workup for chronic pelvic pain. Some exams still have to be done locally.",
     },
     {
       question: "How do I describe discharge or pain?",
@@ -536,19 +544,18 @@ const SERVICE_BODY: Record<string, FaqItem[]> = {
     {
       question: "How do I escalate bleeding symptoms?",
       answer:
-        "Soaking pads hourly, clots with dizziness, or postmenopausal bleeding, urgent local care.",
+        "Soaking pads hourly, clots with dizziness, or postmenopausal bleeding: get urgent local care.",
     },
   ],
   "menopause-wellness": [
     {
       question: "What symptoms suggest perimenopause or menopause?",
       answer:
-        "Hot flashes, sleep disruption, mood changes, vaginal dryness, and cycle changes, pattern matters more than one symptom.",
+        "Hot flashes, sleep disruption, mood changes, vaginal dryness, and cycle changes. The pattern matters more than any one symptom.",
     },
     {
       question: "Is HRT discussed online?",
-      answer:
-        "High-level education and risk framing yes; prescribing depends on assessment and jurisdiction.",
+      answer: "We explain options and risks; prescribing depends on assessment and jurisdiction.",
     },
     {
       question: "What about bone health?",
@@ -572,11 +579,11 @@ const SERVICE_BODY: Record<string, FaqItem[]> = {
     {
       question: "What is women's health physiotherapy?",
       answer:
-        "Physio that integrates pelvic anatomy, exercise, and pain science for women across life stages.",
+        "Physiotherapy that uses pelvic anatomy, exercise, and pain science to treat women at every life stage.",
     },
     {
       question: "Do I need a physician referral?",
-      answer: "Helpful for insurance; not always required privately, ask when booking.",
+      answer: "Helpful for insurance, but not always required for private care. Ask when booking.",
     },
     {
       question: "Can physio help prolapse symptoms?",
@@ -585,11 +592,11 @@ const SERVICE_BODY: Record<string, FaqItem[]> = {
     },
     {
       question: "Are internal exams always required?",
-      answer: "Not for every online visit, plans depend on symptoms and safety.",
+      answer: "Not for every online visit. Plans depend on symptoms and safety.",
     },
     {
       question: "Can I combine physio with Pilates?",
-      answer: "Often yes, Dr. Zalak bridges both when appropriate.",
+      answer: "Often yes. Dr. Zalak can combine both when appropriate.",
     },
     {
       question: "What if pain worsens with exercises?",
@@ -600,12 +607,12 @@ const SERVICE_BODY: Record<string, FaqItem[]> = {
     {
       question: "What is postpartum recovery?",
       answer:
-        "Healing from delivery, sleep debt, hormonal shifts, and gradual return to activity, timeline varies by birth mode and complications.",
+        "Healing from delivery, sleep debt, hormonal shifts, and gradual return to activity. The timeline varies with birth mode and complications.",
     },
     {
       question: "When can I return to exercise after delivery?",
       answer:
-        "Depends on delivery type, tears, blood loss, and clearance, your plan is staged, not rushed.",
+        "It depends on delivery type, tears, blood loss, and clearance. Your plan is staged, not rushed.",
     },
     {
       question: "What is diastasis recti?",
@@ -614,7 +621,8 @@ const SERVICE_BODY: Record<string, FaqItem[]> = {
     },
     {
       question: "Is leaking common postpartum?",
-      answer: "Common but not something you must accept long term, physio and medical review help.",
+      answer:
+        "Common, but not something you must accept long term. Physio and medical review help.",
     },
     {
       question: "Can Pilates help postpartum?",
@@ -622,14 +630,14 @@ const SERVICE_BODY: Record<string, FaqItem[]> = {
     },
     {
       question: "When is bleeding urgent after birth?",
-      answer: "Soaking pads, large clots, fever, or foul smell, local emergency.",
+      answer: "Soaking pads, large clots, fever, or foul smell: go to local emergency care.",
     },
   ],
   "mat-pilates-online": [
     {
       question: "What is Mat Pilates online?",
       answer:
-        "Live or structured home sessions using STOTT Mat principles, good when travel limits studio access.",
+        "Live or structured home sessions using STOTT Mat principles. Useful when travel limits studio access.",
     },
     {
       question: "What equipment do I need?",
@@ -684,7 +692,7 @@ const SERVICE_BODY: Record<string, FaqItem[]> = {
   "musculoskeletal-physiotherapy": [
     {
       question: "Can physio help neck and shoulder pain?",
-      answer: "Yes, ergonomics, mobility, and strengthening are common pillars.",
+      answer: "Yes. Ergonomics, mobility, and strengthening are the usual parts of care.",
     },
     {
       question: "What about lower back pain?",
@@ -692,7 +700,7 @@ const SERVICE_BODY: Record<string, FaqItem[]> = {
     },
     {
       question: "Is imaging required first?",
-      answer: "Not always, clinical exam and history guide when X-ray or MRI adds value.",
+      answer: "Not always. Clinical exam and history show when an X-ray or MRI adds value.",
     },
     {
       question: "Can sessions be weekly online?",
@@ -700,7 +708,8 @@ const SERVICE_BODY: Record<string, FaqItem[]> = {
     },
     {
       question: "When is pain an emergency?",
-      answer: "Numb saddle area, new leg weakness, fever with back pain, local emergency.",
+      answer:
+        "Numb saddle area, new leg weakness, or fever with back pain: go to local emergency care.",
     },
     {
       question: "How do I book MSK physio with Dr. Zalak?",
@@ -711,7 +720,7 @@ const SERVICE_BODY: Record<string, FaqItem[]> = {
     {
       question: "Who is core training for?",
       answer:
-        "Postpartum patients, athletes returning after injury, and women with chronic back pain, after screening.",
+        "Postpartum patients, athletes returning after injury, and women with chronic back pain, after screening first.",
     },
     {
       question: "Will I get a home program?",
@@ -719,11 +728,11 @@ const SERVICE_BODY: Record<string, FaqItem[]> = {
     },
     {
       question: "How hard will sessions feel?",
-      answer: "We aim for challenge without symptom flare, load is titrated.",
+      answer: "We aim for challenge without a symptom flare, and adjust the load as you go.",
     },
     {
       question: "Can I combine with gym training?",
-      answer: "Often, we coordinate volume and recovery.",
+      answer: "Often. We coordinate volume and recovery.",
     },
     {
       question: "What if I have diastasis?",
@@ -738,7 +747,7 @@ const SERVICE_BODY: Record<string, FaqItem[]> = {
     {
       question: "What are wellness programs here?",
       answer:
-        "Structured blends of physio education and Pilates-informed movement for sustainable habits, not quick fixes.",
+        "Structured programs that mix physio education and Pilates-based movement to build habits that last. They are not quick fixes.",
     },
     {
       question: "Are these medical treatment?",
@@ -747,7 +756,7 @@ const SERVICE_BODY: Record<string, FaqItem[]> = {
     {
       question: "Can I join from any time zone?",
       answer:
-        "Yes, slots are offered when clinicians are available; async homework may supplement live calls.",
+        "Yes. Slots are offered when clinicians are available; async homework may supplement live calls.",
     },
     {
       question: "How long is a typical block?",
@@ -788,7 +797,7 @@ export function virtualCityOverviewFaqs(city: string, country: string): FaqItem[
     },
     {
       question: `Is telehealth from India effective if I live in ${city}, ${country}?`,
-      answer: `Many patients in ${city} use these pages to book India-trained clinicians by video for education, medication review where legal, second opinions, and exercise coaching. Emergencies and some physical exams still belong with local services in ${country}, we document limits clearly on the ${city} city page.`,
+      answer: `Many patients in ${city} use these pages to book India-trained clinicians by video for education, medication review where legal, second opinions, and exercise coaching. Emergencies and some physical exams still belong with local services in ${country}. The ${city} city page sets out those limits.`,
     },
     {
       question: `Do both doctors offer video visits to ${city}, ${country}?`,
@@ -804,7 +813,7 @@ export function virtualCityOverviewFaqs(city: string, country: string): FaqItem[
     },
     {
       question: `Can I still see you in person if I start from ${city} online?`,
-      answer: `Yes. Dr. Charmi sees patients in Mumbai, Ahmedabad, and Valsad; Dr. Zalak in Bangalore and Ahmedabad. Virtual care from ${city}, ${country} continues even if you never travel, this hub page stays your entry point.`,
+      answer: `Yes. Dr. Charmi sees patients in Mumbai, Ahmedabad, and Valsad; Dr. Zalak in Bangalore and Ahmedabad. Virtual care from ${city}, ${country} continues even if you never travel, and this page stays your entry point.`,
     },
     {
       question: `Where are the ${city}-specific service pages?`,
@@ -832,7 +841,7 @@ export function virtualCountryFaqs(country: string): FaqItem[] {
     },
     {
       question: `Is online care the same quality everywhere in ${country}?`,
-      answer: `Clinical standards for patients in ${country} match our India practice. Availability, local exam needs, and emergency pathways can differ by city and situation — we confirm suitability when you book and note what must be done in person.`,
+      answer: `Clinical standards for patients in ${country} match our India practice. Availability, local exam needs, and emergency pathways can differ by city and situation. We confirm suitability when you book and note what must be done in person.`,
     },
     {
       question: `Can NRIs and expatriates use these ${country} pages?`,
@@ -871,9 +880,9 @@ export function virtualCountryFaqs(country: string): FaqItem[] {
 export function virtualHubFaqs(): FaqItem[] {
   return take10([
     {
-      question: "What is this Virtual online consultations hub page?",
+      question: "Can I book an online gynecologist or physiotherapy consult here?",
       answer:
-        "This hub is the top-level directory of city and country URLs for patients abroad who want India-trained women's health clinicians by video, OB-GYN, IVF discussion, physio, and STOTT/Mat Pilates online. Start here, then drill into a city or country page.",
+        "Yes. An online gynecologist consultation is with Dr. Charmi Shah (OB-GYN, IVF, and laparoscopy). An online physiotherapy consultation is with Dr. Zalak Shah (PT), including pelvic floor, prenatal and postnatal physiotherapy, and Pilates. Pick your city below, then the service. The visit is by video from India.",
     },
     {
       question: "How do I start from this hub page?",
@@ -883,12 +892,12 @@ export function virtualHubFaqs(): FaqItem[] {
     {
       question: "Is telehealth effective for women's health when I start from this hub?",
       answer:
-        "Strong for education, follow-up, medication titration where legal, and supervised exercise. This hub explains routing; it does not replace emergency or hands-on care when your city page says you need local help.",
+        "It works well for education, follow-up, medication titration where legal, and supervised exercise. This hub explains routing; it does not replace emergency or hands-on care when your city page says you need local help.",
     },
     {
       question: "How do I book after browsing this hub?",
       answer:
-        "WhatsApp or email with time zone and concern summary, same process linked from every city page you open from this hub.",
+        "WhatsApp or email with your time zone and a summary of your concern. It is the same process linked from every city page you open from this hub.",
     },
     {
       question: "Which doctor is for pregnancy medical questions from this hub?",
@@ -908,7 +917,7 @@ export function virtualHubFaqs(): FaqItem[] {
     {
       question: "Are Shorts and Reels medical advice if I came from this hub?",
       answer:
-        "No. Use the Learn hub for free education, then return to a city or service page from this hub to book personalized guidance.",
+        "No. Use the Learn hub for free education, then return to a city or service page from this hub to book a consult about your own care.",
     },
     {
       question: "Where are India in-person cities linked from this hub?",
@@ -922,52 +931,60 @@ export function virtualHubFaqs(): FaqItem[] {
     },
   ]);
 }
-export function indiaCityFaqs(cityKey: CityKey, cityH1: string): FaqItem[] {
-  const label = cityH1;
-  return take10([
+export function indiaCityFaqs(cityKey: CityKey, cityName: string): FaqItem[] {
+  const charmiHere = cityKey !== "bangalore";
+  const zalakHere = cityKey === "bangalore" || cityKey === "ahmedabad";
+  const whoSeesYou =
+    charmiHere && zalakHere
+      ? `Both sisters see patients in person in ${cityName}: Dr. Charmi Shah for obstetrics, gynecology, IVF and laparoscopy, and Dr. Zalak Shah (PT) for women's health physiotherapy and STOTT Pilates.`
+      : charmiHere
+        ? `Dr. Charmi Shah sees patients in person in ${cityName} for obstetrics, gynecology, fertility and IVF, and laparoscopic surgery. Dr. Zalak Shah (PT) offers women's health physiotherapy online, and in person in ${PRACTICE_ZALAK_IN_PERSON}.`
+        : `Dr. Zalak Shah (PT) sees patients in person in ${cityName} for women's health physiotherapy and STOTT Pilates. Dr. Charmi Shah, the OB-GYN, consults online and in person in ${PRACTICE_CHARMI_IN_PERSON}.`;
+
+  const items: FaqItem[] = [
     {
-      question: `How do I book in-person care in ${label}?`,
-      answer: `For ${label}, WhatsApp or email with the doctor name, “${label}” in the subject, and whether you need OB-GYN or physio/Pilates first. We send clinic addresses, parking notes, and slot options that match this ${label} city page.`,
+      question: `How do I book an in-person appointment in ${cityName}?`,
+      answer: `Message Women's Health Duo on WhatsApp (${CONTACT.phoneE164}) or email ${CONTACT.email} with the doctor you want to see and what you need help with. In-person visits are by appointment, and we confirm the location and an available slot when you book. Practice hours are ${PRACTICE_HOURS_LINE}.`,
     },
     {
-      question: `Can I still do video if I live in ${label}?`,
-      answer: `Yes. Many ${label} patients mix in-person visits with online follow-ups for convenience; say “${label} + video” when you message so routing matches this page.`,
+      question: `Which doctor sees patients in ${cityName}?`,
+      answer: whoSeesYou,
     },
-    {
-      question: `Is online follow-up as effective if my home base is ${label}?`,
-      answer: `For stable chronic issues and rehab check-ins while you are in ${label}, video can be excellent. New severe symptoms still need in-person or emergency assessment near ${label}.`,
-    },
-    {
-      question: `Which doctor is based in ${label} for in-person care?`,
+  ];
+
+  if (zalakHere) {
+    const studio = cityKey === "bangalore" ? BANGALORE_STUDIO : undefined;
+    items.push({
+      question: `What does women's health physiotherapy in ${cityName} cover?`,
       answer:
-        cityKey === "mumbai"
-          ? `On this ${label} page: Dr. Charmi Shah leads in-person OB-GYN care in Mumbai; Dr. Zalak Shah is primarily online from Mumbai listings with in-person studios in Bangalore and Ahmedabad.`
-          : cityKey === "valsad"
-            ? `On this ${label} page: Dr. Charmi Shah leads in-person OB-GYN care in Valsad; Dr. Zalak Shah is available online and in person in Bangalore and Ahmedabad.`
-            : cityKey === "bangalore"
-              ? `On this ${label} page: Dr. Zalak Shah sees patients in person in Bangalore; Dr. Charmi Shah is available online and in Mumbai, Ahmedabad, and Valsad in person.`
-              : `On this ${label} page: both sisters see patients in Ahmedabad, Dr. Charmi for OB-GYN/IVF and Dr. Zalak for physio and STOTT Pilates.`,
-    },
-    {
-      question: `Do you accept international travelers booking through ${label}?`,
-      answer: `Yes. Families often combine travel to India with booked visits tied to ${label}; mention travel dates when you WhatsApp so this ${label} page context stays in the thread.`,
-    },
-    {
-      question: `How do I send records for an appointment in ${label}?`,
-      answer: `Email summaries or bring imaging to the ${label} visit; avoid unsecured links. Reference ${label} and the doctor name so staff matches this city page.`,
-    },
-    {
-      question: `What about emergencies while I am in ${label}?`,
-      answer: `Call the nearest hospital or labor unit in ${label}, do not rely on messaging for emergencies, even if you found us through this ${label} landing page.`,
-    },
-    {
-      question: `Where are virtual diaspora pages if I split time outside ${label}?`,
-      answer: `Open Virtual online consultations in the menu for global city SEO pages. This ${label} page stays your anchor for in-person care in India.`,
-    },
-    { question: `Is there a site-wide FAQ beyond ${label}?`, answer: `Yes, see ${ROUTES.faq}.` },
-    {
-      question: `How do Learn clips relate to ${label} visits?`,
-      answer: `Use the Learn hub for free education; clinical decisions for ${label} still happen in booked consults linked from this page.`,
-    },
-  ]);
+        "Dr. Zalak Shah (PT) assesses pelvic floor, breathing, posture and movement, then builds a plan for concerns such as bladder leakage, pelvic pain, pregnancy aches, recovery after birth or a C-section, and diastasis recti. STOTT Pilates on Mat or Reformer can be part of that plan once the assessment shows it fits.",
+    });
+    items.push({
+      question: `Where is the women's health physiotherapy clinic in ${cityName}?`,
+      answer: `Women's Health Duo sees patients in ${cityName} for women's health physiotherapy with Dr. Zalak Shah (PT) (BPT, MPT; STOTT Pilates Instructor, Mat and Reformer). Patients book pelvic floor physiotherapy, prenatal classes, postnatal care, diastasis recti, urinary incontinence, and Pilates. ${
+        studio
+          ? `Studio: ${studio.area}. ${studio.hours}`
+          : "The room for that day is confirmed when you book."
+      } Visits are by appointment. Message WhatsApp ${CONTACT.phoneE164}. English, Hindi, and Gujarati are commonly used.`,
+    });
+  }
+
+  if (charmiHere) {
+    items.push({
+      question: `What OB-GYN care can I get in ${cityName}?`,
+      answer:
+        "Dr. Charmi Shah sees women for pregnancy care including high-risk pregnancy, period and hormone problems such as PCOS, fertility evaluation with IUI and IVF pathways, and laparoscopic surgery for conditions like fibroids, endometriosis and ovarian cysts when it is indicated.",
+    });
+    items.push({
+      question: `Where is the gynecology clinic in ${cityName}?`,
+      answer: `Women's Health Duo sees patients in ${cityName} for gynecology, IVF, laparoscopy, pregnancy care, and PCOS with Dr. Charmi Shah (MBBS, MS Obstetrics & Gynecology; fellowship training in laparoscopy and IVF). The room for that day is confirmed when you book. Visits are by appointment. Message WhatsApp ${CONTACT.phoneE164}. English, Hindi, and Gujarati are commonly used.`,
+    });
+  }
+
+  items.push({
+    question: `What should I do in an emergency in ${cityName}?`,
+    answer: `Go to the nearest hospital emergency department or labour ward in ${cityName}. Do not wait for a reply on WhatsApp or email in an emergency.`,
+  });
+
+  return take10(items);
 }

@@ -1,0 +1,22 @@
+{
+  "id": "W27-C",
+  "openClinicalQuestions": [
+    "Confirm whether WHD should name a specific Indian helpline on this PMS page or only on the PMDD page."
+  ],
+  "claimLedger": [
+    {
+      "claim": "Premenstrual bloating, breast tenderness and mood change often ease once bleeding starts.",
+      "sourceUrl": "https://www.nhs.uk/conditions/periods/",
+      "sourceSection": "NHS · Periods · fetched 2026",
+      "limitations": "UK patient page; symptom lists are examples, not a diagnostic checklist.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "PMS means recurring luteal symptoms that affect usual activities.",
+      "sourceUrl": "https://www.acog.org/womens-health/faqs/premenstrual-syndrome",
+      "sourceSection": "ACOG · Premenstrual syndrome (PMS) · fetched 2026",
+      "limitations": "US FAQ; local treatment pathways differ.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

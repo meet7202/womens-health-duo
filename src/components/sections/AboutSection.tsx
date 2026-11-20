@@ -20,7 +20,7 @@ const doctors = [
     name: "Dr. Charmi Shah",
     title: "Obstetrician & Gynecologist, IVF Specialist & Laparoscopic Surgeon",
     description:
-      "Dr. Charmi Shah holds an MBBS and MS in Obstetrics & Gynecology, with specialized fellowship training in Laparoscopy and IVF. With over a decade of clinical experience, she has successfully managed thousands of high-risk pregnancies, complex gynecological surgeries, and fertility treatments. Her expertise spans minimally invasive laparoscopic procedures, advanced reproductive techniques, and comprehensive women's healthcare.",
+      "Dr. Charmi Shah holds an MBBS and MS in Obstetrics & Gynecology, with specialized fellowship training in Laparoscopy and IVF. With over a decade of clinical experience, she has successfully managed thousands of high-risk pregnancies, complex gynecological surgeries, and fertility treatments. Her expertise spans minimally invasive laparoscopic procedures, IVF and fertility treatment, and everyday gynecology.",
     specialties: [
       "Obstetrics & Gynecology",
       "IVF & Fertility",
@@ -46,13 +46,12 @@ const doctors = [
     name: "Dr. Zalak Shah (PT)",
     title: "Women's Health Physiotherapist & Pilates Instructor",
     description:
-      "Dr. Zalak Shah is a qualified Physiotherapist with a Bachelor's and Master's degree in Physiotherapy, certified as a STOTT Pilates Instructor. Women's health physiotherapy is a core part of her practice: she combines evidence-based women's health PT with Pilates methodology across leading hospitals and fully equipped studios. Her work spans pelvic health, prenatal and postnatal care, Mat Pilates online for global patients, and musculoskeletal rehabilitation.",
+      "Dr. Zalak Shah is a qualified physiotherapist (BPT, MPT). Women's health physiotherapy is the core of her practice: pelvic health, prenatal and postnatal care, and musculoskeletal rehabilitation, with Pilates used as part of that care, including online sessions for patients abroad.",
     specialties: [
       "Women's Health Physiotherapy",
       "Pelvic Floor Rehabilitation",
       "Prenatal and postnatal care",
       "Physio and Pilates",
-      "STOTT Pilates",
       "Diastasis Recti",
       "Urinary Incontinence",
       "Core Strengthening",
@@ -93,8 +92,8 @@ export const AboutSection = () => {
             Meet the <span className="text-primary italic">Sisters</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Two sisters united by their passion for women's health, combining medical expertise with
-            physiotherapy to provide holistic care at every stage of life.
+            Two sisters who work together: one an obstetrician-gynecologist, the other a women's
+            health physiotherapist, so medical care and recovery can be planned side by side.
           </p>
           <p className="text-base text-foreground/90 leading-relaxed mt-4 max-w-2xl mx-auto border-t border-border/40 pt-4">
             {BRAND_ENTITY_LINE}

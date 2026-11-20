@@ -1,0 +1,22 @@
+{
+  "id": "W32-Z",
+  "openClinicalQuestions": [
+    "Confirm WHD advice on painful swollen calf and heavy postnatal bleeding wording for Indian emergency routes."
+  ],
+  "claimLedger": [
+    {
+      "claim": "Aches are common after birth, and bothersome symptoms are a reason to ask for help. Pelvic-floor work is encouraged when you feel able.",
+      "sourceUrl": "https://www.nhs.uk/baby/support-and-services/your-body-after-the-birth/",
+      "sourceSection": "NHS · Your body after the birth · fetched 2026",
+      "limitations": "General postnatal page, not a pain classification.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Sudden severe pelvic pain needs emergency care.",
+      "sourceUrl": "https://www.nhs.uk/conditions/pelvic-pain/",
+      "sourceSection": "NHS · Pelvic pain · fetched 2026",
+      "limitations": "Not specific to the postnatal week.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

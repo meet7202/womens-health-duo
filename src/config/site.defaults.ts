@@ -15,7 +15,7 @@ export const HOME_ENTITY_DEFINITION =
 
 /** Homepage hero lede only (first body paragraph under the H1). */
 export const HOME_HERO_LEDE =
-  "Comprehensive care from pregnancy to postpartum, fertility to pelvic health. We combine medical expertise with physiotherapy and STOTT Pilates for complete wellness.";
+  "Care from pregnancy to postpartum, and from fertility to pelvic health. We combine medical expertise with women's health physiotherapy, with Pilates as part of that care.";
 
 /** Rich MedicalOrganization description for schema.org (may exceed meta length). */
 export const ORGANIZATION_SCHEMA_DESCRIPTION = `${HOME_ENTITY_DEFINITION} Dr. Charmi Shah (OB-GYN, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapy and STOTT Pilates on Mat and Reformer) lead the work. We film explainers and see patients in India and online; we do not retail supplements or vitamins.`;
@@ -38,7 +38,7 @@ export const CONTACT = {
 export const GTM_CONTAINER_ID = "GTM-57NMVQVN";
 
 /** Target ~60 characters (Bing warns above 70). Used when a page omits `SeoHead` title. */
-export const DEFAULT_TITLE = "Dr. Charmi Shah & Dr. Zalak Shah: Women's Health Duo";
+export const DEFAULT_TITLE = "Dr. Charmi & Dr. Zalak Shah: OB-GYN, Physio & Pilates";
 
 /** Target 25–160 characters for Bing meta description audits (HTML + OG + Twitter). */
 export const DEFAULT_DESCRIPTION = `Women's Health Duo: book OB-GYN/IVF or physio consults in India and online. WhatsApp ${CONTACT.phoneE164}. Hormones, fertility, pelvic health, STOTT Pilates.`;
@@ -128,8 +128,9 @@ export const KEYWORDS = [
   "international consultation second opinion online",
 ].join(", ");
 
-export const OG_IMAGE_PATH = "/favicon.svg";
+/** 1200×630 JPEG; regenerate with `node scripts/generate-og-image.mjs` when portraits change. */
+export const OG_IMAGE_PATH = "/images/og-womens-health-duo.jpg";
 
 /** Default `og:image:alt` / `twitter:image:alt` when a page does not supply a specific poster. */
 export const DEFAULT_OG_IMAGE_ALT =
-  "Women's Health Duo — OB-GYN and women's health physiotherapy in India and online";
+  "Dr. Charmi Shah (OB-GYN, IVF) and Dr. Zalak Shah (PT, women's health physio and Pilates) of Women's Health Duo";

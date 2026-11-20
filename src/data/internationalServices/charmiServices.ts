@@ -1,7 +1,7 @@
 import type { InternationalService } from "./types";
 
 const NOT_FOR = [
-  "Medical emergencies — use local emergency services immediately",
+  "Medical emergencies: use local emergency services immediately",
   "Replacing your local obstetrician or gynecologist for all in-person care",
   "Prescribing controlled medicines where local law or clinical assessment does not permit",
   "Remote procedures, surgery, or hands-on examination when required in person",
@@ -14,17 +14,17 @@ export const CHARMI_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
     title: "IVF second opinion online",
     shortTitle: "IVF second opinion",
     metaDescription:
-      "Video IVF second opinion with Dr. Charmi Shah (OB-GYN & IVF specialist) for NRIs and international patients — cycle review, protocol questions, and fertility planning via WhatsApp.",
+      "Video IVF second opinion with Dr. Charmi Shah (OB-GYN & IVF specialist) for NRIs and international patients: cycle review, protocol questions, and fertility planning via WhatsApp.",
     intro: [
-      "Considering IVF or reviewing a failed cycle? Dr. Charmi Shah offers international video second opinions for patients worldwide — especially NRIs and families planning treatment in India or comparing options abroad.",
-      "Share your history, prior protocols, and lab or ultrasound reports in WhatsApp when requested. This service focuses on expert counselling and planning, not emergency care.",
+      "Considering IVF or reviewing a failed cycle? Dr. Charmi Shah offers international video second opinions, often for NRIs and families planning treatment in India or comparing options abroad.",
+      "Share your history, prior protocols, and lab or ultrasound reports in WhatsApp when requested. This service is for specialist counselling and planning, not emergency care.",
     ],
     canHelp: [
       "Review of prior IVF/IUI cycles and embryology summaries",
       "Discussion of workup, AMH, semen analysis, and imaging already done",
       "Second opinion before starting or switching clinics",
       "Questions about ovarian stimulation, retrieval, transfer, and freeze-all pathways",
-      "Coordination mindset before travel to Mumbai, Ahmedabad, or Valsad when appropriate",
+      "Planning ahead of travel to Mumbai, Ahmedabad, or Valsad when appropriate",
     ],
     notFor: NOT_FOR,
     relatedSlugs: [
@@ -36,7 +36,7 @@ export const CHARMI_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
       {
         question: "Who is an online IVF second opinion for?",
         answer:
-          "Patients abroad, NRIs, or anyone seeking an India-trained IVF specialist's view on their history, prior cycles, or next steps — before committing to a new clinic or protocol.",
+          "Patients abroad, NRIs, or anyone seeking an India-trained IVF specialist's view on their history, prior cycles, or next steps before committing to a new clinic or protocol.",
       },
       {
         question: "What should I send before the consult?",
@@ -71,9 +71,9 @@ export const CHARMI_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
     title: "Online fertility consultation",
     shortTitle: "Fertility consult online",
     metaDescription:
-      "International online fertility consultation with Dr. Charmi Shah — preconception planning, infertility workup review, and IVF/IUI guidance for patients worldwide.",
+      "International online fertility consultation with Dr. Charmi Shah: preconception planning, infertility workup review, and IVF/IUI guidance for patients worldwide.",
     intro: [
-      "Planning pregnancy or navigating infertility from another country? Book an international fertility teleconsultation with Dr. Charmi Shah, obstetrician, gynecologist, and IVF specialist with Women's Health Duo.",
+      "Planning a pregnancy or dealing with infertility from another country? Book an international fertility teleconsultation with Dr. Charmi Shah, obstetrician, gynecologist, and IVF specialist with Women's Health Duo.",
     ],
     canHelp: [
       "Preconception counselling and timeline planning",
@@ -93,7 +93,7 @@ export const CHARMI_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
       {
         question: "What is covered in a first fertility video visit?",
         answer:
-          "History, prior tests, cycle patterns, partner factors when relevant, and a sensible next-step plan — which may include local tests, travel to India, or referral to an IVF centre.",
+          "History, prior tests, cycle patterns, partner factors when relevant, and a sensible next-step plan. That may include local tests, travel to India, or referral to an IVF centre.",
       },
       {
         question: "Does Dr. Charmi treat male factor infertility online?",
@@ -108,7 +108,7 @@ export const CHARMI_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
       {
         question: "How do I start?",
         answer:
-          "Message on WhatsApp from this page or complete Book consultation — we reply with next steps and what records to share.",
+          "Message on WhatsApp from this page or complete Book consultation. We reply with next steps and what records to share.",
       },
     ],
   },
@@ -118,9 +118,9 @@ export const CHARMI_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
     title: "Recurrent pregnancy loss consultation online",
     shortTitle: "Recurrent pregnancy loss",
     metaDescription:
-      "Online consultation for recurrent miscarriage and pregnancy loss with Dr. Charmi Shah — review of prior losses, investigations, and next-step planning for international patients.",
+      "Online consultation for recurrent miscarriage and pregnancy loss with Dr. Charmi Shah: review of prior losses, investigations, and next-step planning for international patients.",
     intro: [
-      "Recurrent pregnancy loss needs careful, compassionate review. Dr. Charmi Shah offers international video consultations to discuss prior losses, completed investigations, and evidence-based next steps.",
+      "Recurrent pregnancy loss needs a careful and kind review. Dr. Charmi Shah offers international video consultations to discuss prior losses, completed investigations, and evidence-based next steps.",
     ],
     canHelp: [
       "Review of two or more pregnancy losses and timing",
@@ -149,7 +149,7 @@ export const CHARMI_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
       {
         question: "Do you offer treatment plans remotely?",
         answer:
-          "Yes, when appropriate and legally permitted — always coordinated with your local doctor for monitoring and emergencies.",
+          "Yes, when appropriate and legally permitted. Plans are always coordinated with your local doctor for monitoring and emergencies.",
       },
       {
         question: "Is this service only for NRIs?",
@@ -169,7 +169,7 @@ export const CHARMI_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
     title: "High-risk pregnancy counselling online",
     shortTitle: "High-risk pregnancy",
     metaDescription:
-      "International high-risk pregnancy teleconsultation with Dr. Charmi Shah — diabetes, hypertension, twins, prior preterm birth, and complex obstetric planning.",
+      "International high-risk pregnancy teleconsultation with Dr. Charmi Shah: diabetes, hypertension, twins, prior preterm birth, and complex obstetric planning.",
     intro: [
       "Managing a high-risk pregnancy while living abroad? Dr. Charmi Shah provides international obstetric counselling, report review, and planning alongside your local maternity team.",
     ],
@@ -178,7 +178,7 @@ export const CHARMI_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
       "Interpretation of growth scans, Doppler, and antenatal labs",
       "Discussion of travel to India for delivery when considered",
       "Medication and monitoring questions where telemedicine allows",
-      "Coordination mindset with your local obstetrician",
+      "Working alongside your local obstetrician",
     ],
     notFor: NOT_FOR,
     relatedSlugs: ["gynecology-report-review", "fertility-consultation-online"],
@@ -201,7 +201,7 @@ export const CHARMI_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
       {
         question: "What records help before the call?",
         answer:
-          "Dating scan, anomaly scan summaries, blood pressure logs, glucose results, and medication list — share via WhatsApp when asked.",
+          "Dating scan, anomaly scan summaries, blood pressure logs, glucose results, and medication list. Share them via WhatsApp when asked.",
       },
       {
         question: "How do I book?",
@@ -216,7 +216,7 @@ export const CHARMI_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
     title: "Endometriosis second opinion online",
     shortTitle: "Endometriosis opinion",
     metaDescription:
-      "Online endometriosis second opinion with Dr. Charmi Shah — pain, fertility impact, surgery planning, and medical management review for international patients.",
+      "Online endometriosis second opinion with Dr. Charmi Shah: pain, fertility impact, surgery planning, and medical management review for international patients.",
     intro: [
       "Endometriosis affects pain, fertility, and quality of life. Dr. Charmi Shah offers international video second opinions on diagnosis, medical vs surgical pathways, and fertility preservation questions.",
     ],
@@ -232,12 +232,12 @@ export const CHARMI_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
       {
         question: "Can endometriosis be diagnosed online?",
         answer:
-          "Clinical suspicion and report review yes; definitive diagnosis often needs imaging or laparoscopy in person.",
+          "Suspicion can be assessed and reports reviewed online; definitive diagnosis often needs imaging or laparoscopy in person.",
       },
       {
         question: "Do you offer laparoscopy remotely?",
         answer:
-          "Surgery is in-person when indicated — Mumbai, Ahmedabad, Valsad, or a trusted local surgeon with shared planning.",
+          "Surgery is in person when indicated, in Mumbai, Ahmedabad, or Valsad, or with a trusted local surgeon and shared planning.",
       },
       {
         question: "Can I discuss pain management online?",
@@ -247,7 +247,7 @@ export const CHARMI_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
       {
         question: "Should I also see a physiotherapist?",
         answer:
-          "Many patients benefit from Dr. Zalak Shah's women's health physiotherapy online for pelvic pain and movement — book separately or ask in WhatsApp.",
+          "Many patients benefit from Dr. Zalak Shah's women's health physiotherapy online for pelvic pain and movement. Book separately or ask in WhatsApp.",
       },
       {
         question: "How do I book with Dr. Charmi?",
@@ -261,16 +261,16 @@ export const CHARMI_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
     title: "PCOS consultation online",
     shortTitle: "PCOS consult online",
     metaDescription:
-      "International PCOS teleconsultation with Dr. Charmi Shah — cycles, fertility, metabolic health, and long-term management for patients worldwide.",
+      "International PCOS teleconsultation with Dr. Charmi Shah: cycles, fertility, metabolic health, and long-term management for patients worldwide.",
     intro: [
-      "PCOS needs personalised, long-term planning. Dr. Charmi Shah consults international patients by video on cycles, fertility goals, weight, insulin resistance, and treatment options.",
+      "PCOS needs long-term planning that fits the patient. Dr. Charmi Shah consults international patients by video on cycles, fertility goals, weight, insulin resistance, and treatment options.",
     ],
     canHelp: [
       "Irregular periods and hyperandrogenism review",
       "Fertility-oriented PCOS planning",
       "Metabolic risk and lifestyle counselling",
       "Medication discussion where clinically appropriate",
-      "Coordination with physio/Pilates for sustainable movement",
+      "Coordination with physio/Pilates for movement you can keep up",
     ],
     notFor: NOT_FOR,
     relatedSlugs: ["fertility-consultation-online", "endometriosis-second-opinion"],
@@ -278,7 +278,7 @@ export const CHARMI_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
       {
         question: "Do I need blood tests before the consult?",
         answer:
-          "Recent hormones, glucose, and lipids help if available — send via WhatsApp. We can suggest tests locally if missing.",
+          "Recent hormones, glucose, and lipids help if available. Send them via WhatsApp. We can suggest tests locally if missing.",
       },
       {
         question: "Can PCOS be managed fully online?",
@@ -288,7 +288,7 @@ export const CHARMI_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
       {
         question: "Is this suitable for teenagers with PCOS?",
         answer:
-          "Yes with guardian involvement where required by law and clinic policy — mention age when booking.",
+          "Yes, with guardian involvement where required by law and clinic policy. Mention age when booking.",
       },
       {
         question: "How do I book?",
@@ -302,7 +302,7 @@ export const CHARMI_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
     title: "Gynecology ultrasound & lab report review online",
     shortTitle: "Report review online",
     metaDescription:
-      "Online gynecology report review with Dr. Charmi Shah — ultrasound, fertility labs, and imaging summaries for international second opinions via WhatsApp.",
+      "Online gynecology report review with Dr. Charmi Shah: ultrasound, fertility labs, and imaging summaries for international second opinions via WhatsApp.",
     intro: [
       "Have pelvic ultrasound, fertility labs, or operative notes and want an India-trained OB-GYN to review them? Dr. Charmi Shah offers international report-review teleconsultations.",
     ],
@@ -327,7 +327,7 @@ export const CHARMI_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
       {
         question: "Is report review a full consultation?",
         answer:
-          "Yes — it includes history questions and a video or audio call when needed to explain findings and next steps.",
+          "Yes. It includes history questions and a video or audio call when needed to explain findings and next steps.",
       },
       {
         question: "Can you re-read scans done in another country?",
@@ -346,15 +346,15 @@ export const CHARMI_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
     title: "Menopause consultation online",
     shortTitle: "Menopause consult",
     metaDescription:
-      "International menopause teleconsultation with Dr. Charmi Shah — symptoms, HRT discussion, bone health, and midlife wellness for patients abroad.",
+      "International menopause teleconsultation with Dr. Charmi Shah: symptoms, HRT discussion, bone health, and midlife wellness for patients abroad.",
     intro: [
-      "Navigating perimenopause or menopause while living outside India? Dr. Charmi Shah offers international video consults on symptoms, therapy options, and preventive health within telemedicine guidelines.",
+      "Going through perimenopause or menopause while living outside India? Dr. Charmi Shah offers international video consults on symptoms, therapy options, and preventive health within telemedicine guidelines.",
     ],
     canHelp: [
       "Hot flashes, sleep, mood, and libido review",
       "Shared decision-making on HRT when appropriate",
       "Bone health and screening discussions",
-      "Bleeding after menopause — urgent local care if active bleeding",
+      "Bleeding after menopause (urgent local care if bleeding is active)",
     ],
     notFor: NOT_FOR,
     relatedSlugs: ["pcos-consultation-online", "gynecology-report-review"],
@@ -367,7 +367,7 @@ export const CHARMI_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
       {
         question: "What if I have postmenopausal bleeding?",
         answer:
-          "Seek urgent local gynecologic assessment — that is not suitable for teleconsultation alone.",
+          "Seek urgent local gynecologic assessment. This is not suitable for teleconsultation alone.",
       },
       {
         question: "How do I book?",

@@ -1,0 +1,22 @@
+{
+  "id": "W27-Z",
+  "openClinicalQuestions": [
+    "Confirm which symptoms WHD will not accept for a first online physiotherapy booking."
+  ],
+  "claimLedger": [
+    {
+      "claim": "Women's health physiotherapy patient topics include bladder, bowel, pelvic pain and maternity.",
+      "sourceUrl": "https://thepogp.co.uk/patient_information/default.aspx",
+      "sourceSection": "POGP · Patient information · fetched 2026",
+      "limitations": "UK professional network index, not a treatment protocol.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Pelvic floor exercises train the muscles supporting bladder and bowel, and technique matters.",
+      "sourceUrl": "https://www.nhs.uk/common-health-questions/womens-health/what-are-pelvic-floor-exercises/",
+      "sourceSection": "NHS · What are pelvic floor exercises? · fetched 2026",
+      "limitations": "General exercise description, not an individual programme.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

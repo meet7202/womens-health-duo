@@ -1,0 +1,103 @@
+{
+  "id": "W29-C",
+  "title": "How Can I Improve My Chances of Getting Pregnant?",
+  "seoTitle": "How to improve chances of pregnancy",
+  "description": "Fertility improves when timing, health conditions and both partners are reviewed. No food or app can promise a pregnancy. See when to ask for help.",
+  "primaryQuestion": "How can I improve my chances of getting pregnant?",
+  "directAnswer": "Chances of pregnancy depend on age, how often you have sex in the fertile window, ovulation, sperm factors, and medical conditions such as PCOS, thyroid disease or blocked tubes. NHS advice is to have sex every two to three days without using contraception if you are trying, and to see a doctor sooner if you are over 35, have irregular periods, or already know about a fertility problem. Lifestyle steps can support that plan. They do not override age or a diagnosis, and no article can promise a pregnancy.",
+  "storytellingNote": "",
+  "sections": [
+    {
+      "heading": "Timing that matches how conception works",
+      "paragraphs": [
+        "NICE’s information for the public on fertility says most couples who have regular sex without contraception will conceive within a year, and it advises sex every two to three days. You do not need to schedule intercourse only on one calculated day.",
+        "Ovulation predictor kits and cycle apps can help some people notice a pattern. They mislead when cycles are very irregular. The ovulation-tracking guide explains what those tools can and cannot show. If periods are unpredictable, say so early rather than forcing a 28-day calendar."
+      ]
+    },
+    {
+      "heading": "Health steps with a real evidence base",
+      "paragraphs": [
+        "NHS fertility pages advise stopping smoking, keeping alcohol within low-risk limits or avoiding it while trying, aiming for a weight that is healthy for you, and taking folic acid before conception. Both partners matter: smoking and heavy alcohol use also affect sperm.",
+        "Review prescribed medicines with the clinician who started them before you stop anything. A preconception visit is the right place to ask about vaccines, long-term conditions and folic acid. Do not copy a dose from a social-media post."
+      ]
+    },
+    {
+      "heading": "What will not replace an assessment",
+      "paragraphs": [
+        "Detox teas, ovarian steaming, and supplements sold as fertility cures are marketing. If a product says it will make you pregnant by a set month, treat that as advertising. Food supports general health. It is not a treatment for blocked tubes or very low sperm counts.",
+        "Sex on demand can become stressful. NICE notes that timed intercourse is not required for everyone. If trying has started to harm your relationship or mood, say that in the appointment. Stress reduction is reasonable self-care. It is not a treatment that erases a medical cause."
+      ]
+    },
+    {
+      "heading": "When to ask for help rather than wait a year",
+      "paragraphs": [
+        "NHS guidance is to see a GP after a year of trying if you are under 36, and sooner if you are 36 or over. Go earlier still with very irregular or absent periods, known PCOS or endometriosis, previous pelvic infection or surgery, or a known sperm problem.",
+        "Seek urgent care for severe one-sided pain and bleeding with a positive pregnancy test, fainting, or shoulder-tip pain. Those can be signs of ectopic pregnancy and are an emergency, not a fertility-coaching topic. Dr. Charmi Shah can plan a non-urgent workup when the situation is stable."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do we need intercourse every day to conceive?",
+      "answer": "NICE’s public fertility information recommends sex every two to three days across the cycle, not a single perfect day. Daily sex is not a requirement, and it can add pressure without helping."
+    },
+    {
+      "question": "If I am under 35, must I wait a full year?",
+      "answer": "A year is the usual NHS threshold when cycles are regular and there is no known problem. Irregular periods, age 36 or older, or a known condition are reasons to ask sooner."
+    }
+  ],
+  "references": [
+    {
+      "label": "NHS: Infertility",
+      "url": "https://www.nhs.uk/conditions/infertility/"
+    },
+    {
+      "label": "NICE: Fertility problems: trying for a baby",
+      "url": "https://www.nice.org.uk/guidance/cg156/ifp/chapter/trying-for-a-baby"
+    }
+  ],
+  "conversionCopy": "If you want a fertility plan that fits your history, you can book a consultation with Dr. Charmi Shah.",
+  "explainerAlt": "Calendar sketch of sex every few days across a cycle rather than one predicted day",
+  "internalLinks": [
+    {
+      "anchor": "tracking ovulation",
+      "path": "/how-to-track-ovulation/"
+    },
+    {
+      "anchor": "preconception planning",
+      "path": "/what-is-preconception-planning/"
+    },
+    {
+      "anchor": "when to see a fertility specialist",
+      "path": "/when-to-see-a-fertility-specialist/"
+    }
+  ],
+  "parentHub": "/fertility/",
+  "review": {
+    "corrections": [
+      "Removed any promise of pregnancy and any copied folic-acid dose.",
+      "Used NICE every-two-to-three-days wording instead of a single fertile day."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "NHS",
+        "title": "Infertility",
+        "url": "https://www.nhs.uk/conditions/infertility/",
+        "date": "fetched 2026",
+        "limitations": "UK pathways and age cut-offs; Indian referral rules differ.",
+        "recommendation": "See a doctor after a year of trying if under 36, and sooner with age or known problems. Smoking, alcohol and weight are discussed."
+      },
+      {
+        "organisation": "NICE",
+        "title": "Fertility problems: trying for a baby (CG156 public information)",
+        "url": "https://www.nice.org.uk/guidance/cg156/ifp/chapter/trying-for-a-baby",
+        "date": "CG156",
+        "limitations": "UK guideline information for the public.",
+        "recommendation": "Have vaginal sex every two to three days. Most couples conceive within a year."
+      }
+    ],
+    "openQuestions": [
+      "Confirm the age threshold WHD quotes for Indian patients, since NHS uses under 36 versus 36 and over."
+    ]
+  }
+}

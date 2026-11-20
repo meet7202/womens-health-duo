@@ -1,31 +1,30 @@
 import type { FaqItem } from "@/data/siteFaq";
+import { CONTACT } from "@/config/site.defaults";
 
-/** Homepage-only FAQ (5 items) for Bing + AI extraction; must match visible accordion + JSON-LD. */
+/** Homepage FAQ. Same questions must appear in the accordion and in JSON-LD. */
 export const HOME_PAGE_FAQ: FaqItem[] = [
   {
-    question: "What is Women's Health Duo, a supplement shop, pills by mail, or a medical service?",
+    question: "What is Women's Health Duo?",
     answer:
-      "We are a women's health education and consultation team, not a supplement brand or storefront. You will find free clips on our Learn hub, and you can book paid appointments with Dr. Charmi Shah (OB-GYN, IVF, laparoscopy) or Dr. Zalak Shah (women's health physiotherapist and STOTT Pilates instructor) through WhatsApp or email. Prescriptions and procedures follow the same clinical standards as any medical practice.",
+      "Women's Health Duo is a women's health practice led by two sisters. Dr. Charmi Shah is the obstetrician and gynecologist (IVF and laparoscopy). Dr. Zalak Shah (PT) is the women's health physiotherapist and Pilates instructor. The site also has free education on the Learn hub. A visit is a booked consultation, and we do not sell supplements or pills.",
   },
   {
-    question: "What topics does Women's Health Duo cover?",
+    question: "What does Dr. Charmi Shah do?",
     answer:
-      "We focus on hormonal health, menstrual and cycle concerns, fertility pathways (including IVF discussion where appropriate), pelvic floor and pregnancy/postpartum movement, and STOTT Pilates (Mat and Reformer) for women's musculoskeletal and wellness goals. Educational clips complement, but do not replace, personalized care.",
+      "Dr. Charmi Shah sees women for gynecology, pregnancy care including high-risk pregnancy, PCOS and other hormone concerns, fertility evaluation with IUI and IVF, and laparoscopic surgery when it is the right next step. She sees patients in person in Mumbai, Ahmedabad, and Valsad, and by video worldwide.",
   },
   {
-    question:
-      "How is Women's Health Duo different from just watching women's health videos online?",
+    question: "What does Dr. Zalak Shah do?",
     answer:
-      "The Learn hub hosts official YouTube Shorts and Instagram Reels for education worldwide. When you need individualized guidance, you can book a virtual or in-person consultation: Dr. Charmi addresses obstetric, gynecologic, and fertility questions; Dr. Zalak addresses physiotherapy, prenatal/postnatal programming, pelvic rehab, and STOTT-informed movement. You can start with education and step into clinical care when it makes sense for you.",
+      "Dr. Zalak Shah (PT) sees women for women's health physiotherapy, pelvic floor physiotherapy, prenatal classes, postnatal care and diastasis recti, urinary incontinence, and Pilates. She sees patients in person in Bangalore and Ahmedabad, and by video worldwide. This is physiotherapy, alongside medical care from Dr. Charmi Shah or your own doctor.",
   },
   {
-    question: "Do you see patients only in India, or internationally too?",
+    question: "Can I book a video consult if I am not in those cities?",
     answer:
-      "We are online-first for global families and NRIs: most consults happen by video, with structured programmes you can follow from anywhere. Dr. Charmi Shah sees patients in person in Mumbai, Ahmedabad, and Valsad; Dr. Zalak Shah in Bangalore and Ahmedabad, both still offer virtual visits worldwide.",
+      "Yes. Video is how we see patients outside Mumbai, Ahmedabad, Valsad, and Bangalore. Dr. Charmi Shah's video visits cover gynecology, pregnancy, fertility, and IVF questions. Dr. Zalak Shah's video visits cover physiotherapy, pregnancy and postnatal movement, pelvic floor care, and Pilates. An examination that has to be done in person is arranged in the city where that doctor sees patients.",
   },
   {
-    question: "How do I book a consultation with Women's Health Duo?",
-    answer:
-      "Use the WhatsApp button on this site or email contact@womenshealthduo.com with your city, country, time zone, and a short summary. We will suggest next steps and available slots. Urgent or emergency symptoms should go to your local emergency services.",
+    question: "How do I book?",
+    answer: `Message WhatsApp ${CONTACT.phoneE164} or email ${CONTACT.email}. Say which doctor you want, your city, and what you need help with. We reply with the next available visit. If you have an emergency, go to the nearest hospital. Do not wait for a reply on WhatsApp.`,
   },
 ];

@@ -1,0 +1,609 @@
+{
+  "note": "Indexable city×service pages, ranked by Search Console impressions + clicks. Regenerate with scripts/select-featured-service-cities.mjs.",
+  "source": ".cache/seo-audit/gsc-online-consult-pages-6m.json",
+  "limit": 100,
+  "paths": [
+    "/online-consultation/singapore/menopause-wellness",
+    "/online-consultation/birmingham-gb/pelvic-floor-rehabilitation",
+    "/online-consultation/leicester/musculoskeletal-physiotherapy",
+    "/online-consultation/olathe/pregnancy-high-risk-obstetrics",
+    "/online-consultation/brisbane/gynecological-care",
+    "/online-consultation/calgary/pelvic-floor-rehabilitation",
+    "/online-consultation/muscat/pelvic-floor-rehabilitation",
+    "/online-consultation/toronto/menopause-wellness",
+    "/online-consultation/canberra/pelvic-floor-rehabilitation",
+    "/online-consultation/pune/womens-wellness-programs",
+    "/online-consultation/valencia/stott-pilates",
+    "/online-consultation/bismarck-nd/pelvic-floor-rehabilitation",
+    "/online-consultation/sheffield/menopause-wellness",
+    "/online-consultation/madrid/menopause-wellness",
+    "/online-consultation/coventry/menopause-wellness",
+    "/online-consultation/cambridge-gb/menopause-wellness",
+    "/online-consultation/cork/musculoskeletal-physiotherapy",
+    "/online-consultation/federal-way/gynecological-care",
+    "/online-consultation/paris/menopause-wellness",
+    "/online-consultation/chennai/gynecological-care",
+    "/online-consultation/delhi/pelvic-floor-rehabilitation",
+    "/online-consultation/porto/mat-pilates-online",
+    "/online-consultation/thiruvananthapuram/pelvic-floor-rehabilitation",
+    "/online-consultation/thane/menopause-wellness",
+    "/online-consultation/kaohsiung/musculoskeletal-physiotherapy",
+    "/online-consultation/leeds/gynecological-care",
+    "/online-consultation/taipei/pelvic-floor-rehabilitation",
+    "/online-consultation/the-hague/pcos-hormonal-disorders",
+    "/online-consultation/billings/antenatal-postnatal-care",
+    "/online-consultation/gainesville/musculoskeletal-physiotherapy",
+    "/online-consultation/hong-kong/gynecological-care",
+    "/online-consultation/norwalk/core-functional-training",
+    "/online-consultation/san-diego/menopause-wellness",
+    "/online-consultation/seoul/gynecological-care",
+    "/online-consultation/sharjah/pcos-hormonal-disorders",
+    "/online-consultation/stockholm/gynecological-care",
+    "/online-consultation/visakhapatnam/menopause-wellness",
+    "/online-consultation/calgary/stott-pilates",
+    "/online-consultation/cedar-rapids/mat-pilates-online",
+    "/online-consultation/columbus/musculoskeletal-physiotherapy",
+    "/online-consultation/eindhoven/menopause-wellness",
+    "/online-consultation/eugene/pelvic-floor-rehabilitation",
+    "/online-consultation/naples/menopause-wellness",
+    "/online-consultation/newport-news/mat-pilates-online",
+    "/online-consultation/pearland/ivf-fertility-treatments",
+    "/online-consultation/san-diego/stott-pilates",
+    "/online-consultation/san-mateo/pcos-hormonal-disorders",
+    "/online-consultation/sioux-falls/pregnancy-high-risk-obstetrics",
+    "/online-consultation/winnipeg/musculoskeletal-physiotherapy",
+    "/online-consultation/zurich/womens-wellness-programs",
+    "/online-consultation/adelaide/womens-wellness-programs",
+    "/online-consultation/christchurch/pelvic-floor-rehabilitation",
+    "/online-consultation/cork/menopause-wellness",
+    "/online-consultation/columbus/menopause-wellness",
+    "/online-consultation/leeds/pelvic-floor-rehabilitation",
+    "/online-consultation/edinburgh/menopause-wellness",
+    "/online-consultation/london/antenatal-postnatal-care",
+    "/online-consultation/perth/musculoskeletal-physiotherapy",
+    "/online-consultation/brisbane/pcos-hormonal-disorders",
+    "/online-consultation/canberra/musculoskeletal-physiotherapy",
+    "/online-consultation/singapore/ivf-fertility-treatments",
+    "/online-consultation/srinagar/mat-pilates-online",
+    "/online-consultation/al-rayyan/pelvic-floor-rehabilitation",
+    "/online-consultation/calgary/gynecological-care",
+    "/online-consultation/manchester-gb/menopause-wellness",
+    "/online-consultation/melbourne/laparoscopic-surgery",
+    "/online-consultation/new-york-city/gynecological-care",
+    "/online-consultation/ottawa/pelvic-floor-rehabilitation",
+    "/online-consultation/abu-dhabi/musculoskeletal-physiotherapy",
+    "/online-consultation/dublin/musculoskeletal-physiotherapy",
+    "/online-consultation/sydney/pelvic-floor-rehabilitation",
+    "/online-consultation/chandigarh/gynecological-care",
+    "/online-consultation/birmingham-gb/musculoskeletal-physiotherapy",
+    "/online-consultation/canberra/womens-wellness-programs",
+    "/online-consultation/albany-ny/pelvic-floor-rehabilitation",
+    "/online-consultation/cardiff/menopause-wellness",
+    "/online-consultation/kuwait-city/pelvic-floor-rehabilitation",
+    "/online-consultation/leicester/pregnancy-high-risk-obstetrics",
+    "/online-consultation/melbourne/ivf-fertility-treatments",
+    "/online-consultation/singapore/pregnancy-high-risk-obstetrics",
+    "/online-consultation/wellington/menopause-wellness",
+    "/online-consultation/gold-coast/pelvic-floor-rehabilitation",
+    "/online-consultation/miami/pelvic-floor-rehabilitation",
+    "/online-consultation/sheffield/musculoskeletal-physiotherapy",
+    "/online-consultation/the-hague/menopause-wellness",
+    "/online-consultation/albuquerque/menopause-wellness",
+    "/online-consultation/annapolis-md/pelvic-floor-rehabilitation",
+    "/online-consultation/atlanta/menopause-wellness",
+    "/online-consultation/barcelona/pcos-hormonal-disorders",
+    "/online-consultation/dallas/gynecological-care",
+    "/online-consultation/doha/menopause-wellness",
+    "/online-consultation/fort-collins/pelvic-floor-rehabilitation",
+    "/online-consultation/glasgow/gynecological-care",
+    "/online-consultation/sydney/laparoscopic-surgery",
+    "/online-consultation/adelaide/menopause-wellness",
+    "/online-consultation/buffalo/pelvic-floor-rehabilitation",
+    "/online-consultation/reno/gynecological-care",
+    "/online-consultation/san-diego/pregnancy-high-risk-obstetrics",
+    "/online-consultation/bismarck-nd/pcos-hormonal-disorders",
+    "/online-consultation/canberra/menopause-wellness"
+  ],
+  "evidence": [
+    {
+      "path": "/online-consultation/singapore/menopause-wellness",
+      "impressions": 422,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/birmingham-gb/pelvic-floor-rehabilitation",
+      "impressions": 100,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/leicester/musculoskeletal-physiotherapy",
+      "impressions": 75,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/olathe/pregnancy-high-risk-obstetrics",
+      "impressions": 19,
+      "clicks": 2
+    },
+    {
+      "path": "/online-consultation/brisbane/gynecological-care",
+      "impressions": 64,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/calgary/pelvic-floor-rehabilitation",
+      "impressions": 64,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/muscat/pelvic-floor-rehabilitation",
+      "impressions": 35,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/toronto/menopause-wellness",
+      "impressions": 57,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/canberra/pelvic-floor-rehabilitation",
+      "impressions": 55,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/pune/womens-wellness-programs",
+      "impressions": 4,
+      "clicks": 2
+    },
+    {
+      "path": "/online-consultation/valencia/stott-pilates",
+      "impressions": 4,
+      "clicks": 2
+    },
+    {
+      "path": "/online-consultation/bismarck-nd/pelvic-floor-rehabilitation",
+      "impressions": 44,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/sheffield/menopause-wellness",
+      "impressions": 43,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/madrid/menopause-wellness",
+      "impressions": 16,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/coventry/menopause-wellness",
+      "impressions": 38,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/cambridge-gb/menopause-wellness",
+      "impressions": 35,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/cork/musculoskeletal-physiotherapy",
+      "impressions": 33,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/federal-way/gynecological-care",
+      "impressions": 33,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/paris/menopause-wellness",
+      "impressions": 8,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/chennai/gynecological-care",
+      "impressions": 32,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/delhi/pelvic-floor-rehabilitation",
+      "impressions": 7,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/porto/mat-pilates-online",
+      "impressions": 7,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/thiruvananthapuram/pelvic-floor-rehabilitation",
+      "impressions": 7,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/thane/menopause-wellness",
+      "impressions": 4,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/kaohsiung/musculoskeletal-physiotherapy",
+      "impressions": 3,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/leeds/gynecological-care",
+      "impressions": 3,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/taipei/pelvic-floor-rehabilitation",
+      "impressions": 3,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/the-hague/pcos-hormonal-disorders",
+      "impressions": 3,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/billings/antenatal-postnatal-care",
+      "impressions": 2,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/gainesville/musculoskeletal-physiotherapy",
+      "impressions": 2,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/hong-kong/gynecological-care",
+      "impressions": 27,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/norwalk/core-functional-training",
+      "impressions": 2,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/san-diego/menopause-wellness",
+      "impressions": 27,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/seoul/gynecological-care",
+      "impressions": 2,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/sharjah/pcos-hormonal-disorders",
+      "impressions": 2,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/stockholm/gynecological-care",
+      "impressions": 2,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/visakhapatnam/menopause-wellness",
+      "impressions": 2,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/calgary/stott-pilates",
+      "impressions": 1,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/cedar-rapids/mat-pilates-online",
+      "impressions": 1,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/columbus/musculoskeletal-physiotherapy",
+      "impressions": 1,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/eindhoven/menopause-wellness",
+      "impressions": 1,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/eugene/pelvic-floor-rehabilitation",
+      "impressions": 1,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/naples/menopause-wellness",
+      "impressions": 1,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/newport-news/mat-pilates-online",
+      "impressions": 1,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/pearland/ivf-fertility-treatments",
+      "impressions": 1,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/san-diego/stott-pilates",
+      "impressions": 1,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/san-mateo/pcos-hormonal-disorders",
+      "impressions": 1,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/sioux-falls/pregnancy-high-risk-obstetrics",
+      "impressions": 1,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/winnipeg/musculoskeletal-physiotherapy",
+      "impressions": 1,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/zurich/womens-wellness-programs",
+      "impressions": 1,
+      "clicks": 1
+    },
+    {
+      "path": "/online-consultation/adelaide/womens-wellness-programs",
+      "impressions": 25,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/christchurch/pelvic-floor-rehabilitation",
+      "impressions": 22,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/cork/menopause-wellness",
+      "impressions": 22,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/columbus/menopause-wellness",
+      "impressions": 21,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/leeds/pelvic-floor-rehabilitation",
+      "impressions": 20,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/edinburgh/menopause-wellness",
+      "impressions": 18,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/london/antenatal-postnatal-care",
+      "impressions": 18,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/perth/musculoskeletal-physiotherapy",
+      "impressions": 18,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/brisbane/pcos-hormonal-disorders",
+      "impressions": 16,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/canberra/musculoskeletal-physiotherapy",
+      "impressions": 16,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/singapore/ivf-fertility-treatments",
+      "impressions": 16,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/srinagar/mat-pilates-online",
+      "impressions": 16,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/al-rayyan/pelvic-floor-rehabilitation",
+      "impressions": 15,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/calgary/gynecological-care",
+      "impressions": 15,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/manchester-gb/menopause-wellness",
+      "impressions": 15,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/melbourne/laparoscopic-surgery",
+      "impressions": 15,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/new-york-city/gynecological-care",
+      "impressions": 15,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/ottawa/pelvic-floor-rehabilitation",
+      "impressions": 15,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/abu-dhabi/musculoskeletal-physiotherapy",
+      "impressions": 14,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/dublin/musculoskeletal-physiotherapy",
+      "impressions": 14,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/sydney/pelvic-floor-rehabilitation",
+      "impressions": 14,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/chandigarh/gynecological-care",
+      "impressions": 13,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/birmingham-gb/musculoskeletal-physiotherapy",
+      "impressions": 12,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/canberra/womens-wellness-programs",
+      "impressions": 12,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/albany-ny/pelvic-floor-rehabilitation",
+      "impressions": 11,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/cardiff/menopause-wellness",
+      "impressions": 11,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/kuwait-city/pelvic-floor-rehabilitation",
+      "impressions": 11,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/leicester/pregnancy-high-risk-obstetrics",
+      "impressions": 11,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/melbourne/ivf-fertility-treatments",
+      "impressions": 11,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/singapore/pregnancy-high-risk-obstetrics",
+      "impressions": 11,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/wellington/menopause-wellness",
+      "impressions": 11,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/gold-coast/pelvic-floor-rehabilitation",
+      "impressions": 10,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/miami/pelvic-floor-rehabilitation",
+      "impressions": 10,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/sheffield/musculoskeletal-physiotherapy",
+      "impressions": 10,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/the-hague/menopause-wellness",
+      "impressions": 10,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/albuquerque/menopause-wellness",
+      "impressions": 9,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/annapolis-md/pelvic-floor-rehabilitation",
+      "impressions": 9,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/atlanta/menopause-wellness",
+      "impressions": 9,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/barcelona/pcos-hormonal-disorders",
+      "impressions": 9,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/dallas/gynecological-care",
+      "impressions": 9,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/doha/menopause-wellness",
+      "impressions": 9,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/fort-collins/pelvic-floor-rehabilitation",
+      "impressions": 9,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/glasgow/gynecological-care",
+      "impressions": 9,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/sydney/laparoscopic-surgery",
+      "impressions": 9,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/adelaide/menopause-wellness",
+      "impressions": 8,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/buffalo/pelvic-floor-rehabilitation",
+      "impressions": 8,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/reno/gynecological-care",
+      "impressions": 8,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/san-diego/pregnancy-high-risk-obstetrics",
+      "impressions": 8,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/bismarck-nd/pcos-hormonal-disorders",
+      "impressions": 7,
+      "clicks": 0
+    },
+    {
+      "path": "/online-consultation/canberra/menopause-wellness",
+      "impressions": 7,
+      "clicks": 0
+    }
+  ]
+}

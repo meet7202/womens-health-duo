@@ -4,10 +4,19 @@ import { bookConsultationPath } from "../../lib/bookingIntent";
 import { SEO_ONLINE_SERVICES } from "../seoOnlineServices";
 import { CALENDAR_ARTICLE_BY_SLUG, publishedArticleForSlug } from "./articles";
 import { buildTopicGuideFaqs, clusterConfig } from "./clusterContent";
-import { guideUniquenessOverrideForSlug } from "./guideUniquenessOverrides";
+import {
+  guideSearchSnippetOverrideForSlug,
+  guideUniquenessOverrideForSlug,
+} from "./guideUniquenessOverrides";
 import { isTopicGuideIndexable } from "./topicGuideSitemapPaths";
+import {
+  GUIDE_SET_APPROVED_SLUGS,
+  GUIDE_SET_REVIEWED_ON,
+  GUIDE_SET_REVIEWERS,
+} from "./clinicalApproval2026-11-20";
 import { TOPIC_GUIDE_ROWS } from "./topicGuideRows";
 import type {
+  TopicGuideAuthorId,
   TopicGuideClusterId,
   TopicGuidePageModel,
   TopicGuideReviewHoldStatus,
@@ -27,13 +36,29 @@ export const TOPIC_GUIDE_REVIEW_HOLDS: ReadonlyMap<string, TopicGuideReviewHoldS
 /**
  * Resolve editorial gate for one guide.
  * Precedence: `TOPIC_GUIDE_REVIEW_HOLDS` → explicit row `reviewStatus` → default `pending`.
- * Never invent `approved` (or review dates / author stamps) without per-row confirmation.
+ * The 20 November 2026 set in `clinicalApproval2026-11-20.ts` is applied in `buildGuideModel`.
+ * A new slug stays pending until it is added to that list.
  */
 export function resolveTopicGuideReviewStatus(row: TopicGuideRow): TopicGuideReviewStatus {
   const hold = TOPIC_GUIDE_REVIEW_HOLDS.get(row.slug);
   if (hold) return hold;
   if (row.reviewStatus) return row.reviewStatus;
   return "pending";
+}
+
+/** Keep any recorded order, then add the topic lead, then both approving doctors. */
+function reviewersForApprovedGuide(
+  existing: readonly TopicGuideAuthorId[],
+  lead: "charmi" | "zalak" | "both",
+): TopicGuideAuthorId[] {
+  const ordered: TopicGuideAuthorId[] = [];
+  const push = (id: TopicGuideAuthorId) => {
+    if (!ordered.includes(id)) ordered.push(id);
+  };
+  for (const id of existing) push(id);
+  if (lead === "charmi" || lead === "zalak") push(lead);
+  for (const id of GUIDE_SET_REVIEWERS) push(id);
+  return ordered;
 }
 const QUESTION_FIRST = new Set([
   "what",
@@ -94,6 +119,7 @@ function capitalizeWord(w: string): string {
   if (low === "pmdd") return "PMDD";
   if (low === "c-section") return "C-section";
   if (low === "stott") return "STOTT";
+  if (low === "womens") return "Women's";
   return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
 }
 function polishGuideTitle(joined: string): string {
@@ -211,7 +237,7 @@ const CLUSTER_HUB_SLUG: Record<TopicGuideClusterId, string> = {
   postpartum: "postpartum-recovery",
   pelvic: "pelvic-floor-therapy",
   physio: "womens-health-physiotherapy",
-  pilates: "prenatal-pilates",
+  pilates: "what-is-pilates",
   "gyn-general": "online-gynecologist",
   "online-gyne": "online-gynecologist",
 };
@@ -332,7 +358,7 @@ function sectionsWithUniquenessScaffold(
         `${title.replace(/\?+$/, "")} is a topic patients ask about at Women's Health Duo. ${opts.metaBlurb}`;
       followOn =
         followOn ??
-        `${opts.metaBlurb} Discuss next steps with ${doctorAttribution(opts.consult)} — this page prepares questions; it does not replace individualized care.`;
+        `${opts.metaBlurb} Discuss next steps with ${doctorAttribution(opts.consult)}. This page helps you prepare questions; it does not replace individual care.`;
       firstHeading = firstHeading ?? primaryQuestion;
     }
   }
@@ -389,16 +415,30 @@ function buildGuideModel(row: TopicGuideRow): TopicGuidePageModel {
     published?.faqs ?? buildTopicGuideFaqs(row.slug, title, consult, cc.faqPool, row.faqIds);
   const path = publicPathname(`/${row.slug}`);
   const relatedSlugs = computeRelated(row, BY_CLUSTER);
-  const reviewerIds = published?.reviewerIds?.length ? published.reviewerIds : undefined;
   const hold = TOPIC_GUIDE_REVIEW_HOLDS.get(row.slug);
-  const reviewStatus = hold ?? (reviewerIds ? "approved" : resolveTopicGuideReviewStatus(row));
+  const setApproved = !hold && GUIDE_SET_APPROVED_SLUGS.has(row.slug);
+  const recordedReviewers = [
+    ...(published?.reviewerIds ?? []),
+    ...(published?.reviewerId ? [published.reviewerId] : []),
+    ...(row.reviewerId ? [row.reviewerId] : []),
+  ];
+  const reviewerIds = setApproved
+    ? reviewersForApprovedGuide(recordedReviewers, consult)
+    : published?.reviewerIds?.length
+      ? [...published.reviewerIds]
+      : undefined;
+  const reviewStatus =
+    hold ?? (setApproved || reviewerIds?.length ? "approved" : resolveTopicGuideReviewStatus(row));
+  const reviewedAt = setApproved ? GUIDE_SET_REVIEWED_ON : undefined;
 
   // Unique calendar body when publicationStatus is published.
   // Drafts keep the live cluster/uniqueness scaffold.
   const sections = published?.sections?.length ? published.sections : uniqueness.sections;
   const primaryQuestion = published?.primaryQuestion ?? uniqueness.primaryQuestion;
   const directAnswer = published?.directAnswer ?? uniqueness.directAnswer;
-  const metaDescription = published?.description ?? buildMetaDescription(title, cc.metaBlurb);
+  const snippet = guideSearchSnippetOverrideForSlug(row.slug);
+  const metaDescription =
+    published?.description ?? snippet?.metaDescription ?? buildMetaDescription(title, cc.metaBlurb);
   const introParagraph = published
     ? published.directAnswer
     : buildTopicGuideIntroParagraph(title, cc.metaBlurb);
@@ -410,7 +450,7 @@ function buildGuideModel(row: TopicGuideRow): TopicGuidePageModel {
     tier: row.tier,
     cluster: row.cluster,
     title,
-    seoTitle: published?.seoTitle,
+    seoTitle: published?.seoTitle ?? snippet?.seoTitle,
     introParagraph,
     metaDescription,
     sections,
@@ -422,6 +462,7 @@ function buildGuideModel(row: TopicGuideRow): TopicGuidePageModel {
     authorId: published?.authorId ?? row.authorId,
     reviewerId: published?.reviewerId ?? row.reviewerId,
     reviewerIds,
+    reviewedAt,
     publishedAt: published?.publishedAt ?? row.publishedAt,
     reviewStatus,
     references,

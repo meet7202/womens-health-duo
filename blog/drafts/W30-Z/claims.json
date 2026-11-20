@@ -1,0 +1,22 @@
+{
+  "id": "W30-Z",
+  "openClinicalQuestions": [
+    "Confirm which pelvic-pain presentations WHD physiotherapy will not see before a medical review."
+  ],
+  "claimLedger": [
+    {
+      "claim": "Sudden severe pelvic pain needs emergency help. Recurring pain needs a GP.",
+      "sourceUrl": "https://www.nhs.uk/conditions/pelvic-pain/",
+      "sourceSection": "NHS · Pelvic pain · fetched 2026",
+      "limitations": "UK triage page; local emergency numbers differ.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Endometriosis can cause painful periods and pain with sex or opening the bowels.",
+      "sourceUrl": "https://www.nhs.uk/conditions/endometriosis/",
+      "sourceSection": "NHS · Endometriosis · fetched 2026",
+      "limitations": "One cause among many.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

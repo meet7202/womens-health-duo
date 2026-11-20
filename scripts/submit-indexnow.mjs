@@ -80,7 +80,7 @@ function printHelp() {
   console.log(`Usage: node scripts/submit-indexnow.mjs [options]
 
 Options:
-  --feed=primary|virtual|video|all   Sitemap feed(s) to submit (default: all)
+  --feed=primary|video|all           Sitemap feed(s) to submit (default: all)
   --batch-size=N                   URLs per IndexNow request (max 10000, default 10000)
   --changed-only                   Submit only added/updated URLs vs baseline manifest (SEO-40)
   --urls=URL[,URL...]              Submit exact absolute URL(s) (skips sitemap feed selection)

@@ -4,12 +4,12 @@
   "seoTitle": "After a positive pregnancy test: next steps",
   "description": "Arrange maternity contact, review medicines without stopping them alone, confirm pregnancy vitamins, and know which pain or bleeding needs emergency care.",
   "primaryQuestion": "What should I do after a positive pregnancy test?",
-  "directAnswer": "After a positive home test, contact a local obstetric or maternity service promptly to begin antenatal care planning. If you take regular medicines or live with a long-term condition, speak to a doctor soon—UK NHS guidance says not to stop prescribed medicine until you have talked with a GP or specialist. Confirm folic acid and other pregnancy vitamins with a clinician; detail sits in our folic acid before pregnancy guide. Note the first day of your last period if you know it. Severe pain, heavy bleeding or fainting needs emergency care now.",
+  "directAnswer": "After a positive home test, contact a local obstetric or maternity service promptly to begin antenatal care planning. If you take regular medicines or live with a long-term condition, speak to a doctor soon. UK NHS guidance says not to stop prescribed medicine until you have talked with a GP or specialist. Confirm folic acid and other pregnancy vitamins with a clinician; detail sits in our folic acid before pregnancy guide. Note the first day of your last period if you know it. Severe pain, heavy bleeding or fainting needs emergency care now.",
   "sections": [
     {
       "heading": "Arrange care and everyday health steps",
       "paragraphs": [
-        "UK NHS advice is to tell maternity services as soon as you know you are pregnant so care and information can start. In India, use your local obstetrician, hospital antenatal clinic or the clinician who already knows your history—appointment timing and booking rules differ by city and facility, so treat NHS self-referral logistics as UK-specific.",
+        "UK NHS advice is to tell maternity services as soon as you know you are pregnant so care and information can start. In India, use your local obstetrician, hospital antenatal clinic or the clinician who already knows your history. Appointment timing and booking rules differ by city and facility, so treat NHS self-referral logistics as UK-specific.",
         "NHS pages also list stopping smoking, avoiding alcohol, and taking recommended pregnancy vitamins such as folic acid. Our preconception planning guide covers the broader checklist if vaccines and chronic-condition reviews are still open; start what you can now rather than waiting for a perfect plan.",
         "A home test detects pregnancy hormone in urine. It does not confirm where the pregnancy is growing or whether later bleeding will be harmless."
       ]
@@ -25,16 +25,16 @@
     {
       "heading": "What the first pregnancy visit usually covers",
       "paragraphs": [
-        "Expect history-taking, blood pressure, basic examination planning, discussion of blood tests and screening that fit local practice, and an estimated due date based on your dates—later refined by ultrasound when arranged. Schedules for dating scans are set by your clinicians; copying a UK week-number chart onto an Indian clinic diary can create false deadlines.",
+        "Expect history-taking, blood pressure, basic examination planning, discussion of blood tests and screening that fit local practice, and an estimated due date based on your dates, later refined by ultrasound when arranged. Schedules for dating scans are set by your clinicians; copying a UK week-number chart onto an Indian clinic diary can create false deadlines.",
         "Ask who to call for non-urgent worries between visits, and which symptoms should bypass that route. Keep contact numbers for your clinic and local emergency services saved offline."
       ]
     },
     {
       "heading": "Symptoms that need urgent or emergency care",
       "paragraphs": [
-        "RCOG patient information on ectopic pregnancy advises seeking medical help immediately if you have concerning symptoms and have had sex in recent months—even if you do not think you could be pregnant, and even before a home test is positive. NHS ectopic guidance likewise says to seek advice if you might be pregnant with symptom combinations, including without a positive test.",
+        "RCOG patient information on ectopic pregnancy advises seeking medical help immediately if you have concerning symptoms and have had sex in recent months, even if you do not think you could be pregnant, and even before a home test is positive. NHS ectopic guidance likewise says to seek advice if you might be pregnant with symptom combinations, including without a positive test.",
         "Call emergency services in India on 112, or go to hospital emergency care, for severe tummy pain, pain in the tip of the shoulder, heavy bleeding that soaks a pad soon after putting it on, fainting, or feeling very dizzy and pale. Do not wait for a scheduled scan slot or a routine consult reply.",
-        "Lighter spotting without severe pain still deserves prompt maternity or early-pregnancy advice—our bleeding in early pregnancy guide explains triage in more depth—but collapse-level symptoms are an emergency now."
+        "Lighter spotting without severe pain still deserves prompt maternity or early-pregnancy advice, and our bleeding in early pregnancy guide explains triage in more depth. Collapse-level symptoms are an emergency now."
       ]
     }
   ],
@@ -50,15 +50,15 @@
   ],
   "references": [
     {
-      "label": "NHS — What to do when you find out you're pregnant",
+      "label": "NHS: What to do when you find out you're pregnant",
       "url": "https://www.nhs.uk/pregnancy/finding-out/what-to-do-when-you-find-out-you-are-pregnant/"
     },
     {
-      "label": "NHS — Ectopic pregnancy overview",
+      "label": "NHS: Ectopic pregnancy overview",
       "url": "https://www.nhs.uk/conditions/ectopic-pregnancy/"
     },
     {
-      "label": "RCOG — Ectopic pregnancy patient information",
+      "label": "RCOG: Ectopic pregnancy patient information",
       "url": "https://www.rcog.org.uk/for-the-public/browse-our-patient-information/ectopic-pregnancy/"
     }
   ],

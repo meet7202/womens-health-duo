@@ -1,0 +1,22 @@
+{
+  "id": "W28-C",
+  "openClinicalQuestions": [
+    "Which baseline blood tests does WHD actually draw before labelling a cycle problem?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Unpredictable cycles are a reason to seek clinical advice, especially when trying to conceive.",
+      "sourceUrl": "https://www.nhs.uk/conditions/irregular-periods/",
+      "sourceSection": "NHS · Irregular periods · fetched 2026",
+      "limitations": "UK self-care page; does not list every endocrine diagnosis.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Period problems have many causes, including hormones, weight, stress, exercise and medical conditions.",
+      "sourceUrl": "https://www.nichd.nih.gov/health/topics/menstruation/conditioninfo/causes",
+      "sourceSection": "NICHD · What causes menstruation problems? · fetched 2026",
+      "limitations": "US overview; not a testing protocol.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

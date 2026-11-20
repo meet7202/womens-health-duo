@@ -40,33 +40,97 @@ function shellPathForPathname(pathname) {
 function main() {
   const meta = JSON.parse(readDist(".sitemap-build-meta.json"));
   const primaryXml = readDist("sitemap.xml");
-  const virtualXml = readDist("sitemap-virtual-service-cities.xml");
   const videoXml = readDist("sitemap-videos.xml");
   const robots = readDist("robots.txt");
 
   const errors = [];
 
   const primaryLocs = extractLocs(primaryXml);
-  const virtualLocs = extractLocs(virtualXml);
   const videoLocs = extractLocs(videoXml);
 
   if (primaryLocs.length !== meta.primaryUrlCount) {
     errors.push(`sitemap.xml has ${primaryLocs.length} URLs, expected ${meta.primaryUrlCount}`);
   }
-  if (virtualLocs.length !== meta.virtualServiceCityUrlCount) {
-    errors.push(
-      `sitemap-virtual-service-cities.xml has ${virtualLocs.length} URLs, expected ${meta.virtualServiceCityUrlCount}`,
-    );
-  }
   if (videoLocs.length !== meta.videoUrlCount) {
     errors.push(`sitemap-videos.xml has ${videoLocs.length} URLs, expected ${meta.videoUrlCount}`);
   }
 
-  const primarySet = new Set(primaryLocs);
-  const overlap = virtualLocs.filter((loc) => primarySet.has(loc));
-  if (overlap.length > 0) {
+  const imageXml = existsSync(join(DIST, "sitemap-images.xml"))
+    ? readDist("sitemap-images.xml")
+    : "";
+  const imagePages = imageXml ? extractLocs(imageXml) : [];
+  const imageCount = (imageXml.match(/<image:loc>/g) ?? []).length;
+  if (!imageXml) errors.push("sitemap-images.xml is missing");
+  if (!robots.includes("sitemap-images.xml")) {
+    errors.push("robots.txt must list sitemap-images.xml");
+  }
+  if (imageCount < 50) {
+    errors.push(`sitemap-images.xml lists ${imageCount} photos, expected the content set`);
+  }
+  for (const needle of [
+    "/images/classes/",
+    "/images/articles/",
+    "/images/hub-thumbs/",
+    "hero-doctors",
+    "dr-zalak",
+    "dr-charmi",
+  ]) {
+    if (imageXml && !imageXml.includes(needle)) {
+      errors.push(`sitemap-images.xml is missing ${needle}`);
+    }
+  }
+  if (existsSync(join(DIST, "sitemap-virtual-service-cities.xml"))) {
     errors.push(
-      `${overlap.length} URL(s) appear in both primary and virtual-service-cities sitemaps`,
+      "sitemap-virtual-service-cities.xml must not be emitted (the matrix is in sitemap.xml)",
+    );
+  }
+  if (robots.includes("sitemap-virtual-service-cities.xml")) {
+    errors.push("robots.txt must not list sitemap-virtual-service-cities.xml");
+  }
+
+  const matrixLoc = /\/online-consultation\/(?!country\/)[^/]+\/[^/]+\/?$/;
+  const matrixInPrimary = primaryLocs.filter((loc) => matrixLoc.test(loc));
+  const matrixExpected = meta.virtualServiceCityCount ?? 0;
+  if ((meta.noindexVirtualServiceCityCount ?? 0) !== 0) {
+    errors.push(
+      `service×city pages must all be indexable; noindex count is ${meta.noindexVirtualServiceCityCount}`,
+    );
+  }
+  if (matrixInPrimary.length !== matrixExpected) {
+    errors.push(
+      `sitemap.xml lists ${matrixInPrimary.length} service×city URLs, expected ${matrixExpected}`,
+    );
+  }
+  let matrixProblems = 0;
+  for (const loc of matrixInPrimary) {
+    const pathname = new URL(loc).pathname.replace(/\/+$/, "");
+    const shell = shellPathForPathname(`${pathname}/`);
+    if (!existsSync(shell)) {
+      matrixProblems += 1;
+      if (matrixProblems <= 3)
+        errors.push(`missing static shell for service×city page ${pathname}`);
+      continue;
+    }
+    const html = readFileSync(shell, "utf8");
+    const robotsOk = /<meta\s+name="robots"\s+content="index, follow/.test(html);
+    const prerendered = html.includes("data-seo-prerender");
+    if (!robotsOk || !prerendered) {
+      matrixProblems += 1;
+      if (matrixProblems <= 3) {
+        errors.push(
+          `service×city page ${pathname}: ${robotsOk ? "" : "not index, follow "}${prerendered ? "" : "not prerendered"}`.trim(),
+        );
+      }
+    }
+  }
+  if (matrixProblems > 3) {
+    errors.push(`… and ${matrixProblems - 3} more service×city shell problems`);
+  }
+
+  const imageMatrix = imagePages.filter((loc) => matrixLoc.test(loc));
+  if (imageMatrix.length > 0 && imageMatrix.length < matrixExpected) {
+    errors.push(
+      `sitemap-images.xml lists ${imageMatrix.length} service×city pages, expected ${matrixExpected}`,
     );
   }
 
@@ -81,11 +145,7 @@ function main() {
     }
   }
 
-  for (const line of [
-    `${meta.siteUrl}/sitemap.xml`,
-    `${meta.siteUrl}/sitemap-virtual-service-cities.xml`,
-    `${meta.siteUrl}/sitemap-videos.xml`,
-  ]) {
+  for (const line of [`${meta.siteUrl}/sitemap.xml`, `${meta.siteUrl}/sitemap-videos.xml`]) {
     if (!robots.includes(line)) {
       errors.push(`robots.txt missing Sitemap: ${line}`);
     }
@@ -95,10 +155,7 @@ function main() {
   // and must not be required to equal the build clock (build-day stamps are not content dates).
   const today = new Date().toISOString().slice(0, 10);
   const isoDay = /^\d{4}-\d{2}-\d{2}$/;
-  for (const [label, xml] of [
-    ["sitemap.xml", primaryXml],
-    ["sitemap-virtual-service-cities.xml", virtualXml],
-  ]) {
+  for (const [label, xml] of [["sitemap.xml", primaryXml]]) {
     for (const d of extractLastmods(xml)) {
       if (!isoDay.test(d)) {
         errors.push(`${label}: invalid <lastmod> ${d}`);
@@ -139,7 +196,7 @@ function main() {
 
   if (errors.length === 0) {
     console.log(
-      `audit-seo-sitemap: OK (lastmodStrategy ${meta.lastmodStrategy ?? "unknown"}; primary ${primaryLocs.length}, virtual ${virtualLocs.length}, video ${videoLocs.length})`,
+      `audit-seo-sitemap: OK (lastmodStrategy ${meta.lastmodStrategy ?? "unknown"}; primary ${primaryLocs.length}, video ${videoLocs.length}, images ${imageCount} on ${imagePages.length} pages; ${matrixInPrimary.length} service×city pages indexable)`,
     );
     return;
   }

@@ -5,7 +5,7 @@ import { ZALAK_GROUP_CLASS_CONTENT } from "@/data/zalakGroupClasses";
 
 /**
  * Nested `/dr-zalak-shah/*-classes/` aliases redirect to short canonical class URLs.
- * Unknown class slugs are true not-found (SEO-33/F) — do not canonicalize to the doctor profile.
+ * Unknown class slugs are true not-found (SEO-33/F); do not canonicalize to the doctor profile.
  * Edge 301/308 remains the preferred permanent redirect (see `docs/seo-cloudflare-redirects.md`).
  */
 export function ZalakGroupClassPage() {

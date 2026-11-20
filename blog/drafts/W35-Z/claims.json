@@ -1,0 +1,29 @@
+{
+  "id": "W35-Z",
+  "openClinicalQuestions": [
+    "Confirm with Dr. Zalak which WHD sessions are mat, reformer, classical, or specifically STOTT."
+  ],
+  "claimLedger": [
+    {
+      "claim": "Names Joseph Hubertus Pilates, birth on 9 December 1883 in Mönchengladbach, Contrology, the late-1920s US introduction, Your Health (1934), Return to Life Through Contrology (1945), death in October 1967, and apparatus including the Universal Reformer, Trapeze Table, Wunda Chair, Magic Circle, Spine Corrector and Ladder Barrel. Also records the 2000 ruling that Pilates is a generic exercise name.",
+      "sourceUrl": "https://www.pilatesmethodalliance.org/pilates-history",
+      "sourceSection": "Pilates Method Alliance · History of Pilates · fetched 2026",
+      "limitations": "Professional-association history. It includes his reputation with dancers and later promotional language about wellbeing. Those are not used here as clinical outcome evidence.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Describes Pilates as exercise for balance, posture, strength and flexibility, with advice to seek clinical guidance in pregnancy, after birth, with injury, or if unsure, and to stop if pain or illness starts.",
+      "sourceUrl": "https://www.nhs.uk/live-well/exercise/pilates-and-yoga/pilates-for-beginners/",
+      "sourceSection": "NHS · Pilates video for beginners · fetched 2026",
+      "limitations": "Fitness video page, not a trial of outcomes or of any branded method.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Use pilates as a named flexibility activity, and keep the two-day muscle-strengthening guidance separate from a class prescription.",
+      "sourceUrl": "https://www.nhs.uk/live-well/exercise/how-to-improve-strength-flexibility/",
+      "sourceSection": "NHS · How to improve your strength and flexibility · fetched 2026",
+      "limitations": "Lists pilates as one flexibility example. The two-day strength pattern is for muscle-strengthening activity in general.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

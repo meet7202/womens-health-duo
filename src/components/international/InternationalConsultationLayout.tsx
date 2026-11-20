@@ -1,4 +1,11 @@
 import { CalendarCheck, Globe, MessageCircle, Video } from "lucide-react";
+import { PRACTICE_HOURS_LINE } from "@/config/practiceLocations";
+import {
+  OVERSEAS_FEES,
+  OVERSEAS_HOURS,
+  OVERSEAS_SPEED,
+  QUICK_ACCESS_INTERNATIONAL_SERVICES,
+} from "@/data/internationalServices/quickAccessServices";
 import { Button } from "@/components/ui/button";
 import { ROUTES } from "@/config/routes";
 import { TrackedWhatsAppLink } from "@/components/cta/TrackedWhatsAppLink";
@@ -12,22 +19,22 @@ const HOW_IT_WORKS_STEPS = [
   {
     icon: MessageCircle,
     title: "Message on WhatsApp",
-    body: "Share your country, time zone, and main concern — or use Book consultation for structured intake and telemedicine consent.",
+    body: "Share your country, time zone, and main concern. You can also use Book consultation for structured intake and telemedicine consent.",
   },
   {
     icon: CalendarCheck,
     title: "Send records in chat",
-    body: "Attach labs, ultrasound summaries, or prior notes when we ask. No file upload on the website — share in WhatsApp.",
+    body: "Attach labs, ultrasound summaries, or prior notes when we ask. The website has no file upload, so please share them on WhatsApp.",
   },
   {
     icon: Video,
     title: "Video consult",
-    body: "Meet at a scheduled time by secure video. Prescriptions and next steps follow India telemedicine guidelines where applicable.",
+    body: `Meet by video, usually within 1 to 2 days, and the same day when a slot is open. Hours are ${PRACTICE_HOURS_LINE}, and the time can move to your time zone. Prescriptions follow India's telemedicine guidelines and the law where you live.`,
   },
   {
     icon: Globe,
     title: "Follow-up worldwide",
-    body: "Progress checks and exercise cues can continue on WhatsApp across time zones — always with local emergency care for urgent symptoms.",
+    body: "Progress checks and exercise cues can continue on WhatsApp across time zones. For urgent symptoms, always use local emergency care.",
   },
 ] as const;
 
@@ -132,6 +139,33 @@ export function HowItWorksSection() {
           </li>
         ))}
       </ol>
+    </section>
+  );
+}
+
+export function CannotGetSeenLocally({ headingId }: { headingId: string }) {
+  return (
+    <section className="mb-10" aria-labelledby={headingId}>
+      <h2 id={headingId} className="font-heading text-2xl font-semibold text-foreground mb-3">
+        Cannot get seen locally?
+      </h2>
+      <p className="text-muted-foreground leading-relaxed mb-3">
+        If a women's health physiotherapist, an antenatal class, or a second OB-GYN opinion is hard
+        to find where you live, start with one of these video visits. {OVERSEAS_SPEED}{" "}
+        {OVERSEAS_HOURS} {OVERSEAS_FEES}
+      </p>
+      <ul className="grid gap-2 sm:grid-cols-2">
+        {QUICK_ACCESS_INTERNATIONAL_SERVICES.map((service) => (
+          <li key={service.slug}>
+            <Link
+              to={internationalServicePath(service.slug)}
+              className="block rounded-xl border border-border/60 bg-card p-4 text-sm font-medium text-foreground hover:border-primary/40 hover:bg-primary/5 transition-colors"
+            >
+              {service.shortTitle}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }

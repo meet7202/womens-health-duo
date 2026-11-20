@@ -100,11 +100,7 @@ export const LEARN_PILLAR_CLUSTERS: readonly LearnPillarCluster[] = [
       "Hot flashes under 45: red flags vs perimenopause",
       "Post-pill cycle changes: what usually normalizes first",
     ],
-    suggestedArticleSlugs: [
-      "/hormonal-imbalance",
-      "/what-is-hormonal-imbalance",
-      "/signs-of-hormonal-imbalance",
-    ],
+    suggestedArticleSlugs: ["/hormonal-imbalance", "/what-is-hormonal-imbalance"],
     primaryDoctorProfile: ROUTES.drCharmi,
   },
   {
@@ -159,8 +155,8 @@ export const LEARN_PILLAR_CLUSTERS: readonly LearnPillarCluster[] = [
     ],
     suggestedArticleSlugs: [
       "/fertility",
-      "/trying-to-conceive",
       "/pregnancy-planning",
+      "/what-is-preconception-planning",
       "/what-is-ivf",
     ],
     primaryDoctorProfile: ROUTES.drCharmi,
@@ -190,7 +186,7 @@ export const LEARN_PILLAR_CLUSTERS: readonly LearnPillarCluster[] = [
     ],
     suggestedArticleSlugs: [
       "/common-pregnancy-discomforts",
-      "/exercises-for-pregnancy",
+      "/pregnancy-exercises-by-trimester",
       "/how-to-relieve-back-pain-during-pregnancy",
       "/how-to-recover-after-c-section",
       "/postpartum-recovery",
@@ -224,7 +220,7 @@ export const LEARN_PILLAR_CLUSTERS: readonly LearnPillarCluster[] = [
       "/pcos",
       "/what-is-pcos",
       "/symptoms-of-pcos",
-      "/can-pcos-affect-fertility",
+      "/can-i-get-pregnant-with-pcos",
     ],
     primaryDoctorProfile: ROUTES.drCharmi,
   },
@@ -248,8 +244,9 @@ export const LEARN_PILLAR_CLUSTERS: readonly LearnPillarCluster[] = [
       "Reformer footwork: pelvic floor breath coordination",
     ],
     suggestedArticleSlugs: [
-      "/prenatal-pilates",
-      "/postnatal-pilates",
+      "/what-is-pilates",
+      "/is-pilates-safe-during-pregnancy",
+      "/pilates-after-pregnancy",
       "/what-is-stott-pilates",
       "/womens-health-physiotherapy",
     ],

@@ -25,29 +25,90 @@ export const TOPIC_GUIDE_ROWS: TopicGuideRow[] = [
       ["heavy-periods", "periods"],
       ["hormonal-imbalance", "hormones"],
       ["fertility", "fertility"],
-      ["trying-to-conceive", "fertility"],
       ["pregnancy-planning", "fertility"],
-      ["ivf", "fertility"],
       ["prenatal-physiotherapy", "pregnancy-physio"],
       ["postpartum-recovery", "postpartum"],
       ["pelvic-floor-therapy", "pelvic"],
       ["womens-health-physiotherapy", "physio"],
       ["bladder-leakage", "pelvic"],
       ["diastasis-recti", "postpartum"],
-      ["back-pain-in-pregnancy", "pregnancy-physio"],
-      ["pelvic-pain-in-pregnancy", "pregnancy-physio"],
-      ["prenatal-pilates", "pilates"],
-      ["postnatal-pilates", "pilates"],
       ["online-gynecologist", "online-gyne"],
     ],
     {
-      "womens-health-physiotherapy": { primaryConsult: "both" },
+      "womens-health-physiotherapy": {
+        primaryConsult: "both",
+        related: [
+          "what-is-womens-health-physiotherapy",
+          "online-womens-health-physiotherapy",
+          "what-happens-during-a-physiotherapy-session",
+        ],
+      },
+      "prenatal-physiotherapy": {
+        related: [
+          "what-is-prenatal-physiotherapy",
+          "is-exercise-safe-during-pregnancy",
+          "pregnancy-exercises-by-trimester",
+          "is-pilates-safe-during-pregnancy",
+        ],
+      },
+      "postpartum-recovery": {
+        related: [
+          "how-long-does-postpartum-recovery-take",
+          "how-to-recover-after-c-section",
+          "when-can-i-exercise-after-delivery",
+          "postpartum-back-pain",
+        ],
+      },
+      "pelvic-floor-therapy": {
+        related: [
+          "what-is-the-pelvic-floor",
+          "what-is-pelvic-floor-dysfunction",
+          "are-kegels-right-for-everyone",
+          "pelvic-organ-prolapse",
+        ],
+      },
+      "bladder-leakage": {
+        related: [
+          "why-do-i-leak-urine-when-i-cough",
+          "why-am-i-leaking-urine-after-childbirth",
+          "can-pelvic-floor-therapy-help-with-bladder-leakage",
+        ],
+      },
+      "diastasis-recti": {
+        title: "Diastasis Recti Physiotherapy",
+        related: [
+          "what-is-diastasis-recti",
+          "how-to-check-for-diastasis-recti",
+          "can-diastasis-recti-heal-naturally",
+          "how-to-rebuild-core-after-pregnancy",
+        ],
+      },
+      "online-gynecologist": {
+        related: [
+          "when-should-i-see-a-gynecologist",
+          "symptoms-women-should-never-ignore",
+          "positive-pregnancy-test-next-steps",
+        ],
+      },
+      "pregnancy-planning": {
+        related: [
+          "what-is-preconception-planning",
+          "folic-acid-before-pregnancy",
+          "how-to-track-ovulation",
+        ],
+      },
       // SEO-13: explicit cluster FAQ ids for hub guides (booking FAQs stay separate).
       pcos: {
+        related: [
+          "what-is-pcos",
+          "symptoms-of-pcos",
+          "how-to-manage-pcos-naturally",
+          "can-i-get-pregnant-with-pcos",
+          "pcos-insulin-resistance",
+        ],
         faqIds: [
           "what-is-pcos",
           "symptoms-of-pcos",
-          "can-pcos-affect-fertility",
           "how-to-manage-pcos-naturally",
           "can-i-get-pregnant-with-pcos",
           "pcos-tests",
@@ -55,31 +116,34 @@ export const TOPIC_GUIDE_ROWS: TopicGuideRow[] = [
         ],
       },
       fertility: {
-        faqIds: [
-          "when-to-see-a-fertility-specialist",
-          "how-to-track-ovulation",
+        related: [
           "what-is-ivf",
+          "iui-vs-ivf",
+          "how-to-track-ovulation",
           "what-is-preconception-planning",
-          "how-to-improve-fertility",
-          "how-to-improve-egg-quality",
-          "can-stress-affect-fertility",
+          "amh-test-fertility",
         ],
-      },
-      ivf: {
         faqIds: [
-          "what-is-ivf",
           "when-to-see-a-fertility-specialist",
-          "what-is-preconception-planning",
-          "how-to-improve-egg-quality",
-          "how-to-improve-fertility",
           "how-to-track-ovulation",
+          "what-is-ivf",
+          "what-is-preconception-planning",
+          "how-to-improve-fertility",
+          "how-to-improve-egg-quality",
           "can-stress-affect-fertility",
         ],
       },
       "hormonal-imbalance": {
-        faqIds: ["what-is-hormonal-imbalance", "signs-of-hormonal-imbalance"],
+        related: ["what-is-hormonal-imbalance"],
+        faqIds: ["what-is-hormonal-imbalance"],
       },
       "irregular-periods": {
+        related: [
+          "why-are-my-periods-irregular",
+          "what-is-pms",
+          "what-is-pmdd",
+          "late-period-negative-pregnancy-test",
+        ],
         faqIds: [
           "why-are-my-periods-irregular",
           "what-causes-heavy-periods",
@@ -89,6 +153,11 @@ export const TOPIC_GUIDE_ROWS: TopicGuideRow[] = [
         ],
       },
       "painful-periods": {
+        related: [
+          "why-are-my-periods-painful",
+          "what-causes-heavy-periods",
+          "endometriosis-symptoms-diagnosis",
+        ],
         faqIds: [
           "why-are-my-periods-painful",
           "what-causes-heavy-periods",
@@ -98,6 +167,7 @@ export const TOPIC_GUIDE_ROWS: TopicGuideRow[] = [
         ],
       },
       "heavy-periods": {
+        related: ["what-causes-heavy-periods", "why-are-my-periods-irregular", "what-is-pms"],
         faqIds: [
           "what-causes-heavy-periods",
           "why-are-my-periods-irregular",
@@ -113,10 +183,8 @@ export const TOPIC_GUIDE_ROWS: TopicGuideRow[] = [
     [
       ["what-is-pcos", "pcos"],
       ["symptoms-of-pcos", "pcos"],
-      ["can-pcos-affect-fertility", "pcos"],
       ["how-to-manage-pcos-naturally", "pcos"],
       ["what-is-hormonal-imbalance", "hormones"],
-      ["signs-of-hormonal-imbalance", "hormones"],
       ["why-are-my-periods-irregular", "periods"],
       ["why-are-my-periods-painful", "periods"],
       ["what-causes-heavy-periods", "periods"],
@@ -133,12 +201,18 @@ export const TOPIC_GUIDE_ROWS: TopicGuideRow[] = [
       ["can-stress-affect-fertility", "fertility"],
     ],
     {
+      "when-should-i-see-a-gynecologist": {
+        related: [
+          "symptoms-women-should-never-ignore",
+          "perimenopause-symptoms",
+          "menopause-hrt-questions",
+        ],
+      },
       // SEO-13: pin FAQ whose id matches the guide slug (booking FAQs remain separate).
       "what-is-pcos": {
         faqIds: [
           "what-is-pcos",
           "symptoms-of-pcos",
-          "can-pcos-affect-fertility",
           "how-to-manage-pcos-naturally",
           "can-i-get-pregnant-with-pcos",
           "pcos-tests",
@@ -149,21 +223,9 @@ export const TOPIC_GUIDE_ROWS: TopicGuideRow[] = [
         faqIds: [
           "symptoms-of-pcos",
           "what-is-pcos",
-          "can-pcos-affect-fertility",
           "how-to-manage-pcos-naturally",
           "pcos-tests",
           "can-i-get-pregnant-with-pcos",
-          "does-pcos-always-show-up-on-ultrasound",
-        ],
-      },
-      "can-pcos-affect-fertility": {
-        faqIds: [
-          "can-pcos-affect-fertility",
-          "can-i-get-pregnant-with-pcos",
-          "what-is-pcos",
-          "symptoms-of-pcos",
-          "how-to-manage-pcos-naturally",
-          "pcos-tests",
           "does-pcos-always-show-up-on-ultrasound",
         ],
       },
@@ -172,7 +234,6 @@ export const TOPIC_GUIDE_ROWS: TopicGuideRow[] = [
           "how-to-manage-pcos-naturally",
           "what-is-pcos",
           "symptoms-of-pcos",
-          "can-pcos-affect-fertility",
           "pcos-tests",
           "can-i-get-pregnant-with-pcos",
           "is-pcos-curable",
@@ -181,7 +242,6 @@ export const TOPIC_GUIDE_ROWS: TopicGuideRow[] = [
       "can-i-get-pregnant-with-pcos": {
         faqIds: [
           "can-i-get-pregnant-with-pcos",
-          "can-pcos-affect-fertility",
           "what-is-pcos",
           "symptoms-of-pcos",
           "how-to-manage-pcos-naturally",
@@ -266,11 +326,8 @@ export const TOPIC_GUIDE_ROWS: TopicGuideRow[] = [
           "how-to-improve-egg-quality",
         ],
       },
-      "signs-of-hormonal-imbalance": {
-        faqIds: ["signs-of-hormonal-imbalance", "what-is-hormonal-imbalance"],
-      },
       "what-is-hormonal-imbalance": {
-        faqIds: ["what-is-hormonal-imbalance", "signs-of-hormonal-imbalance"],
+        faqIds: ["what-is-hormonal-imbalance"],
       },
       "why-are-my-periods-irregular": {
         faqIds: [
@@ -308,14 +365,12 @@ export const TOPIC_GUIDE_ROWS: TopicGuideRow[] = [
     [
       ["what-is-prenatal-physiotherapy", "pregnancy-physio"],
       ["is-exercise-safe-during-pregnancy", "pregnancy-physio"],
-      ["exercises-for-pregnancy", "pregnancy-physio"],
       ["breathing-exercises-for-labour", "pregnancy-physio"],
       ["how-to-relieve-back-pain-during-pregnancy", "pregnancy-physio"],
       ["how-to-relieve-pelvic-pain-during-pregnancy", "pregnancy-physio"],
       ["is-pilates-safe-during-pregnancy", "pilates"],
       ["pregnancy-exercises-by-trimester", "pregnancy-physio"],
       ["common-pregnancy-discomforts", "pregnancy-physio"],
-      ["what-is-postpartum-recovery", "postpartum"],
       ["how-long-does-postpartum-recovery-take", "postpartum"],
       ["how-to-recover-after-c-section", "postpartum"],
       ["when-can-i-exercise-after-delivery", "postpartum"],
@@ -339,16 +394,11 @@ export const TOPIC_GUIDE_ROWS: TopicGuideRow[] = [
     [
       ["what-is-the-pelvic-floor", "pelvic"],
       ["what-is-pelvic-floor-dysfunction", "pelvic"],
-      ["weak-pelvic-floor", "pelvic"],
-      ["pelvic-floor-exercises", "pelvic"],
       ["why-do-i-leak-urine-when-i-cough", "pelvic"],
-      ["bladder-leakage-after-pregnancy", "pelvic"],
       ["frequent-urination-in-women", "pelvic"],
       ["pelvic-organ-prolapse", "pelvic"],
       ["pelvic-pain-in-women", "pelvic"],
-      ["painful-intercourse", "pelvic"],
       ["are-kegels-right-for-everyone", "pelvic"],
-      ["how-to-strengthen-pelvic-floor", "pelvic"],
       ["how-do-i-know-if-my-pelvic-floor-is-weak", "pelvic"],
       ["can-pelvic-floor-therapy-help-with-bladder-leakage", "pelvic"],
       ["can-pelvic-floor-therapy-help-with-painful-intercourse", "pelvic"],
@@ -361,43 +411,16 @@ export const TOPIC_GUIDE_ROWS: TopicGuideRow[] = [
   ),
   ...rows(5, [
     ["what-is-womens-health-physiotherapy", "physio"],
-    ["who-needs-womens-health-physiotherapy", "physio"],
     ["online-womens-health-physiotherapy", "physio"],
-    ["can-physiotherapy-help-with-back-pain", "physio"],
-    ["can-physiotherapy-help-with-pelvic-pain", "physio"],
-    ["can-physiotherapy-help-after-childbirth", "physio"],
-    ["can-physiotherapy-help-with-bladder-leakage", "physio"],
-    ["can-physiotherapy-improve-posture", "physio"],
-    ["can-physiotherapy-improve-core-strength", "physio"],
     ["what-happens-during-a-physiotherapy-session", "physio"],
   ]),
   ...rows(6, [
-    ["what-is-stott-pilates", "pilates"],
     ["what-is-pilates", "pilates"],
-    ["pilates-for-beginners", "pilates"],
-    ["pilates-for-pregnancy", "pilates"],
+    ["what-is-stott-pilates", "pilates"],
     ["pilates-after-pregnancy", "pilates"],
-    ["can-pilates-help-with-back-pain", "pilates"],
-    ["can-pilates-improve-posture", "pilates"],
-    ["can-pilates-strengthen-the-core", "pilates"],
     ["is-online-pilates-effective", "pilates"],
-    ["how-often-should-i-do-pilates", "pilates"],
   ]),
-  ...rows(
-    7,
-    [
-      ["symptoms-women-should-never-ignore", "gyn-general"],
-      ["how-do-hormones-affect-womens-health", "gyn-general"],
-      ["how-does-stress-affect-womens-health", "gyn-general"],
-      ["how-does-sleep-affect-hormones", "gyn-general"],
-      ["how-does-exercise-improve-womens-health", "gyn-general"],
-    ],
-    {
-      "how-does-exercise-improve-womens-health": {
-        faqIds: ["how-does-exercise-improve-womens-health"],
-      },
-    },
-  ),
+  ...rows(7, [["symptoms-women-should-never-ignore", "gyn-general"]]),
   // Calendar URLs added by the 52-article programme. Published and indexable.
   ...NEW_CALENDAR_GUIDE_ROWS,
 ];

@@ -1,0 +1,100 @@
+{
+  "id": "W28-C",
+  "title": "What Is a Hormonal Imbalance?",
+  "seoTitle": "What people mean by a hormonal imbalance",
+  "description": "“Hormonal imbalance” is a loose phrase, not one diagnosis. Cycle changes, thyroid disease and PCOS need different tests. Book if the pattern is new or severe.",
+  "primaryQuestion": "What does hormonal imbalance actually mean?",
+  "directAnswer": "“Hormonal imbalance” is everyday language, not a single disease with one blood test. It can point to irregular periods, premenstrual symptoms, thyroid disease, high prolactin, PCOS, perimenopause, or a medicine effect. The right next step depends on which symptom is actually happening, how long it has lasted, and what else is in your history. A webpage cannot rank your hormones from a symptom list. Dr. Charmi Shah uses the pattern you describe to decide whether any test is useful.",
+  "storytellingNote": "",
+  "sections": [
+    {
+      "heading": "Why the phrase is too broad to diagnose",
+      "paragraphs": [
+        "Oestrogen, progesterone, androgens, thyroid hormone, prolactin and insulin all affect cycles, skin, hair, energy and bleeding. A change in one of them does not look the same as a change in another. NICHD’s menstruation overview lists many reasons periods shift, including hormones, weight change, stress, exercise and medical conditions.",
+        "A salon blood panel that reports every hormone as high or low, without a cycle day or a question it is meant to answer, is easy to misread. Some hormones swing across the month on purpose. A number without timing is not a diagnosis."
+      ]
+    },
+    {
+      "heading": "Patterns that deserve a specific name",
+      "paragraphs": [
+        "Long gaps between periods, acne and extra hair growth raise PCOS questions, which have their own guide. Bleeding that is suddenly heavy, bleeding after sex, or bleeding after menopause are bleeding problems, not a vague hormone label. Heat, sweats and cycle change in the forties may be perimenopause.",
+        "Thyroid disease can change periods, weight, temperature tolerance and heart rate. That is a named condition with its own tests, not a reason to buy an unregulated supplement stack. NHS irregular-period advice is to speak to a GP when cycles are unpredictable or you are trying to conceive and not succeeding."
+      ]
+    },
+    {
+      "heading": "What to bring instead of a self-label",
+      "paragraphs": [
+        "Write first and last bleeding dates for three months, any pregnancy chance, contraception, and medicines including steroids or psychiatric drugs. Add skin or hair changes, milky nipple discharge, headaches, and whether you are trying to conceive.",
+        "Say which problem you most want help with: cycle timing, pain, fertility, skin, or feeling unwell. That priority steers the visit better than asking for every hormone to be balanced."
+      ]
+    },
+    {
+      "heading": "When the wait should be short",
+      "paragraphs": [
+        "Arrange a prompt review for a positive pregnancy test with pain or bleeding, fainting, a breast lump, or symptoms that are getting worse week by week. Urgent care is for collapse, very heavy bleeding, or severe one-sided pain.",
+        "Routine booking fits when you want a plan for irregular cycles, fertility timing, or symptoms that have been stable but bothersome. Education here does not replace that conversation."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Should I order a full female hormone panel before the visit?",
+      "answer": "Usually no. Some hormones are only interpretable on a particular cycle day, and some symptoms need a different test first. Ask which question the blood test is meant to answer."
+    },
+    {
+      "question": "Is every late period a hormone problem?",
+      "answer": "No. Pregnancy, recent contraception changes, illness, weight change and thyroid disease are among the possibilities. A late period with a chance of pregnancy needs a test, not a hormone slogan."
+    }
+  ],
+  "references": [
+    {
+      "label": "NHS: Irregular periods",
+      "url": "https://www.nhs.uk/conditions/irregular-periods/"
+    },
+    {
+      "label": "NICHD: What causes menstruation problems?",
+      "url": "https://www.nichd.nih.gov/health/topics/menstruation/conditioninfo/causes"
+    }
+  ],
+  "conversionCopy": "If cycle changes or hormone questions need a plan, you can book a consultation with Dr. Charmi Shah.",
+  "explainerAlt": "Diagram listing separate causes people sometimes group under the phrase hormonal imbalance",
+  "internalLinks": [
+    {
+      "anchor": "irregular periods",
+      "path": "/why-are-my-periods-irregular/"
+    },
+    {
+      "anchor": "what PCOS is",
+      "path": "/what-is-pcos/"
+    },
+    {
+      "anchor": "perimenopause symptoms",
+      "path": "/perimenopause-symptoms/"
+    }
+  ],
+  "parentHub": "/hormonal-imbalance/",
+  "review": {
+    "corrections": ["Refused to treat hormonal imbalance as one diagnosis or one blood panel."],
+    "sourcesChecked": [
+      {
+        "organisation": "NHS",
+        "title": "Irregular periods",
+        "url": "https://www.nhs.uk/conditions/irregular-periods/",
+        "date": "fetched 2026",
+        "limitations": "UK self-care page; does not list every endocrine diagnosis.",
+        "recommendation": "Unpredictable cycles are a reason to seek clinical advice, especially when trying to conceive."
+      },
+      {
+        "organisation": "NICHD",
+        "title": "What causes menstruation problems?",
+        "url": "https://www.nichd.nih.gov/health/topics/menstruation/conditioninfo/causes",
+        "date": "fetched 2026",
+        "limitations": "US overview; not a testing protocol.",
+        "recommendation": "Period problems have many causes, including hormones, weight, stress, exercise and medical conditions."
+      }
+    ],
+    "openQuestions": [
+      "Which baseline blood tests does WHD actually draw before labelling a cycle problem?"
+    ]
+  }
+}

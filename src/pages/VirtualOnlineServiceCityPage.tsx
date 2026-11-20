@@ -5,6 +5,7 @@ import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { JsonLdFaq } from "@/components/seo/JsonLdFaq";
 import { PageShell } from "@/components/layout/PageShell";
 import { FaqSection } from "@/components/sections/FaqSection";
+import { ROBOTS_INDEX_FOLLOW, ROBOTS_NOINDEX_FOLLOW } from "@/config/routeDisposition";
 import { ROUTES } from "@/config/routes";
 import { SITE_URL } from "@/config/site";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
@@ -27,27 +28,19 @@ import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { InclusiveSeoListFootnote } from "@/components/seo/InclusiveSeoListFootnote";
 import { Button } from "@/components/ui/button";
 import {
+  inPersonClinicFor,
+  localCityPageFor,
   PRACTICE_CHARMI_IN_PERSON,
   PRACTICE_IN_PERSON_BOOKING_LINE,
   PRACTICE_ZALAK_IN_PERSON,
 } from "@/config/practiceLocations";
 import { onlineServiceCityFaqs } from "@/data/contextualFaqs";
 import { bookConsultationPath } from "@/lib/bookingIntent";
-import { virtualServiceCityDocumentTitle, virtualServiceCityH1 } from "@/lib/pageSeoCopy";
+import { virtualServiceCitySeo } from "@/lib/virtualServiceCitySeo";
+import { virtualServiceCityLocalFacts } from "@/lib/serviceCityLocalFacts";
+import { SERVICE_CITY_CONTENT } from "@/data/serviceCityContent";
+import { DOCTOR_BY_SLUG } from "@/data/doctorProfiles";
 import { TelemedicineComplianceBlock } from "@/components/compliance/TelemedicineComplianceBlock";
-
-function buildMetaDescription(
-  serviceTitle: string,
-  city: string,
-  country: string,
-  doctor: "charmi" | "zalak",
-) {
-  const who =
-    doctor === "charmi"
-      ? "Dr. Charmi Shah (OB-GYN, IVF, laparoscopy)"
-      : "Dr. Zalak Shah (women's health physiotherapy, Mat Pilates online, STOTT Pilates)";
-  return `${serviceTitle} via online consultation for patients in ${city}, ${country} with ${who}. Video care for this city — not a local clinic. India in-person separately in ${PRACTICE_CHARMI_IN_PERSON} / ${PRACTICE_ZALAK_IN_PERSON}. WhatsApp or email to book.`;
-}
 
 export function VirtualOnlineServiceCityPage() {
   const { citySlug, serviceSlug } = useParams<{ citySlug: string; serviceSlug: string }>();
@@ -67,15 +60,14 @@ export function VirtualOnlineServiceCityPage() {
     return <Navigate to={virtualServiceCityPath(city, service.slug)} replace />;
   }
 
-  const path = virtualServiceCityPath(city, service.slug);
-  const metaTitle = virtualServiceCityDocumentTitle(service.shortTitle, city.city, city.country);
-  const h1 = virtualServiceCityH1(service.title, city.city, city.country);
-  const metaDescription = buildMetaDescription(
-    service.title,
-    city.city,
-    city.country,
-    service.doctor,
-  );
+  const seo = virtualServiceCitySeo(city, service);
+  const { path, h1, metaDescription } = seo;
+  const metaTitle = seo.title;
+  const content = SERVICE_CITY_CONTENT[service.slug];
+  const local = virtualServiceCityLocalFacts(city.city, city.countryCode);
+  const doctor = DOCTOR_BY_SLUG[service.doctor];
+  const ownClinic = inPersonClinicFor(city.city, service.doctor);
+  const cityClinic = localCityPageFor(city.city);
   const crumbs = [
     { name: "Home", path: ROUTES.home },
     { name: "Virtual online consultations", path: ROUTES.onlineConsultation },
@@ -99,7 +91,12 @@ export function VirtualOnlineServiceCityPage() {
 
   return (
     <PageShell breadcrumbs={crumbs}>
-      <SeoHead title={metaTitle} metaDescription={metaDescription} path={path} />
+      <SeoHead
+        title={metaTitle}
+        metaDescription={metaDescription}
+        path={path}
+        robots={seo.indexable ? ROBOTS_INDEX_FOLLOW : ROBOTS_NOINDEX_FOLLOW}
+      />
       <JsonLdGraph graph={graph} />
       {faqItems.length > 0 ? (
         <JsonLdFaq items={faqItems} pageUrl={githubPagesAbsoluteUrl(SITE_URL, path)} />
@@ -118,7 +115,7 @@ export function VirtualOnlineServiceCityPage() {
         <p className="rounded-lg border border-primary/20 bg-primary/5 px-4 py-3 text-sm text-foreground mb-6">
           {service.summary} This is{" "}
           <strong className="text-foreground">online advice / video consultation</strong> with an
-          India-trained clinician — not a claim that we operate a physical clinic in {city.city}.
+          India-trained clinician. We do not claim to run a physical clinic in {city.city}.
           Availability and suitability for your location are confirmed when you enquire.
         </p>
         <div className="space-y-4 text-muted-foreground leading-relaxed mb-8">
@@ -148,13 +145,126 @@ export function VirtualOnlineServiceCityPage() {
             , then book with your time zone and a short summary of your concern.
           </p>
           <p>
-            <strong className="text-foreground">Separate India in-person option:</strong> this{" "}
-            {city.city} page is for video care only. If you travel to India, Dr. Charmi Shah sees
-            patients in {PRACTICE_CHARMI_IN_PERSON}, and Dr. Zalak Shah in{" "}
-            {PRACTICE_ZALAK_IN_PERSON}— by appointment at those centres, not a Women&apos;s Health
-            Duo clinic in {city.city}. {PRACTICE_IN_PERSON_BOOKING_LINE}
+            {ownClinic ? (
+              <>
+                <strong className="text-foreground">Online and in person in {city.city}:</strong>{" "}
+                this page is the video consult with {doctor.name}. The same doctor also sees
+                patients in person here. Book a clinic visit from the{" "}
+                <Link to={ownClinic.path} className="text-primary underline underline-offset-4">
+                  {ownClinic.label} page
+                </Link>
+                , or stay on video. {PRACTICE_IN_PERSON_BOOKING_LINE}
+              </>
+            ) : cityClinic ? (
+              <>
+                <strong className="text-foreground">Video consult in {city.city}:</strong>{" "}
+                {doctor.name} sees patients online here. In-person visits with {doctor.name} are in{" "}
+                {service.doctor === "charmi" ? PRACTICE_CHARMI_IN_PERSON : PRACTICE_ZALAK_IN_PERSON}
+                . The{" "}
+                <Link to={cityClinic.path} className="text-primary underline underline-offset-4">
+                  {cityClinic.label} clinic page
+                </Link>{" "}
+                is for the doctor who does see patients in person in this city.{" "}
+                {PRACTICE_IN_PERSON_BOOKING_LINE}
+              </>
+            ) : (
+              <>
+                <strong className="text-foreground">In-person option:</strong> this {city.city} page
+                is for video care only. If you can travel, Dr. Charmi Shah sees patients in{" "}
+                {PRACTICE_CHARMI_IN_PERSON}, and Dr. Zalak Shah in {PRACTICE_ZALAK_IN_PERSON}, by
+                appointment at those centres. {PRACTICE_IN_PERSON_BOOKING_LINE}
+              </>
+            )}
           </p>
         </div>
+
+        {content ? (
+          <>
+            <figure className="mb-8 max-w-xl">
+              <img
+                src={content.image.src}
+                srcSet={content.image.srcSet}
+                sizes="(min-width: 640px) 36rem, 100vw"
+                alt={content.image.alt}
+                width={content.image.width}
+                height={content.image.height}
+                loading="lazy"
+                decoding="async"
+                className={
+                  content.image.height > content.image.width
+                    ? "h-auto max-h-[32rem] w-auto max-w-full rounded-lg border border-border/60"
+                    : "h-auto w-full rounded-lg border border-border/60"
+                }
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground">
+                {content.image.caption}
+              </figcaption>
+            </figure>
+
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Led by{" "}
+              <Link to={profilePath} className="text-primary underline underline-offset-4">
+                {doctor.name}
+              </Link>{" "}
+              ({doctor.credentials}).
+            </p>
+
+            <section className="mb-8" aria-labelledby="service-city-covers-heading">
+              <h2
+                id="service-city-covers-heading"
+                className="font-heading text-xl font-semibold text-foreground mb-3"
+              >
+                What an online visit from {city.city} can cover
+              </h2>
+              <ul className="list-disc pl-5 space-y-2 text-muted-foreground leading-relaxed">
+                {content.covers.map((line) => (
+                  <li key={line}>{line}</li>
+                ))}
+              </ul>
+            </section>
+
+            <section className="mb-8" aria-labelledby="service-city-in-person-heading">
+              <h2
+                id="service-city-in-person-heading"
+                className="font-heading text-xl font-semibold text-foreground mb-3"
+              >
+                What still needs a local visit in {city.city}
+              </h2>
+              <ul className="list-disc pl-5 space-y-2 text-muted-foreground leading-relaxed">
+                {content.inPerson.map((line) => (
+                  <li key={line}>{line}</li>
+                ))}
+              </ul>
+            </section>
+
+            <section className="mb-8" aria-labelledby="service-city-prepare-heading">
+              <h2
+                id="service-city-prepare-heading"
+                className="font-heading text-xl font-semibold text-foreground mb-3"
+              >
+                Before your video call
+              </h2>
+              <ul className="list-disc pl-5 space-y-2 text-muted-foreground leading-relaxed">
+                {content.prepare.map((line) => (
+                  <li key={line}>{line}</li>
+                ))}
+              </ul>
+            </section>
+
+            <section className="mb-8" aria-labelledby="service-city-time-heading">
+              <h2
+                id="service-city-time-heading"
+                className="font-heading text-xl font-semibold text-foreground mb-3"
+              >
+                Time zone and booking from {city.city}
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                {local.timeZoneLine} Book on WhatsApp with {city.city} and your concern in the first
+                message.
+              </p>
+            </section>
+          </>
+        ) : null}
 
         <div className="flex flex-wrap gap-3 mb-12">
           <Button asChild>
@@ -171,6 +281,40 @@ export function VirtualOnlineServiceCityPage() {
             <Link to={virtualConsultationCityPath(city)}>All services in {city.city}</Link>
           </Button>
         </div>
+
+        {content ? (
+          <section
+            className="border-t border-border/60 pt-10 mb-10"
+            aria-labelledby="service-city-guides-heading"
+          >
+            <h2
+              id="service-city-guides-heading"
+              className="font-heading text-lg font-semibold text-foreground mb-4"
+            >
+              Read before you book
+            </h2>
+            <ul className="grid gap-2 sm:grid-cols-2 text-sm">
+              <li>
+                <Link
+                  to={content.parent.path}
+                  className="text-primary underline underline-offset-2 hover:text-primary/90"
+                >
+                  {content.parent.label}
+                </Link>
+              </li>
+              {content.guides.map((g) => (
+                <li key={g.path}>
+                  <Link
+                    to={g.path}
+                    className="text-primary underline underline-offset-2 hover:text-primary/90"
+                  >
+                    {g.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
 
         <section
           className="border-t border-border/60 pt-10 mb-10"
@@ -208,7 +352,7 @@ export function VirtualOnlineServiceCityPage() {
             id="similar-cities-heading"
             className="font-heading text-lg font-semibold text-foreground mb-4"
           >
-            {service.title} , other cities
+            {service.title} in other cities
           </h2>
           <p className="text-sm text-muted-foreground mb-4">
             A few other metros with the same online service page (short list for readability).

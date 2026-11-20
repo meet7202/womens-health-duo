@@ -9,8 +9,9 @@ import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { whatsappMessageDoctorProfile, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 import { TrackedWhatsAppLink, WHATSAPP_CTA_CLASS } from "@/components/cta/TrackedWhatsAppLink";
 import { DOCTOR_BY_SLUG, type DoctorSlug } from "@/data/doctorProfiles";
+import { LOCAL_SERVICE_PAGES } from "@/data/localServicePages";
 import { bookConsultationPath } from "@/lib/bookingIntent";
-import { doctorDocumentTitle } from "@/lib/pageSeoCopy";
+import { doctorDocumentTitle, doctorTitleSpecialty } from "@/lib/pageSeoCopy";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { InclusiveSeoListFootnote } from "@/components/seo/InclusiveSeoListFootnote";
@@ -19,7 +20,6 @@ import {
   PRACTICE_CHARMI_LOCATIONS_LINE,
   PRACTICE_ZALAK_LOCATIONS_LINE,
 } from "@/config/practiceLocations";
-import { BRAND_ENTITY_LINE } from "@/config/brandLine";
 import { doctorRegistrationLine } from "@/config/doctorRegistration";
 import { EmergencyDisclaimer } from "@/components/compliance/EmergencyDisclaimer";
 import { TelemedicineTrustBadges } from "@/components/compliance/TelemedicineTrustBadges";
@@ -71,10 +71,7 @@ type DoctorProfilePageProps = {
 
 export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
   const d = DOCTOR_BY_SLUG[slug];
-  const docTitle = doctorDocumentTitle(
-    d.name,
-    slug === "charmi" ? "OB-GYN, IVF & laparoscopy" : "Women's health physio & Pilates",
-  );
+  const docTitle = doctorDocumentTitle(d.name, doctorTitleSpecialty(d.slug));
   const img = IMAGES[slug];
   const crumbs = [
     { name: "Home", path: ROUTES.home },
@@ -89,6 +86,8 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
       aboutId: PHYSICIAN_IDS[slug],
     }),
   ];
+
+  const inPersonServicePages = LOCAL_SERVICE_PAGES.filter((p) => p.profilePath === d.path);
 
   const cityLinks =
     slug === "charmi"
@@ -117,10 +116,7 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
         <p className="text-sm font-medium text-foreground mb-1">
           {doctorRegistrationLine(slug)} · {d.registration.yearsExperience} clinical experience
         </p>
-        <TelemedicineTrustBadges className="mb-4" />
-        <p className="text-sm text-foreground/90 border-l-2 border-primary/35 pl-3 mb-8 max-w-2xl">
-          {BRAND_ENTITY_LINE}
-        </p>
+        <TelemedicineTrustBadges className="mb-8" />
 
         <div className="float-none sm:float-right sm:ml-8 sm:mb-4 w-full max-w-[220px] mx-auto sm:mx-0">
           <picture>
@@ -144,17 +140,6 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
             <p key={i}>{p}</p>
           ))}
         </div>
-
-        {slug === "zalak" ? (
-          <div className="mb-8 rounded-2xl border border-primary/20 bg-primary/5 p-4 text-sm text-foreground/90">
-            <strong className="font-medium text-foreground">
-              Dr. Zalak&apos;s strongest care paths:
-            </strong>{" "}
-            prenatal support, postnatal recovery, urinary incontinence and pelvic floor rehab, and
-            diastasis recti / core retraining. Online consultation is available worldwide; STOTT
-            Pilates (Mat and Reformer) supports safe, guided progress when it fits your care plan.
-          </div>
-        ) : null}
 
         <h2 className="font-heading text-xl font-semibold text-foreground clear-both sm:clear-none mt-10 mb-3">
           Specialties and focus areas
@@ -202,6 +187,25 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
             </li>
           ))}
         </ul>
+        {inPersonServicePages.length > 0 ? (
+          <section className="mb-10" aria-labelledby="in-person-services-heading">
+            <h2
+              id="in-person-services-heading"
+              className="font-heading text-xl font-semibold text-foreground mb-3"
+            >
+              In-person services by city
+            </h2>
+            <ul className="list-disc pl-6 space-y-1 text-muted-foreground">
+              {inPersonServicePages.map((p) => (
+                <li key={p.path}>
+                  <Link to={p.path} className="text-primary underline underline-offset-4">
+                    {p.service.titleLead} in {p.city.titlePlace}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
         <ContextualDeepLinks context="doctor" doctorName={d.name} />
         <InclusiveSeoListFootnote variant="cities" className="mb-10" />
 

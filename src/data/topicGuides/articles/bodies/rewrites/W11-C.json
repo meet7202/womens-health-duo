@@ -2,14 +2,14 @@
   "id": "W11-C",
   "title": "What Does My AMH Test Tell Me About Fertility?",
   "seoTitle": "What an AMH test means for fertility",
-  "description": "AMH reflects ovarian reserve quantity, not egg quality or a natural-conception verdict—how to read a result with age and other fertility factors.",
+  "description": "AMH reflects ovarian reserve quantity, not egg quality or a natural-conception verdict. Learn to read a result with age and other fertility factors.",
   "primaryQuestion": "Can I get pregnant with low AMH?",
-  "directAnswer": "A low AMH result does not prove that pregnancy is impossible, and a high result does not prove that conception will be easy. Anti-Müllerian hormone mainly helps estimate ovarian reserve—roughly how many recruitable follicles remain—and may guide counselling about response if assisted conception is planned. ASRM’s 2020 ovarian-reserve opinion states that these markers assess quantity, not quality, of the remaining oocyte pool. NICE NG257 advises against using AMH to predict clinical pregnancy through spontaneous conception.",
+  "directAnswer": "A low AMH result does not prove that pregnancy is impossible, and a high result does not prove that conception will be easy. Anti-Müllerian hormone mainly helps estimate ovarian reserve (roughly how many recruitable follicles remain) and may guide counselling about response if assisted conception is planned. ASRM’s 2020 ovarian-reserve opinion states that these markers assess quantity, not quality, of the remaining oocyte pool. NICE NG257 advises against using AMH to predict clinical pregnancy through spontaneous conception.",
   "sections": [
     {
       "heading": "What the blood test is measuring",
       "paragraphs": [
-        "AMH is made by cells in small growing ovarian follicles. A serum level is used as an indirect marker of ovarian reserve—the remaining pool of oocytes—rather than a photograph of each egg or a calendar for when fertility will end. ASRM defines ovarian reserve as oocyte quantity (number), and notes that quantity is different from oocyte quality, which relates to the potential of a fertilised oocyte to result in a live-born infant.",
+        "AMH is made by cells in small growing ovarian follicles. A serum level is used as an indirect marker of ovarian reserve, meaning the remaining pool of oocytes, rather than a photograph of each egg or a calendar for when fertility will end. ASRM defines ovarian reserve as oocyte quantity (number), and notes that quantity is different from oocyte quality, which relates to the potential of a fertilised oocyte to result in a live-born infant.",
         "Unlike some day-3 hormones, AMH can usually be drawn on most cycle days. Laboratories use different assays and reference ranges, so comparing a result from one lab with a chart from another can mislead. Age still shapes fertility counselling even when AMH looks reassuring."
       ]
     },
@@ -24,7 +24,7 @@
     {
       "heading": "Reading a low or high result in context",
       "paragraphs": [
-        "Extremely low AMH may prompt counselling about a likely lower egg yield if IVF is considered; ASRM notes that very low values should not be used to refuse treatment. High AMH can appear with conditions that affect ovulation patterns—our PCOS guides explain those pathways separately—and may raise questions about ovarian response and monitoring if medicines are used later.",
+        "Extremely low AMH may prompt counselling about a likely lower egg yield if IVF is considered; ASRM notes that very low values should not be used to refuse treatment. High AMH can appear with conditions that affect ovulation patterns (our PCOS guides explain those pathways separately) and may raise questions about ovarian response and monitoring if medicines are used later.",
         "A useful clinic conversation names what question the test was meant to answer: estimating response to stimulation, supporting timing of fertility care, or investigating irregular cycles alongside other tests. It is not a substitute for checking ovulation, tubes, uterine factors or semen when those questions are open. Our guide on when to see a fertility specialist covers how long to try before assessment."
       ]
     },
@@ -32,7 +32,7 @@
       "heading": "Questions worth asking after the report",
       "paragraphs": [
         "Ask which laboratory method was used and whether the result will change any decision this month. Ask whether antral follicle count or other tests would add clarity, and whether both partners’ factors have been considered. Ask how age, cycle pattern and previous pregnancies sit beside the number on the page.",
-        "Seek emergency care for severe one-sided pelvic pain, shoulder-tip pain, fainting or heavy bleeding if pregnancy is possible—those problems are not answered by repeating AMH. Routine booking with Dr. Charmi Shah remains appropriate for interpreting a confusing reserve result within a full fertility plan."
+        "Seek emergency care for severe one-sided pelvic pain, shoulder-tip pain, fainting or heavy bleeding if pregnancy is possible. Those problems are not answered by repeating AMH. Routine booking with Dr. Charmi Shah remains appropriate for interpreting a confusing reserve result within a full fertility plan."
       ]
     }
   ],
@@ -48,15 +48,15 @@
   ],
   "references": [
     {
-      "label": "ASRM Practice Committee — Testing and interpreting measures of ovarian reserve (2020)",
+      "label": "ASRM Practice Committee: Testing and interpreting measures of ovarian reserve (2020)",
       "url": "https://www.asrm.org/practice-guidance/practice-committee-documents/testing-and-interpreting-measures-of-ovarian-reserve-a-committee-opinion-2020/"
     },
     {
-      "label": "NICE NG257 — Fertility problems: ovarian reserve testing recommendations",
+      "label": "NICE NG257: Fertility problems: ovarian reserve testing recommendations",
       "url": "https://www.nice.org.uk/guidance/NG257/chapter/investigation-of-fertility-problems-and-management-strategies"
     },
     {
-      "label": "ReproductiveFacts.org (ASRM) — Ovarian reserve patient fact sheet (revised 2023)",
+      "label": "ReproductiveFacts.org (ASRM): Ovarian reserve patient fact sheet (revised 2023)",
       "url": "https://www.reproductivefacts.org/news-and-publications/patient-fact-sheets-and-booklets/documents/fact-sheets-and-info-booklets/ovarian-reserve/"
     }
   ],

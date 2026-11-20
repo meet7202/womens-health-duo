@@ -171,19 +171,40 @@ export function learnHubDoctorFilterPath(opts: {
   return learnHubFilteredPath({ doctor, topic });
 }
 
+/** Format tags on clips, not subjects; their filter pages only regroup other topic pages. */
+const LEARN_FORMAT_TOPIC_LABELS: ReadonlySet<string> = new Set(["Carousel", "Posts", "Reels"]);
+
+/** Below this many clips a filter page is a thin list Google leaves unindexed. */
+const LEARN_FILTER_MIN_CLIPS = 5;
+
+function clipCount(doctor: LearnHubDoctorFilter, topic: string | "all"): number {
+  return KNOWLEDGE_HUB_VIDEOS.filter((v) => matchesDoctor(v, doctor) && matchesTopic(v, topic))
+    .length;
+}
+
 /**
- * All indexable Learn URLs: main hub, each doctor tab, each topic, and doctor×topic when at least one clip matches.
+ * Root hub and doctor tabs are always indexable. Topic filters need a subject topic with
+ * enough clips; doctor×topic also needs a clip set that differs from the all-doctors topic page.
  */
-export function learnHubSitemapPaths(): string[] {
+export function isIndexableLearnHubFilter(parsed: LearnHubParsed): boolean {
+  if (parsed.topic === "all") return true;
+  if (LEARN_FORMAT_TOPIC_LABELS.has(parsed.topic)) return false;
+  const n = clipCount(parsed.doctor, parsed.topic);
+  if (n < LEARN_FILTER_MIN_CLIPS) return false;
+  if (parsed.doctor !== "all" && n === clipCount("all", parsed.topic)) return false;
+  return true;
+}
+
+/** Every Learn filter URL that renders (each needs a static shell, indexable or not). */
+export function learnHubShellPathnames(): string[] {
   const paths = new Set<string>();
   paths.add(LEARN_HUB_BASE_PATH);
   const doctors: Exclude<LearnHubDoctorFilter, "all">[] = ["charmi", "zalak"];
-  const topics = learnHubTopicLabels();
 
   for (const d of doctors) {
     paths.add(learnHubFilteredPath({ doctor: d, topic: "all" }));
   }
-  for (const t of topics) {
+  for (const t of learnHubTopicLabels()) {
     paths.add(learnHubFilteredPath({ doctor: "all", topic: t }));
     for (const d of doctors) {
       if (hasVideosForFilter(d, t)) {
@@ -193,6 +214,13 @@ export function learnHubSitemapPaths(): string[] {
   }
 
   return [...paths].sort((a, b) => a.localeCompare(b));
+}
+
+/** Indexable Learn URLs for the sitemap (see `isIndexableLearnHubFilter`). */
+export function learnHubSitemapPaths(): string[] {
+  return learnHubShellPathnames().filter((p) =>
+    isIndexableLearnHubFilter(parseLearnHubPathname(p)),
+  );
 }
 
 /** All watch-page shells (including temporary noindex incomplete media). */
@@ -281,6 +309,6 @@ export function learnHubSeoDescription(parsed: LearnHubParsed): string {
       ? "Dr. Charmi Shah (OB-GYN)"
       : "Dr. Zalak Shah (women's health physio)";
   return capMetaDescription(
-    `${parsed.topic} clips led by ${doctor} on the Women's Health Duo Learn hub — dedicated watch pages for each video.`,
+    `${parsed.topic} clips led by ${doctor} on the Women's Health Duo Learn hub. Each video has its own watch page.`,
   );
 }

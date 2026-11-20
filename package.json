@@ -23,6 +23,7 @@
     "audit:seo-h1": "node scripts/audit-seo-h1.mjs",
     "audit:seo-headings": "node scripts/audit-seo-headings.mjs",
     "audit:seo-sitemap": "node scripts/audit-seo-sitemap.mjs",
+    "audit:seo-redirects": "node scripts/audit-guide-redirects.mjs",
     "audit:seo-semantic": "node scripts/audit-seo-semantic.mjs",
     "audit:indexnow-manifest": "node scripts/indexnow-change-manifest.mjs",
     "audit:seo-disposition": "node scripts/generate-seo-disposition-ledgers.mjs",

@@ -69,7 +69,7 @@ export function FaqSection({
               <AccordionTrigger className="text-left font-medium hover:no-underline">
                 {item.question}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed pb-4">
+              <AccordionContent forceMount className="text-muted-foreground leading-relaxed pb-4">
                 {item.answer}
               </AccordionContent>
             </AccordionItem>

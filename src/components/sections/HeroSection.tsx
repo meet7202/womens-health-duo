@@ -3,6 +3,7 @@ import { useMemo } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { appRouterTo } from "@/lib/githubPagesPublicUrl";
 import { Button } from "@/components/ui/button";
+import { AppLink as Link } from "@/components/router/AppLink";
 import { ROUTES } from "@/config/routes";
 import { HOME_HERO_LEDE } from "@/config/site";
 import { homePermalinkForScrollId } from "@/lib/homeSectionPaths";
@@ -35,15 +36,16 @@ const heroDoctorCardClass = "rounded-2xl bg-background/95 p-4 shadow-card backdr
 type HeroDoctorCardProps = {
   title: string;
   subtitle: string;
+  to: string;
   className?: string;
 };
 
-function HeroDoctorCard({ title, subtitle, className }: HeroDoctorCardProps) {
+function HeroDoctorCard({ title, subtitle, to, className }: HeroDoctorCardProps) {
   return (
-    <div className={cn(heroDoctorCardClass, className)}>
+    <Link to={to} className={cn(heroDoctorCardClass, "block hover:bg-background", className)}>
       <p className="font-heading text-lg font-semibold text-foreground">{title}</p>
       <p className="text-sm text-muted-foreground">{subtitle}</p>
-    </div>
+    </Link>
   );
 }
 
@@ -74,7 +76,7 @@ export const HeroSection = () => {
       id="home"
       className="relative flex min-h-screen items-start gradient-hero overflow-hidden md:items-center"
     >
-      {/* Decorative elements ,  keep low opacity so headline stays crisp */}
+      {/* Decorative elements: keep low opacity so headline stays crisp */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-10 w-96 h-96 bg-rose-light/20 rounded-full blur-3xl" />
@@ -83,8 +85,8 @@ export const HeroSection = () => {
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
         <div className="grid gap-10 md:grid-cols-2 md:gap-12 lg:gap-16 items-center">
-          {/* Copy ,  second on mobile so the photo is above the fold */}
-          {/* Primary copy stays visible on first paint (SEO-28) — no opacity-0 entrance. */}
+          {/* Copy: second on mobile so the photo is above the fold */}
+          {/* Primary copy stays visible on first paint (SEO-28); no opacity-0 entrance. */}
           <div className="order-2 text-center md:order-1 md:text-left">
             <div className="inline-flex items-center gap-2 border border-primary/25 bg-primary/15 px-4 py-2 rounded-full mb-6 shadow-sm">
               <Heart className="w-4 h-4 text-terracotta" aria-hidden />
@@ -104,7 +106,7 @@ export const HeroSection = () => {
 
             <p className="text-base sm:text-lg max-w-xl mx-auto md:mx-0 mb-8 leading-relaxed text-[hsl(20_22%_18%)]">
               Led by Dr. Charmi Shah (OB-GYN, IVF, laparoscopy) and Dr. Zalak Shah (women&apos;s
-              health physiotherapy and STOTT Pilates on Mat &amp; Reformer).
+              health physio and Pilates).
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start max-w-xl mx-auto md:mx-0">
@@ -152,7 +154,7 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          {/* Image ,  first on mobile so it shows without scrolling */}
+          {/* Image: first on mobile so it shows without scrolling */}
           <div className="relative order-1 mx-auto w-full max-w-md md:order-2 md:mx-0 md:max-w-none">
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-elevated">
               <picture>
@@ -176,7 +178,13 @@ export const HeroSection = () => {
               <div className="absolute inset-0 hidden bg-gradient-to-t from-foreground/40 via-foreground/10 to-transparent md:block" />
               <div className="absolute bottom-4 left-4 right-4 text-white sm:bottom-6 sm:left-6 sm:right-6 md:bottom-6 md:left-6 md:right-6">
                 <p className="font-heading text-lg font-semibold drop-shadow-lg sm:text-2xl">
-                  Dr. Charmi &amp; Dr. Zalak Shah
+                  <Link to={ROUTES.drCharmi} className="underline underline-offset-4">
+                    Dr. Charmi
+                  </Link>
+                  {" & "}
+                  <Link to={ROUTES.drZalak} className="underline underline-offset-4">
+                    Dr. Zalak Shah
+                  </Link>
                 </p>
                 <p className="text-sm text-white drop-shadow-md font-medium sm:text-base">
                   Sisters in Care, Partners in Health
@@ -185,33 +193,41 @@ export const HeroSection = () => {
             </div>
 
             {/* Desktop: match live site (womenshealthduo.com) */}
-            <div className="absolute -right-4 top-1/4 max-md:hidden bg-background/95 backdrop-blur-sm rounded-2xl p-4 shadow-card">
+            <Link
+              to={ROUTES.drCharmi}
+              className="absolute -right-4 top-1/4 hidden rounded-2xl bg-background/95 p-4 shadow-card backdrop-blur-sm hover:bg-background md:block"
+            >
               <p className="font-heading text-lg font-semibold text-foreground">
                 Obstetrician &amp; Gynecologist
               </p>
               <p className="text-sm text-muted-foreground">
                 IVF Specialist &amp; Laparoscopic Surgeon
               </p>
-            </div>
+            </Link>
 
-            <div className="absolute -left-4 bottom-1/4 max-md:hidden bg-background/95 backdrop-blur-sm rounded-2xl p-4 shadow-card">
+            <Link
+              to="/womens-health-physiotherapy"
+              className="absolute -left-4 bottom-1/4 hidden rounded-2xl bg-background/95 p-4 shadow-card backdrop-blur-sm hover:bg-background md:block"
+            >
               <p className="font-heading text-lg font-semibold text-foreground">
                 Women&apos;s Health Physiotherapy
               </p>
               <p className="text-sm text-muted-foreground">
-                STOTT Pilates &amp; pelvic / prenatal care
+                Pelvic, prenatal and postnatal care, plus Pilates
               </p>
-            </div>
+            </Link>
 
             {/* Mobile: below photo so badges never cover faces */}
             <div className="mt-4 grid gap-3 sm:grid-cols-2 md:hidden">
               <HeroDoctorCard
                 title="Obstetrician & Gynecologist"
                 subtitle="IVF Specialist & Laparoscopic Surgeon"
+                to={ROUTES.drCharmi}
               />
               <HeroDoctorCard
                 title="Women's Health Physiotherapy"
-                subtitle="STOTT Pilates & pelvic / prenatal care"
+                subtitle="Pelvic, prenatal and postnatal care, plus Pilates"
+                to="/womens-health-physiotherapy"
               />
             </div>
           </div>

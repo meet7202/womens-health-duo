@@ -2,15 +2,15 @@
   "id": "W09-Z",
   "title": "What Can a Diastasis Recti Self-Check Tell You?",
   "seoTitle": "What a Diastasis Recti Self-Check Can Tell You",
-  "description": "A gentle midline self-check can hint at softness or doming, but it cannot diagnose diastasis, grade severity, or rule out a hernia—know when to stop.",
+  "description": "A gentle midline self-check can hint at softness or doming, but it cannot diagnose diastasis, grade severity, or rule out a hernia. Know when to stop.",
   "primaryQuestion": "What can a diastasis recti self-check tell you?",
   "directAnswer": "A gentle look at your abdominal midline can help you notice softness, a ridge or doming during light effort so you can describe it in clinic. It cannot diagnose diastasis recti, grade severity with a universal finger-width score, clear you for exercise, or rule out a hernia. Stop if you have pain, feel a worrying lump, or feel unwell, and seek assessment when function suffers or findings unsettle you. For what separation means anatomically, see what diastasis recti is.",
   "sections": [
     {
-      "heading": "What a gentle observation can—and cannot—show",
+      "heading": "What a gentle observation can and cannot show",
       "paragraphs": [
         "A self-check has a limited purpose: to notice whether the midline softens, bulges or cones during a gentle effort so you can say “I feel a ridge when I sit up” rather than guessing a severity grade from a video. Lighting, bloating, breath-holding and how hard you curl all change what you feel. That is why repeated forceful checking often confuses more than it clarifies.",
-        "A home observation cannot confirm diastasis, measure progress in standard units, or exclude hernia or other medical causes of a lump. Finger widths are not a universal threshold—hand size and technique differ—so no finger count can tell you whether you have diastasis or how significant it is. A physiotherapist can demonstrate a check during an assessment and explain what your findings mean.",
+        "A home observation cannot confirm diastasis, measure progress in standard units, or exclude hernia or other medical causes of a lump. Finger widths are not a universal threshold. Hand size and technique differ, so no finger count can tell you whether you have diastasis or how significant it is. A physiotherapist can demonstrate a check during an assessment and explain what your findings mean.",
         "Function usually tells you more than what you feel at rest: how you roll out of bed, lift a toddler, cough on the stairs, or return to exercise. Note those situations for your visit. Photos can show how appearance changes through the day, but they still do not replace examination."
       ]
     },
@@ -25,7 +25,7 @@
     {
       "heading": "When a lump needs urgent medical care",
       "paragraphs": [
-        "A soft ridge that comes and goes with effort is different from a hard, acutely painful swelling that will not settle when you lie down. If a lump is firm, very painful and will not go back in—especially if you are vomiting, have severe tummy pain, or cannot pass wind or stool—seek urgent or emergency medical care. UK NHS hernia pages treat that pattern as a possible strangulated hernia emergency.",
+        "A soft ridge that comes and goes with effort is different from a hard, acutely painful swelling that will not settle when you lie down. If a lump is firm, very painful and will not go back in, especially if you are vomiting, have severe tummy pain, or cannot pass wind or stool, seek urgent or emergency medical care. UK NHS hernia pages treat that pattern as a possible strangulated hernia emergency.",
         "After acute medical problems are excluded or treated, you can return to functional abdominal-wall rehab with clear boundaries. Read the diastasis overview for definition and rehab goals."
       ]
     }
@@ -42,15 +42,15 @@
   ],
   "references": [
     {
-      "label": "POGP — Tummy muscle separation (DRAM) in pregnancy",
+      "label": "POGP: Tummy muscle separation (DRAM) in pregnancy",
       "url": "https://thepogp.co.uk/patient_information/womens_health/tummy_muscle_separation.aspx"
     },
     {
-      "label": "NHS — Umbilical hernia",
+      "label": "NHS: Umbilical hernia",
       "url": "https://www.nhs.uk/conditions/umbilical-hernia/"
     },
     {
-      "label": "NHS — Hernia",
+      "label": "NHS: Hernia",
       "url": "https://www.nhs.uk/conditions/hernia/"
     }
   ],

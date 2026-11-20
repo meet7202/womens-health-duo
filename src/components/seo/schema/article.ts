@@ -24,6 +24,7 @@ export function articleSchema(params: {
   headline: string;
   description: string;
   datePublished?: string;
+  dateModified?: string;
   authorId?: TopicGuideAuthorId;
   reviewerIds?: readonly TopicGuideAuthorId[];
   imageUrls?: readonly string[];
@@ -55,6 +56,7 @@ export function articleSchema(params: {
   };
 
   if (params.datePublished) node.datePublished = params.datePublished;
+  if (params.dateModified) node.dateModified = params.dateModified;
   if (params.imageUrls?.length) {
     node.image = [...params.imageUrls];
   }

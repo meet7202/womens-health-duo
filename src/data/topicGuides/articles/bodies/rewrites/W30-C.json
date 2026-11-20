@@ -1,0 +1,102 @@
+{
+  "id": "W30-C",
+  "title": "Can Stress Affect Fertility?",
+  "seoTitle": "Can stress affect fertility?",
+  "description": "Stress can disturb sleep, sex and sometimes cycles. It does not explain every fertility problem. Severe mood symptoms need urgent help.",
+  "primaryQuestion": "Can stress stop me getting pregnant?",
+  "directAnswer": "Stress can disturb sleep, appetite, sex and sometimes the menstrual cycle, and trying for a baby can itself become a source of strain. That does not mean worry is the reason every couple is not conceiving, and it does not mean calming down will fix blocked tubes, absent ovulation or a sperm problem. NHS fertility information still points to age, how long you have been trying, and medical history as reasons to be assessed. If low mood or panic is severe, that needs care in its own right, including urgent help for thoughts of self-harm.",
+  "storytellingNote": "",
+  "sections": [
+    {
+      "heading": "What stress can change, and what it cannot explain",
+      "paragraphs": [
+        "Short-term pressure can delay a period, especially with poor sleep, under-eating, intense training or illness. A delayed period is a reason to take a pregnancy test when pregnancy is possible, not proof that stress has switched fertility off.",
+        "NICHD lists many causes of infertility, including ovulation disorders, tubal damage, uterine problems and sperm factors. None of those is diagnosed by asking how worried you feel. Blaming stress can delay a workup that would have found a treatable cause."
+      ]
+    },
+    {
+      "heading": "When the strain of trying becomes the problem",
+      "paragraphs": [
+        "Scheduled sex, repeated negative tests and other people’s questions can make intimacy feel like a task. That is common and worth saying out loud. It is not a character flaw, and it is not solved by being told to relax.",
+        "Sleep, movement you already tolerate, and limiting late-night cycle-forum scrolling are reasonable. They are supports. They are not a fertility treatment. If trying has brought panic attacks, hopelessness or conflict that feels unsafe, ask for mental-health care alongside any fertility visit."
+      ]
+    },
+    {
+      "heading": "How a clinician separates the threads",
+      "paragraphs": [
+        "A useful history covers cycle length, pregnancy chances, pain, previous infections or operations, medicines, and both partners’ smoking and alcohol use. Dr. Charmi Shah can say which tests answer a real question and which can wait.",
+        "If cycles are regular and you are young, waiting while you reduce obvious harms may be reasonable. If cycles are absent, you are older, or you have known PCOS, endometriosis or a sperm concern, stress management does not replace assessment. The fertility-chances guide covers timing. This page is only about the stress question."
+      ]
+    },
+    {
+      "heading": "When mood symptoms need urgent help",
+      "paragraphs": [
+        "Thoughts of suicide or self-harm, or being unable to stay safe, are an emergency. Use local emergency services. Do not wait for a fertility appointment to mention them.",
+        "Book a routine visit when stress is manageable but you still want to know whether a medical factor needs checking. Bring a simple note of cycle dates and how long you have been trying."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "If I meditate, will that restore ovulation?",
+      "answer": "Relaxation can help sleep and mood. It has not been shown to open blocked tubes or restart ovulation when a medical condition is the cause. Treat it as support, not as a cure."
+    },
+    {
+      "question": "Should we pause trying until life is calmer?",
+      "answer": "Only you can weigh that against age and how long you have already been trying. A clinician can lay out what waiting might change in your situation. A webpage should not make that call."
+    }
+  ],
+  "references": [
+    {
+      "label": "NHS: Infertility",
+      "url": "https://www.nhs.uk/conditions/infertility/"
+    },
+    {
+      "label": "NICHD: What causes infertility?",
+      "url": "https://www.nichd.nih.gov/health/topics/infertility/conditioninfo/causes"
+    }
+  ],
+  "conversionCopy": "If you want stress and medical factors sorted out together, you can book a consultation with Dr. Charmi Shah.",
+  "explainerAlt": "Two-column sketch separating cycle disruption from medical causes of infertility",
+  "internalLinks": [
+    {
+      "anchor": "improving chances of pregnancy",
+      "path": "/how-to-improve-fertility/"
+    },
+    {
+      "anchor": "when to see a fertility specialist",
+      "path": "/when-to-see-a-fertility-specialist/"
+    },
+    {
+      "anchor": "PMS and mood",
+      "path": "/what-is-pmdd/"
+    }
+  ],
+  "parentHub": "/fertility/",
+  "review": {
+    "corrections": [
+      "Did not claim that stress causes infertility or that calming down restores fertility."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "NHS",
+        "title": "Infertility",
+        "url": "https://www.nhs.uk/conditions/infertility/",
+        "date": "fetched 2026",
+        "limitations": "Does not quantify a stress effect.",
+        "recommendation": "Assessment timing depends on age, duration of trying and known problems, not on worry alone."
+      },
+      {
+        "organisation": "NICHD",
+        "title": "What causes infertility?",
+        "url": "https://www.nichd.nih.gov/health/topics/infertility/conditioninfo/causes",
+        "date": "fetched 2026",
+        "limitations": "US overview of biological causes.",
+        "recommendation": "Infertility has ovulation, tubal, uterine and sperm causes that are not diagnosed from stress alone."
+      }
+    ],
+    "openQuestions": [
+      "Should this page name Tele-MANAS, or only point readers to emergency services and the PMDD guide?"
+    ]
+  }
+}

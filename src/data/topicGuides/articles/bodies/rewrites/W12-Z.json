@@ -4,7 +4,7 @@
   "seoTitle": "Why urine leaks after childbirth and who helps",
   "description": "Postnatal urine leakage is common and deserves support. See what to tell your care team, how birth type informs assessment, and physiotherapy next steps.",
   "primaryQuestion": "Why am I leaking urine after childbirth?",
-  "directAnswer": "Urine leakage after birth often reflects temporary or longer-lasting change in pelvic-floor support, muscle timing, tissue healing, cough or constipation load, and bladder habits while caring for a newborn. It can follow vaginal or caesarean birth. The NHS post-pregnancy body page notes that a leaky bladder may need pelvic-floor exercises and that help from a GP or health visitor is appropriate whenever physical problems bother you—not only at the six-to-eight-week check. Persistent leaking is not something you must quietly accept.",
+  "directAnswer": "Urine leakage after birth often reflects temporary or longer-lasting change in pelvic-floor support, muscle timing, tissue healing, cough or constipation load, and bladder habits while caring for a newborn. It can follow vaginal or caesarean birth. The NHS post-pregnancy body page notes that a leaky bladder may need pelvic-floor exercises and that help from a GP or health visitor is appropriate whenever physical problems bother you, not only at the six-to-eight-week check. Persistent leaking is not something you must quietly accept.",
   "sections": [
     {
       "heading": "What to tell your postnatal care team",
@@ -31,14 +31,14 @@
       "heading": "How pelvic health physiotherapy can help",
       "paragraphs": [
         "UK NICE NG123 places a clinician-supervised pelvic-floor programme of three months or longer as the opening treatment for stress or mixed urinary incontinence, after routine digital assessment confirms a contraction. NICE NG210 mirrors that minimum duration for the same incontinence patterns, including in pregnancy, and asks programmes to review progress mid-way and at completion.",
-        "With Dr. Zalak Shah (PT), postnatal sessions often practise lift-and-release skills timed to baby care—picking up a car seat, coughing with mastitis, returning to walking—without replacing medical review when infection or neurological red flags appear. The NHS post-pregnancy page also links leaky bladder and a heavy feeling between vagina and anus with strengthening the muscles around the bladder, while still directing people to ask a clinician for help when problems bother them."
+        "With Dr. Zalak Shah (PT), postnatal sessions often practise lift-and-release skills timed to baby care, such as picking up a car seat, coughing with mastitis or returning to walking. This does not replace medical review when infection or neurological red flags appear. The NHS post-pregnancy page also links leaky bladder and a heavy feeling between vagina and anus with strengthening the muscles around the bladder, while still directing people to ask a clinician for help when problems bother them."
       ]
     },
     {
       "heading": "How progress is reviewed after birth",
       "paragraphs": [
         "Agree simple goals: fewer leaks when laughing, walking to the park without changing pads, or coughing without fear. NICE NG210 advises that if a supervised programme helps, training should continue afterwards rather than stopping the week symptoms ease. Reassess if symptoms plateau, worsen, or if heaviness, pain or emptying difficulty appear.",
-        "Involve an obstetrician–gynaecologist such as Dr. Charmi Shah when wounds, bleeding patterns, suspected prolapse or other medical issues need medical input. Physiotherapy booking is for ongoing recovery once urgent causes are excluded—not for emergency symptoms."
+        "Involve an obstetrician–gynaecologist such as Dr. Charmi Shah when wounds, bleeding patterns, suspected prolapse or other medical issues need medical input. Physiotherapy booking is for ongoing recovery once urgent causes are excluded. It is not for emergency symptoms."
       ]
     }
   ],
@@ -49,24 +49,24 @@
     },
     {
       "question": "Should I wait until my six-week check before saying anything?",
-      "answer": "No. NHS postnatal advice says physical problems can be raised with a GP or health visitor whenever they bother you, and the six-to-eight-week check is simply one planned moment—not the only door."
+      "answer": "No. NHS postnatal advice says physical problems can be raised with a GP or health visitor whenever they bother you, and the six-to-eight-week check is simply one planned moment, not the only chance to ask."
     }
   ],
   "references": [
     {
-      "label": "NHS — Your post-pregnancy body",
+      "label": "NHS: Your post-pregnancy body",
       "url": "https://www.nhs.uk/baby/support-and-services/your-post-pregnancy-body/"
     },
     {
-      "label": "NICE — NG210 Pelvic floor dysfunction: prevention and non-surgical management (Recommendations)",
+      "label": "NICE: NG210 Pelvic floor dysfunction: prevention and non-surgical management (Recommendations)",
       "url": "https://www.nice.org.uk/guidance/ng210/chapter/Recommendations"
     },
     {
-      "label": "NICE — NG123 Urinary incontinence and pelvic organ prolapse in women: management (Recommendations)",
+      "label": "NICE: NG123 Urinary incontinence and pelvic organ prolapse in women: management (Recommendations)",
       "url": "https://www.nice.org.uk/guidance/ng123/chapter/Recommendations"
     },
     {
-      "label": "NHS — Urinary incontinence overview",
+      "label": "NHS: Urinary incontinence overview",
       "url": "https://www.nhs.uk/conditions/urinary-incontinence/"
     }
   ],

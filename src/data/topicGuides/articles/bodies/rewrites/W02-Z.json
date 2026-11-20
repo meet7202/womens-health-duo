@@ -4,21 +4,21 @@
   "seoTitle": "Is exercise safe in pregnancy? Activities and limits",
   "description": "Activity is encouraged in most uncomplicated pregnancies. See NHS 150-minute targets, the talk test, examples, maternity caveats, and stop signs.",
   "primaryQuestion": "Is exercise safe during pregnancy?",
-  "directAnswer": "Yes—for many people with an uncomplicated pregnancy, continuing or gently starting regular activity is considered safe and useful. UK NHS advice aims for about 150 minutes of moderate activity a week, including muscle-strengthening work, using a talk test (you can talk but not sing). Ordinary walking, swimming and adapted strength work do not usually need a bespoke clearance appointment if your maternity clinician has already said your pregnancy is progressing without complications—but certain medical or obstetric conditions mean you should ask that team before structured exercise.",
+  "directAnswer": "Yes. For many people with an uncomplicated pregnancy, continuing or gently starting regular activity is considered safe and useful. UK NHS advice aims for about 150 minutes of moderate activity a week, including muscle-strengthening work, using a talk test (you can talk but not sing). Ordinary walking, swimming and adapted strength work do not usually need a bespoke clearance appointment if your maternity clinician has already said your pregnancy is progressing without complications. But certain medical or obstetric conditions mean you should ask that team before structured exercise.",
   "sections": [
     {
       "heading": "What does “safe” usually mean in an uncomplicated pregnancy?",
       "paragraphs": [
         "ACOG’s patient advice states that if you are healthy and your pregnancy is normal, it is safe to continue or start regular physical activity, and that activity does not increase the risk of miscarriage, low birth weight or early delivery. The NHS similarly says exercise is safe for you and your baby in pregnancy, while listing activities to avoid and symptoms that mean you should stop.",
-        "Mention what you already do at an early antenatal visit so advice can be tailored if needed. That conversation is about your history and current symptoms—not a requirement that every walk wait for a specialist physiotherapy clearance. Dr. Zalak Shah (PT) can help adapt movement once medical suitability is clear; she does not provide obstetric clearance or replace your maternity team.",
+        "Mention what you already do at an early antenatal visit so advice can be adjusted if needed. That conversation is about your history and current symptoms. It is not a requirement that every walk wait for a specialist physiotherapy clearance. Dr. Zalak Shah (PT) can help adapt movement once medical suitability is clear; she does not provide obstetric clearance or replace your maternity team.",
         "Housework, stair climbing in a walk-up flat and carrying shopping also count as physical load. They contribute to your day’s effort even when they are not labelled “exercise”."
       ]
     },
     {
       "heading": "How much activity, and how hard should it feel?",
       "paragraphs": [
-        "The NHS recommends aiming for 150 minutes (two and a half hours) of moderate-intensity activity a week, including muscle-strengthening exercises—the same broad target given to adults generally. Moderate activity raises your heart rate, makes you breathe faster and feel warmer; you should be able to talk but not sing. You do not have to do all 150 minutes at once: shorter daily sessions or a few days a week both count, and any activity is better than none if 150 minutes is not yet realistic.",
-        "Try to include two muscle-strengthening sessions each week. NHS examples include yoga, carrying shopping or children, and gym strength work if you already do it. If you are new to exercise, start gently—for example about ten minutes a day—and build up. The NHS advises against starting a new vigorous activity in pregnancy, such as running, if that is not already part of your routine.",
+        "The NHS recommends aiming for 150 minutes (two and a half hours) of moderate-intensity activity a week, including muscle-strengthening exercises. That is the same broad target given to adults generally. Moderate activity raises your heart rate, makes you breathe faster and feel warmer; you should be able to talk but not sing. You do not have to do all 150 minutes at once: shorter daily sessions or a few days a week both count, and any activity is better than none if 150 minutes is not yet realistic.",
+        "Try to include two muscle-strengthening sessions each week. NHS examples include yoga, carrying shopping or children, and gym strength work if you already do it. If you are new to exercise, start gently (for example about ten minutes a day) and build up. The NHS advises against starting a new vigorous activity in pregnancy, such as running, if that is not already part of your routine.",
         "ACOG’s patient guidance gives similar moderate-intensity cues (you can talk normally but cannot sing) and examples such as brisk walking. Heat and humidity in many Indian cities change tolerance quickly: plan water, shade, lighter clothing and realistic timing rather than copying a cooler-climate outdoor run."
       ]
     },
@@ -42,7 +42,7 @@
       "heading": "Stop and seek maternity advice if these happen",
       "paragraphs": [
         "Stop the activity and contact your maternity team or emergency services as directed locally if you notice vaginal bleeding, fluid leaking that could be waters, regular painful contractions, chest pain, dizziness or faintness, headache, shortness of breath before you start exerting yourself, muscle weakness affecting balance, or calf pain or swelling. ACOG lists these as warning signs to stop and call your obstetric clinician; the NHS also advises stopping if you feel uncomfortable, too hot or unwell.",
-        "A notable reduction in fetal movement once movements are established also needs maternity advice rather than another workout. Heavy bleeding, collapse, severe chest pain, marked breathing difficulty or severe abdominal pain requires urgent emergency assessment—not a routine physiotherapy slot or WhatsApp reply.",
+        "A notable reduction in fetal movement once movements are established also needs maternity advice rather than another workout. Heavy bleeding, collapse, severe chest pain, marked breathing difficulty or severe abdominal pain requires urgent emergency assessment, not a routine physiotherapy slot or WhatsApp reply.",
         "If symptoms settle after you stop and your maternity team confirms it is safe to resume, return gradually rather than “making up” missed sessions in one day. Pregnancy is not a fitness challenge to finish at any cost."
       ]
     }
@@ -59,15 +59,15 @@
   ],
   "references": [
     {
-      "label": "NHS — Exercise in pregnancy",
+      "label": "NHS: Exercise in pregnancy",
       "url": "https://www.nhs.uk/pregnancy/keeping-well/exercise/"
     },
     {
-      "label": "ACOG — Exercise During Pregnancy (FAQ119)",
+      "label": "ACOG: Exercise During Pregnancy (FAQ119)",
       "url": "https://www.acog.org/womens-health/faqs/exercise-during-pregnancy"
     },
     {
-      "label": "ACOG — Committee Opinion 804: Physical Activity and Exercise During Pregnancy and the Postpartum Period",
+      "label": "ACOG: Committee Opinion 804: Physical Activity and Exercise During Pregnancy and the Postpartum Period",
       "url": "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2020/04/physical-activity-and-exercise-during-pregnancy-and-the-postpartum-period"
     }
   ],

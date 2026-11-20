@@ -1,0 +1,100 @@
+{
+  "id": "W31-Z",
+  "title": "Why Do I Need to Pee So Often?",
+  "seoTitle": "Why frequent urination happens",
+  "description": "Needing to pee often can be a bladder, pelvic-floor, infection or fluid-habit issue. Burning, blood, fever or pregnancy pain need medical care first.",
+  "primaryQuestion": "Why do I need to pee so often?",
+  "directAnswer": "Needing the toilet often can come from a urine infection, an overactive bladder, drinking a lot of caffeine or fizzy drinks, constipation, pregnancy, or pelvic-floor muscles that are not coordinating with the bladder. The pattern matters: urgency with leaks is different from passing small amounts with burning. NHS urine-infection pages list pain on peeing, needing to pee suddenly or more often, and cloudy or strong-smelling urine as infection clues. Those need a medical check, not bladder training from a blog.",
+  "storytellingNote": "",
+  "sections": [
+    {
+      "heading": "Infection and other medical causes first",
+      "paragraphs": [
+        "A urinary tract infection can make you pee often, burn, and feel generally unwell. Blood in the urine, fever, back pain, vomiting, or confusion are reasons for same-day or emergency care, especially in pregnancy. Do not start a leftover antibiotic because a previous episode felt similar.",
+        "Pregnancy itself increases toilet trips. New pain with frequent peeing in pregnancy still needs a clinician, because infection can be more than a nuisance. Diabetes and some medicines also increase urine output. Mention them rather than assuming the bladder is the only organ involved."
+      ]
+    },
+    {
+      "heading": "Urgency that is not an infection",
+      "paragraphs": [
+        "NHS incontinence information separates a sudden intense need to pee from leaks that happen when you cough. Frequency with urgency, once infection is excluded, is often discussed as overactive bladder. A clinician should confirm that label. An online quiz cannot.",
+        "Going “just in case” before every outing can train the bladder to signal early. That habit is changeable. It is not the cause of burning or blood, so do not use bladder drills to avoid a urine test."
+      ]
+    },
+    {
+      "heading": "Where physiotherapy fits after a check",
+      "paragraphs": [
+        "When infection and other medical causes are not the driver, pelvic-floor coordination, urge-suppression strategies and fluid timing can help. A fever needs a doctor first. Dr. Zalak Shah (PT) is a reasonable next step once a clinician has said the urine is clear or a medical plan is underway.",
+        "Constipation presses on the bladder. Straining on the toilet is worth mentioning. A plan that ignores the bowel often stalls."
+      ]
+    },
+    {
+      "heading": "What to record before an appointment",
+      "paragraphs": [
+        "For three ordinary days, note drinks, toilet times, leaks, and whether you made it in time. Add night waking. Do not restrict fluids to produce a tidy chart. Dehydration irritates the bladder and the bowel.",
+        "Seek urgent care for inability to pass urine, fever with back pain, blood you can see, or pregnancy with pain and burning. Book routinely when frequency is a nuisance but you are otherwise well and a recent check did not find infection."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Should I drink less so I pee less?",
+      "answer": "Cutting fluids sharply often makes urine more concentrated and the bladder more irritable. A clinician can look at what and when you drink. Do not dehydrate yourself to avoid toilets."
+    },
+    {
+      "question": "Is frequent peeing always a weak pelvic floor?",
+      "answer": "No. Infection, urgency, habits and constipation are common. Pelvic-floor training helps some patterns and not others, which is why the cause comes before the exercise."
+    }
+  ],
+  "references": [
+    {
+      "label": "NHS: Urinary tract infections (UTIs)",
+      "url": "https://www.nhs.uk/conditions/urinary-tract-infections-utis/"
+    },
+    {
+      "label": "NHS: Urinary incontinence",
+      "url": "https://www.nhs.uk/conditions/urinary-incontinence/"
+    }
+  ],
+  "conversionCopy": "If infection has been checked and you still need a bladder and pelvic-floor plan, you can book with Dr. Zalak Shah (PT).",
+  "explainerAlt": "Bladder diary sketch separating burning and fever from urgency without infection",
+  "internalLinks": [
+    {
+      "anchor": "cough leaks",
+      "path": "/why-do-i-leak-urine-when-i-cough/"
+    },
+    {
+      "anchor": "pelvic floor dysfunction",
+      "path": "/what-is-pelvic-floor-dysfunction/"
+    },
+    {
+      "anchor": "bladder leakage hub",
+      "path": "/bladder-leakage/"
+    }
+  ],
+  "parentHub": "/bladder-leakage/",
+  "review": {
+    "corrections": ["Put infection and pregnancy red flags ahead of bladder training."],
+    "sourcesChecked": [
+      {
+        "organisation": "NHS",
+        "title": "Urinary tract infections (UTIs)",
+        "url": "https://www.nhs.uk/conditions/urinary-tract-infections-utis/",
+        "date": "fetched 2026",
+        "limitations": "Infection page; not all frequency is infection.",
+        "recommendation": "Needing to pee more often or suddenly, with pain on peeing, can be a urine infection."
+      },
+      {
+        "organisation": "NHS",
+        "title": "Urinary incontinence",
+        "url": "https://www.nhs.uk/conditions/urinary-incontinence/",
+        "date": "fetched 2026",
+        "limitations": "Describes leakage types after infection is considered.",
+        "recommendation": "Urgency incontinence is a sudden need to pee, distinct from leaks on coughing."
+      }
+    ],
+    "openQuestions": [
+      "Confirm whether WHD asks for a urine test before accepting a frequency complaint into physiotherapy."
+    ]
+  }
+}

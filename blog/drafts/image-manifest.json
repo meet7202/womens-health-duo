@@ -622,5 +622,173 @@
       "width": 1600,
       "height": 1067
     }
+  ],
+  "W27-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W28-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W29-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W30-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W31-C": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W27-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W28-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W29-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W30-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W31-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W32-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W33-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W34-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "W35-Z": [
+    {
+      "key": "scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "key": "anatomy",
+      "width": 1600,
+      "height": 1067
+    }
   ]
 }

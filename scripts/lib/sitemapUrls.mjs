@@ -9,7 +9,6 @@ const DIST = "dist";
 
 const FEED_FILES = {
   primary: "sitemap.xml",
-  virtual: "sitemap-virtual-service-cities.xml",
   video: "sitemap-videos.xml",
 };
 
@@ -30,7 +29,7 @@ export function readSitemapBuildMeta() {
 }
 
 /**
- * @param {'primary' | 'virtual' | 'video' | 'all'} feed
+ * @param {'primary' | 'video' | 'all'} feed
  * @returns {string[]}
  */
 export function loadIndexableUrls(feed = "all") {
@@ -38,7 +37,7 @@ export function loadIndexableUrls(feed = "all") {
 
   for (const name of feeds) {
     if (!FEED_FILES[name]) {
-      throw new Error(`unknown feed "${feed}" — use primary, virtual, video, or all`);
+      throw new Error(`unknown feed "${feed}" — use primary, video, or all`);
     }
   }
 

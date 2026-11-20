@@ -116,6 +116,8 @@ export type TopicGuidePageModel = {
   reviewerId?: TopicGuideAuthorId;
   /** Approved reviewers for the byline (set from a recorded clinical approval). */
   reviewerIds?: TopicGuideAuthorId[];
+  /** ISO date of the recorded clinical review, when the guide is in an approved set. */
+  reviewedAt?: string;
   publishedAt?: string;
   reviewStatus?: TopicGuideReviewStatus;
   references: readonly TopicGuideReference[];

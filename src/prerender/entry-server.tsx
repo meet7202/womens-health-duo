@@ -4,9 +4,12 @@
  */
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
+import HomeBelowFold from "../pages/HomeBelowFold";
 import { PriorityPrerenderRoutes } from "./PriorityPrerenderRoutes";
+import { setHomeBelowFoldForSsr } from "./homeBelowFoldSsr";
 
 export function renderPriorityPage(url: string): string {
+  setHomeBelowFoldForSsr(HomeBelowFold);
   const location = url.startsWith("/") ? url : `/${url}`;
   return renderToString(
     <StaticRouter location={location}>

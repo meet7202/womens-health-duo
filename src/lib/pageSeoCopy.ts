@@ -2,6 +2,7 @@
  * Shared document titles and on-page H1 strings for static shells and React pages.
  * Must not use `@/` imports (imported from `staticShellHead.ts` in Node).
  */
+import { CONTACT } from "../config/site.defaults";
 import { DOCUMENT_TITLE_MAX_LEN, formatDocumentTitle } from "./seoTitle";
 import { capMetaDescription, LEARN_WATCH_META_FALLBACK } from "./seoDescription";
 import type { LearnHubParsed } from "./learnHubUrls";
@@ -12,7 +13,7 @@ import {
 } from "../data/knowledgeHubVideos";
 
 /** Homepage hero H1 when `/` has no section permalink. */
-export const HOME_DEFAULT_H1 = "Comprehensive Women's Health Care";
+export const HOME_DEFAULT_H1 = "Specialist Women's Health Care";
 
 export const HOME_DEFAULT_H1_SUBTITLE =
   "Hormonal Health · Fertility · Pregnancy · Postpartum · Pelvic Health · Physiotherapy";
@@ -22,11 +23,15 @@ export function homeSectionDocumentTitle(label: string): string {
 }
 
 export function virtualHubDocumentTitle(): string {
-  return formatDocumentTitle("Online OB-GYN & physio worldwide");
+  return formatDocumentTitle("Online gynecologist & physio consult");
 }
 
 export function virtualHubH1(): string {
-  return "Virtual online consultations";
+  return "Online gynecologist and physiotherapy consults";
+}
+
+export function virtualHubMetaDescription(): string {
+  return `Online gynecologist consultation with Dr. Charmi Shah and online physiotherapy with Dr. Zalak Shah. Video worldwide. WhatsApp ${CONTACT.phoneE164}.`;
 }
 
 export function virtualCountryDocumentTitle(country: string): string {
@@ -34,7 +39,7 @@ export function virtualCountryDocumentTitle(country: string): string {
 }
 
 export function virtualCountryH1(country: string): string {
-  return `Women's Health Duo – virtual care for patients in ${country}`;
+  return `Women's Health Duo: virtual care for patients in ${country}`;
 }
 
 export function virtualCityDocumentTitle(city: string, country: string): string {
@@ -44,7 +49,7 @@ export function virtualCityDocumentTitle(city: string, country: string): string 
 }
 
 export function virtualCityH1(city: string, country: string): string {
-  return `Women's Health Duo – online care for patients in ${city}, ${country}`;
+  return `Women's Health Duo: online care for patients in ${city}, ${country}`;
 }
 
 /** Append " online" for SERP titles unless the label already mentions online. */
@@ -58,21 +63,48 @@ function seoLabelWithOnlineSuffix(label: string): string {
  * City × service titles: emphasize online consultation/advice (not in-city surgery).
  * Keep city identity early so long country names do not erase the location (SEO-05).
  */
+/**
+ * `label` is the service's search label (`SERVICE_CITY_CONTENT[slug].queryLabel`). Pass
+ * `includeCountry` when the city name exists in more than one country.
+ */
 export function virtualServiceCityDocumentTitle(
-  serviceShort: string,
+  label: string,
   city: string,
   country: string,
+  includeCountry = false,
 ): string {
-  const topic = serviceShort.trim();
-  const withCountry = formatDocumentTitle(`Online advice: ${topic} — ${city}, ${country}`);
-  if (withCountry.length <= DOCUMENT_TITLE_MAX_LEN) return withCountry;
-  const cityOnly = formatDocumentTitle(`Online advice: ${topic} — ${city}`);
-  if (cityOnly.length <= DOCUMENT_TITLE_MAX_LEN) return cityOnly;
-  return formatDocumentTitle(`${topic} online — ${city}`);
+  const topic = label.trim();
+  const place = includeCountry ? cityCountryLabel(city, country) : city;
+  const branded = formatDocumentTitle(`${topic} for ${place}`);
+  if (!branded.includes("…")) return branded;
+  const plain = `${topic} for ${place}`;
+  if (plain.length <= DOCUMENT_TITLE_MAX_LEN) return plain;
+  return formatDocumentTitle(`${topic}, ${place}`);
 }
 
-export function virtualServiceCityH1(serviceTitle: string, city: string, country: string): string {
-  return `${serviceTitle} – online consultation for patients in ${city}, ${country}`;
+function cityCountryLabel(city: string, country: string): string {
+  return city === country ? city : `${city}, ${country}`;
+}
+
+export function virtualServiceCityH1(label: string, city: string, country: string): string {
+  return `${label} for patients in ${cityCountryLabel(city, country)}`;
+}
+
+export function virtualServiceCityMetaDescription(
+  label: string,
+  city: string,
+  country: string,
+  doctor: "charmi" | "zalak",
+): string {
+  const place = cityCountryLabel(city, country);
+  const name = doctor === "charmi" ? "Dr. Charmi Shah" : "Dr. Zalak Shah";
+  const role = doctor === "charmi" ? "OB-GYN" : "women's health physiotherapist";
+  const candidates = [
+    `${label} for ${place} with ${name} (${role}): what works by video, what needs a local visit. Book on WhatsApp.`,
+    `${label} for ${place} with ${name}: what works by video, what needs a local visit. Book on WhatsApp.`,
+    `${label} for ${place} with ${name}. What works by video. Book on WhatsApp.`,
+  ];
+  return candidates.find((c) => c.length <= 160) ?? candidates[candidates.length - 1];
 }
 
 function learnDoctorLabel(d: LearnHubParsed["doctor"]): string {
@@ -89,9 +121,9 @@ export function learnHubDocumentTitle(parsed: LearnHubParsed): string {
     return formatDocumentTitle(`${learnDoctorLabel(parsed.doctor)} clips`);
   }
   if (parsed.doctor === "all" && parsed.topic !== "all") {
-    return formatDocumentTitle(parsed.topic);
+    return formatDocumentTitle(`${parsed.topic} videos`);
   }
-  return formatDocumentTitle(`${learnDoctorLabel(parsed.doctor)} · ${parsed.topic}`);
+  return formatDocumentTitle(`${parsed.topic} videos · ${learnDoctorLabel(parsed.doctor)}`);
 }
 
 export function learnHubH1(parsed: LearnHubParsed): string {
@@ -102,27 +134,43 @@ export function learnHubH1(parsed: LearnHubParsed): string {
     return `${learnDoctorLabel(parsed.doctor)} health clips`;
   }
   if (parsed.doctor === "all" && parsed.topic !== "all") {
-    return parsed.topic;
+    return `${parsed.topic} videos`;
   }
-  return `${parsed.topic} – ${learnDoctorLabel(parsed.doctor)}`;
+  return `${parsed.topic} videos with ${learnDoctorLabel(parsed.doctor)}`;
+}
+
+/** Emoji and skin-tone / variation modifiers from Instagram captions read as noise in titles. */
+function stripEmoji(text: string): string {
+  return text
+    .replace(/\p{Extended_Pictographic}/gu, "")
+    .replace(/[\u{1F3FB}-\u{1F3FF}]/gu, "")
+    .replace(/\u{FE0F}|\u{200D}/gu, "")
+    .replace(/\s+/g, " ")
+    .replace(/^[\s\p{P}]+(?=\p{L})/u, "")
+    .trim();
+}
+
+function watchTitleBase(video: KnowledgeHubVideo): string {
+  const raw = knowledgeHubVideoDisplayTitle(video);
+  return stripEmoji(raw) || raw;
 }
 
 export function learnWatchDocumentTitle(video: KnowledgeHubVideo): string {
-  const base = knowledgeHubVideoDisplayTitle(video);
+  const base = watchTitleBase(video);
   if (video.kind === "instagram_post") {
     const suffix = video.instagramPostType === "carousel" ? "Instagram carousel" : "Instagram post";
-    return formatDocumentTitle(`${base} — ${suffix}`);
+    return formatDocumentTitle(`${base} (${suffix})`);
   }
   return formatDocumentTitle(base);
 }
 
 export function learnWatchH1(video: KnowledgeHubVideo): string {
   if (video.kind === "instagram_post") {
-    const base = knowledgeHubVideoDisplayTitle(video);
+    const base = watchTitleBase(video);
     const suffix = video.instagramPostType === "carousel" ? "Instagram carousel" : "Instagram post";
-    return `${base} — ${suffix}`;
+    return `${base} (${suffix})`;
   }
-  return knowledgeHubVideoDisplayTitle(video);
+  return watchTitleBase(video);
 }
 
 export function learnWatchMetaDescription(video: KnowledgeHubVideo): string {
@@ -144,7 +192,7 @@ export function topicGuideDocumentTitle(guideTitle: string): string {
   return plain.length <= DOCUMENT_TITLE_MAX_LEN ? plain : branded;
 }
 
-export const FAQ_DOCUMENT_TITLE = formatDocumentTitle("FAQ – OB-GYN, IVF & physio");
+export const FAQ_DOCUMENT_TITLE = formatDocumentTitle("FAQ: OB-GYN, IVF & physio");
 export const FAQ_H1 = "Frequently asked questions";
 
 export const MEDICAL_DOCUMENT_TITLE = formatDocumentTitle("Medical disclaimer");
@@ -196,18 +244,23 @@ export function indiaCityDocumentTitle(
 ): string {
   switch (cityKey) {
     case "bangalore":
-      return formatDocumentTitle("Bangalore physio & STOTT Pilates");
+      return formatDocumentTitle("Women's Physio & Pilates in Bangalore");
     case "mumbai":
-      return formatDocumentTitle("Mumbai OB-GYN, IVF & care");
+      return formatDocumentTitle("Gynecologist & IVF in Mumbai");
     case "valsad":
-      return formatDocumentTitle("Valsad OB-GYN & IVF care");
+      return formatDocumentTitle("Gynecology in Valsad: Dr. Charmi Shah");
     case "ahmedabad":
-      return formatDocumentTitle("Ahmedabad OB-GYN & physio");
+      return formatDocumentTitle("Ahmedabad OB-GYN, Physio & Pilates");
     default:
       return formatDocumentTitle(`${cityKey} women's health care`);
   }
 }
 
+/** Short specialty for profile titles; name + specialty must fit before the brand suffix (39 chars). */
+export function doctorTitleSpecialty(slug: "charmi" | "zalak"): string {
+  return slug === "charmi" ? "Gynecologist & IVF" : "Physio & Pilates";
+}
+
 export function doctorDocumentTitle(name: string, specialty: string): string {
-  return formatDocumentTitle(`${name} – ${specialty}`);
+  return formatDocumentTitle(`${name}: ${specialty}`);
 }

@@ -54,7 +54,7 @@ Options:
   -h, --help          Show this help
 
 IndexNow flags (forwarded):
-  --feed=primary|virtual|video|all
+  --feed=primary|video|all
   --dry-run
 
 Google Indexing API is not invoked. See scripts/submit-google-indexing.mjs

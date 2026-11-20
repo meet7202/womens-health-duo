@@ -20,7 +20,14 @@ const CITY_CLINIC_SPECIALTIES: Record<
       "Obstetrics and gynecology",
       "IVF, IUI, and fertility evaluation",
       "Laparoscopic gynecologic surgery",
+      "High-risk pregnancy planning",
+      "PCOS care",
       "Women's health physiotherapy",
+      "Pelvic floor physiotherapy",
+      "Prenatal classes",
+      "Postnatal physiotherapy",
+      "Diastasis recti",
+      "Urinary incontinence physiotherapy",
       "STOTT Pilates Mat and Reformer",
     ],
   },
@@ -52,8 +59,11 @@ const CITY_CLINIC_SPECIALTIES: Record<
       "In-person women's health physiotherapy and STOTT Pilates with Dr. Zalak Shah in Bengaluru (Bangalore). Dr. Charmi Shah offers online OB-GYN, IVF, and laparoscopy consults worldwide and in-person care in Mumbai, Ahmedabad, and Valsad.",
     knowsAbout: [
       "Women's health physiotherapy",
-      "Pelvic floor rehabilitation",
-      "Prenatal and postnatal physiotherapy",
+      "Pelvic floor physiotherapy",
+      "Prenatal classes",
+      "Postnatal physiotherapy",
+      "Diastasis recti",
+      "Urinary incontinence physiotherapy",
       "STOTT Pilates Mat and Reformer",
     ],
   },
@@ -65,7 +75,7 @@ export function medicalClinicForCity(city: CityPageData) {
   return {
     "@type": ["MedicalClinic", "LocalBusiness"],
     "@id": `${url}#clinic`,
-    name: `${SITE_NAME} ,  ${city.h1.replace(/\s+/g, " ").trim()}`,
+    name: `${SITE_NAME}, ${city.cityName}`,
     url,
     telephone: CONTACT.phoneE164,
     email: CONTACT.email,
@@ -85,5 +95,35 @@ export function medicalClinicForCity(city: CityPageData) {
     medicalSpecialty: specialty.medicalSpecialty,
     description: specialty.description,
     knowsAbout: specialty.knowsAbout,
+    availableService: specialty.knowsAbout.map((name) => ({
+      "@type": "MedicalProcedure",
+      name,
+    })),
+    ...(city.key === "bangalore" && city.studio
+      ? {
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Ahad Euphoria, Ahad Euphoria Road, Kodathi",
+            addressLocality: "Bengaluru",
+            postalCode: "560099",
+            addressRegion: "Karnataka",
+            addressCountry: "IN",
+          },
+          openingHoursSpecification: {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday",
+            ],
+            opens: "00:00",
+            closes: "23:59",
+          },
+        }
+      : {}),
   };
 }

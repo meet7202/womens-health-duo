@@ -1,0 +1,104 @@
+{
+  "id": "W27-C",
+  "title": "What Is PMS?",
+  "seoTitle": "What is PMS? Timing, tracking, when to ask",
+  "description": "PMS is cycle-timed bloating, breast tenderness or mood change that eases after bleeding starts. Track two cycles. Severe mood symptoms belong on the PMDD page.",
+  "primaryQuestion": "What is PMS, and how do I tell it from a hard week?",
+  "directAnswer": "Premenstrual syndrome (PMS) means physical or mood changes that arrive in the days before a period and settle once bleeding is established. Bloating, breast tenderness, headaches, irritability or food cravings can all fit, and the mix differs between people. A stressful week that is not tied to the cycle is a different problem. A diary across two periods shows whether the pattern repeats. If mood symptoms are severe enough to stop work or include thoughts of self-harm, use the PMDD guide and urgent local help rather than waiting on this page.",
+  "storytellingNote": "",
+  "sections": [
+    {
+      "heading": "What pattern counts as PMS?",
+      "paragraphs": [
+        "The NHS periods page lists swelling, sore breasts, a changeable mood and a short temper among complaints that tend to settle once bleeding is underway. ACOG’s patient FAQ treats PMS as physical or mood symptoms that return before periods and get in the way of usual tasks, not one bad afternoon.",
+        "Painful bleeding, very heavy flow, or cycles that are far apart are separate questions. Those belong with the painful-period, heavy-period and irregular-period guides. PMS can sit beside them, but it does not explain every period problem.",
+        "Skin spots, loose stools, poor sleep and a short fuse are commonly reported. None of them, on their own, proves a hormone disease. The useful clue is timing: symptoms build before bleeding and ease afterwards."
+      ]
+    },
+    {
+      "heading": "What should you write down?",
+      "paragraphs": [
+        "For two cycles, note the first day of bleeding, then each day mark mood, sleep, breast tenderness, bloating, headache and whether the day was hard to get through. A notes app is enough. Do not wait for a perfect chart.",
+        "Also jot medicines, a new contraceptive method, thyroid treatment, and big sleep or shift changes. Those can mimic or magnify premenstrual symptoms. Bring the diary to a visit so the conversation starts from your dates, not from a label you picked online."
+      ]
+    },
+    {
+      "heading": "Where PMDD is a different conversation",
+      "paragraphs": [
+        "This page covers mild irritability that you can still work through. Marked hopelessness, rage, feeling out of control, or symptoms that repeatedly stop relationships or work need the longer comparison on the PMDD page.",
+        "That page also holds crisis steps. If you are thinking about harming yourself, contact local emergency services or the crisis line named there. Do not send a routine booking message and wait."
+      ]
+    },
+    {
+      "heading": "When should you arrange a review?",
+      "paragraphs": [
+        "Book a routine gynaecology conversation if the premenstrual pattern is new, worsening, or getting in the way of school, work or home, or if you also have cycle changes you cannot explain. Dr. Charmi Shah can look at the diary with your history. This page cannot choose a medicine or a contraceptive for you.",
+        "Seek same-day or emergency care for fainting, soaking through pads very quickly, pain that is sudden and severe, chest pain, or any thought of self-harm. Those are not PMS scheduling questions."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Does PMS only happen if my periods are regular?",
+      "answer": "No. The useful test is whether symptoms cluster before bleeding and ease afterwards. Very irregular cycles make a diary harder to read, so bring the dates rather than deciding the label yourself."
+    },
+    {
+      "question": "Can PMS be the reason my mood is low all month?",
+      "answer": "Symptoms that stay after the period has been going for several days point away from a purely premenstrual pattern. Ongoing low mood still deserves care. Mention both the calendar and the days you feel low."
+    }
+  ],
+  "references": [
+    {
+      "label": "NHS: Periods",
+      "url": "https://www.nhs.uk/conditions/periods/"
+    },
+    {
+      "label": "ACOG: Premenstrual syndrome (PMS)",
+      "url": "https://www.acog.org/womens-health/faqs/premenstrual-syndrome"
+    }
+  ],
+  "conversionCopy": "If premenstrual symptoms are disrupting your month, you can book a consultation with Dr. Charmi Shah and bring a two-cycle diary.",
+  "explainerAlt": "Simple calendar sketch showing symptoms in the days before bleeding and easing after the period starts",
+  "internalLinks": [
+    {
+      "anchor": "PMS or PMDD",
+      "path": "/what-is-pmdd/"
+    },
+    {
+      "anchor": "painful periods",
+      "path": "/why-are-my-periods-painful/"
+    },
+    {
+      "anchor": "irregular periods",
+      "path": "/irregular-periods/"
+    }
+  ],
+  "parentHub": "/irregular-periods/",
+  "review": {
+    "corrections": [
+      "Kept this page on ordinary PMS timing and tracking.",
+      "Pointed severe mood symptoms and crisis steps to the PMDD guide instead of duplicating hotline copy."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "NHS",
+        "title": "Periods",
+        "url": "https://www.nhs.uk/conditions/periods/",
+        "date": "fetched 2026",
+        "limitations": "UK patient page; symptom lists are examples, not a diagnostic checklist.",
+        "recommendation": "Premenstrual bloating, breast tenderness and mood change often ease once bleeding starts."
+      },
+      {
+        "organisation": "ACOG",
+        "title": "Premenstrual syndrome (PMS)",
+        "url": "https://www.acog.org/womens-health/faqs/premenstrual-syndrome",
+        "date": "fetched 2026",
+        "limitations": "US FAQ; local treatment pathways differ.",
+        "recommendation": "PMS means recurring luteal symptoms that affect usual activities."
+      }
+    ],
+    "openQuestions": [
+      "Confirm whether WHD should name a specific Indian helpline on this PMS page or only on the PMDD page."
+    ]
+  }
+}

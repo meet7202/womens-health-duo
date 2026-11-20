@@ -25,7 +25,7 @@ import { ContentAuthors } from "@/components/seo/ContentAuthors";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { InclusiveSeoListFootnote } from "@/components/seo/InclusiveSeoListFootnote";
 import { Button } from "@/components/ui/button";
-import { PRACTICE_BOTH_DOCTORS_IN_PERSON } from "@/config/practiceLocations";
+import { localCityPageFor, PRACTICE_BOTH_DOCTORS_IN_PERSON } from "@/config/practiceLocations";
 import { virtualCityOverviewFaqs } from "@/data/contextualFaqs";
 import { virtualCityDocumentTitle, virtualCityH1 } from "@/lib/pageSeoCopy";
 import { TelemedicineComplianceBlock } from "@/components/compliance/TelemedicineComplianceBlock";
@@ -52,6 +52,7 @@ export function VirtualOnlineConsultationCityPage() {
   }
 
   const path = virtualConsultationCityPath(row);
+  const localClinic = localCityPageFor(row.city);
   const countryHub = getVirtualConsultationCountryForCity(row);
   const title = virtualCityDocumentTitle(row.city, row.country);
   const h1 = virtualCityH1(row.city, row.country);
@@ -94,9 +95,9 @@ export function VirtualOnlineConsultationCityPage() {
           OB-GYN, pregnancy and high-risk obstetrics advice, gynecology, IVF/IUI discussion,
           laparoscopy-related consults, PCOS/endometriosis, and routine women&apos;s health
           screening (as appropriate remotely). Dr. Zalak Shah provides online women&apos;s health
-          physiotherapy and STOTT Pilates on Mat and Reformer , pelvic floor, prenatal and postnatal
-          care, Mat Pilates online, diastasis recti, incontinence-oriented rehab with physician
-          clearance, and musculoskeletal care for women.
+          physiotherapy and STOTT Pilates on Mat and Reformer, covering pelvic floor, prenatal and
+          postnatal care, Mat Pilates online, diastasis recti, incontinence-oriented rehab with
+          physician clearance, and musculoskeletal care for women.
         </p>
         <div className="space-y-4 text-muted-foreground leading-relaxed mb-8">
           <p>
@@ -118,7 +119,17 @@ export function VirtualOnlineConsultationCityPage() {
           </p>
           <p>
             <strong className="text-foreground">In person:</strong>{" "}
-            {PRACTICE_BOTH_DOCTORS_IN_PERSON} Book through the practice. See{" "}
+            {PRACTICE_BOTH_DOCTORS_IN_PERSON}{" "}
+            {localClinic ? (
+              <>
+                This city has a clinic page as well as these online services:{" "}
+                <Link to={localClinic.path} className="text-primary underline underline-offset-4">
+                  {localClinic.label}
+                </Link>
+                .{" "}
+              </>
+            ) : null}
+            Book through the practice. See{" "}
             <Link to={ROUTES.drCharmi} className="text-primary underline underline-offset-4">
               Dr. Charmi Shah
             </Link>{" "}
@@ -133,10 +144,10 @@ export function VirtualOnlineConsultationCityPage() {
 
         <div className="flex flex-wrap gap-3 mb-10">
           <Button variant="secondary" asChild>
-            <Link to={ROUTES.drCharmi}>Dr. Charmi , profile</Link>
+            <Link to={ROUTES.drCharmi}>Dr. Charmi Shah's profile</Link>
           </Button>
           <Button variant="secondary" asChild>
-            <Link to={ROUTES.drZalak}>Dr. Zalak , profile</Link>
+            <Link to={ROUTES.drZalak}>Dr. Zalak Shah's profile</Link>
           </Button>
           <Button variant="outline" asChild>
             <Link to={ROUTES.onlineConsultation}>Virtual hub</Link>

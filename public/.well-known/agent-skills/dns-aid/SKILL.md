@@ -1,4 +1,4 @@
-# DNS-AID discovery — Women's Health Duo
+# DNS-AID discovery | Women's Health Duo
 
 Use this skill when you need the DNS-based entrypoint for AI discovery for `womenshealthduo.com`.
 

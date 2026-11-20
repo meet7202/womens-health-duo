@@ -18,7 +18,7 @@
       "heading": "Life stages, contraception and other common explanations",
       "paragraphs": [
         "Age and life stage change how irregularity is interpreted. Cycles in the first years after menarche are often unsettled while the reproductive axis matures. After birth and during breastfeeding, bleeds may be delayed or unpredictable. In the perimenopause years (often between about 45 and 55 on NHS timing language), irregular or missed periods are common as ovulation becomes less regular.",
-        "Hormonal contraception—such as the progestogen-only pill, injection or intrauterine system—can intentionally change bleeding. Ask whether the pattern you are seeing is expected for that method, and record the start date and any recent changes. In India you may also hear “PCOD” used casually; careful assessment still looks at the whole syndrome picture rather than a scan comment alone—see our guide on what PCOS (PMOS) is when that question is on your mind.",
+        "Hormonal contraception, such as the progestogen-only pill, injection or intrauterine system, can intentionally change bleeding. Ask whether the pattern you are seeing is expected for that method, and record the start date and any recent changes. In India you may also hear “PCOD” used casually; careful assessment still looks at the whole syndrome picture rather than a scan comment alone. If that question is on your mind, see our guide on what PCOS (PMOS) is.",
         "Other explanations clinicians weigh include ovulation timing problems, thyroid or prolactin disorders, medicines that affect hormones, rapid weight change, under-fuelling or a sudden jump in workout volume, and structural conditions affecting the uterus. Two people with “irregular periods” may need different next steps even when the surface complaint sounds the same."
       ]
     },
@@ -41,9 +41,9 @@
     {
       "heading": "When pain or bleeding needs urgent care",
       "paragraphs": [
-        "Seek urgent local care for very heavy bleeding with faintness, breathlessness, chest discomfort or severe weakness; bleeding in a confirmed pregnancy that worries you; or sudden severe tummy pain on one side, pain at the tip of the shoulder, collapse, or flooding loss when pregnancy is possible—even if a home test is not yet positive. NHS ectopic-pregnancy advice notes that symptom combinations can matter if you might be pregnant before a positive test, and that sharp intense abdominal pain with dizziness needs emergency assessment.",
+        "Seek urgent local care for very heavy bleeding with faintness, breathlessness, chest discomfort or severe weakness; bleeding in a confirmed pregnancy that worries you; or sudden severe tummy pain on one side, pain at the tip of the shoulder, collapse, or flooding loss when pregnancy is possible, even if a home test is not yet positive. NHS ectopic-pregnancy advice notes that symptom combinations can matter if you might be pregnant before a positive test, and that sharp intense abdominal pain with dizziness needs emergency assessment.",
         "Those situations need immediate local services or emergency care, not a routine WhatsApp booking. Separating urgent red flags from routine gynaecology review keeps both pathways safer.",
-        "If pregnancy is not desired, contraception options can still be discussed while the cause of irregularity is being clarified. If you are planning pregnancy soon, say so at the start of the visit—irregular ovulation changes timing advice and may alter how quickly further evaluation is considered."
+        "If pregnancy is not desired, contraception options can still be discussed while the cause of irregularity is being clarified. If you are planning pregnancy soon, say so at the start of the visit. Irregular ovulation changes timing advice and may alter how quickly further evaluation is considered."
       ]
     }
   ],
@@ -59,19 +59,19 @@
   ],
   "references": [
     {
-      "label": "FIGO — The two FIGO systems for normal and abnormal uterine bleeding (2018 revisions)",
+      "label": "FIGO: The two FIGO systems for normal and abnormal uterine bleeding (2018 revisions)",
       "url": "https://obgyn.onlinelibrary.wiley.com/doi/full/10.1002/ijgo.12666"
     },
     {
-      "label": "NHS — Irregular periods",
+      "label": "NHS: Irregular periods",
       "url": "https://www.nhs.uk/conditions/irregular-periods/"
     },
     {
-      "label": "NHS — Missed or late periods",
+      "label": "NHS: Missed or late periods",
       "url": "https://www.nhs.uk/conditions/stopped-or-missed-periods/"
     },
     {
-      "label": "NHS — Ectopic pregnancy overview",
+      "label": "NHS: Ectopic pregnancy overview",
       "url": "https://www.nhs.uk/conditions/ectopic-pregnancy/"
     }
   ],

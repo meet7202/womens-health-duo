@@ -11,6 +11,7 @@ import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { PRACTICE_CHARMI_IN_PERSON, PRACTICE_ZALAK_IN_PERSON } from "@/config/practiceLocations";
 import { DOCTOR_REGISTRATION } from "@/config/doctorRegistration";
 import { physicianImageObject } from "@/components/seo/schema/mediaImages";
+import { BRAND_NAME_ALIASES, CHARMI_NAME_ALIASES, ZALAK_NAME_ALIASES } from "@/config/brandLine";
 
 /**
  * Schema.org structured data for search engines and AI crawlers.
@@ -34,6 +35,7 @@ export function JsonLd() {
         "@type": ["MedicalOrganization", "Organization"],
         "@id": orgId,
         name: SITE_NAME,
+        alternateName: [...BRAND_NAME_ALIASES],
         url: origin,
         logo: ogImage,
         image: ogImage,
@@ -74,6 +76,7 @@ export function JsonLd() {
         "@type": "Physician",
         "@id": charmiId,
         name: "Dr. Charmi Shah",
+        alternateName: [...CHARMI_NAME_ALIASES],
         // Schema.org MedicalSpecialty members only (Obstetric / Gynecologic). IVF & laparoscopy → knowsAbout.
         medicalSpecialty: ["Obstetric", "Gynecologic"],
         jobTitle: "Obstetrician, Gynecologist (OB-GYN) & IVF Specialist",
@@ -117,9 +120,10 @@ export function JsonLd() {
         "@type": "Person",
         "@id": zalakId,
         name: "Dr. Zalak Shah",
+        alternateName: [...ZALAK_NAME_ALIASES],
         jobTitle: "Women's Health Physiotherapist & STOTT Pilates Instructor (Mat & Reformer)",
         description:
-          "Women's health physiotherapist (BPT, MPT) and STOTT Pilates Instructor (Mat & Reformer); pelvic floor, prenatal/postnatal rehab, and musculoskeletal physiotherapy for women.",
+          "Women's health physiotherapist (BPT, MPT in women's health) and STOTT Pilates Instructor (Mat & Reformer), including prenatal Pilates; pelvic floor, prenatal/postnatal rehab, and musculoskeletal physiotherapy for women.",
         knowsAbout: [
           "Women's health physiotherapy",
           "Physiotherapy",
@@ -160,6 +164,7 @@ export function JsonLd() {
         "@id": websiteId,
         url: origin,
         name: SITE_NAME,
+        alternateName: [...BRAND_NAME_ALIASES],
         description: DEFAULT_DESCRIPTION,
         inLanguage: ["en-IN", "en"],
         publisher: { "@id": orgId },
@@ -167,7 +172,7 @@ export function JsonLd() {
       {
         "@type": ["MedicalClinic", "LocalBusiness"],
         "@id": `${githubPagesAbsoluteUrl(SITE_URL, ROUTES.ahmedabad)}#clinic`,
-        name: `${SITE_NAME} ,  Ahmedabad`,
+        name: `${SITE_NAME}, Ahmedabad`,
         url: githubPagesAbsoluteUrl(SITE_URL, ROUTES.ahmedabad),
         telephone: CONTACT.phoneE164,
         email: CONTACT.email,
@@ -185,7 +190,7 @@ export function JsonLd() {
       {
         "@type": ["MedicalClinic", "LocalBusiness"],
         "@id": `${githubPagesAbsoluteUrl(SITE_URL, ROUTES.mumbai)}#clinic`,
-        name: `${SITE_NAME} ,  Mumbai`,
+        name: `${SITE_NAME}, Mumbai`,
         url: githubPagesAbsoluteUrl(SITE_URL, ROUTES.mumbai),
         telephone: CONTACT.phoneE164,
         email: CONTACT.email,
@@ -203,7 +208,7 @@ export function JsonLd() {
       {
         "@type": ["MedicalClinic", "LocalBusiness"],
         "@id": `${githubPagesAbsoluteUrl(SITE_URL, ROUTES.valsad)}#clinic`,
-        name: `${SITE_NAME} ,  Valsad`,
+        name: `${SITE_NAME}, Valsad`,
         url: githubPagesAbsoluteUrl(SITE_URL, ROUTES.valsad),
         telephone: CONTACT.phoneE164,
         email: CONTACT.email,
@@ -221,7 +226,7 @@ export function JsonLd() {
       {
         "@type": ["MedicalClinic", "LocalBusiness"],
         "@id": `${githubPagesAbsoluteUrl(SITE_URL, ROUTES.bangalore)}#clinic`,
-        name: `${SITE_NAME} ,  Bengaluru (Bangalore)`,
+        name: `${SITE_NAME}, Bengaluru (Bangalore)`,
         url: githubPagesAbsoluteUrl(SITE_URL, ROUTES.bangalore),
         telephone: CONTACT.phoneE164,
         email: CONTACT.email,

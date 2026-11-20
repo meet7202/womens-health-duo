@@ -24,6 +24,8 @@ import { PRACTICE_BOTH_DOCTORS_IN_PERSON } from "@/config/practiceLocations";
 import { virtualCountryFaqs } from "@/data/contextualFaqs";
 import { virtualCountryDocumentTitle, virtualCountryH1 } from "@/lib/pageSeoCopy";
 import { TelemedicineComplianceBlock } from "@/components/compliance/TelemedicineComplianceBlock";
+import { CannotGetSeenLocally } from "@/components/international/InternationalConsultationLayout";
+import { OVERSEAS_QUICK_ACCESS_COUNTRIES } from "@/data/internationalServices/quickAccessServices";
 
 function buildDescription(country: string, cityCount: number) {
   return `Virtual OB-GYN, IVF discussion, laparoscopy consults, women's health physiotherapy, Mat Pilates online, and STOTT Pilates (Mat & Reformer) for patients in ${country}. ${cityCount} city overviews link to each type of online visit, book via WhatsApp or email. ${PRACTICE_BOTH_DOCTORS_IN_PERSON}`;
@@ -88,15 +90,19 @@ export function VirtualConsultationCountryPage() {
           and links to every kind of online visit we offer there.
         </p>
 
+        {(OVERSEAS_QUICK_ACCESS_COUNTRIES as readonly string[]).includes(row.country) ? (
+          <CannotGetSeenLocally headingId="country-quick-access" />
+        ) : null}
+
         <div className="flex flex-wrap gap-3 mb-10">
           <Button variant="secondary" asChild>
             <Link to={ROUTES.onlineConsultation}>Virtual hub (all regions)</Link>
           </Button>
           <Button variant="secondary" asChild>
-            <Link to={ROUTES.drCharmi}>Dr. Charmi , profile</Link>
+            <Link to={ROUTES.drCharmi}>Dr. Charmi Shah's profile</Link>
           </Button>
           <Button variant="secondary" asChild>
-            <Link to={ROUTES.drZalak}>Dr. Zalak , profile</Link>
+            <Link to={ROUTES.drZalak}>Dr. Zalak Shah's profile</Link>
           </Button>
         </div>
 

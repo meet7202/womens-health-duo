@@ -1,0 +1,22 @@
+{
+  "id": "W31-Z",
+  "openClinicalQuestions": [
+    "Confirm whether WHD asks for a urine test before accepting a frequency complaint into physiotherapy."
+  ],
+  "claimLedger": [
+    {
+      "claim": "Needing to pee more often or suddenly, with pain on peeing, can be a urine infection.",
+      "sourceUrl": "https://www.nhs.uk/conditions/urinary-tract-infections-utis/",
+      "sourceSection": "NHS · Urinary tract infections (UTIs) · fetched 2026",
+      "limitations": "Infection page; not all frequency is infection.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Urgency incontinence is a sudden need to pee, distinct from leaks on coughing.",
+      "sourceUrl": "https://www.nhs.uk/conditions/urinary-incontinence/",
+      "sourceSection": "NHS · Urinary incontinence · fetched 2026",
+      "limitations": "Describes leakage types after infection is considered.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

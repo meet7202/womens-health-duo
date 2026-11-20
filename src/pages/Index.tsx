@@ -9,12 +9,26 @@ import { JsonLdFaq } from "@/components/seo/JsonLdFaq";
 import { SeoHead } from "@/components/seo/SeoHead";
 import { SITE_URL } from "@/config/site";
 import { HOME_PAGE_FAQ } from "@/data/homePageFaq";
+import { homeBelowFoldForSsr } from "@/prerender/homeBelowFoldSsr";
 
 /**
  * Hero + chrome stay eager. Below-the-fold sections (and framer-motion) load in a
  * separate chunk so LCP is not blocked by About/Services/Contact JS.
+ * Prerender reads the component registered by `entry-server` so `/about` and the
+ * other section permalinks include About, services, and FAQ answers.
  */
-const HomeBelowFold = lazy(() => import("./HomeBelowFold"));
+const HomeBelowFoldLazy = import.meta.env.SSR ? null : lazy(() => import("./HomeBelowFold"));
+
+function HomeBelowFoldGate() {
+  if (import.meta.env.SSR) {
+    // Read at render time. Module init runs before entry-server assigns the slot.
+    const Cmp = homeBelowFoldForSsr();
+    if (!Cmp) return null;
+    return <Cmp />;
+  }
+  if (!HomeBelowFoldLazy) return null;
+  return <HomeBelowFoldLazy />;
+}
 
 const Index = () => {
   const location = useLocation();
@@ -54,7 +68,7 @@ const Index = () => {
       <main id="main-content" className="pb-28">
         <HeroSection />
         <Suspense fallback={<div className="min-h-[40vh] bg-background" aria-hidden="true" />}>
-          <HomeBelowFold />
+          <HomeBelowFoldGate />
         </Suspense>
       </main>
     </div>

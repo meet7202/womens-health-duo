@@ -1,0 +1,102 @@
+{
+  "id": "W28-Z",
+  "title": "Can Women's Health Physiotherapy Be Done Online?",
+  "seoTitle": "Online women's health physiotherapy limits",
+  "description": "Online physiotherapy can review symptoms and watch movement. It cannot do an internal exam or handle emergencies. Some problems still need an in-person visit.",
+  "primaryQuestion": "What can an online women's health physiotherapy visit do?",
+  "directAnswer": "An online visit can take a detailed history, watch how you move, breathe and change position, and agree a home plan you can film or describe between sessions. It cannot perform an internal pelvic-floor examination, feel a scar, or rule out a medical emergency. If your main question needs hands-on testing, an in-person appointment is the honest next step. Video is a way of delivering care. On its own it is neither better nor worse than being in the room.",
+  "storytellingNote": "",
+  "sections": [
+    {
+      "heading": "What travels well over video",
+      "paragraphs": [
+        "Symptom diaries, cough-leak stories, and questions about lifting a baby or returning to a walk are easy to discuss on a call. A clinician can watch a sit-to-stand, a cough, or how your tummy behaves when you roll in bed, if the camera angle is safe and you are comfortable.",
+        "Education about bladder irritants, constipation habits and pacing is also possible without touching you. NHS pelvic-floor pages already give the public a starting description of those muscles. A visit turns that general advice into something matched to your notes."
+      ]
+    },
+    {
+      "heading": "What video cannot replace",
+      "paragraphs": [
+        "An internal exam, a prolapse assessment by touch, and some scar or joint tests need you in the room. Guessing muscle strength from a selfie is not an assessment. If that information would change the plan, say so and arrange an in-person slot where Dr. Zalak Shah (PT) practises, or a local pelvic-health physiotherapist.",
+        "Connection dropouts, a shared room, and childcare in the background also limit what can be covered. You can pause or switch to audio. You should not be asked to undress on camera in a way that feels unsafe."
+      ]
+    },
+    {
+      "heading": "Who should not start online",
+      "paragraphs": [
+        "Do not book a routine video call for sudden inability to pass urine, new loss of bowel control, numbness in the saddle area, heavy bleeding, fainting, chest pain, or severe pain in pregnancy. Use emergency services.",
+        "Fever with pelvic pain, a breast lump, or bleeding after menopause also need a doctor first. Physiotherapy can join later. It should not be the first stop for those problems."
+      ]
+    },
+    {
+      "heading": "How to prepare a useful call",
+      "paragraphs": [
+        "Write three days of bladder and bowel notes if leaks are the issue, and the date of birth or surgery if that applies. Wear clothes you can move in. Prop the phone so your whole trunk is visible for movement checks, not only your face.",
+        "Have your questions written down. A good online session ends with one or two things to practise, not a long exercise list you will not do. Medical red flags noticed on the call get redirected to Dr. Charmi Shah or local urgent care."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is online physiotherapy less effective than being in the room?",
+      "answer": "It depends on the question. History and movement coaching can work on video. Problems that need an internal exam or hands-on testing need an in-person visit. The format should match the question."
+    },
+    {
+      "question": "Can you diagnose prolapse on a video call?",
+      "answer": "No. You can describe heaviness or a bulge, and that history matters, but confirming prolapse needs an examination. Do not treat a camera view as a diagnosis."
+    }
+  ],
+  "references": [
+    {
+      "label": "NHS: What are pelvic floor exercises?",
+      "url": "https://www.nhs.uk/common-health-questions/womens-health/what-are-pelvic-floor-exercises/"
+    },
+    {
+      "label": "POGP: Patient information",
+      "url": "https://thepogp.co.uk/patient_information/default.aspx"
+    }
+  ],
+  "conversionCopy": "If a video physiotherapy review is appropriate for your symptoms, you can book with Dr. Zalak Shah (PT).",
+  "explainerAlt": "Split sketch of tasks possible on video versus tasks that need an in-person examination",
+  "internalLinks": [
+    {
+      "anchor": "what women's health physiotherapy is",
+      "path": "/what-is-womens-health-physiotherapy/"
+    },
+    {
+      "anchor": "what happens in a session",
+      "path": "/what-happens-during-a-physiotherapy-session/"
+    },
+    {
+      "anchor": "bladder leakage",
+      "path": "/bladder-leakage/"
+    }
+  ],
+  "parentHub": "/womens-health-physiotherapy/",
+  "review": {
+    "corrections": [
+      "Stated video limits plainly, including no internal exam and no emergency care."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "NHS",
+        "title": "What are pelvic floor exercises?",
+        "url": "https://www.nhs.uk/common-health-questions/womens-health/what-are-pelvic-floor-exercises/",
+        "date": "fetched 2026",
+        "limitations": "Does not describe telehealth.",
+        "recommendation": "Pelvic floor training is a skill that needs correct technique, which is the part a clinician can coach."
+      },
+      {
+        "organisation": "POGP",
+        "title": "Patient information",
+        "url": "https://thepogp.co.uk/patient_information/default.aspx",
+        "date": "fetched 2026",
+        "limitations": "Index page, not a telehealth standard.",
+        "recommendation": "Pelvic-health problems are a physiotherapy scope that still requires proper assessment."
+      }
+    ],
+    "openQuestions": [
+      "Confirm WHD's written list of problems that must be seen in person before any online physio booking."
+    ]
+  }
+}
