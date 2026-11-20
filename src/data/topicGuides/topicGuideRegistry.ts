@@ -94,6 +94,7 @@ function capitalizeWord(w: string): string {
   if (low === "pmdd") return "PMDD";
   if (low === "c-section") return "C-section";
   if (low === "stott") return "STOTT";
+  if (low === "womens") return "Women's";
   return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
 }
 function polishGuideTitle(joined: string): string {

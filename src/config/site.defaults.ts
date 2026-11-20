@@ -38,7 +38,7 @@ export const CONTACT = {
 export const GTM_CONTAINER_ID = "GTM-57NMVQVN";
 
 /** Target ~60 characters (Bing warns above 70). Used when a page omits `SeoHead` title. */
-export const DEFAULT_TITLE = "Dr. Charmi Shah & Dr. Zalak Shah: Women's Health Duo";
+export const DEFAULT_TITLE = "Dr. Charmi & Dr. Zalak Shah: OB-GYN, Physio & Pilates";
 
 /** Target 25–160 characters for Bing meta description audits (HTML + OG + Twitter). */
 export const DEFAULT_DESCRIPTION = `Women's Health Duo: book OB-GYN/IVF or physio consults in India and online. WhatsApp ${CONTACT.phoneE164}. Hormones, fertility, pelvic health, STOTT Pilates.`;
@@ -128,8 +128,9 @@ export const KEYWORDS = [
   "international consultation second opinion online",
 ].join(", ");
 
-export const OG_IMAGE_PATH = "/favicon.svg";
+/** 1200×630 JPEG; regenerate with `node scripts/generate-og-image.mjs` when portraits change. */
+export const OG_IMAGE_PATH = "/images/og-womens-health-duo.jpg";
 
 /** Default `og:image:alt` / `twitter:image:alt` when a page does not supply a specific poster. */
 export const DEFAULT_OG_IMAGE_ALT =
-  "Women's Health Duo — OB-GYN and women's health physiotherapy in India and online";
+  "Dr. Charmi Shah (OB-GYN, IVF) and Dr. Zalak Shah (PT, women's health physio and STOTT Pilates) of Women's Health Duo";

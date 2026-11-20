@@ -1,6 +1,6 @@
 # SEO growth plan — 20 November 2026
 
-Status: **proposed, not executed.** Nothing below ships until the owner approves each phase.
+Status: **Phases 1–3 implemented on `seo/audit-2026-11-20-consolidation` (local commits, not pushed).** Phase 0 deploy and Phase 4 owner actions are still open.
 
 Sources: Search Console API for `sc-domain:womenshealthduo.com` (16 months of daily data, 90-day pages and queries, URL Inspection on 20 URLs) and the claude-seo toolkit (`page_checks`, `transport_check`, `agentic_check`, `sitemap_discovery`) run on the live site. Raw page export: [`gsc/pages-90d.csv`](gsc/pages-90d.csv).
 
@@ -60,6 +60,7 @@ Each phase lists what changes, why the data supports it, and how we will know it
 - Decide on the ~500 virtual city pages: either noindex them too (keeping `/online-consultation/`, `/international-consultation/` and its service landings indexable) or keep a short list with real demand. The data shows no city with more than 2 clicks, so the recommendation is noindex all of them.
 - URLs stay live (no 404s), so bookmarks and links keep working.
 - Update `AGENTS.md`, `llms.txt`, the sitemap audit and the disposition ledger to match.
+- **Done (commit cdeb82f):** the 6,565 city×service pages are `noindex, follow` and their sitemap is gone. The owner chose to keep the ~500 virtual city pages indexable for now. After deploy, remove `sitemap-virtual-service-cities.xml` in Search Console.
 - **Check:** indexed count for the matrix trends to zero in Search Console; doctor-profile and India-city impressions recover toward the June–August level over 8–12 weeks. Recovery from a quality demotion is slow and not guaranteed.
 
 ### Phase 2 — Fix the India city pages (start with Bangalore)
@@ -68,6 +69,7 @@ Each phase lists what changes, why the data supports it, and how we will know it
 - Lead Bangalore with in-person women's health physiotherapy and STOTT Pilates with Dr. Zalak Shah (PT); keep Dr. Charmi Shah's line accurate and short.
 - Add verified local details only (area, landmark, hours, Google Business link already in `externalProfiles.ts`). **Needs from you:** the Bangalore and Ahmedabad studio area and hours. Nothing is invented.
 - Remove the “ , ” separators sitewide.
+- **Done (commit 7a4d172 plus the Phase 3 commit):** per-city FAQ (booking, which doctor, physio or OB-GYN scope, emergency), Bangalore rewritten around Dr. Zalak Shah (PT), clinic schema uses the city name, stray separators removed, and the Ahmedabad and Bengaluru Google Business links replaced with the ones the owner supplied. Studio area and hours were not supplied, so none were added.
 - **Check:** `/bangalore/` moves from Soft 404 to “Submitted and indexed”.
 
 ### Phase 3 — Earn the clicks the homepage already ranks for
@@ -77,6 +79,7 @@ Each phase lists what changes, why the data supports it, and how we will know it
 - Add descriptive internal links from the homepage hero area to `/pilates/`, `/womens-health-physiotherapy/`, `/dr-zalak-shah/`, `/bangalore/` and `/ahmedabad/`.
 - Replace the share image with a 1200×630 JPEG built from the approved doctor photos already in the repo.
 - Re-check `/diastasis-recti/` after deploy; if still not indexed, fold its unique copy into the calendar diastasis article and redirect.
+- **Done:** homepage title is “Dr. Charmi & Dr. Zalak Shah: OB-GYN, Physio & Pilates”; profile titles are “Dr. Charmi Shah: Gynecologist & IVF” and “Dr. Zalak Shah (PT): Physio & Pilates” (no truncation); slug-derived guide titles now spell “Women's”; `/diastasis-recti/` is retitled “Diastasis Recti After Pregnancy” so it no longer mirrors `/what-is-diastasis-recti/`. The homepage topic cards link to the PCOS, hormones, periods, endometriosis, fertility, pregnancy-planning, physiotherapy, prenatal, postnatal, diastasis, bladder-leakage and Pilates pages instead of four identical “Learn hub” buttons (profiles and city pages were already linked). The default share image is `/images/og-womens-health-duo.jpg` (1200×630, `scripts/generate-og-image.mjs`).
 - **Check:** homepage CTR on the Zalak-lane queries above; profile pages ranking for the doctor-name searches instead of the homepage.
 
 ### Phase 4 — Owner actions outside the repo

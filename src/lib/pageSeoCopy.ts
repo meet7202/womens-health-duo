@@ -208,6 +208,11 @@ export function indiaCityDocumentTitle(
   }
 }
 
+/** Short specialty for profile titles; name + specialty must fit before the brand suffix (39 chars). */
+export function doctorTitleSpecialty(slug: "charmi" | "zalak"): string {
+  return slug === "charmi" ? "Gynecologist & IVF" : "Physio & Pilates";
+}
+
 export function doctorDocumentTitle(name: string, specialty: string): string {
-  return formatDocumentTitle(`${name} – ${specialty}`);
+  return formatDocumentTitle(`${name}: ${specialty}`);
 }

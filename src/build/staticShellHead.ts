@@ -73,6 +73,7 @@ import {
   learnWatchH1,
   learnWatchMetaDescription,
   doctorDocumentTitle,
+  doctorTitleSpecialty,
   indiaCityDocumentTitle,
   topicGuideDocumentTitle,
   virtualCityDocumentTitle,
@@ -495,8 +496,7 @@ export function resolveShellPageMeta(siteUrl: string, pathname: string): ShellPa
 
   for (const d of Object.values(DOCTOR_BY_SLUG)) {
     if (d.path === path) {
-      const specialty =
-        d.slug === "charmi" ? "OB-GYN, IVF & laparoscopy" : "Women's health physio & Pilates";
+      const specialty = doctorTitleSpecialty(d.slug);
       const blurb = d.overview[0]?.trim();
       return {
         canonicalHref,

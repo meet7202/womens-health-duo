@@ -10,7 +10,7 @@ import { whatsappMessageDoctorProfile, whatsappUrlWithMessage } from "@/lib/what
 import { TrackedWhatsAppLink, WHATSAPP_CTA_CLASS } from "@/components/cta/TrackedWhatsAppLink";
 import { DOCTOR_BY_SLUG, type DoctorSlug } from "@/data/doctorProfiles";
 import { bookConsultationPath } from "@/lib/bookingIntent";
-import { doctorDocumentTitle } from "@/lib/pageSeoCopy";
+import { doctorDocumentTitle, doctorTitleSpecialty } from "@/lib/pageSeoCopy";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { InclusiveSeoListFootnote } from "@/components/seo/InclusiveSeoListFootnote";
@@ -71,10 +71,7 @@ type DoctorProfilePageProps = {
 
 export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
   const d = DOCTOR_BY_SLUG[slug];
-  const docTitle = doctorDocumentTitle(
-    d.name,
-    slug === "charmi" ? "OB-GYN, IVF & laparoscopy" : "Women's health physio & Pilates",
-  );
+  const docTitle = doctorDocumentTitle(d.name, doctorTitleSpecialty(d.slug));
   const img = IMAGES[slug];
   const crumbs = [
     { name: "Home", path: ROUTES.home },
