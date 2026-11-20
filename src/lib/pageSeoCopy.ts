@@ -89,9 +89,9 @@ export function learnHubDocumentTitle(parsed: LearnHubParsed): string {
     return formatDocumentTitle(`${learnDoctorLabel(parsed.doctor)} clips`);
   }
   if (parsed.doctor === "all" && parsed.topic !== "all") {
-    return formatDocumentTitle(parsed.topic);
+    return formatDocumentTitle(`${parsed.topic} videos`);
   }
-  return formatDocumentTitle(`${learnDoctorLabel(parsed.doctor)} · ${parsed.topic}`);
+  return formatDocumentTitle(`${parsed.topic} videos · ${learnDoctorLabel(parsed.doctor)}`);
 }
 
 export function learnHubH1(parsed: LearnHubParsed): string {
@@ -102,13 +102,29 @@ export function learnHubH1(parsed: LearnHubParsed): string {
     return `${learnDoctorLabel(parsed.doctor)} health clips`;
   }
   if (parsed.doctor === "all" && parsed.topic !== "all") {
-    return parsed.topic;
+    return `${parsed.topic} videos`;
   }
-  return `${parsed.topic} – ${learnDoctorLabel(parsed.doctor)}`;
+  return `${parsed.topic} videos with ${learnDoctorLabel(parsed.doctor)}`;
+}
+
+/** Emoji and skin-tone / variation modifiers from Instagram captions read as noise in titles. */
+function stripEmoji(text: string): string {
+  return text
+    .replace(/\p{Extended_Pictographic}/gu, "")
+    .replace(/[\u{1F3FB}-\u{1F3FF}]/gu, "")
+    .replace(/\u{FE0F}|\u{200D}/gu, "")
+    .replace(/\s+/g, " ")
+    .replace(/^[\s\p{P}]+(?=\p{L})/u, "")
+    .trim();
+}
+
+function watchTitleBase(video: KnowledgeHubVideo): string {
+  const raw = knowledgeHubVideoDisplayTitle(video);
+  return stripEmoji(raw) || raw;
 }
 
 export function learnWatchDocumentTitle(video: KnowledgeHubVideo): string {
-  const base = knowledgeHubVideoDisplayTitle(video);
+  const base = watchTitleBase(video);
   if (video.kind === "instagram_post") {
     const suffix = video.instagramPostType === "carousel" ? "Instagram carousel" : "Instagram post";
     return formatDocumentTitle(`${base} — ${suffix}`);
@@ -118,11 +134,11 @@ export function learnWatchDocumentTitle(video: KnowledgeHubVideo): string {
 
 export function learnWatchH1(video: KnowledgeHubVideo): string {
   if (video.kind === "instagram_post") {
-    const base = knowledgeHubVideoDisplayTitle(video);
+    const base = watchTitleBase(video);
     const suffix = video.instagramPostType === "carousel" ? "Instagram carousel" : "Instagram post";
     return `${base} — ${suffix}`;
   }
-  return knowledgeHubVideoDisplayTitle(video);
+  return watchTitleBase(video);
 }
 
 export function learnWatchMetaDescription(video: KnowledgeHubVideo): string {

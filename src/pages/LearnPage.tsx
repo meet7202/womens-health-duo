@@ -5,7 +5,7 @@ import { JsonLdGraph } from "@/components/seo/JsonLdGraph";
 import { PageShell } from "@/components/layout/PageShell";
 import { CONTACT, HOME_ENTITY_DEFINITION, SITE_URL } from "@/config/site";
 import { ROUTES } from "@/config/routes";
-import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
+import { githubPagesAbsoluteUrl, publicPathname } from "@/lib/githubPagesPublicUrl";
 import { learnHubFaqsForTopic, learnHubFaqHeading } from "@/data/contextualFaqs";
 import { KnowledgeHubVideoHub } from "@/components/learn/KnowledgeHubVideoHub";
 import { LearnTopicalAuthoritySection } from "@/components/learn/LearnTopicalAuthoritySection";
@@ -19,7 +19,10 @@ import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { Youtube, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AppLink as Link } from "@/components/router/AppLink";
+import { LEARN_TOPIC_INTROS } from "@/data/learnTopicIntros";
+import { ROBOTS_NOINDEX_FOLLOW } from "@/config/routeDisposition";
 import {
+  isIndexableLearnHubFilter,
   learnHubBreadcrumbs,
   learnHubFilteredPath,
   learnHubSeoDescription,
@@ -63,6 +66,8 @@ export function LearnPage() {
   const title = learnHubSeoTitle(parsed);
   const h1 = learnHubSeoH1(parsed);
   const description = learnHubSeoDescription(parsed);
+  const topicIntro = parsed.topic === "all" ? undefined : LEARN_TOPIC_INTROS[parsed.topic];
+  const indexable = isIndexableLearnHubFilter(parsed);
 
   const learnFaqItems = useMemo(
     () => learnHubFaqsForTopic(parsed.topic === "all" ? "all" : parsed.topic),
@@ -87,7 +92,12 @@ export function LearnPage() {
 
   return (
     <PageShell breadcrumbs={crumbs}>
-      <SeoHead title={title} metaDescription={description} path={canonicalPath} />
+      <SeoHead
+        title={title}
+        metaDescription={description}
+        path={canonicalPath}
+        {...(indexable ? {} : { robots: ROBOTS_NOINDEX_FOLLOW })}
+      />
       <JsonLdGraph graph={graph} />
       <JsonLdFaq items={learnFaqItems} pageUrl={githubPagesAbsoluteUrl(SITE_URL, canonicalPath)} />
 
@@ -98,7 +108,28 @@ export function LearnPage() {
         <p className="text-base sm:text-lg font-medium text-foreground/95 leading-relaxed border-l-2 border-primary/35 pl-4 mb-3 max-w-3xl">
           {HOME_ENTITY_DEFINITION}
         </p>
-        <p className="text-lg text-muted-foreground leading-relaxed mb-6">{LEARN_HUB_INTRO}</p>
+        <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+          {topicIntro?.intro ?? LEARN_HUB_INTRO}
+        </p>
+        {topicIntro ? (
+          <div className="mb-6 max-w-3xl">
+            <h2 className="font-heading text-lg font-semibold text-foreground mb-2">
+              Written guides on {parsed.topic.toLowerCase()}
+            </h2>
+            <ul className="flex flex-wrap gap-x-5 gap-y-1.5 text-sm">
+              {topicIntro.guides.map((g) => (
+                <li key={g.path}>
+                  <Link
+                    to={publicPathname(g.path)}
+                    className="text-primary underline underline-offset-4"
+                  >
+                    {g.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
         <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-3xl">
           For written answers you can follow link by link (not only reels and posts), see{" "}
           <Link

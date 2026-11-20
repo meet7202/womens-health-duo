@@ -22,7 +22,12 @@ import {
 } from "./src/config/routes.ts";
 import { redirectAliasShellPathnames } from "./src/config/routeDisposition.ts";
 import { topicGuideSitemapPaths } from "./src/data/topicGuides/topicGuideSitemapPaths.ts";
-import { learnWatchShellPathnames } from "./src/lib/learnHubUrls.ts";
+import {
+  learnHubShellPathnames,
+  learnHubSitemapPaths,
+  learnWatchShellPathnames,
+  learnWatchSitemapPaths,
+} from "./src/lib/learnHubUrls.ts";
 import {
   applyShellPageMetaToHtml,
   assertShellPagePlaceholdersPresent,
@@ -226,6 +231,7 @@ function staticSpaShellPathnames(): string[] {
     ...new Set([
       ...allSitemapPathnames(),
       ...learnWatchShellPathnames(),
+      ...learnHubShellPathnames(),
       ...legacyGlobalOnlineShellPathnames(),
       ...redirectAliasShellPathnames(),
     ]),
@@ -438,6 +444,8 @@ export default defineConfig(({ mode }) => {
             if (process.env.WHD_PRERENDER !== "0") {
               const prerender = await prerenderPriorityPagesIntoShells(outDirAbs, rootDir, [
                 ...topicGuideSitemapPaths(),
+                ...learnHubSitemapPaths(),
+                ...learnWatchSitemapPaths(),
               ]);
               console.info(
                 `[seo-10] prerender priority pages: ${prerender.succeeded}/${prerender.attempted} ok` +

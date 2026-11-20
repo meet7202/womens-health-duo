@@ -29,6 +29,7 @@ import {
 import { INTERNATIONAL_HUB } from "../data/internationalServices/hubContent";
 import { homeSectionSeo } from "../lib/homeSectionPaths";
 import {
+  isIndexableLearnHubFilter,
   learnHubFilteredPath,
   learnHubSeoDescription,
   learnHubSeoTitle,
@@ -480,6 +481,7 @@ export function resolveShellPageMeta(siteUrl: string, pathname: string): ShellPa
       title: learnHubSeoTitle(parsed),
       h1: learnHubSeoH1(parsed),
       metaDescription: learnHubSeoDescription(parsed),
+      ...(isIndexableLearnHubFilter(parsed) ? {} : { robots: ROBOTS_NOINDEX_FOLLOW }),
     };
   }
 

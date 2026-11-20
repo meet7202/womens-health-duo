@@ -2,9 +2,9 @@
  * SEO-10 — build-time React prerender paths (React 18 `renderToString`).
  *
  * Covers every **indexable content template** with at least one URL (plus priority hubs).
- * Indexable topic guides are appended at build time from `topicGuideSitemapPaths()`
- * (see `vite.config.ts`) so guide bodies are not left on `#static-seo-shell`.
- * Watch and service×city matrix URLs stay shell-only. Soft-fail per path.
+ * Indexable topic guides, Learn filters and watch pages are appended at build time
+ * (see `vite.config.ts`) so their text is in the HTML without JavaScript.
+ * Service×city matrix URLs stay shell-only. Soft-fail per path.
  *
  * Must not use `@/` imports (loaded from Node / vite closeBundle).
  */

@@ -20,7 +20,13 @@ export async function prerenderPriorityPagesIntoShells(
   rootDir: string,
   extraPaths: readonly string[] = [],
 ): Promise<{ attempted: number; succeeded: number; failed: number; errors: string[] }> {
-  const pathnames = [...new Set([...PRERENDER_PRIORITY_PATHS, ...extraPaths])];
+  const pathnames = [
+    ...new Set(
+      [...PRERENDER_PRIORITY_PATHS, ...extraPaths].map((p) =>
+        p === "/" ? p : `${p.replace(/\/+$/, "")}/`,
+      ),
+    ),
+  ];
   const cacheDir = path.join(rootDir, "node_modules/.cache");
   const pathsFile = path.join(cacheDir, "whd-prerender-paths.json");
   const resultFile = path.join(cacheDir, "whd-prerender-result.json");
