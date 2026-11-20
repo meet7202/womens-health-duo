@@ -75,26 +75,22 @@ export const HOME_SECTION_SCROLL_PATHS: readonly string[] = [
 ];
 
 /**
- * Each online service for every virtual city. All stay routable with static shells. Only the
- * featured subset below is indexable (scaled-template risk; see
- * `docs/seo-growth-plan-2026-11-20.md`). Add pages through the Search Console selection
- * script, not by hand. SEO-11: city list is frozen via `VIRTUAL_CONSULTATION_CITY_COUNT_FREEZE`.
+ * Each online service for every virtual city. The whole matrix is the online brand and is
+ * indexable, including Mumbai, Ahmedabad, Valsad, and Bengaluru. Those four cities also
+ * keep their in-person pages (`/mumbai/`, `/ahmedabad/`, `/valsad/`, `/bangalore/`).
+ * SEO-11: city list is frozen via
+ * `VIRTUAL_CONSULTATION_CITY_COUNT_FREEZE`.
  */
 export const VIRTUAL_SERVICE_CITY_PATHS: readonly string[] = VIRTUAL_CONSULTATION_CITIES.flatMap(
   (c) => SEO_ONLINE_SERVICES.map((s) => virtualServiceCityPath(c, s.slug)),
 );
 
-/**
- * Indexable subset of the matrix, picked from Search Console data in
- * `src/data/featuredServiceCityPaths.json`. Widen it by re-running
- * `scripts/select-featured-service-cities.mjs` with a higher `--limit`.
- */
+/** Every service×city page. Historical name; the full matrix is indexable. */
 export const SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITY_FEATURED: readonly string[] =
-  VIRTUAL_SERVICE_CITY_PATHS.filter((p) => isFeaturedServiceCityPath(p));
+  VIRTUAL_SERVICE_CITY_PATHS;
 
-/** Matrix pages that stay `noindex, follow` and out of the sitemap. */
-export const VIRTUAL_SERVICE_CITY_NOINDEX_PATHS: readonly string[] =
-  VIRTUAL_SERVICE_CITY_PATHS.filter((p) => !isFeaturedServiceCityPath(p));
+/** Nothing in the matrix is noindex. Kept so build meta and audits fail if this is repopulated. */
+export const VIRTUAL_SERVICE_CITY_NOINDEX_PATHS: readonly string[] = [];
 
 const VIRTUAL_COUNTRY_SITEMAP_PATHS: readonly string[] = VIRTUAL_CONSULTATION_COUNTRIES.map((c) =>
   virtualConsultationCountryPath(c),
@@ -219,15 +215,16 @@ export function sitemapPriorityForPath(pathname: string): string {
     if (segs.length === 1) return "0.96";
     if (segs[1] === "country") return "0.88";
     if (segs.length === 2) return "0.84";
-    return "0.70";
+    // Demand-proven pages sit a little above the rest of the online matrix.
+    return isFeaturedServiceCityPath(p) ? "0.78" : "0.72";
   }
 
   return "0.9";
 }
 
 /**
- * Paths listed in `sitemap.xml`. Of the `/online-consultation/:city/:service` matrix, only the
- * featured subset is listed; the rest is noindexed (`VIRTUAL_SERVICE_CITY_NOINDEX_PATHS`).
+ * Paths listed in `sitemap.xml`. Every `/online-consultation/:city/:service` page is listed.
+ * In-person local pages stay the four India city URLs.
  */
 export const SITEMAP_PATHS_PRIMARY_URLSET: readonly string[] = [
   ...SITEMAP_SEGMENT_CORE,
@@ -237,7 +234,7 @@ export const SITEMAP_PATHS_PRIMARY_URLSET: readonly string[] = [
   ...SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITY_FEATURED,
 ];
 
-/** Every routable page that gets a static shell: sitemap URLs plus the noindexed matrix. */
+/** Every routable page that gets a static shell. */
 export const SITEMAP_PATHS: readonly string[] = [
   ...SITEMAP_PATHS_PRIMARY_URLSET,
   ...VIRTUAL_SERVICE_CITY_NOINDEX_PATHS,

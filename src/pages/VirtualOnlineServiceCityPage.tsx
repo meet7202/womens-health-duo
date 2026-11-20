@@ -28,6 +28,8 @@ import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { InclusiveSeoListFootnote } from "@/components/seo/InclusiveSeoListFootnote";
 import { Button } from "@/components/ui/button";
 import {
+  inPersonClinicFor,
+  localCityPageFor,
   PRACTICE_CHARMI_IN_PERSON,
   PRACTICE_IN_PERSON_BOOKING_LINE,
   PRACTICE_ZALAK_IN_PERSON,
@@ -64,6 +66,8 @@ export function VirtualOnlineServiceCityPage() {
   const content = SERVICE_CITY_CONTENT[service.slug];
   const local = virtualServiceCityLocalFacts(city.city, city.countryCode);
   const doctor = DOCTOR_BY_SLUG[service.doctor];
+  const ownClinic = inPersonClinicFor(city.city, service.doctor);
+  const cityClinic = localCityPageFor(city.city);
   const crumbs = [
     { name: "Home", path: ROUTES.home },
     { name: "Virtual online consultations", path: ROUTES.onlineConsultation },
@@ -141,10 +145,36 @@ export function VirtualOnlineServiceCityPage() {
             , then book with your time zone and a short summary of your concern.
           </p>
           <p>
-            <strong className="text-foreground">In-person option:</strong> this {city.city} page is
-            for video care only. If you can travel, Dr. Charmi Shah sees patients in{" "}
-            {PRACTICE_CHARMI_IN_PERSON}, and Dr. Zalak Shah in {PRACTICE_ZALAK_IN_PERSON}, by
-            appointment at those centres. {PRACTICE_IN_PERSON_BOOKING_LINE}
+            {ownClinic ? (
+              <>
+                <strong className="text-foreground">Online and in person in {city.city}:</strong>{" "}
+                this page is the video consult with {doctor.name}. The same doctor also sees
+                patients in person here. Book a clinic visit from the{" "}
+                <Link to={ownClinic.path} className="text-primary underline underline-offset-4">
+                  {ownClinic.label} page
+                </Link>
+                , or stay on video. {PRACTICE_IN_PERSON_BOOKING_LINE}
+              </>
+            ) : cityClinic ? (
+              <>
+                <strong className="text-foreground">Video consult in {city.city}:</strong>{" "}
+                {doctor.name} sees patients online here. In-person visits with {doctor.name} are in{" "}
+                {service.doctor === "charmi" ? PRACTICE_CHARMI_IN_PERSON : PRACTICE_ZALAK_IN_PERSON}
+                . The{" "}
+                <Link to={cityClinic.path} className="text-primary underline underline-offset-4">
+                  {cityClinic.label} clinic page
+                </Link>{" "}
+                is for the doctor who does see patients in person in this city.{" "}
+                {PRACTICE_IN_PERSON_BOOKING_LINE}
+              </>
+            ) : (
+              <>
+                <strong className="text-foreground">In-person option:</strong> this {city.city} page
+                is for video care only. If you can travel, Dr. Charmi Shah sees patients in{" "}
+                {PRACTICE_CHARMI_IN_PERSON}, and Dr. Zalak Shah in {PRACTICE_ZALAK_IN_PERSON}, by
+                appointment at those centres. {PRACTICE_IN_PERSON_BOOKING_LINE}
+              </>
+            )}
           </p>
         </div>
 

@@ -1,15 +1,16 @@
 #!/usr/bin/env node
 /**
- * Picks the city×service pages that are indexable (the rest of the matrix stays noindex).
+ * Picks city×service pages with search demand. The full matrix stays indexable;
+ * this list only raises their sitemap priority.
  * Ranks every matrix URL by Search Console impressions + clicks from a page-dimension export
- * filtered to `/online-consultation/`, restricted to India (minus in-person cities, which have
- * their own city pages), the Gulf, and high-income markets.
+ * filtered to `/online-consultation/`, including the in-person cities (they keep online
+ * pages as well as the local city page), the Gulf, and high-income markets.
  *
  * Usage:
  *   node scripts/select-featured-service-cities.mjs \
  *     --gsc=.cache/seo-audit/gsc-online-consult-pages-6m.json [--limit=100]
  *
- * Writes src/data/featuredServiceCityPaths.json. Raise --limit to widen the indexable set.
+ * Writes src/data/featuredServiceCityPaths.json. Raise --limit to give more pages the higher priority.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -61,8 +62,6 @@ const HIGH_INCOME = [
   "PT",
 ];
 const ELIGIBLE = new Set([...INDIA, ...GULF, ...HIGH_INCOME]);
-/** In-person practice cities: their own city pages own local intent. */
-const IN_PERSON_CITY_NAMES = new Set(["mumbai", "ahmedabad", "valsad", "bengaluru", "bangalore"]);
 const CLICK_WEIGHT = 25;
 
 function normalizePath(url) {
@@ -95,7 +94,6 @@ async function main() {
     const eligible = new Map();
     for (const city of cities) {
       if (!ELIGIBLE.has(city.countryCode)) continue;
-      if (city.countryCode === "IN" && IN_PERSON_CITY_NAMES.has(city.city.toLowerCase())) continue;
       for (const service of services) {
         const p = virtualMod.virtualServiceCityPath(city, service.slug).replace(/\/+$/, "");
         eligible.set(p, { path: p, impressions: 0, clicks: 0 });
@@ -116,7 +114,7 @@ async function main() {
       .slice(0, limit);
 
     const payload = {
-      note: "Indexable city×service pages, ranked by Search Console impressions + clicks. Regenerate with scripts/select-featured-service-cities.mjs.",
+      note: "Higher sitemap priority for city×service pages with Search Console demand, including in-person cities. The full matrix stays indexable. Regenerate with scripts/select-featured-service-cities.mjs.",
       source: path.relative(root, gscFile),
       limit,
       paths: ranked.map((e) => e.path),

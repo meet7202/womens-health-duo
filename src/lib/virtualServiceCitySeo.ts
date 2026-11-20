@@ -2,7 +2,6 @@
  * Shared SEO strings for `/online-consultation/:city/:service` (React page + static shells).
  * Must not use `@/` path aliases (imported from `staticShellHead.ts` in Node).
  */
-import { isFeaturedServiceCityPath } from "../data/featuredServiceCities";
 import type { SeoOnlineService } from "../data/seoOnlineServices";
 import { SERVICE_CITY_CONTENT } from "../data/serviceCityContent";
 import {
@@ -27,7 +26,7 @@ export function virtualServiceCitySeo(city: VirtualConsultationCity, service: Se
   return {
     path,
     label,
-    indexable: isFeaturedServiceCityPath(path),
+    indexable: true,
     title: virtualServiceCityDocumentTitle(label, city.city, city.country, nameIsShared),
     h1: virtualServiceCityH1(label, city.city, city.country),
     metaDescription: virtualServiceCityMetaDescription(

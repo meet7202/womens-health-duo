@@ -1,6 +1,6 @@
 /**
- * City×service pages chosen from Search Console data (`scripts/select-featured-service-cities.mjs`).
- * Only these are indexable and listed in the sitemap; the rest of the matrix stays noindex.
+ * City×service pages with Search Console demand (`scripts/select-featured-service-cities.mjs`).
+ * The full matrix is indexable. This set only gets a slightly higher sitemap priority.
  * Must not use `@/` path aliases (imported from `routes.ts` in Node).
  */
 import featuredServiceCityPaths from "./featuredServiceCityPaths.json";

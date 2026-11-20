@@ -4,7 +4,7 @@
  * Covers every **indexable content template** with at least one URL (plus priority hubs).
  * Indexable topic guides, Learn filters and watch pages are appended at build time
  * (see `vite.config.ts`) so their text is in the HTML without JavaScript.
- * Service×city matrix URLs stay shell-only. Soft-fail per path.
+ * The full service×city matrix is appended from `vite.config.ts`. Soft-fail per path.
  *
  * Must not use `@/` imports (loaded from Node / vite closeBundle).
  */
@@ -50,6 +50,9 @@ export const PRERENDER_PRIORITY_PATHS: readonly string[] = [
   "/online-consultation",
   "/online-consultation/country/india",
   "/online-consultation/mumbai",
+  "/online-consultation/ahmedabad",
+  "/online-consultation/valsad",
+  "/online-consultation/bengaluru",
   "/online-consultation/mumbai/ivf-fertility-treatments",
 ];
 

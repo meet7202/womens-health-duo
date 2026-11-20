@@ -29,3 +29,52 @@ export const PRACTICE_IN_PERSON_BOOKING_LINE =
 /** Virtual / global pages: both doctors, one sentence */
 export const PRACTICE_BOTH_DOCTORS_IN_PERSON =
   "Dr. Charmi Shah in person in Mumbai, Ahmedabad, and Valsad; Dr. Zalak Shah in person in Bangalore and Ahmedabad, both offer virtual visits worldwide.";
+
+export type PracticeDoctorLane = "charmi" | "zalak";
+
+type LocalClinic = {
+  path: string;
+  label: string;
+  doctors: readonly PracticeDoctorLane[];
+  names: readonly string[];
+};
+
+/** Offline clinics. The same cities also have virtual service pages. */
+const LOCAL_CLINICS: readonly LocalClinic[] = [
+  { path: "/mumbai", label: "Mumbai", doctors: ["charmi"], names: ["mumbai"] },
+  {
+    path: "/ahmedabad",
+    label: "Ahmedabad",
+    doctors: ["charmi", "zalak"],
+    names: ["ahmedabad"],
+  },
+  { path: "/valsad", label: "Valsad", doctors: ["charmi"], names: ["valsad"] },
+  {
+    path: "/bangalore",
+    label: "Bengaluru (Bangalore)",
+    doctors: ["zalak"],
+    names: ["bengaluru", "bangalore"],
+  },
+];
+
+function clinicByCityName(cityName: string): LocalClinic | undefined {
+  const key = cityName.trim().toLowerCase();
+  return LOCAL_CLINICS.find((clinic) => clinic.names.includes(key));
+}
+
+/** In-person page when this doctor sees patients in that city. */
+export function inPersonClinicFor(
+  cityName: string,
+  doctor: PracticeDoctorLane,
+): { path: string; label: string } | null {
+  const clinic = clinicByCityName(cityName);
+  if (!clinic || !clinic.doctors.includes(doctor)) return null;
+  return { path: clinic.path, label: clinic.label };
+}
+
+/** Local city page when either doctor has a clinic there. */
+export function localCityPageFor(cityName: string): { path: string; label: string } | null {
+  const clinic = clinicByCityName(cityName);
+  if (!clinic) return null;
+  return { path: clinic.path, label: clinic.label };
+}

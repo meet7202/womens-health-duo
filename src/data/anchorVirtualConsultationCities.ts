@@ -23,7 +23,23 @@ export const ANCHOR_REGION_ORDER = [
 ] as const;
 
 export const ANCHOR_VIRTUAL_CONSULTATION_CITIES: readonly AnchorVirtualConsultationCity[] = [
-  // India
+  // India — in-person clinics also keep these online city pages
+  { slug: "mumbai-in", city: "Mumbai", country: "India", countryCode: "IN", region: "India" },
+  {
+    slug: "ahmedabad-in",
+    city: "Ahmedabad",
+    country: "India",
+    countryCode: "IN",
+    region: "India",
+  },
+  { slug: "valsad-in", city: "Valsad", country: "India", countryCode: "IN", region: "India" },
+  {
+    slug: "bengaluru-in",
+    city: "Bengaluru",
+    country: "India",
+    countryCode: "IN",
+    region: "India",
+  },
   { slug: "pune-in", city: "Pune", country: "India", countryCode: "IN", region: "India" },
   { slug: "hyderabad-in", city: "Hyderabad", country: "India", countryCode: "IN", region: "India" },
   { slug: "delhi-in", city: "Delhi", country: "India", countryCode: "IN", region: "India" },

@@ -44,7 +44,7 @@ import { buildVideoSitemapXml, videoSitemapEntryCount } from "./src/build/videoS
 import { writeImageSitemap } from "./src/build/imageSitemap.ts";
 import { writeAgentDiscoveryFiles } from "./src/build/agentDiscovery.ts";
 
-/** Every routable page pathname (sitemap URLs plus the noindexed matrix); used for static SPA shells. */
+/** Every routable page pathname; used for static SPA shells. */
 function allSitemapPathnames(): string[] {
   return [...SITEMAP_PATHS];
 }
@@ -325,7 +325,7 @@ Sitemap: ${siteUrl}/sitemap-images.xml
       SITEMAP_PATHS_PRIMARY_URLSET,
       siteUrl,
       lastmod,
-      "Indexable pages. Only the featured service×city pages are listed; the rest of the matrix is noindex.",
+      "Indexable pages, including every virtual service×city page. In-person local SEO stays on Mumbai, Ahmedabad, Valsad, and Bangalore.",
       {
         priority: sitemapPriorityForPath,
         changefreq: (p) => sitemapChangefreq(p, sitemapUrlsetKindForPath(p)),
@@ -349,12 +349,8 @@ Sitemap: ${siteUrl}/sitemap-images.xml
         lastmodStrategy: "omit-until-verified-content-revision",
         siteUrl,
         primaryUrlCount: SITEMAP_PATHS_PRIMARY_URLSET.length,
+        virtualServiceCityCount: SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITY_FEATURED.length,
         noindexVirtualServiceCityCount: VIRTUAL_SERVICE_CITY_NOINDEX_PATHS.length,
-        noindexVirtualServiceCitySample: VIRTUAL_SERVICE_CITY_NOINDEX_PATHS.filter(
-          (_, i) =>
-            i % Math.max(1, Math.floor(VIRTUAL_SERVICE_CITY_NOINDEX_PATHS.length / 25)) === 0,
-        ).slice(0, 25),
-        featuredVirtualServiceCityPaths: SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITY_FEATURED,
         videoUrlCount: videoSitemapEntryCount(),
         internationalConsultationUrlCount: SITEMAP_SEGMENT_INTERNATIONAL_CONSULTATION.length,
         staticShellCount: staticSpaShellPathnames().length,

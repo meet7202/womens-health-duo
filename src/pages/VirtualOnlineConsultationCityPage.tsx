@@ -25,7 +25,7 @@ import { ContentAuthors } from "@/components/seo/ContentAuthors";
 import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { InclusiveSeoListFootnote } from "@/components/seo/InclusiveSeoListFootnote";
 import { Button } from "@/components/ui/button";
-import { PRACTICE_BOTH_DOCTORS_IN_PERSON } from "@/config/practiceLocations";
+import { localCityPageFor, PRACTICE_BOTH_DOCTORS_IN_PERSON } from "@/config/practiceLocations";
 import { virtualCityOverviewFaqs } from "@/data/contextualFaqs";
 import { virtualCityDocumentTitle, virtualCityH1 } from "@/lib/pageSeoCopy";
 import { TelemedicineComplianceBlock } from "@/components/compliance/TelemedicineComplianceBlock";
@@ -52,6 +52,7 @@ export function VirtualOnlineConsultationCityPage() {
   }
 
   const path = virtualConsultationCityPath(row);
+  const localClinic = localCityPageFor(row.city);
   const countryHub = getVirtualConsultationCountryForCity(row);
   const title = virtualCityDocumentTitle(row.city, row.country);
   const h1 = virtualCityH1(row.city, row.country);
@@ -118,7 +119,17 @@ export function VirtualOnlineConsultationCityPage() {
           </p>
           <p>
             <strong className="text-foreground">In person:</strong>{" "}
-            {PRACTICE_BOTH_DOCTORS_IN_PERSON} Book through the practice. See{" "}
+            {PRACTICE_BOTH_DOCTORS_IN_PERSON}{" "}
+            {localClinic ? (
+              <>
+                This city has a clinic page as well as these online services:{" "}
+                <Link to={localClinic.path} className="text-primary underline underline-offset-4">
+                  {localClinic.label}
+                </Link>
+                .{" "}
+              </>
+            ) : null}
+            Book through the practice. See{" "}
             <Link to={ROUTES.drCharmi} className="text-primary underline underline-offset-4">
               Dr. Charmi Shah
             </Link>{" "}

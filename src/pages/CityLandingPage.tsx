@@ -18,6 +18,10 @@ import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { SITE_URL } from "@/config/site";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { indiaCityDocumentTitle } from "@/lib/pageSeoCopy";
+import {
+  getVirtualConsultationCityBySlug,
+  virtualConsultationCityPath,
+} from "@/lib/virtualConsultation";
 
 type CityLandingPageProps = {
   cityKey: CityKey;
@@ -40,6 +44,9 @@ export function CityLandingPage({ cityKey }: CityLandingPageProps) {
     medicalClinicForCity(city),
   ];
   const faqItems = useMemo(() => indiaCityFaqs(cityKey, city.cityName), [cityKey, city.cityName]);
+  const onlineCity = getVirtualConsultationCityBySlug(
+    cityKey === "bangalore" ? "bengaluru" : cityKey,
+  );
 
   return (
     <PageShell breadcrumbs={crumbs}>
@@ -85,15 +92,27 @@ export function CityLandingPage({ cityKey }: CityLandingPageProps) {
         </ul>
 
         <p className="rounded-lg border border-primary/20 bg-primary/5 px-4 py-3 text-sm text-foreground mb-8">
-          <strong>Outside India?</strong> Start on{" "}
+          <strong>Online in {city.cityName} too.</strong>{" "}
+          {onlineCity ? (
+            <>
+              Every video service for this city is on{" "}
+              <Link
+                to={virtualConsultationCityPath(onlineCity)}
+                className="text-primary underline underline-offset-4"
+              >
+                online consultations in {onlineCity.city}
+              </Link>
+              .{" "}
+            </>
+          ) : null}
+          Patients in other countries start from{" "}
           <Link
             to={ROUTES.onlineConsultation}
             className="text-primary underline underline-offset-4"
           >
-            Virtual online consultations
-          </Link>{" "}
-          for patients in Dubai, London, Singapore, Toronto, Sydney and elsewhere. Online OB-GYN and
-          physio consults are booked the same way worldwide.
+            virtual online consultations
+          </Link>
+          . Online OB-GYN and physio consults are booked the same way worldwide.
         </p>
 
         <div className="flex flex-wrap gap-3 mb-10">

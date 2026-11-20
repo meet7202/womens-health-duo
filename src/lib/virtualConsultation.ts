@@ -11,12 +11,12 @@ export type VirtualConsultationCity = (typeof virtualConsultationCities)[number]
  * SEO-11 — freeze city×service matrix expansion.
  *
  * Raising this expands `VIRTUAL_SERVICE_CITY_PATHS` (city × every
- * `SEO_ONLINE_SERVICES` slug) and must not happen silently. Since 20 November 2026 the
- * city×service pages are `noindex, follow` and out of the sitemap; city overview pages stay
- * indexable. To expand: update this baseline after explicit review, and set
+ * `SEO_ONLINE_SERVICES` slug) and must not happen silently. The full matrix is indexable.
+ * 506 includes Valsad so Dr. Charmi's in-person city also has online service pages.
+ * To expand further: update this baseline after explicit review, and set
  * `ALLOW_VIRTUAL_CITY_EXPANSION=1` when regenerating the JSON seed.
  */
-export const VIRTUAL_CONSULTATION_CITY_COUNT_FREEZE = 505;
+export const VIRTUAL_CONSULTATION_CITY_COUNT_FREEZE = 506;
 
 /** Lowercase slug for URLs (city names, country names, etc.). */
 export function slugifyUrlSegment(raw: string): string {

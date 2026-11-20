@@ -80,78 +80,58 @@ function main() {
     }
   }
   if (existsSync(join(DIST, "sitemap-virtual-service-cities.xml"))) {
-    errors.push("sitemap-virtual-service-cities.xml must not be emitted (matrix is noindex)");
+    errors.push(
+      "sitemap-virtual-service-cities.xml must not be emitted (the matrix is in sitemap.xml)",
+    );
   }
   if (robots.includes("sitemap-virtual-service-cities.xml")) {
     errors.push("robots.txt must not list sitemap-virtual-service-cities.xml");
   }
 
   const matrixLoc = /\/online-consultation\/(?!country\/)[^/]+\/[^/]+\/?$/;
-  const featured = new Set(
-    (meta.featuredVirtualServiceCityPaths ?? []).map((p) => p.replace(/\/+$/, "")),
-  );
-  const noindexImagePages = imagePages.filter((loc) => {
-    if (!matrixLoc.test(loc)) return false;
-    return !featured.has(new URL(loc).pathname.replace(/\/+$/, ""));
-  });
-  if (noindexImagePages.length > 0) {
-    errors.push(
-      `sitemap-images.xml lists ${noindexImagePages.length} noindexed service×city page(s), e.g. ${noindexImagePages[0]}`,
-    );
-  }
-
   const matrixInPrimary = primaryLocs.filter((loc) => matrixLoc.test(loc));
-  const unexpectedMatrix = matrixInPrimary.filter(
-    (loc) => !featured.has(new URL(loc).pathname.replace(/\/+$/, "")),
-  );
-  if (unexpectedMatrix.length > 0) {
+  const matrixExpected = meta.virtualServiceCityCount ?? 0;
+  if ((meta.noindexVirtualServiceCityCount ?? 0) !== 0) {
     errors.push(
-      `sitemap.xml lists ${unexpectedMatrix.length} noindexed service×city URL(s), e.g. ${unexpectedMatrix[0]}`,
+      `service×city pages must all be indexable; noindex count is ${meta.noindexVirtualServiceCityCount}`,
     );
   }
-  if (matrixInPrimary.length !== featured.size) {
+  if (matrixInPrimary.length !== matrixExpected) {
     errors.push(
-      `sitemap.xml lists ${matrixInPrimary.length} featured service×city URLs, expected ${featured.size}`,
+      `sitemap.xml lists ${matrixInPrimary.length} service×city URLs, expected ${matrixExpected}`,
     );
   }
-  let featuredProblems = 0;
-  for (const pathname of featured) {
+  let matrixProblems = 0;
+  for (const loc of matrixInPrimary) {
+    const pathname = new URL(loc).pathname.replace(/\/+$/, "");
     const shell = shellPathForPathname(`${pathname}/`);
     if (!existsSync(shell)) {
-      errors.push(`missing static shell for featured matrix page ${pathname}`);
+      matrixProblems += 1;
+      if (matrixProblems <= 3)
+        errors.push(`missing static shell for service×city page ${pathname}`);
       continue;
     }
     const html = readFileSync(shell, "utf8");
     const robotsOk = /<meta\s+name="robots"\s+content="index, follow/.test(html);
     const prerendered = html.includes("data-seo-prerender");
     if (!robotsOk || !prerendered) {
-      featuredProblems += 1;
-      if (featuredProblems <= 3) {
+      matrixProblems += 1;
+      if (matrixProblems <= 3) {
         errors.push(
-          `featured matrix page ${pathname}: ${robotsOk ? "" : "not index, follow "}${prerendered ? "" : "not prerendered"}`.trim(),
+          `service×city page ${pathname}: ${robotsOk ? "" : "not index, follow "}${prerendered ? "" : "not prerendered"}`.trim(),
         );
       }
     }
   }
+  if (matrixProblems > 3) {
+    errors.push(`… and ${matrixProblems - 3} more service×city shell problems`);
+  }
 
-  let matrixIndexable = 0;
-  let matrixChecked = 0;
-  const matrixSample = (meta.noindexVirtualServiceCitySample ?? []).slice(0, 25);
-  for (const pathname of matrixSample) {
-    const shell = shellPathForPathname(pathname.endsWith("/") ? pathname : `${pathname}/`);
-    if (!existsSync(shell)) {
-      errors.push(`missing static shell for noindexed matrix page ${pathname}`);
-      continue;
-    }
-    matrixChecked += 1;
-    const html = readFileSync(shell, "utf8");
-    if (!/<meta\s+name="robots"\s+content="noindex, follow"/.test(html)) matrixIndexable += 1;
-  }
-  if (matrixIndexable > 0) {
-    errors.push(`${matrixIndexable} sampled service×city shell(s) are missing noindex, follow`);
-  }
-  if ((meta.noindexVirtualServiceCityCount ?? 0) > 0 && matrixChecked === 0) {
-    errors.push("no service×city shells were sampled for noindex");
+  const imageMatrix = imagePages.filter((loc) => matrixLoc.test(loc));
+  if (imageMatrix.length > 0 && imageMatrix.length < matrixExpected) {
+    errors.push(
+      `sitemap-images.xml lists ${imageMatrix.length} service×city pages, expected ${matrixExpected}`,
+    );
   }
 
   const contentSignal = "Content-Signal: search=yes, ai-input=yes, ai-train=no";
@@ -216,7 +196,7 @@ function main() {
 
   if (errors.length === 0) {
     console.log(
-      `audit-seo-sitemap: OK (lastmodStrategy ${meta.lastmodStrategy ?? "unknown"}; primary ${primaryLocs.length}, video ${videoLocs.length}, images ${imageCount} on ${imagePages.length} pages; ${featured.size} featured service×city pages indexable, ${meta.noindexVirtualServiceCityCount} noindex, ${matrixChecked} sampled)`,
+      `audit-seo-sitemap: OK (lastmodStrategy ${meta.lastmodStrategy ?? "unknown"}; primary ${primaryLocs.length}, video ${videoLocs.length}, images ${imageCount} on ${imagePages.length} pages; ${matrixInPrimary.length} service×city pages indexable)`,
     );
     return;
   }
