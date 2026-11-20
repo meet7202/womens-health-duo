@@ -8214,7 +8214,8 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     id: "W27-C",
     slug: "what-is-pms",
     action: "Refresh",
-    publicationStatus: "in_clinical_review",
+    publicationStatus: "published",
+    publishedAt: "2026-11-20",
     scheduledAt: "2026-12-05T09:00:00+05:30",
     proposedLeadId: "charmi",
     title: "What Is PMS?",
@@ -8301,20 +8302,24 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     conversionCopy: "If premenstrual symptoms are disrupting your month, you can book a consultation with Dr. Charmi Shah and bring a two-cycle diary.",
     conversionPath: "/book-consultation/",
     parentHubPath: "/irregular-periods/",
+    reviewerIds: [
+      "zalak",
+      "charmi"
+    ],
     claimLedger: [
       {
         claim: "Premenstrual bloating, breast tenderness and mood change often ease once bleeding starts.",
         sourceUrl: "https://www.nhs.uk/conditions/periods/",
         sourceSection: "NHS · Periods · fetched 2026",
         limitations: "UK patient page; symptom lists are examples, not a diagnostic checklist.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       },
       {
         claim: "PMS means recurring luteal symptoms that affect usual activities.",
         sourceUrl: "https://www.acog.org/womens-health/faqs/premenstrual-syndrome",
         sourceSection: "ACOG · Premenstrual syndrome (PMS) · fetched 2026",
         limitations: "US FAQ; local treatment pathways differ.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       }
     ],
     openClinicalQuestions: [
@@ -8326,7 +8331,8 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     id: "W28-C",
     slug: "what-is-hormonal-imbalance",
     action: "Refresh",
-    publicationStatus: "in_clinical_review",
+    publicationStatus: "published",
+    publishedAt: "2026-11-20",
     scheduledAt: "2026-12-05T09:00:00+05:30",
     proposedLeadId: "charmi",
     title: "What Is a Hormonal Imbalance?",
@@ -8412,20 +8418,24 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     conversionCopy: "If cycle changes or hormone questions need a plan, you can book a consultation with Dr. Charmi Shah.",
     conversionPath: "/book-consultation/",
     parentHubPath: "/hormonal-imbalance/",
+    reviewerIds: [
+      "zalak",
+      "charmi"
+    ],
     claimLedger: [
       {
         claim: "Unpredictable cycles are a reason to seek clinical advice, especially when trying to conceive.",
         sourceUrl: "https://www.nhs.uk/conditions/irregular-periods/",
         sourceSection: "NHS · Irregular periods · fetched 2026",
         limitations: "UK self-care page; does not list every endocrine diagnosis.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       },
       {
         claim: "Period problems have many causes, including hormones, weight, stress, exercise and medical conditions.",
         sourceUrl: "https://www.nichd.nih.gov/health/topics/menstruation/conditioninfo/causes",
         sourceSection: "NICHD · What causes menstruation problems? · fetched 2026",
         limitations: "US overview; not a testing protocol.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       }
     ],
     openClinicalQuestions: [
@@ -8437,7 +8447,8 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     id: "W29-C",
     slug: "how-to-improve-fertility",
     action: "Refresh",
-    publicationStatus: "in_clinical_review",
+    publicationStatus: "published",
+    publishedAt: "2026-11-20",
     scheduledAt: "2026-12-05T09:00:00+05:30",
     proposedLeadId: "charmi",
     title: "How Can I Improve My Chances of Getting Pregnant?",
@@ -8523,20 +8534,24 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     conversionCopy: "If you want a fertility plan that fits your history, you can book a consultation with Dr. Charmi Shah.",
     conversionPath: "/book-consultation/",
     parentHubPath: "/fertility/",
+    reviewerIds: [
+      "zalak",
+      "charmi"
+    ],
     claimLedger: [
       {
         claim: "See a doctor after a year of trying if under 36, and sooner with age or known problems. Smoking, alcohol and weight are discussed.",
         sourceUrl: "https://www.nhs.uk/conditions/infertility/",
         sourceSection: "NHS · Infertility · fetched 2026",
         limitations: "UK pathways and age cut-offs; Indian referral rules differ.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       },
       {
         claim: "Have vaginal sex every two to three days. Most couples conceive within a year.",
         sourceUrl: "https://www.nice.org.uk/guidance/cg156/ifp/chapter/trying-for-a-baby",
         sourceSection: "NICE · Fertility problems: trying for a baby (CG156 public information) · CG156",
         limitations: "UK guideline information for the public.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       }
     ],
     openClinicalQuestions: [
@@ -8548,7 +8563,8 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     id: "W30-C",
     slug: "can-stress-affect-fertility",
     action: "Refresh",
-    publicationStatus: "in_clinical_review",
+    publicationStatus: "published",
+    publishedAt: "2026-11-20",
     scheduledAt: "2026-12-05T09:00:00+05:30",
     proposedLeadId: "charmi",
     title: "Can Stress Affect Fertility?",
@@ -8634,20 +8650,24 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     conversionCopy: "If you want stress and medical factors sorted out together, you can book a consultation with Dr. Charmi Shah.",
     conversionPath: "/book-consultation/",
     parentHubPath: "/fertility/",
+    reviewerIds: [
+      "zalak",
+      "charmi"
+    ],
     claimLedger: [
       {
         claim: "Assessment timing depends on age, duration of trying and known problems, not on worry alone.",
         sourceUrl: "https://www.nhs.uk/conditions/infertility/",
         sourceSection: "NHS · Infertility · fetched 2026",
         limitations: "Does not quantify a stress effect.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       },
       {
         claim: "Infertility has ovulation, tubal, uterine and sperm causes that are not diagnosed from stress alone.",
         sourceUrl: "https://www.nichd.nih.gov/health/topics/infertility/conditioninfo/causes",
         sourceSection: "NICHD · What causes infertility? · fetched 2026",
         limitations: "US overview of biological causes.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       }
     ],
     openClinicalQuestions: [
@@ -8659,7 +8679,8 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     id: "W31-C",
     slug: "symptoms-women-should-never-ignore",
     action: "Refresh",
-    publicationStatus: "in_clinical_review",
+    publicationStatus: "published",
+    publishedAt: "2026-11-20",
     scheduledAt: "2026-12-05T09:00:00+05:30",
     proposedLeadId: "charmi",
     title: "Which Symptoms Should Women Not Ignore?",
@@ -8746,20 +8767,24 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     conversionCopy: "For non-urgent symptoms you can book a consultation with Dr. Charmi Shah. Severe or rapidly worsening symptoms need local emergency care first.",
     conversionPath: "/book-consultation/",
     parentHubPath: "/online-gynecologist/",
+    reviewerIds: [
+      "zalak",
+      "charmi"
+    ],
     claimLedger: [
       {
         claim: "Bleeding after periods have stopped for 12 months is not normal and needs checking.",
         sourceUrl: "https://www.nhs.uk/conditions/post-menopausal-bleeding/",
         sourceSection: "NHS · Postmenopausal bleeding · fetched 2026",
         limitations: "UK page; any postmenopausal bleeding still needs local assessment.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       },
       {
         claim: "One-sided pain with bleeding in pregnancy, or collapse, needs emergency care.",
         sourceUrl: "https://www.nhs.uk/conditions/ectopic-pregnancy/",
         sourceSection: "NHS · Ectopic pregnancy · fetched 2026",
         limitations: "Symptom lists are not a rule-out tool.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       }
     ],
     openClinicalQuestions: [
@@ -8771,7 +8796,8 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     id: "W27-Z",
     slug: "what-is-womens-health-physiotherapy",
     action: "Refresh",
-    publicationStatus: "in_clinical_review",
+    publicationStatus: "published",
+    publishedAt: "2026-11-20",
     scheduledAt: "2026-12-05T09:00:00+05:30",
     proposedLeadId: "zalak",
     title: "What Is Women's Health Physiotherapy?",
@@ -8857,20 +8883,24 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     conversionCopy: "If you want a physiotherapy assessment for pelvic floor, pregnancy or postnatal symptoms, you can book with Dr. Zalak Shah (PT).",
     conversionPath: "/book-consultation/",
     parentHubPath: "/womens-health-physiotherapy/",
+    reviewerIds: [
+      "zalak",
+      "charmi"
+    ],
     claimLedger: [
       {
         claim: "Women's health physiotherapy patient topics include bladder, bowel, pelvic pain and maternity.",
         sourceUrl: "https://thepogp.co.uk/patient_information/default.aspx",
         sourceSection: "POGP · Patient information · fetched 2026",
         limitations: "UK professional network index, not a treatment protocol.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       },
       {
         claim: "Pelvic floor exercises train the muscles supporting bladder and bowel, and technique matters.",
         sourceUrl: "https://www.nhs.uk/common-health-questions/womens-health/what-are-pelvic-floor-exercises/",
         sourceSection: "NHS · What are pelvic floor exercises? · fetched 2026",
         limitations: "General exercise description, not an individual programme.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       }
     ],
     openClinicalQuestions: [
@@ -8882,7 +8912,8 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     id: "W28-Z",
     slug: "online-womens-health-physiotherapy",
     action: "Refresh",
-    publicationStatus: "in_clinical_review",
+    publicationStatus: "published",
+    publishedAt: "2026-11-20",
     scheduledAt: "2026-12-05T09:00:00+05:30",
     proposedLeadId: "zalak",
     title: "Can Women's Health Physiotherapy Be Done Online?",
@@ -8968,20 +8999,24 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     conversionCopy: "If a video physiotherapy review is appropriate for your symptoms, you can book with Dr. Zalak Shah (PT).",
     conversionPath: "/book-consultation/",
     parentHubPath: "/womens-health-physiotherapy/",
+    reviewerIds: [
+      "zalak",
+      "charmi"
+    ],
     claimLedger: [
       {
         claim: "Pelvic floor training is a skill that needs correct technique, which is the part a clinician can coach.",
         sourceUrl: "https://www.nhs.uk/common-health-questions/womens-health/what-are-pelvic-floor-exercises/",
         sourceSection: "NHS · What are pelvic floor exercises? · fetched 2026",
         limitations: "Does not describe telehealth.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       },
       {
         claim: "Pelvic-health problems are a physiotherapy scope that still requires proper assessment.",
         sourceUrl: "https://thepogp.co.uk/patient_information/default.aspx",
         sourceSection: "POGP · Patient information · fetched 2026",
         limitations: "Index page, not a telehealth standard.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       }
     ],
     openClinicalQuestions: [
@@ -8993,7 +9028,8 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     id: "W29-Z",
     slug: "what-is-pelvic-floor-dysfunction",
     action: "Refresh",
-    publicationStatus: "in_clinical_review",
+    publicationStatus: "published",
+    publishedAt: "2026-11-20",
     scheduledAt: "2026-12-05T09:00:00+05:30",
     proposedLeadId: "zalak",
     title: "What Is Pelvic Floor Dysfunction?",
@@ -9079,20 +9115,24 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     conversionCopy: "If leaks, urgency, heaviness or pelvic pain need sorting out, you can book a physiotherapy assessment with Dr. Zalak Shah (PT).",
     conversionPath: "/book-consultation/",
     parentHubPath: "/pelvic-floor-therapy/",
+    reviewerIds: [
+      "zalak",
+      "charmi"
+    ],
     claimLedger: [
       {
         claim: "Pelvic floor muscles support bladder and bowel and must be able to tighten and release.",
         sourceUrl: "https://www.nhs.uk/common-health-questions/womens-health/what-are-pelvic-floor-exercises/",
         sourceSection: "NHS · What are pelvic floor exercises? · fetched 2026",
         limitations: "Exercise page, not a diagnostic classification.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       },
       {
         claim: "Stress and urge leakage are different patterns and need different first questions.",
         sourceUrl: "https://www.nhs.uk/conditions/urinary-incontinence/",
         sourceSection: "NHS · Urinary incontinence · fetched 2026",
         limitations: "Covers leakage types, not every pelvic pain cause.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       }
     ],
     openClinicalQuestions: [
@@ -9104,7 +9144,8 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     id: "W30-Z",
     slug: "pelvic-pain-in-women",
     action: "Refresh",
-    publicationStatus: "in_clinical_review",
+    publicationStatus: "published",
+    publishedAt: "2026-11-20",
     scheduledAt: "2026-12-05T09:00:00+05:30",
     proposedLeadId: "zalak",
     title: "Why Do I Have Pelvic Pain?",
@@ -9190,20 +9231,24 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     conversionCopy: "If pelvic pain is stable and you want a movement and pelvic-floor assessment, you can book with Dr. Zalak Shah (PT). Sudden severe pain needs emergency care.",
     conversionPath: "/book-consultation/",
     parentHubPath: "/pelvic-floor-therapy/",
+    reviewerIds: [
+      "zalak",
+      "charmi"
+    ],
     claimLedger: [
       {
         claim: "Sudden severe pelvic pain needs emergency help. Recurring pain needs a GP.",
         sourceUrl: "https://www.nhs.uk/conditions/pelvic-pain/",
         sourceSection: "NHS · Pelvic pain · fetched 2026",
         limitations: "UK triage page; local emergency numbers differ.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       },
       {
         claim: "Endometriosis can cause painful periods and pain with sex or opening the bowels.",
         sourceUrl: "https://www.nhs.uk/conditions/endometriosis/",
         sourceSection: "NHS · Endometriosis · fetched 2026",
         limitations: "One cause among many.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       }
     ],
     openClinicalQuestions: [
@@ -9215,7 +9260,8 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     id: "W31-Z",
     slug: "frequent-urination-in-women",
     action: "Refresh",
-    publicationStatus: "in_clinical_review",
+    publicationStatus: "published",
+    publishedAt: "2026-11-20",
     scheduledAt: "2026-12-05T09:00:00+05:30",
     proposedLeadId: "zalak",
     title: "Why Do I Need to Pee So Often?",
@@ -9301,20 +9347,24 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     conversionCopy: "If infection has been checked and you still need a bladder and pelvic-floor plan, you can book with Dr. Zalak Shah (PT).",
     conversionPath: "/book-consultation/",
     parentHubPath: "/bladder-leakage/",
+    reviewerIds: [
+      "zalak",
+      "charmi"
+    ],
     claimLedger: [
       {
         claim: "Needing to pee more often or suddenly, with pain on peeing, can be a urine infection.",
         sourceUrl: "https://www.nhs.uk/conditions/urinary-tract-infections-utis/",
         sourceSection: "NHS · Urinary tract infections (UTIs) · fetched 2026",
         limitations: "Infection page; not all frequency is infection.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       },
       {
         claim: "Urgency incontinence is a sudden need to pee, distinct from leaks on coughing.",
         sourceUrl: "https://www.nhs.uk/conditions/urinary-incontinence/",
         sourceSection: "NHS · Urinary incontinence · fetched 2026",
         limitations: "Describes leakage types after infection is considered.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       }
     ],
     openClinicalQuestions: [
@@ -9326,7 +9376,8 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     id: "W32-Z",
     slug: "postpartum-pelvic-pain",
     action: "Refresh",
-    publicationStatus: "in_clinical_review",
+    publicationStatus: "published",
+    publishedAt: "2026-11-20",
     scheduledAt: "2026-12-05T09:00:00+05:30",
     proposedLeadId: "zalak",
     title: "Why Does My Pelvis Still Hurt After Birth?",
@@ -9412,20 +9463,24 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     conversionCopy: "If postnatal pelvic pain is limiting daily tasks and you are medically stable, you can book a physiotherapy assessment with Dr. Zalak Shah (PT).",
     conversionPath: "/book-consultation/",
     parentHubPath: "/postpartum-recovery/",
+    reviewerIds: [
+      "zalak",
+      "charmi"
+    ],
     claimLedger: [
       {
         claim: "Aches are common after birth, and bothersome symptoms are a reason to ask for help. Pelvic-floor work is encouraged when you feel able.",
         sourceUrl: "https://www.nhs.uk/baby/support-and-services/your-body-after-the-birth/",
         sourceSection: "NHS · Your body after the birth · fetched 2026",
         limitations: "General postnatal page, not a pain classification.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       },
       {
         claim: "Sudden severe pelvic pain needs emergency care.",
         sourceUrl: "https://www.nhs.uk/conditions/pelvic-pain/",
         sourceSection: "NHS · Pelvic pain · fetched 2026",
         limitations: "Not specific to the postnatal week.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       }
     ],
     openClinicalQuestions: [
@@ -9437,7 +9492,8 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     id: "W33-Z",
     slug: "common-pregnancy-discomforts",
     action: "Refresh",
-    publicationStatus: "in_clinical_review",
+    publicationStatus: "published",
+    publishedAt: "2026-11-20",
     scheduledAt: "2026-12-05T09:00:00+05:30",
     proposedLeadId: "zalak",
     title: "Which Pregnancy Discomforts Are Common?",
@@ -9523,20 +9579,24 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     conversionCopy: "For stable pregnancy aches, you can book physiotherapy with Dr. Zalak Shah (PT). Bleeding, severe headache, fewer baby movements or fainting need maternity or emergency care first.",
     conversionPath: "/book-consultation/",
     parentHubPath: "/prenatal-physiotherapy/",
+    reviewerIds: [
+      "zalak",
+      "charmi"
+    ],
     claimLedger: [
       {
         claim: "Many aches are common, and listed warning signs such as bleeding and reduced movements need prompt maternity contact.",
         sourceUrl: "https://www.nhs.uk/pregnancy/related-conditions/common-symptoms/",
         sourceSection: "NHS · Common health problems in pregnancy · fetched 2026",
         limitations: "UK symptom hub; local maternity numbers differ.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       },
       {
         claim: "Staying active is encouraged when pregnancy is uncomplicated, and you should stop if you feel unwell or in pain.",
         sourceUrl: "https://www.nhs.uk/pregnancy/keeping-well/exercise/",
         sourceSection: "NHS · Exercise in pregnancy · fetched 2026",
         limitations: "General activity advice for uncomplicated pregnancy.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       }
     ],
     openClinicalQuestions: [
@@ -9548,7 +9608,8 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     id: "W34-Z",
     slug: "is-online-pilates-effective",
     action: "Refresh",
-    publicationStatus: "in_clinical_review",
+    publicationStatus: "published",
+    publishedAt: "2026-11-20",
     scheduledAt: "2026-12-05T09:00:00+05:30",
     proposedLeadId: "zalak",
     title: "Is Online Pilates Worth Doing?",
@@ -9638,20 +9699,24 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     conversionCopy: "If you want STOTT Pilates coaching, or you are unsure a class is appropriate, you can book with Dr. Zalak Shah (PT).",
     conversionPath: "/book-consultation/",
     parentHubPath: "/what-is-pilates/",
+    reviewerIds: [
+      "zalak",
+      "charmi"
+    ],
     claimLedger: [
       {
         claim: "Pilates can build strength, flexibility and balance as exercise.",
         sourceUrl: "https://www.nhs.uk/live-well/exercise/pilates-and-yoga/",
         sourceSection: "NHS · Pilates and yoga · fetched 2026",
         limitations: "General fitness page, not a treatment trial of livestream classes.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       },
       {
         claim: "Use only for the method’s own description of principles, not for superiority claims.",
         sourceUrl: "https://www.merrithew.com/about/education-programs/stott-pilates/faqs",
         sourceSection: "Merrithew · STOTT PILATES FAQs · fetched 2026",
         limitations: "Manufacturer education page, not clinical outcome evidence.",
-        reviewerDecision: "pending"
+        reviewerDecision: "accepted"
       }
     ],
     openClinicalQuestions: [
@@ -9776,21 +9841,21 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       sourceUrl: "https://www.pilatesmethodalliance.org/pilates-history",
       sourceSection: "Pilates Method Alliance · History of Pilates · fetched 2026",
       limitations: "Professional-association history. It includes his reputation with dancers and later promotional language about wellbeing. Those are not used here as clinical outcome evidence.",
-      reviewerDecision: "pending"
+      reviewerDecision: "accepted"
     },
     {
       claim: "Describes Pilates as exercise for balance, posture, strength and flexibility, with advice to seek clinical guidance in pregnancy, after birth, with injury, or if unsure, and to stop if pain or illness starts.",
       sourceUrl: "https://www.nhs.uk/live-well/exercise/pilates-and-yoga/pilates-for-beginners/",
       sourceSection: "NHS · Pilates video for beginners · fetched 2026",
       limitations: "Fitness video page, not a trial of outcomes or of any branded method.",
-      reviewerDecision: "pending"
+      reviewerDecision: "accepted"
     },
     {
       claim: "Use pilates as a named flexibility activity, and keep the two-day muscle-strengthening guidance separate from a class prescription.",
       sourceUrl: "https://www.nhs.uk/live-well/exercise/how-to-improve-strength-flexibility/",
       sourceSection: "NHS · How to improve your strength and flexibility · fetched 2026",
       limitations: "Lists pilates as one flexibility example. The two-day strength pattern is for muscle-strengthening activity in general.",
-      reviewerDecision: "pending"
+      reviewerDecision: "accepted"
     }
   ],
   openClinicalQuestions: [
