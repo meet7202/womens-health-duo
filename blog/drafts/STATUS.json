@@ -1022,11 +1022,10 @@
       "slug": "what-is-pilates",
       "action": "New",
       "scheduledAt": "2026-11-20T09:00:00+05:30",
-      "publicationStatus": "published",
+      "publicationStatus": "in_clinical_review",
       "imageApproval": "pending",
       "clinicalApproval": "pending",
-      "proposedLeadId": "zalak",
-      "actualPublishDate": "2026-11-20"
+      "proposedLeadId": "zalak"
     }
   ],
   "ownerPublishDate": "2026-11-19"

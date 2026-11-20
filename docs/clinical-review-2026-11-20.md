@@ -19,6 +19,6 @@ The diastasis recti article (`/what-is-diastasis-recti/`) shows “Medically rev
 These catalog rows are `in_clinical_review`. `publishedArticleForSlug` ignores them, so the current pages stay as they are.
 
 - Dr. Charmi Shah: `what-is-pms`, `what-is-hormonal-imbalance`, `how-to-improve-fertility`, `can-stress-affect-fertility`, `symptoms-women-should-never-ignore`
-- Dr. Zalak Shah (PT): `what-is-womens-health-physiotherapy`, `online-womens-health-physiotherapy`, `what-is-pelvic-floor-dysfunction`, `pelvic-pain-in-women`, `frequent-urination-in-women`, `postpartum-pelvic-pain`, `common-pregnancy-discomforts`, `is-online-pilates-effective`
+- Dr. Zalak Shah (PT): `what-is-womens-health-physiotherapy`, `online-womens-health-physiotherapy`, `what-is-pelvic-floor-dysfunction`, `pelvic-pain-in-women`, `frequent-urination-in-women`, `postpartum-pelvic-pain`, `common-pregnancy-discomforts`, `is-online-pilates-effective`, `what-is-pilates` (new guide W35-Z)
 
 Open questions are in each `blog/drafts/<id>/claims.json`. Reviewer ids were not added.
