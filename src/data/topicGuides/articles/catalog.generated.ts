@@ -8255,7 +8255,31 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         ]
       }
     ],
+    explainerCards: [
+      "What pattern counts as PMS?",
+      "What should you write down?",
+      "When is it PMDD, not PMS?",
+      "When should you arrange a review?"
+    ],
     figures: [
+      {
+        src: "/images/articles/what-is-pms/what-is-pms-scene.webp",
+        srcSet: "/images/articles/what-is-pms/what-is-pms-scene-800.webp 800w, /images/articles/what-is-pms/what-is-pms-scene.webp 1600w",
+        alt: "Woman looking at a simple cycle calendar with the days before bleeding shaded",
+        caption: "PMS symptoms tend to build in the days before bleeding and ease once a period is underway. A two-cycle diary shows whether that pattern repeats.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
+      {
+        src: "/images/articles/what-is-pms/what-is-pms-anatomy.webp",
+        srcSet: "/images/articles/what-is-pms/what-is-pms-anatomy-800.webp 800w, /images/articles/what-is-pms/what-is-pms-anatomy.webp 1600w",
+        alt: "Diagram of a menstrual cycle ring beside a simplified womb",
+        caption: "The useful clue is timing: symptoms that arrive before bleeding and settle afterwards, rather than a single hormone test.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
       {
         src: "/images/articles/what-is-pms/what-is-pms-explainer.svg",
         alt: "Simple calendar sketch showing symptoms in the days before bleeding and easing after the period starts",
@@ -8371,7 +8395,31 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         ]
       }
     ],
+    explainerCards: [
+      "Why is the phrase too broad?",
+      "Which patterns have a real name?",
+      "What should I bring to the visit?",
+      "When should the wait be short?"
+    ],
     figures: [
+      {
+        src: "/images/articles/what-is-hormonal-imbalance/what-is-hormonal-imbalance-scene.webp",
+        srcSet: "/images/articles/what-is-hormonal-imbalance/what-is-hormonal-imbalance-scene-800.webp 800w, /images/articles/what-is-hormonal-imbalance/what-is-hormonal-imbalance-scene.webp 1600w",
+        alt: "Woman considering several separate health folders rather than one label",
+        caption: "Hormonal imbalance is a broad phrase. A visit looks for a named pattern, such as cycle changes, thyroid disease or menopause, rather than one panel.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
+      {
+        src: "/images/articles/what-is-hormonal-imbalance/what-is-hormonal-imbalance-anatomy.webp",
+        srcSet: "/images/articles/what-is-hormonal-imbalance/what-is-hormonal-imbalance-anatomy-800.webp 800w, /images/articles/what-is-hormonal-imbalance/what-is-hormonal-imbalance-anatomy.webp 1600w",
+        alt: "Three separate icons for thyroid, ovaries and brain",
+        caption: "Thyroid disease, ovarian cycle changes and menopause can feel similar and still need different assessments.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
       {
         src: "/images/articles/what-is-hormonal-imbalance/what-is-hormonal-imbalance-explainer.svg",
         alt: "Diagram listing separate causes people sometimes group under the phrase hormonal imbalance",
@@ -8487,7 +8535,31 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         ]
       }
     ],
+    explainerCards: [
+      "How often should we try?",
+      "Which health steps have evidence?",
+      "What will not replace assessment?",
+      "When should we ask for help?"
+    ],
     figures: [
+      {
+        src: "/images/articles/how-to-improve-fertility/how-to-improve-fertility-scene.webp",
+        srcSet: "/images/articles/how-to-improve-fertility/how-to-improve-fertility-scene-800.webp 800w, /images/articles/how-to-improve-fertility/how-to-improve-fertility-scene.webp 1600w",
+        alt: "Couple looking at a calendar marked every few days across a cycle",
+        caption: "Conception is more likely with sex every few days across the fertile part of the cycle than with one predicted day.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
+      {
+        src: "/images/articles/how-to-improve-fertility/how-to-improve-fertility-anatomy.webp",
+        srcSet: "/images/articles/how-to-improve-fertility/how-to-improve-fertility-anatomy-800.webp 800w, /images/articles/how-to-improve-fertility/how-to-improve-fertility-anatomy.webp 1600w",
+        alt: "Diagram of a womb, fallopian tube and one maturing follicle",
+        caption: "In an ovulatory cycle a follicle matures and releases an egg. Timing advice follows that pattern and does not replace a fertility assessment.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
       {
         src: "/images/articles/how-to-improve-fertility/how-to-improve-fertility-explainer.svg",
         alt: "Calendar sketch of sex every few days across a cycle rather than one predicted day",
@@ -8603,7 +8675,31 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         ]
       }
     ],
+    explainerCards: [
+      "What can stress change?",
+      "Can stress explain infertility?",
+      "How does a clinician sort this?",
+      "When does mood need urgent help?"
+    ],
     figures: [
+      {
+        src: "/images/articles/can-stress-affect-fertility/can-stress-affect-fertility-scene.webp",
+        srcSet: "/images/articles/can-stress-affect-fertility/can-stress-affect-fertility-scene-800.webp 800w, /images/articles/can-stress-affect-fertility/can-stress-affect-fertility-scene.webp 1600w",
+        alt: "Woman sitting quietly with tea, looking thoughtful about trying to conceive",
+        caption: "Stress can disturb sleep, cycles or the strain of trying. It does not explain every cause of infertility.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
+      {
+        src: "/images/articles/can-stress-affect-fertility/can-stress-affect-fertility-anatomy.webp",
+        srcSet: "/images/articles/can-stress-affect-fertility/can-stress-affect-fertility-anatomy-800.webp 800w, /images/articles/can-stress-affect-fertility/can-stress-affect-fertility-anatomy.webp 1600w",
+        alt: "Split diagram of a brain-ovary link beside a separate womb and ovary",
+        caption: "A clinician separates cycle disruption that may follow stress from medical causes that need their own tests.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
       {
         src: "/images/articles/can-stress-affect-fertility/can-stress-affect-fertility-explainer.svg",
         alt: "Two-column sketch separating cycle disruption from medical causes of infertility",
@@ -8720,7 +8816,31 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         ]
       }
     ],
+    explainerCards: [
+      "Which bleeding should not wait?",
+      "Which pain needs same-day care?",
+      "What can wait for a booked visit?",
+      "How do I get help without guessing?"
+    ],
     figures: [
+      {
+        src: "/images/articles/symptoms-women-should-never-ignore/symptoms-women-should-never-ignore-scene.webp",
+        srcSet: "/images/articles/symptoms-women-should-never-ignore/symptoms-women-should-never-ignore-scene-800.webp 800w, /images/articles/symptoms-women-should-never-ignore/symptoms-women-should-never-ignore-scene.webp 1600w",
+        alt: "Woman pausing with a phone, deciding whether symptoms need prompt care",
+        caption: "Some bleeding, pain, fever and pregnancy symptoms need same-day or emergency care. Others can wait for a booked gynaecology visit.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
+      {
+        src: "/images/articles/symptoms-women-should-never-ignore/symptoms-women-should-never-ignore-anatomy.webp",
+        srcSet: "/images/articles/symptoms-women-should-never-ignore/symptoms-women-should-never-ignore-anatomy-800.webp 800w, /images/articles/symptoms-women-should-never-ignore/symptoms-women-should-never-ignore-anatomy.webp 1600w",
+        alt: "Body outline with the lower abdomen and chest marked as places symptoms can start",
+        caption: "Where a symptom sits, and how fast it starts, changes whether care should be urgent or booked.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
       {
         src: "/images/articles/symptoms-women-should-never-ignore/symptoms-women-should-never-ignore-explainer.svg",
         alt: "Two-list sketch of symptoms for emergency care versus a booked gynaecology visit",
@@ -8836,7 +8956,31 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         ]
       }
     ],
+    explainerCards: [
+      "What does this specialty cover?",
+      "What is a session trying to find?",
+      "How does it sit next to medicine?",
+      "When should I see a doctor first?"
+    ],
     figures: [
+      {
+        src: "/images/articles/what-is-womens-health-physiotherapy/what-is-womens-health-physiotherapy-scene.webp",
+        srcSet: "/images/articles/what-is-womens-health-physiotherapy/what-is-womens-health-physiotherapy-scene-800.webp 800w, /images/articles/what-is-womens-health-physiotherapy/what-is-womens-health-physiotherapy-scene.webp 1600w",
+        alt: "Woman talking with a physiotherapist beside a pelvis teaching model",
+        caption: "Women's health physiotherapy looks at bladder, bowel, pelvic floor and abdominal symptoms alongside medical care.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
+      {
+        src: "/images/articles/what-is-womens-health-physiotherapy/what-is-womens-health-physiotherapy-anatomy.webp",
+        srcSet: "/images/articles/what-is-womens-health-physiotherapy/what-is-womens-health-physiotherapy-anatomy-800.webp 800w, /images/articles/what-is-womens-health-physiotherapy/what-is-womens-health-physiotherapy-anatomy.webp 1600w",
+        alt: "Pelvis teaching model showing the pelvic floor muscles",
+        caption: "A session is trying to find which muscles, habits or scars relate to the symptom. An internal examination is not required to start.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
       {
         src: "/images/articles/what-is-womens-health-physiotherapy/what-is-womens-health-physiotherapy-explainer.svg",
         alt: "Sketch of pelvic floor, bladder and abdominal wall as areas a women's health physiotherapist may assess",
@@ -8952,7 +9096,31 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         ]
       }
     ],
+    explainerCards: [
+      "What works well over video?",
+      "What can video not replace?",
+      "Who should not start online?",
+      "How do I prepare a useful call?"
+    ],
     figures: [
+      {
+        src: "/images/articles/online-womens-health-physiotherapy/online-womens-health-physiotherapy-scene.webp",
+        srcSet: "/images/articles/online-womens-health-physiotherapy/online-womens-health-physiotherapy-scene-800.webp 800w, /images/articles/online-womens-health-physiotherapy/online-womens-health-physiotherapy-scene.webp 1600w",
+        alt: "Woman on a video physiotherapy call at home with a mat beside her",
+        caption: "Video can cover history, movement coaching and Mat Pilates. It cannot replace a hands-on examination.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
+      {
+        src: "/images/articles/online-womens-health-physiotherapy/online-womens-health-physiotherapy-anatomy.webp",
+        srcSet: "/images/articles/online-womens-health-physiotherapy/online-womens-health-physiotherapy-anatomy-800.webp 800w, /images/articles/online-womens-health-physiotherapy/online-womens-health-physiotherapy-anatomy.webp 1600w",
+        alt: "Split view of a seated video exercise session and an in-person examination room with a pelvis model",
+        caption: "Coaching and education travel over video. Prolapse assessment and other hands-on checks need a room.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
       {
         src: "/images/articles/online-womens-health-physiotherapy/online-womens-health-physiotherapy-explainer.svg",
         alt: "Split sketch of tasks possible on video versus tasks that need an in-person examination",
@@ -9068,7 +9236,31 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         ]
       }
     ],
+    explainerCards: [
+      "What is the pelvic floor asked to do?",
+      "Which symptoms share this label?",
+      "How is the pattern sorted?",
+      "Which symptoms need a doctor now?"
+    ],
     figures: [
+      {
+        src: "/images/articles/what-is-pelvic-floor-dysfunction/what-is-pelvic-floor-dysfunction-scene.webp",
+        srcSet: "/images/articles/what-is-pelvic-floor-dysfunction/what-is-pelvic-floor-dysfunction-scene-800.webp 800w, /images/articles/what-is-pelvic-floor-dysfunction/what-is-pelvic-floor-dysfunction-scene.webp 1600w",
+        alt: "Woman resting a hand on her lower abdomen while thinking about pelvic symptoms",
+        caption: "Pelvic floor dysfunction is a group of symptoms, not one diagnosis. Tightening and releasing are different jobs.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
+      {
+        src: "/images/articles/what-is-pelvic-floor-dysfunction/what-is-pelvic-floor-dysfunction-anatomy.webp",
+        srcSet: "/images/articles/what-is-pelvic-floor-dysfunction/what-is-pelvic-floor-dysfunction-anatomy-800.webp 800w, /images/articles/what-is-pelvic-floor-dysfunction/what-is-pelvic-floor-dysfunction-anatomy.webp 1600w",
+        alt: "Two pelvis diagrams showing the pelvic floor lifted on one side and relaxed on the other",
+        caption: "The pelvic floor has to lift and hold, and also let go. Symptoms alone do not show which job is struggling.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
       {
         src: "/images/articles/what-is-pelvic-floor-dysfunction/what-is-pelvic-floor-dysfunction-explainer.svg",
         alt: "Sketch of the pelvic floor supporting bladder and bowel, with tighten and release as separate jobs",
@@ -9184,7 +9376,31 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         ]
       }
     ],
+    explainerCards: [
+      "Does the pain follow the cycle?",
+      "Can muscles or scars be involved?",
+      "Which clues should speed care?",
+      "What can a routine visit still do?"
+    ],
     figures: [
+      {
+        src: "/images/articles/pelvic-pain-in-women/pelvic-pain-in-women-scene.webp",
+        srcSet: "/images/articles/pelvic-pain-in-women/pelvic-pain-in-women-scene-800.webp 800w, /images/articles/pelvic-pain-in-women/pelvic-pain-in-women-scene.webp 1600w",
+        alt: "Woman resting with a warm pack on her lower abdomen",
+        caption: "Pelvic pain has many causes, including cycle-related pain, endometriosis, muscle pain and scars. A normal scan does not end the assessment.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
+      {
+        src: "/images/articles/pelvic-pain-in-women/pelvic-pain-in-women-anatomy.webp",
+        srcSet: "/images/articles/pelvic-pain-in-women/pelvic-pain-in-women-anatomy-800.webp 800w, /images/articles/pelvic-pain-in-women/pelvic-pain-in-women-anatomy.webp 1600w",
+        alt: "Body outline with the pelvic area highlighted",
+        caption: "Pain felt in the pelvis can come from the uterus, ovaries, bowel, bladder, muscles or scars. The location alone does not name the cause.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
       {
         src: "/images/articles/pelvic-pain-in-women/pelvic-pain-in-women-explainer.svg",
         alt: "Body outline marking the pelvis with a note that pain there has many causes",
@@ -9300,7 +9516,31 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         ]
       }
     ],
+    explainerCards: [
+      "Could this be an infection?",
+      "What if tests show no infection?",
+      "Where does physiotherapy fit?",
+      "What should I record beforehand?"
+    ],
     figures: [
+      {
+        src: "/images/articles/frequent-urination-in-women/frequent-urination-in-women-scene.webp",
+        srcSet: "/images/articles/frequent-urination-in-women/frequent-urination-in-women-scene-800.webp 800w, /images/articles/frequent-urination-in-women/frequent-urination-in-women-scene.webp 1600w",
+        alt: "Woman holding a glass of water while thinking about frequent urination",
+        caption: "Frequent urination needs an infection and other medical causes checked before it is treated as a pelvic floor problem.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
+      {
+        src: "/images/articles/frequent-urination-in-women/frequent-urination-in-women-anatomy.webp",
+        srcSet: "/images/articles/frequent-urination-in-women/frequent-urination-in-women-anatomy-800.webp 800w, /images/articles/frequent-urination-in-women/frequent-urination-in-women-anatomy.webp 1600w",
+        alt: "Side-view diagram of the bladder resting on the pelvic floor",
+        caption: "Urgency without infection can involve bladder sensation and pelvic floor coordination. Drinking less is not the first fix.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
       {
         src: "/images/articles/frequent-urination-in-women/frequent-urination-in-women-explainer.svg",
         alt: "Bladder diary sketch separating burning and fever from urgency without infection",
@@ -9416,7 +9656,31 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         ]
       }
     ],
+    explainerCards: [
+      "Why is this not one injury?",
+      "What daily habits keep it going?",
+      "What does a physio visit look at?",
+      "Which signs need urgent care?"
+    ],
     figures: [
+      {
+        src: "/images/articles/postpartum-pelvic-pain/postpartum-pelvic-pain-scene.webp",
+        srcSet: "/images/articles/postpartum-pelvic-pain/postpartum-pelvic-pain-scene-800.webp 800w, /images/articles/postpartum-pelvic-pain/postpartum-pelvic-pain-scene.webp 1600w",
+        alt: "New mother holding her hip while her baby rests nearby",
+        caption: "Pelvic pain after birth can come from joints, a scar, or the pelvic floor. It is not one injury, and six weeks is not a finish line.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
+      {
+        src: "/images/articles/postpartum-pelvic-pain/postpartum-pelvic-pain-anatomy.webp",
+        srcSet: "/images/articles/postpartum-pelvic-pain/postpartum-pelvic-pain-anatomy-800.webp 800w, /images/articles/postpartum-pelvic-pain/postpartum-pelvic-pain-anatomy.webp 1600w",
+        alt: "Front-view pelvis diagram with the sacroiliac and pubic joints highlighted above the pelvic floor",
+        caption: "After birth, the pelvic joints and the pelvic floor can each be a source of pain, and a scar can add to it. A physiotherapist looks at them separately.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
       {
         src: "/images/articles/postpartum-pelvic-pain/postpartum-pelvic-pain-explainer.svg",
         alt: "Side-view sketch of pelvis after birth marking joints, scar and pelvic floor as separate sources of pain",
@@ -9532,7 +9796,31 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         ]
       }
     ],
+    explainerCards: [
+      "Which aches track a changing body?",
+      "Which movement ideas stay modest?",
+      "Which symptoms should not wait?",
+      "What should I tell a clinician?"
+    ],
     figures: [
+      {
+        src: "/images/articles/common-pregnancy-discomforts/common-pregnancy-discomforts-scene.webp",
+        srcSet: "/images/articles/common-pregnancy-discomforts/common-pregnancy-discomforts-scene-800.webp 800w, /images/articles/common-pregnancy-discomforts/common-pregnancy-discomforts-scene.webp 1600w",
+        alt: "Pregnant woman supporting her lower back",
+        caption: "Back and pelvic aches are common as posture and weight shift in pregnancy. Some symptoms still need same-day maternity care.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
+      {
+        src: "/images/articles/common-pregnancy-discomforts/common-pregnancy-discomforts-anatomy.webp",
+        srcSet: "/images/articles/common-pregnancy-discomforts/common-pregnancy-discomforts-anatomy-800.webp 800w, /images/articles/common-pregnancy-discomforts/common-pregnancy-discomforts-anatomy.webp 1600w",
+        alt: "Side-view diagram of pregnancy posture with the womb, spine and pelvic floor",
+        caption: "As the bump grows, the spine and pelvic joints carry weight differently. That explains many aches and does not explain bleeding, fluid loss or reduced movements.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
       {
         src: "/images/articles/common-pregnancy-discomforts/common-pregnancy-discomforts-explainer.svg",
         alt: "Two-column list of common pregnancy aches versus symptoms that need same-day maternity care",
@@ -9648,7 +9936,31 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         ]
       }
     ],
+    explainerCards: [
+      "What can a screen actually teach?",
+      "Who should not start with a class?",
+      "How do I choose an honest class?",
+      "When should I stop and get help?"
+    ],
     figures: [
+      {
+        src: "/images/articles/is-online-pilates-effective/is-online-pilates-effective-scene.webp",
+        srcSet: "/images/articles/is-online-pilates-effective/is-online-pilates-effective-scene-800.webp 800w, /images/articles/is-online-pilates-effective/is-online-pilates-effective-scene.webp 1600w",
+        alt: "Woman following a mat class on a laptop at home",
+        caption: "An online class can coach form and breathing. It cannot examine the pelvic floor or confirm that a diastasis has closed.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
+      {
+        src: "/images/articles/is-online-pilates-effective/is-online-pilates-effective-anatomy.webp",
+        srcSet: "/images/articles/is-online-pilates-effective/is-online-pilates-effective-anatomy-800.webp 800w, /images/articles/is-online-pilates-effective/is-online-pilates-effective-anatomy.webp 1600w",
+        alt: "Diagram of the deep abdominal muscle wrapping the waist above the pelvis and pelvic floor",
+        caption: "Mat work can train breath, posture and gentle deep-core control. Hands-on assessment is a separate step when symptoms or a gap need checking.",
+        width: 1600,
+        height: 1067,
+        approvalStatus: "pending"
+      },
       {
         src: "/images/articles/is-online-pilates-effective/is-online-pilates-effective-explainer.svg",
         alt: "Laptop class sketch noting the teacher can coach form but cannot examine the pelvic floor",

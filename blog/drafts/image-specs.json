@@ -172,7 +172,7 @@
         "key": "anatomy",
         "prompt": "Three side-by-side simplified side-view pelvis diagrams of a curved pelvic floor muscle hammock: one lifting upward, one relaxed lower, one with balanced arrows, clean textbook style.",
         "alt": "Three diagrams showing pelvic floor contraction, relaxation and coordination",
-        "caption": "Pelvic floor function depends on contraction, full relaxation and timing (coordination) — not strength alone.",
+        "caption": "Pelvic floor function depends on contraction, full relaxation and timing (coordination) \u2014 not strength alone.",
         "approvalStatus": "approved",
         "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
       }
@@ -284,7 +284,7 @@
         "key": "anatomy",
         "prompt": "Gentle textbook illustration of a very early embryo curled like a small comma inside the womb, with a soft glow along its developing spine (neural tube), non-graphic.",
         "alt": "Diagram of an early embryo with the developing neural tube",
-        "caption": "The neural tube, which becomes the brain and spinal cord, closes in the first weeks — often before pregnancy is known.",
+        "caption": "The neural tube, which becomes the brain and spinal cord, closes in the first weeks \u2014 often before pregnancy is known.",
         "approvalStatus": "approved",
         "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
       }
@@ -342,13 +342,13 @@
         "key": "scene",
         "prompt": "An Indian woman in her early thirties reading a lab report on her phone in a calm clinic corridor, thoughtful; translucent inset shows a simplified ovary with small follicles.",
         "alt": "Woman reading a blood test result with an ovary inset",
-        "caption": "AMH reflects ovarian reserve — the number of follicles — not egg quality."
+        "caption": "AMH reflects ovarian reserve \u2014 the number of follicles \u2014 not egg quality."
       },
       {
         "key": "anatomy",
         "prompt": "Textbook diagram of an ovary with many tiny early follicles glowing softly, with a small blood droplet icon beside it representing a hormone blood test.",
         "alt": "Diagram of ovarian follicles producing a hormone measured in a blood test",
-        "caption": "Anti-Müllerian hormone (AMH) is made by small growing follicles and measured in blood.",
+        "caption": "Anti-M\u00fcllerian hormone (AMH) is made by small growing follicles and measured in blood.",
         "approvalStatus": "approved",
         "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
       }
@@ -374,7 +374,7 @@
         "key": "scene",
         "prompt": "An Indian woman in her twenties preparing a colourful balanced meal in a bright kitchen, walking shoes by the door, smiling; translucent inset shows simplified ovaries.",
         "alt": "Woman preparing a balanced meal with an ovary inset",
-        "caption": "Daily PCOS management includes nutrition, movement, sleep and stress — chosen to fit your life."
+        "caption": "Daily PCOS management includes nutrition, movement, sleep and stress \u2014 chosen to fit your life."
       },
       {
         "key": "anatomy",
@@ -524,7 +524,7 @@
         "key": "anatomy",
         "prompt": "Translucent standing female silhouette showing the core as a cylinder: diaphragm on top, pelvic floor at the base, deep abdominal muscle wrapping the front, and spinal muscles at the back, soft glow.",
         "alt": "Diagram of the core cylinder: diaphragm, pelvic floor, deep abdominals and back muscles",
-        "caption": "The core cylinder — diaphragm, pelvic floor, transversus abdominis and multifidus — manages pressure and load.",
+        "caption": "The core cylinder \u2014 diaphragm, pelvic floor, transversus abdominis and multifidus \u2014 manages pressure and load.",
         "approvalStatus": "approved",
         "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
       }
@@ -831,6 +831,188 @@
         "caption": "Oestrogen affects temperature regulation, bone density, the urogenital tissues and more.",
         "approvalStatus": "approved",
         "approvalNote": "Owner confirmed on 18 Nov 2026 that the doctors approved this diagram."
+      }
+    ],
+    "W27-C": [
+      {
+        "key": "scene",
+        "prompt": "Soft editorial health-education illustration in blush pink, sage green and cream, modest and non-graphic, respectful, warm lighting. No text, no labels, no letters, no numbers, no logos, no watermark. An Indian woman in her thirties sits at a sunlit kitchen table with a blank monthly grid of soft dots and no writing, a few days before one circled mark shaded blush, calm and curious.",
+        "alt": "Woman looking at a simple cycle calendar with the days before bleeding shaded",
+        "caption": "PMS symptoms tend to build in the days before bleeding and ease once a period is underway. A two-cycle diary shows whether that pattern repeats."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Soft editorial health-education illustration in blush pink, sage green and cream, modest and non-graphic, respectful, warm lighting. No text, no labels, no letters, no numbers, no logos, no watermark. Clean textbook diagram of a simplified pear-shaped womb beside a soft circular cycle ring split into a longer quiet arc and a shorter blush arc, no words and no numbers.",
+        "alt": "Diagram of a menstrual cycle ring beside a simplified womb",
+        "caption": "The useful clue is timing: symptoms that arrive before bleeding and settle afterwards, rather than a single hormone test."
+      }
+    ],
+    "W28-C": [
+      {
+        "key": "scene",
+        "prompt": "Soft editorial health-education illustration in blush pink, sage green and cream, modest and non-graphic, respectful, warm lighting. No text, no labels, no letters, no numbers, no logos, no watermark. An Indian woman in her thirties at a bright desk with three closed plain folders in blush, sage and cream, thoughtful, one hand on her chin. No readable covers.",
+        "alt": "Woman considering several separate health folders rather than one label",
+        "caption": "Hormonal imbalance is a broad phrase. A visit looks for a named pattern, such as cycle changes, thyroid disease or menopause, rather than one panel."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Soft editorial health-education illustration in blush pink, sage green and cream, modest and non-graphic, respectful, warm lighting. No text, no labels, no letters, no numbers, no logos, no watermark. Textbook row of three separate soft circles containing a simplified thyroid gland, a pair of ovaries, and a small brain, each icon different, no connecting label and no text.",
+        "alt": "Three separate icons for thyroid, ovaries and brain",
+        "caption": "Thyroid disease, ovarian cycle changes and menopause can feel similar and still need different assessments."
+      }
+    ],
+    "W29-C": [
+      {
+        "key": "scene",
+        "prompt": "Soft editorial health-education illustration in blush pink, sage green and cream, modest and non-graphic, respectful, warm lighting. No text, no labels, no letters, no numbers, no logos, no watermark. An Indian couple in their early thirties sitting together on a sofa with a blank calendar grid of evenly spaced soft dots and no writing, hopeful and calm, morning light.",
+        "alt": "Couple looking at a calendar marked every few days across a cycle",
+        "caption": "Conception is more likely with sex every few days across the fertile part of the cycle than with one predicted day."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Soft editorial health-education illustration in blush pink, sage green and cream, modest and non-graphic, respectful, warm lighting. No text, no labels, no letters, no numbers, no logos, no watermark. Clean textbook diagram of a simplified womb, one fallopian tube and one ovary with a single softly glowing follicle, calm educational style, no text.",
+        "alt": "Diagram of a womb, fallopian tube and one maturing follicle",
+        "caption": "In an ovulatory cycle a follicle matures and releases an egg. Timing advice follows that pattern and does not replace a fertility assessment."
+      }
+    ],
+    "W30-C": [
+      {
+        "key": "scene",
+        "prompt": "Soft editorial health-education illustration in blush pink, sage green and cream, modest and non-graphic, respectful, warm lighting. No text, no labels, no letters, no numbers, no logos, no watermark. An Indian woman in her thirties sitting quietly by a bright window with a cup of tea, a closed notebook on her lap, thoughtful and not distressed.",
+        "alt": "Woman sitting quietly with tea, looking thoughtful about trying to conceive",
+        "caption": "Stress can disturb sleep, cycles or the strain of trying. It does not explain every cause of infertility."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Soft editorial health-education illustration in blush pink, sage green and cream, modest and non-graphic, respectful, warm lighting. No text, no labels, no letters, no numbers, no logos, no watermark. Split textbook illustration on a cream background: left a simplified brain linked by one soft curve to an ovary; right a separate womb and ovary with no link, no text and no labels.",
+        "alt": "Split diagram of a brain-ovary link beside a separate womb and ovary",
+        "caption": "A clinician separates cycle disruption that may follow stress from medical causes that need their own tests."
+      }
+    ],
+    "W31-C": [
+      {
+        "key": "scene",
+        "prompt": "Soft editorial health-education illustration in blush pink, sage green and cream, modest and non-graphic, respectful, warm lighting. No text, no labels, no letters, no numbers, no logos, no watermark. An Indian woman in her forties standing in a bright hallway holding a phone with a blank dark screen, serious and calm, deciding to call for care. No text on the phone.",
+        "alt": "Woman pausing with a phone, deciding whether symptoms need prompt care",
+        "caption": "Some bleeding, pain, fever and pregnancy symptoms need same-day or emergency care. Others can wait for a booked gynaecology visit."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Plain faceless mannequin-style front-view body outline in cream with two soft sage glow areas over the chest and the lower belly.",
+        "alt": "Body outline with the lower abdomen and chest marked as places symptoms can start",
+        "caption": "Where a symptom sits, and how fast it starts, changes whether care should be urgent or booked."
+      }
+    ],
+    "W27-Z": [
+      {
+        "key": "scene",
+        "prompt": "Soft editorial health-education illustration in blush pink, sage green and cream, modest and non-graphic, respectful, warm lighting. No text, no labels, no letters, no numbers, no logos, no watermark. An Indian woman in her thirties seated in a bright physiotherapy room talking with a woman physiotherapist seen from behind, a simple pelvis teaching model on the desk, relaxed.",
+        "alt": "Woman talking with a physiotherapist beside a pelvis teaching model",
+        "caption": "Women's health physiotherapy looks at bladder, bowel, pelvic floor and abdominal symptoms alongside medical care."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Soft editorial health-education illustration in blush pink, sage green and cream, modest and non-graphic, respectful, warm lighting. No text, no labels, no letters, no numbers, no logos, no watermark. Clean educational illustration of a pelvis teaching model showing the bony ring and a layered pelvic floor muscle hammock, modest and non-graphic, no text.",
+        "alt": "Pelvis teaching model showing the pelvic floor muscles",
+        "caption": "A session is trying to find which muscles, habits or scars relate to the symptom. An internal examination is not required to start."
+      }
+    ],
+    "W28-Z": [
+      {
+        "key": "scene",
+        "prompt": "Soft editorial health-education illustration in blush pink, sage green and cream, modest and non-graphic, respectful, warm lighting. No text, no labels, no letters, no numbers, no logos, no watermark. An Indian woman in her thirties on a video call from a bright living room, laptop showing only a blurred person, a rolled yoga mat beside her, calm. No text on the screen.",
+        "alt": "Woman on a video physiotherapy call at home with a mat beside her",
+        "caption": "Video can cover history, movement coaching and Mat Pilates. It cannot replace a hands-on examination."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Soft editorial health-education illustration in blush pink, sage green and cream, modest and non-graphic, respectful, warm lighting. No text, no labels, no letters, no numbers, no logos, no watermark. Split illustration: left a person demonstrating a gentle seated posture on a video screen; right a modest examination room with a covered couch and a pelvis model, no text and no graphic anatomy.",
+        "alt": "Split view of a seated video exercise session and an in-person examination room with a pelvis model",
+        "caption": "Coaching and education travel over video. Prolapse assessment and other hands-on checks need a room."
+      }
+    ],
+    "W29-Z": [
+      {
+        "key": "scene",
+        "prompt": "Soft editorial health-education illustration in blush pink, sage green and cream, modest and non-graphic, respectful, warm lighting. No text, no labels, no letters, no numbers, no logos, no watermark. An Indian woman in her thirties standing in a bright living room in comfortable clothes, one hand resting lightly on her lower abdomen, thoughtful and calm.",
+        "alt": "Woman resting a hand on her lower abdomen while thinking about pelvic symptoms",
+        "caption": "Pelvic floor dysfunction is a group of symptoms, not one diagnosis. Tightening and releasing are different jobs."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Two side-by-side front views of the same pelvis bowl: on the left the pelvic floor muscle sling is lifted and compact, on the right the same sling is relaxed and slightly lower.",
+        "alt": "Two pelvis diagrams showing the pelvic floor lifted on one side and relaxed on the other",
+        "caption": "The pelvic floor has to lift and hold, and also let go. Symptoms alone do not show which job is struggling."
+      }
+    ],
+    "W30-Z": [
+      {
+        "key": "scene",
+        "prompt": "Soft editorial health-education illustration in blush pink, sage green and cream, modest and non-graphic, respectful, warm lighting. No text, no labels, no letters, no numbers, no logos, no watermark. An Indian woman in her thirties seated on a cream sofa with a warm wheat bag on her lower abdomen, evening lamp light, calm and not in distress.",
+        "alt": "Woman resting with a warm pack on her lower abdomen",
+        "caption": "Pelvic pain has many causes, including cycle-related pain, endometriosis, muscle pain and scars. A normal scan does not end the assessment."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Plain faceless mannequin-style front-view body outline in cream with a soft blush glow over the lower belly and hip region.",
+        "alt": "Body outline with the pelvic area highlighted",
+        "caption": "Pain felt in the pelvis can come from the uterus, ovaries, bowel, bladder, muscles or scars. The location alone does not name the cause."
+      }
+    ],
+    "W31-Z": [
+      {
+        "key": "scene",
+        "prompt": "Soft editorial health-education illustration in blush pink, sage green and cream, modest and non-graphic, respectful, warm lighting. No text, no labels, no letters, no numbers, no logos, no watermark. An Indian woman in her forties in a bright clean bathroom doorway holding a plain glass of water, thoughtful, no labels and no bottles with writing.",
+        "alt": "Woman holding a glass of water while thinking about frequent urination",
+        "caption": "Frequent urination needs an infection and other medical causes checked before it is treated as a pelvic floor problem."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Side view of a pelvis outline with a round bladder resting on a curved pelvic floor muscle sling at its base.",
+        "alt": "Side-view diagram of the bladder resting on the pelvic floor",
+        "caption": "Urgency without infection can involve bladder sensation and pelvic floor coordination. Drinking less is not the first fix."
+      }
+    ],
+    "W32-Z": [
+      {
+        "key": "scene",
+        "prompt": "Soft editorial health-education illustration in blush pink, sage green and cream, modest and non-graphic, respectful, warm lighting. No text, no labels, no letters, no numbers, no logos, no watermark. An Indian mother in her thirties sitting on the edge of a bed, one hand on her hip, a baby resting on a play mat nearby, calm morning light.",
+        "alt": "New mother holding her hip while her baby rests nearby",
+        "caption": "Pelvic pain after birth can come from joints, a scar, or the pelvic floor. It is not one injury, and six weeks is not a finish line."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Front view of a pelvis bowl with the two sacroiliac joints and the front pubic joint highlighted in sage, and the pelvic floor muscle sling across the base.",
+        "alt": "Front-view pelvis diagram with the sacroiliac and pubic joints highlighted above the pelvic floor",
+        "caption": "After birth, the pelvic joints and the pelvic floor can each be a source of pain, and a scar can add to it. A physiotherapist looks at them separately."
+      }
+    ],
+    "W33-Z": [
+      {
+        "key": "scene",
+        "prompt": "Soft editorial health-education illustration in blush pink, sage green and cream, modest and non-graphic, respectful, warm lighting. No text, no labels, no letters, no numbers, no logos, no watermark. A pregnant Indian woman in her second trimester standing in a leafy room, one hand supporting her lower back, comfortable clothes, calm smile.",
+        "alt": "Pregnant woman supporting her lower back",
+        "caption": "Back and pelvic aches are common as posture and weight shift in pregnancy. Some symptoms still need same-day maternity care."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Soft editorial health-education illustration in blush pink, sage green and cream, modest and non-graphic, respectful, warm lighting. No text, no labels, no letters, no numbers, no logos, no watermark. Side-view textbook silhouette of a pregnant woman showing a simplified womb, a gently curved spine and the pelvic floor, soft arrows suggesting weight shifting forward, no text.",
+        "alt": "Side-view diagram of pregnancy posture with the womb, spine and pelvic floor",
+        "caption": "As the bump grows, the spine and pelvic joints carry weight differently. That explains many aches and does not explain bleeding, fluid loss or reduced movements."
+      }
+    ],
+    "W34-Z": [
+      {
+        "key": "scene",
+        "prompt": "Soft editorial health-education illustration in blush pink, sage green and cream, modest and non-graphic, respectful, warm lighting. No text, no labels, no letters, no numbers, no logos, no watermark. An Indian woman in her thirties doing a gentle mat exercise at home facing a laptop, the screen showing only a blurred instructor, bright room, no text on the screen.",
+        "alt": "Woman following a mat class on a laptop at home",
+        "caption": "An online class can coach form and breathing. It cannot examine the pelvic floor or confirm that a diastasis has closed."
+      },
+      {
+        "key": "anatomy",
+        "prompt": "Textbook front view of the torso muscle layers: the deep horizontal abdominal muscle wrapping the waist shown in sage, above the pelvis bowl with a pelvic floor muscle sling.",
+        "alt": "Diagram of the deep abdominal muscle wrapping the waist above the pelvis and pelvic floor",
+        "caption": "Mat work can train breath, posture and gentle deep-core control. Hands-on assessment is a separate step when symptoms or a gap need checking."
       }
     ]
   }

@@ -1,5 +1,5 @@
 {
-  "note": "Google Images click hooks for watermarked SVG explainers. Exactly 4 short QUESTION lines per article—curiosity hooks, not answer spoilers. Each question must be answered in the matching article body (section or FAQ). Keep each line ≤40 characters so SVG cards do not truncate.",
+  "note": "Google Images click hooks for watermarked SVG explainers. Exactly 4 short QUESTION lines per article\u2014curiosity hooks, not answer spoilers. Each question must be answered in the matching article body (section or FAQ). Keep each line \u226440 characters so SVG cards do not truncate.",
   "articles": {
     "W01-C": [
       "What counts as an irregular period?",
@@ -14,7 +14,7 @@
       "When do leaks need medical help?"
     ],
     "W02-C": [
-      "What is PCOS—and what is PMOS?",
+      "What is PCOS\u2014and what is PMOS?",
       "How is PCOS diagnosed in adults?",
       "Are teens assessed differently?",
       "Can AMH diagnose PCOS alone?"
@@ -38,7 +38,7 @@
       "When should I pause or seek care?"
     ],
     "W04-C": [
-      "Can I predict ovulation—or only confirm?",
+      "Can I predict ovulation\u2014or only confirm?",
       "Which tracking method fits irregular cycles?",
       "Do LH kits prove I ovulated?",
       "When is tracking not enough?"
@@ -142,7 +142,7 @@
     "W12-Z": [
       "Why am I leaking after childbirth?",
       "Can caesarean births cause leaks too?",
-      "Who can help—and what should I note?",
+      "Who can help\u2014and what should I note?",
       "Must I wait for my 6-week check?"
     ],
     "W13-C": [
@@ -194,7 +194,7 @@
       "When is earlier help needed?"
     ],
     "W17-C": [
-      "Late period, negative test—what next?",
+      "Late period, negative test\u2014what next?",
       "Can I still be pregnant?",
       "When should I retest or see a clinician?",
       "What else can delay a period?"
@@ -257,7 +257,7 @@
       "What do people mean by egg quality?",
       "Does low AMH mean poor-quality eggs?",
       "Can supplements make eggs younger?",
-      "Which habits help—and what are the limits?"
+      "Which habits help\u2014and what are the limits?"
     ],
     "W22-Z": [
       "What can breathing prepare me for in labour?",
@@ -311,7 +311,85 @@
       "What should I prepare before I arrive?",
       "Will I have an internal exam on visit one?",
       "What consent and chaperone choices exist?",
-      "Online visit or in-person—what's different?"
+      "Online visit or in-person\u2014what's different?"
+    ],
+    "W27-C": [
+      "What pattern counts as PMS?",
+      "What should you write down?",
+      "When is it PMDD, not PMS?",
+      "When should you arrange a review?"
+    ],
+    "W28-C": [
+      "Why is the phrase too broad?",
+      "Which patterns have a real name?",
+      "What should I bring to the visit?",
+      "When should the wait be short?"
+    ],
+    "W29-C": [
+      "How often should we try?",
+      "Which health steps have evidence?",
+      "What will not replace assessment?",
+      "When should we ask for help?"
+    ],
+    "W30-C": [
+      "What can stress change?",
+      "Can stress explain infertility?",
+      "How does a clinician sort this?",
+      "When does mood need urgent help?"
+    ],
+    "W31-C": [
+      "Which bleeding should not wait?",
+      "Which pain needs same-day care?",
+      "What can wait for a booked visit?",
+      "How do I get help without guessing?"
+    ],
+    "W27-Z": [
+      "What does this specialty cover?",
+      "What is a session trying to find?",
+      "How does it sit next to medicine?",
+      "When should I see a doctor first?"
+    ],
+    "W28-Z": [
+      "What works well over video?",
+      "What can video not replace?",
+      "Who should not start online?",
+      "How do I prepare a useful call?"
+    ],
+    "W29-Z": [
+      "What is the pelvic floor asked to do?",
+      "Which symptoms share this label?",
+      "How is the pattern sorted?",
+      "Which symptoms need a doctor now?"
+    ],
+    "W30-Z": [
+      "Does the pain follow the cycle?",
+      "Can muscles or scars be involved?",
+      "Which clues should speed care?",
+      "What can a routine visit still do?"
+    ],
+    "W31-Z": [
+      "Could this be an infection?",
+      "What if tests show no infection?",
+      "Where does physiotherapy fit?",
+      "What should I record beforehand?"
+    ],
+    "W32-Z": [
+      "Why is this not one injury?",
+      "What daily habits keep it going?",
+      "What does a physio visit look at?",
+      "Which signs need urgent care?"
+    ],
+    "W33-Z": [
+      "Which aches track a changing body?",
+      "Which movement ideas stay modest?",
+      "Which symptoms should not wait?",
+      "What should I tell a clinician?"
+    ],
+    "W34-Z": [
+      "What can a screen actually teach?",
+      "Who should not start with a class?",
+      "How do I choose an honest class?",
+      "When should I stop and get help?"
     ]
   },
   "approval": {

@@ -62,6 +62,9 @@ for (const [from, to] of pairs) {
       while (start > 0 && /[A-Za-z0-9:/._~?&=%+-]/.test(text[start - 1])) start -= 1;
       const token = text.slice(start, at);
       if (/^https?:\/\//i.test(token) && !/womenshealthduo\.com/i.test(token)) continue;
+      // Guide slugs live at the root; `/mumbai/ivf/` is a different page.
+      if (/^\/[a-z0-9-]/i.test(token.replace(/^https?:\/\/(www\.)?womenshealthduo\.com/i, "")))
+        continue;
       errors.push(`${path.relative(root, file)} still links /${from}/`);
       break;
     }
