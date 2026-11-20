@@ -133,4 +133,4 @@ export const OG_IMAGE_PATH = "/images/og-womens-health-duo.jpg";
 
 /** Default `og:image:alt` / `twitter:image:alt` when a page does not supply a specific poster. */
 export const DEFAULT_OG_IMAGE_ALT =
-  "Dr. Charmi Shah (OB-GYN, IVF) and Dr. Zalak Shah (PT, women's health physio and STOTT Pilates) of Women's Health Duo";
+  "Dr. Charmi Shah (OB-GYN, IVF) and Dr. Zalak Shah (PT, women's health physio and Pilates) of Women's Health Duo";

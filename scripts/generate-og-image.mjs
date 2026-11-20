@@ -18,9 +18,21 @@ const H = 630;
 const PHOTO_W = 320;
 const TEXT_W = W - PHOTO_W * 2;
 
+/**
+ * Source crops so both faces sit on the same horizontal line. Measured from the
+ * master portraits: eye line at y=336 (Charmi, 849×1024) and y=523 (Zalak, 1182×1331).
+ * Each window keeps that eye line at 32% of the 630px panel. A plain top cover-crop
+ * leaves Zalak's head lower because her portrait has more space above the hair.
+ */
+const PORTRAIT_CROPS = {
+  "dr-charmi.jpeg": { left: 187, top: 16, width: 508, height: 1000 },
+  "dr-zalak.jpeg": { left: 330, top: 145, width: 599, height: 1180 },
+};
+
 async function portrait(file) {
   return sharp(path.join(root, "src/assets", file))
-    .resize({ width: PHOTO_W, height: H, fit: "cover", position: "top" })
+    .extract(PORTRAIT_CROPS[file])
+    .resize(PHOTO_W, H)
     .toBuffer();
 }
 
@@ -31,7 +43,7 @@ const lines = [
   { y: 232, size: 44, weight: 700, fill: "#2a1d17", text: "Dr. Charmi Shah" },
   { y: 274, size: 24, weight: 400, fill: "#5b4a42", text: "OB-GYN, IVF & laparoscopy" },
   { y: 352, size: 44, weight: 700, fill: "#2a1d17", text: "Dr. Zalak Shah (PT)" },
-  { y: 394, size: 24, weight: 400, fill: "#5b4a42", text: "Women's health physio & STOTT Pilates" },
+  { y: 394, size: 24, weight: 400, fill: "#5b4a42", text: "Women's health physio & Pilates" },
   { y: 500, size: 22, weight: 500, fill: "#a2513a", text: "In-person in India · Online worldwide" },
 ];
 
