@@ -20,7 +20,6 @@ import {
   PRACTICE_CHARMI_LOCATIONS_LINE,
   PRACTICE_ZALAK_LOCATIONS_LINE,
 } from "@/config/practiceLocations";
-import { BRAND_ENTITY_LINE, CHARMI_ALSO_WRITTEN, ZALAK_ALSO_WRITTEN } from "@/config/brandLine";
 import { doctorRegistrationLine } from "@/config/doctorRegistration";
 import { EmergencyDisclaimer } from "@/components/compliance/EmergencyDisclaimer";
 import { TelemedicineTrustBadges } from "@/components/compliance/TelemedicineTrustBadges";
@@ -117,10 +116,7 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
         <p className="text-sm font-medium text-foreground mb-1">
           {doctorRegistrationLine(slug)} · {d.registration.yearsExperience} clinical experience
         </p>
-        <TelemedicineTrustBadges className="mb-4" />
-        <p className="text-sm text-foreground/90 border-l-2 border-primary/35 pl-3 mb-8 max-w-2xl">
-          {BRAND_ENTITY_LINE} {slug === "charmi" ? CHARMI_ALSO_WRITTEN : ZALAK_ALSO_WRITTEN}
-        </p>
+        <TelemedicineTrustBadges className="mb-8" />
 
         <div className="float-none sm:float-right sm:ml-8 sm:mb-4 w-full max-w-[220px] mx-auto sm:mx-0">
           <picture>
@@ -144,17 +140,6 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
             <p key={i}>{p}</p>
           ))}
         </div>
-
-        {slug === "zalak" ? (
-          <div className="mb-8 rounded-2xl border border-primary/20 bg-primary/5 p-4 text-sm text-foreground/90">
-            <strong className="font-medium text-foreground">
-              Dr. Zalak&apos;s strongest care paths:
-            </strong>{" "}
-            prenatal support, postnatal recovery, urinary incontinence and pelvic floor rehab, and
-            diastasis recti / core retraining. Online consultation is available worldwide; STOTT
-            Pilates (Mat and Reformer) supports safe, guided progress when it fits your care plan.
-          </div>
-        ) : null}
 
         <h2 className="font-heading text-xl font-semibold text-foreground clear-both sm:clear-none mt-10 mb-3">
           Specialties and focus areas

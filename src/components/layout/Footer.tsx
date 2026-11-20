@@ -1,5 +1,4 @@
 import { Heart, Instagram, Mail, Phone, Youtube } from "lucide-react";
-import { BRAND_ALSO_WRITTEN } from "@/config/brandLine";
 import { CONTACT } from "@/config/site";
 import { ROUTES } from "@/config/routes";
 import { publicPathname } from "@/lib/githubPagesPublicUrl";
@@ -90,7 +89,6 @@ export const Footer = () => {
               Two sisters, one mission: comprehensive women's healthcare combining medical expertise
               with physiotherapy and wellness.
             </p>
-            <p className="text-background/70 text-sm leading-relaxed mt-2">{BRAND_ALSO_WRITTEN}</p>
           </div>
 
           {/* Programs */}

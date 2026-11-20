@@ -33,10 +33,10 @@ export const DOCTOR_BY_SLUG: Record<DoctorSlug, DoctorProfile> = {
     metaDescription:
       "Dr. Charmi Shah: obstetrics, gynecology, IVF, IUI, high-risk pregnancy, and laparoscopic surgery. Online OB-GYN telehealth worldwide; in person in Mumbai, Ahmedabad, and Valsad.",
     overview: [
-      "Online OB-GYN and IVF consults are available worldwide, many NRIs and expatriate families book video visits for second opinions, pregnancy planning, fertility pathways, and follow-up without traveling to India for every question. In-person OB-GYN visits are focused in Mumbai, Ahmedabad, and Valsad, coordinate through the practice when clinically appropriate.",
-      "Dr. Charmi Shah is an obstetrician and gynecologist with advanced training in laparoscopy and assisted reproduction. She supports patients through high-risk pregnancy, complex gynecologic conditions, fertility evaluation, and minimally invasive surgery when clinically appropriate.",
-      "Her practice philosophy combines evidence-based medicine with clear, compassionate communication, whether you are planning a pregnancy, managing PCOS or endometriosis, or exploring IVF or IUI.",
-      "Through Women's Health Duo, Dr. Charmi works alongside her sister, Dr. Zalak Shah, so patients can access coordinated OB-GYN and women's health physiotherapy / STOTT Pilates pathways where relevant.",
+      "Dr. Charmi Shah is an obstetrician and gynecologist (MBBS, MS Obstetrics & Gynecology) with fellowship training in laparoscopy and IVF and more than 10 years of clinical experience. She sees women in person in Mumbai, Ahmedabad, and Valsad, and by video consultation anywhere in the world.",
+      "She cares for women through pregnancy, including high-risk pregnancy; fertility evaluation, IUI, and IVF; laparoscopic surgery for conditions such as fibroids, ovarian cysts, and endometriosis; and everyday gynecology, from PCOS and period problems to screening and menopause.",
+      "Online consultations suit NRIs and families abroad who want a second opinion, help planning a pregnancy or fertility treatment, or follow-up with an Indian OB-GYN without travelling for every question. When you need an examination, a scan, or surgery, she tells you so and plans that visit with you.",
+      "Dr. Charmi works alongside her sister, Dr. Zalak Shah (PT), at Women's Health Duo, a practice that has treated more than 5,000 patients. When pregnancy, recovery, or pelvic symptoms also need physiotherapy, the two of them coordinate your care.",
     ],
     specialties: [
       "Pregnancy & high-risk obstetrics",
@@ -66,10 +66,10 @@ export const DOCTOR_BY_SLUG: Record<DoctorSlug, DoctorProfile> = {
     metaDescription:
       "Dr. Zalak Shah: women's health physiotherapy, pelvic floor rehab, prenatal and postnatal care, Mat Pilates online, and STOTT Pilates on Mat and Reformer. Online programs worldwide; in person in Bangalore and Ahmedabad.",
     overview: [
-      "Online women's health physiotherapy, Mat Pilates online, and STOTT Pilates (Mat & Reformer) are core offerings for global patients, ideal for pregnancy-safe movement through postpartum recovery, pelvic-floor–friendly training, and progressive core work wherever you live. In-person sessions are focused in Bangalore and Ahmedabad, coordinate through the practice when appropriate. Google Business profile links below include maps, hours, and directions.",
-      "Dr. Zalak Shah is a physiotherapist specializing in women's health, combining clinical physiotherapy with STOTT Pilates methodology on Mat and Reformer. She supports pelvic floor rehabilitation, prenatal through postpartum recovery, diastasis recti, and musculoskeletal concerns common in women.",
-      "Her approach integrates evidence-based exercise progression with hands-on physiotherapy where appropriate, prioritizing safety and collaboration with your medical team.",
-      "As part of Women's Health Duo, she partners with Dr. Charmi Shah so patients can move between medical and movement-based care with a shared, patient-centered ethos.",
+      "Dr. Zalak Shah (PT) is a women's health physiotherapist (BPT, MPT) and a STOTT Pilates Instructor for Mat and Reformer, with more than 6 years of clinical experience. She sees women in person in Bangalore and Ahmedabad, and online anywhere in the world.",
+      "She treats pelvic floor problems such as urine leakage, pelvic pain, and prolapse symptoms (with medical clearance). She also supports women through pregnancy with prenatal physiotherapy and birth preparation, guides postnatal recovery including diastasis recti and core retraining, and treats back, neck, and joint pain common in women.",
+      "Online sessions cover physiotherapy, prenatal and postnatal programmes, and Mat Pilates, which suits women abroad or between cities. She uses Pilates within your physiotherapy plan when it fits, and she tells you when you need a hands-on assessment in person.",
+      "Dr. Zalak works alongside her sister, Dr. Charmi Shah, an OB-GYN, at Women's Health Duo, a practice that has treated more than 5,000 patients. When symptoms need a medical review, she coordinates with Dr. Charmi or with your own doctor.",
     ],
     specialties: [
       "Pelvic floor rehabilitation",
