@@ -41,6 +41,7 @@ import { writeIndexNowContentManifest } from "./src/build/indexnowContentManifes
 import { githubPagesAbsoluteUrl } from "./src/lib/githubPagesPublicUrl.ts";
 import { ensureHttpsSiteOrigin } from "./src/lib/ensureHttpsSiteOrigin.ts";
 import { buildVideoSitemapXml, videoSitemapEntryCount } from "./src/build/videoSitemap.ts";
+import { writeImageSitemap } from "./src/build/imageSitemap.ts";
 import { writeAgentDiscoveryFiles } from "./src/build/agentDiscovery.ts";
 
 /** Every routable page pathname (sitemap URLs plus the noindexed matrix); used for static SPA shells. */
@@ -312,6 +313,7 @@ Allow: /
 
 Sitemap: ${siteUrl}/sitemap.xml
 Sitemap: ${siteUrl}/sitemap-videos.xml
+Sitemap: ${siteUrl}/sitemap-images.xml
 `;
 
   fs.mkdirSync(outDir, { recursive: true });
@@ -464,6 +466,10 @@ export default defineConfig(({ mode }) => {
                 }
               }
             }
+            const images = writeImageSitemap(siteUrl, outDirAbs);
+            console.info(
+              `[seo-images] sitemap-images.xml: ${images.images} photos on ${images.pages} pages`,
+            );
             // SEO-25: prefer prerendered hero picture; otherwise homepage-only responsive preload.
             const heroHint = ensureHomepageHeroLcpHint(outDirAbs);
             console.info(`[seo-25] homepage hero LCP: ${heroHint.mode}`);

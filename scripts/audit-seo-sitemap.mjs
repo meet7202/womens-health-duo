@@ -55,6 +55,30 @@ function main() {
     errors.push(`sitemap-videos.xml has ${videoLocs.length} URLs, expected ${meta.videoUrlCount}`);
   }
 
+  const imageXml = existsSync(join(DIST, "sitemap-images.xml"))
+    ? readDist("sitemap-images.xml")
+    : "";
+  const imagePages = imageXml ? extractLocs(imageXml) : [];
+  const imageCount = (imageXml.match(/<image:loc>/g) ?? []).length;
+  if (!imageXml) errors.push("sitemap-images.xml is missing");
+  if (!robots.includes("sitemap-images.xml")) {
+    errors.push("robots.txt must list sitemap-images.xml");
+  }
+  if (imageCount < 50) {
+    errors.push(`sitemap-images.xml lists ${imageCount} photos, expected the content set`);
+  }
+  for (const needle of [
+    "/images/classes/",
+    "/images/articles/",
+    "/images/hub-thumbs/",
+    "hero-doctors",
+    "dr-zalak",
+    "dr-charmi",
+  ]) {
+    if (imageXml && !imageXml.includes(needle)) {
+      errors.push(`sitemap-images.xml is missing ${needle}`);
+    }
+  }
   if (existsSync(join(DIST, "sitemap-virtual-service-cities.xml"))) {
     errors.push("sitemap-virtual-service-cities.xml must not be emitted (matrix is noindex)");
   }
@@ -66,6 +90,16 @@ function main() {
   const featured = new Set(
     (meta.featuredVirtualServiceCityPaths ?? []).map((p) => p.replace(/\/+$/, "")),
   );
+  const noindexImagePages = imagePages.filter((loc) => {
+    if (!matrixLoc.test(loc)) return false;
+    return !featured.has(new URL(loc).pathname.replace(/\/+$/, ""));
+  });
+  if (noindexImagePages.length > 0) {
+    errors.push(
+      `sitemap-images.xml lists ${noindexImagePages.length} noindexed service×city page(s), e.g. ${noindexImagePages[0]}`,
+    );
+  }
+
   const matrixInPrimary = primaryLocs.filter((loc) => matrixLoc.test(loc));
   const unexpectedMatrix = matrixInPrimary.filter(
     (loc) => !featured.has(new URL(loc).pathname.replace(/\/+$/, "")),
@@ -182,7 +216,7 @@ function main() {
 
   if (errors.length === 0) {
     console.log(
-      `audit-seo-sitemap: OK (lastmodStrategy ${meta.lastmodStrategy ?? "unknown"}; primary ${primaryLocs.length}, video ${videoLocs.length}; ${featured.size} featured service×city pages indexable, ${meta.noindexVirtualServiceCityCount} noindex, ${matrixChecked} sampled)`,
+      `audit-seo-sitemap: OK (lastmodStrategy ${meta.lastmodStrategy ?? "unknown"}; primary ${primaryLocs.length}, video ${videoLocs.length}, images ${imageCount} on ${imagePages.length} pages; ${featured.size} featured service×city pages indexable, ${meta.noindexVirtualServiceCityCount} noindex, ${matrixChecked} sampled)`,
     );
     return;
   }
