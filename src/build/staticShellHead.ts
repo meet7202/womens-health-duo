@@ -28,6 +28,7 @@ import {
 } from "../data/internationalServices/internationalServiceRegistry";
 import { INTERNATIONAL_HUB } from "../data/internationalServices/hubContent";
 import { homeSectionSeo } from "../lib/homeSectionPaths";
+import { virtualServiceCitySeo } from "../lib/virtualServiceCitySeo";
 import {
   isIndexableLearnHubFilter,
   learnHubFilteredPath,
@@ -83,8 +84,6 @@ import {
   virtualCountryH1,
   virtualHubDocumentTitle,
   virtualHubH1,
-  virtualServiceCityDocumentTitle,
-  virtualServiceCityH1,
 } from "../lib/pageSeoCopy";
 import {
   VIRTUAL_CONSULTATION_HUB_PATH,
@@ -93,7 +92,6 @@ import {
   resolveLegacyGlobalOnlineSlug,
   virtualCityPathSegment,
   virtualConsultationCityPath,
-  virtualServiceCityPath,
 } from "../lib/virtualConsultation";
 import { githubPagesAbsoluteUrl } from "../lib/githubPagesPublicUrl";
 import { knowledgeHubPosterAlt, knowledgeHubVideoThumbnailAbsolute } from "../lib/mediaSeo";
@@ -137,19 +135,6 @@ function countryVirtualDescription(country: string, cityCount: number) {
 
 function cityVirtualDescription(city: string, country: string) {
   return `Virtual online consultations for patients in ${city}, ${country}: Dr. Charmi Shah (OB-GYN, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapy, Mat Pilates online, STOTT Pilates Mat & Reformer). ${PRACTICE_BOTH_DOCTORS_IN_PERSON} Book via WhatsApp or email.`;
-}
-
-function serviceVirtualMetaDescription(
-  serviceTitle: string,
-  city: string,
-  country: string,
-  doctor: "charmi" | "zalak",
-) {
-  const who =
-    doctor === "charmi"
-      ? "Dr. Charmi Shah (OB-GYN, IVF, laparoscopy)"
-      : "Dr. Zalak Shah (women's health physiotherapy, Mat Pilates online, STOTT Pilates)";
-  return `${serviceTitle} via online consultation for patients in ${city}, ${country} with ${who}. ${PRACTICE_BOTH_DOCTORS_IN_PERSON} WhatsApp or email to book.`;
 }
 
 function normalizePathname(pathname: string): string {
@@ -417,18 +402,13 @@ export function resolveShellPageMeta(siteUrl: string, pathname: string): ShellPa
     const city = getVirtualConsultationCityBySlug(segs[1]);
     const service = getSeoOnlineServiceBySlug(segs[2]);
     if (city && service && segs[1].toLowerCase() === virtualCityPathSegment(city)) {
-      const p = virtualServiceCityPath(city, service.slug);
+      const seo = virtualServiceCitySeo(city, service);
       return {
-        canonicalHref: canonicalHrefForPath(siteUrl, p),
-        title: virtualServiceCityDocumentTitle(service.shortTitle, city.city, city.country),
-        h1: virtualServiceCityH1(service.title, city.city, city.country),
-        metaDescription: serviceVirtualMetaDescription(
-          service.title,
-          city.city,
-          city.country,
-          service.doctor,
-        ),
-        robots: ROBOTS_NOINDEX_FOLLOW,
+        canonicalHref: canonicalHrefForPath(siteUrl, seo.path),
+        title: seo.title,
+        h1: seo.h1,
+        metaDescription: seo.metaDescription,
+        ...(seo.indexable ? {} : { robots: ROBOTS_NOINDEX_FOLLOW }),
       };
     }
   }

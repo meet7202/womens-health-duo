@@ -77,7 +77,7 @@
 - **Hub:** `/online-consultation`
 - **Country index:** `/online-consultation/country/<countrySlug>` (e.g. `india`, `united-states`)
 - **City overview:** `/online-consultation/<citySlug>` (e.g. `dubai-ae`, `london`, `toronto`)
-- **Service × city:** `/online-consultation/<citySlug>/<serviceSlug>` still resolves for existing links but is `noindex, follow` and not in any sitemap. Cite the city overview or the service landing under `/international-consultation/` instead.
+- **Service × city:** `/online-consultation/<citySlug>/<serviceSlug>`. About 100 of these, chosen from search demand, are indexable and in `sitemap.xml` (for example [online pelvic floor physiotherapy for Muscat](https://womenshealthduo.com/online-consultation/muscat/pelvic-floor-rehabilitation/) and [online menopause consultation for Singapore](https://womenshealthduo.com/online-consultation/singapore/menopause-wellness/)). The rest resolve for existing links but are `noindex, follow`; for those, cite the city overview or the service landing under `/international-consultation/`.
 - **Legacy:** `/global-online` redirects to `/online-consultation` (preserve old bookmarks).
 
 ## Online service slugs (`<serviceSlug>`)

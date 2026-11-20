@@ -63,11 +63,41 @@ function main() {
   }
 
   const matrixLoc = /\/online-consultation\/(?!country\/)[^/]+\/[^/]+\/?$/;
+  const featured = new Set(
+    (meta.featuredVirtualServiceCityPaths ?? []).map((p) => p.replace(/\/+$/, "")),
+  );
   const matrixInPrimary = primaryLocs.filter((loc) => matrixLoc.test(loc));
-  if (matrixInPrimary.length > 0) {
+  const unexpectedMatrix = matrixInPrimary.filter(
+    (loc) => !featured.has(new URL(loc).pathname.replace(/\/+$/, "")),
+  );
+  if (unexpectedMatrix.length > 0) {
     errors.push(
-      `sitemap.xml lists ${matrixInPrimary.length} noindexed service×city URL(s), e.g. ${matrixInPrimary[0]}`,
+      `sitemap.xml lists ${unexpectedMatrix.length} noindexed service×city URL(s), e.g. ${unexpectedMatrix[0]}`,
     );
+  }
+  if (matrixInPrimary.length !== featured.size) {
+    errors.push(
+      `sitemap.xml lists ${matrixInPrimary.length} featured service×city URLs, expected ${featured.size}`,
+    );
+  }
+  let featuredProblems = 0;
+  for (const pathname of featured) {
+    const shell = shellPathForPathname(`${pathname}/`);
+    if (!existsSync(shell)) {
+      errors.push(`missing static shell for featured matrix page ${pathname}`);
+      continue;
+    }
+    const html = readFileSync(shell, "utf8");
+    const robotsOk = /<meta\s+name="robots"\s+content="index, follow/.test(html);
+    const prerendered = html.includes("data-seo-prerender");
+    if (!robotsOk || !prerendered) {
+      featuredProblems += 1;
+      if (featuredProblems <= 3) {
+        errors.push(
+          `featured matrix page ${pathname}: ${robotsOk ? "" : "not index, follow "}${prerendered ? "" : "not prerendered"}`.trim(),
+        );
+      }
+    }
   }
 
   let matrixIndexable = 0;
@@ -152,7 +182,7 @@ function main() {
 
   if (errors.length === 0) {
     console.log(
-      `audit-seo-sitemap: OK (lastmodStrategy ${meta.lastmodStrategy ?? "unknown"}; primary ${primaryLocs.length}, video ${videoLocs.length}; ${meta.noindexVirtualServiceCityCount} service×city pages noindex, ${matrixChecked} sampled)`,
+      `audit-seo-sitemap: OK (lastmodStrategy ${meta.lastmodStrategy ?? "unknown"}; primary ${primaryLocs.length}, video ${videoLocs.length}; ${featured.size} featured service×city pages indexable, ${meta.noindexVirtualServiceCityCount} noindex, ${matrixChecked} sampled)`,
     );
     return;
   }

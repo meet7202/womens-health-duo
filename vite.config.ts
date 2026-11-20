@@ -16,7 +16,8 @@ import {
   SITEMAP_PATHS,
   SITEMAP_PATHS_PRIMARY_URLSET,
   SITEMAP_SEGMENT_INTERNATIONAL_CONSULTATION,
-  VIRTUAL_SERVICE_CITY_PATHS,
+  SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITY_FEATURED,
+  VIRTUAL_SERVICE_CITY_NOINDEX_PATHS,
   sitemapPriorityForPath,
   sitemapUrlsetKindForPath,
 } from "./src/config/routes.ts";
@@ -322,7 +323,7 @@ Sitemap: ${siteUrl}/sitemap-videos.xml
       SITEMAP_PATHS_PRIMARY_URLSET,
       siteUrl,
       lastmod,
-      "Indexable pages. The noindexed service×city matrix is not listed.",
+      "Indexable pages. Only the featured service×city pages are listed; the rest of the matrix is noindex.",
       {
         priority: sitemapPriorityForPath,
         changefreq: (p) => sitemapChangefreq(p, sitemapUrlsetKindForPath(p)),
@@ -346,10 +347,12 @@ Sitemap: ${siteUrl}/sitemap-videos.xml
         lastmodStrategy: "omit-until-verified-content-revision",
         siteUrl,
         primaryUrlCount: SITEMAP_PATHS_PRIMARY_URLSET.length,
-        noindexVirtualServiceCityCount: VIRTUAL_SERVICE_CITY_PATHS.length,
-        noindexVirtualServiceCitySample: VIRTUAL_SERVICE_CITY_PATHS.filter(
-          (_, i) => i % Math.max(1, Math.floor(VIRTUAL_SERVICE_CITY_PATHS.length / 25)) === 0,
+        noindexVirtualServiceCityCount: VIRTUAL_SERVICE_CITY_NOINDEX_PATHS.length,
+        noindexVirtualServiceCitySample: VIRTUAL_SERVICE_CITY_NOINDEX_PATHS.filter(
+          (_, i) =>
+            i % Math.max(1, Math.floor(VIRTUAL_SERVICE_CITY_NOINDEX_PATHS.length / 25)) === 0,
         ).slice(0, 25),
+        featuredVirtualServiceCityPaths: SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITY_FEATURED,
         videoUrlCount: videoSitemapEntryCount(),
         internationalConsultationUrlCount: SITEMAP_SEGMENT_INTERNATIONAL_CONSULTATION.length,
         staticShellCount: staticSpaShellPathnames().length,
@@ -446,6 +449,7 @@ export default defineConfig(({ mode }) => {
                 ...topicGuideSitemapPaths(),
                 ...learnHubSitemapPaths(),
                 ...learnWatchSitemapPaths(),
+                ...SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITY_FEATURED,
               ]);
               console.info(
                 `[seo-10] prerender priority pages: ${prerender.succeeded}/${prerender.attempted} ok` +

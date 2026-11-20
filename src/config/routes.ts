@@ -1,5 +1,6 @@
 /** Public routes (pathname only; React Router `basename` applies on GitHub Pages). */
 import { SEO_ONLINE_SERVICES } from "../data/seoOnlineServices";
+import { isFeaturedServiceCityPath } from "../data/featuredServiceCities";
 import {
   learnHubSitemapPaths,
   learnWatchSitemapPaths,
@@ -74,14 +75,26 @@ export const HOME_SECTION_SCROLL_PATHS: readonly string[] = [
 ];
 
 /**
- * Each online service for every virtual city. These pages stay routable with static shells
- * but are `noindex, follow` and are not listed in any sitemap (scaled-template risk; see
- * `docs/seo-growth-plan-2026-11-20.md`). Do not re-add them to a sitemap without new
- * Search Console evidence. SEO-11: city list is frozen via `VIRTUAL_CONSULTATION_CITY_COUNT_FREEZE`.
+ * Each online service for every virtual city. All stay routable with static shells. Only the
+ * featured subset below is indexable (scaled-template risk; see
+ * `docs/seo-growth-plan-2026-11-20.md`). Add pages through the Search Console selection
+ * script, not by hand. SEO-11: city list is frozen via `VIRTUAL_CONSULTATION_CITY_COUNT_FREEZE`.
  */
 export const VIRTUAL_SERVICE_CITY_PATHS: readonly string[] = VIRTUAL_CONSULTATION_CITIES.flatMap(
   (c) => SEO_ONLINE_SERVICES.map((s) => virtualServiceCityPath(c, s.slug)),
 );
+
+/**
+ * Indexable subset of the matrix, picked from Search Console data in
+ * `src/data/featuredServiceCityPaths.json`. Widen it by re-running
+ * `scripts/select-featured-service-cities.mjs` with a higher `--limit`.
+ */
+export const SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITY_FEATURED: readonly string[] =
+  VIRTUAL_SERVICE_CITY_PATHS.filter((p) => isFeaturedServiceCityPath(p));
+
+/** Matrix pages that stay `noindex, follow` and out of the sitemap. */
+export const VIRTUAL_SERVICE_CITY_NOINDEX_PATHS: readonly string[] =
+  VIRTUAL_SERVICE_CITY_PATHS.filter((p) => !isFeaturedServiceCityPath(p));
 
 const VIRTUAL_COUNTRY_SITEMAP_PATHS: readonly string[] = VIRTUAL_CONSULTATION_COUNTRIES.map((c) =>
   virtualConsultationCountryPath(c),
@@ -213,18 +226,19 @@ export function sitemapPriorityForPath(pathname: string): string {
 }
 
 /**
- * Paths listed in `sitemap.xml`. Excludes the noindexed
- * `/online-consultation/:city/:service` matrix (`VIRTUAL_SERVICE_CITY_PATHS`).
+ * Paths listed in `sitemap.xml`. Of the `/online-consultation/:city/:service` matrix, only the
+ * featured subset is listed; the rest is noindexed (`VIRTUAL_SERVICE_CITY_NOINDEX_PATHS`).
  */
 export const SITEMAP_PATHS_PRIMARY_URLSET: readonly string[] = [
   ...SITEMAP_SEGMENT_CORE,
   ...SITEMAP_SEGMENT_LEARN,
   ...SITEMAP_SEGMENT_TOPIC_GUIDES,
   ...SITEMAP_SEGMENT_VIRTUAL_HUB_COUNTRY_CITY,
+  ...SITEMAP_SEGMENT_VIRTUAL_SERVICE_CITY_FEATURED,
 ];
 
 /** Every routable page that gets a static shell: sitemap URLs plus the noindexed matrix. */
 export const SITEMAP_PATHS: readonly string[] = [
   ...SITEMAP_PATHS_PRIMARY_URLSET,
-  ...VIRTUAL_SERVICE_CITY_PATHS,
+  ...VIRTUAL_SERVICE_CITY_NOINDEX_PATHS,
 ];

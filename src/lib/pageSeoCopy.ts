@@ -58,21 +58,48 @@ function seoLabelWithOnlineSuffix(label: string): string {
  * City × service titles: emphasize online consultation/advice (not in-city surgery).
  * Keep city identity early so long country names do not erase the location (SEO-05).
  */
+/**
+ * `label` is the service's search label (`SERVICE_CITY_CONTENT[slug].queryLabel`). Pass
+ * `includeCountry` when the city name exists in more than one country.
+ */
 export function virtualServiceCityDocumentTitle(
-  serviceShort: string,
+  label: string,
   city: string,
   country: string,
+  includeCountry = false,
 ): string {
-  const topic = serviceShort.trim();
-  const withCountry = formatDocumentTitle(`Online advice: ${topic} — ${city}, ${country}`);
-  if (withCountry.length <= DOCUMENT_TITLE_MAX_LEN) return withCountry;
-  const cityOnly = formatDocumentTitle(`Online advice: ${topic} — ${city}`);
-  if (cityOnly.length <= DOCUMENT_TITLE_MAX_LEN) return cityOnly;
-  return formatDocumentTitle(`${topic} online — ${city}`);
+  const topic = label.trim();
+  const place = includeCountry ? cityCountryLabel(city, country) : city;
+  const branded = formatDocumentTitle(`${topic} for ${place}`);
+  if (!branded.includes("…")) return branded;
+  const plain = `${topic} for ${place}`;
+  if (plain.length <= DOCUMENT_TITLE_MAX_LEN) return plain;
+  return formatDocumentTitle(`${topic}, ${place}`);
 }
 
-export function virtualServiceCityH1(serviceTitle: string, city: string, country: string): string {
-  return `${serviceTitle} – online consultation for patients in ${city}, ${country}`;
+function cityCountryLabel(city: string, country: string): string {
+  return city === country ? city : `${city}, ${country}`;
+}
+
+export function virtualServiceCityH1(label: string, city: string, country: string): string {
+  return `${label} for patients in ${cityCountryLabel(city, country)}`;
+}
+
+export function virtualServiceCityMetaDescription(
+  label: string,
+  city: string,
+  country: string,
+  doctor: "charmi" | "zalak",
+): string {
+  const place = cityCountryLabel(city, country);
+  const name = doctor === "charmi" ? "Dr. Charmi Shah" : "Dr. Zalak Shah";
+  const role = doctor === "charmi" ? "OB-GYN" : "women's health physiotherapist";
+  const candidates = [
+    `${label} for ${place} with ${name} (${role}): what works by video, what needs a local visit. Book on WhatsApp.`,
+    `${label} for ${place} with ${name}: what works by video, what needs a local visit. Book on WhatsApp.`,
+    `${label} for ${place} with ${name}. What works by video. Book on WhatsApp.`,
+  ];
+  return candidates.find((c) => c.length <= 160) ?? candidates[candidates.length - 1];
 }
 
 function learnDoctorLabel(d: LearnHubParsed["doctor"]): string {
