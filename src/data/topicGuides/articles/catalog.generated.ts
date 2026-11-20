@@ -917,7 +917,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       },
       {
         anchor: "trying to conceive",
-        path: "/trying-to-conceive/"
+        path: "/pregnancy-planning/"
       }
     ],
     faqs: [
@@ -1230,7 +1230,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       },
       {
         anchor: "trying to conceive",
-        path: "/trying-to-conceive/"
+        path: "/pregnancy-planning/"
       },
       {
         anchor: "pregnancy planning with PCOS",
@@ -1387,11 +1387,11 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     internalLinks: [
       {
         anchor: "what Pilates is",
-        path: "/what-is-pilates/"
+        path: "/what-is-stott-pilates/"
       },
       {
         anchor: "Pilates for beginners",
-        path: "/pilates-for-beginners/"
+        path: "/what-is-stott-pilates/"
       },
       {
         anchor: "Pilates classes and current formats",
@@ -2003,7 +2003,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     internalLinks: [
       {
         anchor: "back pain in pregnancy",
-        path: "/back-pain-in-pregnancy/"
+        path: "/how-to-relieve-back-pain-during-pregnancy/"
       },
       {
         anchor: "pelvic pain during pregnancy",
@@ -3257,7 +3257,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     internalLinks: [
       {
         anchor: "pelvic pain in pregnancy",
-        path: "/pelvic-pain-in-pregnancy/"
+        path: "/how-to-relieve-pelvic-pain-during-pregnancy/"
       },
       {
         anchor: "prenatal physiotherapy",
@@ -3566,7 +3566,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     internalLinks: [
       {
         anchor: "bladder leakage after pregnancy",
-        path: "/bladder-leakage-after-pregnancy/"
+        path: "/why-am-i-leaking-urine-after-childbirth/"
       },
       {
         anchor: "pelvic floor therapy",
@@ -4699,7 +4699,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       },
       {
         anchor: "IVF overview",
-        path: "/ivf/"
+        path: "/what-is-ivf/"
       },
       {
         anchor: "when to seek fertility assessment",
@@ -5198,7 +5198,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       },
       {
         anchor: "postnatal Pilates",
-        path: "/postnatal-pilates/"
+        path: "/pilates-after-pregnancy/"
       }
     ],
     faqs: [
@@ -5353,7 +5353,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       },
       {
         anchor: "trying to conceive",
-        path: "/trying-to-conceive/"
+        path: "/pregnancy-planning/"
       },
       {
         anchor: "when to see a gynecologist",
@@ -6452,7 +6452,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       },
       {
         anchor: "prenatal Pilates",
-        path: "/prenatal-pilates/"
+        path: "/is-pilates-safe-during-pregnancy/"
       },
       {
         anchor: "pregnancy exercise safety",
@@ -7073,7 +7073,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       },
       {
         anchor: "painful intercourse",
-        path: "/painful-intercourse/"
+        path: "/can-pelvic-floor-therapy-help-with-painful-intercourse/"
       },
       {
         anchor: "are Kegels right for everyone?",
@@ -7373,7 +7373,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       },
       {
         anchor: "postnatal Pilates",
-        path: "/postnatal-pilates/"
+        path: "/pilates-after-pregnancy/"
       },
       {
         anchor: "returning to exercise after birth",
@@ -7543,7 +7543,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       },
       {
         anchor: "IVF overview",
-        path: "/ivf/"
+        path: "/what-is-ivf/"
       },
       {
         anchor: "how IVF works",
@@ -8213,6 +8213,1451 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "Preferred review interval after starting HRT in WHD clinics?"
     ],
     bodyFingerprintText: "Is HRT Right for Me? Questions to Discuss With a Doctor\nHormone replacement therapy (HRT) replaces oestrogen—and usually progestogen if you still have a womb—to relieve menopause-associated symptoms such as hot flushes, night sweats, sleep disturbance, low mood linked to menopause, and vaginal dryness. NHS advice is that for many people under 60 with bothersome symptoms and without high breast-cancer or clot risk, benefits are likely to outweigh risks, but the balance is personal. No article can declare HRT universally safe or unsafe. Shared decisions use your symptom burden, age, medical history and preferences.\nWhat HRT is trying to treat\nSystemic HRT (tablets, patches, gel or spray) is used for whole-body menopause symptoms. NICE recommends offering HRT for vasomotor symptoms associated with menopause. Local vaginal oestrogen treats genitourinary symptoms such as dryness or pain with sex and, per NHS, does not carry the same breast-cancer or clot risk profile as systemic therapy because little hormone reaches the bloodstream.\nOur perimenopause symptoms guide helps you name what is bothering you before the HRT conversation. Bone protection is another NHS-listed benefit of systemic HRT, especially important if periods stopped before 45. Muscle strength support is also described on NHS benefits pages alongside the need to keep exercising.\nOption categories—not a personal prescription\nNHS explains combined HRT (oestrogen plus progestogen) when you have a womb, and oestrogen-only HRT after hysterectomy. Delivery methods include tablets, skin patches, gel, spray, and intrauterine progestogen paired with oestrogen. Sequential combined regimens are often used while periods are still occurring; continuous combined regimens are usual after 12 months without periods. Testosterone gel may be considered by specialists for persistent low sexual desire after menopause when HRT alone is not enough—licensing and access vary.\nNICE advises discussing benefits and risks of combined versus oestrogen-only treatment, transdermal versus oral routes, sequential versus continuous combined schedules, and dose and duration, tailored to age and risk factors. Patches, gel and spray do not increase blood-clot risk the way tablets can, which matters if clot risk is elevated.\nBenefits, risks and history to put on the table\nNHS lists symptom relief and osteoporosis prevention among key benefits, and notes serious risks are usually low and depend on type, duration and personal factors. Combined HRT slightly increases breast-cancer risk with longer use; oestrogen-only HRT has little or no increase in that risk after hysterectomy. Tablet HRT can slightly raise clot and stroke risk; transdermal oestrogen does not increase clot risk in the same way. Overall, NICE states that taking combined or oestrogen-only HRT is unlikely to affect life expectancy.\nBring personal or family history of breast cancer, clotting disorders, heart disease or stroke, migraine with aura, unexplained vaginal bleeding, and liver disease. NICE recommends specialist pathways when arterial disease history is present, and non-HRT first approaches when personal breast-cancer history or high risk exists. Unlicensed compounded “bioidentical” products marketed online are not the same as regulated HRT discussed in NICE and NHS materials.\nQuestions worth asking in the appointment\nUseful prompts include: Which symptoms are most likely to improve with systemic versus vaginal treatment? Given my history, is a patch or gel preferable to a tablet? How will we review bleeding on HRT in the first months? What non-hormonal options exist if I decline HRT or need an add-on for flushes? How long might I continue, and what happens if symptoms return when I stop?\nAlso ask about cervical and breast screening plans, contraception if you are still perimenopausal, and how to report new breast lumps, calf pain, chest pain or sudden shortness of breath. Dr. Charmi Shah can walk through these choices without promising a risk-free path.\nWhen to seek urgent care while using or considering HRT\nSeek emergency care for symptoms of a possible clot or stroke—sudden chest pain, coughing blood, severe calf swelling and pain, sudden weakness, speech difficulty or collapse—or for heavy bleeding with fainting. Any bleeding after confirmed menopause still needs prompt assessment even if you are not on HRT.\nBook a non-urgent review if side effects persist, bleeding on HRT stays irregular beyond the early adjustment window your clinician described, or symptoms are uncontrolled. Alternatives and follow-up timing belong in that visit, not in self-adjustment of doses."
+  },
+{
+    id: "W27-C",
+    slug: "what-is-pms",
+    action: "Refresh",
+    publicationStatus: "in_clinical_review",
+    scheduledAt: "2026-12-05T09:00:00+05:30",
+    proposedLeadId: "charmi",
+    title: "What Is PMS?",
+    seoTitle: "What is PMS? Timing, tracking, when to ask",
+    description: "PMS is cycle-timed bloating, breast tenderness or mood change that eases after bleeding starts. Track two cycles. Severe mood symptoms belong on the PMDD page.",
+    primaryQuestion: "What is PMS, and how do I tell it from a hard week?",
+    directAnswer: "Premenstrual syndrome (PMS) means physical or mood changes that arrive in the days before a period and settle once bleeding is established. Bloating, breast tenderness, headaches, irritability or food cravings can all fit, and the mix differs between people. A stressful week that is not tied to the cycle is a different problem. A diary across two periods shows whether the pattern repeats. If mood symptoms are severe enough to stop work or include thoughts of self-harm, use the PMDD guide and urgent local help rather than waiting on this page.",
+    storytellingNote: "",
+    sections: [
+      {
+        heading: "What pattern counts as PMS?",
+        paragraphs: [
+          "The NHS periods page lists swelling, sore breasts, a changeable mood and a short temper among complaints that tend to settle once bleeding is underway. ACOG’s patient FAQ treats PMS as physical or mood symptoms that return before periods and get in the way of usual tasks, not one bad afternoon.",
+          "Painful bleeding, very heavy flow, or cycles that are far apart are separate questions. Those belong with the painful-period, heavy-period and irregular-period guides. PMS can sit beside them, but it does not explain every period problem.",
+          "Skin spots, loose stools, poor sleep and a short fuse are commonly reported. None of them, on their own, proves a hormone disease. The useful clue is timing: symptoms build before bleeding and ease afterwards."
+        ]
+      },
+      {
+        heading: "What should you write down?",
+        paragraphs: [
+          "For two cycles, note the first day of bleeding, then each day mark mood, sleep, breast tenderness, bloating, headache and whether the day was hard to get through. A notes app is enough. Do not wait for a perfect chart.",
+          "Also jot medicines, a new contraceptive method, thyroid treatment, and big sleep or shift changes. Those can mimic or magnify premenstrual symptoms. Bring the diary to a visit so the conversation starts from your dates, not from a label you picked online."
+        ]
+      },
+      {
+        heading: "Where PMDD is a different conversation",
+        paragraphs: [
+          "Mild irritability that you can still work through is the territory of this page. Marked hopelessness, rage, feeling out of control, or symptoms that repeatedly stop relationships or work need the longer comparison on the PMDD page.",
+          "That page also holds crisis steps. If you are thinking about harming yourself, contact local emergency services or the crisis line named there. Do not send a routine booking message and wait."
+        ]
+      },
+      {
+        heading: "When should you arrange a review?",
+        paragraphs: [
+          "Book a routine gynaecology conversation if the premenstrual pattern is new, worsening, or getting in the way of school, work or home, or if you also have cycle changes you cannot explain. Dr. Charmi Shah can look at the diary with your history. This page cannot choose a medicine or a contraceptive for you.",
+          "Seek same-day or emergency care for fainting, soaking through pads very quickly, pain that is sudden and severe, chest pain, or any thought of self-harm. Those are not PMS scheduling questions."
+        ]
+      }
+    ],
+    figures: [
+      {
+        src: "/images/articles/what-is-pms/what-is-pms-explainer.svg",
+        alt: "Simple calendar sketch showing symptoms in the days before bleeding and easing after the period starts",
+        caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
+        width: 1200,
+        height: 675,
+        approvalStatus: "pending"
+      }
+    ],
+    references: [
+      {
+        label: "NHS — Periods",
+        url: "https://www.nhs.uk/conditions/periods/"
+      },
+      {
+        label: "ACOG — Premenstrual syndrome (PMS)",
+        url: "https://www.acog.org/womens-health/faqs/premenstrual-syndrome"
+      }
+    ],
+    internalLinks: [
+      {
+        anchor: "PMS or PMDD",
+        path: "/what-is-pmdd/"
+      },
+      {
+        anchor: "painful periods",
+        path: "/why-are-my-periods-painful/"
+      },
+      {
+        anchor: "irregular periods",
+        path: "/irregular-periods/"
+      }
+    ],
+    faqs: [
+      {
+        question: "Does PMS only happen if my periods are regular?",
+        answer: "No. The useful test is whether symptoms cluster before bleeding and ease afterwards. Very irregular cycles make a diary harder to read, so bring the dates rather than deciding the label yourself."
+      },
+      {
+        question: "Can PMS be the reason my mood is low all month?",
+        answer: "Symptoms that stay after the period has been going for several days point away from a purely premenstrual pattern. Ongoing low mood still deserves care. Mention both the calendar and the days you feel low."
+      }
+    ],
+    conversionCopy: "If premenstrual symptoms are disrupting your month, you can book a consultation with Dr. Charmi Shah and bring a two-cycle diary.",
+    conversionPath: "/book-consultation/",
+    parentHubPath: "/irregular-periods/",
+    claimLedger: [
+      {
+        claim: "Premenstrual bloating, breast tenderness and mood change often ease once bleeding starts.",
+        sourceUrl: "https://www.nhs.uk/conditions/periods/",
+        sourceSection: "NHS · Periods · fetched 2026",
+        limitations: "UK patient page; symptom lists are examples, not a diagnostic checklist.",
+        reviewerDecision: "pending"
+      },
+      {
+        claim: "PMS means recurring luteal symptoms that affect usual activities.",
+        sourceUrl: "https://www.acog.org/womens-health/faqs/premenstrual-syndrome",
+        sourceSection: "ACOG · Premenstrual syndrome (PMS) · fetched 2026",
+        limitations: "US FAQ; local treatment pathways differ.",
+        reviewerDecision: "pending"
+      }
+    ],
+    openClinicalQuestions: [
+      "Confirm whether WHD should name a specific Indian helpline on this PMS page or only on the PMDD page."
+    ],
+    bodyFingerprintText: "What Is PMS?\nPremenstrual syndrome (PMS) means physical or mood changes that arrive in the days before a period and settle once bleeding is established. Bloating, breast tenderness, headaches, irritability or food cravings can all fit, and the mix differs between people. A stressful week that is not tied to the cycle is a different problem. A diary across two periods shows whether the pattern repeats. If mood symptoms are severe enough to stop work or include thoughts of self-harm, use the PMDD guide and urgent local help rather than waiting on this page.\nWhat pattern counts as PMS?\nThe NHS periods page lists swelling, sore breasts, a changeable mood and a short temper among complaints that tend to settle once bleeding is underway. ACOG’s patient FAQ treats PMS as physical or mood symptoms that return before periods and get in the way of usual tasks, not one bad afternoon.\nPainful bleeding, very heavy flow, or cycles that are far apart are separate questions. Those belong with the painful-period, heavy-period and irregular-period guides. PMS can sit beside them, but it does not explain every period problem.\nSkin spots, loose stools, poor sleep and a short fuse are commonly reported. None of them, on their own, proves a hormone disease. The useful clue is timing: symptoms build before bleeding and ease afterwards.\nWhat should you write down?\nFor two cycles, note the first day of bleeding, then each day mark mood, sleep, breast tenderness, bloating, headache and whether the day was hard to get through. A notes app is enough. Do not wait for a perfect chart.\nAlso jot medicines, a new contraceptive method, thyroid treatment, and big sleep or shift changes. Those can mimic or magnify premenstrual symptoms. Bring the diary to a visit so the conversation starts from your dates, not from a label you picked online.\nWhere PMDD is a different conversation\nMild irritability that you can still work through is the territory of this page. Marked hopelessness, rage, feeling out of control, or symptoms that repeatedly stop relationships or work need the longer comparison on the PMDD page.\nThat page also holds crisis steps. If you are thinking about harming yourself, contact local emergency services or the crisis line named there. Do not send a routine booking message and wait.\nWhen should you arrange a review?\nBook a routine gynaecology conversation if the premenstrual pattern is new, worsening, or getting in the way of school, work or home, or if you also have cycle changes you cannot explain. Dr. Charmi Shah can look at the diary with your history. This page cannot choose a medicine or a contraceptive for you.\nSeek same-day or emergency care for fainting, soaking through pads very quickly, pain that is sudden and severe, chest pain, or any thought of self-harm. Those are not PMS scheduling questions."
+  },
+{
+    id: "W28-C",
+    slug: "what-is-hormonal-imbalance",
+    action: "Refresh",
+    publicationStatus: "in_clinical_review",
+    scheduledAt: "2026-12-05T09:00:00+05:30",
+    proposedLeadId: "charmi",
+    title: "What Is a Hormonal Imbalance?",
+    seoTitle: "What people mean by a hormonal imbalance",
+    description: "“Hormonal imbalance” is a loose phrase, not one diagnosis. Cycle changes, thyroid disease and PCOS need different tests. Book if the pattern is new or severe.",
+    primaryQuestion: "What does hormonal imbalance actually mean?",
+    directAnswer: "“Hormonal imbalance” is everyday language, not a single disease with one blood test. It can point to irregular periods, premenstrual symptoms, thyroid disease, high prolactin, PCOS, perimenopause, or a medicine effect. The right next step depends on which symptom is actually happening, how long it has lasted, and what else is in your history. A webpage cannot rank your hormones from a symptom list. Dr. Charmi Shah uses the pattern you describe to decide whether any test is useful.",
+    storytellingNote: "",
+    sections: [
+      {
+        heading: "Why the phrase is too broad to diagnose",
+        paragraphs: [
+          "Oestrogen, progesterone, androgens, thyroid hormone, prolactin and insulin all affect cycles, skin, hair, energy and bleeding. A change in one of them does not look the same as a change in another. NICHD’s menstruation overview lists many reasons periods shift, including hormones, weight change, stress, exercise and medical conditions.",
+          "A salon blood panel that reports every hormone as high or low, without a cycle day or a question it is meant to answer, is easy to misread. Some hormones swing across the month on purpose. A number without timing is not a diagnosis."
+        ]
+      },
+      {
+        heading: "Patterns that deserve a specific name",
+        paragraphs: [
+          "Long gaps between periods, acne and extra hair growth raise PCOS questions, which have their own guide. Bleeding that is suddenly heavy, bleeding after sex, or bleeding after menopause are bleeding problems, not a vague hormone label. Heat, sweats and cycle change in the forties may be perimenopause.",
+          "Thyroid disease can change periods, weight, temperature tolerance and heart rate. That is a named condition with its own tests, not a reason to buy an unregulated supplement stack. NHS irregular-period advice is to speak to a GP when cycles are unpredictable or you are trying to conceive and not succeeding."
+        ]
+      },
+      {
+        heading: "What to bring instead of a self-label",
+        paragraphs: [
+          "Write first and last bleeding dates for three months, any pregnancy chance, contraception, and medicines including steroids or psychiatric drugs. Add skin or hair changes, milky nipple discharge, headaches, and whether you are trying to conceive.",
+          "Say which problem you most want help with: cycle timing, pain, fertility, skin, or feeling unwell. That priority steers the visit better than asking for every hormone to be balanced."
+        ]
+      },
+      {
+        heading: "When the wait should be short",
+        paragraphs: [
+          "Arrange a prompt review for a positive pregnancy test with pain or bleeding, fainting, a breast lump, or symptoms that are getting worse week by week. Urgent care is for collapse, very heavy bleeding, or severe one-sided pain.",
+          "Routine booking fits when you want a plan for irregular cycles, fertility timing, or symptoms that have been stable but bothersome. Education here does not replace that conversation."
+        ]
+      }
+    ],
+    figures: [
+      {
+        src: "/images/articles/what-is-hormonal-imbalance/what-is-hormonal-imbalance-explainer.svg",
+        alt: "Diagram listing separate causes people sometimes group under the phrase hormonal imbalance",
+        caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
+        width: 1200,
+        height: 675,
+        approvalStatus: "pending"
+      }
+    ],
+    references: [
+      {
+        label: "NHS — Irregular periods",
+        url: "https://www.nhs.uk/conditions/irregular-periods/"
+      },
+      {
+        label: "NICHD — What causes menstruation problems?",
+        url: "https://www.nichd.nih.gov/health/topics/menstruation/conditioninfo/causes"
+      }
+    ],
+    internalLinks: [
+      {
+        anchor: "irregular periods",
+        path: "/why-are-my-periods-irregular/"
+      },
+      {
+        anchor: "what PCOS is",
+        path: "/what-is-pcos/"
+      },
+      {
+        anchor: "perimenopause symptoms",
+        path: "/perimenopause-symptoms/"
+      }
+    ],
+    faqs: [
+      {
+        question: "Should I order a full female hormone panel before the visit?",
+        answer: "Usually no. Some hormones are only interpretable on a particular cycle day, and some symptoms need a different test first. Ask which question the blood test is meant to answer."
+      },
+      {
+        question: "Is every late period a hormone problem?",
+        answer: "No. Pregnancy, recent contraception changes, illness, weight change and thyroid disease are among the possibilities. A late period with a chance of pregnancy needs a test, not a hormone slogan."
+      }
+    ],
+    conversionCopy: "If cycle changes or hormone questions need a plan, you can book a consultation with Dr. Charmi Shah.",
+    conversionPath: "/book-consultation/",
+    parentHubPath: "/hormonal-imbalance/",
+    claimLedger: [
+      {
+        claim: "Unpredictable cycles are a reason to seek clinical advice, especially when trying to conceive.",
+        sourceUrl: "https://www.nhs.uk/conditions/irregular-periods/",
+        sourceSection: "NHS · Irregular periods · fetched 2026",
+        limitations: "UK self-care page; does not list every endocrine diagnosis.",
+        reviewerDecision: "pending"
+      },
+      {
+        claim: "Period problems have many causes, including hormones, weight, stress, exercise and medical conditions.",
+        sourceUrl: "https://www.nichd.nih.gov/health/topics/menstruation/conditioninfo/causes",
+        sourceSection: "NICHD · What causes menstruation problems? · fetched 2026",
+        limitations: "US overview; not a testing protocol.",
+        reviewerDecision: "pending"
+      }
+    ],
+    openClinicalQuestions: [
+      "Which baseline blood tests does WHD actually draw before labelling a cycle problem?"
+    ],
+    bodyFingerprintText: "What Is a Hormonal Imbalance?\n“Hormonal imbalance” is everyday language, not a single disease with one blood test. It can point to irregular periods, premenstrual symptoms, thyroid disease, high prolactin, PCOS, perimenopause, or a medicine effect. The right next step depends on which symptom is actually happening, how long it has lasted, and what else is in your history. A webpage cannot rank your hormones from a symptom list. Dr. Charmi Shah uses the pattern you describe to decide whether any test is useful.\nWhy the phrase is too broad to diagnose\nOestrogen, progesterone, androgens, thyroid hormone, prolactin and insulin all affect cycles, skin, hair, energy and bleeding. A change in one of them does not look the same as a change in another. NICHD’s menstruation overview lists many reasons periods shift, including hormones, weight change, stress, exercise and medical conditions.\nA salon blood panel that reports every hormone as high or low, without a cycle day or a question it is meant to answer, is easy to misread. Some hormones swing across the month on purpose. A number without timing is not a diagnosis.\nPatterns that deserve a specific name\nLong gaps between periods, acne and extra hair growth raise PCOS questions, which have their own guide. Bleeding that is suddenly heavy, bleeding after sex, or bleeding after menopause are bleeding problems, not a vague hormone label. Heat, sweats and cycle change in the forties may be perimenopause.\nThyroid disease can change periods, weight, temperature tolerance and heart rate. That is a named condition with its own tests, not a reason to buy an unregulated supplement stack. NHS irregular-period advice is to speak to a GP when cycles are unpredictable or you are trying to conceive and not succeeding.\nWhat to bring instead of a self-label\nWrite first and last bleeding dates for three months, any pregnancy chance, contraception, and medicines including steroids or psychiatric drugs. Add skin or hair changes, milky nipple discharge, headaches, and whether you are trying to conceive.\nSay which problem you most want help with: cycle timing, pain, fertility, skin, or feeling unwell. That priority steers the visit better than asking for every hormone to be balanced.\nWhen the wait should be short\nArrange a prompt review for a positive pregnancy test with pain or bleeding, fainting, a breast lump, or symptoms that are getting worse week by week. Urgent care is for collapse, very heavy bleeding, or severe one-sided pain.\nRoutine booking fits when you want a plan for irregular cycles, fertility timing, or symptoms that have been stable but bothersome. Education here does not replace that conversation."
+  },
+{
+    id: "W29-C",
+    slug: "how-to-improve-fertility",
+    action: "Refresh",
+    publicationStatus: "in_clinical_review",
+    scheduledAt: "2026-12-05T09:00:00+05:30",
+    proposedLeadId: "charmi",
+    title: "How Can I Improve My Chances of Getting Pregnant?",
+    seoTitle: "How to improve chances of pregnancy",
+    description: "Fertility improves when timing, health conditions and both partners are reviewed. No food or app can promise a pregnancy. See when to ask for help.",
+    primaryQuestion: "How can I improve my chances of getting pregnant?",
+    directAnswer: "Chances of pregnancy depend on age, how often you have sex in the fertile window, ovulation, sperm factors, and medical conditions such as PCOS, thyroid disease or blocked tubes. NHS advice is to have sex every two to three days without using contraception if you are trying, and to see a doctor sooner if you are over 35, have irregular periods, or already know about a fertility problem. Lifestyle steps can support that plan. They do not override age or a diagnosis, and no article can promise a pregnancy.",
+    storytellingNote: "",
+    sections: [
+      {
+        heading: "Timing that matches how conception works",
+        paragraphs: [
+          "NICE’s information for the public on fertility says most couples who have regular sex without contraception will conceive within a year, and it advises sex every two to three days. You do not need to schedule intercourse only on one calculated day.",
+          "Ovulation predictor kits and cycle apps can help some people notice a pattern. They mislead when cycles are very irregular. The ovulation-tracking guide explains what those tools can and cannot show. If periods are unpredictable, say so early rather than forcing a 28-day calendar."
+        ]
+      },
+      {
+        heading: "Health steps with a real evidence base",
+        paragraphs: [
+          "NHS fertility pages advise stopping smoking, keeping alcohol within low-risk limits or avoiding it while trying, aiming for a weight that is healthy for you, and taking folic acid before conception. Both partners matter: smoking and heavy alcohol use also affect sperm.",
+          "Review prescribed medicines with the clinician who started them before you stop anything. A preconception visit is the right place to ask about vaccines, long-term conditions and folic acid. Do not copy a dose from a social-media post."
+        ]
+      },
+      {
+        heading: "What will not replace an assessment",
+        paragraphs: [
+          "Detox teas, ovarian steaming, and supplements sold as fertility cures are marketing. If a product says it will make you pregnant by a set month, treat that as advertising. Food supports general health. It is not a treatment for blocked tubes or very low sperm counts.",
+          "Sex on demand can become stressful. NICE notes that timed intercourse is not required for everyone. If trying has started to harm your relationship or mood, say that in the appointment. Stress reduction is reasonable self-care. It is not a treatment that erases a medical cause."
+        ]
+      },
+      {
+        heading: "When to ask for help rather than wait a year",
+        paragraphs: [
+          "NHS guidance is to see a GP after a year of trying if you are under 36, and sooner if you are 36 or over. Go earlier still with very irregular or absent periods, known PCOS or endometriosis, previous pelvic infection or surgery, or a known sperm problem.",
+          "Seek urgent care for severe one-sided pain and bleeding with a positive pregnancy test, fainting, or shoulder-tip pain. Those can be signs of ectopic pregnancy and are an emergency, not a fertility-coaching topic. Dr. Charmi Shah can plan a non-urgent workup when the situation is stable."
+        ]
+      }
+    ],
+    figures: [
+      {
+        src: "/images/articles/how-to-improve-fertility/how-to-improve-fertility-explainer.svg",
+        alt: "Calendar sketch of sex every few days across a cycle rather than one predicted day",
+        caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
+        width: 1200,
+        height: 675,
+        approvalStatus: "pending"
+      }
+    ],
+    references: [
+      {
+        label: "NHS — Infertility",
+        url: "https://www.nhs.uk/conditions/infertility/"
+      },
+      {
+        label: "NICE — Fertility problems: trying for a baby",
+        url: "https://www.nice.org.uk/guidance/cg156/ifp/chapter/trying-for-a-baby"
+      }
+    ],
+    internalLinks: [
+      {
+        anchor: "tracking ovulation",
+        path: "/how-to-track-ovulation/"
+      },
+      {
+        anchor: "preconception planning",
+        path: "/what-is-preconception-planning/"
+      },
+      {
+        anchor: "when to see a fertility specialist",
+        path: "/when-to-see-a-fertility-specialist/"
+      }
+    ],
+    faqs: [
+      {
+        question: "Do we need intercourse every day to conceive?",
+        answer: "NICE’s public fertility information recommends sex every two to three days across the cycle, not a single perfect day. Daily sex is not a requirement, and it can add pressure without helping."
+      },
+      {
+        question: "If I am under 35, must I wait a full year?",
+        answer: "A year is the usual NHS threshold when cycles are regular and there is no known problem. Irregular periods, age 36 or older, or a known condition are reasons to ask sooner."
+      }
+    ],
+    conversionCopy: "If you want a fertility plan that fits your history, you can book a consultation with Dr. Charmi Shah.",
+    conversionPath: "/book-consultation/",
+    parentHubPath: "/fertility/",
+    claimLedger: [
+      {
+        claim: "See a doctor after a year of trying if under 36, and sooner with age or known problems. Smoking, alcohol and weight are discussed.",
+        sourceUrl: "https://www.nhs.uk/conditions/infertility/",
+        sourceSection: "NHS · Infertility · fetched 2026",
+        limitations: "UK pathways and age cut-offs; Indian referral rules differ.",
+        reviewerDecision: "pending"
+      },
+      {
+        claim: "Have vaginal sex every two to three days. Most couples conceive within a year.",
+        sourceUrl: "https://www.nice.org.uk/guidance/cg156/ifp/chapter/trying-for-a-baby",
+        sourceSection: "NICE · Fertility problems: trying for a baby (CG156 public information) · CG156",
+        limitations: "UK guideline information for the public.",
+        reviewerDecision: "pending"
+      }
+    ],
+    openClinicalQuestions: [
+      "Confirm the age threshold WHD quotes for Indian patients, since NHS uses under 36 versus 36 and over."
+    ],
+    bodyFingerprintText: "How Can I Improve My Chances of Getting Pregnant?\nChances of pregnancy depend on age, how often you have sex in the fertile window, ovulation, sperm factors, and medical conditions such as PCOS, thyroid disease or blocked tubes. NHS advice is to have sex every two to three days without using contraception if you are trying, and to see a doctor sooner if you are over 35, have irregular periods, or already know about a fertility problem. Lifestyle steps can support that plan. They do not override age or a diagnosis, and no article can promise a pregnancy.\nTiming that matches how conception works\nNICE’s information for the public on fertility says most couples who have regular sex without contraception will conceive within a year, and it advises sex every two to three days. You do not need to schedule intercourse only on one calculated day.\nOvulation predictor kits and cycle apps can help some people notice a pattern. They mislead when cycles are very irregular. The ovulation-tracking guide explains what those tools can and cannot show. If periods are unpredictable, say so early rather than forcing a 28-day calendar.\nHealth steps with a real evidence base\nNHS fertility pages advise stopping smoking, keeping alcohol within low-risk limits or avoiding it while trying, aiming for a weight that is healthy for you, and taking folic acid before conception. Both partners matter: smoking and heavy alcohol use also affect sperm.\nReview prescribed medicines with the clinician who started them before you stop anything. A preconception visit is the right place to ask about vaccines, long-term conditions and folic acid. Do not copy a dose from a social-media post.\nWhat will not replace an assessment\nDetox teas, ovarian steaming, and supplements sold as fertility cures are marketing. If a product says it will make you pregnant by a set month, treat that as advertising. Food supports general health. It is not a treatment for blocked tubes or very low sperm counts.\nSex on demand can become stressful. NICE notes that timed intercourse is not required for everyone. If trying has started to harm your relationship or mood, say that in the appointment. Stress reduction is reasonable self-care. It is not a treatment that erases a medical cause.\nWhen to ask for help rather than wait a year\nNHS guidance is to see a GP after a year of trying if you are under 36, and sooner if you are 36 or over. Go earlier still with very irregular or absent periods, known PCOS or endometriosis, previous pelvic infection or surgery, or a known sperm problem.\nSeek urgent care for severe one-sided pain and bleeding with a positive pregnancy test, fainting, or shoulder-tip pain. Those can be signs of ectopic pregnancy and are an emergency, not a fertility-coaching topic. Dr. Charmi Shah can plan a non-urgent workup when the situation is stable."
+  },
+{
+    id: "W30-C",
+    slug: "can-stress-affect-fertility",
+    action: "Refresh",
+    publicationStatus: "in_clinical_review",
+    scheduledAt: "2026-12-05T09:00:00+05:30",
+    proposedLeadId: "charmi",
+    title: "Can Stress Affect Fertility?",
+    seoTitle: "Can stress affect fertility?",
+    description: "Stress can disturb sleep, sex and sometimes cycles. It does not explain every fertility problem. Severe mood symptoms need urgent help.",
+    primaryQuestion: "Can stress stop me getting pregnant?",
+    directAnswer: "Stress can disturb sleep, appetite, sex and sometimes the menstrual cycle, and trying for a baby can itself become a source of strain. That does not mean worry is the reason every couple is not conceiving, and it does not mean calming down will fix blocked tubes, absent ovulation or a sperm problem. NHS fertility information still points to age, how long you have been trying, and medical history as reasons to be assessed. If low mood or panic is severe, that needs care in its own right, including urgent help for thoughts of self-harm.",
+    storytellingNote: "",
+    sections: [
+      {
+        heading: "What stress can change, and what it cannot explain",
+        paragraphs: [
+          "Short-term pressure can delay a period, especially with poor sleep, under-eating, intense training or illness. A delayed period is a reason to take a pregnancy test when pregnancy is possible, not proof that stress has switched fertility off.",
+          "NICHD lists many causes of infertility, including ovulation disorders, tubal damage, uterine problems and sperm factors. None of those is diagnosed by asking how worried you feel. Blaming stress can delay a workup that would have found a treatable cause."
+        ]
+      },
+      {
+        heading: "When the strain of trying becomes the problem",
+        paragraphs: [
+          "Scheduled sex, repeated negative tests and other people’s questions can make intimacy feel like a task. That is common and worth saying out loud. It is not a character flaw, and it is not solved by being told to relax.",
+          "Sleep, movement you already tolerate, and limiting late-night cycle-forum scrolling are reasonable. They are supports. They are not a fertility treatment. If trying has brought panic attacks, hopelessness or conflict that feels unsafe, ask for mental-health care alongside any fertility visit."
+        ]
+      },
+      {
+        heading: "How a clinician separates the threads",
+        paragraphs: [
+          "A useful history covers cycle length, pregnancy chances, pain, previous infections or operations, medicines, and both partners’ smoking and alcohol use. Dr. Charmi Shah can say which tests answer a real question and which can wait.",
+          "If cycles are regular and you are young, waiting while you reduce obvious harms may be reasonable. If cycles are absent, you are older, or you have known PCOS, endometriosis or a sperm concern, stress management does not replace assessment. The fertility-chances guide covers timing. This page is only about the stress question."
+        ]
+      },
+      {
+        heading: "When mood symptoms need urgent help",
+        paragraphs: [
+          "Thoughts of suicide or self-harm, or being unable to stay safe, are an emergency. Use local emergency services. Do not wait for a fertility appointment to mention them.",
+          "Book a routine visit when stress is manageable but you still want to know whether a medical factor needs checking. Bring a simple note of cycle dates and how long you have been trying."
+        ]
+      }
+    ],
+    figures: [
+      {
+        src: "/images/articles/can-stress-affect-fertility/can-stress-affect-fertility-explainer.svg",
+        alt: "Two-column sketch separating cycle disruption from medical causes of infertility",
+        caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
+        width: 1200,
+        height: 675,
+        approvalStatus: "pending"
+      }
+    ],
+    references: [
+      {
+        label: "NHS — Infertility",
+        url: "https://www.nhs.uk/conditions/infertility/"
+      },
+      {
+        label: "NICHD — What causes infertility?",
+        url: "https://www.nichd.nih.gov/health/topics/infertility/conditioninfo/causes"
+      }
+    ],
+    internalLinks: [
+      {
+        anchor: "improving chances of pregnancy",
+        path: "/how-to-improve-fertility/"
+      },
+      {
+        anchor: "when to see a fertility specialist",
+        path: "/when-to-see-a-fertility-specialist/"
+      },
+      {
+        anchor: "PMS and mood",
+        path: "/what-is-pmdd/"
+      }
+    ],
+    faqs: [
+      {
+        question: "If I meditate, will that restore ovulation?",
+        answer: "Relaxation can help sleep and mood. It has not been shown to open blocked tubes or restart ovulation when a medical condition is the cause. Treat it as support, not as a cure."
+      },
+      {
+        question: "Should we pause trying until life is calmer?",
+        answer: "Only you can weigh that against age and how long you have already been trying. A clinician can lay out what waiting might change in your situation. A webpage should not make that call."
+      }
+    ],
+    conversionCopy: "If you want stress and medical factors sorted out together, you can book a consultation with Dr. Charmi Shah.",
+    conversionPath: "/book-consultation/",
+    parentHubPath: "/fertility/",
+    claimLedger: [
+      {
+        claim: "Assessment timing depends on age, duration of trying and known problems, not on worry alone.",
+        sourceUrl: "https://www.nhs.uk/conditions/infertility/",
+        sourceSection: "NHS · Infertility · fetched 2026",
+        limitations: "Does not quantify a stress effect.",
+        reviewerDecision: "pending"
+      },
+      {
+        claim: "Infertility has ovulation, tubal, uterine and sperm causes that are not diagnosed from stress alone.",
+        sourceUrl: "https://www.nichd.nih.gov/health/topics/infertility/conditioninfo/causes",
+        sourceSection: "NICHD · What causes infertility? · fetched 2026",
+        limitations: "US overview of biological causes.",
+        reviewerDecision: "pending"
+      }
+    ],
+    openClinicalQuestions: [
+      "Should this page name Tele-MANAS, or only point readers to emergency services and the PMDD guide?"
+    ],
+    bodyFingerprintText: "Can Stress Affect Fertility?\nStress can disturb sleep, appetite, sex and sometimes the menstrual cycle, and trying for a baby can itself become a source of strain. That does not mean worry is the reason every couple is not conceiving, and it does not mean calming down will fix blocked tubes, absent ovulation or a sperm problem. NHS fertility information still points to age, how long you have been trying, and medical history as reasons to be assessed. If low mood or panic is severe, that needs care in its own right, including urgent help for thoughts of self-harm.\nWhat stress can change, and what it cannot explain\nShort-term pressure can delay a period, especially with poor sleep, under-eating, intense training or illness. A delayed period is a reason to take a pregnancy test when pregnancy is possible, not proof that stress has switched fertility off.\nNICHD lists many causes of infertility, including ovulation disorders, tubal damage, uterine problems and sperm factors. None of those is diagnosed by asking how worried you feel. Blaming stress can delay a workup that would have found a treatable cause.\nWhen the strain of trying becomes the problem\nScheduled sex, repeated negative tests and other people’s questions can make intimacy feel like a task. That is common and worth saying out loud. It is not a character flaw, and it is not solved by being told to relax.\nSleep, movement you already tolerate, and limiting late-night cycle-forum scrolling are reasonable. They are supports. They are not a fertility treatment. If trying has brought panic attacks, hopelessness or conflict that feels unsafe, ask for mental-health care alongside any fertility visit.\nHow a clinician separates the threads\nA useful history covers cycle length, pregnancy chances, pain, previous infections or operations, medicines, and both partners’ smoking and alcohol use. Dr. Charmi Shah can say which tests answer a real question and which can wait.\nIf cycles are regular and you are young, waiting while you reduce obvious harms may be reasonable. If cycles are absent, you are older, or you have known PCOS, endometriosis or a sperm concern, stress management does not replace assessment. The fertility-chances guide covers timing. This page is only about the stress question.\nWhen mood symptoms need urgent help\nThoughts of suicide or self-harm, or being unable to stay safe, are an emergency. Use local emergency services. Do not wait for a fertility appointment to mention them.\nBook a routine visit when stress is manageable but you still want to know whether a medical factor needs checking. Bring a simple note of cycle dates and how long you have been trying."
+  },
+{
+    id: "W31-C",
+    slug: "symptoms-women-should-never-ignore",
+    action: "Refresh",
+    publicationStatus: "in_clinical_review",
+    scheduledAt: "2026-12-05T09:00:00+05:30",
+    proposedLeadId: "charmi",
+    title: "Which Symptoms Should Women Not Ignore?",
+    seoTitle: "Symptoms women should not ignore",
+    description: "Sudden severe pain, fainting, very heavy bleeding, bleeding after menopause, and pregnancy pain with bleeding need prompt care. Not every cramp is an emergency.",
+    primaryQuestion: "Which symptoms should I not wait on?",
+    directAnswer: "Some symptoms need same-day or emergency care rather than a routine women’s-health appointment. Those include fainting, chest pain, difficulty breathing, sudden severe pelvic or abdominal pain, bleeding so heavy you feel dizzy, a positive pregnancy test with pain and bleeding, and any bleeding after menopause. Many cramps, irregular cycles and mild discharges can wait for a planned visit. This list is not a diagnosis. If you are unsure and the symptom is severe or getting worse quickly, use local emergency services.",
+    storytellingNote: "",
+    sections: [
+      {
+        heading: "Bleeding patterns that should not wait",
+        paragraphs: [
+          "NHS advice on postmenopausal bleeding is clear: vaginal bleeding 12 months after periods have stopped is not normal and needs assessment, even if it happens once. Do not put that down to a scrape or a supplement.",
+          "Bleeding in pregnancy, especially with pain, also needs prompt local care. NHS ectopic-pregnancy information describes pain low on one side and vaginal bleeding as symptoms to act on, and shoulder-tip pain or collapse as an emergency. A routine video visit cannot rule out ectopic pregnancy.",
+          "Soaking through pads hourly, passing large clots, or bleeding with dizziness is different from a familiar heavy day. If you feel faint, lie down and get urgent help rather than searching for causes."
+        ]
+      },
+      {
+        heading: "Pain, fever and pregnancy warning signs",
+        paragraphs: [
+          "Sudden severe tummy or pelvic pain, pain with vomiting, or pain with a fever is not ordinary period cramp until someone has assessed you. A known history of endometriosis or cysts does not make new severe pain safe to ignore.",
+          "In later pregnancy, a severe headache with visual change, sudden swelling, reduced baby movements, or fluid leaking are reasons to contact your maternity unit the same day. This site cannot monitor a pregnancy remotely in an emergency."
+        ]
+      },
+      {
+        heading: "Symptoms that usually fit a booked visit",
+        paragraphs: [
+          "Cycle-timed bloating, a familiar cramp that settles with your usual care, a single irregular cycle after travel, or questions about contraception can wait for a planned consultation if you feel otherwise well.",
+          "Still mention them. Patterns become clearer when you bring dates. The point of this page is to separate waiting from not waiting, not to dismiss symptoms that bother you."
+        ]
+      },
+      {
+        heading: "How to get help without guessing the cause",
+        paragraphs: [
+          "If the symptom is on the urgent list, go to local emergency or maternity care and say you might be pregnant if that is possible. Take a pregnancy test with you if you have just done one. Do not travel alone if you feel faint.",
+          "For non-urgent questions, Dr. Charmi Shah can review the story in a booked consultation. Write when it started, whether you could be pregnant, and what has changed in the last day."
+        ]
+      }
+    ],
+    figures: [
+      {
+        src: "/images/articles/symptoms-women-should-never-ignore/symptoms-women-should-never-ignore-explainer.svg",
+        alt: "Two-list sketch of symptoms for emergency care versus a booked gynaecology visit",
+        caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
+        width: 1200,
+        height: 675,
+        approvalStatus: "pending"
+      }
+    ],
+    references: [
+      {
+        label: "NHS — Postmenopausal bleeding",
+        url: "https://www.nhs.uk/conditions/post-menopausal-bleeding/"
+      },
+      {
+        label: "NHS — Ectopic pregnancy",
+        url: "https://www.nhs.uk/conditions/ectopic-pregnancy/"
+      }
+    ],
+    internalLinks: [
+      {
+        anchor: "when to see a gynaecologist",
+        path: "/when-should-i-see-a-gynecologist/"
+      },
+      {
+        anchor: "bleeding in early pregnancy",
+        path: "/bleeding-in-early-pregnancy/"
+      },
+      {
+        anchor: "heavy periods",
+        path: "/heavy-periods/"
+      }
+    ],
+    faqs: [
+      {
+        question: "Is spotting between periods always serious?",
+        answer: "Not always. New bleeding between periods, bleeding after sex, or any bleeding after menopause still needs a clinical check rather than a watch-and-wait message from a website."
+      },
+      {
+        question: "Can I message the clinic first if the pain is severe?",
+        answer: "No. Severe pain, fainting, heavy bleeding with dizziness, or pregnancy pain with bleeding belongs in emergency care. Messaging and waiting can delay treatment."
+      }
+    ],
+    conversionCopy: "For non-urgent symptoms you can book a consultation with Dr. Charmi Shah. Severe or rapidly worsening symptoms need local emergency care first.",
+    conversionPath: "/book-consultation/",
+    parentHubPath: "/online-gynecologist/",
+    claimLedger: [
+      {
+        claim: "Bleeding after periods have stopped for 12 months is not normal and needs checking.",
+        sourceUrl: "https://www.nhs.uk/conditions/post-menopausal-bleeding/",
+        sourceSection: "NHS · Postmenopausal bleeding · fetched 2026",
+        limitations: "UK page; any postmenopausal bleeding still needs local assessment.",
+        reviewerDecision: "pending"
+      },
+      {
+        claim: "One-sided pain with bleeding in pregnancy, or collapse, needs emergency care.",
+        sourceUrl: "https://www.nhs.uk/conditions/ectopic-pregnancy/",
+        sourceSection: "NHS · Ectopic pregnancy · fetched 2026",
+        limitations: "Symptom lists are not a rule-out tool.",
+        reviewerDecision: "pending"
+      }
+    ],
+    openClinicalQuestions: [
+      "Confirm the preferred Indian emergency wording (112 versus asking patients to use the nearest casualty)."
+    ],
+    bodyFingerprintText: "Which Symptoms Should Women Not Ignore?\nSome symptoms need same-day or emergency care rather than a routine women’s-health appointment. Those include fainting, chest pain, difficulty breathing, sudden severe pelvic or abdominal pain, bleeding so heavy you feel dizzy, a positive pregnancy test with pain and bleeding, and any bleeding after menopause. Many cramps, irregular cycles and mild discharges can wait for a planned visit. This list is not a diagnosis. If you are unsure and the symptom is severe or getting worse quickly, use local emergency services.\nBleeding patterns that should not wait\nNHS advice on postmenopausal bleeding is clear: vaginal bleeding 12 months after periods have stopped is not normal and needs assessment, even if it happens once. Do not put that down to a scrape or a supplement.\nBleeding in pregnancy, especially with pain, also needs prompt local care. NHS ectopic-pregnancy information describes pain low on one side and vaginal bleeding as symptoms to act on, and shoulder-tip pain or collapse as an emergency. A routine video visit cannot rule out ectopic pregnancy.\nSoaking through pads hourly, passing large clots, or bleeding with dizziness is different from a familiar heavy day. If you feel faint, lie down and get urgent help rather than searching for causes.\nPain, fever and pregnancy warning signs\nSudden severe tummy or pelvic pain, pain with vomiting, or pain with a fever is not ordinary period cramp until someone has assessed you. A known history of endometriosis or cysts does not make new severe pain safe to ignore.\nIn later pregnancy, a severe headache with visual change, sudden swelling, reduced baby movements, or fluid leaking are reasons to contact your maternity unit the same day. This site cannot monitor a pregnancy remotely in an emergency.\nSymptoms that usually fit a booked visit\nCycle-timed bloating, a familiar cramp that settles with your usual care, a single irregular cycle after travel, or questions about contraception can wait for a planned consultation if you feel otherwise well.\nStill mention them. Patterns become clearer when you bring dates. The point of this page is to separate waiting from not waiting, not to dismiss symptoms that bother you.\nHow to get help without guessing the cause\nIf the symptom is on the urgent list, go to local emergency or maternity care and say you might be pregnant if that is possible. Take a pregnancy test with you if you have just done one. Do not travel alone if you feel faint.\nFor non-urgent questions, Dr. Charmi Shah can review the story in a booked consultation. Write when it started, whether you could be pregnant, and what has changed in the last day."
+  },
+{
+    id: "W27-Z",
+    slug: "what-is-womens-health-physiotherapy",
+    action: "Refresh",
+    publicationStatus: "in_clinical_review",
+    scheduledAt: "2026-12-05T09:00:00+05:30",
+    proposedLeadId: "zalak",
+    title: "What Is Women's Health Physiotherapy?",
+    seoTitle: "What is women's health physiotherapy?",
+    description: "Women's health physiotherapy assesses pelvic floor, pregnancy, birth recovery and bladder symptoms. It does not replace gynaecology or emergency care.",
+    primaryQuestion: "What is women's health physiotherapy?",
+    directAnswer: "Women's health physiotherapy is assessment and treatment for problems linked to the pelvic floor, pregnancy, birth recovery, bladder and bowel control, pelvic pain and abdominal-wall changes such as diastasis. A physiotherapist looks at how you move, breathe and load the body, then builds a graded plan. It is not a gynaecology diagnosis, not surgery, and not a promise that every symptom will disappear. Dr. Zalak Shah (PT) leads this lane at Women's Health Duo. Medical questions go to Dr. Charmi Shah.",
+    storytellingNote: "",
+    sections: [
+      {
+        heading: "What this specialty actually covers",
+        paragraphs: [
+          "POGP, the UK pelvic, obstetric and gynaecological physiotherapy network, publishes patient information on bladder and bowel leakage, pelvic pain, pregnancy and the months after birth. Those are the kinds of problems this specialty is built around. General sports physiotherapy may help a sprained ankle. It is not automatically the same as pelvic-health training.",
+          "Sessions can include a history, observation of posture and movement, and, when you consent and it is appropriate, an internal examination of the pelvic floor. You can decline an internal exam. Declining it does not end the appointment. It changes which tests are possible."
+        ]
+      },
+      {
+        heading: "What a session is trying to find out",
+        paragraphs: [
+          "The useful questions are about timing: leaks with cough versus a sudden urge, heaviness that worsens by evening, pain with penetration, or a tummy that domes when you sit up. A single squeeze test does not describe your day.",
+          "NHS pelvic-floor exercise pages describe learning to tighten and release the muscles that support the bladder and bowel. Some people need that. Others are already gripping too hard and need the opposite. That is why a copied online routine is a weak starting point."
+        ]
+      },
+      {
+        heading: "How it sits next to medical care",
+        paragraphs: [
+          "Physiotherapy does not diagnose endometriosis, infection, prolapse that needs surgery, or pregnancy complications. If those are possible, you still need a doctor. The two lanes can run together: movement rehab while a gynaecologist investigates pain or bleeding.",
+          "Bring scan reports and a short symptom diary if you have them. Do not stop prescribed medicine because a class felt helpful."
+        ]
+      },
+      {
+        heading: "When to seek medical care first",
+        paragraphs: [
+          "Go to urgent or emergency care for sudden inability to pass urine, loss of bowel control that is new, saddle numbness, severe one-sided pain in pregnancy, heavy bleeding, or a fever with pelvic pain. Those are not physiotherapy booking issues.",
+          "A planned physiotherapy visit fits leaks, heaviness, scar discomfort, back or pelvic pain that is stable, or help returning to walking, lifting and exercise after birth once urgent problems are excluded."
+        ]
+      }
+    ],
+    figures: [
+      {
+        src: "/images/articles/what-is-womens-health-physiotherapy/what-is-womens-health-physiotherapy-explainer.svg",
+        alt: "Sketch of pelvic floor, bladder and abdominal wall as areas a women's health physiotherapist may assess",
+        caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
+        width: 1200,
+        height: 675,
+        approvalStatus: "pending"
+      }
+    ],
+    references: [
+      {
+        label: "POGP — Patient information",
+        url: "https://thepogp.co.uk/patient_information/default.aspx"
+      },
+      {
+        label: "NHS — What are pelvic floor exercises?",
+        url: "https://www.nhs.uk/common-health-questions/womens-health/what-are-pelvic-floor-exercises/"
+      }
+    ],
+    internalLinks: [
+      {
+        anchor: "pelvic floor",
+        path: "/what-is-the-pelvic-floor/"
+      },
+      {
+        anchor: "bladder leakage",
+        path: "/bladder-leakage/"
+      },
+      {
+        anchor: "women's health physiotherapy hub",
+        path: "/womens-health-physiotherapy/"
+      }
+    ],
+    faqs: [
+      {
+        question: "Do I have to have an internal examination?",
+        answer: "No. An internal exam can give useful information about the pelvic floor, and you can say no. The visit can still cover symptoms, movement and a plan that does not require it."
+      },
+      {
+        question: "Is this the same as a Pilates class?",
+        answer: "No. A class can support strength and coordination later. It does not assess leaks, prolapse symptoms or pain, and it is not a substitute for a physiotherapy assessment."
+      }
+    ],
+    conversionCopy: "If you want a physiotherapy assessment for pelvic floor, pregnancy or postnatal symptoms, you can book with Dr. Zalak Shah (PT).",
+    conversionPath: "/book-consultation/",
+    parentHubPath: "/womens-health-physiotherapy/",
+    claimLedger: [
+      {
+        claim: "Women's health physiotherapy patient topics include bladder, bowel, pelvic pain and maternity.",
+        sourceUrl: "https://thepogp.co.uk/patient_information/default.aspx",
+        sourceSection: "POGP · Patient information · fetched 2026",
+        limitations: "UK professional network index, not a treatment protocol.",
+        reviewerDecision: "pending"
+      },
+      {
+        claim: "Pelvic floor exercises train the muscles supporting bladder and bowel, and technique matters.",
+        sourceUrl: "https://www.nhs.uk/common-health-questions/womens-health/what-are-pelvic-floor-exercises/",
+        sourceSection: "NHS · What are pelvic floor exercises? · fetched 2026",
+        limitations: "General exercise description, not an individual programme.",
+        reviewerDecision: "pending"
+      }
+    ],
+    openClinicalQuestions: [
+      "Confirm which symptoms WHD will not accept for a first online physiotherapy booking."
+    ],
+    bodyFingerprintText: "What Is Women's Health Physiotherapy?\nWomen's health physiotherapy is assessment and treatment for problems linked to the pelvic floor, pregnancy, birth recovery, bladder and bowel control, pelvic pain and abdominal-wall changes such as diastasis. A physiotherapist looks at how you move, breathe and load the body, then builds a graded plan. It is not a gynaecology diagnosis, not surgery, and not a promise that every symptom will disappear. Dr. Zalak Shah (PT) leads this lane at Women's Health Duo. Medical questions go to Dr. Charmi Shah.\nWhat this specialty actually covers\nPOGP, the UK pelvic, obstetric and gynaecological physiotherapy network, publishes patient information on bladder and bowel leakage, pelvic pain, pregnancy and the months after birth. Those are the kinds of problems this specialty is built around. General sports physiotherapy may help a sprained ankle. It is not automatically the same as pelvic-health training.\nSessions can include a history, observation of posture and movement, and, when you consent and it is appropriate, an internal examination of the pelvic floor. You can decline an internal exam. Declining it does not end the appointment. It changes which tests are possible.\nWhat a session is trying to find out\nThe useful questions are about timing: leaks with cough versus a sudden urge, heaviness that worsens by evening, pain with penetration, or a tummy that domes when you sit up. A single squeeze test does not describe your day.\nNHS pelvic-floor exercise pages describe learning to tighten and release the muscles that support the bladder and bowel. Some people need that. Others are already gripping too hard and need the opposite. That is why a copied online routine is a weak starting point.\nHow it sits next to medical care\nPhysiotherapy does not diagnose endometriosis, infection, prolapse that needs surgery, or pregnancy complications. If those are possible, you still need a doctor. The two lanes can run together: movement rehab while a gynaecologist investigates pain or bleeding.\nBring scan reports and a short symptom diary if you have them. Do not stop prescribed medicine because a class felt helpful.\nWhen to seek medical care first\nGo to urgent or emergency care for sudden inability to pass urine, loss of bowel control that is new, saddle numbness, severe one-sided pain in pregnancy, heavy bleeding, or a fever with pelvic pain. Those are not physiotherapy booking issues.\nA planned physiotherapy visit fits leaks, heaviness, scar discomfort, back or pelvic pain that is stable, or help returning to walking, lifting and exercise after birth once urgent problems are excluded."
+  },
+{
+    id: "W28-Z",
+    slug: "online-womens-health-physiotherapy",
+    action: "Refresh",
+    publicationStatus: "in_clinical_review",
+    scheduledAt: "2026-12-05T09:00:00+05:30",
+    proposedLeadId: "zalak",
+    title: "Can Women's Health Physiotherapy Be Done Online?",
+    seoTitle: "Online women's health physiotherapy limits",
+    description: "Online physiotherapy can review symptoms and watch movement. It cannot do an internal exam or handle emergencies. Some problems still need an in-person visit.",
+    primaryQuestion: "What can an online women's health physiotherapy visit do?",
+    directAnswer: "An online visit can take a detailed history, watch how you move, breathe and change position, and agree a home plan you can film or describe between sessions. It cannot perform an internal pelvic-floor examination, feel a scar, or rule out a medical emergency. If your main question needs hands-on testing, an in-person appointment is the honest next step. Video care is a format, not a lesser or greater treatment by itself.",
+    storytellingNote: "",
+    sections: [
+      {
+        heading: "What travels well over video",
+        paragraphs: [
+          "Symptom diaries, cough-leak stories, and questions about lifting a baby or returning to a walk are easy to discuss on a call. A clinician can watch a sit-to-stand, a cough, or how your tummy behaves when you roll in bed, if the camera angle is safe and you are comfortable.",
+          "Education about bladder irritants, constipation habits and pacing is also possible without touching you. NHS pelvic-floor pages already give the public a starting description of those muscles. A visit turns that general advice into something matched to your notes."
+        ]
+      },
+      {
+        heading: "What video cannot replace",
+        paragraphs: [
+          "An internal exam, a prolapse assessment by touch, and some scar or joint tests need you in the room. Guessing muscle strength from a selfie is not an assessment. If that information would change the plan, say so and arrange an in-person slot where Dr. Zalak Shah (PT) practises, or a local pelvic-health physiotherapist.",
+          "Connection dropouts, a shared room, and childcare in the background also limit what can be covered. You can pause or switch to audio. You should not be asked to undress on camera in a way that feels unsafe."
+        ]
+      },
+      {
+        heading: "Who should not start online",
+        paragraphs: [
+          "Do not book a routine video call for sudden inability to pass urine, new loss of bowel control, numbness in the saddle area, heavy bleeding, fainting, chest pain, or severe pain in pregnancy. Use emergency services.",
+          "Fever with pelvic pain, a breast lump, or bleeding after menopause also need a doctor first. Physiotherapy can join later. It should not be the first stop for those problems."
+        ]
+      },
+      {
+        heading: "How to prepare a useful call",
+        paragraphs: [
+          "Write three days of bladder and bowel notes if leaks are the issue, and the date of birth or surgery if that applies. Wear clothes you can move in. Prop the phone so your whole trunk is visible for movement checks, not only your face.",
+          "Have your questions written down. A good online session ends with one or two things to practise, not a long exercise list you will not do. Medical red flags noticed on the call get redirected to Dr. Charmi Shah or local urgent care."
+        ]
+      }
+    ],
+    figures: [
+      {
+        src: "/images/articles/online-womens-health-physiotherapy/online-womens-health-physiotherapy-explainer.svg",
+        alt: "Split sketch of tasks possible on video versus tasks that need an in-person examination",
+        caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
+        width: 1200,
+        height: 675,
+        approvalStatus: "pending"
+      }
+    ],
+    references: [
+      {
+        label: "NHS — What are pelvic floor exercises?",
+        url: "https://www.nhs.uk/common-health-questions/womens-health/what-are-pelvic-floor-exercises/"
+      },
+      {
+        label: "POGP — Patient information",
+        url: "https://thepogp.co.uk/patient_information/default.aspx"
+      }
+    ],
+    internalLinks: [
+      {
+        anchor: "what women's health physiotherapy is",
+        path: "/what-is-womens-health-physiotherapy/"
+      },
+      {
+        anchor: "what happens in a session",
+        path: "/what-happens-during-a-physiotherapy-session/"
+      },
+      {
+        anchor: "bladder leakage",
+        path: "/bladder-leakage/"
+      }
+    ],
+    faqs: [
+      {
+        question: "Is online physiotherapy less effective than being in the room?",
+        answer: "It depends on the question. History and movement coaching can work on video. Problems that need an internal exam or hands-on testing need an in-person visit. The format should match the question."
+      },
+      {
+        question: "Can you diagnose prolapse on a video call?",
+        answer: "No. You can describe heaviness or a bulge, and that history matters, but confirming prolapse needs an examination. Do not treat a camera view as a diagnosis."
+      }
+    ],
+    conversionCopy: "If a video physiotherapy review is appropriate for your symptoms, you can book with Dr. Zalak Shah (PT).",
+    conversionPath: "/book-consultation/",
+    parentHubPath: "/womens-health-physiotherapy/",
+    claimLedger: [
+      {
+        claim: "Pelvic floor training is a skill that needs correct technique, which is the part a clinician can coach.",
+        sourceUrl: "https://www.nhs.uk/common-health-questions/womens-health/what-are-pelvic-floor-exercises/",
+        sourceSection: "NHS · What are pelvic floor exercises? · fetched 2026",
+        limitations: "Does not describe telehealth.",
+        reviewerDecision: "pending"
+      },
+      {
+        claim: "Pelvic-health problems are a physiotherapy scope that still requires proper assessment.",
+        sourceUrl: "https://thepogp.co.uk/patient_information/default.aspx",
+        sourceSection: "POGP · Patient information · fetched 2026",
+        limitations: "Index page, not a telehealth standard.",
+        reviewerDecision: "pending"
+      }
+    ],
+    openClinicalQuestions: [
+      "Confirm WHD's written list of problems that must be seen in person before any online physio booking."
+    ],
+    bodyFingerprintText: "Can Women's Health Physiotherapy Be Done Online?\nAn online visit can take a detailed history, watch how you move, breathe and change position, and agree a home plan you can film or describe between sessions. It cannot perform an internal pelvic-floor examination, feel a scar, or rule out a medical emergency. If your main question needs hands-on testing, an in-person appointment is the honest next step. Video care is a format, not a lesser or greater treatment by itself.\nWhat travels well over video\nSymptom diaries, cough-leak stories, and questions about lifting a baby or returning to a walk are easy to discuss on a call. A clinician can watch a sit-to-stand, a cough, or how your tummy behaves when you roll in bed, if the camera angle is safe and you are comfortable.\nEducation about bladder irritants, constipation habits and pacing is also possible without touching you. NHS pelvic-floor pages already give the public a starting description of those muscles. A visit turns that general advice into something matched to your notes.\nWhat video cannot replace\nAn internal exam, a prolapse assessment by touch, and some scar or joint tests need you in the room. Guessing muscle strength from a selfie is not an assessment. If that information would change the plan, say so and arrange an in-person slot where Dr. Zalak Shah (PT) practises, or a local pelvic-health physiotherapist.\nConnection dropouts, a shared room, and childcare in the background also limit what can be covered. You can pause or switch to audio. You should not be asked to undress on camera in a way that feels unsafe.\nWho should not start online\nDo not book a routine video call for sudden inability to pass urine, new loss of bowel control, numbness in the saddle area, heavy bleeding, fainting, chest pain, or severe pain in pregnancy. Use emergency services.\nFever with pelvic pain, a breast lump, or bleeding after menopause also need a doctor first. Physiotherapy can join later. It should not be the first stop for those problems.\nHow to prepare a useful call\nWrite three days of bladder and bowel notes if leaks are the issue, and the date of birth or surgery if that applies. Wear clothes you can move in. Prop the phone so your whole trunk is visible for movement checks, not only your face.\nHave your questions written down. A good online session ends with one or two things to practise, not a long exercise list you will not do. Medical red flags noticed on the call get redirected to Dr. Charmi Shah or local urgent care."
+  },
+{
+    id: "W29-Z",
+    slug: "what-is-pelvic-floor-dysfunction",
+    action: "Refresh",
+    publicationStatus: "in_clinical_review",
+    scheduledAt: "2026-12-05T09:00:00+05:30",
+    proposedLeadId: "zalak",
+    title: "What Is Pelvic Floor Dysfunction?",
+    seoTitle: "What is pelvic floor dysfunction?",
+    description: "Pelvic floor dysfunction means the pelvic muscles are not coordinating for bladder, bowel, support or comfort. It is a description, not one diagnosis.",
+    primaryQuestion: "What is pelvic floor dysfunction?",
+    directAnswer: "Pelvic floor dysfunction is an umbrella description, not one disease. It means the muscles and connective tissue at the base of the pelvis are not doing the job you need in that moment: they may not tighten when you cough, may not relax to empty the bladder or bowel, or may ache with sex or sitting. Leaks, urgency, constipation, heaviness and pain can overlap, and they do not all have the same fix. Squeezing harder is not automatically the answer.",
+    storytellingNote: "",
+    sections: [
+      {
+        heading: "What the pelvic floor is being asked to do",
+        paragraphs: [
+          "NHS information on pelvic floor exercises describes muscles that support the bladder and bowel and help you hold on, then relax so you can empty. Both halves of that job matter. A muscle that cannot let go causes different trouble from a muscle that cannot hold.",
+          "Pregnancy, birth, chronic cough, constipation, heavy lifting, surgery and menopause-related tissue change are common parts of the story. They are context, not a verdict that your muscles have failed."
+        ]
+      },
+      {
+        heading: "Symptoms people group under this label",
+        paragraphs: [
+          "Leaking with a cough is a different pattern from a sudden desperate urge. Difficulty starting urine, a stop-start stream, or a feeling of not emptying can point toward poor relaxation or obstruction that needs medical review, not more squeezes.",
+          "Heaviness or a bulge sensation raises prolapse questions, which the prolapse guide covers separately. Pain with penetration can involve muscle tension, scar, hormonal dryness or a medical cause. One label should not swallow all of those."
+        ]
+      },
+      {
+        heading: "How a physiotherapist sorts the pattern",
+        paragraphs: [
+          "Dr. Zalak Shah (PT) starts with what you are trying to do: hold on during a laugh, empty without strain, sit without ache, or return to a run. She may watch breathing and movement and, with consent, assess the pelvic floor directly.",
+          "The plan might be coordination and timing, relaxation, strength, or load changes such as how you lift. It might also be a referral to gynaecology if infection, bleeding, or a structural problem is more likely. Physiotherapy does not prescribe hormones."
+        ]
+      },
+      {
+        heading: "Symptoms that need a doctor urgently",
+        paragraphs: [
+          "New inability to pass urine, new bowel incontinence, numbness between the legs, blood in the urine, fever with pelvic pain, or severe pain in pregnancy need urgent medical care. Do not stretch or squeeze through those.",
+          "A booked physiotherapy assessment fits ongoing leaks, urgency that is stable, constipation with straining, or pain that has already been checked for urgent causes."
+        ]
+      }
+    ],
+    figures: [
+      {
+        src: "/images/articles/what-is-pelvic-floor-dysfunction/what-is-pelvic-floor-dysfunction-explainer.svg",
+        alt: "Sketch of the pelvic floor supporting bladder and bowel, with tighten and release as separate jobs",
+        caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
+        width: 1200,
+        height: 675,
+        approvalStatus: "pending"
+      }
+    ],
+    references: [
+      {
+        label: "NHS — What are pelvic floor exercises?",
+        url: "https://www.nhs.uk/common-health-questions/womens-health/what-are-pelvic-floor-exercises/"
+      },
+      {
+        label: "NHS — Urinary incontinence",
+        url: "https://www.nhs.uk/conditions/urinary-incontinence/"
+      }
+    ],
+    internalLinks: [
+      {
+        anchor: "are kegels right for everyone",
+        path: "/are-kegels-right-for-everyone/"
+      },
+      {
+        anchor: "pelvic organ prolapse",
+        path: "/pelvic-organ-prolapse/"
+      },
+      {
+        anchor: "what the pelvic floor is",
+        path: "/what-is-the-pelvic-floor/"
+      }
+    ],
+    faqs: [
+      {
+        question: "Are Kegels the treatment for pelvic floor dysfunction?",
+        answer: "Not always. If the muscles are not relaxing, more squeezing can make emptying and pain worse. The kegels guide explains why a blanket squeeze routine is not for everyone."
+      },
+      {
+        question: "Can I tell which type I have from symptoms alone?",
+        answer: "Symptoms suggest questions. They do not sort strength from tension or rule out infection and prolapse. An assessment is what separates those."
+      }
+    ],
+    conversionCopy: "If leaks, urgency, heaviness or pelvic pain need sorting out, you can book a physiotherapy assessment with Dr. Zalak Shah (PT).",
+    conversionPath: "/book-consultation/",
+    parentHubPath: "/pelvic-floor-therapy/",
+    claimLedger: [
+      {
+        claim: "Pelvic floor muscles support bladder and bowel and must be able to tighten and release.",
+        sourceUrl: "https://www.nhs.uk/common-health-questions/womens-health/what-are-pelvic-floor-exercises/",
+        sourceSection: "NHS · What are pelvic floor exercises? · fetched 2026",
+        limitations: "Exercise page, not a diagnostic classification.",
+        reviewerDecision: "pending"
+      },
+      {
+        claim: "Stress and urge leakage are different patterns and need different first questions.",
+        sourceUrl: "https://www.nhs.uk/conditions/urinary-incontinence/",
+        sourceSection: "NHS · Urinary incontinence · fetched 2026",
+        limitations: "Covers leakage types, not every pelvic pain cause.",
+        reviewerDecision: "pending"
+      }
+    ],
+    openClinicalQuestions: [
+      "Confirm whether WHD wants the phrase pelvic floor dysfunction in patient-facing titles or a plainer wording."
+    ],
+    bodyFingerprintText: "What Is Pelvic Floor Dysfunction?\nPelvic floor dysfunction is an umbrella description, not one disease. It means the muscles and connective tissue at the base of the pelvis are not doing the job you need in that moment: they may not tighten when you cough, may not relax to empty the bladder or bowel, or may ache with sex or sitting. Leaks, urgency, constipation, heaviness and pain can overlap, and they do not all have the same fix. Squeezing harder is not automatically the answer.\nWhat the pelvic floor is being asked to do\nNHS information on pelvic floor exercises describes muscles that support the bladder and bowel and help you hold on, then relax so you can empty. Both halves of that job matter. A muscle that cannot let go causes different trouble from a muscle that cannot hold.\nPregnancy, birth, chronic cough, constipation, heavy lifting, surgery and menopause-related tissue change are common parts of the story. They are context, not a verdict that your muscles have failed.\nSymptoms people group under this label\nLeaking with a cough is a different pattern from a sudden desperate urge. Difficulty starting urine, a stop-start stream, or a feeling of not emptying can point toward poor relaxation or obstruction that needs medical review, not more squeezes.\nHeaviness or a bulge sensation raises prolapse questions, which the prolapse guide covers separately. Pain with penetration can involve muscle tension, scar, hormonal dryness or a medical cause. One label should not swallow all of those.\nHow a physiotherapist sorts the pattern\nDr. Zalak Shah (PT) starts with what you are trying to do: hold on during a laugh, empty without strain, sit without ache, or return to a run. She may watch breathing and movement and, with consent, assess the pelvic floor directly.\nThe plan might be coordination and timing, relaxation, strength, or load changes such as how you lift. It might also be a referral to gynaecology if infection, bleeding, or a structural problem is more likely. Physiotherapy does not prescribe hormones.\nSymptoms that need a doctor urgently\nNew inability to pass urine, new bowel incontinence, numbness between the legs, blood in the urine, fever with pelvic pain, or severe pain in pregnancy need urgent medical care. Do not stretch or squeeze through those.\nA booked physiotherapy assessment fits ongoing leaks, urgency that is stable, constipation with straining, or pain that has already been checked for urgent causes."
+  },
+{
+    id: "W30-Z",
+    slug: "pelvic-pain-in-women",
+    action: "Refresh",
+    publicationStatus: "in_clinical_review",
+    scheduledAt: "2026-12-05T09:00:00+05:30",
+    proposedLeadId: "zalak",
+    title: "Why Do I Have Pelvic Pain?",
+    seoTitle: "Pelvic pain in women: what to notice",
+    description: "Pelvic pain has many causes, from period pain and muscle tension to infection and pregnancy emergencies. Severe or sudden pain needs urgent care, not a stretch.",
+    primaryQuestion: "Why do I have pelvic pain?",
+    directAnswer: "Pelvic pain is a location, not a diagnosis. It can come from periods, endometriosis, ovarian cysts, infection, bladder or bowel problems, pelvic-floor muscle tension, scars, or pregnancy complications. NHS pelvic-pain advice is to get help urgently for sudden severe pain, and to see a GP for pain that keeps returning. A physiotherapy page can explain muscle and movement contributions. It cannot tell you the cause from a description, and it should not be your first stop in an emergency.",
+    storytellingNote: "",
+    sections: [
+      {
+        heading: "Pain that follows the cycle versus pain that does not",
+        paragraphs: [
+          "Cramp that builds with bleeding and settles afterwards is a different story from pain between periods, pain with sex, or pain when you pass urine. Write the dates. A one-line memory of “it always hurts” is harder to use than a month of notes.",
+          "Endometriosis can cause painful periods and pain with sex or bowel movements, and the endometriosis guide covers how diagnosis is discussed. Muscle tension can exist alongside it. Treating only one and ignoring the other leaves people disappointed."
+        ]
+      },
+      {
+        heading: "When muscles and scars are part of the picture",
+        paragraphs: [
+          "The pelvic floor can stay guarded after birth, surgery, infection or a long time of bracing against leaks. That guarding can hurt with sitting, penetration or tampon use even when a scan is reported as normal. Normal imaging does not mean the pain is imagined.",
+          "Dr. Zalak Shah (PT) can assess movement, breathing and, with consent, muscle tension. She does not diagnose infection, cysts or endometriosis. If those are possible, Dr. Charmi Shah or your local doctor needs to be in the plan."
+        ]
+      },
+      {
+        heading: "Clues that should change the pace",
+        paragraphs: [
+          "NHS pelvic-pain pages tell you to call emergency services for sudden, severe pain. Add pregnancy: one-sided pain with bleeding, fainting or shoulder-tip pain can be ectopic pregnancy and is an emergency.",
+          "Fever, smelly discharge, burning urine with back pain, or pain after a procedure also need medical review the same day. A heat pack and a wait are the wrong plan for those."
+        ]
+      },
+      {
+        heading: "What a non-urgent assessment can still offer",
+        paragraphs: [
+          "Once urgent causes are excluded or being investigated, physiotherapy can work on pacing, bowel and bladder habits, and graded movement so pain is not the only thing organising your day. The goal is function you care about, not a promise of zero pain.",
+          "Bring scan reports, the names of medicines, and a note of what makes pain better or worse. Stop any exercise that sharply worsens pain and tell the clinician, rather than pushing through to prove commitment."
+        ]
+      }
+    ],
+    figures: [
+      {
+        src: "/images/articles/pelvic-pain-in-women/pelvic-pain-in-women-explainer.svg",
+        alt: "Body outline marking the pelvis with a note that pain there has many causes",
+        caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
+        width: 1200,
+        height: 675,
+        approvalStatus: "pending"
+      }
+    ],
+    references: [
+      {
+        label: "NHS — Pelvic pain",
+        url: "https://www.nhs.uk/conditions/pelvic-pain/"
+      },
+      {
+        label: "NHS — Endometriosis",
+        url: "https://www.nhs.uk/conditions/endometriosis/"
+      }
+    ],
+    internalLinks: [
+      {
+        anchor: "endometriosis symptoms",
+        path: "/endometriosis-symptoms-diagnosis/"
+      },
+      {
+        anchor: "pain with sex",
+        path: "/can-pelvic-floor-therapy-help-with-painful-intercourse/"
+      },
+      {
+        anchor: "pelvic floor dysfunction",
+        path: "/what-is-pelvic-floor-dysfunction/"
+      }
+    ],
+    faqs: [
+      {
+        question: "If my ultrasound is normal, is the pain just muscle?",
+        answer: "Not necessarily. Ultrasound does not see every cause, and muscle pain can exist even when a scan is normal. You still need a clinician to match the test to the symptom."
+      },
+      {
+        question: "Should I stretch my hips until the pain goes?",
+        answer: "Aggressive stretching can flare pelvic pain. A short walk or a position that eases you is safer until someone has assessed the cause, especially if the pain is new or severe."
+      }
+    ],
+    conversionCopy: "If pelvic pain is stable and you want a movement and pelvic-floor assessment, you can book with Dr. Zalak Shah (PT). Sudden severe pain needs emergency care.",
+    conversionPath: "/book-consultation/",
+    parentHubPath: "/pelvic-floor-therapy/",
+    claimLedger: [
+      {
+        claim: "Sudden severe pelvic pain needs emergency help. Recurring pain needs a GP.",
+        sourceUrl: "https://www.nhs.uk/conditions/pelvic-pain/",
+        sourceSection: "NHS · Pelvic pain · fetched 2026",
+        limitations: "UK triage page; local emergency numbers differ.",
+        reviewerDecision: "pending"
+      },
+      {
+        claim: "Endometriosis can cause painful periods and pain with sex or opening the bowels.",
+        sourceUrl: "https://www.nhs.uk/conditions/endometriosis/",
+        sourceSection: "NHS · Endometriosis · fetched 2026",
+        limitations: "One cause among many.",
+        reviewerDecision: "pending"
+      }
+    ],
+    openClinicalQuestions: [
+      "Confirm which pelvic-pain presentations WHD physiotherapy will not see before a medical review."
+    ],
+    bodyFingerprintText: "Why Do I Have Pelvic Pain?\nPelvic pain is a location, not a diagnosis. It can come from periods, endometriosis, ovarian cysts, infection, bladder or bowel problems, pelvic-floor muscle tension, scars, or pregnancy complications. NHS pelvic-pain advice is to get help urgently for sudden severe pain, and to see a GP for pain that keeps returning. A physiotherapy page can explain muscle and movement contributions. It cannot tell you the cause from a description, and it should not be your first stop in an emergency.\nPain that follows the cycle versus pain that does not\nCramp that builds with bleeding and settles afterwards is a different story from pain between periods, pain with sex, or pain when you pass urine. Write the dates. A one-line memory of “it always hurts” is harder to use than a month of notes.\nEndometriosis can cause painful periods and pain with sex or bowel movements, and the endometriosis guide covers how diagnosis is discussed. Muscle tension can exist alongside it. Treating only one and ignoring the other leaves people disappointed.\nWhen muscles and scars are part of the picture\nThe pelvic floor can stay guarded after birth, surgery, infection or a long time of bracing against leaks. That guarding can hurt with sitting, penetration or tampon use even when a scan is reported as normal. Normal imaging does not mean the pain is imagined.\nDr. Zalak Shah (PT) can assess movement, breathing and, with consent, muscle tension. She does not diagnose infection, cysts or endometriosis. If those are possible, Dr. Charmi Shah or your local doctor needs to be in the plan.\nClues that should change the pace\nNHS pelvic-pain pages tell you to call emergency services for sudden, severe pain. Add pregnancy: one-sided pain with bleeding, fainting or shoulder-tip pain can be ectopic pregnancy and is an emergency.\nFever, smelly discharge, burning urine with back pain, or pain after a procedure also need medical review the same day. A heat pack and a wait are the wrong plan for those.\nWhat a non-urgent assessment can still offer\nOnce urgent causes are excluded or being investigated, physiotherapy can work on pacing, bowel and bladder habits, and graded movement so pain is not the only thing organising your day. The goal is function you care about, not a promise of zero pain.\nBring scan reports, the names of medicines, and a note of what makes pain better or worse. Stop any exercise that sharply worsens pain and tell the clinician, rather than pushing through to prove commitment."
+  },
+{
+    id: "W31-Z",
+    slug: "frequent-urination-in-women",
+    action: "Refresh",
+    publicationStatus: "in_clinical_review",
+    scheduledAt: "2026-12-05T09:00:00+05:30",
+    proposedLeadId: "zalak",
+    title: "Why Do I Need to Pee So Often?",
+    seoTitle: "Why frequent urination happens",
+    description: "Needing to pee often can be a bladder, pelvic-floor, infection or fluid-habit issue. Burning, blood, fever or pregnancy pain need medical care first.",
+    primaryQuestion: "Why do I need to pee so often?",
+    directAnswer: "Needing the toilet often can come from a urine infection, an overactive bladder, drinking a lot of caffeine or fizzy drinks, constipation, pregnancy, or pelvic-floor muscles that are not coordinating with the bladder. The pattern matters: urgency with leaks is different from passing small amounts with burning. NHS urine-infection pages list pain on peeing, needing to pee suddenly or more often, and cloudy or strong-smelling urine as infection clues. Those need a medical check, not bladder training from a blog.",
+    storytellingNote: "",
+    sections: [
+      {
+        heading: "Infection and other medical causes first",
+        paragraphs: [
+          "A urinary tract infection can make you pee often, burn, and feel generally unwell. Blood in the urine, fever, back pain, vomiting, or confusion are reasons for same-day or emergency care, especially in pregnancy. Do not start a leftover antibiotic because a previous episode felt similar.",
+          "Pregnancy itself increases toilet trips. New pain with frequent peeing in pregnancy still needs a clinician, because infection can be more than a nuisance. Diabetes and some medicines also increase urine output. Mention them rather than assuming the bladder is the only organ involved."
+        ]
+      },
+      {
+        heading: "Urgency that is not an infection",
+        paragraphs: [
+          "NHS incontinence information separates a sudden intense need to pee from leaks that happen when you cough. Frequency with urgency, once infection is excluded, is often discussed as overactive bladder. That label still needs a person, not a quiz.",
+          "Going “just in case” before every outing can train the bladder to signal early. That habit is changeable. It is not the cause of burning or blood, so do not use bladder drills to avoid a urine test."
+        ]
+      },
+      {
+        heading: "Where physiotherapy fits after a check",
+        paragraphs: [
+          "When infection and other medical causes are not the driver, pelvic-floor coordination, urge-suppression strategies and fluid timing can help. A fever needs a doctor first. Dr. Zalak Shah (PT) is a reasonable next step once a clinician has said the urine is clear or a medical plan is underway.",
+          "Constipation presses on the bladder. Straining on the toilet is worth mentioning. A plan that ignores the bowel often stalls."
+        ]
+      },
+      {
+        heading: "What to record before an appointment",
+        paragraphs: [
+          "For three ordinary days, note drinks, toilet times, leaks, and whether you made it in time. Add night waking. Do not restrict fluids to produce a tidy chart. Dehydration irritates the bladder and the bowel.",
+          "Seek urgent care for inability to pass urine, fever with back pain, blood you can see, or pregnancy with pain and burning. Book routinely when frequency is a nuisance but you are otherwise well and a recent check did not find infection."
+        ]
+      }
+    ],
+    figures: [
+      {
+        src: "/images/articles/frequent-urination-in-women/frequent-urination-in-women-explainer.svg",
+        alt: "Bladder diary sketch separating burning and fever from urgency without infection",
+        caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
+        width: 1200,
+        height: 675,
+        approvalStatus: "pending"
+      }
+    ],
+    references: [
+      {
+        label: "NHS — Urinary tract infections (UTIs)",
+        url: "https://www.nhs.uk/conditions/urinary-tract-infections-utis/"
+      },
+      {
+        label: "NHS — Urinary incontinence",
+        url: "https://www.nhs.uk/conditions/urinary-incontinence/"
+      }
+    ],
+    internalLinks: [
+      {
+        anchor: "cough leaks",
+        path: "/why-do-i-leak-urine-when-i-cough/"
+      },
+      {
+        anchor: "pelvic floor dysfunction",
+        path: "/what-is-pelvic-floor-dysfunction/"
+      },
+      {
+        anchor: "bladder leakage hub",
+        path: "/bladder-leakage/"
+      }
+    ],
+    faqs: [
+      {
+        question: "Should I drink less so I pee less?",
+        answer: "Cutting fluids sharply often makes urine more concentrated and the bladder more irritable. A clinician can look at what and when you drink. Do not dehydrate yourself to avoid toilets."
+      },
+      {
+        question: "Is frequent peeing always a weak pelvic floor?",
+        answer: "No. Infection, urgency, habits and constipation are common. Pelvic-floor training helps some patterns and not others, which is why the cause comes before the exercise."
+      }
+    ],
+    conversionCopy: "If infection has been checked and you still need a bladder and pelvic-floor plan, you can book with Dr. Zalak Shah (PT).",
+    conversionPath: "/book-consultation/",
+    parentHubPath: "/bladder-leakage/",
+    claimLedger: [
+      {
+        claim: "Needing to pee more often or suddenly, with pain on peeing, can be a urine infection.",
+        sourceUrl: "https://www.nhs.uk/conditions/urinary-tract-infections-utis/",
+        sourceSection: "NHS · Urinary tract infections (UTIs) · fetched 2026",
+        limitations: "Infection page; not all frequency is infection.",
+        reviewerDecision: "pending"
+      },
+      {
+        claim: "Urgency incontinence is a sudden need to pee, distinct from leaks on coughing.",
+        sourceUrl: "https://www.nhs.uk/conditions/urinary-incontinence/",
+        sourceSection: "NHS · Urinary incontinence · fetched 2026",
+        limitations: "Describes leakage types after infection is considered.",
+        reviewerDecision: "pending"
+      }
+    ],
+    openClinicalQuestions: [
+      "Confirm whether WHD asks for a urine test before accepting a frequency complaint into physiotherapy."
+    ],
+    bodyFingerprintText: "Why Do I Need to Pee So Often?\nNeeding the toilet often can come from a urine infection, an overactive bladder, drinking a lot of caffeine or fizzy drinks, constipation, pregnancy, or pelvic-floor muscles that are not coordinating with the bladder. The pattern matters: urgency with leaks is different from passing small amounts with burning. NHS urine-infection pages list pain on peeing, needing to pee suddenly or more often, and cloudy or strong-smelling urine as infection clues. Those need a medical check, not bladder training from a blog.\nInfection and other medical causes first\nA urinary tract infection can make you pee often, burn, and feel generally unwell. Blood in the urine, fever, back pain, vomiting, or confusion are reasons for same-day or emergency care, especially in pregnancy. Do not start a leftover antibiotic because a previous episode felt similar.\nPregnancy itself increases toilet trips. New pain with frequent peeing in pregnancy still needs a clinician, because infection can be more than a nuisance. Diabetes and some medicines also increase urine output. Mention them rather than assuming the bladder is the only organ involved.\nUrgency that is not an infection\nNHS incontinence information separates a sudden intense need to pee from leaks that happen when you cough. Frequency with urgency, once infection is excluded, is often discussed as overactive bladder. That label still needs a person, not a quiz.\nGoing “just in case” before every outing can train the bladder to signal early. That habit is changeable. It is not the cause of burning or blood, so do not use bladder drills to avoid a urine test.\nWhere physiotherapy fits after a check\nWhen infection and other medical causes are not the driver, pelvic-floor coordination, urge-suppression strategies and fluid timing can help. A fever needs a doctor first. Dr. Zalak Shah (PT) is a reasonable next step once a clinician has said the urine is clear or a medical plan is underway.\nConstipation presses on the bladder. Straining on the toilet is worth mentioning. A plan that ignores the bowel often stalls.\nWhat to record before an appointment\nFor three ordinary days, note drinks, toilet times, leaks, and whether you made it in time. Add night waking. Do not restrict fluids to produce a tidy chart. Dehydration irritates the bladder and the bowel.\nSeek urgent care for inability to pass urine, fever with back pain, blood you can see, or pregnancy with pain and burning. Book routinely when frequency is a nuisance but you are otherwise well and a recent check did not find infection."
+  },
+{
+    id: "W32-Z",
+    slug: "postpartum-pelvic-pain",
+    action: "Refresh",
+    publicationStatus: "in_clinical_review",
+    scheduledAt: "2026-12-05T09:00:00+05:30",
+    proposedLeadId: "zalak",
+    title: "Why Does My Pelvis Still Hurt After Birth?",
+    seoTitle: "Postpartum pelvic pain: when to check",
+    description: "Pelvic pain after birth can come from joints, scars, pelvic-floor tension or a medical problem. Fever, heavy bleeding or calf pain need urgent care.",
+    primaryQuestion: "Why does my pelvis hurt after having a baby?",
+    directAnswer: "Pelvic pain after birth can come from pelvic-girdle joints that were under load in pregnancy, a healing tear or caesarean scar, pelvic-floor muscle tension, constipation, or less often an infection or a clot. NHS information on your body after birth says aches are common and that you should ask for help if you are worried, rather than waiting in silence. Pain that is worsening, comes with fever or heavy bleeding, or stops you walking is not something to stretch through. A physiotherapy plan is for problems that are stable enough to assess.",
+    storytellingNote: "",
+    sections: [
+      {
+        heading: "What often hurts, and why that is not one injury",
+        paragraphs: [
+          "The pubic joint and the joints at the back of the pelvis can stay sensitive after pregnancy, especially with stairs, turning in bed or standing on one leg to dress. That is a load and joint story. It is not automatically a damaged pelvic floor.",
+          "A perineal tear, an episiotomy or a caesarean scar can hurt when you sit, feed, or open your bowels. Stinging with urine in the first days can be the wound. New burning, smelly discharge or fever needs a medical check for infection rather than a massage video."
+        ]
+      },
+      {
+        heading: "How feeding, lifting and constipation keep it going",
+        paragraphs: [
+          "Twisting to reach a cot, holding a feed in one position, and straining on the toilet all reload the pelvis. Small changes in how you roll, how you hold the baby, and how you manage constipation often matter more than a hard exercise in week two.",
+          "NHS postnatal body pages encourage pelvic-floor and gentle tummy work when you feel able, and rest when you need it. They do not set a day when pain must be gone. Comparison with someone else’s week-six photo is not a clinical target."
+        ]
+      },
+      {
+        heading: "What a physiotherapy visit looks at",
+        paragraphs: [
+          "Dr. Zalak Shah (PT) asks about the birth, wounds, bleeding, bladder and bowel, and which tasks hurt: stairs, feeding, coughing, sex. She watches how you move and only examines a scar or the pelvic floor with consent, when that would change the plan.",
+          "Medical problems stay with a doctor. If pain might be infection, retained tissue, or a joint that needs imaging, she will say so. Physiotherapy does not clear you for high-impact exercise by a calendar date."
+        ]
+      },
+      {
+        heading: "Signs to get urgent care instead",
+        paragraphs: [
+          "Heavy bleeding that soaks pads quickly, fainting, fever, a wound that is opening or smelling strongly, chest pain, or a painful swollen calf need emergency or same-day medical care. A clot or infection will not be fixed by posture cues.",
+          "Book physiotherapy when pain is limiting ordinary movement but you are medically stable, or when leaks and heaviness have joined the pain. Bring the birth notes if you have them."
+        ]
+      }
+    ],
+    figures: [
+      {
+        src: "/images/articles/postpartum-pelvic-pain/postpartum-pelvic-pain-explainer.svg",
+        alt: "Side-view sketch of pelvis after birth marking joints, scar and pelvic floor as separate sources of pain",
+        caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
+        width: 1200,
+        height: 675,
+        approvalStatus: "pending"
+      }
+    ],
+    references: [
+      {
+        label: "NHS — Your body after the birth",
+        url: "https://www.nhs.uk/baby/support-and-services/your-body-after-the-birth/"
+      },
+      {
+        label: "NHS — Pelvic pain",
+        url: "https://www.nhs.uk/conditions/pelvic-pain/"
+      }
+    ],
+    internalLinks: [
+      {
+        anchor: "how long recovery takes",
+        path: "/how-long-does-postpartum-recovery-take/"
+      },
+      {
+        anchor: "C-section recovery",
+        path: "/how-to-recover-after-c-section/"
+      },
+      {
+        anchor: "postpartum recovery hub",
+        path: "/postpartum-recovery/"
+      }
+    ],
+    faqs: [
+      {
+        question: "Is pelvic pain six weeks after birth still normal?",
+        answer: "Common does not mean you should cope alone. Pain that is improving and mild can settle with time and load changes. Pain that is stuck, worsening, or stopping walking deserves a check."
+      },
+      {
+        question: "Should I start running to strengthen the pelvis?",
+        answer: "Not while pain, heaviness or leaking is your main limit. Return to impact belongs after those symptoms are assessed, not on a fixed postnatal week."
+      }
+    ],
+    conversionCopy: "If postnatal pelvic pain is limiting daily tasks and you are medically stable, you can book a physiotherapy assessment with Dr. Zalak Shah (PT).",
+    conversionPath: "/book-consultation/",
+    parentHubPath: "/postpartum-recovery/",
+    claimLedger: [
+      {
+        claim: "Aches are common after birth, and bothersome symptoms are a reason to ask for help. Pelvic-floor work is encouraged when you feel able.",
+        sourceUrl: "https://www.nhs.uk/baby/support-and-services/your-body-after-the-birth/",
+        sourceSection: "NHS · Your body after the birth · fetched 2026",
+        limitations: "General postnatal page, not a pain classification.",
+        reviewerDecision: "pending"
+      },
+      {
+        claim: "Sudden severe pelvic pain needs emergency care.",
+        sourceUrl: "https://www.nhs.uk/conditions/pelvic-pain/",
+        sourceSection: "NHS · Pelvic pain · fetched 2026",
+        limitations: "Not specific to the postnatal week.",
+        reviewerDecision: "pending"
+      }
+    ],
+    openClinicalQuestions: [
+      "Confirm WHD advice on painful swollen calf and heavy postnatal bleeding wording for Indian emergency routes."
+    ],
+    bodyFingerprintText: "Why Does My Pelvis Still Hurt After Birth?\nPelvic pain after birth can come from pelvic-girdle joints that were under load in pregnancy, a healing tear or caesarean scar, pelvic-floor muscle tension, constipation, or less often an infection or a clot. NHS information on your body after birth says aches are common and that you should ask for help if you are worried, rather than waiting in silence. Pain that is worsening, comes with fever or heavy bleeding, or stops you walking is not something to stretch through. A physiotherapy plan is for problems that are stable enough to assess.\nWhat often hurts, and why that is not one injury\nThe pubic joint and the joints at the back of the pelvis can stay sensitive after pregnancy, especially with stairs, turning in bed or standing on one leg to dress. That is a load and joint story. It is not automatically a damaged pelvic floor.\nA perineal tear, an episiotomy or a caesarean scar can hurt when you sit, feed, or open your bowels. Stinging with urine in the first days can be the wound. New burning, smelly discharge or fever needs a medical check for infection rather than a massage video.\nHow feeding, lifting and constipation keep it going\nTwisting to reach a cot, holding a feed in one position, and straining on the toilet all reload the pelvis. Small changes in how you roll, how you hold the baby, and how you manage constipation often matter more than a hard exercise in week two.\nNHS postnatal body pages encourage pelvic-floor and gentle tummy work when you feel able, and rest when you need it. They do not set a day when pain must be gone. Comparison with someone else’s week-six photo is not a clinical target.\nWhat a physiotherapy visit looks at\nDr. Zalak Shah (PT) asks about the birth, wounds, bleeding, bladder and bowel, and which tasks hurt: stairs, feeding, coughing, sex. She watches how you move and only examines a scar or the pelvic floor with consent, when that would change the plan.\nMedical problems stay with a doctor. If pain might be infection, retained tissue, or a joint that needs imaging, she will say so. Physiotherapy does not clear you for high-impact exercise by a calendar date.\nSigns to get urgent care instead\nHeavy bleeding that soaks pads quickly, fainting, fever, a wound that is opening or smelling strongly, chest pain, or a painful swollen calf need emergency or same-day medical care. A clot or infection will not be fixed by posture cues.\nBook physiotherapy when pain is limiting ordinary movement but you are medically stable, or when leaks and heaviness have joined the pain. Bring the birth notes if you have them."
+  },
+{
+    id: "W33-Z",
+    slug: "common-pregnancy-discomforts",
+    action: "Refresh",
+    publicationStatus: "in_clinical_review",
+    scheduledAt: "2026-12-05T09:00:00+05:30",
+    proposedLeadId: "zalak",
+    title: "Which Pregnancy Discomforts Are Common?",
+    seoTitle: "Common pregnancy discomforts to know",
+    description: "Backache, pelvic ache, heartburn and tiredness are common in pregnancy. Bleeding, severe headache, reduced movements and fainting need same-day maternity care.",
+    primaryQuestion: "Which pregnancy aches are common, and which are not?",
+    directAnswer: "Backache, pelvic-girdle ache, heartburn, constipation, leg cramps and tiredness are common in pregnancy and still worth help when they stop you functioning. NHS common-symptom pages describe many of these and also list warning signs that are not routine: vaginal bleeding, severe headache, vision changes, sudden swelling, reduced baby movements, and leaking fluid. A physiotherapy article can talk about load and positions. It cannot clear a warning sign. If you are unsure, contact your maternity unit or local emergency care.",
+    storytellingNote: "",
+    sections: [
+      {
+        heading: "Aches that often track with a changing body",
+        paragraphs: [
+          "As the uterus grows, the way you stand, turn and sleep changes. Pelvic-girdle pain can make stairs, turning in bed and standing on one leg uncomfortable. NHS pregnancy symptom pages list backache and pelvic pain among common complaints and suggest speaking to a midwife or GP if they are hard to manage.",
+          "Heartburn, constipation and waking at night are also frequent. They are not proof that you are doing pregnancy badly. They can still be treated or eased. Say if vomiting stops you keeping fluids down. That is no longer a minor discomfort."
+        ]
+      },
+      {
+        heading: "Movement ideas that stay modest",
+        paragraphs: [
+          "NHS exercise-in-pregnancy advice supports staying active if the pregnancy is uncomplicated, with modifications, and stopping if you feel unwell, dizzy or in pain. A daily walk and changing position often beat a long list of stretches you resent.",
+          "Support belts, pillows between the knees, and getting out of bed via your side help some people with pelvic pain. They are experiments, not equipment you must buy. Dr. Zalak Shah (PT) can match ideas to the task that actually hurts. She does not manage bleeding or blood pressure."
+        ]
+      },
+      {
+        heading: "Symptoms that are not a discomfort to wait on",
+        paragraphs: [
+          "Vaginal bleeding, severe tummy pain, a headache that is severe or comes with flashing lights, sudden swelling of face or hands, a baby moving much less, and fluid leaking from the vagina need same-day maternity advice. Fainting, chest pain or difficulty breathing is an emergency.",
+          "Do not search exercise videos while those are happening. Contact the maternity unit you are booked with, or local emergency services if you are very unwell. A women’s-health website is not a labour ward."
+        ]
+      },
+      {
+        heading: "What to tell a clinician if the ache is ongoing",
+        paragraphs: [
+          "Name the task: stairs, turning in bed, standing to cook, or coughing. Say which week you are in, whether there is bleeding or a change in the baby’s movements, and what you have already tried.",
+          "A booked physiotherapy visit is reasonable for stable pelvic or back pain once maternity care knows about you. The back-pain and pelvic-pain pregnancy guides go deeper on those two problems. This page is the map, not every protocol."
+        ]
+      }
+    ],
+    figures: [
+      {
+        src: "/images/articles/common-pregnancy-discomforts/common-pregnancy-discomforts-explainer.svg",
+        alt: "Two-column list of common pregnancy aches versus symptoms that need same-day maternity care",
+        caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
+        width: 1200,
+        height: 675,
+        approvalStatus: "pending"
+      }
+    ],
+    references: [
+      {
+        label: "NHS — Common health problems in pregnancy",
+        url: "https://www.nhs.uk/pregnancy/related-conditions/common-symptoms/"
+      },
+      {
+        label: "NHS — Exercise in pregnancy",
+        url: "https://www.nhs.uk/pregnancy/keeping-well/exercise/"
+      }
+    ],
+    internalLinks: [
+      {
+        anchor: "back pain in pregnancy",
+        path: "/how-to-relieve-back-pain-during-pregnancy/"
+      },
+      {
+        anchor: "pelvic pain in pregnancy",
+        path: "/how-to-relieve-pelvic-pain-during-pregnancy/"
+      },
+      {
+        anchor: "prenatal physiotherapy",
+        path: "/prenatal-physiotherapy/"
+      }
+    ],
+    faqs: [
+      {
+        question: "Is pelvic pain in pregnancy a sign of labour?",
+        answer: "Usually it is the pelvic joints coping with load, especially if it has been building for weeks. Regular tightening with pain, bleeding, or fluid loss is different and needs maternity advice the same day."
+      },
+      {
+        question: "Can I keep walking if my back aches?",
+        answer: "Many people can, in shorter bouts, if walking does not cause dizziness, bleeding or pain that keeps rising. Stop and get advice if those appear. A walk is not a test of toughness."
+      }
+    ],
+    conversionCopy: "For stable pregnancy aches, you can book physiotherapy with Dr. Zalak Shah (PT). Bleeding, severe headache, fewer baby movements or fainting need maternity or emergency care first.",
+    conversionPath: "/book-consultation/",
+    parentHubPath: "/prenatal-physiotherapy/",
+    claimLedger: [
+      {
+        claim: "Many aches are common, and listed warning signs such as bleeding and reduced movements need prompt maternity contact.",
+        sourceUrl: "https://www.nhs.uk/pregnancy/related-conditions/common-symptoms/",
+        sourceSection: "NHS · Common health problems in pregnancy · fetched 2026",
+        limitations: "UK symptom hub; local maternity numbers differ.",
+        reviewerDecision: "pending"
+      },
+      {
+        claim: "Staying active is encouraged when pregnancy is uncomplicated, and you should stop if you feel unwell or in pain.",
+        sourceUrl: "https://www.nhs.uk/pregnancy/keeping-well/exercise/",
+        sourceSection: "NHS · Exercise in pregnancy · fetched 2026",
+        limitations: "General activity advice for uncomplicated pregnancy.",
+        reviewerDecision: "pending"
+      }
+    ],
+    openClinicalQuestions: [
+      "Confirm the exact warning-sign list WHD wants repeated on pregnancy physio pages."
+    ],
+    bodyFingerprintText: "Which Pregnancy Discomforts Are Common?\nBackache, pelvic-girdle ache, heartburn, constipation, leg cramps and tiredness are common in pregnancy and still worth help when they stop you functioning. NHS common-symptom pages describe many of these and also list warning signs that are not routine: vaginal bleeding, severe headache, vision changes, sudden swelling, reduced baby movements, and leaking fluid. A physiotherapy article can talk about load and positions. It cannot clear a warning sign. If you are unsure, contact your maternity unit or local emergency care.\nAches that often track with a changing body\nAs the uterus grows, the way you stand, turn and sleep changes. Pelvic-girdle pain can make stairs, turning in bed and standing on one leg uncomfortable. NHS pregnancy symptom pages list backache and pelvic pain among common complaints and suggest speaking to a midwife or GP if they are hard to manage.\nHeartburn, constipation and waking at night are also frequent. They are not proof that you are doing pregnancy badly. They can still be treated or eased. Say if vomiting stops you keeping fluids down. That is no longer a minor discomfort.\nMovement ideas that stay modest\nNHS exercise-in-pregnancy advice supports staying active if the pregnancy is uncomplicated, with modifications, and stopping if you feel unwell, dizzy or in pain. A daily walk and changing position often beat a long list of stretches you resent.\nSupport belts, pillows between the knees, and getting out of bed via your side help some people with pelvic pain. They are experiments, not equipment you must buy. Dr. Zalak Shah (PT) can match ideas to the task that actually hurts. She does not manage bleeding or blood pressure.\nSymptoms that are not a discomfort to wait on\nVaginal bleeding, severe tummy pain, a headache that is severe or comes with flashing lights, sudden swelling of face or hands, a baby moving much less, and fluid leaking from the vagina need same-day maternity advice. Fainting, chest pain or difficulty breathing is an emergency.\nDo not search exercise videos while those are happening. Contact the maternity unit you are booked with, or local emergency services if you are very unwell. A women’s-health website is not a labour ward.\nWhat to tell a clinician if the ache is ongoing\nName the task: stairs, turning in bed, standing to cook, or coughing. Say which week you are in, whether there is bleeding or a change in the baby’s movements, and what you have already tried.\nA booked physiotherapy visit is reasonable for stable pelvic or back pain once maternity care knows about you. The back-pain and pelvic-pain pregnancy guides go deeper on those two problems. This page is the map, not every protocol."
+  },
+{
+    id: "W34-Z",
+    slug: "is-online-pilates-effective",
+    action: "Refresh",
+    publicationStatus: "in_clinical_review",
+    scheduledAt: "2026-12-05T09:00:00+05:30",
+    proposedLeadId: "zalak",
+    title: "Is Online Pilates Worth Doing?",
+    seoTitle: "Is online Pilates effective for you?",
+    description: "Online Pilates can teach breathing and alignment if the teacher can see you. It cannot assess pain, leaks or pregnancy risk. Stop if you feel unwell.",
+    primaryQuestion: "Is online Pilates actually useful?",
+    directAnswer: "Online Pilates can be useful for learning breath, alignment and slower strength when the teacher can see you and you can stop if something hurts. It is not the same as a physiotherapy assessment, and it cannot tell whether a leak, a bulge or pregnancy pain is safe to exercise through. NHS pages describe Pilates as a way to build strength, flexibility and balance. That is a general fitness claim, not proof that a livestream will treat a pelvic-floor problem. Match the class to your situation, or choose an assessment first.",
+    storytellingNote: "",
+    sections: [
+      {
+        heading: "What a screen can teach",
+        paragraphs: [
+          "A live class where the teacher corrects your position can help you notice rib movement, how you lie down and stand up, and how to keep a movement smaller. Recorded videos cannot see you. They are fine for a familiar routine on a day you feel well. They are a poor choice for a new pain.",
+          "STOTT Pilates, as Merrithew describes it, emphasises principles such as breathing and placement. Those principles can be coached online by an instructor who knows them. The brand name is not evidence that any online class outperforms other sensible movement."
+        ]
+      },
+      {
+        heading: "Who should not use a class as the first step",
+        paragraphs: [
+          "If you are leaking, feel pelvic heaviness, have a new postnatal scar, or are in pain that is getting worse, start with the women’s health physiotherapy page or a medical review. A class that tells everyone to do the same hundred repetitions is not an assessment.",
+          "In pregnancy, NHS exercise advice is to stay active when the pregnancy is uncomplicated and to stop with dizziness, pain, bleeding or feeling unwell. An online teacher who cannot see your whole body and does not know your maternity notes should not clear you for a hard class."
+        ]
+      },
+      {
+        heading: "How to choose a session that is honest",
+        paragraphs: [
+          "Look for a live option, a teacher who asks about pregnancy, birth, pain and leaks before you start, and permission to skip movements. Pre-recorded “flat tummy in ten days” marketing is a reason to close the tab.",
+          "Dr. Zalak Shah (PT) teaches STOTT Pilates and also assesses pelvic-health problems. A class with her is still a class. It does not replace an appointment if you need leaks, prolapse symptoms or pain looked at. Say which of those you have before you join."
+        ]
+      },
+      {
+        heading: "When to stop and get help",
+        paragraphs: [
+          "Stop immediately for chest pain, fainting, sudden shortness of breath, bleeding, fluid loss in pregnancy, or a headache that is severe. Use emergency or maternity care. Do not finish the class first.",
+          "Book an assessment rather than another class if leaks, doming or pelvic pain show up every time you try. The STOTT Pilates guide explains the method. This page is only about whether online delivery is enough."
+        ]
+      }
+    ],
+    figures: [
+      {
+        src: "/images/articles/is-online-pilates-effective/is-online-pilates-effective-explainer.svg",
+        alt: "Laptop class sketch noting the teacher can coach form but cannot examine the pelvic floor",
+        caption: "Patient-education graphic for orientation. Not a diagnostic tool.",
+        width: 1200,
+        height: 675,
+        approvalStatus: "pending"
+      }
+    ],
+    references: [
+      {
+        label: "NHS — Pilates and yoga",
+        url: "https://www.nhs.uk/live-well/exercise/pilates-and-yoga/"
+      },
+      {
+        label: "Merrithew — STOTT PILATES FAQs",
+        url: "https://www.merrithew.com/about/education-programs/stott-pilates/faqs"
+      }
+    ],
+    internalLinks: [
+      {
+        anchor: "what STOTT Pilates is",
+        path: "/what-is-stott-pilates/"
+      },
+      {
+        anchor: "Pilates in pregnancy",
+        path: "/is-pilates-safe-during-pregnancy/"
+      },
+      {
+        anchor: "women's health physiotherapy",
+        path: "/what-is-womens-health-physiotherapy/"
+      }
+    ],
+    faqs: [
+      {
+        question: "Are recorded Pilates videos enough?",
+        answer: "They can maintain a routine you already know on a well day. They cannot correct you or decide whether a symptom is safe to exercise with. Live teaching or an assessment is safer when something hurts or leaks."
+      },
+      {
+        question: "Can online Pilates close a diastasis?",
+        answer: "No class can promise that a gap will close. Online sessions may help you manage load and breath. Width and function still need the diastasis guide and, if symptoms bother you, an assessment."
+      }
+    ],
+    conversionCopy: "If you want STOTT Pilates coaching, or you are unsure a class is appropriate, you can book with Dr. Zalak Shah (PT).",
+    conversionPath: "/book-consultation/",
+    parentHubPath: "/what-is-stott-pilates/",
+    claimLedger: [
+      {
+        claim: "Pilates can build strength, flexibility and balance as exercise.",
+        sourceUrl: "https://www.nhs.uk/live-well/exercise/pilates-and-yoga/",
+        sourceSection: "NHS · Pilates and yoga · fetched 2026",
+        limitations: "General fitness page, not a treatment trial of livestream classes.",
+        reviewerDecision: "pending"
+      },
+      {
+        claim: "Use only for the method’s own description of principles, not for superiority claims.",
+        sourceUrl: "https://www.merrithew.com/about/education-programs/stott-pilates/faqs",
+        sourceSection: "Merrithew · STOTT PILATES FAQs · fetched 2026",
+        limitations: "Manufacturer education page, not clinical outcome evidence.",
+        reviewerDecision: "pending"
+      }
+    ],
+    openClinicalQuestions: [
+      "Confirm which pregnancy and postnatal symptoms exclude someone from WHD online Mat classes until assessed."
+    ],
+    bodyFingerprintText: "Is Online Pilates Worth Doing?\nOnline Pilates can be useful for learning breath, alignment and slower strength when the teacher can see you and you can stop if something hurts. It is not the same as a physiotherapy assessment, and it cannot tell whether a leak, a bulge or pregnancy pain is safe to exercise through. NHS pages describe Pilates as a way to build strength, flexibility and balance. That is a general fitness claim, not proof that a livestream will treat a pelvic-floor problem. Match the class to your situation, or choose an assessment first.\nWhat a screen can teach\nA live class where the teacher corrects your position can help you notice rib movement, how you lie down and stand up, and how to keep a movement smaller. Recorded videos cannot see you. They are fine for a familiar routine on a day you feel well. They are a poor choice for a new pain.\nSTOTT Pilates, as Merrithew describes it, emphasises principles such as breathing and placement. Those principles can be coached online by an instructor who knows them. The brand name is not evidence that any online class outperforms other sensible movement.\nWho should not use a class as the first step\nIf you are leaking, feel pelvic heaviness, have a new postnatal scar, or are in pain that is getting worse, start with the women’s health physiotherapy page or a medical review. A class that tells everyone to do the same hundred repetitions is not an assessment.\nIn pregnancy, NHS exercise advice is to stay active when the pregnancy is uncomplicated and to stop with dizziness, pain, bleeding or feeling unwell. An online teacher who cannot see your whole body and does not know your maternity notes should not clear you for a hard class.\nHow to choose a session that is honest\nLook for a live option, a teacher who asks about pregnancy, birth, pain and leaks before you start, and permission to skip movements. Pre-recorded “flat tummy in ten days” marketing is a reason to close the tab.\nDr. Zalak Shah (PT) teaches STOTT Pilates and also assesses pelvic-health problems. A class with her is still a class. It does not replace an appointment if you need leaks, prolapse symptoms or pain looked at. Say which of those you have before you join.\nWhen to stop and get help\nStop immediately for chest pain, fainting, sudden shortness of breath, bleeding, fluid loss in pregnancy, or a headache that is severe. Use emergency or maternity care. Do not finish the class first.\nBook an assessment rather than another class if leaks, doming or pelvic pain show up every time you try. The STOTT Pilates guide explains the method. This page is only about whether online delivery is enough."
   }
 ];
 

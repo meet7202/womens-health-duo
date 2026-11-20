@@ -147,13 +147,16 @@ const previousStatusById = new Map((previousStatus.articles || []).map((a) => [a
 
 function publicationFields(id) {
   const prev = previousStatusById.get(id);
-  if (prev?.publicationStatus !== "published" || !prev.actualPublishDate) {
-    return { publicationStatus: "draft" };
+  if (prev?.publicationStatus === "published" && prev.actualPublishDate) {
+    return {
+      publicationStatus: "published",
+      publishedAt: prev.actualPublishDate,
+    };
   }
-  return {
-    publicationStatus: "published",
-    publishedAt: prev.actualPublishDate,
-  };
+  if (prev?.publicationStatus === "in_clinical_review") {
+    return { publicationStatus: "in_clinical_review" };
+  }
+  return { publicationStatus: "draft" };
 }
 
 /** Clinical approval recorded on the STATUS row (set by the owner after doctor review). */

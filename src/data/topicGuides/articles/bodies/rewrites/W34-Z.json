@@ -1,0 +1,93 @@
+{
+  "id": "W34-Z",
+  "title": "Is Online Pilates Worth Doing?",
+  "seoTitle": "Is online Pilates effective for you?",
+  "description": "Online Pilates can teach breathing and alignment if the teacher can see you. It cannot assess pain, leaks or pregnancy risk. Stop if you feel unwell.",
+  "primaryQuestion": "Is online Pilates actually useful?",
+  "directAnswer": "Online Pilates can be useful for learning breath, alignment and slower strength when the teacher can see you and you can stop if something hurts. It is not the same as a physiotherapy assessment, and it cannot tell whether a leak, a bulge or pregnancy pain is safe to exercise through. NHS pages describe Pilates as a way to build strength, flexibility and balance. That is a general fitness claim, not proof that a livestream will treat a pelvic-floor problem. Match the class to your situation, or choose an assessment first.",
+  "storytellingNote": "",
+  "sections": [
+    {
+      "heading": "What a screen can teach",
+      "paragraphs": [
+        "A live class where the teacher corrects your position can help you notice rib movement, how you lie down and stand up, and how to keep a movement smaller. Recorded videos cannot see you. They are fine for a familiar routine on a day you feel well. They are a poor choice for a new pain.",
+        "STOTT Pilates, as Merrithew describes it, emphasises principles such as breathing and placement. Those principles can be coached online by an instructor who knows them. The brand name is not evidence that any online class outperforms other sensible movement."
+      ]
+    },
+    {
+      "heading": "Who should not use a class as the first step",
+      "paragraphs": [
+        "If you are leaking, feel pelvic heaviness, have a new postnatal scar, or are in pain that is getting worse, start with the women’s health physiotherapy page or a medical review. A class that tells everyone to do the same hundred repetitions is not an assessment.",
+        "In pregnancy, NHS exercise advice is to stay active when the pregnancy is uncomplicated and to stop with dizziness, pain, bleeding or feeling unwell. An online teacher who cannot see your whole body and does not know your maternity notes should not clear you for a hard class."
+      ]
+    },
+    {
+      "heading": "How to choose a session that is honest",
+      "paragraphs": [
+        "Look for a live option, a teacher who asks about pregnancy, birth, pain and leaks before you start, and permission to skip movements. Pre-recorded “flat tummy in ten days” marketing is a reason to close the tab.",
+        "Dr. Zalak Shah (PT) teaches STOTT Pilates and also assesses pelvic-health problems. A class with her is still a class. It does not replace an appointment if you need leaks, prolapse symptoms or pain looked at. Say which of those you have before you join."
+      ]
+    },
+    {
+      "heading": "When to stop and get help",
+      "paragraphs": [
+        "Stop immediately for chest pain, fainting, sudden shortness of breath, bleeding, fluid loss in pregnancy, or a headache that is severe. Use emergency or maternity care. Do not finish the class first.",
+        "Book an assessment rather than another class if leaks, doming or pelvic pain show up every time you try. The STOTT Pilates guide explains the method. This page is only about whether online delivery is enough."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Are recorded Pilates videos enough?",
+      "answer": "They can maintain a routine you already know on a well day. They cannot correct you or decide whether a symptom is safe to exercise with. Live teaching or an assessment is safer when something hurts or leaks."
+    },
+    {
+      "question": "Can online Pilates close a diastasis?",
+      "answer": "No class can promise that a gap will close. Online sessions may help you manage load and breath. Width and function still need the diastasis guide and, if symptoms bother you, an assessment."
+    }
+  ],
+  "references": [
+    {
+      "label": "NHS — Pilates and yoga",
+      "url": "https://www.nhs.uk/live-well/exercise/pilates-and-yoga/"
+    },
+    {
+      "label": "Merrithew — STOTT PILATES FAQs",
+      "url": "https://www.merrithew.com/about/education-programs/stott-pilates/faqs"
+    }
+  ],
+  "conversionCopy": "If you want STOTT Pilates coaching, or you are unsure a class is appropriate, you can book with Dr. Zalak Shah (PT).",
+  "explainerAlt": "Laptop class sketch noting the teacher can coach form but cannot examine the pelvic floor",
+  "internalLinks": [
+    { "anchor": "what STOTT Pilates is", "path": "/what-is-stott-pilates/" },
+    { "anchor": "Pilates in pregnancy", "path": "/is-pilates-safe-during-pregnancy/" },
+    { "anchor": "women's health physiotherapy", "path": "/what-is-womens-health-physiotherapy/" }
+  ],
+  "parentHub": "/what-is-stott-pilates/",
+  "review": {
+    "corrections": [
+      "Did not claim online classes treat pelvic-floor conditions or outperform other exercise."
+    ],
+    "sourcesChecked": [
+      {
+        "organisation": "NHS",
+        "title": "Pilates and yoga",
+        "url": "https://www.nhs.uk/live-well/exercise/pilates-and-yoga/",
+        "date": "fetched 2026",
+        "limitations": "General fitness page, not a treatment trial of livestream classes.",
+        "recommendation": "Pilates can build strength, flexibility and balance as exercise."
+      },
+      {
+        "organisation": "Merrithew",
+        "title": "STOTT PILATES FAQs",
+        "url": "https://www.merrithew.com/about/education-programs/stott-pilates/faqs",
+        "date": "fetched 2026",
+        "limitations": "Manufacturer education page, not clinical outcome evidence.",
+        "recommendation": "Use only for the method’s own description of principles, not for superiority claims."
+      }
+    ],
+    "openQuestions": [
+      "Confirm which pregnancy and postnatal symptoms exclude someone from WHD online Mat classes until assessed."
+    ]
+  }
+}

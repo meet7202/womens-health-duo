@@ -1,0 +1,22 @@
+{
+  "id": "W31-C",
+  "openClinicalQuestions": [
+    "Confirm the preferred Indian emergency wording (112 versus asking patients to use the nearest casualty)."
+  ],
+  "claimLedger": [
+    {
+      "claim": "Bleeding after periods have stopped for 12 months is not normal and needs checking.",
+      "sourceUrl": "https://www.nhs.uk/conditions/post-menopausal-bleeding/",
+      "sourceSection": "NHS · Postmenopausal bleeding · fetched 2026",
+      "limitations": "UK page; any postmenopausal bleeding still needs local assessment.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "One-sided pain with bleeding in pregnancy, or collapse, needs emergency care.",
+      "sourceUrl": "https://www.nhs.uk/conditions/ectopic-pregnancy/",
+      "sourceSection": "NHS · Ectopic pregnancy · fetched 2026",
+      "limitations": "Symptom lists are not a rule-out tool.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

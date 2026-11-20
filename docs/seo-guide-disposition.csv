@@ -1,101 +1,114 @@
-path,title,cluster,primaryQuestion,decision,clinical_reviewer_required,status,has_direct_answer_scaffold,reviewStatus
-/pcos,PCOS,pcos,What is PCOS?,keep-improve,yes,pending,yes,pending
-/irregular-periods,Irregular Periods,periods,What should I know about Irregular Periods?,keep-improve,yes,pending,yes,pending
-/painful-periods,Painful Periods,periods,Why are painful periods not always 'normal'?,keep-improve,yes,pending,yes,pending
-/heavy-periods,Heavy Periods,periods,What should I know about Heavy Periods?,keep-improve,yes,pending,yes,pending
-/hormonal-imbalance,Hormonal Imbalance,hormones,What are signs of hormonal imbalance?,keep-improve,yes,pending,yes,pending
-/fertility,Fertility,fertility,Can stress affect fertility?,keep-improve,yes,pending,yes,pending
-/trying-to-conceive,Trying to Conceive,fertility,What should I know about Trying to Conceive?,keep-improve,yes,pending,yes,pending
-/pregnancy-planning,Pregnancy Planning,fertility,What should I know about Pregnancy Planning?,keep-improve,yes,pending,yes,pending
-/ivf,IVF,fertility,What is IVF at a high level?,keep-improve,yes,pending,yes,pending
-/prenatal-physiotherapy,Prenatal Physiotherapy,pregnancy-physio,What is prenatal physiotherapy?,keep-improve,yes,pending,yes,pending
-/postpartum-recovery,Postpartum Recovery,postpartum,What does postpartum recovery involve?,keep-improve,yes,pending,yes,pending
-/pelvic-floor-therapy,Pelvic Floor Therapy,pelvic,Can pelvic floor therapy help painful intercourse?,keep-improve,yes,pending,yes,pending
-/womens-health-physiotherapy,Womens Health Physiotherapy,physio,What is women's health physiotherapy at Women's Health Duo?,keep-improve,yes,pending,yes,pending
-/bladder-leakage,Bladder Leakage,pelvic,What should I know about bladder leakage?,keep-improve,yes,pending,yes,pending
-/diastasis-recti,Diastasis Recti,postpartum,What is diastasis recti?,keep-improve,yes,pending,yes,pending
-/back-pain-in-pregnancy,Back Pain in Pregnancy,pregnancy-physio,What should I know about Back Pain in Pregnancy?,keep-improve,yes,pending,yes,pending
-/pelvic-pain-in-pregnancy,Pelvic Pain in Pregnancy,pregnancy-physio,What should I know about Pelvic Pain in Pregnancy?,keep-improve,yes,pending,yes,pending
-/prenatal-pilates,Prenatal Pilates,pilates,What should I know about Prenatal Pilates?,keep-improve,yes,pending,yes,pending
-/postnatal-pilates,Postnatal Pilates,pilates,What should I know about Postnatal Pilates?,keep-improve,yes,pending,yes,pending
-/online-gynecologist,Online Gynecologist,online-gyne,Can an online gynecologist prescribe medications?,keep-improve,yes,pending,yes,pending
-/what-is-pcos,What is PCOS?,pcos,What is PCOS?,keep-improve,yes,pending,yes,pending
-/symptoms-of-pcos,Symptoms of PCOS,pcos,What are common symptoms of PCOS?,keep-improve,yes,pending,yes,pending
-/can-pcos-affect-fertility,Can PCOS Affect Fertility?,pcos,Can PCOS affect fertility?,keep-improve,yes,pending,yes,pending
-/how-to-manage-pcos-naturally,How to Manage PCOS Naturally?,pcos,Can lifestyle changes improve PCOS symptoms?,keep-improve,yes,pending,yes,pending
-/what-is-hormonal-imbalance,What is Hormonal Imbalance?,hormones,What is hormonal imbalance?,keep-improve,yes,pending,yes,pending
-/signs-of-hormonal-imbalance,Signs of Hormonal Imbalance,hormones,What are signs of hormonal imbalance?,keep-improve,yes,pending,yes,pending
-/why-are-my-periods-irregular,Why are my Periods Irregular?,periods,Why might periods become irregular?,keep-improve,yes,pending,yes,pending
-/why-are-my-periods-painful,Why are my Periods Painful?,periods,Why are painful periods not always 'normal'?,keep-improve,yes,pending,yes,pending
-/what-causes-heavy-periods,What Causes Heavy Periods?,periods,What counts as a heavy period?,keep-improve,yes,pending,yes,pending
-/what-is-pms,What is PMS?,periods,What is PMS?,keep-improve,yes,pending,yes,pending
-/what-is-pmdd,What is PMDD?,periods,What is PMDD?,keep-improve,yes,pending,yes,pending
-/how-to-track-ovulation,How to Track Ovulation?,fertility,How can we track ovulation?,keep-improve,yes,pending,yes,pending
-/how-to-improve-fertility,How to Improve Fertility?,fertility,How can we improve fertility chances while waiting for evaluation?,keep-improve,yes,pending,yes,pending
-/how-to-improve-egg-quality,How to Improve Egg Quality?,fertility,Can egg quality be improved?,keep-improve,yes,pending,yes,pending
-/what-is-preconception-planning,What is Preconception Planning?,fertility,What is preconception planning?,keep-improve,yes,pending,yes,pending
-/what-is-ivf,What is IVF?,fertility,What is IVF at a high level?,keep-improve,yes,pending,yes,pending
-/when-to-see-a-fertility-specialist,When to See a Fertility Specialist?,fertility,How long should we try before seeing a specialist?,keep-improve,yes,pending,yes,pending
-/when-should-i-see-a-gynecologist,When Should I See a Gynecologist?,gyn-general,When should I see a gynecologist?,keep-improve,yes,pending,yes,pending
-/can-i-get-pregnant-with-pcos,Can I Get Pregnant with PCOS?,pcos,Can I get pregnant with PCOS?,keep-improve,yes,pending,yes,pending
-/can-stress-affect-fertility,Can Stress Affect Fertility?,fertility,Can stress affect fertility?,keep-improve,yes,pending,yes,pending
-/what-is-prenatal-physiotherapy,What is Prenatal Physiotherapy?,pregnancy-physio,What is Prenatal Physiotherapy?,keep-improve,yes,pending,yes,pending
-/is-exercise-safe-during-pregnancy,Is Exercise Safe During Pregnancy?,pregnancy-physio,Is exercise safe during pregnancy for most people?,keep-improve,yes,pending,yes,pending
-/exercises-for-pregnancy,Exercises for Pregnancy,pregnancy-physio,What should I know about Exercises for Pregnancy?,keep-improve,yes,pending,yes,pending
-/breathing-exercises-for-labour,Breathing Exercises for Labour,pregnancy-physio,What should I know about Breathing Exercises for Labour?,keep-improve,yes,pending,yes,pending
-/how-to-relieve-back-pain-during-pregnancy,How to Relieve Back Pain During Pregnancy?,pregnancy-physio,How to Relieve Back Pain During Pregnancy?,keep-improve,yes,pending,yes,pending
-/how-to-relieve-pelvic-pain-during-pregnancy,How to Relieve Pelvic Pain During Pregnancy?,pregnancy-physio,How to Relieve Pelvic Pain During Pregnancy?,keep-improve,yes,pending,yes,pending
-/is-pilates-safe-during-pregnancy,Is Pilates Safe During Pregnancy?,pilates,Is Pilates Safe During Pregnancy?,keep-improve,yes,pending,yes,pending
-/pregnancy-exercises-by-trimester,Pregnancy Exercises by Trimester,pregnancy-physio,What should I know about Pregnancy Exercises by Trimester?,keep-improve,yes,pending,yes,pending
-/common-pregnancy-discomforts,Common Pregnancy Discomforts,pregnancy-physio,What are common pregnancy discomforts that are usually benign?,keep-improve,yes,pending,yes,pending
-/what-is-postpartum-recovery,What is Postpartum Recovery?,postpartum,What is Postpartum Recovery?,keep-improve,yes,pending,yes,pending
-/how-long-does-postpartum-recovery-take,How Long does Postpartum Recovery Take?,postpartum,How long does postpartum recovery take?,keep-improve,yes,pending,yes,pending
-/how-to-recover-after-c-section,How to recover after a C-section?,postpartum,How to recover after a C-section?,keep-improve,yes,pending,yes,pending
-/when-can-i-exercise-after-delivery,When Can I Exercise After Delivery?,postpartum,When can I exercise after delivery?,keep-improve,yes,pending,yes,pending
-/how-to-rebuild-core-after-pregnancy,How to Rebuild Core After Pregnancy?,postpartum,How to Rebuild Core After Pregnancy?,keep-improve,yes,pending,yes,pending
-/why-am-i-leaking-urine-after-childbirth,Why am I Leaking Urine After Childbirth?,postpartum,Why am I leaking urine after childbirth?,keep-improve,yes,pending,yes,pending
-/what-is-diastasis-recti,What is Diastasis Recti?,postpartum,What is diastasis recti?,keep-improve,yes,pending,yes,pending
-/how-to-check-for-diastasis-recti,How to Check for Diastasis Recti?,postpartum,How to Check for Diastasis Recti?,keep-improve,yes,pending,yes,pending
-/can-diastasis-recti-heal-naturally,Can Diastasis Recti Heal Naturally?,postpartum,Can Diastasis Recti Heal Naturally?,keep-improve,yes,pending,yes,pending
-/postpartum-back-pain,Postpartum Back Pain,postpartum,What helps postpartum back pain?,keep-improve,yes,pending,yes,pending
-/postpartum-pelvic-pain,Postpartum Pelvic Pain,postpartum,What helps postpartum pelvic pain?,keep-improve,yes,pending,yes,pending
-/what-is-the-pelvic-floor,What is the Pelvic Floor?,pelvic,What is the Pelvic Floor?,keep-improve,yes,pending,yes,pending
-/what-is-pelvic-floor-dysfunction,What is Pelvic Floor Dysfunction?,pelvic,What is pelvic floor dysfunction?,keep-improve,yes,pending,yes,pending
-/weak-pelvic-floor,Weak Pelvic Floor,pelvic,What should I know about Weak Pelvic Floor?,keep-improve,yes,pending,yes,pending
-/pelvic-floor-exercises,Pelvic Floor Exercises,pelvic,What should I know about Pelvic Floor Exercises?,keep-improve,yes,pending,yes,pending
-/why-do-i-leak-urine-when-i-cough,Why do I Leak Urine When I Cough?,pelvic,Why do I leak urine when I cough?,keep-improve,yes,pending,yes,pending
-/bladder-leakage-after-pregnancy,Bladder Leakage After Pregnancy,pelvic,What should I know about Bladder Leakage After Pregnancy?,keep-improve,yes,pending,yes,pending
-/frequent-urination-in-women,Frequent Urination in Women,pelvic,What should I know about Frequent Urination in Women?,keep-improve,yes,pending,yes,pending
-/pelvic-organ-prolapse,Pelvic Organ Prolapse,pelvic,What is pelvic organ prolapse?,keep-improve,yes,pending,yes,pending
-/pelvic-pain-in-women,Pelvic Pain in Women,pelvic,What should I know about Pelvic Pain in Women?,keep-improve,yes,pending,yes,pending
-/painful-intercourse,Painful Intercourse,pelvic,Can pelvic floor therapy help painful intercourse?,keep-improve,yes,pending,yes,pending
-/are-kegels-right-for-everyone,Are Kegels Right for Everyone?,pelvic,Are Kegels right for everyone?,keep-improve,yes,pending,yes,pending
-/how-to-strengthen-pelvic-floor,How to Strengthen Pelvic Floor?,pelvic,How to Strengthen Pelvic Floor?,keep-improve,yes,pending,yes,pending
-/how-do-i-know-if-my-pelvic-floor-is-weak,How do I Know If my Pelvic Floor is Weak?,pelvic,How do I know if my pelvic floor is weak?,keep-improve,yes,pending,yes,pending
-/can-pelvic-floor-therapy-help-with-bladder-leakage,Can Pelvic Floor Therapy Help with Bladder Leakage?,pelvic,Can Pelvic Floor Therapy Help with Bladder Leakage?,keep-improve,yes,pending,yes,pending
-/can-pelvic-floor-therapy-help-with-painful-intercourse,Can Pelvic Floor Therapy Help with Painful Intercourse?,pelvic,Can Pelvic Floor Therapy Help with Painful Intercourse?,keep-improve,yes,pending,yes,pending
-/what-is-womens-health-physiotherapy,What is Womens Health Physiotherapy?,physio,What is Womens Health Physiotherapy?,keep-improve,yes,pending,yes,pending
-/who-needs-womens-health-physiotherapy,Who Needs Womens Health Physiotherapy?,physio,Who needs women's health physiotherapy?,keep-improve,yes,pending,yes,pending
-/online-womens-health-physiotherapy,Online Womens Health Physiotherapy,physio,What should I know about Online Womens Health Physiotherapy?,keep-improve,yes,pending,yes,pending
-/can-physiotherapy-help-with-back-pain,Can Physiotherapy Help with Back Pain?,physio,Can physiotherapy help with back pain?,keep-improve,yes,pending,yes,pending
-/can-physiotherapy-help-with-pelvic-pain,Can Physiotherapy Help with Pelvic Pain?,physio,Can physiotherapy help with pelvic pain?,keep-improve,yes,pending,yes,pending
-/can-physiotherapy-help-after-childbirth,Can Physiotherapy Help After Childbirth?,physio,Can physiotherapy help after childbirth?,keep-improve,yes,pending,yes,pending
-/can-physiotherapy-help-with-bladder-leakage,Can Physiotherapy Help with Bladder Leakage?,physio,Can physiotherapy help with bladder leakage?,keep-improve,yes,pending,yes,pending
-/can-physiotherapy-improve-posture,Can Physiotherapy Improve Posture?,physio,Can physiotherapy improve posture?,keep-improve,yes,pending,yes,pending
-/can-physiotherapy-improve-core-strength,Can Physiotherapy Improve Core Strength?,physio,Can Physiotherapy Improve Core Strength?,keep-improve,yes,pending,yes,pending
-/what-happens-during-a-physiotherapy-session,What Happens During a Physiotherapy Session?,physio,What happens during a physiotherapy session online?,keep-improve,yes,pending,yes,pending
-/what-is-stott-pilates,What is STOTT Pilates?,pilates,What is STOTT Pilates?,keep-improve,yes,pending,yes,pending
-/what-is-pilates,What is Pilates?,pilates,What is Pilates?,keep-improve,yes,pending,yes,pending
-/pilates-for-beginners,Pilates for Beginners,pilates,What should I know about Pilates for Beginners?,keep-improve,yes,pending,yes,pending
-/pilates-for-pregnancy,Pilates for Pregnancy,pilates,What should I know about Pilates for Pregnancy?,keep-improve,yes,pending,yes,pending
-/pilates-after-pregnancy,Pilates After Pregnancy,pilates,What should I know about Pilates After Pregnancy?,keep-improve,yes,pending,yes,pending
-/can-pilates-help-with-back-pain,Can Pilates Help with Back Pain?,pilates,Can Pilates help with back pain?,keep-improve,yes,pending,yes,pending
-/can-pilates-improve-posture,Can Pilates Improve Posture?,pilates,Can Pilates Improve Posture?,keep-improve,yes,pending,yes,pending
-/can-pilates-strengthen-the-core,Can Pilates Strengthen the Core?,pilates,Can Pilates strengthen the core?,keep-improve,yes,pending,yes,pending
-/is-online-pilates-effective,Is Online Pilates Effective?,pilates,Is online Pilates effective?,keep-improve,yes,pending,yes,pending
-/how-often-should-i-do-pilates,How Often Should I do Pilates?,pilates,How often should I do Pilates?,keep-improve,yes,pending,yes,pending
-/symptoms-women-should-never-ignore,Symptoms Women Should Never Ignore,gyn-general,What should I know about Symptoms Women Should Never Ignore?,keep-improve,yes,pending,yes,pending
-/how-do-hormones-affect-womens-health,How do Hormones Affect Womens Health?,gyn-general,How do hormones affect women's health broadly?,keep-improve,yes,pending,yes,pending
-/how-does-stress-affect-womens-health,How does Stress Affect Womens Health?,gyn-general,How does stress affect women's health?,keep-improve,yes,pending,yes,pending
-/how-does-sleep-affect-hormones,How does Sleep Affect Hormones?,gyn-general,How does sleep affect hormones?,keep-improve,yes,pending,yes,pending
-/how-does-exercise-improve-womens-health,How does Exercise Improve Womens Health?,gyn-general,How does exercise improve women's health?,keep-improve,yes,pending,yes,pending
+path,title,cluster,primaryQuestion,decision,clinical_reviewer_required,status,uniqueness_scaffold,target
+/pcos/,pcos,pcos,,keep-hub,yes,pending,no,
+/irregular-periods/,irregular-periods,periods,,keep-hub,yes,pending,no,
+/painful-periods/,painful-periods,periods,,keep-hub,yes,pending,no,
+/heavy-periods/,heavy-periods,periods,,keep-hub,yes,pending,no,
+/hormonal-imbalance/,hormonal-imbalance,hormones,,keep-hub,yes,pending,no,
+/fertility/,fertility,fertility,,keep-hub,yes,pending,no,
+/pregnancy-planning/,pregnancy-planning,fertility,,keep-hub,yes,pending,no,
+/prenatal-physiotherapy/,prenatal-physiotherapy,pregnancy-physio,What is prenatal physiotherapy?,keep-hub,yes,pending,yes,
+/postpartum-recovery/,postpartum-recovery,postpartum,What does postpartum recovery involve?,keep-hub,yes,pending,yes,
+/pelvic-floor-therapy/,pelvic-floor-therapy,pelvic,,keep-hub,yes,pending,no,
+/womens-health-physiotherapy/,womens-health-physiotherapy,physio,What is women's health physiotherapy at Women's Health Duo?,keep-hub,yes,pending,yes,
+/bladder-leakage/,bladder-leakage,pelvic,What should I know about bladder leakage?,keep-hub,yes,pending,yes,
+/diastasis-recti/,diastasis-recti,postpartum,What is diastasis recti?,keep-hub,yes,pending,yes,
+/online-gynecologist/,online-gynecologist,online-gyne,,keep-hub,yes,pending,no,
+/what-is-pcos/,what-is-pcos,pcos,What is PCOS?,keep-improve,yes,pending,yes,
+/symptoms-of-pcos/,symptoms-of-pcos,pcos,,keep-improve,yes,pending,no,
+/how-to-manage-pcos-naturally/,how-to-manage-pcos-naturally,pcos,,keep-improve,yes,pending,no,
+/what-is-hormonal-imbalance/,what-is-hormonal-imbalance,hormones,,rewrite,yes,in_clinical_review,no,
+/why-are-my-periods-irregular/,why-are-my-periods-irregular,periods,,keep-improve,yes,pending,no,
+/why-are-my-periods-painful/,why-are-my-periods-painful,periods,,keep-improve,yes,pending,no,
+/what-causes-heavy-periods/,what-causes-heavy-periods,periods,,keep-improve,yes,pending,no,
+/what-is-pms/,what-is-pms,periods,,rewrite,yes,in_clinical_review,no,
+/what-is-pmdd/,what-is-pmdd,periods,,keep-improve,yes,pending,no,
+/how-to-track-ovulation/,how-to-track-ovulation,fertility,,keep-improve,yes,pending,no,
+/how-to-improve-fertility/,how-to-improve-fertility,fertility,,rewrite,yes,in_clinical_review,no,
+/how-to-improve-egg-quality/,how-to-improve-egg-quality,fertility,,keep-improve,yes,pending,no,
+/what-is-preconception-planning/,what-is-preconception-planning,fertility,What is preconception planning?,keep-improve,yes,pending,yes,
+/what-is-ivf/,what-is-ivf,fertility,,keep-improve,yes,pending,no,
+/when-to-see-a-fertility-specialist/,when-to-see-a-fertility-specialist,fertility,,keep-improve,yes,pending,no,
+/when-should-i-see-a-gynecologist/,when-should-i-see-a-gynecologist,gyn-general,,keep-hub,yes,pending,no,
+/can-i-get-pregnant-with-pcos/,can-i-get-pregnant-with-pcos,pcos,Can I get pregnant with PCOS?,keep-improve,yes,pending,yes,
+/can-stress-affect-fertility/,can-stress-affect-fertility,fertility,,rewrite,yes,in_clinical_review,no,
+/what-is-prenatal-physiotherapy/,what-is-prenatal-physiotherapy,pregnancy-physio,,keep-improve,yes,pending,no,
+/is-exercise-safe-during-pregnancy/,is-exercise-safe-during-pregnancy,pregnancy-physio,,keep-improve,yes,pending,no,
+/breathing-exercises-for-labour/,breathing-exercises-for-labour,pregnancy-physio,,keep-improve,yes,pending,no,
+/how-to-relieve-back-pain-during-pregnancy/,how-to-relieve-back-pain-during-pregnancy,pregnancy-physio,,keep-improve,yes,pending,no,
+/how-to-relieve-pelvic-pain-during-pregnancy/,how-to-relieve-pelvic-pain-during-pregnancy,pregnancy-physio,,keep-improve,yes,pending,no,
+/is-pilates-safe-during-pregnancy/,is-pilates-safe-during-pregnancy,pilates,,keep-improve,yes,pending,no,
+/pregnancy-exercises-by-trimester/,pregnancy-exercises-by-trimester,pregnancy-physio,,keep-improve,yes,pending,no,
+/common-pregnancy-discomforts/,common-pregnancy-discomforts,pregnancy-physio,,rewrite,yes,in_clinical_review,no,
+/how-long-does-postpartum-recovery-take/,how-long-does-postpartum-recovery-take,postpartum,,keep-improve,yes,pending,no,
+/how-to-recover-after-c-section/,How to recover after a C-section?,postpartum,,keep-improve,yes,pending,no,
+/when-can-i-exercise-after-delivery/,when-can-i-exercise-after-delivery,postpartum,When can I exercise after delivery?,keep-improve,yes,pending,yes,
+/how-to-rebuild-core-after-pregnancy/,how-to-rebuild-core-after-pregnancy,postpartum,,keep-improve,yes,pending,no,
+/why-am-i-leaking-urine-after-childbirth/,why-am-i-leaking-urine-after-childbirth,postpartum,,keep-improve,yes,pending,no,
+/what-is-diastasis-recti/,what-is-diastasis-recti,postpartum,,keep-improve,yes,pending,no,
+/how-to-check-for-diastasis-recti/,how-to-check-for-diastasis-recti,postpartum,,keep-improve,yes,pending,no,
+/can-diastasis-recti-heal-naturally/,can-diastasis-recti-heal-naturally,postpartum,,keep-improve,yes,pending,no,
+/postpartum-back-pain/,postpartum-back-pain,postpartum,,keep-improve,yes,pending,no,
+/postpartum-pelvic-pain/,postpartum-pelvic-pain,postpartum,,rewrite,yes,in_clinical_review,no,
+/what-is-the-pelvic-floor/,what-is-the-pelvic-floor,pelvic,,keep-improve,yes,pending,no,
+/what-is-pelvic-floor-dysfunction/,what-is-pelvic-floor-dysfunction,pelvic,,rewrite,yes,in_clinical_review,no,
+/why-do-i-leak-urine-when-i-cough/,why-do-i-leak-urine-when-i-cough,pelvic,,keep-improve,yes,pending,no,
+/frequent-urination-in-women/,frequent-urination-in-women,pelvic,,rewrite,yes,in_clinical_review,no,
+/pelvic-organ-prolapse/,pelvic-organ-prolapse,pelvic,,keep-improve,yes,pending,no,
+/pelvic-pain-in-women/,pelvic-pain-in-women,pelvic,,rewrite,yes,in_clinical_review,no,
+/are-kegels-right-for-everyone/,are-kegels-right-for-everyone,pelvic,Are Kegels right for everyone?,keep-improve,yes,pending,yes,
+/how-do-i-know-if-my-pelvic-floor-is-weak/,how-do-i-know-if-my-pelvic-floor-is-weak,pelvic,,keep-improve,yes,pending,no,
+/can-pelvic-floor-therapy-help-with-bladder-leakage/,can-pelvic-floor-therapy-help-with-bladder-leakage,pelvic,,keep-improve,yes,pending,no,
+/can-pelvic-floor-therapy-help-with-painful-intercourse/,can-pelvic-floor-therapy-help-with-painful-intercourse,pelvic,,keep-improve,yes,pending,no,
+/what-is-womens-health-physiotherapy/,what-is-womens-health-physiotherapy,physio,,rewrite,yes,in_clinical_review,no,
+/online-womens-health-physiotherapy/,online-womens-health-physiotherapy,physio,,rewrite,yes,in_clinical_review,no,
+/what-happens-during-a-physiotherapy-session/,what-happens-during-a-physiotherapy-session,physio,,keep-improve,yes,pending,no,
+/what-is-stott-pilates/,what-is-stott-pilates,pilates,,keep-improve,yes,pending,no,
+/pilates-after-pregnancy/,pilates-after-pregnancy,pilates,,keep-improve,yes,pending,no,
+/is-online-pilates-effective/,is-online-pilates-effective,pilates,,rewrite,yes,in_clinical_review,no,
+/symptoms-women-should-never-ignore/,symptoms-women-should-never-ignore,gyn-general,,rewrite,yes,in_clinical_review,no,
+/folic-acid-before-pregnancy/,When Should I Start Folic Acid Before Pregnancy?,fertility,,keep-improve,yes,pending,no,
+/amh-test-fertility/,What Can an AMH Test Tell Me About Fertility?,fertility,,keep-improve,yes,pending,no,
+/positive-pregnancy-test-next-steps/,I Have a Positive Pregnancy Test — What Next?,fertility,,keep-improve,yes,pending,no,
+/endometriosis-symptoms-diagnosis/,Endometriosis Symptoms and How Diagnosis Is Discussed,gyn-general,,keep-improve,yes,pending,no,
+/pcos-insulin-resistance/,PCOS and Insulin Resistance: What to Ask,pcos,,keep-improve,yes,pending,no,
+/late-period-negative-pregnancy-test/,Why Is My Period Late If My Pregnancy Test Is Negative?,periods,,keep-improve,yes,pending,no,
+/iui-vs-ivf/,What Is the Difference Between IUI and IVF?,fertility,,keep-improve,yes,pending,no,
+/pregnancy-nausea-when-to-seek-care/,"What Helps Pregnancy Nausea, and When Do I Need Care?",online-gyne,,keep-improve,yes,pending,no,
+/first-fertility-appointment-tests/,What Happens at the First Fertility Appointment?,fertility,,keep-improve,yes,pending,no,
+/bleeding-in-early-pregnancy/,When Does Bleeding in Early Pregnancy Need Urgent Help?,online-gyne,,keep-improve,yes,pending,no,
+/after-unsuccessful-ivf-cycle/,What Should I Ask After an Unsuccessful IVF Cycle?,fertility,,keep-improve,yes,pending,no,
+/perimenopause-symptoms/,Could My Symptoms Be Perimenopause?,gyn-general,,keep-improve,yes,pending,no,
+/menopause-hrt-questions/,Is HRT Right for Me? Questions to Discuss With a Doctor,gyn-general,,keep-improve,yes,pending,no,
+/exercises-for-pregnancy/,exercises-for-pregnancy,,,redirect,yes,redirected,no,/pregnancy-exercises-by-trimester/
+/bladder-leakage-after-pregnancy/,bladder-leakage-after-pregnancy,,,redirect,yes,redirected,no,/why-am-i-leaking-urine-after-childbirth/
+/weak-pelvic-floor/,weak-pelvic-floor,,,redirect,yes,redirected,no,/how-do-i-know-if-my-pelvic-floor-is-weak/
+/pelvic-floor-exercises/,pelvic-floor-exercises,,,redirect,yes,redirected,no,/are-kegels-right-for-everyone/
+/how-to-strengthen-pelvic-floor/,how-to-strengthen-pelvic-floor,,,redirect,yes,redirected,no,/are-kegels-right-for-everyone/
+/what-is-postpartum-recovery/,what-is-postpartum-recovery,,,redirect,yes,redirected,no,/how-long-does-postpartum-recovery-take/
+/can-physiotherapy-help-after-childbirth/,can-physiotherapy-help-after-childbirth,,,redirect,yes,redirected,no,/how-long-does-postpartum-recovery-take/
+/can-physiotherapy-help-with-bladder-leakage/,can-physiotherapy-help-with-bladder-leakage,,,redirect,yes,redirected,no,/can-pelvic-floor-therapy-help-with-bladder-leakage/
+/painful-intercourse/,painful-intercourse,,,redirect,yes,redirected,no,/can-pelvic-floor-therapy-help-with-painful-intercourse/
+/pilates-for-pregnancy/,pilates-for-pregnancy,,,redirect,yes,redirected,no,/is-pilates-safe-during-pregnancy/
+/prenatal-pilates/,prenatal-pilates,,,redirect,yes,redirected,no,/is-pilates-safe-during-pregnancy/
+/postnatal-pilates/,postnatal-pilates,,,redirect,yes,redirected,no,/pilates-after-pregnancy/
+/what-is-pilates/,what-is-pilates,,,redirect,yes,redirected,no,/what-is-stott-pilates/
+/pilates-for-beginners/,pilates-for-beginners,,,redirect,yes,redirected,no,/what-is-stott-pilates/
+/can-pcos-affect-fertility/,can-pcos-affect-fertility,,,redirect,yes,redirected,no,/can-i-get-pregnant-with-pcos/
+/back-pain-in-pregnancy/,back-pain-in-pregnancy,,,redirect,yes,redirected,no,/how-to-relieve-back-pain-during-pregnancy/
+/pelvic-pain-in-pregnancy/,pelvic-pain-in-pregnancy,,,redirect,yes,redirected,no,/how-to-relieve-pelvic-pain-during-pregnancy/
+/ivf/,ivf,,,redirect,yes,redirected,no,/what-is-ivf/
+/trying-to-conceive/,trying-to-conceive,,,redirect,yes,redirected,no,/pregnancy-planning/
+/who-needs-womens-health-physiotherapy/,who-needs-womens-health-physiotherapy,,,redirect,yes,redirected,no,/what-is-womens-health-physiotherapy/
+/can-physiotherapy-help-with-back-pain/,can-physiotherapy-help-with-back-pain,,,redirect,yes,redirected,no,/womens-health-physiotherapy/
+/can-physiotherapy-improve-posture/,can-physiotherapy-improve-posture,,,redirect,yes,redirected,no,/womens-health-physiotherapy/
+/can-physiotherapy-improve-core-strength/,can-physiotherapy-improve-core-strength,,,redirect,yes,redirected,no,/womens-health-physiotherapy/
+/how-does-exercise-improve-womens-health/,how-does-exercise-improve-womens-health,,,redirect,yes,redirected,no,/womens-health-physiotherapy/
+/can-pilates-help-with-back-pain/,can-pilates-help-with-back-pain,,,redirect,yes,redirected,no,/pilates/
+/can-pilates-improve-posture/,can-pilates-improve-posture,,,redirect,yes,redirected,no,/pilates/
+/can-pilates-strengthen-the-core/,can-pilates-strengthen-the-core,,,redirect,yes,redirected,no,/pilates/
+/how-often-should-i-do-pilates/,how-often-should-i-do-pilates,,,redirect,yes,redirected,no,/pilates/
+/can-physiotherapy-help-with-pelvic-pain/,can-physiotherapy-help-with-pelvic-pain,,,redirect,yes,redirected,no,/pelvic-pain-in-women/
+/signs-of-hormonal-imbalance/,signs-of-hormonal-imbalance,,,redirect,yes,redirected,no,/what-is-hormonal-imbalance/
+/how-do-hormones-affect-womens-health/,how-do-hormones-affect-womens-health,,,redirect,yes,redirected,no,/what-is-hormonal-imbalance/
+/how-does-stress-affect-womens-health/,how-does-stress-affect-womens-health,,,redirect,yes,redirected,no,/what-is-hormonal-imbalance/
+/how-does-sleep-affect-hormones/,how-does-sleep-affect-hormones,,,redirect,yes,redirected,no,/what-is-hormonal-imbalance/

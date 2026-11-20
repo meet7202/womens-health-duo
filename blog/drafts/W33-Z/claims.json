@@ -1,0 +1,22 @@
+{
+  "id": "W33-Z",
+  "openClinicalQuestions": [
+    "Confirm the exact warning-sign list WHD wants repeated on pregnancy physio pages."
+  ],
+  "claimLedger": [
+    {
+      "claim": "Many aches are common, and listed warning signs such as bleeding and reduced movements need prompt maternity contact.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/related-conditions/common-symptoms/",
+      "sourceSection": "NHS · Common health problems in pregnancy · fetched 2026",
+      "limitations": "UK symptom hub; local maternity numbers differ.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Staying active is encouraged when pregnancy is uncomplicated, and you should stop if you feel unwell or in pain.",
+      "sourceUrl": "https://www.nhs.uk/pregnancy/keeping-well/exercise/",
+      "sourceSection": "NHS · Exercise in pregnancy · fetched 2026",
+      "limitations": "General activity advice for uncomplicated pregnancy.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

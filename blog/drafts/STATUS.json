@@ -886,6 +886,136 @@
       ],
       "clinicalApprovedOn": "2026-11-18",
       "imageApprovedOn": "2026-11-19"
+    },
+    {
+      "id": "W27-C",
+      "slug": "what-is-pms",
+      "action": "Refresh",
+      "scheduledAt": "2026-12-05T09:00:00+05:30",
+      "publicationStatus": "in_clinical_review",
+      "imageApproval": "pending",
+      "clinicalApproval": "pending",
+      "proposedLeadId": "charmi"
+    },
+    {
+      "id": "W28-C",
+      "slug": "what-is-hormonal-imbalance",
+      "action": "Refresh",
+      "scheduledAt": "2026-12-05T09:00:00+05:30",
+      "publicationStatus": "in_clinical_review",
+      "imageApproval": "pending",
+      "clinicalApproval": "pending",
+      "proposedLeadId": "charmi"
+    },
+    {
+      "id": "W29-C",
+      "slug": "how-to-improve-fertility",
+      "action": "Refresh",
+      "scheduledAt": "2026-12-05T09:00:00+05:30",
+      "publicationStatus": "in_clinical_review",
+      "imageApproval": "pending",
+      "clinicalApproval": "pending",
+      "proposedLeadId": "charmi"
+    },
+    {
+      "id": "W30-C",
+      "slug": "can-stress-affect-fertility",
+      "action": "Refresh",
+      "scheduledAt": "2026-12-05T09:00:00+05:30",
+      "publicationStatus": "in_clinical_review",
+      "imageApproval": "pending",
+      "clinicalApproval": "pending",
+      "proposedLeadId": "charmi"
+    },
+    {
+      "id": "W31-C",
+      "slug": "symptoms-women-should-never-ignore",
+      "action": "Refresh",
+      "scheduledAt": "2026-12-05T09:00:00+05:30",
+      "publicationStatus": "in_clinical_review",
+      "imageApproval": "pending",
+      "clinicalApproval": "pending",
+      "proposedLeadId": "charmi"
+    },
+    {
+      "id": "W27-Z",
+      "slug": "what-is-womens-health-physiotherapy",
+      "action": "Refresh",
+      "scheduledAt": "2026-12-05T09:00:00+05:30",
+      "publicationStatus": "in_clinical_review",
+      "imageApproval": "pending",
+      "clinicalApproval": "pending",
+      "proposedLeadId": "zalak"
+    },
+    {
+      "id": "W28-Z",
+      "slug": "online-womens-health-physiotherapy",
+      "action": "Refresh",
+      "scheduledAt": "2026-12-05T09:00:00+05:30",
+      "publicationStatus": "in_clinical_review",
+      "imageApproval": "pending",
+      "clinicalApproval": "pending",
+      "proposedLeadId": "zalak"
+    },
+    {
+      "id": "W29-Z",
+      "slug": "what-is-pelvic-floor-dysfunction",
+      "action": "Refresh",
+      "scheduledAt": "2026-12-05T09:00:00+05:30",
+      "publicationStatus": "in_clinical_review",
+      "imageApproval": "pending",
+      "clinicalApproval": "pending",
+      "proposedLeadId": "zalak"
+    },
+    {
+      "id": "W30-Z",
+      "slug": "pelvic-pain-in-women",
+      "action": "Refresh",
+      "scheduledAt": "2026-12-05T09:00:00+05:30",
+      "publicationStatus": "in_clinical_review",
+      "imageApproval": "pending",
+      "clinicalApproval": "pending",
+      "proposedLeadId": "zalak"
+    },
+    {
+      "id": "W31-Z",
+      "slug": "frequent-urination-in-women",
+      "action": "Refresh",
+      "scheduledAt": "2026-12-05T09:00:00+05:30",
+      "publicationStatus": "in_clinical_review",
+      "imageApproval": "pending",
+      "clinicalApproval": "pending",
+      "proposedLeadId": "zalak"
+    },
+    {
+      "id": "W32-Z",
+      "slug": "postpartum-pelvic-pain",
+      "action": "Refresh",
+      "scheduledAt": "2026-12-05T09:00:00+05:30",
+      "publicationStatus": "in_clinical_review",
+      "imageApproval": "pending",
+      "clinicalApproval": "pending",
+      "proposedLeadId": "zalak"
+    },
+    {
+      "id": "W33-Z",
+      "slug": "common-pregnancy-discomforts",
+      "action": "Refresh",
+      "scheduledAt": "2026-12-05T09:00:00+05:30",
+      "publicationStatus": "in_clinical_review",
+      "imageApproval": "pending",
+      "clinicalApproval": "pending",
+      "proposedLeadId": "zalak"
+    },
+    {
+      "id": "W34-Z",
+      "slug": "is-online-pilates-effective",
+      "action": "Refresh",
+      "scheduledAt": "2026-12-05T09:00:00+05:30",
+      "publicationStatus": "in_clinical_review",
+      "imageApproval": "pending",
+      "clinicalApproval": "pending",
+      "proposedLeadId": "zalak"
     }
   ],
   "ownerPublishDate": "2026-11-19"

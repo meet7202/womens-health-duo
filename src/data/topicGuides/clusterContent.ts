@@ -3,6 +3,7 @@ import type { TopicGuideClusterId, TopicGuideSection } from "./types";
 const BOOKING_FAQ_COUNT = 3;
 const CLUSTER_FAQ_COUNT = 7;
 export const TOPIC_GUIDE_FAQ_TOTAL = BOOKING_FAQ_COUNT + CLUSTER_FAQ_COUNT;
+/** Hub child links are the `related` arrays on guide rows in `topicGuideRows.ts` (surviving URLs only). */
 type ClusterConfig = {
   /** Short clause for meta description */ metaBlurb: string;
   /** Default video hub topic labels (filtered to labels that exist on clips). */ defaultLearnTopics: string[];

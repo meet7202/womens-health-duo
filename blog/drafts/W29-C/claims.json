@@ -1,0 +1,22 @@
+{
+  "id": "W29-C",
+  "openClinicalQuestions": [
+    "Confirm the age threshold WHD quotes for Indian patients, since NHS uses under 36 versus 36 and over."
+  ],
+  "claimLedger": [
+    {
+      "claim": "See a doctor after a year of trying if under 36, and sooner with age or known problems. Smoking, alcohol and weight are discussed.",
+      "sourceUrl": "https://www.nhs.uk/conditions/infertility/",
+      "sourceSection": "NHS · Infertility · fetched 2026",
+      "limitations": "UK pathways and age cut-offs; Indian referral rules differ.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Have vaginal sex every two to three days. Most couples conceive within a year.",
+      "sourceUrl": "https://www.nice.org.uk/guidance/cg156/ifp/chapter/trying-for-a-baby",
+      "sourceSection": "NICE · Fertility problems: trying for a baby (CG156 public information) · CG156",
+      "limitations": "UK guideline information for the public.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

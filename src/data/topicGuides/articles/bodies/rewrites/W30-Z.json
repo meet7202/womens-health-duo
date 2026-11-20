@@ -1,0 +1,94 @@
+{
+  "id": "W30-Z",
+  "title": "Why Do I Have Pelvic Pain?",
+  "seoTitle": "Pelvic pain in women: what to notice",
+  "description": "Pelvic pain has many causes, from period pain and muscle tension to infection and pregnancy emergencies. Severe or sudden pain needs urgent care, not a stretch.",
+  "primaryQuestion": "Why do I have pelvic pain?",
+  "directAnswer": "Pelvic pain is a location, not a diagnosis. It can come from periods, endometriosis, ovarian cysts, infection, bladder or bowel problems, pelvic-floor muscle tension, scars, or pregnancy complications. NHS pelvic-pain advice is to get help urgently for sudden severe pain, and to see a GP for pain that keeps returning. A physiotherapy page can explain muscle and movement contributions. It cannot tell you the cause from a description, and it should not be your first stop in an emergency.",
+  "storytellingNote": "",
+  "sections": [
+    {
+      "heading": "Pain that follows the cycle versus pain that does not",
+      "paragraphs": [
+        "Cramp that builds with bleeding and settles afterwards is a different story from pain between periods, pain with sex, or pain when you pass urine. Write the dates. A one-line memory of “it always hurts” is harder to use than a month of notes.",
+        "Endometriosis can cause painful periods and pain with sex or bowel movements, and the endometriosis guide covers how diagnosis is discussed. Muscle tension can exist alongside it. Treating only one and ignoring the other leaves people disappointed."
+      ]
+    },
+    {
+      "heading": "When muscles and scars are part of the picture",
+      "paragraphs": [
+        "The pelvic floor can stay guarded after birth, surgery, infection or a long time of bracing against leaks. That guarding can hurt with sitting, penetration or tampon use even when a scan is reported as normal. Normal imaging does not mean the pain is imagined.",
+        "Dr. Zalak Shah (PT) can assess movement, breathing and, with consent, muscle tension. She does not diagnose infection, cysts or endometriosis. If those are possible, Dr. Charmi Shah or your local doctor needs to be in the plan."
+      ]
+    },
+    {
+      "heading": "Clues that should change the pace",
+      "paragraphs": [
+        "NHS pelvic-pain pages tell you to call emergency services for sudden, severe pain. Add pregnancy: one-sided pain with bleeding, fainting or shoulder-tip pain can be ectopic pregnancy and is an emergency.",
+        "Fever, smelly discharge, burning urine with back pain, or pain after a procedure also need medical review the same day. A heat pack and a wait are the wrong plan for those."
+      ]
+    },
+    {
+      "heading": "What a non-urgent assessment can still offer",
+      "paragraphs": [
+        "Once urgent causes are excluded or being investigated, physiotherapy can work on pacing, bowel and bladder habits, and graded movement so pain is not the only thing organising your day. The goal is function you care about, not a promise of zero pain.",
+        "Bring scan reports, the names of medicines, and a note of what makes pain better or worse. Stop any exercise that sharply worsens pain and tell the clinician, rather than pushing through to prove commitment."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "If my ultrasound is normal, is the pain just muscle?",
+      "answer": "Not necessarily. Ultrasound does not see every cause, and muscle pain can exist even when a scan is normal. You still need a clinician to match the test to the symptom."
+    },
+    {
+      "question": "Should I stretch my hips until the pain goes?",
+      "answer": "Aggressive stretching can flare pelvic pain. A short walk or a position that eases you is safer until someone has assessed the cause, especially if the pain is new or severe."
+    }
+  ],
+  "references": [
+    {
+      "label": "NHS — Pelvic pain",
+      "url": "https://www.nhs.uk/conditions/pelvic-pain/"
+    },
+    {
+      "label": "NHS — Endometriosis",
+      "url": "https://www.nhs.uk/conditions/endometriosis/"
+    }
+  ],
+  "conversionCopy": "If pelvic pain is stable and you want a movement and pelvic-floor assessment, you can book with Dr. Zalak Shah (PT). Sudden severe pain needs emergency care.",
+  "explainerAlt": "Body outline marking the pelvis with a note that pain there has many causes",
+  "internalLinks": [
+    { "anchor": "endometriosis symptoms", "path": "/endometriosis-symptoms-diagnosis/" },
+    {
+      "anchor": "pain with sex",
+      "path": "/can-pelvic-floor-therapy-help-with-painful-intercourse/"
+    },
+    { "anchor": "pelvic floor dysfunction", "path": "/what-is-pelvic-floor-dysfunction/" }
+  ],
+  "parentHub": "/pelvic-floor-therapy/",
+  "review": {
+    "corrections": ["Put sudden severe pain and ectopic symptoms above any physiotherapy booking."],
+    "sourcesChecked": [
+      {
+        "organisation": "NHS",
+        "title": "Pelvic pain",
+        "url": "https://www.nhs.uk/conditions/pelvic-pain/",
+        "date": "fetched 2026",
+        "limitations": "UK triage page; local emergency numbers differ.",
+        "recommendation": "Sudden severe pelvic pain needs emergency help. Recurring pain needs a GP."
+      },
+      {
+        "organisation": "NHS",
+        "title": "Endometriosis",
+        "url": "https://www.nhs.uk/conditions/endometriosis/",
+        "date": "fetched 2026",
+        "limitations": "One cause among many.",
+        "recommendation": "Endometriosis can cause painful periods and pain with sex or opening the bowels."
+      }
+    ],
+    "openQuestions": [
+      "Confirm which pelvic-pain presentations WHD physiotherapy will not see before a medical review."
+    ]
+  }
+}

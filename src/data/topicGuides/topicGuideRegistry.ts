@@ -211,7 +211,7 @@ const CLUSTER_HUB_SLUG: Record<TopicGuideClusterId, string> = {
   postpartum: "postpartum-recovery",
   pelvic: "pelvic-floor-therapy",
   physio: "womens-health-physiotherapy",
-  pilates: "prenatal-pilates",
+  pilates: "what-is-stott-pilates",
   "gyn-general": "online-gynecologist",
   "online-gyne": "online-gynecologist",
 };

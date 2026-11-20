@@ -1,0 +1,94 @@
+{
+  "id": "W33-Z",
+  "title": "Which Pregnancy Discomforts Are Common?",
+  "seoTitle": "Common pregnancy discomforts to know",
+  "description": "Backache, pelvic ache, heartburn and tiredness are common in pregnancy. Bleeding, severe headache, reduced movements and fainting need same-day maternity care.",
+  "primaryQuestion": "Which pregnancy aches are common, and which are not?",
+  "directAnswer": "Backache, pelvic-girdle ache, heartburn, constipation, leg cramps and tiredness are common in pregnancy and still worth help when they stop you functioning. NHS common-symptom pages describe many of these and also list warning signs that are not routine: vaginal bleeding, severe headache, vision changes, sudden swelling, reduced baby movements, and leaking fluid. A physiotherapy article can talk about load and positions. It cannot clear a warning sign. If you are unsure, contact your maternity unit or local emergency care.",
+  "storytellingNote": "",
+  "sections": [
+    {
+      "heading": "Aches that often track with a changing body",
+      "paragraphs": [
+        "As the uterus grows, the way you stand, turn and sleep changes. Pelvic-girdle pain can make stairs, turning in bed and standing on one leg uncomfortable. NHS pregnancy symptom pages list backache and pelvic pain among common complaints and suggest speaking to a midwife or GP if they are hard to manage.",
+        "Heartburn, constipation and waking at night are also frequent. They are not proof that you are doing pregnancy badly. They can still be treated or eased. Say if vomiting stops you keeping fluids down. That is no longer a minor discomfort."
+      ]
+    },
+    {
+      "heading": "Movement ideas that stay modest",
+      "paragraphs": [
+        "NHS exercise-in-pregnancy advice supports staying active if the pregnancy is uncomplicated, with modifications, and stopping if you feel unwell, dizzy or in pain. A daily walk and changing position often beat a long list of stretches you resent.",
+        "Support belts, pillows between the knees, and getting out of bed via your side help some people with pelvic pain. They are experiments, not equipment you must buy. Dr. Zalak Shah (PT) can match ideas to the task that actually hurts. She does not manage bleeding or blood pressure."
+      ]
+    },
+    {
+      "heading": "Symptoms that are not a discomfort to wait on",
+      "paragraphs": [
+        "Vaginal bleeding, severe tummy pain, a headache that is severe or comes with flashing lights, sudden swelling of face or hands, a baby moving much less, and fluid leaking from the vagina need same-day maternity advice. Fainting, chest pain or difficulty breathing is an emergency.",
+        "Do not search exercise videos while those are happening. Contact the maternity unit you are booked with, or local emergency services if you are very unwell. A women’s-health website is not a labour ward."
+      ]
+    },
+    {
+      "heading": "What to tell a clinician if the ache is ongoing",
+      "paragraphs": [
+        "Name the task: stairs, turning in bed, standing to cook, or coughing. Say which week you are in, whether there is bleeding or a change in the baby’s movements, and what you have already tried.",
+        "A booked physiotherapy visit is reasonable for stable pelvic or back pain once maternity care knows about you. The back-pain and pelvic-pain pregnancy guides go deeper on those two problems. This page is the map, not every protocol."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is pelvic pain in pregnancy a sign of labour?",
+      "answer": "Usually it is the pelvic joints coping with load, especially if it has been building for weeks. Regular tightening with pain, bleeding, or fluid loss is different and needs maternity advice the same day."
+    },
+    {
+      "question": "Can I keep walking if my back aches?",
+      "answer": "Many people can, in shorter bouts, if walking does not cause dizziness, bleeding or pain that keeps rising. Stop and get advice if those appear. A walk is not a test of toughness."
+    }
+  ],
+  "references": [
+    {
+      "label": "NHS — Common health problems in pregnancy",
+      "url": "https://www.nhs.uk/pregnancy/related-conditions/common-symptoms/"
+    },
+    {
+      "label": "NHS — Exercise in pregnancy",
+      "url": "https://www.nhs.uk/pregnancy/keeping-well/exercise/"
+    }
+  ],
+  "conversionCopy": "For stable pregnancy aches, you can book physiotherapy with Dr. Zalak Shah (PT). Bleeding, severe headache, fewer baby movements or fainting need maternity or emergency care first.",
+  "explainerAlt": "Two-column list of common pregnancy aches versus symptoms that need same-day maternity care",
+  "internalLinks": [
+    { "anchor": "back pain in pregnancy", "path": "/how-to-relieve-back-pain-during-pregnancy/" },
+    {
+      "anchor": "pelvic pain in pregnancy",
+      "path": "/how-to-relieve-pelvic-pain-during-pregnancy/"
+    },
+    { "anchor": "prenatal physiotherapy", "path": "/prenatal-physiotherapy/" }
+  ],
+  "parentHub": "/prenatal-physiotherapy/",
+  "review": {
+    "corrections": ["Kept warning signs ahead of any exercise or booking suggestion."],
+    "sourcesChecked": [
+      {
+        "organisation": "NHS",
+        "title": "Common health problems in pregnancy",
+        "url": "https://www.nhs.uk/pregnancy/related-conditions/common-symptoms/",
+        "date": "fetched 2026",
+        "limitations": "UK symptom hub; local maternity numbers differ.",
+        "recommendation": "Many aches are common, and listed warning signs such as bleeding and reduced movements need prompt maternity contact."
+      },
+      {
+        "organisation": "NHS",
+        "title": "Exercise in pregnancy",
+        "url": "https://www.nhs.uk/pregnancy/keeping-well/exercise/",
+        "date": "fetched 2026",
+        "limitations": "General activity advice for uncomplicated pregnancy.",
+        "recommendation": "Staying active is encouraged when pregnancy is uncomplicated, and you should stop if you feel unwell or in pain."
+      }
+    ],
+    "openQuestions": [
+      "Confirm the exact warning-sign list WHD wants repeated on pregnancy physio pages."
+    ]
+  }
+}

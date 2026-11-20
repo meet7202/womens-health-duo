@@ -13,6 +13,7 @@ import {
   ROBOTS_INDEX_FOLLOW,
   ROBOTS_NOINDEX_FOLLOW,
   ROBOTS_NOINDEX_NOFOLLOW,
+  explicitRedirectAlias,
   resolveRouteDisposition,
 } from "../config/routeDisposition";
 import { PRACTICE_BOTH_DOCTORS_IN_PERSON } from "../config/practiceLocations";
@@ -512,6 +513,20 @@ export function resolveShellPageMeta(siteUrl: string, pathname: string): ShellPa
 
   const classMeta = zalakClassShellMeta(siteUrl, path);
   if (classMeta) return classMeta;
+
+  const guideAlias = explicitRedirectAlias(path);
+  if (
+    guideAlias?.template === "guide-consolidation" &&
+    guideAlias.disposition.kind === "redirect"
+  ) {
+    const target = guideAlias.disposition.targetPath;
+    const targetMeta = resolveShellPageMeta(siteUrl, target);
+    return {
+      ...targetMeta,
+      redirectToPath: target,
+      robots: ROBOTS_NOINDEX_FOLLOW,
+    };
+  }
 
   const aliasDisposition = resolveRouteDisposition(path);
   if (aliasDisposition.kind === "redirect") {

@@ -84,19 +84,71 @@ async function main() {
     const priority = new Set(uniquenessMod.GUIDE_UNIQUENESS_PRIORITY_SLUGS || []);
     const overrides = uniquenessMod.GUIDE_UNIQUENESS_OVERRIDES || {};
 
+    const redirectsMod = await server.ssrLoadModule("/src/config/guideConsolidationRedirects.ts");
+    const keepHubs = new Set([
+      "pcos",
+      "irregular-periods",
+      "painful-periods",
+      "heavy-periods",
+      "hormonal-imbalance",
+      "fertility",
+      "pregnancy-planning",
+      "prenatal-physiotherapy",
+      "postpartum-recovery",
+      "pelvic-floor-therapy",
+      "womens-health-physiotherapy",
+      "bladder-leakage",
+      "diastasis-recti",
+      "online-gynecologist",
+      "when-should-i-see-a-gynecologist",
+    ]);
+    const rewrites = new Set([
+      "what-is-pms",
+      "what-is-hormonal-imbalance",
+      "how-to-improve-fertility",
+      "can-stress-affect-fertility",
+      "symptoms-women-should-never-ignore",
+      "what-is-womens-health-physiotherapy",
+      "online-womens-health-physiotherapy",
+      "what-is-pelvic-floor-dysfunction",
+      "pelvic-pain-in-women",
+      "frequent-urination-in-women",
+      "postpartum-pelvic-pain",
+      "common-pregnancy-discomforts",
+      "is-online-pilates-effective",
+    ]);
     const guideRows = (guidesMod.TOPIC_GUIDE_ROWS || []).map((row) => {
       const ov = overrides[row.slug];
+      const decision = keepHubs.has(row.slug)
+        ? "keep-hub"
+        : rewrites.has(row.slug)
+          ? "rewrite"
+          : "keep-improve";
       return {
         path: `/${row.slug}/`,
         title: row.title || row.slug,
         cluster: row.cluster,
         primaryQuestion: row.primaryQuestion || ov?.primaryQuestion || "",
-        decision: "keep-improve",
+        decision,
         clinical_reviewer_required: "yes",
-        status: "pending",
+        status: decision === "rewrite" ? "in_clinical_review" : "pending",
         uniqueness_scaffold: priority.has(row.slug) ? "yes" : "no",
+        target: "",
       };
     });
+    for (const [from, to] of redirectsMod.GUIDE_CONSOLIDATION_REDIRECTS || []) {
+      guideRows.push({
+        path: `/${from}/`,
+        title: from,
+        cluster: "",
+        primaryQuestion: "",
+        decision: "redirect",
+        clinical_reviewer_required: "yes",
+        status: "redirected",
+        uniqueness_scaffold: "no",
+        target: `/${to}/`,
+      });
+    }
     writeCsv(
       path.join(docs, "seo-guide-disposition.csv"),
       [
@@ -108,6 +160,7 @@ async function main() {
         "clinical_reviewer_required",
         "status",
         "uniqueness_scaffold",
+        "target",
       ],
       guideRows,
     );

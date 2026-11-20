@@ -3,33 +3,13 @@
  * Soft-fails: shells stay valid if SSR throws (window-only components, etc.).
  * Must not use `@/` path aliases.
  *
- * Uses `vite.build({ ssr })` (not `createServer` + ssrLoadModule) so JSX compiles with the
- * production runtime and CJS deps resolve correctly under Node ESM.
+ * The SSR bundle is built in a child process. Calling `vite.build()` from the
+ * parent build's `closeBundle` ends that process once the SSR bundle succeeds.
  */
+import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
-import { pathToFileURL } from "node:url";
-import { build as viteBuild } from "vite";
-import react from "@vitejs/plugin-react-swc";
-import { PRERENDER_PRIORITY_PATHS, PRERENDER_ROOT_ATTR } from "./prerenderPriorityPaths";
-
-function shellHtmlPath(outDirAbs: string, pathname: string): string {
-  if (pathname === "/" || pathname === "") return path.join(outDirAbs, "index.html");
-  const rel = pathname.replace(/^\/+/, "").replace(/\/+$/, "");
-  return path.join(outDirAbs, ...rel.split("/"), "index.html");
-}
-
-function injectRootMarkup(html: string, appHtml: string): string {
-  const stamped = `<div id="root" ${PRERENDER_ROOT_ATTR}="1">${appHtml}</div>`;
-  const needle = '<div id="root"></div>';
-  if (!html.includes(needle)) return html;
-  // Drop crawl `#static-seo-shell` when React SSR already provides the real H1 (audit:seo-h1).
-  const withoutShell = html.replace(
-    /<main\b[^>]*\bid=["']static-seo-shell["'][^>]*>[\s\S]*?<\/main>/i,
-    "",
-  );
-  return withoutShell.replace(needle, stamped);
-}
+import { PRERENDER_PRIORITY_PATHS } from "./prerenderPriorityPaths";
 
 /**
  * After static shells are written, attempt SSR for priority paths into `#root`.
@@ -38,97 +18,46 @@ function injectRootMarkup(html: string, appHtml: string): string {
 export async function prerenderPriorityPagesIntoShells(
   outDirAbs: string,
   rootDir: string,
+  extraPaths: readonly string[] = [],
 ): Promise<{ attempted: number; succeeded: number; failed: number; errors: string[] }> {
-  const errors: string[] = [];
-  let succeeded = 0;
-  let failed = 0;
-  // Keep SSR scratch outside `dist/` — Vite `emptyOutDir` on a nested dist path can wipe shells.
-  const ssrOutDir = path.join(rootDir, "node_modules/.cache/whd-prerender-ssr");
-  const ssrEntryOut = path.join(ssrOutDir, "entry-server.mjs");
+  const pathnames = [...new Set([...PRERENDER_PRIORITY_PATHS, ...extraPaths])];
+  const cacheDir = path.join(rootDir, "node_modules/.cache");
+  const pathsFile = path.join(cacheDir, "whd-prerender-paths.json");
+  const resultFile = path.join(cacheDir, "whd-prerender-result.json");
+  const script = path.join(rootDir, "scripts/prerender-priority-pages.mjs");
 
   try {
-    fs.rmSync(ssrOutDir, { recursive: true, force: true });
-    fs.mkdirSync(ssrOutDir, { recursive: true });
-    await viteBuild({
-      root: rootDir,
-      configFile: false,
-      mode: "production",
-      plugins: [react()],
-      resolve: {
-        alias: { "@": path.resolve(rootDir, "./src") },
-      },
-      publicDir: false,
-      logLevel: "error",
-      build: {
-        ssr: path.join(rootDir, "src/prerender/entry-server.tsx"),
-        outDir: ssrOutDir,
-        // Manual clean above — never emptyOutDir against anything under/near dist/.
-        emptyOutDir: false,
-        copyPublicDir: false,
-        sourcemap: false,
-        minify: false,
-        rollupOptions: {
-          output: {
-            entryFileNames: "entry-server.mjs",
-            format: "esm",
-          },
-        },
-      },
+    fs.mkdirSync(cacheDir, { recursive: true });
+    fs.rmSync(resultFile, { force: true });
+    fs.writeFileSync(pathsFile, JSON.stringify({ outDirAbs, rootDir, pathnames }), "utf8");
+    const child = spawnSync(process.execPath, [script, pathsFile, resultFile], {
+      cwd: rootDir,
+      stdio: "inherit",
+      env: process.env,
     });
-
-    if (!fs.existsSync(ssrEntryOut)) {
-      throw new Error(`SSR bundle missing at ${ssrEntryOut}`);
+    if (!fs.existsSync(resultFile)) {
+      const detail =
+        child.error?.message ??
+        (child.status != null ? `child exit ${child.status}` : "child produced no result");
+      return {
+        attempted: pathnames.length,
+        succeeded: 0,
+        failed: pathnames.length,
+        errors: [`vite SSR build: ${detail}`],
+      };
     }
-
-    const mod = (await import(pathToFileURL(ssrEntryOut).href)) as {
-      renderPriorityPage: (url: string) => string;
+    return JSON.parse(fs.readFileSync(resultFile, "utf8")) as {
+      attempted: number;
+      succeeded: number;
+      failed: number;
+      errors: string[];
     };
-
-    for (const pathname of PRERENDER_PRIORITY_PATHS) {
-      const file = shellHtmlPath(outDirAbs, pathname);
-      if (!fs.existsSync(file)) {
-        failed += 1;
-        errors.push(`${pathname}: missing shell`);
-        continue;
-      }
-      try {
-        const location = pathname === "/" ? "/" : pathname.replace(/\/+$/, "");
-        const markup = mod.renderPriorityPage(location);
-        if (!markup || markup.length < 40) {
-          failed += 1;
-          errors.push(`${pathname}: empty SSR markup`);
-          continue;
-        }
-        const raw = fs.readFileSync(file, "utf8");
-        const next = injectRootMarkup(raw, markup);
-        if (next === raw) {
-          failed += 1;
-          errors.push(`${pathname}: could not find empty #root to inject`);
-          continue;
-        }
-        fs.writeFileSync(file, next, "utf8");
-        succeeded += 1;
-      } catch (err) {
-        failed += 1;
-        errors.push(`${pathname}: ${err instanceof Error ? err.message : String(err)}`);
-      }
-    }
   } catch (err) {
-    failed = PRERENDER_PRIORITY_PATHS.length;
-    errors.push(`vite SSR build: ${err instanceof Error ? err.message : String(err)}`);
-  } finally {
-    // Keep SSR scratch out of Pages artifacts; never fail the main build on cleanup races.
-    try {
-      fs.rmSync(ssrOutDir, { recursive: true, force: true, maxRetries: 3, retryDelay: 50 });
-    } catch {
-      // ignore ENOTEMPTY / concurrent writers in node_modules/.cache
-    }
+    return {
+      attempted: pathnames.length,
+      succeeded: 0,
+      failed: pathnames.length,
+      errors: [`vite SSR build: ${err instanceof Error ? err.message : String(err)}`],
+    };
   }
-
-  return {
-    attempted: PRERENDER_PRIORITY_PATHS.length,
-    succeeded,
-    failed,
-    errors,
-  };
 }

@@ -2,8 +2,9 @@
  * SEO-10 — build-time React prerender paths (React 18 `renderToString`).
  *
  * Covers every **indexable content template** with at least one URL (plus priority hubs).
- * Not every matrix/watch/guide URL — long-tail stays on `#static-seo-shell` until a full
- * sitemap prerender pass is warranted. Soft-fail per path in `prerenderPriorityPages.ts`.
+ * Indexable topic guides are appended at build time from `topicGuideSitemapPaths()`
+ * (see `vite.config.ts`) so guide bodies are not left on `#static-seo-shell`.
+ * Watch and service×city matrix URLs stay shell-only. Soft-fail per path.
  *
  * Must not use `@/` imports (loaded from Node / vite closeBundle).
  */
@@ -50,16 +51,6 @@ export const PRERENDER_PRIORITY_PATHS: readonly string[] = [
   "/online-consultation/country/india",
   "/online-consultation/mumbai",
   "/online-consultation/mumbai/ivf-fertility-treatments",
-  // Topic guide care hubs + FAQ-style samples (SEO-12 priority set)
-  "/womens-health-physiotherapy",
-  "/prenatal-physiotherapy",
-  "/postpartum-recovery",
-  "/bladder-leakage",
-  "/diastasis-recti",
-  "/what-is-prenatal-physiotherapy",
-  "/what-is-diastasis-recti",
-  "/what-is-womens-health-physiotherapy",
-  "/can-physiotherapy-help-with-bladder-leakage",
 ];
 
 /** Marker attribute written into `#root` when prerender succeeds (hydration / audits). */

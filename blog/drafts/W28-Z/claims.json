@@ -1,0 +1,22 @@
+{
+  "id": "W28-Z",
+  "openClinicalQuestions": [
+    "Confirm WHD's written list of problems that must be seen in person before any online physio booking."
+  ],
+  "claimLedger": [
+    {
+      "claim": "Pelvic floor training is a skill that needs correct technique, which is the part a clinician can coach.",
+      "sourceUrl": "https://www.nhs.uk/common-health-questions/womens-health/what-are-pelvic-floor-exercises/",
+      "sourceSection": "NHS · What are pelvic floor exercises? · fetched 2026",
+      "limitations": "Does not describe telehealth.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Pelvic-health problems are a physiotherapy scope that still requires proper assessment.",
+      "sourceUrl": "https://thepogp.co.uk/patient_information/default.aspx",
+      "sourceSection": "POGP · Patient information · fetched 2026",
+      "limitations": "Index page, not a telehealth standard.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

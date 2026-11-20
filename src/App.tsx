@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
 import { ScrollToTop } from "@/components/layout/ScrollToTop";
 import Index from "./pages/Index";
 import { ROUTES, HOME_SECTION_SCROLL_PATHS } from "@/config/routes";
@@ -12,6 +12,8 @@ import { NormalizeIndexHtmlUrl } from "@/components/layout/NormalizeIndexHtmlUrl
 import { NormalizeTrailingSlashUrl } from "@/components/layout/NormalizeTrailingSlashUrl";
 import { RemoveStaticSeoShell } from "@/components/layout/RemoveStaticSeoShell";
 import { publicRoutePath } from "@/lib/githubPagesPublicUrl";
+import { AppNavigate as Navigate } from "@/components/router/AppNavigate";
+import { guideConsolidationTargetPath } from "@/config/guideConsolidationRedirects";
 
 /**
  * SEO-24: lazy-load non-home page modules (named-export adapters).
@@ -71,6 +73,13 @@ const InternationalServicePage = lazy(() =>
 const TopicGuidePage = lazy(() =>
   import("./pages/TopicGuidePage").then((m) => ({ default: m.TopicGuidePage })),
 );
+
+function TopicGuideRoute() {
+  const { topicGuideSlug } = useParams();
+  const target = guideConsolidationTargetPath(topicGuideSlug);
+  if (target) return <Navigate to={target} replace />;
+  return <TopicGuidePage />;
+}
 const LearnArticlesIndexPage = lazy(() =>
   import("./pages/LearnArticlesIndexPage").then((m) => ({ default: m.LearnArticlesIndexPage })),
 );
@@ -275,7 +284,7 @@ const App = () => (
           <Route path={publicRoutePath(ROUTES.privacyPolicy)} element={<PrivacyPolicyPage />} />
           <Route path={publicRoutePath(ROUTES.termsOfService)} element={<TermsOfServicePage />} />
           <Route path={publicRoutePath(ROUTES.refundPolicy)} element={<RefundPolicyPage />} />
-          <Route path={publicRoutePath("/:topicGuideSlug")} element={<TopicGuidePage />} />
+          <Route path={publicRoutePath("/:topicGuideSlug")} element={<TopicGuideRoute />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

@@ -1,0 +1,22 @@
+{
+  "id": "W29-Z",
+  "openClinicalQuestions": [
+    "Confirm whether WHD wants the phrase pelvic floor dysfunction in patient-facing titles or a plainer wording."
+  ],
+  "claimLedger": [
+    {
+      "claim": "Pelvic floor muscles support bladder and bowel and must be able to tighten and release.",
+      "sourceUrl": "https://www.nhs.uk/common-health-questions/womens-health/what-are-pelvic-floor-exercises/",
+      "sourceSection": "NHS · What are pelvic floor exercises? · fetched 2026",
+      "limitations": "Exercise page, not a diagnostic classification.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Stress and urge leakage are different patterns and need different first questions.",
+      "sourceUrl": "https://www.nhs.uk/conditions/urinary-incontinence/",
+      "sourceSection": "NHS · Urinary incontinence · fetched 2026",
+      "limitations": "Covers leakage types, not every pelvic pain cause.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

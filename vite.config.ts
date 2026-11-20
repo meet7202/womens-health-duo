@@ -22,6 +22,7 @@ import {
   sitemapUrlsetKindForPath,
 } from "./src/config/routes.ts";
 import { redirectAliasShellPathnames } from "./src/config/routeDisposition.ts";
+import { topicGuideSitemapPaths } from "./src/data/topicGuides/topicGuideSitemapPaths.ts";
 import { learnWatchShellPathnames } from "./src/lib/learnHubUrls.ts";
 import {
   applyShellPageMetaToHtml,
@@ -453,7 +454,9 @@ export default defineConfig(({ mode }) => {
             // SEO-10 foundation: React 18 renderToString into priority shells (soft-fail).
             // Skip with WHD_PRERENDER=0 when debugging shell-only builds.
             if (process.env.WHD_PRERENDER !== "0") {
-              const prerender = await prerenderPriorityPagesIntoShells(outDirAbs, rootDir);
+              const prerender = await prerenderPriorityPagesIntoShells(outDirAbs, rootDir, [
+                ...topicGuideSitemapPaths(),
+              ]);
               console.info(
                 `[seo-10] prerender priority pages: ${prerender.succeeded}/${prerender.attempted} ok` +
                   (prerender.failed ? `, ${prerender.failed} failed` : ""),

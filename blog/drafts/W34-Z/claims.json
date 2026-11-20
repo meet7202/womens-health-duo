@@ -1,0 +1,22 @@
+{
+  "id": "W34-Z",
+  "openClinicalQuestions": [
+    "Confirm which pregnancy and postnatal symptoms exclude someone from WHD online Mat classes until assessed."
+  ],
+  "claimLedger": [
+    {
+      "claim": "Pilates can build strength, flexibility and balance as exercise.",
+      "sourceUrl": "https://www.nhs.uk/live-well/exercise/pilates-and-yoga/",
+      "sourceSection": "NHS · Pilates and yoga · fetched 2026",
+      "limitations": "General fitness page, not a treatment trial of livestream classes.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Use only for the method’s own description of principles, not for superiority claims.",
+      "sourceUrl": "https://www.merrithew.com/about/education-programs/stott-pilates/faqs",
+      "sourceSection": "Merrithew · STOTT PILATES FAQs · fetched 2026",
+      "limitations": "Manufacturer education page, not clinical outcome evidence.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}

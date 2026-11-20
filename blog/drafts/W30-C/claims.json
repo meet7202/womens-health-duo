@@ -1,0 +1,22 @@
+{
+  "id": "W30-C",
+  "openClinicalQuestions": [
+    "Should this page name Tele-MANAS, or only point readers to emergency services and the PMDD guide?"
+  ],
+  "claimLedger": [
+    {
+      "claim": "Assessment timing depends on age, duration of trying and known problems, not on worry alone.",
+      "sourceUrl": "https://www.nhs.uk/conditions/infertility/",
+      "sourceSection": "NHS · Infertility · fetched 2026",
+      "limitations": "Does not quantify a stress effect.",
+      "reviewerDecision": "pending"
+    },
+    {
+      "claim": "Infertility has ovulation, tubal, uterine and sperm causes that are not diagnosed from stress alone.",
+      "sourceUrl": "https://www.nichd.nih.gov/health/topics/infertility/conditioninfo/causes",
+      "sourceSection": "NICHD · What causes infertility? · fetched 2026",
+      "limitations": "US overview of biological causes.",
+      "reviewerDecision": "pending"
+    }
+  ]
+}
