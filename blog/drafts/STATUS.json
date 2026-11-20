@@ -1016,6 +1016,17 @@
       "imageApproval": "pending",
       "clinicalApproval": "pending",
       "proposedLeadId": "zalak"
+    },
+    {
+      "id": "W35-Z",
+      "slug": "what-is-pilates",
+      "action": "New",
+      "scheduledAt": "2026-11-20T09:00:00+05:30",
+      "publicationStatus": "published",
+      "imageApproval": "pending",
+      "clinicalApproval": "pending",
+      "proposedLeadId": "zalak",
+      "actualPublishDate": "2026-11-20"
     }
   ],
   "ownerPublishDate": "2026-11-19"

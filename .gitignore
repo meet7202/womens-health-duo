@@ -30,6 +30,10 @@ ig/
 # Search indexing API credentials (never commit)
 google-indexing-service-account.json
 
+# Local checkouts of third-party SEO tools (not part of the site)
+tools/mcp-gsc/
+tools/claude-seo/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

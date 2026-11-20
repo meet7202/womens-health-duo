@@ -53,11 +53,17 @@ for (const [from, to] of pairs) {
   if (!indexable.has(to) && !NON_GUIDE_TARGETS.has(to)) {
     errors.push(`target /${to}/ is not an indexable guide or class landing`);
   }
-  const boundary = new RegExp(`/${from}(?![a-z0-9-])`);
+  const boundary = new RegExp(`/${from}(?![a-z0-9-])`, "g");
   for (const file of files) {
     const text = fs.readFileSync(file, "utf8");
-    if (boundary.test(text)) {
+    for (const match of text.matchAll(boundary)) {
+      const at = match.index ?? 0;
+      let start = at;
+      while (start > 0 && /[A-Za-z0-9:/._~?&=%+-]/.test(text[start - 1])) start -= 1;
+      const token = text.slice(start, at);
+      if (/^https?:\/\//i.test(token) && !/womenshealthduo\.com/i.test(token)) continue;
       errors.push(`${path.relative(root, file)} still links /${from}/`);
+      break;
     }
   }
   const quoted = new RegExp(`"${from}"`);

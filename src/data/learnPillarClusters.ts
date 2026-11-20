@@ -244,6 +244,7 @@ export const LEARN_PILLAR_CLUSTERS: readonly LearnPillarCluster[] = [
       "Reformer footwork: pelvic floor breath coordination",
     ],
     suggestedArticleSlugs: [
+      "/what-is-pilates",
       "/is-pilates-safe-during-pregnancy",
       "/pilates-after-pregnancy",
       "/what-is-stott-pilates",

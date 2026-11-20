@@ -54,8 +54,7 @@ Static shells use `template: "guide-consolidation"` (noindex, meta refresh, cano
 | `/pilates-for-pregnancy` and `/pilates-for-pregnancy/`                                             | `/is-pilates-safe-during-pregnancy/`                       |
 | `/prenatal-pilates` and `/prenatal-pilates/`                                                       | `/is-pilates-safe-during-pregnancy/`                       |
 | `/postnatal-pilates` and `/postnatal-pilates/`                                                     | `/pilates-after-pregnancy/`                                |
-| `/what-is-pilates` and `/what-is-pilates/`                                                         | `/what-is-stott-pilates/`                                  |
-| `/pilates-for-beginners` and `/pilates-for-beginners/`                                             | `/what-is-stott-pilates/`                                  |
+| `/pilates-for-beginners` and `/pilates-for-beginners/`                                             | `/what-is-pilates/`                                        |
 | `/can-pcos-affect-fertility` and `/can-pcos-affect-fertility/`                                     | `/can-i-get-pregnant-with-pcos/`                           |
 | `/back-pain-in-pregnancy` and `/back-pain-in-pregnancy/`                                           | `/how-to-relieve-back-pain-during-pregnancy/`              |
 | `/pelvic-pain-in-pregnancy` and `/pelvic-pain-in-pregnancy/`                                       | `/how-to-relieve-pelvic-pain-during-pregnancy/`            |

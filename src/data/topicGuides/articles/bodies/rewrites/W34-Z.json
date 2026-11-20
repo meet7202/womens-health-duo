@@ -59,11 +59,12 @@
   "conversionCopy": "If you want STOTT Pilates coaching, or you are unsure a class is appropriate, you can book with Dr. Zalak Shah (PT).",
   "explainerAlt": "Laptop class sketch noting the teacher can coach form but cannot examine the pelvic floor",
   "internalLinks": [
+    { "anchor": "what Pilates is", "path": "/what-is-pilates/" },
     { "anchor": "what STOTT Pilates is", "path": "/what-is-stott-pilates/" },
     { "anchor": "Pilates in pregnancy", "path": "/is-pilates-safe-during-pregnancy/" },
     { "anchor": "women's health physiotherapy", "path": "/what-is-womens-health-physiotherapy/" }
   ],
-  "parentHub": "/what-is-stott-pilates/",
+  "parentHub": "/what-is-pilates/",
   "review": {
     "corrections": [
       "Did not claim online classes treat pelvic-floor conditions or outperform other exercise."

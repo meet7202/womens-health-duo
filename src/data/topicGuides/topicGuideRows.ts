@@ -414,6 +414,7 @@ export const TOPIC_GUIDE_ROWS: TopicGuideRow[] = [
     ["what-happens-during-a-physiotherapy-session", "physio"],
   ]),
   ...rows(6, [
+    ["what-is-pilates", "pilates"],
     ["what-is-stott-pilates", "pilates"],
     ["pilates-after-pregnancy", "pilates"],
     ["is-online-pilates-effective", "pilates"],

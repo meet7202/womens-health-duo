@@ -38,8 +38,7 @@ Point knowledge-base records at the target. Do not keep the old URL as a separat
 | `/pilates-for-pregnancy/`                       | `/is-pilates-safe-during-pregnancy/`                       |
 | `/prenatal-pilates/`                            | `/is-pilates-safe-during-pregnancy/`                       |
 | `/postnatal-pilates/`                           | `/pilates-after-pregnancy/`                                |
-| `/what-is-pilates/`                             | `/what-is-stott-pilates/`                                  |
-| `/pilates-for-beginners/`                       | `/what-is-stott-pilates/`                                  |
+| `/pilates-for-beginners/`                       | `/what-is-pilates/`                                        |
 | `/can-pcos-affect-fertility/`                   | `/can-i-get-pregnant-with-pcos/`                           |
 | `/back-pain-in-pregnancy/`                      | `/how-to-relieve-back-pain-during-pregnancy/`              |
 | `/pelvic-pain-in-pregnancy/`                    | `/how-to-relieve-pelvic-pain-during-pregnancy/`            |

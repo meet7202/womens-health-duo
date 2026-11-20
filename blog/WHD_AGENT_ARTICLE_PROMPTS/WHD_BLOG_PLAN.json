@@ -967,8 +967,8 @@
         },
         {
           "anchor": "Pilates for beginners",
-          "path": "/pilates-for-beginners/",
-          "url": "https://womenshealthduo.com/pilates-for-beginners/"
+          "path": "/what-is-pilates/",
+          "url": "https://womenshealthduo.com/what-is-pilates/"
         },
         {
           "anchor": "Pilates classes and current formats",
@@ -6161,12 +6161,16 @@
       "publish_date": "2026-12-05",
       "publish_time": "09:00",
       "timezone": "Asia/Kolkata",
-      "parent_hub": "/what-is-stott-pilates/",
+      "parent_hub": "/what-is-pilates/",
       "sources": [
         "https://www.nhs.uk/live-well/exercise/pilates-and-yoga/",
         "https://www.merrithew.com/about/education-programs/stott-pilates/faqs"
       ],
       "internal_links": [
+        {
+          "anchor": "what Pilates is",
+          "path": "/what-is-pilates/"
+        },
         {
           "anchor": "what STOTT Pilates is",
           "path": "/what-is-stott-pilates/"
@@ -6187,6 +6191,51 @@
         "When to stop and get help"
       ],
       "url_status": "Existing guide; refresh held in clinical review"
+    },
+    {
+      "id": "W35-Z",
+      "doctor_id": "zalak",
+      "action": "New",
+      "path": "/what-is-pilates/",
+      "url": "https://womenshealthduo.com/what-is-pilates/",
+      "title": "What Is Pilates?",
+      "primary_question": "What is Pilates, who started it, and what types are there?",
+      "publish_date": "2026-11-20",
+      "publish_time": "09:00",
+      "timezone": "Asia/Kolkata",
+      "parent_hub": "/pilates/",
+      "sources": [
+        "https://www.pilatesmethodalliance.org/pilates-history",
+        "https://www.nhs.uk/live-well/exercise/pilates-and-yoga/pilates-for-beginners/",
+        "https://www.nhs.uk/live-well/exercise/how-to-improve-strength-flexibility/"
+      ],
+      "internal_links": [
+        {
+          "anchor": "STOTT Pilates method",
+          "path": "/what-is-stott-pilates/"
+        },
+        {
+          "anchor": "Pilates in pregnancy",
+          "path": "/is-pilates-safe-during-pregnancy/"
+        },
+        {
+          "anchor": "Pilates after pregnancy",
+          "path": "/pilates-after-pregnancy/"
+        },
+        {
+          "anchor": "women's health physiotherapy",
+          "path": "/what-is-womens-health-physiotherapy/"
+        }
+      ],
+      "outline": [
+        "Who started Pilates",
+        "What the method is meant to train",
+        "Mat work, the floor type",
+        "Reformer, chair, barrel and other apparatus",
+        "Classical teaching and later schools",
+        "When a class is the wrong first step"
+      ],
+      "url_status": "New guide. Live without a reviewer byline until clinically approved."
     }
   ]
 }

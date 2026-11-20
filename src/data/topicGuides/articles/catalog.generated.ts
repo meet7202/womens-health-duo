@@ -1336,7 +1336,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
         heading: "How a class differs from physiotherapy",
         paragraphs: [
           "A physiotherapy visit is a clinical service: history, examination and a plan tied to your goals. A Pilates class is skilled group or private coaching within a fitness frame. Even when the instructor is also a physiotherapist, a mixed-level class is usually not a full medical assessment of every participant.",
-          "If your goal is symptom care, ask whether assessment should come before a busy fitness class. Broader primers on what Pilates is and Pilates for beginners cover general expectations."
+          "If your goal is symptom care, ask whether assessment should come before a busy fitness class. What Pilates is, including mat and equipment formats, is a separate page. This page stays with the STOTT method."
         ]
       }
     ],
@@ -1387,11 +1387,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     internalLinks: [
       {
         anchor: "what Pilates is",
-        path: "/what-is-stott-pilates/"
-      },
-      {
-        anchor: "Pilates for beginners",
-        path: "/what-is-stott-pilates/"
+        path: "/what-is-pilates/"
       },
       {
         anchor: "Pilates classes and current formats",
@@ -1438,7 +1434,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     openClinicalQuestions: [
       "Dr. Zalak: confirm current online versus in-person formats (e.g. whether Reformer remains in-person only in Bangalore/Ahmedabad, and how Mat online is currently delivered)."
     ],
-    bodyFingerprintText: "What Is STOTT Pilates? Mat vs Reformer and Getting Started\nSTOTT Pilates is a contemporary, anatomically based approach to the Pilates method taught through Merrithew’s training programmes. Merrithew lists five basic principles that organise how you breathe and place the body: breathing, pelvic placement, rib cage placement, scapular movement and stabilisation, and head and neck placement. Mat and Reformer are delivery formats—floor work versus spring-resisted equipment—not rival brands. The method name describes how a session is taught; it does not prove better outcomes than every other Pilates style.\nWhat the STOTT method refers to\nPilates as a whole is a system of controlled exercises emphasising breath, alignment and organised strength. According to Merrithew’s own FAQs, STOTT Pilates is a contemporary approach to Joseph Pilates’ original method, refined with modern exercise-science ideas. Saying “STOTT” points to that teaching framework and certification pathway; it does not, by itself, tell you whether you will work on a mat or on a machine.\nMerrithew’s five basic principles page names: breathing; pelvic placement; rib cage placement; scapular movement and stabilisation; and head and neck placement. Those cues help organise effort so the neck and lower back are not doing work meant for elsewhere. They are teaching tools, not a medical diagnosis of your posture and not independent proof that pain will resolve after a few classes.\nMerrithew marketing language about being among the safest or most effective methods is branding. This site does not treat those claims as comparative clinical evidence.\nHow Mat sessions differ from Reformer sessions\nMat sessions use the floor, with body weight and gravity providing most of the challenge. Small props may appear. Mat work can travel into home practice of patterns you have already learned in a coached session, though a class is still supervised movement—not a random downloaded circuit. Advanced Mat sequences can be demanding on control.\nA Reformer is a sliding carriage with springs, straps and a footbar. Springs can assist or resist, which allows finely graded loading when an instructor sets them thoughtfully. Reformer sessions need the equipment; you cannot recreate the exact feel with a yoga mat alone. Cost, studio access and class size shape the choice as much as preference.\nNeither format automatically rehabilitates diastasis, pelvic pain or incontinence. Both can be adapted when the instructor understands your limits. Tell the instructor about pregnancy, recent birth, surgery or pain, and stop if pain or dizziness occurs.\nWhat a first session typically involves\nExpect an introduction to the principles, a warm-up that may include breathing and placement drills, then a sequence matched to your level. Ask whether the class is Mat or Reformer, how many people share the instructor, and how modifications work mid-session. Wear comfortable clothes; grip socks are often useful on Reformer.\nDr. Zalak Shah (PT) is a STOTT Pilates Instructor (Mat & Reformer). At Women’s Health Duo, Mat Pilates is offered online; in-person sessions are in Bangalore and Ahmedabad. A Pilates hour is movement coaching—it is not the same product as a physiotherapy assessment for leakage, pelvic pain or abdominal-wall rehab. See women’s health physiotherapy when symptoms lead.\nHow a class differs from physiotherapy\nA physiotherapy visit is a clinical service: history, examination and a plan tied to your goals. A Pilates class is skilled group or private coaching within a fitness frame. Even when the instructor is also a physiotherapist, a mixed-level class is usually not a full medical assessment of every participant.\nIf your goal is symptom care, ask whether assessment should come before a busy fitness class. Broader primers on what Pilates is and Pilates for beginners cover general expectations."
+    bodyFingerprintText: "What Is STOTT Pilates? Mat vs Reformer and Getting Started\nSTOTT Pilates is a contemporary, anatomically based approach to the Pilates method taught through Merrithew’s training programmes. Merrithew lists five basic principles that organise how you breathe and place the body: breathing, pelvic placement, rib cage placement, scapular movement and stabilisation, and head and neck placement. Mat and Reformer are delivery formats—floor work versus spring-resisted equipment—not rival brands. The method name describes how a session is taught; it does not prove better outcomes than every other Pilates style.\nWhat the STOTT method refers to\nPilates as a whole is a system of controlled exercises emphasising breath, alignment and organised strength. According to Merrithew’s own FAQs, STOTT Pilates is a contemporary approach to Joseph Pilates’ original method, refined with modern exercise-science ideas. Saying “STOTT” points to that teaching framework and certification pathway; it does not, by itself, tell you whether you will work on a mat or on a machine.\nMerrithew’s five basic principles page names: breathing; pelvic placement; rib cage placement; scapular movement and stabilisation; and head and neck placement. Those cues help organise effort so the neck and lower back are not doing work meant for elsewhere. They are teaching tools, not a medical diagnosis of your posture and not independent proof that pain will resolve after a few classes.\nMerrithew marketing language about being among the safest or most effective methods is branding. This site does not treat those claims as comparative clinical evidence.\nHow Mat sessions differ from Reformer sessions\nMat sessions use the floor, with body weight and gravity providing most of the challenge. Small props may appear. Mat work can travel into home practice of patterns you have already learned in a coached session, though a class is still supervised movement—not a random downloaded circuit. Advanced Mat sequences can be demanding on control.\nA Reformer is a sliding carriage with springs, straps and a footbar. Springs can assist or resist, which allows finely graded loading when an instructor sets them thoughtfully. Reformer sessions need the equipment; you cannot recreate the exact feel with a yoga mat alone. Cost, studio access and class size shape the choice as much as preference.\nNeither format automatically rehabilitates diastasis, pelvic pain or incontinence. Both can be adapted when the instructor understands your limits. Tell the instructor about pregnancy, recent birth, surgery or pain, and stop if pain or dizziness occurs.\nWhat a first session typically involves\nExpect an introduction to the principles, a warm-up that may include breathing and placement drills, then a sequence matched to your level. Ask whether the class is Mat or Reformer, how many people share the instructor, and how modifications work mid-session. Wear comfortable clothes; grip socks are often useful on Reformer.\nDr. Zalak Shah (PT) is a STOTT Pilates Instructor (Mat & Reformer). At Women’s Health Duo, Mat Pilates is offered online; in-person sessions are in Bangalore and Ahmedabad. A Pilates hour is movement coaching—it is not the same product as a physiotherapy assessment for leakage, pelvic pain or abdominal-wall rehab. See women’s health physiotherapy when symptoms lead.\nHow a class differs from physiotherapy\nA physiotherapy visit is a clinical service: history, examination and a plan tied to your goals. A Pilates class is skilled group or private coaching within a fitness frame. Even when the instructor is also a physiotherapist, a mixed-level class is usually not a full medical assessment of every participant.\nIf your goal is symptom care, ask whether assessment should come before a busy fitness class. What Pilates is, including mat and equipment formats, is a separate page. This page stays with the STOTT method."
   },
   {
     id: "W05-C",
@@ -9613,6 +9609,10 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     ],
     internalLinks: [
       {
+        anchor: "what Pilates is",
+        path: "/what-is-pilates/"
+      },
+      {
         anchor: "what STOTT Pilates is",
         path: "/what-is-stott-pilates/"
       },
@@ -9637,7 +9637,7 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
     ],
     conversionCopy: "If you want STOTT Pilates coaching, or you are unsure a class is appropriate, you can book with Dr. Zalak Shah (PT).",
     conversionPath: "/book-consultation/",
-    parentHubPath: "/what-is-stott-pilates/",
+    parentHubPath: "/what-is-pilates/",
     claimLedger: [
       {
         claim: "Pilates can build strength, flexibility and balance as exercise.",
@@ -9658,7 +9658,148 @@ export const CALENDAR_ARTICLES: CalendarArticleRevision[] = [
       "Confirm which pregnancy and postnatal symptoms exclude someone from WHD online Mat classes until assessed."
     ],
     bodyFingerprintText: "Is Online Pilates Worth Doing?\nOnline Pilates can be useful for learning breath, alignment and slower strength when the teacher can see you and you can stop if something hurts. It is not the same as a physiotherapy assessment, and it cannot tell whether a leak, a bulge or pregnancy pain is safe to exercise through. NHS pages describe Pilates as a way to build strength, flexibility and balance. That is a general fitness claim, not proof that a livestream will treat a pelvic-floor problem. Match the class to your situation, or choose an assessment first.\nWhat a screen can teach\nA live class where the teacher corrects your position can help you notice rib movement, how you lie down and stand up, and how to keep a movement smaller. Recorded videos cannot see you. They are fine for a familiar routine on a day you feel well. They are a poor choice for a new pain.\nSTOTT Pilates, as Merrithew describes it, emphasises principles such as breathing and placement. Those principles can be coached online by an instructor who knows them. The brand name is not evidence that any online class outperforms other sensible movement.\nWho should not use a class as the first step\nIf you are leaking, feel pelvic heaviness, have a new postnatal scar, or are in pain that is getting worse, start with the women’s health physiotherapy page or a medical review. A class that tells everyone to do the same hundred repetitions is not an assessment.\nIn pregnancy, NHS exercise advice is to stay active when the pregnancy is uncomplicated and to stop with dizziness, pain, bleeding or feeling unwell. An online teacher who cannot see your whole body and does not know your maternity notes should not clear you for a hard class.\nHow to choose a session that is honest\nLook for a live option, a teacher who asks about pregnancy, birth, pain and leaks before you start, and permission to skip movements. Pre-recorded “flat tummy in ten days” marketing is a reason to close the tab.\nDr. Zalak Shah (PT) teaches STOTT Pilates and also assesses pelvic-health problems. A class with her is still a class. It does not replace an appointment if you need leaks, prolapse symptoms or pain looked at. Say which of those you have before you join.\nWhen to stop and get help\nStop immediately for chest pain, fainting, sudden shortness of breath, bleeding, fluid loss in pregnancy, or a headache that is severe. Use emergency or maternity care. Do not finish the class first.\nBook an assessment rather than another class if leaks, doming or pelvic pain show up every time you try. The STOTT Pilates guide explains the method. This page is only about whether online delivery is enough."
-  }
+  },
+{
+  id: "W35-Z",
+  slug: "what-is-pilates",
+  action: "New",
+  publicationStatus: "published",
+  scheduledAt: "2026-11-20T09:00:00+05:30",
+  proposedLeadId: "zalak",
+  publishedAt: "2026-11-20",
+  title: "What Is Pilates?",
+  seoTitle: "What is Pilates?",
+  description: "Who started Pilates, what the method trains, and the main types: mat, reformer, chair and barrel. STOTT is only one teaching school.",
+  primaryQuestion: "What is Pilates, who started it, and what types are there?",
+  directAnswer: "Joseph Hubertus Pilates, born in Mönchengladbach in 1883, built the exercise method he called Contrology and introduced that system in the United States in the late 1920s. The NHS describes Pilates today as work for balance, posture, strength and flexibility. Types differ by format: mat work on the floor, and apparatus such as the reformer, trapeze table, chair and barrel. Classical teaching stays closer to his original order. Contemporary schools, including STOTT, adapt it. A class coaches movement. It does not examine you the way a physiotherapy visit does.",
+  storytellingNote: "",
+  sections: [
+    {
+      heading: "Who started Pilates",
+      paragraphs: [
+        "The Pilates Method Alliance records that Joseph Hubertus Pilates was born in Mönchengladbach, Germany, on 9 December 1883. He taught physical culture, created a system of corrective exercise, and introduced that system to the American market in the late 1920s. He named the work Contrology. He published Your Health in 1934 and Return to Life Through Contrology in 1945. He died in October 1967, aged 83. Clara Pilates continued teaching at their New York studio.",
+        "Dancers in New York trained with him, and the signature mat series took shape while he taught at Jacob’s Pillow between 1942 and 1947. That is history of the method, not evidence that a class today will repair an injury. In 2000 a US court held that Pilates is a generic name for this kind of exercise, so one company cannot own the word as a trademark."
+      ]
+    },
+    {
+      heading: "What the method is meant to train",
+      paragraphs: [
+        "An NHS beginners video calls Pilates exercise for balance, posture, strength and flexibility, and says a basic session can suit a wide range of ages and fitness. The same page says those videos are general exercise. They are not aimed at treating one cause of pain or a named condition. Contrology, his own word, points to control of how you move, breathe and place the body. It is a teaching aim, not a promise that pain will stop.",
+        "A separate NHS page lists pilates with stretching, yoga and tai chi as flexibility activity. It also describes muscle-strengthening work on at least two days a week for the major muscle groups. That two-day pattern is general strength guidance. It is not a Pilates prescription, and it does not say a class will fix a bad back."
+      ]
+    },
+    {
+      heading: "Mat work, the floor type",
+      paragraphs: [
+        "Mat Pilates uses the floor. Body weight supplies most of the load, and a teacher may add a small ring or band. Return to Life Through Contrology is the book that set out his mat series, so this type is the one people can most often try without a studio machine. Group classes and home videos are usually mat work.",
+        "A mat hour can still be hard. Advanced sequences ask for a lot of control. Learn a pattern with someone who can see you before you copy a long video alone. The NHS caution still applies: stop if it hurts, and get advice first if you are pregnant, newly postnatal, injured, or unsure."
+      ]
+    },
+    {
+      heading: "Reformer, chair, barrel and other apparatus",
+      paragraphs: [
+        "The Universal Reformer is the apparatus most often linked with his name. It is a sliding carriage on springs, so the load can be lighter or heavier than body weight. The Pilates Method Alliance also lists apparatus he kept adding: the Trapeze Table, often called a Cadillac, the Wunda Chair, the Magic Circle, the Spine Corrector and the Ladder Barrel. Each one changes the support and the direction of the effort. They are types of equipment, not separate brands and not separate sports.",
+        "You do not need every machine to be doing Pilates. Many people only ever meet the mat or the reformer, because chairs and barrels are less common and usually need a studio. Cost, space and class size decide what is actually bookable. Ask which piece of equipment the session uses before you pay."
+      ]
+    },
+    {
+      heading: "Classical teaching and later schools",
+      paragraphs: [
+        "Classical, or Contrology, teaching stays closer to Joseph Pilates’ original exercise order and to the apparatus he designed. Contemporary teaching keeps the exercises but uses later ideas about how joints and muscles are coached. Both can be mat or apparatus. The label tells you the school of teaching, not whether the hour is safe for you.",
+        "STOTT Pilates is one contemporary school, tied to Merrithew training. It is not the definition of Pilates, and this page does not rank it above other schools. How that school uses Mat and Reformer is explained on the STOTT page. If a timetable only says Pilates, ask whether it is classical or contemporary, mat or apparatus, and how a movement is changed when it does not suit you."
+      ]
+    },
+    {
+      heading: "When a class is the wrong first step",
+      paragraphs: [
+        "The NHS beginners video says to get advice from a health professional first if you are unsure about your fitness, have an injury or symptoms, have had a recent operation or similar health event, or you are pregnant or recently gave birth. Stop straight away if you feel pain or become unwell. If symptoms worry you, use 111.",
+        "Leaking urine, pelvic heaviness, or a new abdominal gap after birth are reasons to start with women’s health physiotherapy rather than any type of mixed class. Dr. Zalak Shah (PT) teaches Pilates, including STOTT Mat and Reformer, and she also assesses those symptoms. Joining her class is still a class, not that assessment."
+      ]
+    }
+  ],
+  figures: [],
+  references: [
+    {
+      label: "Pilates Method Alliance — History of Pilates",
+      url: "https://www.pilatesmethodalliance.org/pilates-history"
+    },
+    {
+      label: "NHS — Pilates video for beginners",
+      url: "https://www.nhs.uk/live-well/exercise/pilates-and-yoga/pilates-for-beginners/"
+    },
+    {
+      label: "NHS — How to improve your strength and flexibility",
+      url: "https://www.nhs.uk/live-well/exercise/how-to-improve-strength-flexibility/"
+    }
+  ],
+  internalLinks: [
+    {
+      anchor: "STOTT Pilates method",
+      path: "/what-is-stott-pilates/"
+    },
+    {
+      anchor: "Pilates in pregnancy",
+      path: "/is-pilates-safe-during-pregnancy/"
+    },
+    {
+      anchor: "Pilates after pregnancy",
+      path: "/pilates-after-pregnancy/"
+    },
+    {
+      anchor: "women's health physiotherapy",
+      path: "/what-is-womens-health-physiotherapy/"
+    }
+  ],
+  faqs: [
+    {
+      question: "Who invented Pilates?",
+      answer: "Joseph Hubertus Pilates, born in Germany in 1883, developed the method and called it Contrology. He introduced it in the United States in the late 1920s and published Return to Life Through Contrology in 1945. He died in 1967."
+    },
+    {
+      question: "What types of Pilates are there?",
+      answer: "The usual split is mat work on the floor and apparatus work. Apparatus includes the reformer, trapeze table, Wunda chair and barrels. Classical teaching follows his original order more closely. Contemporary schools, such as STOTT, adapt the same idea."
+    },
+    {
+      question: "Do I need a reformer to do Pilates?",
+      answer: "No. Mat sessions use the floor and are the most widely available type. A reformer changes the load with springs. Chairs and barrels are further equipment choices, not a requirement for the exercise to count as Pilates."
+    },
+    {
+      question: "Is Pilates a treatment?",
+      answer: "No. NHS material presents it as general exercise for balance, posture, strength and flexibility, not as care for one diagnosis. Pain, leaks, pregnancy or a recent birth need advice before you join a class of any type."
+    }
+  ],
+  conversionCopy: "If you want a Pilates class, or you need symptoms assessed before you join one, you can book with Dr. Zalak Shah (PT).",
+  conversionPath: "/book-consultation/",
+  parentHubPath: "/pilates/",
+  claimLedger: [
+    {
+      claim: "Names Joseph Hubertus Pilates, birth on 9 December 1883 in Mönchengladbach, Contrology, the late-1920s US introduction, Your Health (1934), Return to Life Through Contrology (1945), death in October 1967, and apparatus including the Universal Reformer, Trapeze Table, Wunda Chair, Magic Circle, Spine Corrector and Ladder Barrel. Also records the 2000 ruling that Pilates is a generic exercise name.",
+      sourceUrl: "https://www.pilatesmethodalliance.org/pilates-history",
+      sourceSection: "Pilates Method Alliance · History of Pilates · fetched 2026",
+      limitations: "Professional-association history. It includes his reputation with dancers and later promotional language about wellbeing. Those are not used here as clinical outcome evidence.",
+      reviewerDecision: "pending"
+    },
+    {
+      claim: "Describes Pilates as exercise for balance, posture, strength and flexibility, with advice to seek clinical guidance in pregnancy, after birth, with injury, or if unsure, and to stop if pain or illness starts.",
+      sourceUrl: "https://www.nhs.uk/live-well/exercise/pilates-and-yoga/pilates-for-beginners/",
+      sourceSection: "NHS · Pilates video for beginners · fetched 2026",
+      limitations: "Fitness video page, not a trial of outcomes or of any branded method.",
+      reviewerDecision: "pending"
+    },
+    {
+      claim: "Use pilates as a named flexibility activity, and keep the two-day muscle-strengthening guidance separate from a class prescription.",
+      sourceUrl: "https://www.nhs.uk/live-well/exercise/how-to-improve-strength-flexibility/",
+      sourceSection: "NHS · How to improve your strength and flexibility · fetched 2026",
+      limitations: "Lists pilates as one flexibility example. The two-day strength pattern is for muscle-strengthening activity in general.",
+      reviewerDecision: "pending"
+    }
+  ],
+  openClinicalQuestions: [
+    "Confirm with Dr. Zalak which WHD sessions are mat, reformer, classical, or specifically STOTT."
+  ],
+  bodyFingerprintText: "What Is Pilates?\nJoseph Hubertus Pilates, born in Mönchengladbach in 1883, built the exercise method he called Contrology and introduced that system in the United States in the late 1920s. The NHS describes Pilates today as work for balance, posture, strength and flexibility. Types differ by format: mat work on the floor, and apparatus such as the reformer, trapeze table, chair and barrel. Classical teaching stays closer to his original order. Contemporary schools, including STOTT, adapt it. A class coaches movement. It does not examine you the way a physiotherapy visit does.\nWho started Pilates\nThe Pilates Method Alliance records that Joseph Hubertus Pilates was born in Mönchengladbach, Germany, on 9 December 1883. He taught physical culture, created a system of corrective exercise, and introduced that system to the American market in the late 1920s. He named the work Contrology. He published Your Health in 1934 and Return to Life Through Contrology in 1945. He died in October 1967, aged 83. Clara Pilates continued teaching at their New York studio.\nDancers in New York trained with him, and the signature mat series took shape while he taught at Jacob’s Pillow between 1942 and 1947. That is history of the method, not evidence that a class today will repair an injury. In 2000 a US court held that Pilates is a generic name for this kind of exercise, so one company cannot own the word as a trademark.\nWhat the method is meant to train\nAn NHS beginners video calls Pilates exercise for balance, posture, strength and flexibility, and says a basic session can suit a wide range of ages and fitness. The same page says those videos are general exercise. They are not aimed at treating one cause of pain or a named condition. Contrology, his own word, points to control of how you move, breathe and place the body. It is a teaching aim, not a promise that pain will stop.\nA separate NHS page lists pilates with stretching, yoga and tai chi as flexibility activity. It also describes muscle-strengthening work on at least two days a week for the major muscle groups. That two-day pattern is general strength guidance. It is not a Pilates prescription, and it does not say a class will fix a bad back.\nMat work, the floor type\nMat Pilates uses the floor. Body weight supplies most of the load, and a teacher may add a small ring or band. Return to Life Through Contrology is the book that set out his mat series, so this type is the one people can most often try without a studio machine. Group classes and home videos are usually mat work.\nA mat hour can still be hard. Advanced sequences ask for a lot of control. Learn a pattern with someone who can see you before you copy a long video alone. The NHS caution still applies: stop if it hurts, and get advice first if you are pregnant, newly postnatal, injured, or unsure.\nReformer, chair, barrel and other apparatus\nThe Universal Reformer is the apparatus most often linked with his name. It is a sliding carriage on springs, so the load can be lighter or heavier than body weight. The Pilates Method Alliance also lists apparatus he kept adding: the Trapeze Table, often called a Cadillac, the Wunda Chair, the Magic Circle, the Spine Corrector and the Ladder Barrel. Each one changes the support and the direction of the effort. They are types of equipment, not separate brands and not separate sports.\nYou do not need every machine to be doing Pilates. Many people only ever meet the mat or the reformer, because chairs and barrels are less common and usually need a studio. Cost, space and class size decide what is actually bookable. Ask which piece of equipment the session uses before you pay.\nClassical teaching and later schools\nClassical, or Contrology, teaching stays closer to Joseph Pilates’ original exercise order and to the apparatus he designed. Contemporary teaching keeps the exercises but uses later ideas about how joints and muscles are coached. Both can be mat or apparatus. The label tells you the school of teaching, not whether the hour is safe for you.\nSTOTT Pilates is one contemporary school, tied to Merrithew training. It is not the definition of Pilates, and this page does not rank it above other schools. How that school uses Mat and Reformer is explained on the STOTT page. If a timetable only says Pilates, ask whether it is classical or contemporary, mat or apparatus, and how a movement is changed when it does not suit you.\nWhen a class is the wrong first step\nThe NHS beginners video says to get advice from a health professional first if you are unsure about your fitness, have an injury or symptoms, have had a recent operation or similar health event, or you are pregnant or recently gave birth. Stop straight away if you feel pain or become unwell. If symptoms worry you, use 111.\nLeaking urine, pelvic heaviness, or a new abdominal gap after birth are reasons to start with women’s health physiotherapy rather than any type of mixed class. Dr. Zalak Shah (PT) teaches Pilates, including STOTT Mat and Reformer, and she also assesses those symptoms. Joining her class is still a class, not that assessment."
+}
+
 ];
 
 export const CALENDAR_ARTICLE_BY_ID: ReadonlyMap<string, CalendarArticleRevision> = new Map(

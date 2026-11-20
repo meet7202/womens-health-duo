@@ -62,6 +62,7 @@ path,title,cluster,primaryQuestion,decision,clinical_reviewer_required,status,un
 /what-is-womens-health-physiotherapy/,what-is-womens-health-physiotherapy,physio,,rewrite,yes,in_clinical_review,no,
 /online-womens-health-physiotherapy/,online-womens-health-physiotherapy,physio,,rewrite,yes,in_clinical_review,no,
 /what-happens-during-a-physiotherapy-session/,what-happens-during-a-physiotherapy-session,physio,,keep-improve,yes,pending,no,
+/what-is-pilates/,What Is Pilates?,pilates,What is Pilates?,keep-improve,yes,pending,no,
 /what-is-stott-pilates/,what-is-stott-pilates,pilates,,keep-improve,yes,pending,no,
 /pilates-after-pregnancy/,pilates-after-pregnancy,pilates,,keep-improve,yes,pending,no,
 /is-online-pilates-effective/,is-online-pilates-effective,pilates,,rewrite,yes,in_clinical_review,no,
@@ -91,8 +92,7 @@ path,title,cluster,primaryQuestion,decision,clinical_reviewer_required,status,un
 /pilates-for-pregnancy/,pilates-for-pregnancy,,,redirect,yes,redirected,no,/is-pilates-safe-during-pregnancy/
 /prenatal-pilates/,prenatal-pilates,,,redirect,yes,redirected,no,/is-pilates-safe-during-pregnancy/
 /postnatal-pilates/,postnatal-pilates,,,redirect,yes,redirected,no,/pilates-after-pregnancy/
-/what-is-pilates/,what-is-pilates,,,redirect,yes,redirected,no,/what-is-stott-pilates/
-/pilates-for-beginners/,pilates-for-beginners,,,redirect,yes,redirected,no,/what-is-stott-pilates/
+/pilates-for-beginners/,pilates-for-beginners,,,redirect,yes,redirected,no,/what-is-pilates/
 /can-pcos-affect-fertility/,can-pcos-affect-fertility,,,redirect,yes,redirected,no,/can-i-get-pregnant-with-pcos/
 /back-pain-in-pregnancy/,back-pain-in-pregnancy,,,redirect,yes,redirected,no,/how-to-relieve-back-pain-during-pregnancy/
 /pelvic-pain-in-pregnancy/,pelvic-pain-in-pregnancy,,,redirect,yes,redirected,no,/how-to-relieve-pelvic-pain-during-pregnancy/
