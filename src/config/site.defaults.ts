@@ -15,7 +15,7 @@ export const HOME_ENTITY_DEFINITION =
 
 /** Homepage hero lede only (first body paragraph under the H1). */
 export const HOME_HERO_LEDE =
-  "Comprehensive care from pregnancy to postpartum, fertility to pelvic health. We combine medical expertise with physiotherapy and STOTT Pilates for complete wellness.";
+  "Comprehensive care from pregnancy to postpartum, fertility to pelvic health. We combine medical expertise with women's health physiotherapy, and Pilates as part of that care.";
 
 /** Rich MedicalOrganization description for schema.org (may exceed meta length). */
 export const ORGANIZATION_SCHEMA_DESCRIPTION = `${HOME_ENTITY_DEFINITION} Dr. Charmi Shah (OB-GYN, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapy and STOTT Pilates on Mat and Reformer) lead the work. We film explainers and see patients in India and online; we do not retail supplements or vitamins.`;

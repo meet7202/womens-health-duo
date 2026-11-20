@@ -92,7 +92,7 @@ const services = [
         icon: Dumbbell,
         title: "Physio and Pilates",
         description:
-          "Women's health physiotherapy combined with Pilates-based movement: certified STOTT Pilates instruction for core strength, flexibility, posture, and women-focused goals on Mat and Reformer in studio, plus Mat-based follow-along options online.",
+          "Pilates used inside women's health physiotherapy: core strength, posture, and movement goals in the studio, with follow-along options online.",
       },
       {
         icon: Move,
@@ -139,8 +139,8 @@ export const ServicesSection = () => {
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               The quick map above is a shortcut; here is the full menu by doctor, obstetrics,
-              gynecology, IVF, laparoscopy, pelvic and postpartum physio, and STOTT Pilates, by
-              video from anywhere. {PRACTICE_BOTH_DOCTORS_IN_PERSON}
+              gynecology, IVF, laparoscopy, pelvic and postpartum physio, and Pilates, by video from
+              anywhere. {PRACTICE_BOTH_DOCTORS_IN_PERSON}
             </p>
           </m.div>
 

@@ -12,7 +12,7 @@ export const SITE_FAQ_BASE: FaqItem[] = [
   {
     question: "What is Women's Health Duo?",
     answer:
-      "Women's Health Duo is a women's healthcare brand led by two sisters: Dr. Charmi Shah (OB-GYN, IVF, and laparoscopic surgery) and Dr. Zalak Shah (women's health physiotherapist and STOTT Pilates instructor for Mat and Reformer, including Mat Pilates online). The practice is online-first for global patients: most NRIs and international families book video OB-GYN consults and online physio / Pilates sessions from abroad. Dr. Charmi also sees patients in person in Mumbai, Ahmedabad, and Valsad; Dr. Zalak in Bangalore and Ahmedabad, both offer virtual visits worldwide.",
+      "Women's Health Duo is a women's healthcare brand led by two sisters: Dr. Charmi Shah (OB-GYN, IVF, and laparoscopic surgery) and Dr. Zalak Shah (women's health physiotherapist and Pilates instructor, including sessions online). The practice is online-first for global patients: most NRIs and international families book video OB-GYN consults and online physio / Pilates sessions from abroad. Dr. Charmi also sees patients in person in Mumbai, Ahmedabad, and Valsad; Dr. Zalak in Bangalore and Ahmedabad, both offer virtual visits worldwide.",
   },
   {
     question: "Which cities do you see patients in?",
@@ -22,12 +22,12 @@ export const SITE_FAQ_BASE: FaqItem[] = [
   {
     question: "Do you offer online consultations?",
     answer:
-      "Yes, online is the primary way we serve patients outside India. Book video OB-GYN consultations with Dr. Charmi Shah and virtual women's health physiotherapy, Mat Pilates online, and STOTT Pilates–oriented sessions with Dr. Zalak Shah. Use WhatsApp or the contact section on this site; include your city, country, and time zone so we can suggest slots.",
+      "Yes, online is the primary way we serve patients outside India. Book video OB-GYN consultations with Dr. Charmi Shah and virtual women's health physiotherapy and Pilates with Dr. Zalak Shah. Use WhatsApp or the contact section on this site; include your city, country, and time zone so we can suggest slots.",
   },
   {
     question: "What does a women's health physiotherapist do?",
     answer:
-      "A women's health physiotherapist helps with pelvic floor concerns, prenatal and postnatal recovery, pregnancy and postpartum movement, diastasis recti, musculoskeletal pain, and safe return to activity, often combining hands-on physiotherapy with structured exercise such as Mat Pilates online and STOTT Pilates on Mat and Reformer.",
+      "A women's health physiotherapist helps with pelvic floor concerns, prenatal and postnatal recovery, pregnancy and postpartum movement, diastasis recti, musculoskeletal pain, and safe return to activity, often combining hands-on physiotherapy with Pilates-based exercise.",
   },
   {
     question: "When should I book with Dr. Charmi Shah (OB-GYN)?",
@@ -37,7 +37,7 @@ export const SITE_FAQ_BASE: FaqItem[] = [
   {
     question: "When should I book with Dr. Zalak Shah (physiotherapy / Pilates)?",
     answer:
-      "Book with Dr. Zalak for pelvic floor rehabilitation, prenatal and postnatal exercise planning, diastasis recti, urinary incontinence or prolapse-related rehab (as advised by your physician), Mat Pilates online, STOTT Pilates on Mat or Reformer, and women's musculoskeletal issues. Care is coordinated with your medical team when needed.",
+      "Book with Dr. Zalak for pelvic floor rehabilitation, prenatal and postnatal exercise planning, diastasis recti, urinary incontinence or prolapse-related rehab (as advised by your physician), Pilates as part of that plan, and women's musculoskeletal issues. Care is coordinated with your medical team when needed.",
   },
   {
     question: "How do I contact Women's Health Duo?",

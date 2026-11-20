@@ -19,6 +19,7 @@ type SectionLink = {
 };
 
 const CLASS_LINKS: SectionLink[] = [
+  { label: "Physiotherapy", to: publicPathname("/womens-health-physiotherapy") },
   { label: "Prenatal", to: publicPathname(ROUTES.prenatal) },
   { label: "Postnatal", to: publicPathname(ROUTES.postnatal) },
   { label: "Pilates", to: publicPathname(ROUTES.pilates) },
