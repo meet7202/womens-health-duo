@@ -19,7 +19,7 @@ import {
   PRACTICE_CHARMI_LOCATIONS_LINE,
   PRACTICE_ZALAK_LOCATIONS_LINE,
 } from "@/config/practiceLocations";
-import { BRAND_ENTITY_LINE } from "@/config/brandLine";
+import { BRAND_ENTITY_LINE, CHARMI_ALSO_WRITTEN, ZALAK_ALSO_WRITTEN } from "@/config/brandLine";
 import { doctorRegistrationLine } from "@/config/doctorRegistration";
 import { EmergencyDisclaimer } from "@/components/compliance/EmergencyDisclaimer";
 import { TelemedicineTrustBadges } from "@/components/compliance/TelemedicineTrustBadges";
@@ -116,7 +116,7 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
         </p>
         <TelemedicineTrustBadges className="mb-4" />
         <p className="text-sm text-foreground/90 border-l-2 border-primary/35 pl-3 mb-8 max-w-2xl">
-          {BRAND_ENTITY_LINE}
+          {BRAND_ENTITY_LINE} {slug === "charmi" ? CHARMI_ALSO_WRITTEN : ZALAK_ALSO_WRITTEN}
         </p>
 
         <div className="float-none sm:float-right sm:ml-8 sm:mb-4 w-full max-w-[220px] mx-auto sm:mx-0">

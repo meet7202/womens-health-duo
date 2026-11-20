@@ -11,6 +11,7 @@ import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { PRACTICE_CHARMI_IN_PERSON, PRACTICE_ZALAK_IN_PERSON } from "@/config/practiceLocations";
 import { DOCTOR_REGISTRATION } from "@/config/doctorRegistration";
 import { physicianImageObject } from "@/components/seo/schema/mediaImages";
+import { BRAND_NAME_ALIASES, CHARMI_NAME_ALIASES, ZALAK_NAME_ALIASES } from "@/config/brandLine";
 
 /**
  * Schema.org structured data for search engines and AI crawlers.
@@ -34,6 +35,7 @@ export function JsonLd() {
         "@type": ["MedicalOrganization", "Organization"],
         "@id": orgId,
         name: SITE_NAME,
+        alternateName: [...BRAND_NAME_ALIASES],
         url: origin,
         logo: ogImage,
         image: ogImage,
@@ -74,6 +76,7 @@ export function JsonLd() {
         "@type": "Physician",
         "@id": charmiId,
         name: "Dr. Charmi Shah",
+        alternateName: [...CHARMI_NAME_ALIASES],
         // Schema.org MedicalSpecialty members only (Obstetric / Gynecologic). IVF & laparoscopy → knowsAbout.
         medicalSpecialty: ["Obstetric", "Gynecologic"],
         jobTitle: "Obstetrician, Gynecologist (OB-GYN) & IVF Specialist",
@@ -117,6 +120,7 @@ export function JsonLd() {
         "@type": "Person",
         "@id": zalakId,
         name: "Dr. Zalak Shah",
+        alternateName: [...ZALAK_NAME_ALIASES],
         jobTitle: "Women's Health Physiotherapist & STOTT Pilates Instructor (Mat & Reformer)",
         description:
           "Women's health physiotherapist (BPT, MPT) and STOTT Pilates Instructor (Mat & Reformer); pelvic floor, prenatal/postnatal rehab, and musculoskeletal physiotherapy for women.",
@@ -160,6 +164,7 @@ export function JsonLd() {
         "@id": websiteId,
         url: origin,
         name: SITE_NAME,
+        alternateName: [...BRAND_NAME_ALIASES],
         description: DEFAULT_DESCRIPTION,
         inLanguage: ["en-IN", "en"],
         publisher: { "@id": orgId },
