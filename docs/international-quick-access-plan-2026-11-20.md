@@ -56,8 +56,8 @@ All four live under `/international-consultation/`, use `InternationalServicePag
 ### 4. Hindi and Gujarati speaking doctors online — both doctors
 
 - URL `/international-consultation/hindi-gujarati-doctor-online/`
-- Title "Hindi & Gujarati doctor online" · H1 "Women's health consults in Hindi and Gujarati, online"
-- Searches: hindi speaking gynecologist, gujarati doctor online, indian gynecologist online UK/USA/Canada, indian women's health physio abroad.
+- Title "Indian doctor online, Hindi & Gujarati" · H1 "Indian doctor online, in Hindi and Gujarati"
+- Searches the page is written for: hindi speaking gynecologist, gujarati doctor online, indian gynecologist online, indian women's health physio abroad. Search Console, 20 May to 17 November 2026, has zero impressions for any query containing "indian", "hindi", or "gujarati". The overseas queries that do appear are "online doctor for women's health", "online gynecologist", and "online physiotherapy". No separate "Indian doctor online" URL. That phrase sits on this page, and the gynecologist and physiotherapy pages say the same thing in the correct clinical lane.
 - Why new: language is the real reason many diaspora families look for an Indian doctor, and no page says it. Must name both doctors in their correct lanes.
 - Sections: which doctor for what; consults in English, Hindi, or Gujarati (needs owner confirmation per doctor); family members can join; same booking path and same limits on prescriptions abroad.
 

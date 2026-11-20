@@ -81,7 +81,7 @@ export function InternationalDoctorHubPage() {
             to={internationalServicePath("hindi-gujarati-doctor-online")}
             className="text-primary underline underline-offset-4"
           >
-            Book a Hindi or Gujarati consult
+            Indian doctor online, in Hindi or Gujarati
           </Link>
           .
         </p>

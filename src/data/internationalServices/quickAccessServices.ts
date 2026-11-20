@@ -59,6 +59,7 @@ export const QUICK_ACCESS_INTERNATIONAL_SERVICES: readonly InternationalService[
     metaDescription: `Online OB-GYN second opinion with Dr. Charmi Shah for patients outside India. Reports reviewed on the visit. WhatsApp ${PHONE}.`,
     intro: [
       "If you have been advised surgery, told a scan is abnormal, or cannot get a gynecologist appointment where you live, Dr. Charmi Shah can give a second opinion by video. She is an obstetrician and gynecologist (IVF and laparoscopy) at Women's Health Duo.",
+      "Patients outside India also look for an Indian gynecologist, or an Indian doctor, online. Dr. Charmi Shah consults by video in English, Hindi, and Gujarati.",
       `${OVERSEAS_SPEED} ${OVERSEAS_HOURS}`,
       OVERSEAS_REPORTS,
     ],
@@ -99,6 +100,11 @@ export const QUICK_ACCESS_INTERNATIONAL_SERVICES: readonly InternationalService[
         answer: OVERSEAS_REPORTS,
       },
       {
+        question: "Can I see an Indian gynecologist online?",
+        answer:
+          "Yes. Dr. Charmi Shah is an obstetrician and gynecologist in India, and she sees patients outside India by video in English, Hindi, or Gujarati. The visit is a second opinion. Examination, delivery, and surgery stay with a clinician where you live.",
+      },
+      {
         question: "Which languages can we use?",
         answer: OVERSEAS_LANGUAGES,
       },
@@ -117,6 +123,7 @@ export const QUICK_ACCESS_INTERNATIONAL_SERVICES: readonly InternationalService[
     metaDescription: `Online women's health physiotherapy with Dr. Zalak Shah (PT) when local care is hard to book. Video worldwide. WhatsApp ${PHONE}.`,
     intro: [
       "If there is no women's health physiotherapist near you, or the wait is long, Dr. Zalak Shah (PT) can start by video. She sees women for pelvic floor care, prenatal and postnatal physiotherapy, diastasis recti, and Pilates.",
+      "Patients outside India also look for an Indian physiotherapist online. Dr. Zalak Shah (PT) consults by video in English, Hindi, and Gujarati. She is a physiotherapist, not a gynecologist.",
       `${OVERSEAS_SPEED} ${OVERSEAS_HOURS} ${OVERSEAS_ANTENATAL_FORMAT}`,
     ],
     canHelp: [
@@ -155,6 +162,11 @@ export const QUICK_ACCESS_INTERNATIONAL_SERVICES: readonly InternationalService[
       {
         question: "What are the fees?",
         answer: OVERSEAS_FEES,
+      },
+      {
+        question: "Can I see an Indian physiotherapist online?",
+        answer:
+          "Yes. Dr. Zalak Shah (PT) is a women's health physiotherapist in India, and she sees patients outside India by video in English, Hindi, or Gujarati. She does not provide gynecology care and she does not prescribe medicines.",
       },
       {
         question: "Which languages does Dr. Zalak Shah use?",
@@ -231,12 +243,12 @@ export const QUICK_ACCESS_INTERNATIONAL_SERVICES: readonly InternationalService[
     slug: "hindi-gujarati-doctor-online",
     doctor: "both",
     analyticsService: "online_consult",
-    title: "Women's health consults in Hindi and Gujarati, online",
-    shortTitle: "Hindi & Gujarati doctor online",
-    metaDescription: `Hindi and Gujarati consults online with Dr. Charmi Shah (OB-GYN) and Dr. Zalak Shah (PT). WhatsApp ${PHONE}.`,
+    title: "Indian doctor online, in Hindi and Gujarati",
+    shortTitle: "Indian doctor online, Hindi & Gujarati",
+    metaDescription: `Indian doctor online for gynecology or physiotherapy, in Hindi or Gujarati, with Dr. Charmi Shah and Dr. Zalak Shah (PT). WhatsApp ${PHONE}.`,
     intro: [
-      "Many families outside India look for a doctor they can speak with in Hindi or Gujarati. Both sisters consult in English, Hindi, and Gujarati.",
-      "Dr. Charmi Shah is the obstetrician and gynecologist (IVF and laparoscopy). Dr. Zalak Shah (PT) is the women's health physiotherapist and Pilates instructor. Book the doctor who matches the question.",
+      "Families outside India who want an Indian doctor online often need the visit in Hindi or Gujarati. Dr. Charmi Shah and Dr. Zalak Shah (PT) both consult in English, Hindi, and Gujarati.",
+      "Dr. Charmi Shah is the obstetrician and gynecologist (IVF and laparoscopy). Dr. Zalak Shah (PT) is the women's health physiotherapist and Pilates instructor. Book the doctor who matches the question: gynecology with Dr. Charmi Shah, physiotherapy with Dr. Zalak Shah.",
       `${OVERSEAS_SPEED} ${OVERSEAS_HOURS} ${OVERSEAS_FEES}`,
     ],
     canHelp: [
@@ -258,6 +270,11 @@ export const QUICK_ACCESS_INTERNATIONAL_SERVICES: readonly InternationalService[
       "ivf-second-opinion",
     ],
     faqs: [
+      {
+        question: "Can I book an Indian doctor online for gynecology or physiotherapy?",
+        answer:
+          "Yes. For gynecology, pregnancy, fertility, IVF, or laparoscopy, book Dr. Charmi Shah. For pelvic floor, prenatal, postnatal, or Pilates care, book Dr. Zalak Shah (PT). Both consult in English, Hindi, and Gujarati.",
+      },
       {
         question: "Which doctor speaks Hindi and Gujarati?",
         answer: OVERSEAS_LANGUAGES,
