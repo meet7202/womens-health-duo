@@ -309,6 +309,6 @@ export function learnHubSeoDescription(parsed: LearnHubParsed): string {
       ? "Dr. Charmi Shah (OB-GYN)"
       : "Dr. Zalak Shah (women's health physio)";
   return capMetaDescription(
-    `${parsed.topic} clips led by ${doctor} on the Women's Health Duo Learn hub — dedicated watch pages for each video.`,
+    `${parsed.topic} clips led by ${doctor} on the Women's Health Duo Learn hub. Each video has its own watch page.`,
   );
 }

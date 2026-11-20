@@ -4,7 +4,7 @@
   "seoTitle": "How IVF works, stage by stage",
   "description": "IVF stages explained, from planning and stimulation to egg retrieval, lab fertilisation, transfer or freezing, plus OHSS warning signs.",
   "primaryQuestion": "How does IVF work step by step?",
-  "directAnswer": "In vitro fertilisation means eggs and sperm meet outside the body. The UK Human Fertilisation and Embryology Authority (HFEA) describes a typical cycle as ovarian stimulation with monitoring, egg collection, mixing eggs with sperm in a laboratory, embryo development for about two to six days, then embryo transfer—with remaining suitable embryos often frozen. HFEA notes one cycle commonly takes about three to six weeks depending on the protocol. No stage guarantees the next, and pathways differ by history and clinic plan.",
+  "directAnswer": "In vitro fertilisation means eggs and sperm meet outside the body. The UK Human Fertilisation and Embryology Authority (HFEA) describes a typical cycle as ovarian stimulation with monitoring, egg collection, mixing eggs with sperm in a laboratory, embryo development for about two to six days, then embryo transfer. Remaining suitable embryos are often frozen. HFEA notes one cycle commonly takes about three to six weeks depending on the protocol. No stage guarantees the next, and pathways differ by history and clinic plan.",
   "sections": [
     {
       "heading": "Where IVF sits among fertility options",
@@ -17,10 +17,10 @@
       "heading": "Stages in a typical stimulated cycle",
       "paragraphs": [
         "Planning: history, examination and tests come before medicines. Consent covers how eggs, sperm, embryos and information may be used. HFEA emphasises taking time to ask questions before starting.",
-        "Stimulation and monitoring: medicines encourage several follicles to grow. Protocols vary—some suppress natural hormones first (often called a long protocol); others use an antagonist approach after stimulation starts. Clinics watch progress with scans and sometimes blood tests.",
+        "Stimulation and monitoring: medicines encourage several follicles to grow. Protocols vary. Some suppress natural hormones first (often called a long protocol); others use an antagonist approach after stimulation starts. Clinics watch progress with scans and sometimes blood tests.",
         "Egg collection: eggs are retrieved under sedation or anaesthetic, usually lasting around half an hour. A sperm sample is prepared the same day, or donor sperm is thawed.",
         "Laboratory fertilisation and culture: eggs and sperm are combined, or a single sperm is injected into an egg (ICSI) when indicated. Embryos are observed for roughly two to six days. HFEA notes that transferring more than one embryo raises the chance of twins or triplets, so remaining suitable embryos are often frozen for later use.",
-        "Transfer and follow-up: an embryo is placed in the uterus; anaesthetic is usually unnecessary. Medicine may support the lining. You are given a date for a pregnancy test—testing early can give a misleading result."
+        "Transfer and follow-up: an embryo is placed in the uterus; anaesthetic is usually unnecessary. Medicine may support the lining. You are given a date for a pregnancy test, because testing early can give a misleading result."
       ]
     },
     {
@@ -33,8 +33,8 @@
     {
       "heading": "Risks to recognise, including OHSS",
       "paragraphs": [
-        "HFEA lists ovarian hyperstimulation syndrome (a severe reaction to fertility drugs), multiple pregnancy, and ectopic pregnancy among important IVF risks. On its risks page, OHSS symptoms include a swollen stomach and stomach pains, nausea and vomiting, shortness of breath, faintness, and reduced urine output—often appearing the week after egg collection. Contact your clinic straight away if these occur; difficulty breathing or chest pain needs emergency care.",
-        "Ask about single-embryo transfer to reduce multiple-pregnancy risk, what support is available during the wait for a test, and how clinic success data are reported—HFEA publishes UK statistics rather than a universal personal percentage. Outcome numbers for your age and diagnosis belong in a counselling conversation, not a marketing claim."
+        "HFEA lists ovarian hyperstimulation syndrome (a severe reaction to fertility drugs), multiple pregnancy, and ectopic pregnancy among important IVF risks. On its risks page, OHSS symptoms include a swollen stomach and stomach pains, nausea and vomiting, shortness of breath, faintness, and reduced urine output, often appearing the week after egg collection. Contact your clinic straight away if these occur; difficulty breathing or chest pain needs emergency care.",
+        "Ask about single-embryo transfer to reduce multiple-pregnancy risk, what support is available during the wait for a test, and how clinic success data are reported. HFEA publishes UK statistics rather than a universal personal percentage. Outcome numbers for your age and diagnosis belong in a counselling conversation, not a marketing claim."
       ]
     }
   ],
@@ -50,11 +50,11 @@
   ],
   "references": [
     {
-      "label": "HFEA — In vitro fertilisation (IVF)",
+      "label": "HFEA: In vitro fertilisation (IVF)",
       "url": "https://www.hfea.gov.uk/treatments/explore-all-treatments/in-vitro-fertilisation-ivf/"
     },
     {
-      "label": "HFEA — Risks of fertility treatment (includes OHSS symptoms)",
+      "label": "HFEA: Risks of fertility treatment (includes OHSS symptoms)",
       "url": "https://www.hfea.gov.uk/treatments/explore-all-treatments/risks-of-fertility-treatment/"
     }
   ],

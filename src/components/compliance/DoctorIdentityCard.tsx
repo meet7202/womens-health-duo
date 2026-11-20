@@ -15,7 +15,7 @@ type DoctorIdentityCardProps = {
   compact?: boolean;
 };
 
-/** Doctor identity block with registration number — required on booking-related pages. */
+/** Doctor identity block with registration number, required on booking-related pages. */
 export function DoctorIdentityCard({ slug, compact, className }: DoctorIdentityCardProps) {
   const d = DOCTOR_BY_SLUG[slug];
   const regLine = doctorRegistrationLine(slug);

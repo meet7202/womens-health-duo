@@ -48,20 +48,29 @@
   ],
   "references": [
     {
-      "label": "NHS — What are pelvic floor exercises?",
+      "label": "NHS: What are pelvic floor exercises?",
       "url": "https://www.nhs.uk/common-health-questions/womens-health/what-are-pelvic-floor-exercises/"
     },
     {
-      "label": "NHS — Urinary incontinence",
+      "label": "NHS: Urinary incontinence",
       "url": "https://www.nhs.uk/conditions/urinary-incontinence/"
     }
   ],
   "conversionCopy": "If leaks, urgency, heaviness or pelvic pain need sorting out, you can book a physiotherapy assessment with Dr. Zalak Shah (PT).",
   "explainerAlt": "Sketch of the pelvic floor supporting bladder and bowel, with tighten and release as separate jobs",
   "internalLinks": [
-    { "anchor": "are kegels right for everyone", "path": "/are-kegels-right-for-everyone/" },
-    { "anchor": "pelvic organ prolapse", "path": "/pelvic-organ-prolapse/" },
-    { "anchor": "what the pelvic floor is", "path": "/what-is-the-pelvic-floor/" }
+    {
+      "anchor": "are kegels right for everyone",
+      "path": "/are-kegels-right-for-everyone/"
+    },
+    {
+      "anchor": "pelvic organ prolapse",
+      "path": "/pelvic-organ-prolapse/"
+    },
+    {
+      "anchor": "what the pelvic floor is",
+      "path": "/what-is-the-pelvic-floor/"
+    }
   ],
   "parentHub": "/pelvic-floor-therapy/",
   "review": {

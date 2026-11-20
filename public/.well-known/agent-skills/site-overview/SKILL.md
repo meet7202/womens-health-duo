@@ -1,10 +1,10 @@
-# Site overview — Women's Health Duo
+# Site overview | Women's Health Duo
 
 Use this skill when you need orientation to **womenshealthduo.com**: who the clinicians are, what the site offers, and where to find machine-readable discovery files.
 
 ## Entity
 
-**Women's Health Duo** — Dr. Charmi Shah (OB-GYN, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapy, STOTT Pilates on Mat and Reformer).
+**Women's Health Duo**: Dr. Charmi Shah (OB-GYN, IVF, laparoscopy) and Dr. Zalak Shah (women's health physiotherapy, STOTT Pilates on Mat and Reformer).
 
 - **Not** a supplement or pill brand: education plus **booked clinical consults**.
 - **Online-first** for international patients; in-person India cities per doctor (see canonical `llms.txt`).
@@ -17,7 +17,7 @@ Fetch **`/llms.txt`** (plain text) for URL patterns, sitemap notes, service slug
 
 | Path                          | Purpose                                                     |
 | ----------------------------- | ----------------------------------------------------------- |
-| `/`                           | Homepage — services, FAQ preview, contact                   |
+| `/`                           | Homepage: services, FAQ preview, contact                    |
 | `/learn`                      | Video education hub (YouTube Shorts, Instagram reels/posts) |
 | `/learn/articles`             | Written topic guides index                                  |
 | `/book-consultation`          | Structured telemedicine intake + WhatsApp handoff           |
@@ -29,13 +29,13 @@ Fetch **`/llms.txt`** (plain text) for URL patterns, sitemap notes, service slug
 
 ## Discovery files
 
-- `/llms.txt` — assistant-oriented site map
-- `/.well-known/agent-skills/index.json` — curated agent skills index (this file is one entry)
-- `/.well-known/content-catalog.json` — RFC 9264 linkset for content discovery (not an API catalog)
-- `/sitemap.xml` — primary crawl urlset (~950+ URLs)
-- `/robots.txt` — origin rules declare `Content-Signal: search=yes, ai-input=yes, ai-train=no`; search + agent-fetch are allowed while training crawlers remain restricted by managed rules when configured
+- `/llms.txt`: assistant-oriented site map
+- `/.well-known/agent-skills/index.json`: curated agent skills index (this file is one entry)
+- `/.well-known/content-catalog.json`: RFC 9264 linkset for content discovery (not an API catalog)
+- `/sitemap.xml`: primary crawl urlset (~950+ URLs)
+- `/robots.txt`: origin rules declare `Content-Signal: search=yes, ai-input=yes, ai-train=no`. Search and agent-fetch bots are allowed; training crawlers stay restricted by managed rules when configured
 
-## Contact (general questions only — not emergency)
+## Contact (general questions only, not emergency)
 
 - WhatsApp practice line: +91 79905 50754 (`https://wa.me/917990550754`)
 - Email: contact@womenshealthduo.com

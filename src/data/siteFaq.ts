@@ -12,12 +12,12 @@ export const SITE_FAQ_BASE: FaqItem[] = [
   {
     question: "What is Women's Health Duo?",
     answer:
-      "Women's Health Duo is a women's healthcare brand led by two sisters: Dr. Charmi Shah (OB-GYN, IVF, and laparoscopic surgery) and Dr. Zalak Shah (women's health physiotherapist and Pilates instructor, including sessions online). The practice is online-first for global patients: most NRIs and international families book video OB-GYN consults and online physio / Pilates sessions from abroad. Dr. Charmi also sees patients in person in Mumbai, Ahmedabad, and Valsad; Dr. Zalak in Bangalore and Ahmedabad, both offer virtual visits worldwide.",
+      "Women's Health Duo is a women's healthcare brand led by two sisters: Dr. Charmi Shah (OB-GYN, IVF, and laparoscopic surgery) and Dr. Zalak Shah (women's health physiotherapist and Pilates instructor, including sessions online). The practice is online-first for global patients: most NRIs and international families book video OB-GYN consults and online physio / Pilates sessions from abroad. Dr. Charmi also sees patients in person in Mumbai, Ahmedabad, and Valsad, and Dr. Zalak in Bangalore and Ahmedabad. Both offer virtual visits worldwide.",
   },
   {
     question: "Which cities do you see patients in?",
     answer:
-      "Dr. Charmi Shah sees patients in person in Mumbai, Ahmedabad, and Valsad, and virtually worldwide. Dr. Zalak Shah sees patients in person in Bangalore and Ahmedabad, and virtually worldwide. Book via WhatsApp or email for scheduling. For every other country or city, care is delivered online (video or structured programs), see our virtual online consultation hub and city pages for diaspora hubs such as Dubai, London, Singapore, Toronto, Sydney, and New York. …and many more cities worldwide: we welcome patients everywhere; message us if yours is not named.",
+      "Dr. Charmi Shah sees patients in person in Mumbai, Ahmedabad, and Valsad, and virtually worldwide. Dr. Zalak Shah sees patients in person in Bangalore and Ahmedabad, and virtually worldwide. Book via WhatsApp or email for scheduling. In every other country or city, care is online (video or structured programs). See our virtual online consultation hub and the city pages for places with large Indian communities, such as Dubai, London, Singapore, Toronto, Sydney, and New York. Patients in many other cities book the same way; message us if yours is not named.",
   },
   {
     question: "Do you offer online consultations?",
@@ -47,12 +47,12 @@ export const SITE_FAQ_BASE: FaqItem[] = [
   {
     question: "Do you have pages for NRIs in major global cities?",
     answer:
-      'Yes. Open "Virtual online consultations" in the site menu for an overview, then choose a city page (for example Dubai, London, Singapore, Toronto, or Sydney) written for Indian diaspora and expatriate patients. Each page describes the same online booking process, telehealth from India with English, Hindi, or Gujarati where helpful. …and many more cities worldwide: the pages highlight common metros only; we serve families globally.',
+      'Yes. Open "Virtual online consultations" in the site menu for an overview, then choose a city page (for example Dubai, London, Singapore, Toronto, or Sydney) written for Indian diaspora and expatriate patients. Each page describes the same online booking process: telehealth from India in English, Hindi, or Gujarati where helpful. The pages cover common metros only, and families in other cities book the same way.',
   },
   {
     question: "Is there a free women's health community I can join?",
     answer:
-      "Yes. Women's Health Duo runs a free WhatsApp community for health tips, workshop updates, and supportive conversations on pregnancy, fertility, PCOS, pelvic health, and wellness — separate from booking a private consult. See our Free women's health community page (womenshealthduo.com/free-womens-health-community) for what is included and how to join.",
+      "Yes. Women's Health Duo runs a free WhatsApp community for health tips, workshop updates, and conversations on pregnancy, fertility, PCOS, pelvic health, and wellness. It is separate from booking a private consult. See our Free women's health community page (womenshealthduo.com/free-womens-health-community) for what is included and how to join.",
   },
 ];
 

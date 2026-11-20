@@ -31,7 +31,7 @@ const services = [
         icon: Baby,
         title: "Pregnancy & High-Risk Obstetrics",
         description:
-          "Comprehensive prenatal care, high-risk pregnancy management, and safe delivery support.",
+          "Prenatal check-ups, high-risk pregnancy management, and support through delivery.",
       },
       {
         icon: Flower2,
@@ -49,7 +49,7 @@ const services = [
         icon: HeartPulse,
         title: "PCOS & Hormonal Disorders",
         description:
-          "Expert management of polycystic ovarian syndrome, menstrual irregularities, and hormonal imbalances.",
+          "Diagnosis and management of polycystic ovarian syndrome, irregular periods, and hormonal imbalances.",
       },
       {
         icon: Stethoscope,
@@ -61,7 +61,7 @@ const services = [
         icon: ShieldCheck,
         title: "Menopause & Wellness",
         description:
-          "Compassionate care for menopausal symptoms, osteoporosis prevention, and women's wellness.",
+          "Care for menopausal symptoms, osteoporosis prevention, and general health in midlife.",
       },
     ],
   },
@@ -135,12 +135,12 @@ export const ServicesSection = () => {
               Our Services
             </span>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground mt-4 mb-6">
-              Comprehensive <span className="text-primary italic">Care</span> for Every Woman
+              Specialist <span className="text-primary italic">Care</span> for Women
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              The quick map above is a shortcut; here is the full menu by doctor, obstetrics,
-              gynecology, IVF, laparoscopy, pelvic and postpartum physio, and Pilates, by video from
-              anywhere. {PRACTICE_BOTH_DOCTORS_IN_PERSON}
+              Here is the full list by doctor: obstetrics, gynecology, IVF, laparoscopy, pelvic and
+              postpartum physio, and Pilates. Video consults are available from anywhere.{" "}
+              {PRACTICE_BOTH_DOCTORS_IN_PERSON}
             </p>
           </m.div>
 

@@ -17,7 +17,7 @@
     {
       "heading": "Urgency that is not an infection",
       "paragraphs": [
-        "NHS incontinence information separates a sudden intense need to pee from leaks that happen when you cough. Frequency with urgency, once infection is excluded, is often discussed as overactive bladder. That label still needs a person, not a quiz.",
+        "NHS incontinence information separates a sudden intense need to pee from leaks that happen when you cough. Frequency with urgency, once infection is excluded, is often discussed as overactive bladder. A clinician should confirm that label. An online quiz cannot.",
         "Going “just in case” before every outing can train the bladder to signal early. That habit is changeable. It is not the cause of burning or blood, so do not use bladder drills to avoid a urine test."
       ]
     },
@@ -48,20 +48,29 @@
   ],
   "references": [
     {
-      "label": "NHS — Urinary tract infections (UTIs)",
+      "label": "NHS: Urinary tract infections (UTIs)",
       "url": "https://www.nhs.uk/conditions/urinary-tract-infections-utis/"
     },
     {
-      "label": "NHS — Urinary incontinence",
+      "label": "NHS: Urinary incontinence",
       "url": "https://www.nhs.uk/conditions/urinary-incontinence/"
     }
   ],
   "conversionCopy": "If infection has been checked and you still need a bladder and pelvic-floor plan, you can book with Dr. Zalak Shah (PT).",
   "explainerAlt": "Bladder diary sketch separating burning and fever from urgency without infection",
   "internalLinks": [
-    { "anchor": "cough leaks", "path": "/why-do-i-leak-urine-when-i-cough/" },
-    { "anchor": "pelvic floor dysfunction", "path": "/what-is-pelvic-floor-dysfunction/" },
-    { "anchor": "bladder leakage hub", "path": "/bladder-leakage/" }
+    {
+      "anchor": "cough leaks",
+      "path": "/why-do-i-leak-urine-when-i-cough/"
+    },
+    {
+      "anchor": "pelvic floor dysfunction",
+      "path": "/what-is-pelvic-floor-dysfunction/"
+    },
+    {
+      "anchor": "bladder leakage hub",
+      "path": "/bladder-leakage/"
+    }
   ],
   "parentHub": "/bladder-leakage/",
   "review": {

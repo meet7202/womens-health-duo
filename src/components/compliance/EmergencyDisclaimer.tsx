@@ -5,7 +5,7 @@ type EmergencyDisclaimerProps = {
   className?: string;
 };
 
-/** Red emergency notice — required on all booking / teleconsultation pages. */
+/** Red emergency notice, required on all booking / teleconsultation pages. */
 export function EmergencyDisclaimer({ className }: EmergencyDisclaimerProps) {
   return (
     <div

@@ -4,7 +4,7 @@
   "seoTitle": "First fertility appointment: what to expect",
   "description": "What a first fertility visit usually covers: history for both partners, why tests are chosen case by case, and which records to bring along.",
   "primaryQuestion": "What happens at the first fertility appointment?",
-  "directAnswer": "A first fertility appointment usually gathers a detailed medical and reproductive history, reviews any records you already have, and plans only the assessments that answer your questions. ACOG’s evaluating-infertility FAQ describes history, examination and then targeted laboratory, imaging or procedural tests—not an automatic full catalogue. ASRM’s 2026 committee opinion likewise frames evaluation as systematic and cost-conscious, covering ovulatory status, the female reproductive tract and semen analysis when a male partner is involved. Walking in does not commit you to IVF.",
+  "directAnswer": "A first fertility appointment usually gathers a detailed medical and reproductive history, reviews any records you already have, and plans only the assessments that answer your questions. ACOG’s evaluating-infertility FAQ describes history, examination and then targeted laboratory, imaging or procedural tests, not an automatic full set. ASRM’s 2026 committee opinion likewise frames evaluation as systematic and cost-conscious, covering ovulatory status, the female reproductive tract and semen analysis when a male partner is involved. Walking in does not commit you to IVF.",
   "sections": [
     {
       "heading": "History both people may be asked",
@@ -17,7 +17,7 @@
       "heading": "Categories of assessment, chosen to fit",
       "paragraphs": [
         "ASRM summarises that evaluation should include ovulatory status, structure and patency of the female reproductive tract, and semen evaluation of the male partner when relevant. ACOG notes male testing often starts with semen analysis, while female testing may include progesterone timing, selected hormone checks, ultrasound, and tubal or uterine imaging when indicated.",
-        "NICE NG257 also sequences common tools—for example mid-luteal progesterone to support ovulation assessment, and tubal screening methods such as hysterosalpingography when comorbidities are not already known—while advising against routine tests that do not change care. You should leave knowing why each suggested test was picked."
+        "NICE NG257 also sets an order for common tests, for example mid-luteal progesterone to support ovulation assessment, and tubal screening methods such as hysterosalpingography when comorbidities are not already known. It advises against routine tests that do not change care. You should leave knowing why each suggested test was picked."
       ]
     },
     {
@@ -31,7 +31,7 @@
       "heading": "Records and questions that help the hour",
       "paragraphs": [
         "Helpful items include a simple list of period start dates, previous pregnancy outcomes, surgery notes, medicine names, allergy lists, and any semen or hormone reports already done. Photographs of labels beat guessing spellings. If a partner cannot attend, agree which questions they still need answered afterward.",
-        "Ask what the clinician thinks the main uncertainties are, which tests are first-line for you, what can wait, and what would change the plan if results are normal or abnormal. Seek emergency care for severe pelvic pain with fainting or heavy bleeding that leaves you light-headed—those crises are not first-visit scheduling problems."
+        "Ask what the clinician thinks the main uncertainties are, which tests are first-line for you, what can wait, and what would change the plan if results are normal or abnormal. Seek emergency care for severe pelvic pain with fainting or heavy bleeding that leaves you light-headed. Those are emergencies, not something to hold for a first visit."
       ]
     }
   ],
@@ -42,20 +42,20 @@
     },
     {
       "question": "Will invasive tests happen on the same day?",
-      "answer": "Often the first visit is conversation and planning. Procedures such as hysteroscopy or laparoscopy are selective, usually after history and simpler tests point to a reason—not a default for every new patient."
+      "answer": "Often the first visit is conversation and planning. Procedures such as hysteroscopy or laparoscopy are selective, usually after history and simpler tests point to a reason. They are not a default for every new patient."
     }
   ],
   "references": [
     {
-      "label": "ACOG — Evaluating Infertility (FAQ136)",
+      "label": "ACOG: Evaluating Infertility (FAQ136)",
       "url": "https://www.acog.org/womens-health/faqs/evaluating-infertility"
     },
     {
-      "label": "ASRM Practice Committee — Fertility evaluation of infertile women (2026)",
+      "label": "ASRM Practice Committee: Fertility evaluation of infertile women (2026)",
       "url": "https://www.asrm.org/practice-guidance/practice-committee-documents/fertility-evaluation-of-infertile-women-a-committee-opinion-2026"
     },
     {
-      "label": "NICE NG257 — Investigation of fertility problems",
+      "label": "NICE NG257: Investigation of fertility problems",
       "url": "https://www.nice.org.uk/guidance/NG257/chapter/investigation-of-fertility-problems-and-management-strategies"
     }
   ],

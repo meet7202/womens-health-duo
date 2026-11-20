@@ -4,7 +4,7 @@
   "seoTitle": "What is PCOS? Now renamed PMOS explained",
   "description": "PCOS is now renamed PMOS (Polyendocrine Metabolic Ovarian Syndrome). See 2023 adult and adolescent criteria, AMH limits, and why one scan is not enough.",
   "primaryQuestion": "What is PCOS and how is it diagnosed?",
-  "directAnswer": "Polycystic ovary syndrome (PCOS) is a hormonal and metabolic condition. In May 2026 ASRM endorsed renaming it Polyendocrine Metabolic Ovarian Syndrome (PMOS) so the name better reflects endocrine and metabolic features—not simply “cysts on the ovary.” Diagnosis is a clinical synthesis: in adults, two of three features after other causes are excluded; adolescents need both irregular cycles and hyperandrogenism, without relying on ultrasound or AMH within eight years of menarche. You will still see PCOS on older records; that does not mean a second disease.",
+  "directAnswer": "Polycystic ovary syndrome (PCOS) is a hormonal and metabolic condition. In May 2026 ASRM endorsed renaming it Polyendocrine Metabolic Ovarian Syndrome (PMOS) so the name better reflects endocrine and metabolic features, not simply “cysts on the ovary.” Diagnosis is a clinical synthesis: in adults, two of three features after other causes are excluded; adolescents need both irregular cycles and hyperandrogenism, without relying on ultrasound or AMH within eight years of menarche. You will still see PCOS on older records; that does not mean a second disease.",
   "sections": [
     {
       "heading": "What is PCOS, and what does the PMOS rename mean?",
@@ -35,14 +35,14 @@
       "paragraphs": [
         "A person may have regular-looking bleeds yet still need an ovulation discussion; another may have irregular cycles for a reason unrelated to PCOS/PMOS. Hormonal contraception can change both bleeding patterns and ovarian appearance, which is one reason method history matters before interpreting results. An ultrasound line that says “polycystic ovaries” is not, by itself, a complete diagnosis.",
         "AMH (anti-Müllerian hormone) can support the ovarian morphology criterion in selected adults, but laboratories and clinicians must allow for age, body mass index, recent combined pill use and cycle-day variation. It does not grade severity, and it is most useful when it answers a specific diagnostic question.",
-        "Separate guides cover recognising symptoms when periods look regular, and planning pregnancy with PCOS/PMOS. A PCOS overview hub can help you navigate services once the naming and diagnostic questions are clearer."
+        "Separate guides cover recognising symptoms when periods look regular, and planning pregnancy with PCOS/PMOS. A PCOS overview hub can help you find the right service once the naming and diagnostic questions are clearer."
       ]
     },
     {
       "heading": "Questions for a first appointment, and urgent symptoms",
       "paragraphs": [
         "Bring cycle dates, symptom timing, current medicines and supplements, previous reports, and your priorities for the visit. Ask which adult or adolescent criteria are being applied; whether another cause needs exclusion; what each proposed test could change; and how follow-up will address cycle care, skin or hair symptoms, metabolic health or pregnancy planning rather than only a scan appearance.",
-        "Routine review is appropriate for persistent cycle changes, troublesome androgen-type skin or hair symptoms, or fertility and pregnancy-planning concerns. Seek urgent care for severe pelvic pain, faintness, very heavy bleeding, or symptoms linked to a possible pregnancy—including severe one-sided pain, shoulder-tip pain or fainting when pregnancy is possible. Those problems are not explained safely by a PCOS/PMOS label and should not wait for routine booking."
+        "Routine review is appropriate for persistent cycle changes, troublesome androgen-type skin or hair symptoms, or fertility and pregnancy-planning concerns. Seek urgent care for severe pelvic pain, faintness, very heavy bleeding, or symptoms linked to a possible pregnancy, including severe one-sided pain, shoulder-tip pain or fainting when pregnancy is possible. Those problems are not explained safely by a PCOS/PMOS label and should not wait for routine booking."
       ]
     }
   ],
@@ -58,15 +58,15 @@
   ],
   "references": [
     {
-      "label": "ASRM — PCOS is Now PMOS: Understanding the Name Change (27 May 2026)",
+      "label": "ASRM: PCOS is Now PMOS: Understanding the Name Change (27 May 2026)",
       "url": "https://www.asrm.org/news-and-events/asrm-news/latest-news/may-27-2026-pcos-is-now-pmos-understanding-the-name-change/"
     },
     {
-      "label": "Monash MCHRI — International evidence-based guideline for the assessment and management of PCOS/PMOS (2023)",
+      "label": "Monash MCHRI: International evidence-based guideline for the assessment and management of PCOS/PMOS (2023)",
       "url": "https://www.monash.edu/medicine/mchri/pcos/guideline"
     },
     {
-      "label": "Medical Journal of Australia — Summary of the 2023 international PCOS guideline (Australian perspective)",
+      "label": "Medical Journal of Australia: Summary of the 2023 international PCOS guideline (Australian perspective)",
       "url": "https://www.mja.com.au/journal/2024/221/7/summary-2023-international-evidence-based-guideline-assessment-and-management"
     }
   ],

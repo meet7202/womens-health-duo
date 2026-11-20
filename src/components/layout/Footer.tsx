@@ -86,8 +86,8 @@ export const Footer = () => {
               <h3 className="font-heading text-lg font-semibold">Women's Health Duo</h3>
             </div>
             <p className="text-background/80 text-sm leading-relaxed">
-              Two sisters, one mission: comprehensive women's healthcare combining medical expertise
-              with physiotherapy and wellness.
+              Two sisters, one practice: obstetrics, gynecology and IVF with Dr. Charmi Shah, and
+              women's health physiotherapy with Dr. Zalak Shah.
             </p>
           </div>
 

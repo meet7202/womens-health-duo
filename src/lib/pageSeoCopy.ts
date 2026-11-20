@@ -13,7 +13,7 @@ import {
 } from "../data/knowledgeHubVideos";
 
 /** Homepage hero H1 when `/` has no section permalink. */
-export const HOME_DEFAULT_H1 = "Comprehensive Women's Health Care";
+export const HOME_DEFAULT_H1 = "Specialist Women's Health Care";
 
 export const HOME_DEFAULT_H1_SUBTITLE =
   "Hormonal Health · Fertility · Pregnancy · Postpartum · Pelvic Health · Physiotherapy";
@@ -39,7 +39,7 @@ export function virtualCountryDocumentTitle(country: string): string {
 }
 
 export function virtualCountryH1(country: string): string {
-  return `Women's Health Duo – virtual care for patients in ${country}`;
+  return `Women's Health Duo: virtual care for patients in ${country}`;
 }
 
 export function virtualCityDocumentTitle(city: string, country: string): string {
@@ -49,7 +49,7 @@ export function virtualCityDocumentTitle(city: string, country: string): string 
 }
 
 export function virtualCityH1(city: string, country: string): string {
-  return `Women's Health Duo – online care for patients in ${city}, ${country}`;
+  return `Women's Health Duo: online care for patients in ${city}, ${country}`;
 }
 
 /** Append " online" for SERP titles unless the label already mentions online. */
@@ -159,7 +159,7 @@ export function learnWatchDocumentTitle(video: KnowledgeHubVideo): string {
   const base = watchTitleBase(video);
   if (video.kind === "instagram_post") {
     const suffix = video.instagramPostType === "carousel" ? "Instagram carousel" : "Instagram post";
-    return formatDocumentTitle(`${base} — ${suffix}`);
+    return formatDocumentTitle(`${base} (${suffix})`);
   }
   return formatDocumentTitle(base);
 }
@@ -168,7 +168,7 @@ export function learnWatchH1(video: KnowledgeHubVideo): string {
   if (video.kind === "instagram_post") {
     const base = watchTitleBase(video);
     const suffix = video.instagramPostType === "carousel" ? "Instagram carousel" : "Instagram post";
-    return `${base} — ${suffix}`;
+    return `${base} (${suffix})`;
   }
   return watchTitleBase(video);
 }
@@ -192,7 +192,7 @@ export function topicGuideDocumentTitle(guideTitle: string): string {
   return plain.length <= DOCUMENT_TITLE_MAX_LEN ? plain : branded;
 }
 
-export const FAQ_DOCUMENT_TITLE = formatDocumentTitle("FAQ – OB-GYN, IVF & physio");
+export const FAQ_DOCUMENT_TITLE = formatDocumentTitle("FAQ: OB-GYN, IVF & physio");
 export const FAQ_H1 = "Frequently asked questions";
 
 export const MEDICAL_DOCUMENT_TITLE = formatDocumentTitle("Medical disclaimer");

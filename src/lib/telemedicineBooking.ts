@@ -110,7 +110,7 @@ export function buildBookingWhatsAppMessage(data: BookingFormData): string {
   const serviceLine = serviceLabel ? `*Service interest:* ${serviceLabel}` : null;
 
   const sections = [
-    "*Teleconsultation booking request — Women's Health Duo*",
+    "*Teleconsultation booking request: Women's Health Duo*",
     "",
     "*Doctor:* " + doctorLabel,
     ...(serviceLine ? [serviceLine] : []),

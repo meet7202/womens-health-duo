@@ -4,7 +4,7 @@
   "seoTitle": "Heavy periods and clots: when to seek care",
   "description": "Heavy periods may mean changing pads every 1–2 hours or clots over 2.5 cm. See NHS signs, common causes, and when bleeding needs urgent care.",
   "primaryQuestion": "What causes heavy periods and blood clots?",
-  "directAnswer": "Periods feel heavy when flow interferes with daily life—changing a pad or tampon every one to two hours, using two products together, bleeding longer than seven days, soaking through clothes, or passing clots larger than about 2.5 cm. Clots can appear in heavy flow and do not diagnose a single disease by themselves. Causes range from no identifiable pathology to fibroids, adenomyosis, endometriosis, bleeding disorders, medicines that increase bleeding, and, rarely, womb cancer. Assessment focuses on how bleeding affects you, related symptoms, and whether anaemia or a structural cause needs checking.",
+  "directAnswer": "Periods feel heavy when flow interferes with daily life: changing a pad or tampon every one to two hours, using two products together, bleeding longer than seven days, soaking through clothes, or passing clots larger than about 2.5 cm. Clots can appear in heavy flow and do not diagnose a single disease by themselves. Causes range from no identifiable pathology to fibroids, adenomyosis, endometriosis, bleeding disorders, medicines that increase bleeding, and, rarely, womb cancer. Assessment focuses on how bleeding affects you, related symptoms, and whether anaemia or a structural cause needs checking.",
   "sections": [
     {
       "heading": "How to recognise heavy menstrual bleeding",
@@ -16,7 +16,7 @@
     {
       "heading": "Causes clinicians commonly consider",
       "paragraphs": [
-        "NHS notes that heavy periods can be normal for some people, and may be heavier soon after periods start, after pregnancy, or approaching menopause. Conditions affecting the womb or ovaries—such as fibroids, endometriosis, adenomyosis, pelvic inflammatory disease and polycystic ovary syndrome—can contribute. Bleeding disorders such as von Willebrand disease, and some anticoagulants or chemotherapy medicines, also feature on the NHS list. Rarely, heavy periods can signal womb cancer.",
+        "NHS notes that heavy periods can be normal for some people, and may be heavier soon after periods start, after pregnancy, or approaching menopause. Conditions affecting the womb or ovaries can contribute, such as fibroids, endometriosis, adenomyosis, pelvic inflammatory disease and polycystic ovary syndrome. Bleeding disorders such as von Willebrand disease, and some anticoagulants or chemotherapy medicines, also feature on the NHS list. Rarely, heavy periods can signal womb cancer.",
         "You cannot sort these causes from clot size alone. Persistent bleeding between periods, pelvic pain or pressure symptoms, and personal or family clues to a clotting problem change how urgently imaging or specialist review is considered. NICE advises taking a history that covers the nature of the bleeding, related symptoms, quality-of-life impact, and factors that affect treatment choices."
       ]
     },
@@ -24,7 +24,7 @@
       "heading": "What assessment and treatment categories may involve",
       "paragraphs": [
         "NICE NG88 recommends a full blood count for all women with heavy menstrual bleeding, in parallel with treatment offered, because anaemia is common. Coagulation testing may be considered when heavy bleeding has been present since periods began and personal or family history suggests a clotting disorder. Hormone or thyroid blood tests are not routine for heavy bleeding alone unless other signs of thyroid disease are present.",
-        "Depending on history and examination, investigation may include ultrasound or outpatient hysteroscopy when cavity problems, polyps or endometrial pathology are suspected. Treatment categories UK guidance discusses include a levonorgestrel-releasing intrauterine system, non-hormonal options such as antifibrinolytic medicine or anti-inflammatory pain relief, hormonal contraception or cyclical progestogens, and, when needed, procedures such as fibroid treatment, endometrial ablation or hysterectomy. Suitability depends on fertility plans, fibroid size and location, other symptoms and your preferences—no regimen is prescribed from an article."
+        "Depending on history and examination, investigation may include ultrasound or outpatient hysteroscopy when cavity problems, polyps or endometrial pathology are suspected. Treatment categories UK guidance discusses include a levonorgestrel-releasing intrauterine system, non-hormonal options such as antifibrinolytic medicine or anti-inflammatory pain relief, hormonal contraception or cyclical progestogens, and, when needed, procedures such as fibroid treatment, endometrial ablation or hysterectomy. Suitability depends on fertility plans, fibroid size and location, other symptoms and your preferences. No regimen is prescribed from an article."
       ]
     },
     {
@@ -47,11 +47,11 @@
   ],
   "references": [
     {
-      "label": "NHS — Heavy periods",
+      "label": "NHS: Heavy periods",
       "url": "https://www.nhs.uk/conditions/heavy-periods/"
     },
     {
-      "label": "NICE NG88 — Heavy menstrual bleeding: assessment and management",
+      "label": "NICE NG88: Heavy menstrual bleeding: assessment and management",
       "url": "https://www.nice.org.uk/guidance/ng88/chapter/Recommendations"
     }
   ],

@@ -10,7 +10,7 @@
     {
       "heading": "What often hurts, and why that is not one injury",
       "paragraphs": [
-        "The pubic joint and the joints at the back of the pelvis can stay sensitive after pregnancy, especially with stairs, turning in bed or standing on one leg to dress. That is a load and joint story. It is not automatically a damaged pelvic floor.",
+        "The pubic joint and the joints at the back of the pelvis can stay sensitive after pregnancy, especially with stairs, turning in bed or standing on one leg to dress. That pain comes from load on the joints. It does not automatically mean the pelvic floor is damaged.",
         "A perineal tear, an episiotomy or a caesarean scar can hurt when you sit, feed, or open your bowels. Stinging with urine in the first days can be the wound. New burning, smelly discharge or fever needs a medical check for infection rather than a massage video."
       ]
     },
@@ -18,7 +18,7 @@
       "heading": "How feeding, lifting and constipation keep it going",
       "paragraphs": [
         "Twisting to reach a cot, holding a feed in one position, and straining on the toilet all reload the pelvis. Small changes in how you roll, how you hold the baby, and how you manage constipation often matter more than a hard exercise in week two.",
-        "NHS postnatal body pages encourage pelvic-floor and gentle tummy work when you feel able, and rest when you need it. They do not set a day when pain must be gone. Comparison with someone else’s week-six photo is not a clinical target."
+        "NHS postnatal body pages encourage pelvic-floor and gentle tummy work when you feel able, and rest when you need it. They do not set a day when pain must be gone. Someone else’s week-six photo is not a clinical target."
       ]
     },
     {
@@ -48,20 +48,29 @@
   ],
   "references": [
     {
-      "label": "NHS — Your body after the birth",
+      "label": "NHS: Your body after the birth",
       "url": "https://www.nhs.uk/baby/support-and-services/your-body-after-the-birth/"
     },
     {
-      "label": "NHS — Pelvic pain",
+      "label": "NHS: Pelvic pain",
       "url": "https://www.nhs.uk/conditions/pelvic-pain/"
     }
   ],
   "conversionCopy": "If postnatal pelvic pain is limiting daily tasks and you are medically stable, you can book a physiotherapy assessment with Dr. Zalak Shah (PT).",
   "explainerAlt": "Side-view sketch of pelvis after birth marking joints, scar and pelvic floor as separate sources of pain",
   "internalLinks": [
-    { "anchor": "how long recovery takes", "path": "/how-long-does-postpartum-recovery-take/" },
-    { "anchor": "C-section recovery", "path": "/how-to-recover-after-c-section/" },
-    { "anchor": "postpartum recovery hub", "path": "/postpartum-recovery/" }
+    {
+      "anchor": "how long recovery takes",
+      "path": "/how-long-does-postpartum-recovery-take/"
+    },
+    {
+      "anchor": "C-section recovery",
+      "path": "/how-to-recover-after-c-section/"
+    },
+    {
+      "anchor": "postpartum recovery hub",
+      "path": "/postpartum-recovery/"
+    }
   ],
   "parentHub": "/postpartum-recovery/",
   "review": {

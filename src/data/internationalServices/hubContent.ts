@@ -7,10 +7,10 @@ export const INTERNATIONAL_HUB = {
   documentTitlePrimary: "International women's health consultation",
   h1: "International consultation & second opinion",
   metaDescription:
-    "International online women's health services with Dr. Charmi Shah (OB-GYN, IVF) and Dr. Zalak Shah (physio & STOTT Pilates) — fertility second opinions, pelvic health, and video consults worldwide via WhatsApp.",
+    "International online women's health services with Dr. Charmi Shah (OB-GYN, IVF) and Dr. Zalak Shah (physio & STOTT Pilates): fertility second opinions, pelvic health, and video consults worldwide via WhatsApp.",
   intro: [
-    "Women's Health Duo offers international video consultations for patients outside India — NRIs, expats, and families comparing care between countries. Choose obstetric, gynecologic, and fertility services with Dr. Charmi Shah, or women's health physiotherapy and Pilates with Dr. Zalak Shah.",
-    "All bookings start on WhatsApp or through our structured Book consultation flow with telemedicine consent. This is not for emergencies — use local emergency services for urgent symptoms.",
+    "Women's Health Duo offers international video consultations for patients outside India, including NRIs, expats, and families comparing care between countries. Choose obstetric, gynecologic, and fertility services with Dr. Charmi Shah, or women's health physiotherapy and Pilates with Dr. Zalak Shah.",
+    "All bookings start on WhatsApp or through our structured Book consultation flow with telemedicine consent. This is not for emergencies. Use local emergency services for urgent symptoms.",
   ],
 } as const;
 
@@ -21,7 +21,7 @@ export const INTERNATIONAL_DOCTOR_HUBS: readonly InternationalDoctorHub[] = [
     documentTitlePrimary: "International OB-GYN & fertility",
     h1: "International OB-GYN, IVF & second opinion",
     metaDescription:
-      "International teleconsultation with Dr. Charmi Shah — IVF second opinion, fertility planning, high-risk pregnancy counselling, endometriosis, PCOS, and gynecology report review for patients worldwide.",
+      "International teleconsultation with Dr. Charmi Shah: IVF second opinion, fertility planning, high-risk pregnancy counselling, endometriosis, PCOS, and gynecology report review for patients worldwide.",
     intro: [
       "Dr. Charmi Shah is an obstetrician, gynecologist, IVF specialist, and laparoscopic surgeon practising in Mumbai, Ahmedabad, and Valsad, with virtual care for international patients.",
       "Browse specialist services below or message on WhatsApp with your country, time zone, and main concern.",
@@ -33,10 +33,10 @@ export const INTERNATIONAL_DOCTOR_HUBS: readonly InternationalDoctorHub[] = [
     documentTitlePrimary: "International women's health physio",
     h1: "International women's health physiotherapy & Pilates",
     metaDescription:
-      "International online physiotherapy and STOTT Pilates with Dr. Zalak Shah — pelvic floor, prenatal/postnatal rehab, postpartum recovery, and pregnancy-safe exercise for clients worldwide.",
+      "International online physiotherapy and STOTT Pilates with Dr. Zalak Shah: pelvic floor, prenatal/postnatal rehab, postpartum recovery, and pregnancy-safe exercise for clients worldwide.",
     intro: [
       "Dr. Zalak Shah is a women's health physiotherapist and STOTT Pilates instructor based in Bangalore and Ahmedabad, offering video consults internationally.",
-      "Pair pelvic rehab with Dr. Charmi's medical care when needed — both sisters consult through Women's Health Duo.",
+      "Pelvic rehab can be paired with Dr. Charmi's medical care when needed. Both sisters consult through Women's Health Duo.",
     ],
   },
 ];
@@ -45,7 +45,7 @@ export const INTERNATIONAL_HUB_FAQS = [
   {
     question: "Who are international consultations for?",
     answer:
-      "NRIs, expats, and anyone abroad seeking India-trained women's health specialists — for second opinions, fertility planning, pelvic physio, or postpartum rehab — without replacing local emergency care.",
+      "NRIs, expats, and anyone abroad who wants an India-trained women's health specialist for a second opinion, fertility planning, pelvic physio, or postpartum rehab. These visits do not replace local emergency care.",
   },
   {
     question: "How do I book an international consult?",
@@ -60,12 +60,12 @@ export const INTERNATIONAL_HUB_FAQS = [
   {
     question: "Can both sisters be involved in my care?",
     answer:
-      "Yes. Many patients combine medical consults with physiotherapy — mention both goals when you message on WhatsApp.",
+      "Yes. Many patients combine medical consults with physiotherapy. Mention both goals when you message on WhatsApp.",
   },
   {
     question: "Is this the same as the virtual city pages?",
     answer:
-      "City pages help you find care by location. This hub lists international service offerings by clinical need — both paths use the same WhatsApp booking flow.",
+      "City pages help you find care by location. This hub lists international services by clinical need. Both use the same WhatsApp booking flow.",
   },
   {
     question: "What about emergencies?",

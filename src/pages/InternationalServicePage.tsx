@@ -44,7 +44,7 @@ export function InternationalServicePage() {
 
   const service = getInternationalService(serviceSlug);
   if (!service) {
-    // True not-found — do not soft-redirect unknown slugs to the hub (SEO-33/F).
+    // True not-found: do not soft-redirect unknown slugs to the hub (SEO-33/F).
     return <NotFound />;
   }
 

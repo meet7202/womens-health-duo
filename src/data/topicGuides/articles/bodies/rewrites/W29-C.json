@@ -48,19 +48,25 @@
   ],
   "references": [
     {
-      "label": "NHS — Infertility",
+      "label": "NHS: Infertility",
       "url": "https://www.nhs.uk/conditions/infertility/"
     },
     {
-      "label": "NICE — Fertility problems: trying for a baby",
+      "label": "NICE: Fertility problems: trying for a baby",
       "url": "https://www.nice.org.uk/guidance/cg156/ifp/chapter/trying-for-a-baby"
     }
   ],
   "conversionCopy": "If you want a fertility plan that fits your history, you can book a consultation with Dr. Charmi Shah.",
   "explainerAlt": "Calendar sketch of sex every few days across a cycle rather than one predicted day",
   "internalLinks": [
-    { "anchor": "tracking ovulation", "path": "/how-to-track-ovulation/" },
-    { "anchor": "preconception planning", "path": "/what-is-preconception-planning/" },
+    {
+      "anchor": "tracking ovulation",
+      "path": "/how-to-track-ovulation/"
+    },
+    {
+      "anchor": "preconception planning",
+      "path": "/what-is-preconception-planning/"
+    },
     {
       "anchor": "when to see a fertility specialist",
       "path": "/when-to-see-a-fertility-specialist/"

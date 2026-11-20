@@ -1,10 +1,10 @@
-# Learn hub navigation — Women's Health Duo
+# Learn hub navigation | Women's Health Duo
 
 Use this skill when you need to find **educational video and article content** on womenshealthduo.com (not booking or clinical advice).
 
 ## Hub entry
 
-**`/learn`** — carousel of YouTube Shorts, Instagram reels, and Instagram posts/carousels from Dr. Charmi and Dr. Zalak.
+**`/learn`** is a carousel of YouTube Shorts, Instagram reels, and Instagram posts/carousels from Dr. Charmi and Dr. Zalak.
 
 ## Filter URL patterns
 
@@ -32,13 +32,13 @@ Each watch page has unique title/H1, poster image, and `VideoObject` (or `Social
 
 ## Written articles
 
-**`/learn/articles`** — index of topic guides.
+**`/learn/articles`** is the index of topic guides.
 
 Flat clinical URLs at site root, e.g. `/pcos`, `/endometriosis` (see sitemap topic-guide segment).
 
 ## Topical clusters (homepage of Learn)
 
-**`/learn#learn-pillars`** — six Bing-oriented pillars linking into topic filters and example virtual-care URLs.
+**`/learn#learn-pillars`** has six Bing-oriented pillars linking into topic filters and example virtual-care URLs.
 
 ## Playback notes for agents
 

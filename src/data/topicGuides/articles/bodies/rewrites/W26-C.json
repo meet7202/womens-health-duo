@@ -4,7 +4,7 @@
   "seoTitle": "Is HRT right for me? Questions to ask",
   "description": "HRT can ease flushes, sleep and vaginal symptoms. Prepare questions on benefits, clot and breast-cancer risks, patches versus tablets, and alternatives.",
   "primaryQuestion": "How do I decide whether HRT is right for me?",
-  "directAnswer": "Hormone replacement therapy (HRT) replaces oestrogen—and usually progestogen if you still have a womb—to relieve menopause-associated symptoms such as hot flushes, night sweats, sleep disturbance, low mood linked to menopause, and vaginal dryness. NHS advice is that for many people under 60 with bothersome symptoms and without high breast-cancer or clot risk, benefits are likely to outweigh risks, but the balance is personal. No article can declare HRT universally safe or unsafe. Shared decisions use your symptom burden, age, medical history and preferences.",
+  "directAnswer": "Hormone replacement therapy (HRT) replaces oestrogen (and usually progestogen if you still have a womb) to relieve menopause-associated symptoms such as hot flushes, night sweats, sleep disturbance, low mood linked to menopause, and vaginal dryness. NHS advice is that for many people under 60 with bothersome symptoms and without high breast-cancer or clot risk, benefits are likely to outweigh risks, but the balance is personal. No article can declare HRT universally safe or unsafe. Shared decisions use your symptom burden, age, medical history and preferences.",
   "sections": [
     {
       "heading": "What HRT is trying to treat",
@@ -14,10 +14,10 @@
       ]
     },
     {
-      "heading": "Option categories—not a personal prescription",
+      "heading": "Option categories, not a personal prescription",
       "paragraphs": [
-        "NHS explains combined HRT (oestrogen plus progestogen) when you have a womb, and oestrogen-only HRT after hysterectomy. Delivery methods include tablets, skin patches, gel, spray, and intrauterine progestogen paired with oestrogen. Sequential combined regimens are often used while periods are still occurring; continuous combined regimens are usual after 12 months without periods. Testosterone gel may be considered by specialists for persistent low sexual desire after menopause when HRT alone is not enough—licensing and access vary.",
-        "NICE advises discussing benefits and risks of combined versus oestrogen-only treatment, transdermal versus oral routes, sequential versus continuous combined schedules, and dose and duration, tailored to age and risk factors. Patches, gel and spray do not increase blood-clot risk the way tablets can, which matters if clot risk is elevated."
+        "NHS explains combined HRT (oestrogen plus progestogen) when you have a womb, and oestrogen-only HRT after hysterectomy. Delivery methods include tablets, skin patches, gel, spray, and intrauterine progestogen paired with oestrogen. Sequential combined regimens are often used while periods are still occurring; continuous combined regimens are usual after 12 months without periods. Testosterone gel may be considered by specialists for persistent low sexual desire after menopause when HRT alone is not enough. Licensing and access vary.",
+        "NICE advises discussing benefits and risks of combined versus oestrogen-only treatment, transdermal versus oral routes, sequential versus continuous combined schedules, and dose and duration, taking age and risk factors into account. Patches, gel and spray do not increase blood-clot risk the way tablets can, which matters if your clot risk is already raised."
       ]
     },
     {
@@ -37,7 +37,7 @@
     {
       "heading": "When to seek urgent care while using or considering HRT",
       "paragraphs": [
-        "Seek emergency care for symptoms of a possible clot or stroke—sudden chest pain, coughing blood, severe calf swelling and pain, sudden weakness, speech difficulty or collapse—or for heavy bleeding with fainting. Any bleeding after confirmed menopause still needs prompt assessment even if you are not on HRT.",
+        "Seek emergency care for symptoms of a possible clot or stroke (sudden chest pain, coughing blood, severe calf swelling and pain, sudden weakness, speech difficulty or collapse) or for heavy bleeding with fainting. Any bleeding after confirmed menopause still needs prompt assessment even if you are not on HRT.",
         "Book a non-urgent review if side effects persist, bleeding on HRT stays irregular beyond the early adjustment window your clinician described, or symptoms are uncontrolled. Alternatives and follow-up timing belong in that visit, not in self-adjustment of doses."
       ]
     }
@@ -54,19 +54,19 @@
   ],
   "references": [
     {
-      "label": "NHS — Benefits and risks of hormone replacement therapy (HRT)",
+      "label": "NHS: Benefits and risks of hormone replacement therapy (HRT)",
       "url": "https://www.nhs.uk/medicines/hormone-replacement-therapy-hrt/benefits-and-risks-of-hormone-replacement-therapy-hrt/"
     },
     {
-      "label": "NHS — Types of hormone replacement therapy (HRT)",
+      "label": "NHS: Types of hormone replacement therapy (HRT)",
       "url": "https://www.nhs.uk/medicines/hormone-replacement-therapy-hrt/types-of-hormone-replacement-therapy-hrt/"
     },
     {
-      "label": "NICE NG23 — Menopause: identification and management (Recommendations)",
+      "label": "NICE NG23: Menopause: identification and management (Recommendations)",
       "url": "https://www.nice.org.uk/guidance/ng23/chapter/Recommendations"
     }
   ],
-  "conversionCopy": "If you want a structured HRT discussion tailored to your history and symptoms, you can book a consultation with Dr. Charmi Shah.",
+  "conversionCopy": "If you want a structured HRT discussion based on your history and symptoms, you can book a consultation with Dr. Charmi Shah.",
   "explainerAlt": "Shared-decision checklist of HRT benefits, risks and questions for a menopause visit.",
   "storytellingNote": "",
   "review": {

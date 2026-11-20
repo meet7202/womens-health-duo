@@ -44,7 +44,7 @@ export const ZALAK_GROUP_CLASS_CONTENT: Record<ZalakGroupClassKey, ZalakGroupCla
       "Evidence-based physiotherapy approach ensures safety for both mother and baby.",
     ],
     offerings: [
-      "1:1 personalized pregnancy sessions with tailored exercise plans",
+      "1:1 pregnancy sessions with an exercise plan written for you",
       "Small group antenatal classes for shared learning and motivation",
       "Online prenatal classes via video consultation for home-based practice",
       "Offline batch classes in Bangalore and Ahmedabad for in-person guidance",
@@ -59,8 +59,8 @@ export const ZALAK_GROUP_CLASS_CONTENT: Record<ZalakGroupClassKey, ZalakGroupCla
     ],
     whyJoin: [
       "Led by Dr. Zalak Shah (PT): BPT, MPT in women's health, and a STOTT Pilates instructor (Mat and Reformer), including prenatal Pilates",
-      "Classes are tailored to your trimester, symptoms, comfort level and mobility goals",
-      "You receive practical strategies you can use daily, not only during the class",
+      "Classes are adjusted to your trimester, symptoms, comfort level and mobility goals",
+      "You leave with practical strategies to use at home every day, outside class too",
       "Small group sizes ensure personalized attention and safe progression",
       "Flexible online and offline options to fit your schedule and location",
     ],
@@ -74,7 +74,7 @@ export const ZALAK_GROUP_CLASS_CONTENT: Record<ZalakGroupClassKey, ZalakGroupCla
       "Online prenatal classes use secure video platforms with clear demonstrations and real-time feedback on your form.",
       "Offline classes are held in Bangalore and Ahmedabad with professional Pilates equipment and mats provided.",
       "Both formats include home exercise plans and pregnancy-safe movement guides for daily practice.",
-      "Hybrid options available - start with online assessment, join offline batches when convenient.",
+      "Hybrid options are available: start with an online assessment and join offline batches when convenient.",
     ],
     galleryImages: [
       "/images/classes/prenatal-class-2.jpg",
@@ -118,7 +118,7 @@ export const ZALAK_GROUP_CLASS_CONTENT: Record<ZalakGroupClassKey, ZalakGroupCla
       {
         question: "What's the difference between 1:1 and group prenatal classes?",
         answer:
-          "1:1 sessions provide personalized attention with exercise plans tailored to your specific pregnancy stage and concerns. Group classes offer shared learning and motivation with other expecting mothers at a lower cost. Many women combine both for comprehensive care.",
+          "1:1 sessions provide personalized attention with exercise plans built around your pregnancy stage and concerns. Group classes offer shared learning and motivation with other expecting mothers at a lower cost. Many women combine both.",
       },
       {
         question: "Is this suitable in every trimester?",
@@ -138,7 +138,7 @@ export const ZALAK_GROUP_CLASS_CONTENT: Record<ZalakGroupClassKey, ZalakGroupCla
       {
         question: "What should I wear and bring to class?",
         answer:
-          "Wear comfortable, non-restrictive clothing that allows movement. For online classes, have a yoga mat, water bottle, and pillows nearby for support. For offline classes, mats and equipment are provided - just bring yourself and any medical reports your doctor has shared.",
+          "Wear comfortable, non-restrictive clothing that allows movement. For online classes, have a yoga mat, water bottle, and pillows nearby for support. For offline classes, mats and equipment are provided. Just bring yourself and any medical reports your doctor has shared.",
       },
     ],
     relatedLinks: [
@@ -192,7 +192,7 @@ export const ZALAK_GROUP_CLASS_CONTENT: Record<ZalakGroupClassKey, ZalakGroupCla
       "Offline Batches: In-person classes in Bangalore and Ahmedabad with access to Pilates equipment and hands-on corrections. Perfect when you're ready for structured out-of-home activity.",
     ],
     onlineOfflineDetails: [
-      "Online postnatal classes can be done with your baby in the room - we understand new mom challenges and adapt accordingly.",
+      "You can join online postnatal classes with your baby in the room. We know life with a newborn is unpredictable and adapt as needed.",
       "Offline classes in Bangalore and Ahmedabad provide access to specialized Pilates equipment for progressive strengthening.",
       "Both formats include baby-friendly movement tips and exercises you can do during daily care activities.",
       "Postnatal classes can be started 6-8 weeks after vaginal birth and 10-12 weeks after c-section, with doctor clearance.",
@@ -225,14 +225,14 @@ export const ZALAK_GROUP_CLASS_CONTENT: Record<ZalakGroupClassKey, ZalakGroupCla
         name: "Darpan Mistry",
         quote:
           "I am incredibly grateful to Dr. Zalak Shah for the exceptional physiotherapy care provided to my wife during her maternity period. Dr. Shah's expertise and compassionate approach made a significant difference in my wife's comfort and recovery. The exercises and hands-on techniques greatly improved her mobility and reduced pain, making her pregnancy and postpartum experience much smoother.",
-        context: "Postpartum recovery and compassionate care",
+        context: "Postpartum recovery care",
       },
     ],
     faqs: [
       {
         question: "When should I start postnatal classes?",
         answer:
-          "For vaginal births, you can typically start 6-8 weeks postpartum with doctor clearance. For c-sections, wait 10-12 weeks. We assess your healing, symptoms, and energy levels to create a safe progression plan tailored to your recovery timeline.",
+          "For vaginal births, you can typically start 6-8 weeks postpartum with doctor clearance. For c-sections, wait 10-12 weeks. We assess your healing, symptoms, and energy levels to create a safe progression plan that fits your recovery timeline.",
       },
       {
         question: "What's the difference between 1:1 and group postnatal classes?",
@@ -247,7 +247,7 @@ export const ZALAK_GROUP_CLASS_CONTENT: Record<ZalakGroupClassKey, ZalakGroupCla
       {
         question: "Can I bring my baby to class?",
         answer:
-          "For online sessions, absolutely - many moms have their babies in the room. For offline classes, we recommend checking current facility policies, but we understand new motherhood challenges and try to accommodate when possible.",
+          "For online sessions, yes. Many moms have their babies in the room. For offline classes, please check current facility policies; we know new motherhood is demanding and try to accommodate when possible.",
       },
       {
         question: "What if I have diastasis recti or pelvic floor issues?",
@@ -307,17 +307,17 @@ export const ZALAK_GROUP_CLASS_CONTENT: Record<ZalakGroupClassKey, ZalakGroupCla
       "Flexible online and offline options to fit your schedule and location",
     ],
     classFormats: [
-      "1:1 Pilates Sessions: Personalized attention focusing on your specific goals - whether posture improvement, injury recovery, or advanced technique refinement. Ideal for beginners learning proper form or experienced practitioners wanting to break through plateaus.",
+      "1:1 Pilates Sessions: Personal attention on your own goals, such as better posture, injury recovery, or refining advanced technique. Ideal for beginners learning proper form or experienced practitioners wanting to break through plateaus.",
       "Group Mat Pilates: Small group classes (3-6 participants) focusing on fundamental Pilates principles using body weight and props. Cost-effective option with community energy and motivation.",
       "Group Reformer Pilates: Equipment-based classes using the Pilates reformer for resistance, alignment support, and progressive challenge. Provides more feedback and variety than Mat work.",
       "Online Pilates: Live video sessions for Mat Pilates that you can do from home with minimal equipment. Includes real-time form correction and home exercise recommendations.",
       "Offline Batches: In-person classes in Bangalore and Ahmedabad with access to full Pilates equipment including reformers, chairs, and props. Best for hands-on corrections and equipment-based work.",
     ],
     onlineOfflineDetails: [
-      "Online Mat Pilates requires minimal equipment - a yoga mat, resistance bands, and small props like Pilates balls or light weights.",
+      "Online Mat Pilates needs very little equipment: a yoga mat, resistance bands, and small props like Pilates balls or light weights.",
       "Offline classes in Bangalore and Ahmedabad provide access to professional Pilates reformers and other equipment for more varied workouts.",
-      "Both formats emphasize proper breathing, alignment, and mindful movement - the core principles of Pilates.",
-      "Hybrid packages available - combine online convenience with occasional in-person equipment sessions for comprehensive training.",
+      "Both formats focus on breathing, alignment, and controlled movement, which are the core principles of Pilates.",
+      "Hybrid packages are available: train online most of the time and add occasional in-person equipment sessions.",
     ],
     galleryImages: [
       "/images/classes/pilates-class-2.jpg",
@@ -354,14 +354,14 @@ export const ZALAK_GROUP_CLASS_CONTENT: Record<ZalakGroupClassKey, ZalakGroupCla
     ],
     faqs: [
       {
-        question: "Which Pilates format is right for me - Mat or Reformer?",
+        question: "Which Pilates format is right for me: Mat or Reformer?",
         answer:
-          "Mat Pilates is excellent for building fundamental core strength and body awareness using your own body weight. Reformer Pilates adds resistance and support through equipment, making it ideal for more specific conditioning, rehabilitation, or adding variety. Many women practice both for comprehensive benefits.",
+          "Mat Pilates is excellent for building fundamental core strength and body awareness using your own body weight. Reformer Pilates adds resistance and support through equipment, making it ideal for more specific conditioning, rehabilitation, or adding variety. Many women practice both.",
       },
       {
         question: "What's the difference between 1:1 and group Pilates classes?",
         answer:
-          "1:1 sessions provide personalized attention with exercises tailored to your specific goals, injuries, or concerns. Group classes offer community motivation and cost-effective training in a small setting. Beginners often benefit from a few 1:1 sessions to learn proper form before joining groups.",
+          "1:1 sessions give personal attention, with exercises chosen for your goals, injuries, or concerns. Group classes offer community motivation and cost-effective training in a small setting. Beginners often benefit from a few 1:1 sessions to learn proper form before joining groups.",
       },
       {
         question: "Do you offer online Pilates classes?",

@@ -4,7 +4,7 @@
   "seoTitle": "Pelvic girdle pain in pregnancy: what helps",
   "description": "PGP can make stairs, rolling in bed or getting out of a car painful. See NHS and RCOG coping steps, physiotherapy options and when to seek care.",
   "primaryQuestion": "How can I relieve pelvic pain during pregnancy?",
-  "directAnswer": "Pregnancy-related pelvic girdle pain (PGP)—sometimes still called SPD—is discomfort around the pelvic joints that can make walking, stairs, dressing or rolling in bed harder. UK NHS and RCOG patient information say it is common, is not harmful to the baby, and often eases with early assessment, activity pacing, practical task changes and physiotherapy. Not every ache in the pelvis is PGP: bleeding, fever, urinary pain or sudden severe symptoms need maternity or emergency care first.",
+  "directAnswer": "Pregnancy-related pelvic girdle pain (PGP), sometimes still called SPD, is discomfort around the pelvic joints that can make walking, stairs, dressing or rolling in bed harder. UK NHS and RCOG patient information say it is common, is not harmful to the baby, and often eases with early assessment, activity pacing, practical task changes and physiotherapy. Not every ache in the pelvis is PGP: bleeding, fever, urinary pain or sudden severe symptoms need maternity or emergency care first.",
   "sections": [
     {
       "heading": "What PGP and SPD describe",
@@ -19,7 +19,7 @@
       "paragraphs": [
         "NHS guidance lists common aggravators: walking, stairs, standing on one leg (for example when dressing), turning over in bed, and moving the legs apart (such as getting out of a car). RCOG adds long walks on uneven ground and pain during sexual intercourse as possible triggers.",
         "Write down which of those tasks are hardest, how far you can walk before pain rises, and whether one side feels more unstable. That detail helps a physiotherapist match advice to real life rather than guessing from a generic stretch list.",
-        "UK NHS advice is to call your midwife or GP if pelvic pain makes it hard to move around, hurts when you get out of a car or turn in bed, or makes stairs painful—these can be signs of pregnancy-related PGP that deserve assessment rather than waiting until birth."
+        "UK NHS advice is to call your midwife or GP if pelvic pain makes it hard to move around, hurts when you get out of a car or turn in bed, or makes stairs painful. These can be signs of pregnancy-related PGP that deserve assessment rather than waiting until birth."
       ]
     },
     {
@@ -33,7 +33,7 @@
     {
       "heading": "How support needs can shift as pregnancy advances",
       "paragraphs": [
-        "RCOG notes that PGP is more common later in pregnancy as the bump grows and load on the pelvis increases. A belt, shorter standing bouts or help with shopping that felt optional mid-pregnancy may become useful later—and may be needed less after birth, when symptoms often improve.",
+        "RCOG notes that PGP is more common later in pregnancy as the bump grows and load on the pelvis increases. A belt, shorter standing bouts or help with shopping that felt optional mid-pregnancy may become useful later, and may be needed less after birth, when symptoms often improve.",
         "Around 1 in 10 women have ongoing pain after birth according to RCOG; continued physiotherapy and GP follow-up matter if symptoms persist. Mention PGP in your birth plan so labour supporters know to keep your legs supported and help with position changes. Most women with PGP can still have a vaginal birth; RCOG states a caesarean is not normally required for PGP alone."
       ]
     },
@@ -41,7 +41,7 @@
       "heading": "When pelvic pain needs urgent maternity review",
       "paragraphs": [
         "Seek same-day maternity advice if pelvic or lower abdominal pain comes with vaginal bleeding, fever, pain when you pee, a suspected waters break, rhythmic painful tightenings, or a clear drop in baby movements once movements are established. Sudden collapse, chest pain or severe breathing difficulty needs emergency services (in India, dial 112).",
-        "If movement is severely limited, RCOG notes a higher clot risk and advises discussing stockings or other medical prevention with your maternity team—do not self-start medicines. After urgent problems are excluded, return to pacing and prenatal physiotherapy rather than pushing through sharp pelvic instability."
+        "If movement is severely limited, RCOG notes a higher clot risk and advises discussing stockings or other medical prevention with your maternity team. Do not self-start medicines. After urgent problems are excluded, return to pacing and prenatal physiotherapy rather than pushing through sharp pelvic instability."
       ]
     }
   ],
@@ -57,11 +57,11 @@
   ],
   "references": [
     {
-      "label": "NHS — Pelvic pain in pregnancy",
+      "label": "NHS: Pelvic pain in pregnancy",
       "url": "https://www.nhs.uk/pregnancy/common-symptoms/pelvic-pain/"
     },
     {
-      "label": "RCOG — Pelvic girdle pain and pregnancy (patient information)",
+      "label": "RCOG: Pelvic girdle pain and pregnancy (patient information)",
       "url": "https://www.rcog.org.uk/for-the-public/browse-our-patient-information/pelvic-girdle-pain-and-pregnancy/"
     }
   ],

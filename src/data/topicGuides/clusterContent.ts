@@ -317,7 +317,7 @@ const CLUSTER_LIBRARY: Record<TopicGuideClusterId, ClusterConfig> = {
         id: "what-is-hormonal-imbalance",
         question: "What is hormonal imbalance?",
         answer:
-          "People use the phrase for many patterns — cycle changes, thyroid issues, androgen effects, perimenopause, or prolactin elevation. A clinician ties symptoms to history and selected tests rather than a one-size panel.",
+          "People use the phrase for many patterns: cycle changes, thyroid issues, androgen effects, perimenopause, or prolactin elevation. A clinician ties symptoms to history and selected tests rather than a one-size panel.",
       },
       {
         question: "Do I need special hormone panels online?",
@@ -423,7 +423,7 @@ const CLUSTER_LIBRARY: Record<TopicGuideClusterId, ClusterConfig> = {
         id: "how-to-improve-fertility",
         question: "How can we improve fertility chances while waiting for evaluation?",
         answer:
-          "Timing intercourse around ovulation when cycles are predictable, reviewing medications with a clinician, avoiding smoking, and addressing known medical conditions are practical first steps — not a substitute for workup when indicated.",
+          "Timing intercourse around ovulation when cycles are predictable, reviewing medications with a clinician, avoiding smoking, and addressing known medical conditions are practical first steps. They do not replace a workup when one is indicated.",
       },
       {
         question: "When is a second opinion reasonable?",

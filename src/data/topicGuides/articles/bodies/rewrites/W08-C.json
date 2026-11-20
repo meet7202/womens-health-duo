@@ -2,9 +2,9 @@
   "id": "W08-C",
   "title": "When Should I See a Fertility Specialist?",
   "seoTitle": "When to see a fertility specialist",
-  "description": "ASRM timing by age, reasons to seek help sooner, both-partner semen analysis, and why a first visit is not an IVF commitment—or an AMH verdict.",
+  "description": "ASRM timing by age, reasons to seek help sooner, both-partner semen analysis, and why a first visit is not an IVF commitment or an AMH verdict.",
   "primaryQuestion": "How long should I try before seeing a fertility specialist?",
-  "directAnswer": "How long to try before a fertility assessment depends on age and whether either partner already has a factor that can impair conception. The ASRM 2026 committee opinion advises evaluation after about 12 months of regular unprotected intercourse when the female partner is under 35, after about 6 months from age 35, and more immediate evaluation may be warranted after 40—or straight away with a known infertility-related condition. A first consultation explains options; it does not commit anyone to IVF.",
+  "directAnswer": "How long to try before a fertility assessment depends on age and whether either partner already has a factor that can impair conception. The ASRM 2026 committee opinion advises evaluation after about 12 months of regular unprotected intercourse when the female partner is under 35, after about 6 months from age 35, and more immediate evaluation may be warranted after 40, or straight away with a known infertility-related condition. A first consultation explains options; it does not commit anyone to IVF.",
   "explainerCards": [
     "How long should I try if under 35?",
     "What if I am 35 or older?",
@@ -16,7 +16,7 @@
       "heading": "Under 35 or 35+: how long to try first",
       "paragraphs": [
         "ASRM’s 2026 fertility-evaluation committee opinion states that when couples have regular unprotected intercourse and no known cause of impaired fertility, evaluation should begin at 12 months if the female partner is younger than 35, and at 6 months if she is 35 or older. In women older than 40, more immediate evaluation and treatment may be warranted.",
-        "“Trying” assumes opportunity: roughly regular ovulation chances and intercourse (or insemination) without long gaps that remove those chances. If periods are missing or highly irregular, the usual month-count is a poor fit—you may not be releasing eggs often enough for another quiet year to mean much. Ovulation-tracking details belong in our ovulation tracking guide."
+        "“Trying” assumes opportunity: roughly regular ovulation chances and intercourse (or insemination) without long gaps that remove those chances. If periods are missing or highly irregular, the usual month-count is a poor fit, because you may not be releasing eggs often enough for another quiet year to mean much. Ovulation-tracking details belong in our ovulation tracking guide."
       ]
     },
     {
@@ -36,8 +36,8 @@
     {
       "heading": "Is a first fertility visit the same as starting IVF?",
       "paragraphs": [
-        "Expect history, examination planning and a discussion of which tests answer your questions—ovulation, uterine or tubal factors, and semen findings where relevant. Many first visits clarify next steps without starting IVF. Ask what each test can and cannot show, and what would make treatment rather than more waiting the wiser choice.",
-        "Anti-Müllerian hormone (AMH) measures aspects of ovarian reserve related to oocyte quantity. ASRM’s committee opinion on ovarian-reserve testing states that markers of ovarian reserve test quantity, not quality, of the remaining oocyte pool, and that they should not be used as a standalone fertility test for women with unproven fertility or to deny treatment. NICE NG257 likewise advises against using AMH as a predictor of clinical pregnancy through spontaneous conception. See our AMH and fertility guide for that detail—AMH alone should not decide whether you “can” conceive naturally."
+        "Expect history, examination planning and a discussion of which tests answer your questions about ovulation, uterine or tubal factors, and semen findings where relevant. Many first visits clarify next steps without starting IVF. Ask what each test can and cannot show, and what would make treatment rather than more waiting the wiser choice.",
+        "Anti-Müllerian hormone (AMH) measures aspects of ovarian reserve related to oocyte quantity. ASRM’s committee opinion on ovarian-reserve testing states that markers of ovarian reserve test quantity, not quality, of the remaining oocyte pool, and that they should not be used as a standalone fertility test for women with unproven fertility or to deny treatment. NICE NG257 likewise advises against using AMH as a predictor of clinical pregnancy through spontaneous conception. See our AMH and fertility guide for that detail. AMH alone should not decide whether you “can” conceive naturally."
       ]
     },
     {
@@ -51,28 +51,28 @@
   "faqs": [
     {
       "question": "Does a first fertility visit mean we are starting IVF?",
-      "answer": "No. A first consultation is for history, examination planning and choosing proportionate tests. Many couples leave with a timed investigation plan or expectant advice. IVF is one possible later option when indicated—not the automatic next step after walking through the door."
+      "answer": "No. A first consultation is for history, examination planning and choosing proportionate tests. Many couples leave with a timed investigation plan or expectant advice. IVF is one possible later option when indicated, not the automatic next step after walking through the door."
     },
     {
-      "question": "We had two miscarriages—do we still wait a year of trying?",
+      "question": "We had two miscarriages. Do we still wait a year of trying?",
       "answer": "Recurrent pregnancy loss is assessed on a different pathway. ESHRE defines it as two or more pregnancy losses. Tell your clinician that history so evaluation is not delayed by applying a trying-duration rule meant for a different problem."
     }
   ],
   "references": [
     {
-      "label": "ASRM Practice Committee — Fertility evaluation of infertile women: a committee opinion (2026)",
+      "label": "ASRM Practice Committee: Fertility evaluation of infertile women: a committee opinion (2026)",
       "url": "https://www.asrm.org/practice-guidance/practice-committee-documents/fertility-evaluation-of-infertile-women-a-committee-opinion-2026"
     },
     {
-      "label": "ASRM Practice Committee — Testing and interpreting measures of ovarian reserve: a committee opinion (2020)",
+      "label": "ASRM Practice Committee: Testing and interpreting measures of ovarian reserve: a committee opinion (2020)",
       "url": "https://www.asrm.org/practice-guidance/practice-committee-documents/testing-and-interpreting-measures-of-ovarian-reserve-a-committee-opinion-2020/"
     },
     {
-      "label": "ESHRE — Guideline on recurrent pregnancy loss (2022 update)",
+      "label": "ESHRE: Guideline on recurrent pregnancy loss (2022 update)",
       "url": "https://www.eshre.eu/Guidelines-and-Legal/Guidelines/Recurrent-Pregnancy-Loss.aspx"
     },
     {
-      "label": "NICE NG257 — Fertility problems (AMH not for predicting spontaneous conception)",
+      "label": "NICE NG257: Fertility problems (AMH not for predicting spontaneous conception)",
       "url": "https://www.nice.org.uk/guidance/NG257/chapter/investigation-of-fertility-problems-and-management-strategies"
     }
   ],

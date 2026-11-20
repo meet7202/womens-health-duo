@@ -1,5 +1,5 @@
 {
-  "note": "Google Images click hooks for watermarked SVG explainers. Exactly 4 short QUESTION lines per article\u2014curiosity hooks, not answer spoilers. Each question must be answered in the matching article body (section or FAQ). Keep each line \u226440 characters so SVG cards do not truncate.",
+  "note": "Google Images click hooks for watermarked SVG explainers. Exactly 4 short QUESTION lines per article: curiosity hooks, not answer spoilers. Each question must be answered in the matching article body (section or FAQ). Keep each line \u226440 characters so SVG cards do not truncate.",
   "articles": {
     "W01-C": [
       "What counts as an irregular period?",
@@ -14,7 +14,7 @@
       "When do leaks need medical help?"
     ],
     "W02-C": [
-      "What is PCOS\u2014and what is PMOS?",
+      "What is PCOS, and what is PMOS?",
       "How is PCOS diagnosed in adults?",
       "Are teens assessed differently?",
       "Can AMH diagnose PCOS alone?"
@@ -38,7 +38,7 @@
       "When should I pause or seek care?"
     ],
     "W04-C": [
-      "Can I predict ovulation\u2014or only confirm?",
+      "Predict ovulation, or only confirm it?",
       "Which tracking method fits irregular cycles?",
       "Do LH kits prove I ovulated?",
       "When is tracking not enough?"
@@ -142,7 +142,7 @@
     "W12-Z": [
       "Why am I leaking after childbirth?",
       "Can caesarean births cause leaks too?",
-      "Who can help\u2014and what should I note?",
+      "Who can help, and what should I note?",
       "Must I wait for my 6-week check?"
     ],
     "W13-C": [
@@ -194,7 +194,7 @@
       "When is earlier help needed?"
     ],
     "W17-C": [
-      "Late period, negative test\u2014what next?",
+      "Late period, negative test: what next?",
       "Can I still be pregnant?",
       "When should I retest or see a clinician?",
       "What else can delay a period?"
@@ -257,7 +257,7 @@
       "What do people mean by egg quality?",
       "Does low AMH mean poor-quality eggs?",
       "Can supplements make eggs younger?",
-      "Which habits help\u2014and what are the limits?"
+      "Which habits help? What are the limits?"
     ],
     "W22-Z": [
       "What can breathing prepare me for in labour?",
@@ -311,7 +311,7 @@
       "What should I prepare before I arrive?",
       "Will I have an internal exam on visit one?",
       "What consent and chaperone choices exist?",
-      "Online visit or in-person\u2014what's different?"
+      "How is an online visit different?"
     ],
     "W27-C": [
       "What pattern counts as PMS?",

@@ -25,7 +25,7 @@
     {
       "heading": "Where PMDD is a different conversation",
       "paragraphs": [
-        "Mild irritability that you can still work through is the territory of this page. Marked hopelessness, rage, feeling out of control, or symptoms that repeatedly stop relationships or work need the longer comparison on the PMDD page.",
+        "This page covers mild irritability that you can still work through. Marked hopelessness, rage, feeling out of control, or symptoms that repeatedly stop relationships or work need the longer comparison on the PMDD page.",
         "That page also holds crisis steps. If you are thinking about harming yourself, contact local emergency services or the crisis line named there. Do not send a routine booking message and wait."
       ]
     },
@@ -49,20 +49,29 @@
   ],
   "references": [
     {
-      "label": "NHS — Periods",
+      "label": "NHS: Periods",
       "url": "https://www.nhs.uk/conditions/periods/"
     },
     {
-      "label": "ACOG — Premenstrual syndrome (PMS)",
+      "label": "ACOG: Premenstrual syndrome (PMS)",
       "url": "https://www.acog.org/womens-health/faqs/premenstrual-syndrome"
     }
   ],
   "conversionCopy": "If premenstrual symptoms are disrupting your month, you can book a consultation with Dr. Charmi Shah and bring a two-cycle diary.",
   "explainerAlt": "Simple calendar sketch showing symptoms in the days before bleeding and easing after the period starts",
   "internalLinks": [
-    { "anchor": "PMS or PMDD", "path": "/what-is-pmdd/" },
-    { "anchor": "painful periods", "path": "/why-are-my-periods-painful/" },
-    { "anchor": "irregular periods", "path": "/irregular-periods/" }
+    {
+      "anchor": "PMS or PMDD",
+      "path": "/what-is-pmdd/"
+    },
+    {
+      "anchor": "painful periods",
+      "path": "/why-are-my-periods-painful/"
+    },
+    {
+      "anchor": "irregular periods",
+      "path": "/irregular-periods/"
+    }
   ],
   "parentHub": "/irregular-periods/",
   "review": {

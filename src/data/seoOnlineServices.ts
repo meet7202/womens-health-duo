@@ -97,7 +97,7 @@ export const SEO_ONLINE_SERVICES: readonly SeoOnlineService[] = [
     shortTitle: "MSK physio",
     doctor: "zalak",
     summary:
-      "Video sessions for back, neck, and joint issues common in women, with exercise prescription and education tailored to your home setup and activity goals.",
+      "Video sessions for back, neck, and joint issues common in women, with exercise prescription and education planned around your home setup and activity goals.",
   },
   {
     slug: "core-functional-training",
@@ -113,7 +113,7 @@ export const SEO_ONLINE_SERVICES: readonly SeoOnlineService[] = [
     shortTitle: "Women's wellness",
     doctor: "zalak",
     summary:
-      "Holistic online programs blending physiotherapy principles and Pilates-informed movement for sustainable habits and confidence in training.",
+      "Online programs that blend physiotherapy principles with Pilates-informed movement, so you build habits you can keep and feel confident training.",
   },
 ] as const;
 

@@ -48,23 +48,29 @@
   ],
   "references": [
     {
-      "label": "NHS — Pelvic pain",
+      "label": "NHS: Pelvic pain",
       "url": "https://www.nhs.uk/conditions/pelvic-pain/"
     },
     {
-      "label": "NHS — Endometriosis",
+      "label": "NHS: Endometriosis",
       "url": "https://www.nhs.uk/conditions/endometriosis/"
     }
   ],
   "conversionCopy": "If pelvic pain is stable and you want a movement and pelvic-floor assessment, you can book with Dr. Zalak Shah (PT). Sudden severe pain needs emergency care.",
   "explainerAlt": "Body outline marking the pelvis with a note that pain there has many causes",
   "internalLinks": [
-    { "anchor": "endometriosis symptoms", "path": "/endometriosis-symptoms-diagnosis/" },
+    {
+      "anchor": "endometriosis symptoms",
+      "path": "/endometriosis-symptoms-diagnosis/"
+    },
     {
       "anchor": "pain with sex",
       "path": "/can-pelvic-floor-therapy-help-with-painful-intercourse/"
     },
-    { "anchor": "pelvic floor dysfunction", "path": "/what-is-pelvic-floor-dysfunction/" }
+    {
+      "anchor": "pelvic floor dysfunction",
+      "path": "/what-is-pelvic-floor-dysfunction/"
+    }
   ],
   "parentHub": "/pelvic-floor-therapy/",
   "review": {

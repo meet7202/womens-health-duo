@@ -2,14 +2,14 @@
   "id": "W16-C",
   "title": "How Are PCOS and Insulin Resistance Connected?",
   "seoTitle": "PCOS and insulin resistance explained",
-  "description": "Insulin resistance often accompanies PCOS/PMOS and raises diabetes risk. See what it means, skin clues, and checks to discuss—not self-diagnose.",
+  "description": "Insulin resistance often accompanies PCOS/PMOS and raises diabetes risk. See what it means, skin clues, and checks to discuss rather than self-diagnose.",
   "primaryQuestion": "What is the link between PCOS and insulin resistance?",
   "directAnswer": "Many people with PCOS (now also called PMOS) have insulin resistance: body cells respond less well to insulin, so blood glucose can rise and the pancreas may produce more insulin. ACOG explains that this pattern can contribute to diabetes risk and is associated with darkened, velvety skin patches called acanthosis nigricans. The 2023 international guideline highlights high risks of early impaired glucose regulation and type 2 diabetes in PCOS, and recognises increased cardiovascular risk factors. Skin changes alone do not diagnose insulin resistance; laboratory assessment and clinical context do.",
   "sections": [
     {
       "heading": "What insulin resistance means in plain language",
       "paragraphs": [
-        "Insulin helps move glucose from the blood into cells. When cells resist that signal, glucose stays higher in the bloodstream and the body may compensate with higher insulin levels. ACOG notes that insulin resistance can lead to diabetes mellitus and is linked with acanthosis nigricans—thicker, darker, velvety patches often in body folds.",
+        "Insulin helps move glucose from the blood into cells. When cells resist that signal, glucose stays higher in the bloodstream and the body may compensate with higher insulin levels. ACOG notes that insulin resistance can lead to diabetes mellitus and is linked with acanthosis nigricans: thicker, darker, velvety patches often in body folds.",
         "Higher insulin and androgen activity can interact with ovulation and skin features in PCOS/PMOS, which is one reason metabolic and reproductive symptoms often travel together. That does not mean every person with acne or irregular cycles has insulin resistance, or that every person with insulin resistance meets PCOS criteria. Our what-is-PCOS guide covers diagnostic features; this page stays on the metabolic link."
       ]
     },
@@ -17,27 +17,27 @@
       "heading": "Why the connection matters for long-term health",
       "paragraphs": [
         "The 2023 international guideline summary states that individuals with PCOS should be recognised as having increased cardiovascular disease risk factors, cardiovascular disease and potentially cardiovascular mortality. It reiterates high risks of early-onset impaired fasting glucose, impaired glucose tolerance and type 2 diabetes, and notes obstructive sleep apnoea and endometrial hyperplasia or cancer among other risks to keep in view.",
-        "Pregnancy adds another layer: guideline evidence finds higher risks of gestational diabetes and hypertensive disorders, among other outcomes, independent of age and BMI, which is why PCOS status should be flagged before or early in antenatal care. None of this is a personal prediction—risk is elevated at group level and is modified by screening and support."
+        "Pregnancy adds another layer: guideline evidence finds higher risks of gestational diabetes and hypertensive disorders, among other outcomes, independent of age and BMI, which is why PCOS status should be flagged before or early in antenatal care. None of this is a personal prediction. Risk is elevated at group level and is modified by screening and support."
       ]
     },
     {
       "heading": "Symptoms versus tests",
       "paragraphs": [
         "Clues that often prompt a metabolic conversation include a strong family history of diabetes, central weight gain, marked post-meal energy crashes, or acanthosis nigricans. None of these replaces a glucose assessment. Self-ordered single finger-prick readings without context can mislead.",
-        "Which test is useful—fasting glucose, oral glucose tolerance testing, HbA1c or a combination—depends on age, symptoms, pregnancy plans and local practice. The international guideline outlines evidence-based screening recommendations in its supporting materials; your clinician chooses the panel. Lipid levels and blood pressure often sit in the same review because cardiometabolic risk clusters."
+        "Which test is useful (fasting glucose, oral glucose tolerance testing, HbA1c or a combination) depends on age, symptoms, pregnancy plans and local practice. The international guideline outlines evidence-based screening recommendations in its supporting materials; your clinician chooses the panel. Lipid levels and blood pressure often sit in the same review because cardiometabolic risk clusters."
       ]
     },
     {
       "heading": "What you can discuss at a consultation",
       "paragraphs": [
         "Ask whether glucose screening is due now; how often to repeat it; whether sleep apnoea symptoms (loud snoring, daytime sleepiness) need attention; and how day-to-day food and movement advice should change if insulin resistance is confirmed. Our everyday PCOS management guide covers sustainable habits without cure claims.",
-        "Treatment categories, when used, may include lifestyle support and medicines that improve insulin sensitivity in selected people—chosen by a clinician, never from an article dose chart. Do not stop prescribed therapy because an online protocol promised to “fix insulin” overnight. Dr. Charmi Shah can connect reproductive goals with metabolic monitoring so neither is ignored."
+        "Treatment categories, when used, may include lifestyle support and medicines that improve insulin sensitivity in selected people, chosen by a clinician, never from an article dose chart. Do not stop prescribed therapy because an online protocol promised to “fix insulin” overnight. Dr. Charmi Shah can connect reproductive goals with metabolic monitoring so neither is ignored."
       ]
     },
     {
       "heading": "Urgent care notes",
       "paragraphs": [
-        "Insulin resistance itself is not an emergency diagnosis. Seek urgent care for symptoms of severe high or low blood sugar if you already live with diabetes (confusion, fainting, vomiting you cannot stop), or for the usual gynaecology emergencies—flooding bleeds with dizziness, sudden severe pelvic pain, or possible-pregnancy pain with collapse.",
+        "Insulin resistance itself is not an emergency diagnosis. Seek urgent care for symptoms of severe high or low blood sugar if you already live with diabetes (confusion, fainting, vomiting you cannot stop), or for the usual gynaecology emergencies: flooding bleeds with dizziness, sudden severe pelvic pain, or possible-pregnancy pain with collapse.",
         "Routine booking is appropriate for a first metabolic work-up, progressive skin changes with cycle questions, or pregnancy planning with known PCOS/PMOS."
       ]
     }
@@ -54,15 +54,15 @@
   ],
   "references": [
     {
-      "label": "ACOG — Polycystic Ovary Syndrome (PCOS) FAQ",
+      "label": "ACOG: Polycystic Ovary Syndrome (PCOS) FAQ",
       "url": "https://www.acog.org/womens-health/faqs/polycystic-ovary-syndrome-pcos"
     },
     {
-      "label": "Medical Journal of Australia — Summary of the 2023 international PCOS guideline",
+      "label": "Medical Journal of Australia: Summary of the 2023 international PCOS guideline",
       "url": "https://www.mja.com.au/journal/2024/221/7/summary-2023-international-evidence-based-guideline-assessment-and-management"
     },
     {
-      "label": "ASRM — PCOS is Now PMOS: Understanding the Name Change (27 May 2026)",
+      "label": "ASRM: PCOS is Now PMOS: Understanding the Name Change (27 May 2026)",
       "url": "https://www.asrm.org/news-and-events/asrm-news/latest-news/may-27-2026-pcos-is-now-pmos-understanding-the-name-change/"
     }
   ],

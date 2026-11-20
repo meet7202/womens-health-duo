@@ -2,9 +2,9 @@
   "id": "W14-Z",
   "title": "How do I know if my pelvic floor needs an assessment?",
   "seoTitle": "When your pelvic floor needs an assessment",
-  "description": "Leakage, heaviness, pain or emptying trouble can justify a pelvic-floor review. Symptoms do not prove weakness—assessment sorts function and next steps.",
+  "description": "Leakage, heaviness, pain or emptying trouble can justify a pelvic-floor review. Symptoms do not prove weakness; assessment sorts function and next steps.",
   "primaryQuestion": "How do I know if my pelvic floor is weak?",
-  "directAnswer": "You cannot reliably decide “weak pelvic floor” from a social post or a single symptom. Leakage, urgency, heaviness, bowel difficulty, pelvic pain or painful sex can each justify a conversation with a pelvic-health physiotherapist or doctor, yet the same complaints may reflect underactivity, overactivity, poor timing, tissue support change or a separate medical cause. An assessment is a structured history and, if you consent, examination—not a quiz that awards a weakness score online.",
+  "directAnswer": "You cannot reliably decide “weak pelvic floor” from a social post or a single symptom. Leakage, urgency, heaviness, bowel difficulty, pelvic pain or painful sex can each justify a conversation with a pelvic-health physiotherapist or doctor, yet the same complaints may reflect underactivity, overactivity, poor timing, tissue support change or a separate medical cause. An assessment is a structured history and, if you consent, examination. It is not a quiz that awards a weakness score online.",
   "sections": [
     {
       "heading": "Symptom patterns that deserve attention",
@@ -37,7 +37,7 @@
     {
       "heading": "When medical review should come first",
       "paragraphs": [
-        "NICE NG210 asks clinicians to exclude other causes such as pelvic masses, neurological disease, urinary infection, medication effects, diabetes, cancer red flags, fistula, inflammatory bowel or bladder disease, endometriosis, and mobility or cognitive issues when history suggests them. Visible blood in urine, fever with pelvic pain, sudden retention, or brand-new incontinence paired with genital-area numbness or weak legs need urgent medical care—not a routine physio slot.",
+        "NICE NG210 asks clinicians to exclude other causes such as pelvic masses, neurological disease, urinary infection, medication effects, diabetes, cancer red flags, fistula, inflammatory bowel or bladder disease, endometriosis, and mobility or cognitive issues when history suggests them. Visible blood in urine, fever with pelvic pain, sudden retention, or brand-new incontinence paired with genital-area numbness or weak legs need urgent medical care, not a routine physio slot.",
         "Dr. Zalak Shah (PT) works within a physiotherapy lane: function, load management and supervised training. Suspected infection, masses or complex gynaecological disease need a doctor. Coordination with Dr. Charmi Shah is appropriate when medical differentials sit alongside pelvic-floor symptoms."
       ]
     }
@@ -54,19 +54,19 @@
   ],
   "references": [
     {
-      "label": "NICE — NG210 Pelvic floor dysfunction: prevention and non-surgical management (Recommendations)",
+      "label": "NICE: NG210 Pelvic floor dysfunction: prevention and non-surgical management (Recommendations)",
       "url": "https://www.nice.org.uk/guidance/ng210/chapter/Recommendations"
     },
     {
-      "label": "POGP — Physiotherapy Assessment",
+      "label": "POGP: Physiotherapy Assessment",
       "url": "https://thepogp.co.uk/patients/pelvic_health_advice/physiotherapy_assessment.aspx"
     },
     {
-      "label": "University Hospitals Sussex NHS Foundation Trust — Your pelvic health physiotherapy appointment",
+      "label": "University Hospitals Sussex NHS Foundation Trust: Your pelvic health physiotherapy appointment",
       "url": "https://www.uhsussex.nhs.uk/resources/your-pelvic-health-physiotherapy-appointment/"
     },
     {
-      "label": "NHS Dynamic Health — Female genital pain",
+      "label": "NHS Dynamic Health: Female genital pain",
       "url": "https://dynamichealth.nhs.uk/help-and-advice/pelvic-health/female-genital-pain/"
     }
   ],

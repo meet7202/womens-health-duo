@@ -47,7 +47,7 @@ export function LearnPage() {
 
   const parsed = useMemo(() => parseLearnHubPathname(location.pathname), [location.pathname]);
   const canonicalPath = learnHubFilteredPath(parsed);
-  /** Semantic root check — do not compare `canonicalPath` to slashless `ROUTES.learn`. */
+  /** Semantic root check. Do not compare `canonicalPath` to slashless `ROUTES.learn`. */
   const isRootLearnHub = parsed.doctor === "all" && parsed.topic === "all";
 
   useEffect(() => {

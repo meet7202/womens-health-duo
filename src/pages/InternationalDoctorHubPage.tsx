@@ -71,7 +71,7 @@ export function InternationalDoctorHubPage() {
 
         <ServiceCardList
           services={services}
-          heading={`${doctor.name} — international services`}
+          heading={`${doctor.name}: international services`}
           headingId={`intl-services-${hub.pathSegment}`}
         />
 

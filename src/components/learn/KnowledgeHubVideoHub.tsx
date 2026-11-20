@@ -37,7 +37,7 @@ function topicLabelsForVideos(videos: readonly KnowledgeHubVideo[]): string[] {
 
 /**
  * Learn hub listing (SEO-26): lightweight poster cards only.
- * Full players live on `/learn/watch/:id` — keeps listing DOM/JS bounded while watch URLs stay discoverable.
+ * Full players live on `/learn/watch/:id`. This keeps listing DOM/JS bounded while watch URLs stay discoverable.
  */
 export function KnowledgeHubVideoHub() {
   const location = useLocation();

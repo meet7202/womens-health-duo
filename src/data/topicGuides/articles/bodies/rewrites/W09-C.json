@@ -2,15 +2,15 @@
   "id": "W09-C",
   "title": "When Should I Start Folic Acid Before Pregnancy?",
   "seoTitle": "When to start folic acid before pregnancy",
-  "description": "Start 400 micrograms folic acid daily when trying—ideally before conception—until 12 weeks; who may need prescribed 5 mg, and what to do if already pregnant.",
+  "description": "Start 400 micrograms folic acid daily when trying (ideally before conception) until 12 weeks; who may need prescribed 5 mg, and what to do if already pregnant.",
   "primaryQuestion": "When should I start folic acid before pregnancy?",
-  "directAnswer": "Take a standard folic acid supplement of 400 micrograms each day when pregnancy is a near-term goal, and continue into early pregnancy. India's National Health Mission recommends 400 mcg from preconception into the first trimester. WHO recommends 400 μg starting when you begin trying to conceive and continuing until 12 weeks of gestation. UK NHS guidance adds an ideal lead-in of three months before pregnancy, continuing until 12 weeks. If you only find out you are pregnant later, start as soon as you know. Prescribed 5 mg is reserved for selected risk groups—your doctor decides.",
+  "directAnswer": "Take a standard folic acid supplement of 400 micrograms each day when pregnancy is a near-term goal, and continue into early pregnancy. India's National Health Mission recommends 400 mcg from preconception into the first trimester. WHO recommends 400 μg starting when you begin trying to conceive and continuing until 12 weeks of gestation. UK NHS guidance adds an ideal lead-in of three months before pregnancy, continuing until 12 weeks. If you only find out you are pregnant later, start as soon as you know. Prescribed 5 mg is reserved for selected risk groups, and your doctor decides.",
   "sections": [
     {
       "heading": "Why timing matters around conception",
       "paragraphs": [
-        "Folate supports early development of the neural tube—the structure that becomes the baby's brain and spinal cord. That development starts in the earliest weeks, often before a missed period, which is why waiting until the first scan to think about folic acid misses the window most guidance targets. Folic acid lowers the chance of neural-tube defects when used as recommended; it does not prevent every pregnancy complication.",
-        "Folic acid is one step inside wider preconception planning—medicines, vaccines, chronic conditions and habits—not a substitute for that checklist. Our preconception planning guide covers the broader list."
+        "Folate supports early development of the neural tube, the structure that becomes the baby's brain and spinal cord. That development starts in the earliest weeks, often before a missed period, which is why waiting until the first scan to think about folic acid misses the window most guidance targets. Folic acid lowers the chance of neural-tube defects when used as recommended; it does not prevent every pregnancy complication.",
+        "Folic acid is one step inside wider preconception planning (medicines, vaccines, chronic conditions and habits). It is not a substitute for that checklist. Our preconception planning guide covers the broader list."
       ]
     },
     {
@@ -23,15 +23,15 @@
     {
       "heading": "When a higher prescribed dose may be discussed",
       "paragraphs": [
-        "A higher dose of 5 milligrams (5 mg) is prescribed—not chosen from an open shelf—for selected people. WHO advises offering 5 mg daily to women who have had a fetus or baby affected by a neural-tube defect. UK NHS guidance lists a broader set of criteria for prescribed 5 mg when planning pregnancy or before 12 weeks: you or the baby's father has a neural-tube defect; you or the baby's father has a relative with one; a previous pregnancy affected by a neural-tube defect; diabetes; sickle cell anaemia or thalassaemia; or medicines for epilepsy or HIV.",
-        "Those NHS criteria are UK criteria. In India, which higher-dose indications apply to you is a decision for your doctor after reviewing your history—do not borrow a relative's high-dose tablets because the stories sound similar. Taking more than prescribed is not automatically safer."
+        "A higher dose of 5 milligrams (5 mg) is prescribed for selected people rather than chosen from an open shelf. WHO advises offering 5 mg daily to women who have had a fetus or baby affected by a neural-tube defect. UK NHS guidance lists a broader set of criteria for prescribed 5 mg when planning pregnancy or before 12 weeks: you or the baby's father has a neural-tube defect; you or the baby's father has a relative with one; a previous pregnancy affected by a neural-tube defect; diabetes; sickle cell anaemia or thalassaemia; or medicines for epilepsy or HIV.",
+        "Those NHS criteria are UK criteria. In India, which higher-dose indications apply to you is a decision for your doctor after reviewing your history. Do not borrow a relative's high-dose tablets because the stories sound similar. Taking more than prescribed is not automatically safer."
       ]
     },
     {
       "heading": "If you are already pregnant, and food versus supplements",
       "paragraphs": [
         "If you discover you are already pregnant and have not been taking folic acid, start the appropriate product as soon as you know, after checking with your clinician which strength fits your history. Early pregnancy is still within the window when supplementation is routinely continued. Arrange antenatal booking according to local guidance; vitamins alone are not antenatal care.",
-        "Leafy greens, pulses and fortified foods contribute folate, yet the NHS states it is difficult to get the amount you need from food alone—which is why a supplement is recommended around conception. Homemade remedies are not a measured substitute for the tablet dose discussed here."
+        "Leafy greens, pulses and fortified foods contribute folate, yet the NHS states it is difficult to get the amount you need from food alone, which is why a supplement is recommended around conception. Homemade remedies are not a measured substitute for the tablet dose discussed here."
       ]
     },
     {
@@ -60,15 +60,15 @@
   ],
   "references": [
     {
-      "label": "India National Health Mission — Anaemia Mukt Bharat (400 mcg folic acid preconception to first trimester)",
+      "label": "India National Health Mission: Anaemia Mukt Bharat (400 mcg folic acid preconception to first trimester)",
       "url": "https://nhm.gov.in/index1.php?lang=1&level=3&lid=797&sublinkid=1448"
     },
     {
-      "label": "WHO eLENA — Periconceptional folic acid supplementation to prevent neural tube defects",
+      "label": "WHO eLENA: Periconceptional folic acid supplementation to prevent neural tube defects",
       "url": "https://www.who.int/tools/elena/interventions/folate-periconceptional"
     },
     {
-      "label": "NHS — Pregnancy vitamins and supplements (folic acid dose and higher-dose criteria)",
+      "label": "NHS: Pregnancy vitamins and supplements (folic acid dose and higher-dose criteria)",
       "url": "https://www.nhs.uk/pregnancy/keeping-well/pregnancy-vitamins-and-supplements/"
     }
   ],

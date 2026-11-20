@@ -36,17 +36,17 @@ export const OVERSEAS_QUICK_ACCESS_COUNTRIES = [
 ] as const;
 
 const CHARMI_NOT_FOR = [
-  "Medical emergencies — use local emergency services immediately",
+  "Medical emergencies: use local emergency services immediately",
   "Replacing your local obstetrician or gynecologist for examination, delivery, or surgery",
   "Prescribing a medicine that India's telemedicine rules or your local law do not allow",
   "A video visit cannot examine you or operate",
 ] as const;
 
 const ZALAK_NOT_FOR = [
-  "Medical emergencies — use local emergency services immediately",
+  "Medical emergencies: use local emergency services immediately",
   "An internal pelvic examination, which needs a local clinician when it is required",
-  "Obstetric decisions such as induction, delivery, or a C-section — those stay with your obstetrician or Dr. Charmi Shah",
-  "Prescribing medicines — physiotherapy visits do not include prescriptions",
+  "Obstetric decisions such as induction, delivery, or a C-section, which stay with your obstetrician or Dr. Charmi Shah",
+  "Prescribing medicines, because physiotherapy visits do not include prescriptions",
 ] as const;
 
 export const QUICK_ACCESS_INTERNATIONAL_SERVICES: readonly InternationalService[] = [

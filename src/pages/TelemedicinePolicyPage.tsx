@@ -120,7 +120,7 @@ export function TelemedicinePolicyPage() {
               <li>Share relevant medical history, medications, allergies, and reports honestly.</li>
               <li>Use a private, stable connection for video or audio consults.</li>
               <li>
-                Seek emergency care locally for urgent symptoms — do not use teleconsultation.
+                For urgent symptoms, seek emergency care locally. Do not use teleconsultation.
               </li>
               <li>Follow up in person when your clinician advises examination or procedures.</li>
             </ul>

@@ -2,15 +2,15 @@
   "id": "W06-Z",
   "title": "Are Kegels Right for Everyone?",
   "seoTitle": "Are Kegels Right for Everyone?",
-  "description": "Pelvic-floor training helps many with stress leaks or prolapse symptoms, but some people need relaxation or coordination first—assessment guides the plan.",
+  "description": "Pelvic-floor training helps many with stress leaks or prolapse symptoms, but some people need relaxation or coordination first. Assessment guides the plan.",
   "primaryQuestion": "Are Kegels right for everyone?",
-  "directAnswer": "No—repeated pelvic-floor squeezes are not a universal prescription. Supervised pelvic-floor muscle training is a first-line option in UK NICE guidance for many women with stress or mixed urinary incontinence, and it is also considered for some prolapse symptoms. The same muscle system also needs to relax and coordinate with breath. If squeezing increases pain, urgency or emptying difficulty, pause generic challenges and get assessed rather than assuming more reps will help.",
+  "directAnswer": "No. Repeated pelvic-floor squeezes are not a universal prescription. Supervised pelvic-floor muscle training is a first-line option in UK NICE guidance for many women with stress or mixed urinary incontinence, and it is also considered for some prolapse symptoms. The same muscle system also needs to relax and coordinate with breath. If squeezing increases pain, urgency or emptying difficulty, pause generic challenges and get assessed rather than assuming more reps will help.",
   "sections": [
     {
       "heading": "What Kegels are meant to train",
       "paragraphs": [
-        "A Kegel is a voluntary contraction of the pelvic-floor muscles—the sling that supports the bladder, bowel and uterus and that helps continence. Used well, the effort is a lift and close, followed by a full release, without breath-holding or bearing down. Popular “hundreds a day at traffic lights” routines skip technique and suitability.",
-        "Under UK NICE NG123, clinicians should offer supervised pelvic-floor muscle training lasting a minimum of three months as the initial non-surgical option for stress or mixed urinary incontinence, typically built around eight or more contractions done three times daily when that pattern suits the person. NICE NG210 likewise backs supervised programmes for those incontinence patterns and may consider training for some symptomatic prolapse presentations. That is usefulness for matching symptoms—not a promise every person improves, and not a reason to force squeezes when pain leads."
+        "A Kegel is a voluntary contraction of the pelvic-floor muscles, the sling that supports the bladder, bowel and uterus and that helps continence. Used well, the effort is a lift and close, followed by a full release, without breath-holding or bearing down. Popular “hundreds a day at traffic lights” routines skip technique and suitability.",
+        "Under UK NICE NG123, clinicians should offer supervised pelvic-floor muscle training lasting a minimum of three months as the initial non-surgical option for stress or mixed urinary incontinence, typically built around eight or more contractions done three times daily when that pattern suits the person. NICE NG210 likewise backs supervised programmes for those incontinence patterns and may consider training for some symptomatic prolapse presentations. That shows usefulness for matching symptoms. It is not a promise every person improves, and not a reason to force squeezes when pain leads."
       ]
     },
     {
@@ -23,21 +23,21 @@
     {
       "heading": "What if squeezing hurts or worsens symptoms?",
       "paragraphs": [
-        "Stop a self-directed squeeze routine if pelvic pain rises, intercourse becomes sharper, urgency increases, or bladder or bowel emptying becomes harder. Those signals mean the current dose or technique is a poor match—not that you must push through like a thigh workout. Pain-led patterns may need down-training and medical screening before strength work.",
+        "Stop a self-directed squeeze routine if pelvic pain rises, intercourse becomes sharper, urgency increases, or bladder or bowel emptying becomes harder. Those signals mean the current dose or technique is a poor match, not that you must push through like a thigh workout. Pain-led patterns may need down-training and medical screening before strength work.",
         "If you already have a programme from a pelvic-health physiotherapist that feels useful, do not abandon it because a blog called Kegels controversial. The caution here is aimed at one-size online challenges. Training is not broadly dangerous when matched to findings; unassessed high-volume squeezing can simply be the wrong tool."
       ]
     },
     {
-      "heading": "What assessment—and remote video—can and cannot do",
+      "heading": "What assessment and remote video can and cannot do",
       "paragraphs": [
-        "Dr. Zalak Shah (PT) asks what happens when you cough, lift, run or sit for long periods, then matches drills to findings. Where appropriate and with consent, an in-person internal examination can clarify squeeze quality, tenderness and whether bearing-down occurs by mistake. Video or remote review can cover history, education and external movement—but it cannot examine the pelvic floor internally.",
-        "North Bristol NHS Trust pelvic-floor advice tells patients not to practise stopping the flow of urine midstream, because that may interfere with normal bladder emptying. Use the “stop urine” idea only as an occasional mental cue if taught that way—not as a regular toilet exercise."
+        "Dr. Zalak Shah (PT) asks what happens when you cough, lift, run or sit for long periods, then matches drills to findings. Where appropriate and with consent, an in-person internal examination can clarify squeeze quality, tenderness and whether bearing-down occurs by mistake. Video or remote review can cover history, education and external movement, but it cannot examine the pelvic floor internally.",
+        "North Bristol NHS Trust pelvic-floor advice tells patients not to practise stopping the flow of urine midstream, because that may interfere with normal bladder emptying. Use the “stop urine” idea only as an occasional mental cue if taught that way, not as a regular toilet exercise."
       ]
     },
     {
       "heading": "When symptoms need urgent care",
       "paragraphs": [
-        "Inability to pass urine with a painful full bladder is an urgent medical concern—seek emergency or same-day medical care, not another set of Kegels. Also seek urgent care for new loss of bladder or bowel control with leg weakness or saddle numbness, or fever with severe pelvic pain. Routine physiotherapy booking fits ongoing leakage, heaviness or exercise confusion once urgent causes are excluded."
+        "Inability to pass urine with a painful full bladder is an urgent medical concern. Seek emergency or same-day medical care, not another set of Kegels. Also seek urgent care for new loss of bladder or bowel control with leg weakness or saddle numbness, or fever with severe pelvic pain. Routine physiotherapy booking fits ongoing leakage, heaviness or exercise confusion once urgent causes are excluded."
       ]
     }
   ],
@@ -53,15 +53,15 @@
   ],
   "references": [
     {
-      "label": "NICE NG123 — Urinary incontinence and pelvic organ prolapse in women: management",
+      "label": "NICE NG123: Urinary incontinence and pelvic organ prolapse in women: management",
       "url": "https://www.nice.org.uk/guidance/ng123/chapter/Recommendations"
     },
     {
-      "label": "NICE NG210 — Pelvic floor dysfunction: prevention and non-surgical management",
+      "label": "NICE NG210: Pelvic floor dysfunction: prevention and non-surgical management",
       "url": "https://www.nice.org.uk/guidance/ng210/chapter/Recommendations"
     },
     {
-      "label": "North Bristol NHS Trust — Pelvic floor exercises for women",
+      "label": "North Bristol NHS Trust: Pelvic floor exercises for women",
       "url": "https://www.nbt.nhs.uk/our-services/a-z-services/physiotherapy/physiotherapy-patient-information/pelvic-floor-exercises-women"
     }
   ],

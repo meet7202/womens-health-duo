@@ -1,7 +1,7 @@
 import type { InternationalService } from "./types";
 
 const NOT_FOR = [
-  "Medical emergencies — use local emergency services immediately",
+  "Medical emergencies: use local emergency services immediately",
   "Replacing in-person pelvic examination when hands-on assessment is required",
   "Diagnosing conditions that need urgent imaging or surgery without local care",
   "Prescribing controlled medicines where local law or assessment does not permit",
@@ -14,9 +14,9 @@ export const ZALAK_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
     title: "Pelvic floor physiotherapy online",
     shortTitle: "Pelvic floor physio online",
     metaDescription:
-      "International pelvic floor physiotherapy online with Dr. Zalak Shah — incontinence, prolapse support, pelvic pain, and postpartum recovery via video and WhatsApp.",
+      "International pelvic floor physiotherapy online with Dr. Zalak Shah: incontinence, prolapse support, pelvic pain, and postpartum recovery via video and WhatsApp.",
     intro: [
-      "Pelvic floor symptoms respond well to guided physiotherapy — even across time zones. Dr. Zalak Shah, women's health physiotherapist and STOTT Pilates instructor, offers international online pelvic floor consults and home exercise plans.",
+      "Pelvic floor symptoms often improve with guided physiotherapy, and that works across time zones too. Dr. Zalak Shah, women's health physiotherapist and STOTT Pilates instructor, offers international online pelvic floor consults and home exercise plans.",
     ],
     waitSection: {
       heading: "While you wait for a local pelvic floor appointment",
@@ -27,7 +27,7 @@ export const ZALAK_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
     canHelp: [
       "Stress or urge incontinence education and exercise progression",
       "Postpartum pelvic floor retraining",
-      "Pelvic pain and tension — alongside your gynecologist when needed",
+      "Pelvic pain and tension, alongside your gynecologist when needed",
       "Prolapse symptom management with lifestyle and exercise",
       "Coordination with Dr. Charmi for surgical or medical gynecology questions",
     ],
@@ -46,12 +46,12 @@ export const ZALAK_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
       {
         question: "Who is this for internationally?",
         answer:
-          "NRIs, expats, and anyone abroad seeking India-trained women's health physiotherapy in English — with follow-up on WhatsApp for exercise videos and progress.",
+          "NRIs, expats, and anyone abroad seeking India-trained women's health physiotherapy in English, with follow-up on WhatsApp for exercise videos and progress.",
       },
       {
         question: "Do I need a doctor referral?",
         answer:
-          "Not always, but complex pain or bleeding should be cleared by a gynecologist — Dr. Charmi offers online consults through the same practice.",
+          "Not always, but complex pain or bleeding should be cleared by a gynecologist. Dr. Charmi offers online consults through the same practice.",
       },
       {
         question: "How many sessions are typical?",
@@ -70,16 +70,16 @@ export const ZALAK_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
     title: "Prenatal & postnatal physiotherapy online",
     shortTitle: "Prenatal & postnatal physio",
     metaDescription:
-      "Online prenatal and postnatal physiotherapy with Dr. Zalak Shah — back pain, pelvic girdle pain, safe movement, and recovery for international patients.",
+      "Online prenatal and postnatal physiotherapy with Dr. Zalak Shah: back pain, pelvic girdle pain, safe movement, and recovery for international patients.",
     intro: [
-      "Pregnancy and early motherhood change how you move. Dr. Zalak Shah provides international prenatal and postnatal physiotherapy online — pain management, safe exercise, and return-to-activity planning.",
+      "Pregnancy and early motherhood change how you move. Dr. Zalak Shah provides international prenatal and postnatal physiotherapy online, covering pain management, safe exercise, and return-to-activity planning.",
     ],
     canHelp: [
       "Back and pelvic girdle pain in pregnancy",
       "Safe movement and daily activity modifications",
       "Early postnatal recovery and scar mobility guidance when appropriate",
       "Breathing and core coordination basics",
-      "Referral mindset to Dr. Charmi for obstetric concerns",
+      "Referral to Dr. Charmi for obstetric concerns",
     ],
     notFor: NOT_FOR,
     relatedSlugs: [
@@ -91,12 +91,12 @@ export const ZALAK_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
       {
         question: "Can I start prenatal physio in the first trimester?",
         answer:
-          "Often yes after your obstetrician clears exercise — mention any bleeding or high-risk flags when booking.",
+          "Often yes, once your obstetrician clears exercise. Mention any bleeding or high-risk flags when booking.",
       },
       {
         question: "Is postnatal physio safe after C-section?",
         answer:
-          "Yes, with timing tailored to healing — share your delivery date and surgeon guidance in WhatsApp.",
+          "Yes, with timing that follows your healing. Share your delivery date and surgeon guidance in WhatsApp.",
       },
       {
         question: "Do you work with patients in the US, UK, or Gulf?",
@@ -116,9 +116,9 @@ export const ZALAK_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
     title: "Mat Pilates online (international)",
     shortTitle: "Mat Pilates online",
     metaDescription:
-      "International Mat Pilates classes and coaching online with Dr. Zalak Shah — women's health–focused movement for core strength, posture, and recovery.",
+      "International Mat Pilates classes and coaching online with Dr. Zalak Shah: women's health–focused movement for core strength, posture, and recovery.",
     intro: [
-      "Mat Pilates builds core control and posture with minimal equipment — ideal for international clients. Dr. Zalak Shah offers women's health–oriented Mat Pilates coaching online in small groups or one-to-one formats.",
+      "Mat Pilates builds core control and posture with very little equipment, which suits clients abroad. Dr. Zalak Shah offers women's health–oriented Mat Pilates coaching online in small groups or one-to-one formats.",
     ],
     canHelp: [
       "Foundational Mat Pilates for women",
@@ -137,7 +137,7 @@ export const ZALAK_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
       {
         question: "Is this clinical Pilates or fitness?",
         answer:
-          "Dr. Zalak integrates physiotherapy principles — suitable after assessment, especially postpartum or with pelvic symptoms.",
+          "Dr. Zalak builds physiotherapy principles into each session. It suits patients after assessment, especially postpartum or with pelvic symptoms.",
       },
       {
         question: "Can beginners join from abroad?",
@@ -155,9 +155,9 @@ export const ZALAK_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
     title: "STOTT Pilates online (international)",
     shortTitle: "STOTT Pilates online",
     metaDescription:
-      "STOTT Pilates instruction online with Dr. Zalak Shah — certified women's health movement coaching for international clients via video.",
+      "STOTT Pilates instruction online with Dr. Zalak Shah: certified women's health movement coaching for international clients via video.",
     intro: [
-      "STOTT Pilates emphasises biomechanics and safe spinal movement. Dr. Zalak Shah, STOTT Pilates–trained instructor, offers international online sessions tailored to women's health and recovery goals.",
+      "STOTT Pilates emphasises biomechanics and safe spinal movement. Dr. Zalak Shah, a STOTT Pilates–trained instructor, offers online sessions for international clients, planned around women's health and recovery goals.",
     ],
     canHelp: [
       "STOTT-informed mat and reformer-style concepts at home where possible",
@@ -171,12 +171,12 @@ export const ZALAK_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
       {
         question: "What is the difference between Mat and STOTT sessions?",
         answer:
-          "STOTT sessions follow STOTT Pilates principles and sequencing; Mat Pilates is floor-based and often a starting point — we recommend what fits your level.",
+          "STOTT sessions follow STOTT Pilates principles and sequencing; Mat Pilates is floor-based and often a starting point. We recommend what fits your level.",
       },
       {
         question: "Can I do STOTT Pilates while pregnant?",
         answer:
-          "Often yes with modifications after obstetric clearance — book prenatal exercise planning if unsure.",
+          "Often yes, with modifications, after obstetric clearance. Book prenatal exercise planning if unsure.",
       },
       {
         question: "Are sessions live or recorded?",
@@ -195,9 +195,9 @@ export const ZALAK_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
     title: "Postpartum recovery online",
     shortTitle: "Postpartum recovery",
     metaDescription:
-      "International postpartum recovery physiotherapy online with Dr. Zalak Shah — core, pelvic floor, diastasis, and safe return to exercise after birth.",
+      "International postpartum recovery physiotherapy online with Dr. Zalak Shah: core, pelvic floor, diastasis, and safe return to exercise after birth.",
     intro: [
-      "The fourth trimester deserves structured support. Dr. Zalak Shah helps international clients recover after vaginal or caesarean birth with online physiotherapy and progressive exercise planning.",
+      "The first months after birth go better with a plan. Dr. Zalak Shah helps international clients recover after vaginal or caesarean birth with online physiotherapy and progressive exercise planning.",
     ],
     waitSection: {
       heading: "While you wait for a local postnatal appointment",
@@ -221,12 +221,12 @@ export const ZALAK_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
       {
         question: "When can I start after delivery?",
         answer:
-          "Timing depends on delivery type and your obstetrician's clearance — often within days for gentle breathing and weeks for progressive loading.",
+          "Timing depends on delivery type and your obstetrician's clearance. Gentle breathing often starts within days, and progressive loading within weeks.",
       },
       {
         question: "Can this help with C-section numbness or tightness?",
         answer:
-          "Gentle mobility and scar tissue guidance may help when appropriate — share your surgical date when booking.",
+          "Gentle mobility and scar tissue guidance may help when appropriate. Share your surgical date when booking.",
       },
       {
         question: "Do you coordinate with Dr. Charmi?",
@@ -245,7 +245,7 @@ export const ZALAK_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
     title: "Diastasis recti consultation online",
     shortTitle: "Diastasis recti online",
     metaDescription:
-      "Online diastasis recti assessment and rehab planning with Dr. Zalak Shah — abdominal separation after pregnancy for international patients.",
+      "Online diastasis recti assessment and rehab planning with Dr. Zalak Shah for international patients with abdominal separation after pregnancy.",
     intro: [
       "Abdominal separation after pregnancy is common and often improves with guided rehab. Dr. Zalak Shah offers international online diastasis consults with self-check guidance and progressive core programming.",
     ],
@@ -270,7 +270,7 @@ export const ZALAK_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
       {
         question: "Should I see a surgeon first?",
         answer:
-          "Large gaps with functional issues may need surgical opinion — Dr. Charmi can discuss medical/surgical options separately.",
+          "Large gaps with functional issues may need a surgical opinion. Dr. Charmi can discuss medical/surgical options separately.",
       },
       {
         question: "How do I book?",
@@ -284,9 +284,9 @@ export const ZALAK_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
     title: "Pregnancy-safe exercise planning online",
     shortTitle: "Pregnancy exercise online",
     metaDescription:
-      "International pregnancy exercise planning with Dr. Zalak Shah — safe cardio, strength, and Pilates for each trimester via video consult.",
+      "International pregnancy exercise planning with Dr. Zalak Shah: safe cardio, strength, and Pilates for each trimester via video consult.",
     intro: [
-      "Staying active in pregnancy supports comfort and recovery. Dr. Zalak Shah creates international pregnancy-safe exercise plans online — aligned with your obstetrician's guidance and your fitness background.",
+      "Staying active in pregnancy supports comfort and recovery. Dr. Zalak Shah creates international pregnancy-safe exercise plans online that follow your obstetrician's guidance and your fitness background.",
     ],
     canHelp: [
       "Trimester-specific cardio and strength guidelines",
@@ -300,12 +300,12 @@ export const ZALAK_INTERNATIONAL_SERVICES: readonly InternationalService[] = [
       {
         question: "Do I need obstetric clearance?",
         answer:
-          "Yes for high-risk pregnancies or new symptoms — we ask about bleeding, preterm risk, and blood pressure when you book.",
+          "Yes for high-risk pregnancies or new symptoms. We ask about bleeding, preterm risk, and blood pressure when you book.",
       },
       {
         question: "Can I run while pregnant abroad?",
         answer:
-          "Sometimes, with individual assessment — share your current routine and weeks of gestation on WhatsApp.",
+          "Sometimes, after an individual assessment. Share your current routine and weeks of gestation on WhatsApp.",
       },
       {
         question: "How do I book?",

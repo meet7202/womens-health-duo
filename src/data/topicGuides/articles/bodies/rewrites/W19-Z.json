@@ -57,15 +57,15 @@
   ],
   "references": [
     {
-      "label": "POGP — Physiotherapy Assessment (patient information)",
+      "label": "POGP: Physiotherapy Assessment (patient information)",
       "url": "https://thepogp.co.uk/patients/pelvic_health_advice/physiotherapy_assessment.aspx"
     },
     {
-      "label": "NHS — Pelvic pain in pregnancy",
+      "label": "NHS: Pelvic pain in pregnancy",
       "url": "https://www.nhs.uk/pregnancy/common-symptoms/pelvic-pain/"
     },
     {
-      "label": "NHS — Exercise in pregnancy",
+      "label": "NHS: Exercise in pregnancy",
       "url": "https://www.nhs.uk/pregnancy/keeping-well/exercise/"
     }
   ],

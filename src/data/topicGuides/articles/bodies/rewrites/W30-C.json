@@ -48,23 +48,29 @@
   ],
   "references": [
     {
-      "label": "NHS — Infertility",
+      "label": "NHS: Infertility",
       "url": "https://www.nhs.uk/conditions/infertility/"
     },
     {
-      "label": "NICHD — What causes infertility?",
+      "label": "NICHD: What causes infertility?",
       "url": "https://www.nichd.nih.gov/health/topics/infertility/conditioninfo/causes"
     }
   ],
   "conversionCopy": "If you want stress and medical factors sorted out together, you can book a consultation with Dr. Charmi Shah.",
   "explainerAlt": "Two-column sketch separating cycle disruption from medical causes of infertility",
   "internalLinks": [
-    { "anchor": "improving chances of pregnancy", "path": "/how-to-improve-fertility/" },
+    {
+      "anchor": "improving chances of pregnancy",
+      "path": "/how-to-improve-fertility/"
+    },
     {
       "anchor": "when to see a fertility specialist",
       "path": "/when-to-see-a-fertility-specialist/"
     },
-    { "anchor": "PMS and mood", "path": "/what-is-pmdd/" }
+    {
+      "anchor": "PMS and mood",
+      "path": "/what-is-pmdd/"
+    }
   ],
   "parentHub": "/fertility/",
   "review": {

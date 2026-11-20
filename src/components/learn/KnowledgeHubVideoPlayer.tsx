@@ -178,7 +178,7 @@ function NativeInstagramReelPlayer({
         }}
         onError={() => onFallback?.()}
       />
-      {/* Persistent semantic control — keyboard + focus ring; works after ended (SEO-27). */}
+      {/* Persistent semantic control: keyboard + focus ring; works after ended (SEO-27). */}
       <button
         type="button"
         onClick={togglePlay}
@@ -336,7 +336,7 @@ export function KnowledgeHubVideoPlayer({
       ? "Original YouTube description"
       : "Original Instagram caption";
   const captionHoldMessage =
-    "An ovarian-reserve line from the original platform caption is on clinical hold and is not served as unqualified current guidance. The original platform text is preserved separately; open on YouTube or Instagram for the live post.";
+    "One line about ovarian reserve in the original caption is waiting for clinical review, so we are not showing it here as current advice. To read the original post, open it on YouTube or Instagram.";
 
   const isInstagramPost = video.kind === "instagram_post";
   const frameClass =
@@ -544,7 +544,7 @@ export function KnowledgeHubVideoPlayer({
         )}
         <p className="text-[10px] text-muted-foreground/80 leading-snug border-t border-border/30 pt-2">
           {captionOnHold
-            ? "Platform caption withheld until clinical review (SEO editorial hold)."
+            ? "Caption withheld until our doctors have reviewed it."
             : `Text is copied from the public ${video.kind === "youtube_short" ? "YouTube" : "Instagram"} post for transparency; formatting may differ slightly from the app.`}
         </p>
       </div>

@@ -86,7 +86,7 @@ export const HeroSection = () => {
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
         <div className="grid gap-10 md:grid-cols-2 md:gap-12 lg:gap-16 items-center">
           {/* Copy: second on mobile so the photo is above the fold */}
-          {/* Primary copy stays visible on first paint (SEO-28) — no opacity-0 entrance. */}
+          {/* Primary copy stays visible on first paint (SEO-28); no opacity-0 entrance. */}
           <div className="order-2 text-center md:order-1 md:text-left">
             <div className="inline-flex items-center gap-2 border border-primary/25 bg-primary/15 px-4 py-2 rounded-full mb-6 shadow-sm">
               <Heart className="w-4 h-4 text-terracotta" aria-hidden />

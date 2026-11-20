@@ -115,7 +115,7 @@ export function VirtualOnlineServiceCityPage() {
         <p className="rounded-lg border border-primary/20 bg-primary/5 px-4 py-3 text-sm text-foreground mb-6">
           {service.summary} This is{" "}
           <strong className="text-foreground">online advice / video consultation</strong> with an
-          India-trained clinician — not a claim that we operate a physical clinic in {city.city}.
+          India-trained clinician. We do not claim to run a physical clinic in {city.city}.
           Availability and suitability for your location are confirmed when you enquire.
         </p>
         <div className="space-y-4 text-muted-foreground leading-relaxed mb-8">

@@ -10,7 +10,7 @@
       "heading": "Can you have PCOS/PMOS with regular periods?",
       "paragraphs": [
         "Yes. Under the 2023 international guideline, adults can meet criteria without irregular cycles if androgen excess and an ovarian marker are both present after other causes are excluded. That is why tidy calendars do not close the question. Our what-is-PCOS guide explains the full diagnostic criteria.",
-        "Bleeding on hormonal contraception is not the same as a natural ovulatory cycle. Pills, injections, implants and hormonal intrauterine systems can create scheduled withdrawal bleeds or spotting that mask underlying irregularity. If symptoms began before contraception, or persist when you are not on hormones, say so—otherwise a tidy calendar can give false reassurance.",
+        "Bleeding on hormonal contraception is not the same as a natural ovulatory cycle. Pills, injections, implants and hormonal intrauterine systems can create scheduled withdrawal bleeds or spotting that mask underlying irregularity. If symptoms began before contraception, or persist when you are not on hormones, say so. Otherwise a tidy calendar can give false reassurance.",
         "Regular-looking bleeds also do not automatically prove monthly ovulation. If fertility is on your mind, ask specifically about ovulatory function rather than assuming the calendar answers that question."
       ]
     },
@@ -18,12 +18,12 @@
       "heading": "Which skin, hair and metabolic clues are worth discussing?",
       "paragraphs": [
         "Skin and hair changes that often enter the conversation include acne that remains stubborn beyond adolescence, coarse hair on the chin, upper lip, chest or abdomen that is new or increasing, and thinning at the scalp crown or temples. These signs can have other causes, including thyroid disease, medicines, or hereditary patterning. They are discussion points, not automatic proof of PCOS/PMOS.",
-        "Do not dismiss longstanding hirsutism as “just family hair.” Duration alone does not make assessment pointless—especially when threading or shaving frequency has climbed, or when hair growth affects work, intimacy or mood. Describe your own baseline and how much effort removal now takes.",
-        "Metabolic themes—family history of diabetes, dark velvety skin patches in body folds, or marked energy crashes after meals—may prompt broader health screening. Body size is not the disease and not the test: people in smaller bodies can meet criteria, and people in larger bodies can have acne or cycle issues for other reasons."
+        "Do not dismiss longstanding hirsutism as “just family hair.” Duration alone does not make assessment pointless, especially when threading or shaving frequency has climbed, or when hair growth affects work, intimacy or mood. Describe your own baseline and how much effort removal now takes.",
+        "Metabolic clues such as a family history of diabetes, dark velvety skin patches in body folds, or marked energy crashes after meals may prompt broader health screening. Body size is not the disease and not the test: people in smaller bodies can meet criteria, and people in larger bodies can have acne or cycle issues for other reasons."
       ]
     },
     {
-      "heading": "When assessment may help—and what does not diagnose you",
+      "heading": "When assessment may help, and what does not diagnose you",
       "paragraphs": [
         "Consider a gynaecology review if androgen-type skin or hair changes are progressing, if you have metabolic risk factors you want checked in context, if fertility planning feels stuck despite tidy cycles, or if you simply need a structured answer rather than continued uncertainty. One late period, one chin hair, or a single photo comparison cannot confirm PCOS/PMOS.",
         "Ultrasound findings of multifollicular ovaries are common in young adults and need age and clinical context. A normal scan does not erase symptoms that still deserve care. Self-ordered hormone panels without a clinician’s question often create more anxiety than clarity.",
@@ -49,7 +49,7 @@
   "faqs": [
     {
       "question": "Does a normal ultrasound rule out PCOS/PMOS?",
-      "answer": "No. Adults can meet criteria through irregular ovulation and hyperandrogenism without using ultrasound, and some people have symptoms that still need care when imaging is unremarkable. Ultrasound is only one optional adult criterion—see the what-is-PCOS guide for the full framework."
+      "answer": "No. Adults can meet criteria through irregular ovulation and hyperandrogenism without using ultrasound, and some people have symptoms that still need care when imaging is unremarkable. Ultrasound is only one optional adult criterion. See the what-is-PCOS guide for the full framework."
     },
     {
       "question": "If my periods are regular on the pill, am I ovulating regularly?",
@@ -58,15 +58,15 @@
   ],
   "references": [
     {
-      "label": "ASRM — PCOS is Now PMOS: Understanding the Name Change (27 May 2026)",
+      "label": "ASRM: PCOS is Now PMOS: Understanding the Name Change (27 May 2026)",
       "url": "https://www.asrm.org/news-and-events/asrm-news/latest-news/may-27-2026-pcos-is-now-pmos-understanding-the-name-change/"
     },
     {
-      "label": "Medical Journal of Australia — Summary of the 2023 international PCOS guideline (Australian perspective)",
+      "label": "Medical Journal of Australia: Summary of the 2023 international PCOS guideline (Australian perspective)",
       "url": "https://www.mja.com.au/journal/2024/221/7/summary-2023-international-evidence-based-guideline-assessment-and-management"
     },
     {
-      "label": "Monash MCHRI — International PCOS/PMOS guideline hub",
+      "label": "Monash MCHRI: International PCOS/PMOS guideline hub",
       "url": "https://www.monash.edu/medicine/mchri/pcos/guideline"
     }
   ],

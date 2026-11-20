@@ -17,7 +17,7 @@
     {
       "heading": "How is this different from a sudden urge to pee?",
       "paragraphs": [
-        "The NHS describes stress incontinence as urine leaking when the bladder is under pressure—for example when you cough or laugh—and urge (urgency) incontinence as leaking with a sudden, intense need to pee, or soon afterwards. Mixed incontinence is also possible. UK NICE guidance asks clinicians to categorise symptoms as stress, mixed, or urgency/overactive bladder at the first assessment and to start initial treatment on that basis, directing mixed care toward the predominant symptom.",
+        "The NHS describes stress incontinence as urine leaking when the bladder is under pressure (for example when you cough or laugh) and urge (urgency) incontinence as leaking with a sudden, intense need to pee, or soon afterwards. Mixed incontinence is also possible. UK NICE guidance asks clinicians to categorise symptoms as stress, mixed, or urgency/overactive bladder at the first assessment and to start initial treatment on that basis, directing mixed care toward the predominant symptom.",
         "Try not to test yourself by coughing hard with a deliberately full bladder. That experiment often creates anxiety without clarifying the mechanism. Instead, note the real situations in which symptoms arise and keep a short diary of drinks, toilet visits, urgency, activity and leakage over a few ordinary days. Fluid restriction for a long commute can leave you thirsty and constipated without explaining why the leak happens.",
         "Night waking to pass urine, a sudden rush as you put the key in the door, or leakage without any cough or jump points more toward urgency-related questions. That still needs assessment rather than a self-assigned label. Mixed patterns are common enough that your notes should capture both effort-linked leaks and urgency episodes if both occur."
       ]
@@ -26,7 +26,7 @@
       "heading": "What conservative care can look like",
       "paragraphs": [
         "For stress or mixed urinary incontinence, NICE NG123 recommends offering a trial of supervised pelvic-floor muscle training of at least three months as first-line treatment, with programmes that include at least eight contractions performed three times a day. Training should start after routine digital assessment confirms that you can contract the pelvic floor. If the programme helps, continue the exercises rather than stopping as soon as symptoms ease.",
-        "Supervision matters because online “Kegel challenges” do not check whether you are contracting the right muscles, holding too hard without relaxing, or missing pressure-management strategies for coughs and lifts. Progress is reviewed against your own goals—fewer leaks when laughing, returning to a class, or lifting a child—rather than against a fixed pad score. If symptoms do not improve after a proper trial, your clinician can discuss next options and whether medical review is needed.",
+        "Supervision matters because online “Kegel challenges” do not check whether you are contracting the right muscles, holding too hard without relaxing, or missing pressure-management strategies for coughs and lifts. Progress is reviewed against your own goals rather than a fixed pad score: fewer leaks when laughing, returning to a class, or lifting a child. If symptoms do not improve after a proper trial, your clinician can discuss next options and whether medical review is needed.",
         "When urgency is predominant, NICE recommends bladder training lasting at least six weeks as first-line care. Lifestyle steps such as reviewing fluid timing, constipation and cough control can sit alongside either pathway. Pelvic health physiotherapy with Dr. Zalak Shah (PT) can teach contraction, relaxation and task-specific timing; it does not replace medical assessment when infection, neurological red flags or another medical cause is possible."
       ]
     },
@@ -42,7 +42,7 @@
       "heading": "When to seek medical help",
       "paragraphs": [
         "Arrange a routine pelvic health or medical review when leakage is recurring, worsening, limiting activity, affecting intimacy or sleep, or making you restrict fluids. Persistent leakage after childbirth, new leakage around menopause, or leaks that began after surgery deserve a proper conversation rather than quiet acceptance. Coordination with a gynaecologist such as Dr. Charmi Shah is appropriate when pregnancy, menopause symptoms or pelvic organ support concerns need medical input.",
-        "Seek urgent medical care for visible blood in the urine, burning with fever, new difficulty passing urine, marked pelvic pain, or a sudden large change in bladder control that feels different from your usual pattern. New loss of bladder or bowel control with severe back pain, leg weakness, or numbness around the saddle area needs emergency assessment immediately—do not use a routine WhatsApp booking pathway for those symptoms.",
+        "Seek urgent medical care for visible blood in the urine, burning with fever, new difficulty passing urine, marked pelvic pain, or a sudden large change in bladder control that feels different from your usual pattern. New loss of bladder or bowel control with severe back pain, leg weakness, or numbness around the saddle area needs emergency assessment immediately. Do not use a routine WhatsApp booking pathway for those symptoms.",
         "If you are pregnant now and notice new leakage with pain, bleeding, fluid gush or reduced fetal movements once movements are established, contact your maternity team rather than waiting for a physiotherapy slot."
       ]
     }
@@ -59,11 +59,11 @@
   ],
   "references": [
     {
-      "label": "NICE — NG123 Urinary incontinence and pelvic organ prolapse in women: management (Recommendations)",
+      "label": "NICE: NG123 Urinary incontinence and pelvic organ prolapse in women: management (Recommendations)",
       "url": "https://www.nice.org.uk/guidance/ng123/chapter/Recommendations"
     },
     {
-      "label": "NHS — Urinary incontinence overview",
+      "label": "NHS: Urinary incontinence overview",
       "url": "https://www.nhs.uk/conditions/urinary-incontinence/"
     }
   ],

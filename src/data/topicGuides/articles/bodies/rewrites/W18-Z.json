@@ -4,7 +4,7 @@
   "seoTitle": "Can pelvic floor physio help bladder leaks?",
   "description": "Supervised pelvic-floor care can help many stress or mixed leaks. See what assessment comes first, what therapy involves, and when other care is needed.",
   "primaryQuestion": "Can pelvic floor therapy help bladder leakage?",
-  "directAnswer": "Yes—for many people, especially when leakage fits a stress or mixed pattern and training is supervised rather than copied from a video. UK NICE guidance positions supervised pelvic-floor muscle training as first-line non-surgical care for stress or mixed urinary incontinence, and bladder training as first-line when urgency dominates. Physiotherapy does not treat every cause of wetting, and it does not replace medical tests when infection, neurological change or another disease is possible.",
+  "directAnswer": "Yes, for many people, especially when leakage fits a stress or mixed pattern and training is supervised rather than copied from a video. UK NICE guidance positions supervised pelvic-floor muscle training as first-line non-surgical care for stress or mixed urinary incontinence, and bladder training as first-line when urgency dominates. Physiotherapy does not treat every cause of wetting, and it does not replace medical tests when infection, neurological change or another disease is possible.",
   "sections": [
     {
       "heading": "Matching the leakage pattern before promising help",
@@ -17,14 +17,14 @@
       "heading": "What happens before a treatment plan is set",
       "paragraphs": [
         "Expect questions about fluids, toilet habits, constipation, cough, pregnancies, surgeries, medicines and goals. A short bladder diary is often useful. NICE NG123 requires routine digital assessment to confirm a pelvic-floor contraction before supervised training for incontinence. You can decline an internal exam; alternatives and limits should be explained first.",
-        "NICE NG210 also expects assessors to think about other explanations—infection, medication effects, diabetes, neurological disease, pelvic masses and related problems—before assuming every drip is a muscle-training issue. Bring prior reports if you have them, without waiting for a perfect file."
+        "NICE NG210 also expects assessors to think about other explanations (infection, medication effects, diabetes, neurological disease, pelvic masses and related problems) before assuming every drip is a muscle-training issue. Bring prior reports if you have them, without waiting for a perfect file."
       ]
     },
     {
       "heading": "What supervised care may include",
       "paragraphs": [
         "Under NICE NG123, the opening non-surgical step for stress or mixed urinary incontinence is a clinician-supervised pelvic-floor programme lasting a minimum of three months, often using eight or more squeezes in three daily sets when that pattern suits the person, then continuing if it helps. For urgency or mixed incontinence, bladder training for a minimum of six weeks is first-line care.",
-        "NICE NG210 adds that supervision should check contraction and relaxation, tailor work to discomfort and goals, offer progress reviews during and after the programme, and consider adjuncts such as biofeedback when an effective voluntary contraction cannot be performed. NHS advice also lists lifestyle steps such as reviewing caffeine, alcohol and weight alongside pelvic-floor exercises and bladder training. Dr. Zalak Shah (PT) teaches technique and task practice; medicines remain a doctor’s decision."
+        "NICE NG210 adds that supervision should check contraction and relaxation, adapt work to discomfort and goals, offer progress reviews during and after the programme, and consider adjuncts such as biofeedback when an effective voluntary contraction cannot be performed. NHS advice also lists lifestyle steps such as reviewing caffeine, alcohol and weight alongside pelvic-floor exercises and bladder training. Dr. Zalak Shah (PT) teaches technique and task practice; medicines remain a doctor’s decision."
       ]
     },
     {
@@ -49,24 +49,24 @@
     },
     {
       "question": "Do I need surgery if three months of training is incomplete?",
-      "answer": "Not automatically. Incomplete improvement should trigger review of diagnosis, technique, lifestyle factors and whether medical or surgical options are appropriate—not an immediate assumption that muscle work “failed forever”."
+      "answer": "Not automatically. Incomplete improvement should trigger review of diagnosis, technique, lifestyle factors and whether medical or surgical options are appropriate. It should not lead to an immediate assumption that muscle work “failed forever”."
     }
   ],
   "references": [
     {
-      "label": "NICE — NG123 Urinary incontinence and pelvic organ prolapse in women: management (Recommendations)",
+      "label": "NICE: NG123 Urinary incontinence and pelvic organ prolapse in women: management (Recommendations)",
       "url": "https://www.nice.org.uk/guidance/ng123/chapter/Recommendations"
     },
     {
-      "label": "NICE — NG210 Pelvic floor dysfunction: prevention and non-surgical management (Recommendations)",
+      "label": "NICE: NG210 Pelvic floor dysfunction: prevention and non-surgical management (Recommendations)",
       "url": "https://www.nice.org.uk/guidance/ng210/chapter/Recommendations"
     },
     {
-      "label": "NHS — Urinary incontinence overview",
+      "label": "NHS: Urinary incontinence overview",
       "url": "https://www.nhs.uk/conditions/urinary-incontinence/"
     },
     {
-      "label": "NIDDK — Kegel Exercises",
+      "label": "NIDDK: Kegel Exercises",
       "url": "https://www.niddk.nih.gov/health-information/urologic-diseases/kegel-exercises"
     }
   ],

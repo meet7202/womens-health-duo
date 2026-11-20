@@ -4,12 +4,12 @@
   "seoTitle": "What happens at a first pelvic physio visit",
   "description": "A first pelvic-health physio visit starts with history and goals. Learn consent for optional exams, chaperones, and online versus in-person limits.",
   "primaryQuestion": "What happens at a pelvic health physiotherapy session?",
-  "directAnswer": "A first visit centres on your story: when symptoms began, what aggravates or eases them, pregnancies or surgeries, bladder and bowel habits, and what you want to do again. The physiotherapist explains assessment options. An internal vaginal or rectal examination is offered only with clear consent and can be declined; a chaperone can be requested. You should leave with an initial plan, home strategies that match findings, and clarity on follow-up or medical referral—not with a surprise procedure.",
+  "directAnswer": "A first visit centres on your story: when symptoms began, what aggravates or eases them, pregnancies or surgeries, bladder and bowel habits, and what you want to do again. The physiotherapist explains assessment options. An internal vaginal or rectal examination is offered only with clear consent and can be declined; a chaperone can be requested. You should leave with an initial plan, home strategies that match findings, and clarity on follow-up or medical referral. A first visit should not include a surprise procedure.",
   "sections": [
     {
       "heading": "What to prepare before you arrive",
       "paragraphs": [
-        "POGP suggests arriving ready to describe when trouble began, what flares or settles it, earlier investigations, wider health, and how your job or hobbies load the pelvis. A short bladder diary over about three days—drinks, toilet visits, volumes if measured, urgency and leaks—helps if continence is the issue. Loose, comfortable clothes make movement screening easier.",
+        "POGP suggests arriving ready to describe when trouble began, what flares or settles it, earlier investigations, wider health, and how your job or hobbies load the pelvis. A short bladder diary over about three days (drinks, toilet visits, volumes if measured, urgency and leaks) helps if continence is the issue. Loose, comfortable clothes make movement screening easier.",
         "Write questions in advance: Do I need an internal exam today? What can I do this week? When should I see a doctor instead? Bring a list of medicines and prior reports if you have them. You do not need perfect paperwork to be taken seriously."
       ]
     },
@@ -24,7 +24,7 @@
       "heading": "Examination choices, consent and chaperones",
       "paragraphs": [
         "For bladder, bowel or pelvic-pain problems, an internal examination may be offered to assess pelvic-floor strength, coordination and tenderness. UH Sussex states the process is explained first, consent is required, you may refuse and still receive treatment, and a chaperone can be provided. POGP adds that you may take time to decide or bring a friend or family member.",
-        "Nothing should proceed because you feel awkward saying no. You can pause or stop during an examination. Coaching that stays outside the vagina—breathing drills, posture cues, and practice clearing a cough—can still start when internal assessment is declined."
+        "Nothing should proceed because you feel awkward saying no. You can pause or stop during an examination. Coaching that stays outside the vagina, such as breathing drills, posture cues and practice clearing a cough, can still start when internal assessment is declined."
       ]
     },
     {
@@ -37,7 +37,7 @@
     {
       "heading": "Goals, follow-up and referrals",
       "paragraphs": [
-        "Agree what success looks like in your words—fewer leaks, less heaviness after standing, comfortable intimacy steps, or return to a chosen activity. NICE NG210 expects a management plan to be discussed and agreed, and supervised training programmes to include progress review during and at the end of the programme when that pathway is used.",
+        "Agree what success looks like in your own words: fewer leaks, less heaviness after standing, comfortable intimacy steps, or return to a chosen activity. NICE NG210 expects a management plan to be discussed and agreed, and supervised training programmes to include progress review during and at the end of the programme when that pathway is used.",
         "POGP notes that if the problem seems outside physiotherapy scope, you may be directed to another professional such as your GP. Hand-off to a gynaecologist such as Dr. Charmi Shah fits when medical differentials dominate. Seek urgent medical care for retention with pain, fever with severe pelvic pain, or sudden continence change plus genital numbness or weak legs rather than waiting for the next therapy visit."
       ]
     }
@@ -54,19 +54,19 @@
   ],
   "references": [
     {
-      "label": "POGP — Physiotherapy Assessment",
+      "label": "POGP: Physiotherapy Assessment",
       "url": "https://thepogp.co.uk/patients/pelvic_health_advice/physiotherapy_assessment.aspx"
     },
     {
-      "label": "University Hospitals Sussex NHS Foundation Trust — Your pelvic health physiotherapy appointment",
+      "label": "University Hospitals Sussex NHS Foundation Trust: Your pelvic health physiotherapy appointment",
       "url": "https://www.uhsussex.nhs.uk/resources/your-pelvic-health-physiotherapy-appointment/"
     },
     {
-      "label": "NHS Greater Glasgow and Clyde — Pelvic floor physiotherapy",
+      "label": "NHS Greater Glasgow and Clyde: Pelvic floor physiotherapy",
       "url": "https://www.nhsggc.scot/your-health/obstetrics-gynaecology-and-pelvic-floor-physiotherapy/pelvic-floor-physiotherapy/"
     },
     {
-      "label": "NICE — NG210 Pelvic floor dysfunction: prevention and non-surgical management (Recommendations)",
+      "label": "NICE: NG210 Pelvic floor dysfunction: prevention and non-surgical management (Recommendations)",
       "url": "https://www.nice.org.uk/guidance/ng210/chapter/Recommendations"
     }
   ],

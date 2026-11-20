@@ -34,7 +34,7 @@ export const BANGALORE_STUDIO = {
  * In-person slots are arranged on request — never imply walk-in or fixed doctor/day rosters.
  */
 export const PRACTICE_IN_PERSON_BOOKING_LINE =
-  "Women's Health Duo is online-first. In-person visits at our India centres are by appointment — contact us for available slots. Doctors are not fixed to a single centre schedule.";
+  "Women's Health Duo is online-first. In-person visits at our India centres are by appointment, so contact us for available slots. Doctors are not fixed to a single centre schedule.";
 
 /** Virtual / global pages: both doctors, one sentence */
 export const PRACTICE_BOTH_DOCTORS_IN_PERSON =

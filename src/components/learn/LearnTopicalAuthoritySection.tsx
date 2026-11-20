@@ -25,16 +25,15 @@ export function LearnTopicalAuthoritySection() {
         Health Duo is education plus real consults with our doctors, not a supplement shop.
       </p>
       <div className="mb-6 rounded-2xl border border-primary/20 bg-primary/5 p-4 text-sm text-foreground/90">
-        <strong className="font-medium">Priority for Dr. Zalak:</strong> women&apos;s health
-        physiotherapy, prenatal and postnatal recovery, incontinence, and diastasis support are the
-        priority care pathways alongside online consultation. Pilates remains a support tool for
-        these care paths, not the main keyword bet.
+        <strong className="font-medium">Dr. Zalak&apos;s main areas:</strong> women&apos;s health
+        physiotherapy, prenatal and postnatal recovery, incontinence, and diastasis recti, in person
+        or by online consultation. Pilates is used within this physiotherapy care rather than as a
+        separate programme.
       </div>
       <div className="mb-6 rounded-2xl border border-primary/20 bg-primary/5 p-4 text-sm text-foreground/90">
-        <strong className="font-medium">Fastest next step:</strong> if your question is personal,
-        you are not just looking for a general answer, or you want a plan that fits your history,
-        start with the doctor or virtual consultation route and then come back to the broader Learn
-        content.
+        <strong className="font-medium">Fastest next step:</strong> if your question is about your
+        own health, or you want a plan that fits your history, start with a doctor or virtual
+        consultation. You can come back to the Learn content afterwards.
       </div>
 
       <div className="mb-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
@@ -89,7 +88,7 @@ export function LearnTopicalAuthoritySection() {
       </div>
       <p className="text-muted-foreground text-sm leading-relaxed mb-8 max-w-3xl">
         <strong className="font-medium text-foreground">Booked care:</strong> if you want a real
-        consultation (not just content), start with{" "}
+        consultation rather than reading material, start with{" "}
         <Link
           to={publicPathname(ROUTES.onlineConsultation)}
           className="text-primary font-medium underline underline-offset-4"
@@ -177,7 +176,7 @@ export function LearnTopicalAuthoritySection() {
                   </div>
                 ) : (
                   <p className="text-sm text-muted-foreground">
-                    We&apos;re tagging more content for this area, check back soon or jump to{" "}
+                    We&apos;re still tagging content for this area. Check back soon or go to{" "}
                     <Link
                       to={publicPathname(ROUTES.learn)}
                       className="text-primary underline underline-offset-4"
@@ -209,7 +208,7 @@ export function LearnTopicalAuthoritySection() {
                 ) : null}
 
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Looking for a booked consult, not just content?{" "}
+                  Want to book a consult instead?{" "}
                   <Link
                     to={publicPathname(ROUTES.onlineConsultation)}
                     className="text-primary font-medium underline underline-offset-2"

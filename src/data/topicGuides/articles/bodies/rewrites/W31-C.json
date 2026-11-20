@@ -49,20 +49,29 @@
   ],
   "references": [
     {
-      "label": "NHS — Postmenopausal bleeding",
+      "label": "NHS: Postmenopausal bleeding",
       "url": "https://www.nhs.uk/conditions/post-menopausal-bleeding/"
     },
     {
-      "label": "NHS — Ectopic pregnancy",
+      "label": "NHS: Ectopic pregnancy",
       "url": "https://www.nhs.uk/conditions/ectopic-pregnancy/"
     }
   ],
   "conversionCopy": "For non-urgent symptoms you can book a consultation with Dr. Charmi Shah. Severe or rapidly worsening symptoms need local emergency care first.",
   "explainerAlt": "Two-list sketch of symptoms for emergency care versus a booked gynaecology visit",
   "internalLinks": [
-    { "anchor": "when to see a gynaecologist", "path": "/when-should-i-see-a-gynecologist/" },
-    { "anchor": "bleeding in early pregnancy", "path": "/bleeding-in-early-pregnancy/" },
-    { "anchor": "heavy periods", "path": "/heavy-periods/" }
+    {
+      "anchor": "when to see a gynaecologist",
+      "path": "/when-should-i-see-a-gynecologist/"
+    },
+    {
+      "anchor": "bleeding in early pregnancy",
+      "path": "/bleeding-in-early-pregnancy/"
+    },
+    {
+      "anchor": "heavy periods",
+      "path": "/heavy-periods/"
+    }
   ],
   "parentHub": "/online-gynecologist/",
   "review": {

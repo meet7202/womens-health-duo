@@ -32,7 +32,7 @@
       "heading": "What to tell a clinician if the ache is ongoing",
       "paragraphs": [
         "Name the task: stairs, turning in bed, standing to cook, or coughing. Say which week you are in, whether there is bleeding or a change in the baby’s movements, and what you have already tried.",
-        "A booked physiotherapy visit is reasonable for stable pelvic or back pain once maternity care knows about you. The back-pain and pelvic-pain pregnancy guides go deeper on those two problems. This page is the map, not every protocol."
+        "A booked physiotherapy visit is reasonable for stable pelvic or back pain once maternity care knows about you. The back-pain and pelvic-pain pregnancy guides go deeper on those two problems. This page only gives the overview."
       ]
     }
   ],
@@ -48,23 +48,29 @@
   ],
   "references": [
     {
-      "label": "NHS — Common health problems in pregnancy",
+      "label": "NHS: Common health problems in pregnancy",
       "url": "https://www.nhs.uk/pregnancy/related-conditions/common-symptoms/"
     },
     {
-      "label": "NHS — Exercise in pregnancy",
+      "label": "NHS: Exercise in pregnancy",
       "url": "https://www.nhs.uk/pregnancy/keeping-well/exercise/"
     }
   ],
   "conversionCopy": "For stable pregnancy aches, you can book physiotherapy with Dr. Zalak Shah (PT). Bleeding, severe headache, fewer baby movements or fainting need maternity or emergency care first.",
   "explainerAlt": "Two-column list of common pregnancy aches versus symptoms that need same-day maternity care",
   "internalLinks": [
-    { "anchor": "back pain in pregnancy", "path": "/how-to-relieve-back-pain-during-pregnancy/" },
+    {
+      "anchor": "back pain in pregnancy",
+      "path": "/how-to-relieve-back-pain-during-pregnancy/"
+    },
     {
       "anchor": "pelvic pain in pregnancy",
       "path": "/how-to-relieve-pelvic-pain-during-pregnancy/"
     },
-    { "anchor": "prenatal physiotherapy", "path": "/prenatal-physiotherapy/" }
+    {
+      "anchor": "prenatal physiotherapy",
+      "path": "/prenatal-physiotherapy/"
+    }
   ],
   "parentHub": "/prenatal-physiotherapy/",
   "review": {

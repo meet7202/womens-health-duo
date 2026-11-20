@@ -4,7 +4,7 @@
   "seoTitle": "What is women's health physiotherapy?",
   "description": "Women's health physiotherapy assesses pelvic floor, pregnancy, birth recovery and bladder symptoms. It does not replace gynaecology or emergency care.",
   "primaryQuestion": "What is women's health physiotherapy?",
-  "directAnswer": "Women's health physiotherapy is assessment and treatment for problems linked to the pelvic floor, pregnancy, birth recovery, bladder and bowel control, pelvic pain and abdominal-wall changes such as diastasis. A physiotherapist looks at how you move, breathe and load the body, then builds a graded plan. It is not a gynaecology diagnosis, not surgery, and not a promise that every symptom will disappear. Dr. Zalak Shah (PT) leads this lane at Women's Health Duo. Medical questions go to Dr. Charmi Shah.",
+  "directAnswer": "Women's health physiotherapy is assessment and treatment for problems linked to the pelvic floor, pregnancy, birth recovery, bladder and bowel control, pelvic pain and abdominal-wall changes such as diastasis. A physiotherapist looks at how you move, breathe and load the body, then builds a graded plan. It does not diagnose gynaecological conditions or replace surgery, and it cannot promise that every symptom will go away. Dr. Zalak Shah (PT) leads this lane at Women's Health Duo. Medical questions go to Dr. Charmi Shah.",
   "storytellingNote": "",
   "sections": [
     {
@@ -48,20 +48,29 @@
   ],
   "references": [
     {
-      "label": "POGP — Patient information",
+      "label": "POGP: Patient information",
       "url": "https://thepogp.co.uk/patient_information/default.aspx"
     },
     {
-      "label": "NHS — What are pelvic floor exercises?",
+      "label": "NHS: What are pelvic floor exercises?",
       "url": "https://www.nhs.uk/common-health-questions/womens-health/what-are-pelvic-floor-exercises/"
     }
   ],
   "conversionCopy": "If you want a physiotherapy assessment for pelvic floor, pregnancy or postnatal symptoms, you can book with Dr. Zalak Shah (PT).",
   "explainerAlt": "Sketch of pelvic floor, bladder and abdominal wall as areas a women's health physiotherapist may assess",
   "internalLinks": [
-    { "anchor": "pelvic floor", "path": "/what-is-the-pelvic-floor/" },
-    { "anchor": "bladder leakage", "path": "/bladder-leakage/" },
-    { "anchor": "women's health physiotherapy hub", "path": "/womens-health-physiotherapy/" }
+    {
+      "anchor": "pelvic floor",
+      "path": "/what-is-the-pelvic-floor/"
+    },
+    {
+      "anchor": "bladder leakage",
+      "path": "/bladder-leakage/"
+    },
+    {
+      "anchor": "women's health physiotherapy hub",
+      "path": "/womens-health-physiotherapy/"
+    }
   ],
   "parentHub": "/womens-health-physiotherapy/",
   "review": {

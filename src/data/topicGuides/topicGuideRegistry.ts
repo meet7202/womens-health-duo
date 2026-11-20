@@ -358,7 +358,7 @@ function sectionsWithUniquenessScaffold(
         `${title.replace(/\?+$/, "")} is a topic patients ask about at Women's Health Duo. ${opts.metaBlurb}`;
       followOn =
         followOn ??
-        `${opts.metaBlurb} Discuss next steps with ${doctorAttribution(opts.consult)} — this page prepares questions; it does not replace individualized care.`;
+        `${opts.metaBlurb} Discuss next steps with ${doctorAttribution(opts.consult)}. This page helps you prepare questions; it does not replace individual care.`;
       firstHeading = firstHeading ?? primaryQuestion;
     }
   }

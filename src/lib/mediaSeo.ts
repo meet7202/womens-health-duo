@@ -1,6 +1,6 @@
 /**
  * Alt/title/caption strings for images and video posters (Google Images / Video discovery).
- * No `@/` imports — safe from Node build scripts.
+ * No `@/` imports, so it is safe to load from Node build scripts.
  */
 import type { DoctorSlug } from "../data/doctorProfiles";
 import { knowledgeHubVideoDisplayTitle, type KnowledgeHubVideo } from "../data/knowledgeHubVideos";
@@ -15,14 +15,15 @@ export function doctorPhotoAlt(slug: DoctorSlug): string {
 
 export function doctorPhotoTitle(slug: DoctorSlug): string {
   return slug === "charmi"
-    ? "Dr. Charmi Shah — obstetrician, gynecologist, IVF and laparoscopy"
-    : "Dr. Zalak Shah — women's health physio, STOTT Pilates Mat and Reformer";
+    ? "Dr. Charmi Shah, obstetrician and gynecologist (IVF and laparoscopy)"
+    : "Dr. Zalak Shah, women's health physio and STOTT Pilates (Mat and Reformer)";
 }
 
 export const HERO_IMAGE_ALT =
   "Dr. Charmi Shah and Dr. Zalak Shah, sisters and co-founders of Women's Health Duo";
 
-export const HERO_IMAGE_TITLE = "Women's Health Duo — OB-GYN and women's health physiotherapy team";
+export const HERO_IMAGE_TITLE =
+  "Women's Health Duo: the OB-GYN and women's health physiotherapy team";
 
 function hubDoctorLabel(video: KnowledgeHubVideo): string {
   if (video.doctor === "charmi") return "Dr. Charmi Shah";
@@ -32,7 +33,7 @@ function hubDoctorLabel(video: KnowledgeHubVideo): string {
 
 function hubMediaKindLabel(video: KnowledgeHubVideo): string {
   if (video.kind === "youtube_short") {
-    // SEO-34: match youtubeOpenAs — long-form uploads are not always Shorts.
+    // SEO-34: match youtubeOpenAs; long-form uploads are not always Shorts.
     return video.youtubeOpenAs === "watch" ? "YouTube video" : "YouTube Short";
   }
   if (video.kind === "instagram_reel") return "Instagram Reel";
@@ -42,7 +43,7 @@ function hubMediaKindLabel(video: KnowledgeHubVideo): string {
 /** Descriptive `alt` / `title` for hub posters and watch-page thumbnails. */
 export function knowledgeHubPosterAlt(video: KnowledgeHubVideo): string {
   const title = knowledgeHubVideoDisplayTitle(video);
-  return `${title} — ${hubMediaKindLabel(video)} cover, Women's Health Duo (${hubDoctorLabel(video)})`;
+  return `${hubMediaKindLabel(video)} cover: ${title} (${hubDoctorLabel(video)}, Women's Health Duo)`;
 }
 
 export function youtubeThumbnailUrl(youtubeVideoId: string): string {

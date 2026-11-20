@@ -574,7 +574,9 @@ export function BookConsultationPage() {
                 </div>
                 <div>
                   <dt className="text-muted-foreground">Consent at</dt>
-                  <dd className="font-medium text-foreground">{data.consentTimestamp || "—"}</dd>
+                  <dd className="font-medium text-foreground">
+                    {data.consentTimestamp || "Not recorded"}
+                  </dd>
                 </div>
               </dl>
               <p className="text-xs text-muted-foreground">

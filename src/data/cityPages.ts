@@ -51,7 +51,7 @@ export const CITY_PAGES: Record<CityKey, CityPageData> = {
       },
     ],
     highlights: [
-      "Integrated OB-GYN and physiotherapy perspective for many women's health journeys",
+      "OB-GYN and physiotherapy under one practice, so pregnancy, pelvic and gynaecology care can be planned together",
       "Fertility evaluation and IVF/IUI pathways discussed in consult",
       "Pelvic floor, prenatal and postnatal rehab with Pilates-informed programming",
       "Same practice contact channels for both sisters (phone, WhatsApp, email)",

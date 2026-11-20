@@ -154,11 +154,11 @@ export const TestimonialsSection = () => {
             What Our <span className="text-primary italic">Patients</span> Say
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Real experiences from women who trusted us with their health journey.
+            Reviews from women we have treated, in their own words.
           </p>
         </m.div>
 
-        {/* Ratings / review source links — aggregates only with provenance (SEO-18) */}
+        {/* Ratings / review source links; aggregates only with provenance (SEO-18) */}
         <m.div
           initial={false}
           animate={isInView ? { opacity: 1, y: 0 } : {}}

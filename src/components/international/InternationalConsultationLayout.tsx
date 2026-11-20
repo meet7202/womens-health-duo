@@ -19,12 +19,12 @@ const HOW_IT_WORKS_STEPS = [
   {
     icon: MessageCircle,
     title: "Message on WhatsApp",
-    body: "Share your country, time zone, and main concern — or use Book consultation for structured intake and telemedicine consent.",
+    body: "Share your country, time zone, and main concern. You can also use Book consultation for structured intake and telemedicine consent.",
   },
   {
     icon: CalendarCheck,
     title: "Send records in chat",
-    body: "Attach labs, ultrasound summaries, or prior notes when we ask. No file upload on the website — share in WhatsApp.",
+    body: "Attach labs, ultrasound summaries, or prior notes when we ask. The website has no file upload, so please share them on WhatsApp.",
   },
   {
     icon: Video,
@@ -34,7 +34,7 @@ const HOW_IT_WORKS_STEPS = [
   {
     icon: Globe,
     title: "Follow-up worldwide",
-    body: "Progress checks and exercise cues can continue on WhatsApp across time zones — always with local emergency care for urgent symptoms.",
+    body: "Progress checks and exercise cues can continue on WhatsApp across time zones. For urgent symptoms, always use local emergency care.",
   },
 ] as const;
 

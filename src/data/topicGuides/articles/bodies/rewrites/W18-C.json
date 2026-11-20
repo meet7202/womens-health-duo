@@ -4,13 +4,13 @@
   "seoTitle": "IUI and IVF compared for fertility care",
   "description": "IUI places prepared sperm in the uterus near ovulation; IVF fertilises eggs in a lab. How procedures, monitoring and decision factors differ.",
   "primaryQuestion": "What is the difference between IUI and IVF?",
-  "directAnswer": "Intrauterine insemination (IUI) places prepared sperm directly into the uterus around ovulation so fertilisation still happens inside the body. In vitro fertilisation (IVF) collects eggs, fertilises them in a laboratory, and transfers an embryo later. The UK HFEA notes that IUI is less invasive and usually costs less per cycle than IVF, yet is also less successful per cycle and is unlikely to help when tubes are blocked, endometriosis is severe, ovarian reserve is very low, or male factor infertility is significant. Choice depends on test results and goals—not a generic cheaper-versus-stronger ranking.",
+  "directAnswer": "Intrauterine insemination (IUI) places prepared sperm directly into the uterus around ovulation so fertilisation still happens inside the body. In vitro fertilisation (IVF) collects eggs, fertilises them in a laboratory, and transfers an embryo later. The UK HFEA notes that IUI is less invasive and usually costs less per cycle than IVF, yet is also less successful per cycle and is unlikely to help when tubes are blocked, endometriosis is severe, ovarian reserve is very low, or male factor infertility is significant. Choice depends on test results and goals, not a generic cheaper-versus-stronger ranking.",
   "sections": [
     {
       "heading": "How each procedure works",
       "paragraphs": [
         "NHS information describes IUI as putting sperm into the womb when you are ovulating, after the sample is prepared. Timing may follow natural ovulation checks or, in some pathways, medicines and scans to stimulate and time release of an egg. The catheter procedure itself is usually brief.",
-        "HFEA describes IVF as stimulating the ovaries, collecting eggs, combining them with sperm in the lab (or using ICSI), culturing embryos, then transferring an embryo—often freezing extras. Our step-by-step IVF guide walks those stages in order. The practical difference: IUI assists sperm delivery; IVF moves fertilisation and early embryo selection into the laboratory."
+        "HFEA describes IVF as stimulating the ovaries, collecting eggs, combining them with sperm in the lab (or using ICSI), culturing embryos, then transferring an embryo, often freezing extras. Our step-by-step IVF guide walks those stages in order. The practical difference: IUI assists sperm delivery; IVF moves fertilisation and early embryo selection into the laboratory."
       ]
     },
     {
@@ -30,7 +30,7 @@
     {
       "heading": "Questions for a shared decision",
       "paragraphs": [
-        "Ask what each option can and cannot fix in your specific results. Ask how many IUI cycles would be tried before reconsidering IVF, what monitoring happens with stimulation, and how multiple-pregnancy risk will be limited. Ask how clinic outcome figures are defined—HFEA publishes UK data; Indian clinic dashboards are not interchangeable with those tables.",
+        "Ask what each option can and cannot fix in your specific results. Ask how many IUI cycles would be tried before reconsidering IVF, what monitoring happens with stimulation, and how multiple-pregnancy risk will be limited. Ask how clinic outcome figures are defined. HFEA publishes UK data; Indian clinic dashboards are not interchangeable with those tables.",
         "If stimulation medicines are used, know OHSS warning signs such as painful bloating, persistent vomiting, faintness or reduced urine, and seek urgent clinic or emergency review if they appear. Our first fertility appointment guide covers how baseline tests are chosen before any treatment label is applied."
       ]
     }
@@ -42,20 +42,20 @@
     },
     {
       "question": "Is IUI always tried before IVF?",
-      "answer": "No. Blocked tubes, significant sperm problems or other findings may point straight to IVF. Shared decision-making uses your test results and timeline—not a fixed ladder every couple must climb."
+      "answer": "No. Blocked tubes, significant sperm problems or other findings may point straight to IVF. Shared decision-making uses your test results and timeline, not a fixed ladder every couple must climb."
     }
   ],
   "references": [
     {
-      "label": "HFEA — Intrauterine insemination (IUI)",
+      "label": "HFEA: Intrauterine insemination (IUI)",
       "url": "https://www.hfea.gov.uk/treatments/explore-all-treatments/intrauterine-insemination-iui/"
     },
     {
-      "label": "NHS — Intrauterine insemination (IUI)",
+      "label": "NHS: Intrauterine insemination (IUI)",
       "url": "https://www.nhs.uk/tests-and-treatments/intrauterine-insemination-iui/"
     },
     {
-      "label": "HFEA — In vitro fertilisation (IVF)",
+      "label": "HFEA: In vitro fertilisation (IVF)",
       "url": "https://www.hfea.gov.uk/treatments/explore-all-treatments/in-vitro-fertilisation-ivf/"
     }
   ],

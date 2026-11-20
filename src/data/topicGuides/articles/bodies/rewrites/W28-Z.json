@@ -4,7 +4,7 @@
   "seoTitle": "Online women's health physiotherapy limits",
   "description": "Online physiotherapy can review symptoms and watch movement. It cannot do an internal exam or handle emergencies. Some problems still need an in-person visit.",
   "primaryQuestion": "What can an online women's health physiotherapy visit do?",
-  "directAnswer": "An online visit can take a detailed history, watch how you move, breathe and change position, and agree a home plan you can film or describe between sessions. It cannot perform an internal pelvic-floor examination, feel a scar, or rule out a medical emergency. If your main question needs hands-on testing, an in-person appointment is the honest next step. Video care is a format, not a lesser or greater treatment by itself.",
+  "directAnswer": "An online visit can take a detailed history, watch how you move, breathe and change position, and agree a home plan you can film or describe between sessions. It cannot perform an internal pelvic-floor examination, feel a scar, or rule out a medical emergency. If your main question needs hands-on testing, an in-person appointment is the honest next step. Video is a way of delivering care. On its own it is neither better nor worse than being in the room.",
   "storytellingNote": "",
   "sections": [
     {
@@ -48,11 +48,11 @@
   ],
   "references": [
     {
-      "label": "NHS — What are pelvic floor exercises?",
+      "label": "NHS: What are pelvic floor exercises?",
       "url": "https://www.nhs.uk/common-health-questions/womens-health/what-are-pelvic-floor-exercises/"
     },
     {
-      "label": "POGP — Patient information",
+      "label": "POGP: Patient information",
       "url": "https://thepogp.co.uk/patient_information/default.aspx"
     }
   ],
@@ -67,7 +67,10 @@
       "anchor": "what happens in a session",
       "path": "/what-happens-during-a-physiotherapy-session/"
     },
-    { "anchor": "bladder leakage", "path": "/bladder-leakage/" }
+    {
+      "anchor": "bladder leakage",
+      "path": "/bladder-leakage/"
+    }
   ],
   "parentHub": "/womens-health-physiotherapy/",
   "review": {

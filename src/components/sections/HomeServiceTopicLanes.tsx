@@ -12,7 +12,7 @@ const topicLanes = [
     id: "hormonal-health",
     title: "Hormonal health",
     icon: Activity,
-    text: "Cycle hormones, PCOS patterns, perimenopause questions, short clips plus a real OB-GYN consult when you're ready.",
+    text: "Cycle hormones, PCOS patterns and perimenopause questions. Start with short clips, then book an OB-GYN consult when you're ready.",
     links: [
       { path: "/pcos/", label: "PCOS guide" },
       { path: "/hormonal-imbalance/", label: "Hormonal imbalance" },
@@ -22,7 +22,7 @@ const topicLanes = [
     id: "menstrual-health",
     title: "Menstrual health",
     icon: HeartPulse,
-    text: "Heavy or painful periods, fibroids, endometriosis concerns, education first, then structured care with Dr. Charmi.",
+    text: "Heavy or painful periods, fibroids and endometriosis concerns. Read up first, then see Dr. Charmi for a care plan.",
     links: [
       { path: "/heavy-periods/", label: "Heavy periods" },
       { path: "/endometriosis-symptoms-diagnosis/", label: "Endometriosis" },
@@ -33,7 +33,7 @@ const topicLanes = [
     id: "fertility",
     title: "Fertility",
     icon: Baby,
-    text: "Fertility pathways, IVF/IUI questions, and pregnancy planning, especially helpful for NRIs who want continuity.",
+    text: "Fertility options, IVF/IUI questions, and pregnancy planning. Useful for NRIs who want to keep seeing the same doctor.",
     links: [
       { path: "/fertility/", label: "Fertility and IVF" },
       { path: "/pregnancy-planning/", label: "Pregnancy planning" },
@@ -86,9 +86,9 @@ export function HomeServiceTopicLanes() {
             Four ways people find us
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-            A light overview so you know you&apos;re in the right place, the{" "}
+            A short overview so you know you&apos;re in the right place. The{" "}
             <span className="font-medium text-foreground">full service list by doctor</span> is
-            right below this block.
+            right below.
           </p>
         </div>
 

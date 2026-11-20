@@ -14,7 +14,7 @@
     --popover: 30 30% 97%;
     --popover-foreground: 20 15% 15%;
 
-    /* Rose/Blush Primary — ~42% L so text/links clear AA on cream backgrounds */
+    /* Rose/Blush Primary: ~42% L so text/links clear AA on cream backgrounds */
     --primary: 12 48% 42%;
     --primary-foreground: 30 25% 98%;
 
@@ -22,7 +22,7 @@
     --secondary: 30 40% 92%;
     --secondary-foreground: 20 15% 25%;
 
-    /* Soft muted tones — dark enough for AA on secondary/25–30 washes */
+    /* Soft muted tones, dark enough for AA on secondary/25–30 washes */
     --muted: 30 20% 94%;
     --muted-foreground: 20 12% 36%;
 
@@ -48,7 +48,7 @@
     --blush: 8 60% 94%;
     --nude: 25 30% 88%;
 
-    /* WhatsApp brand greens — white text meets WCAG AA (≥4.5:1) */
+    /* WhatsApp brand greens: white text meets WCAG AA (≥4.5:1) */
     --whatsapp: 168 86% 19%;
     --whatsapp-hover: 168 86% 15%;
 

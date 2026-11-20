@@ -22,7 +22,7 @@
       ]
     },
     {
-      "heading": "How to choose a session that is honest",
+      "heading": "How to choose a sensible online session",
       "paragraphs": [
         "Look for a live option, a teacher who asks about pregnancy, birth, pain and leaks before you start, and permission to skip movements. Pre-recorded “flat tummy in ten days” marketing is a reason to close the tab.",
         "Dr. Zalak Shah (PT) teaches STOTT Pilates and also assesses pelvic-health problems. A class with her is still a class. It does not replace an appointment if you need leaks, prolapse symptoms or pain looked at. Say which of those you have before you join."
@@ -48,21 +48,33 @@
   ],
   "references": [
     {
-      "label": "NHS — Pilates and yoga",
+      "label": "NHS: Pilates and yoga",
       "url": "https://www.nhs.uk/live-well/exercise/pilates-and-yoga/"
     },
     {
-      "label": "Merrithew — STOTT PILATES FAQs",
+      "label": "Merrithew: STOTT PILATES FAQs",
       "url": "https://www.merrithew.com/about/education-programs/stott-pilates/faqs"
     }
   ],
   "conversionCopy": "If you want STOTT Pilates coaching, or you are unsure a class is appropriate, you can book with Dr. Zalak Shah (PT).",
   "explainerAlt": "Laptop class sketch noting the teacher can coach form but cannot examine the pelvic floor",
   "internalLinks": [
-    { "anchor": "what Pilates is", "path": "/what-is-pilates/" },
-    { "anchor": "what STOTT Pilates is", "path": "/what-is-stott-pilates/" },
-    { "anchor": "Pilates in pregnancy", "path": "/is-pilates-safe-during-pregnancy/" },
-    { "anchor": "women's health physiotherapy", "path": "/what-is-womens-health-physiotherapy/" }
+    {
+      "anchor": "what Pilates is",
+      "path": "/what-is-pilates/"
+    },
+    {
+      "anchor": "what STOTT Pilates is",
+      "path": "/what-is-stott-pilates/"
+    },
+    {
+      "anchor": "Pilates in pregnancy",
+      "path": "/is-pilates-safe-during-pregnancy/"
+    },
+    {
+      "anchor": "women's health physiotherapy",
+      "path": "/what-is-womens-health-physiotherapy/"
+    }
   ],
   "parentHub": "/what-is-pilates/",
   "review": {

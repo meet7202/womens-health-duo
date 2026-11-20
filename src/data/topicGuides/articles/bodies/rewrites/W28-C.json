@@ -48,20 +48,29 @@
   ],
   "references": [
     {
-      "label": "NHS — Irregular periods",
+      "label": "NHS: Irregular periods",
       "url": "https://www.nhs.uk/conditions/irregular-periods/"
     },
     {
-      "label": "NICHD — What causes menstruation problems?",
+      "label": "NICHD: What causes menstruation problems?",
       "url": "https://www.nichd.nih.gov/health/topics/menstruation/conditioninfo/causes"
     }
   ],
   "conversionCopy": "If cycle changes or hormone questions need a plan, you can book a consultation with Dr. Charmi Shah.",
   "explainerAlt": "Diagram listing separate causes people sometimes group under the phrase hormonal imbalance",
   "internalLinks": [
-    { "anchor": "irregular periods", "path": "/why-are-my-periods-irregular/" },
-    { "anchor": "what PCOS is", "path": "/what-is-pcos/" },
-    { "anchor": "perimenopause symptoms", "path": "/perimenopause-symptoms/" }
+    {
+      "anchor": "irregular periods",
+      "path": "/why-are-my-periods-irregular/"
+    },
+    {
+      "anchor": "what PCOS is",
+      "path": "/what-is-pcos/"
+    },
+    {
+      "anchor": "perimenopause symptoms",
+      "path": "/perimenopause-symptoms/"
+    }
   ],
   "parentHub": "/hormonal-imbalance/",
   "review": {

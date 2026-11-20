@@ -18,7 +18,7 @@ import { guideConsolidationTargetPath } from "@/config/guideConsolidationRedirec
 
 /**
  * SEO-24: lazy-load non-home page modules (named-export adapters).
- * Homepage (`Index`) stays eager — see Index.tsx stale-chunk comment.
+ * Homepage (`Index`) stays eager; see Index.tsx stale-chunk comment.
  * Do not add a catch-all vendor chunk in vite.config (TDZ risk).
  */
 const DoctorProfilePage = lazy(() =>
