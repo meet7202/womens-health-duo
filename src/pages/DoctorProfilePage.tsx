@@ -9,6 +9,7 @@ import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { whatsappMessageDoctorProfile, whatsappUrlWithMessage } from "@/lib/whatsappCta";
 import { TrackedWhatsAppLink, WHATSAPP_CTA_CLASS } from "@/components/cta/TrackedWhatsAppLink";
 import { DOCTOR_BY_SLUG, type DoctorSlug } from "@/data/doctorProfiles";
+import { LOCAL_SERVICE_PAGES } from "@/data/localServicePages";
 import { bookConsultationPath } from "@/lib/bookingIntent";
 import { doctorDocumentTitle, doctorTitleSpecialty } from "@/lib/pageSeoCopy";
 import { breadcrumbListSchema, webPageSchema } from "@/components/seo/schema/breadcrumbs";
@@ -86,6 +87,8 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
       aboutId: PHYSICIAN_IDS[slug],
     }),
   ];
+
+  const inPersonServicePages = LOCAL_SERVICE_PAGES.filter((p) => p.profilePath === d.path);
 
   const cityLinks =
     slug === "charmi"
@@ -199,6 +202,25 @@ export function DoctorProfilePage({ slug }: DoctorProfilePageProps) {
             </li>
           ))}
         </ul>
+        {inPersonServicePages.length > 0 ? (
+          <section className="mb-10" aria-labelledby="in-person-services-heading">
+            <h2
+              id="in-person-services-heading"
+              className="font-heading text-xl font-semibold text-foreground mb-3"
+            >
+              In-person services by city
+            </h2>
+            <ul className="list-disc pl-6 space-y-1 text-muted-foreground">
+              {inPersonServicePages.map((p) => (
+                <li key={p.path}>
+                  <Link to={p.path} className="text-primary underline underline-offset-4">
+                    {p.service.titleLead} in {p.city.titlePlace}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
         <ContextualDeepLinks context="doctor" doctorName={d.name} />
         <InclusiveSeoListFootnote variant="cities" className="mb-10" />
 

@@ -4,7 +4,10 @@ import { bookConsultationPath } from "../../lib/bookingIntent";
 import { SEO_ONLINE_SERVICES } from "../seoOnlineServices";
 import { CALENDAR_ARTICLE_BY_SLUG, publishedArticleForSlug } from "./articles";
 import { buildTopicGuideFaqs, clusterConfig } from "./clusterContent";
-import { guideUniquenessOverrideForSlug } from "./guideUniquenessOverrides";
+import {
+  guideSearchSnippetOverrideForSlug,
+  guideUniquenessOverrideForSlug,
+} from "./guideUniquenessOverrides";
 import { isTopicGuideIndexable } from "./topicGuideSitemapPaths";
 import { TOPIC_GUIDE_ROWS } from "./topicGuideRows";
 import type {
@@ -399,7 +402,9 @@ function buildGuideModel(row: TopicGuideRow): TopicGuidePageModel {
   const sections = published?.sections?.length ? published.sections : uniqueness.sections;
   const primaryQuestion = published?.primaryQuestion ?? uniqueness.primaryQuestion;
   const directAnswer = published?.directAnswer ?? uniqueness.directAnswer;
-  const metaDescription = published?.description ?? buildMetaDescription(title, cc.metaBlurb);
+  const snippet = guideSearchSnippetOverrideForSlug(row.slug);
+  const metaDescription =
+    published?.description ?? snippet?.metaDescription ?? buildMetaDescription(title, cc.metaBlurb);
   const introParagraph = published
     ? published.directAnswer
     : buildTopicGuideIntroParagraph(title, cc.metaBlurb);
@@ -411,7 +416,7 @@ function buildGuideModel(row: TopicGuideRow): TopicGuidePageModel {
     tier: row.tier,
     cluster: row.cluster,
     title,
-    seoTitle: published?.seoTitle,
+    seoTitle: published?.seoTitle ?? snippet?.seoTitle,
     introParagraph,
     metaDescription,
     sections,

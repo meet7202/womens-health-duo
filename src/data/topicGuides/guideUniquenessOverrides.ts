@@ -1,3 +1,5 @@
+import { CONTACT } from "../../config/site.defaults";
+
 /**
  * SEO-12 scaffolding: title-specific primaryQuestion + directAnswer for priority guides.
  * Copy is rewritten from existing cluster / FAQ pool text only — no new protocols,
@@ -29,7 +31,34 @@ export const GUIDE_UNIQUENESS_PRIORITY_SLUGS = [
   "postpartum-recovery",
   "bladder-leakage",
   "diastasis-recti",
+  "pelvic-floor-therapy",
 ] as const;
+
+/**
+ * Search snippet overrides (title / meta) for guides whose generated text repeats the page
+ * title ("Title. blurb") or whose query wording is missing from the title. Keep under the
+ * `formatDocumentTitle` and `capMetaDescription` limits; `audit:seo-titles` and
+ * `audit:seo-descriptions` enforce them after build.
+ */
+export const GUIDE_SEARCH_SNIPPET_OVERRIDES: Readonly<
+  Record<string, { seoTitle?: string; metaDescription?: string }>
+> = {
+  "womens-health-physiotherapy": {
+    seoTitle: "Women's Health Physiotherapist (PT)",
+    metaDescription: `Women's health physiotherapy with Dr. Zalak Shah (PT) for pelvic floor, prenatal and postnatal care, diastasis recti. Book via WhatsApp ${CONTACT.phoneE164}.`,
+  },
+  "pelvic-floor-therapy": {
+    seoTitle: "Pelvic Floor Physiotherapy Explained",
+    metaDescription: `Pelvic floor physiotherapy with Dr. Zalak Shah (PT): what it can help with, and when an in-person exam is needed. Book via WhatsApp ${CONTACT.phoneE164}.`,
+  },
+};
+
+export function guideSearchSnippetOverrideForSlug(
+  slug: string | undefined,
+): { seoTitle?: string; metaDescription?: string } | undefined {
+  if (!slug) return undefined;
+  return GUIDE_SEARCH_SNIPPET_OVERRIDES[slug];
+}
 
 export type GuideUniquenessPrioritySlug = (typeof GUIDE_UNIQUENESS_PRIORITY_SLUGS)[number];
 
@@ -127,6 +156,14 @@ export const GUIDE_UNIQUENESS_OVERRIDES: Readonly<
     followOn:
       "Dr. Zalak Shah (PT) sees women for diastasis recti in person in Bengaluru and Ahmedabad and online worldwide, usually as part of postnatal recovery. Many people improve with guided rehab, but no timeline is guaranteed; a wide gap with a hernia, or symptoms that do not settle, may need review by a surgeon.",
     firstSectionHeading: "How physiotherapy helps diastasis recti",
+  },
+  "pelvic-floor-therapy": {
+    primaryQuestion: "What is pelvic floor therapy?",
+    directAnswer:
+      "Pelvic floor therapy is physiotherapy for the muscles that support the bladder, bowel, and uterus, and that affect sexual comfort and core stability. It can address leakage, urgency, or pelvic pain once an assessment shows whether the floor is too weak, too tense, or not coordinating well.",
+    followOn:
+      "Dr. Zalak Shah (PT) provides pelvic floor physiotherapy education and exercise progression online worldwide and in person in Bangalore and Ahmedabad. Some conditions still need an in-person exam or a urogynecology visit, and this page does not replace that assessment.",
+    firstSectionHeading: "What pelvic floor therapy can help with",
   },
 };
 

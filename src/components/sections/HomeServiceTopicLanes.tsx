@@ -26,6 +26,7 @@ const topicLanes = [
     links: [
       { path: "/heavy-periods/", label: "Heavy periods" },
       { path: "/endometriosis-symptoms-diagnosis/", label: "Endometriosis" },
+      { path: "/valsad/gynecology/", label: "Gynecology in Valsad" },
     ],
   },
   {
@@ -50,6 +51,8 @@ const topicLanes = [
       { path: "/diastasis-recti/", label: "Diastasis recti" },
       { path: "/bladder-leakage/", label: "Bladder leakage" },
       { path: "/pilates/", label: "Pilates classes" },
+      { path: "/bangalore/pilates-classes/", label: "Pilates in Bangalore" },
+      { path: "/ahmedabad/pilates-classes/", label: "Pilates in Ahmedabad" },
     ],
   },
 ] as const;
