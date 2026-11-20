@@ -4,6 +4,7 @@
  * Must not use `@/` imports (loaded from Node for sitemap shells).
  */
 import type { FaqItem } from "./siteFaq";
+import { BANGALORE_STUDIO } from "../config/practiceLocations";
 import { CONTACT } from "../config/site.defaults";
 import { formatDocumentTitle } from "../lib/seoTitle";
 
@@ -415,7 +416,17 @@ export type LocalServicePage = {
 function buildFaqs(service: ServiceTemplate, city: LocalCity): FaqItem[] {
   const doctor = DOCTOR_NAME[service.doctor];
   const place = city.h1Place;
+  const studio =
+    city.key === "bangalore" && service.doctor === "zalak" ? BANGALORE_STUDIO : undefined;
   return [
+    {
+      question: `Which clinic offers ${service.titleLead.toLowerCase()} in ${city.titlePlace}?`,
+      answer: `Women's Health Duo, ${city.titlePlace}. ${doctor} sees patients in person for this, by appointment. ${
+        studio
+          ? `The studio is ${studio.area}.`
+          : "The room for that day is confirmed when you book."
+      } Message WhatsApp ${CONTACT.phoneE164}. English, Hindi, and Gujarati are commonly used.`,
+    },
     {
       question: `Can I see ${doctor} in person in ${place}?`,
       answer: `Yes. ${service.titleLead} in ${city.titlePlace} is an in-person visit with ${doctor}, by appointment. Video follow-up is available if you cannot come every time.`,

@@ -20,6 +20,16 @@ export const PRACTICE_ZALAK_LOCATIONS_SHORT = "Bangalore, Ahmedabad, and virtual
 export const PRACTICE_HOURS_LINE = "Monday–Saturday, 9:00 AM–6:00 PM (India)";
 
 /**
+ * Dr. Zalak Shah's Bengaluru studio, copied from her Google Business listing.
+ * Do not reuse this address for Ahmedabad. Ahmedabad has no published street address.
+ */
+export const BANGALORE_STUDIO = {
+  area: "Ahad Euphoria, Ahad Euphoria Road, Kodathi, Bengaluru 560099",
+  hours:
+    "Google lists the studio as open 24 hours. Visits are by appointment. Messages are answered Monday to Saturday, 9:00 AM to 6:00 PM India time.",
+} as const;
+
+/**
  * Online-first booking note for Contact and similar surfaces.
  * In-person slots are arranged on request — never imply walk-in or fixed doctor/day rosters.
  */

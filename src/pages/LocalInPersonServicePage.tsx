@@ -111,7 +111,7 @@ export function LocalInPersonServicePage() {
             Booking in {city.h1Place}
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            {page.doctorName} sees patients in person in {city.h1Place} by appointment.{" "}
+            This visit is at Women's Health Duo, {city.titlePlace}, with {page.doctorName}.{" "}
             {studio ? (
               <>
                 Studio: {studio.area}. {studio.hours}{" "}

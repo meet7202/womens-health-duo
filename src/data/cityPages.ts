@@ -1,3 +1,4 @@
+import { BANGALORE_STUDIO } from "../config/practiceLocations";
 import { ROUTES } from "../config/routes";
 
 export type CityKey = "ahmedabad" | "mumbai" | "valsad" | "bangalore";
@@ -145,11 +146,7 @@ export const CITY_PAGES: Record<CityKey, CityPageData> = {
       "Mat and Reformer STOTT Pilates for progressive strength and mobility",
       "Shared Women's Health Duo contact for booking and questions",
     ],
-    studio: {
-      area: "Ahad Euphoria, Ahad Euphoria Road, Kodathi, Bengaluru 560099",
-      hours:
-        "Google lists the studio as open 24 hours. Visits are by appointment. Messages are answered Monday to Saturday, 9:00 AM to 6:00 PM India time.",
-    },
+    studio: BANGALORE_STUDIO,
     drZalakGoogleBusinessPresentation: "bangalore-primary",
   },
 };

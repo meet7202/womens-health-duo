@@ -18,7 +18,10 @@ import { DirectoryPresence } from "@/components/seo/DirectoryPresence";
 import { SITE_URL } from "@/config/site";
 import { githubPagesAbsoluteUrl } from "@/lib/githubPagesPublicUrl";
 import { indiaCityDocumentTitle } from "@/lib/pageSeoCopy";
-import { localServicePagesForCity } from "@/data/localServicePages";
+import { localServicePagesForCity, type LocalServicePage } from "@/data/localServicePages";
+import { TrackedWhatsAppLink } from "@/components/cta/TrackedWhatsAppLink";
+import { whatsappUrlWithMessage } from "@/lib/whatsappCta";
+import { CONTACT } from "@/config/site.defaults";
 import {
   getVirtualConsultationCityBySlug,
   virtualConsultationCityPath,
@@ -62,12 +65,8 @@ export function CityLandingPage({ cityKey }: CityLandingPageProps) {
           {city.h1}
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">{city.intro}</p>
-        {city.studio ? (
-          <p className="text-muted-foreground leading-relaxed mb-8">
-            <strong className="text-foreground">Studio:</strong> {city.studio.area}.{" "}
-            {city.studio.hours}
-          </p>
-        ) : null}
+
+        <ClinicListings city={city} services={localServices} />
 
         <h2 className="font-heading text-xl font-semibold text-foreground mb-3">Who to book</h2>
         <ul className="space-y-4 mb-10">
@@ -85,19 +84,6 @@ export function CityLandingPage({ cityKey }: CityLandingPageProps) {
         </ul>
 
         <DrZalakGoogleBusinessBlock presentation={city.drZalakGoogleBusinessPresentation} />
-
-        <h2 className="font-heading text-xl font-semibold text-foreground mb-3">
-          In-person services in {city.cityName}
-        </h2>
-        <ul className="grid gap-2 sm:grid-cols-2 text-sm mb-10">
-          {localServices.map((service) => (
-            <li key={service.path}>
-              <Link to={service.path} className="text-primary underline underline-offset-4">
-                {service.service.titleLead} · {service.doctorName}
-              </Link>
-            </li>
-          ))}
-        </ul>
 
         <h2 className="font-heading text-xl font-semibold text-foreground mb-3">Highlights</h2>
         <ul className="list-disc pl-5 space-y-2 text-muted-foreground mb-10">
@@ -166,6 +152,109 @@ export function CityLandingPage({ cityKey }: CityLandingPageProps) {
         <DirectoryPresence />
       </article>
     </PageShell>
+  );
+}
+
+const CLINIC_CARD: Record<
+  LocalServicePage["service"]["doctor"],
+  { heading: string; credentials: string; service: string }
+> = {
+  zalak: {
+    heading: "Women's health physiotherapy clinic",
+    credentials: "BPT, MPT; STOTT Pilates Instructor (Mat & Reformer)",
+    service: "womens-health-physiotherapy",
+  },
+  charmi: {
+    heading: "Gynecology and IVF clinic",
+    credentials: "MBBS, MS (Obstetrics & Gynecology); fellowship training in laparoscopy and IVF",
+    service: "gynecological-care",
+  },
+};
+
+function ClinicListings({
+  city,
+  services,
+}: {
+  city: CityPageData;
+  services: readonly LocalServicePage[];
+}) {
+  const groups = (["zalak", "charmi"] as const)
+    .map((doctor) => ({
+      doctor,
+      services: services.filter((service) => service.service.doctor === doctor),
+    }))
+    .filter((group) => group.services.length > 0);
+
+  return (
+    <section className="mb-10" aria-labelledby={`clinics-${city.key}`}>
+      <h2
+        id={`clinics-${city.key}`}
+        className="font-heading text-xl font-semibold text-foreground mb-3"
+      >
+        Clinics in {city.cityName}
+      </h2>
+      <p className="text-muted-foreground leading-relaxed mb-4">
+        Women's Health Duo, {city.cityName}. Visits are by appointment. Say the city and the service
+        in the first message to {CONTACT.phoneE164}.
+      </p>
+      <div className="space-y-4">
+        {groups.map((group) => {
+          const card = CLINIC_CARD[group.doctor];
+          const doctorName = group.services[0]?.doctorName ?? "";
+          const studio = group.doctor === "zalak" ? city.studio : undefined;
+          const href = whatsappUrlWithMessage(
+            `Hi Women's Health Duo,\n\nI would like an in-person visit at the ${city.cityName} clinic with ${doctorName}.\n\nSent from womenshealthduo.com${city.path}`,
+          );
+          return (
+            <article key={group.doctor} className="rounded-xl border border-border/50 bg-card p-4">
+              <h3 className="font-heading text-lg font-semibold text-foreground">
+                {card.heading} in {city.cityName}
+              </h3>
+              <p className="mt-1 text-sm text-foreground">
+                {doctorName}. {card.credentials}
+              </p>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                {studio ? (
+                  <>
+                    Studio: {studio.area}. {studio.hours}
+                  </>
+                ) : (
+                  <>
+                    In person in {city.cityName} by appointment. The room for that day is confirmed
+                    when you book. Messages are answered Monday to Saturday, 9:00 AM to 6:00 PM
+                    India time.
+                  </>
+                )}
+              </p>
+              <p className="mt-3 text-sm font-medium text-foreground">
+                Patients book this clinic for
+              </p>
+              <ul className="mt-2 grid gap-2 sm:grid-cols-2 text-sm">
+                {group.services.map((service) => (
+                  <li key={service.path}>
+                    <Link to={service.path} className="text-primary underline underline-offset-4">
+                      {service.service.titleLead}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-3 text-sm">
+                <TrackedWhatsAppLink
+                  href={href}
+                  ctaPlacement="city_clinic"
+                  doctor={group.doctor}
+                  service={card.service}
+                  pagePath={city.path}
+                  className="text-primary underline underline-offset-4"
+                >
+                  Book this clinic on WhatsApp
+                </TrackedWhatsAppLink>
+              </p>
+            </article>
+          );
+        })}
+      </div>
+    </section>
   );
 }
 

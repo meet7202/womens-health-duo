@@ -5,6 +5,7 @@ import type { CityKey } from "@/data/cityPages";
 import { ROUTES } from "@/config/routes";
 import { CONTACT } from "@/config/site.defaults";
 import {
+  BANGALORE_STUDIO,
   PRACTICE_CHARMI_IN_PERSON,
   PRACTICE_HOURS_LINE,
   PRACTICE_ZALAK_IN_PERSON,
@@ -950,10 +951,19 @@ export function indiaCityFaqs(cityKey: CityKey, cityName: string): FaqItem[] {
   ];
 
   if (zalakHere) {
+    const studio = cityKey === "bangalore" ? BANGALORE_STUDIO : undefined;
     items.push({
       question: `What does women's health physiotherapy in ${cityName} cover?`,
       answer:
         "Dr. Zalak Shah (PT) assesses pelvic floor, breathing, posture and movement, then builds a plan for concerns such as bladder leakage, pelvic pain, pregnancy aches, recovery after birth or a C-section, and diastasis recti. STOTT Pilates on Mat or Reformer can be part of that plan once the assessment shows it fits.",
+    });
+    items.push({
+      question: `Where is the women's health physiotherapy clinic in ${cityName}?`,
+      answer: `Women's Health Duo sees patients in ${cityName} for women's health physiotherapy with Dr. Zalak Shah (PT) (BPT, MPT; STOTT Pilates Instructor, Mat and Reformer). Patients book pelvic floor physiotherapy, prenatal classes, postnatal care, diastasis recti, urinary incontinence, and Pilates. ${
+        studio
+          ? `Studio: ${studio.area}. ${studio.hours}`
+          : "The room for that day is confirmed when you book."
+      } Visits are by appointment. Message WhatsApp ${CONTACT.phoneE164}. English, Hindi, and Gujarati are commonly used.`,
     });
   }
 
@@ -962,6 +972,10 @@ export function indiaCityFaqs(cityKey: CityKey, cityName: string): FaqItem[] {
       question: `What OB-GYN care can I get in ${cityName}?`,
       answer:
         "Dr. Charmi Shah sees women for pregnancy care including high-risk pregnancy, period and hormone problems such as PCOS, fertility evaluation with IUI and IVF pathways, and laparoscopic surgery for conditions like fibroids, endometriosis and ovarian cysts when it is indicated.",
+    });
+    items.push({
+      question: `Where is the gynecology clinic in ${cityName}?`,
+      answer: `Women's Health Duo sees patients in ${cityName} for gynecology, IVF, laparoscopy, pregnancy care, and PCOS with Dr. Charmi Shah (MBBS, MS Obstetrics & Gynecology; fellowship training in laparoscopy and IVF). The room for that day is confirmed when you book. Visits are by appointment. Message WhatsApp ${CONTACT.phoneE164}. English, Hindi, and Gujarati are commonly used.`,
     });
   }
 
