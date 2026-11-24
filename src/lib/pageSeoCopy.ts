@@ -220,7 +220,8 @@ export const COMMUNITY_DOCUMENT_TITLE = formatDocumentTitle("Free women's health
 export const COMMUNITY_H1 = "Free women's health community on WhatsApp";
 
 export function internationalConsultationHubDocumentTitle(): string {
-  return formatDocumentTitle("International women's health consultation");
+  // Keep under DOCUMENT_TITLE_MAX_LEN so SERPs do not show an ellipsis mid-phrase.
+  return formatDocumentTitle("Overseas consult & second opinion");
 }
 
 export function internationalConsultationHubH1(): string {
