@@ -44,6 +44,7 @@ export const TOPIC_GUIDE_ROWS: TopicGuideRow[] = [
         ],
       },
       "prenatal-physiotherapy": {
+        title: "Prenatal Physiotherapy",
         related: [
           "what-is-prenatal-physiotherapy",
           "is-exercise-safe-during-pregnancy",
@@ -52,6 +53,7 @@ export const TOPIC_GUIDE_ROWS: TopicGuideRow[] = [
         ],
       },
       "postpartum-recovery": {
+        title: "Postpartum Recovery Physiotherapy",
         related: [
           "how-long-does-postpartum-recovery-take",
           "how-to-recover-after-c-section",
@@ -68,6 +70,7 @@ export const TOPIC_GUIDE_ROWS: TopicGuideRow[] = [
         ],
       },
       "bladder-leakage": {
+        title: "Bladder Leakage Physiotherapy",
         related: [
           "why-do-i-leak-urine-when-i-cough",
           "why-am-i-leaking-urine-after-childbirth",

@@ -51,6 +51,22 @@ export const GUIDE_SEARCH_SNIPPET_OVERRIDES: Readonly<
     seoTitle: "Pelvic Floor Physiotherapy Explained",
     metaDescription: `Pelvic floor physiotherapy with Dr. Zalak Shah (PT): what it can help with, and when an in-person exam is needed. Book via WhatsApp ${CONTACT.phoneE164}.`,
   },
+  "bladder-leakage": {
+    seoTitle: "Bladder leakage physio: Dr. Zalak",
+    metaDescription: `Bladder leakage and stress incontinence rehab with Dr. Zalak Shah (PT). Online pelvic floor physio; book via WhatsApp ${CONTACT.phoneE164}.`,
+  },
+  "diastasis-recti": {
+    seoTitle: "Diastasis recti physio: Dr. Zalak",
+    metaDescription: `Diastasis recti physiotherapy with Dr. Zalak Shah (PT): assessment, graded core rehab, online or in Bengaluru and Ahmedabad. Book via WhatsApp ${CONTACT.phoneE164}.`,
+  },
+  "prenatal-physiotherapy": {
+    seoTitle: "Prenatal physio with Dr. Zalak Shah",
+    metaDescription: `Prenatal physiotherapy with Dr. Zalak Shah (PT): pelvic girdle pain, pregnancy-safe exercise, birth prep. Book via WhatsApp ${CONTACT.phoneE164}.`,
+  },
+  "postpartum-recovery": {
+    seoTitle: "Postpartum recovery physio: Dr. Zalak",
+    metaDescription: `Postpartum recovery physiotherapy with Dr. Zalak Shah (PT): core, pelvic floor, return to exercise. Book via WhatsApp ${CONTACT.phoneE164}.`,
+  },
 };
 
 export function guideSearchSnippetOverrideForSlug(
@@ -144,17 +160,17 @@ export const GUIDE_UNIQUENESS_OVERRIDES: Readonly<
   "bladder-leakage": {
     primaryQuestion: "What should I know about bladder leakage?",
     directAnswer:
-      "Bladder leakage (including stress leakage with cough, sneeze, or lift) often relates to pelvic floor pressure management, swelling, constipation, or other contributors. The right plan may include training, behavioral strategies, or medical evaluation.",
+      "Bladder leakage with a cough, sneeze, laugh or lift is often stress incontinence: pressure rises faster than the pelvic floor and urethra can hold. The plan may include assessment-led training, bladder habits, constipation care, or a medical review when infection, blood in urine, or sudden change is present.",
     followOn:
-      "Self-prescribed Kegels are not always appropriate. Dr. Zalak Shah offers pelvic floor–oriented education online; persistent leakage should still be evaluated, and some cases need physician-led care.",
+      "Do not start random Kegel videos before someone checks whether your floor is weak, tense, or poorly timed. Dr. Zalak Shah (PT) offers online pelvic floor physiotherapy through Women's Health Duo and in-person visits in Bangalore and Ahmedabad. Book via WhatsApp or the Book consultation form when you want a named clinician, not a generic tip sheet.",
     firstSectionHeading: "Bladder leakage in plain language",
   },
   "diastasis-recti": {
     primaryQuestion: "How does physiotherapy help diastasis recti?",
     directAnswer:
-      "A women's health physiotherapist checks the width and depth of the gap along the midline, how the abdomen responds to breathing, lifting and everyday movement, and whether it domes or bulges under load. Rehab then builds breathing and pressure management, deep core and pelvic floor coordination, and gradually heavier loading, rather than avoiding all core work.",
+      "Physiotherapy for diastasis recti is an assessment and rehab plan, not a definition page. A women's health physiotherapist checks gap width and depth, how the midline behaves with breathing, lifting and daily movement, and whether it domes under load, then builds breath, pressure control, deep-core and pelvic-floor coordination, and graded loading.",
     followOn:
-      "Dr. Zalak Shah (PT) sees women for diastasis recti in person in Bengaluru and Ahmedabad and online worldwide, usually as part of postnatal recovery. Many people improve with guided rehab, but no timeline is guaranteed; a wide gap with a hernia, or symptoms that do not settle, may need review by a surgeon.",
+      "This page is for booking that rehab path with Dr. Zalak Shah (PT) online worldwide or in person in Bengaluru and Ahmedabad. For what the gap is and when a lump needs urgent care, use What Is Diastasis Recti. Many people improve with guided rehab; no timeline is guaranteed, and hernia signs or symptoms that do not settle may need a surgical opinion.",
     firstSectionHeading: "How physiotherapy helps diastasis recti",
   },
   "pelvic-floor-therapy": {

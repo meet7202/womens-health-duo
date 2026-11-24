@@ -1,15 +1,15 @@
+import { CONTACT } from "../../config/site.defaults";
 import type { InternationalDoctorHub } from "./types";
 
 export const INTERNATIONAL_CONSULTATION_BASE = "/international-consultation";
 
 export const INTERNATIONAL_HUB = {
   path: INTERNATIONAL_CONSULTATION_BASE,
-  documentTitlePrimary: "International women's health consultation",
+  documentTitlePrimary: "Overseas consult & second opinion",
   h1: "International consultation & second opinion",
-  metaDescription:
-    "International online women's health services with Dr. Charmi Shah (OB-GYN, IVF) and Dr. Zalak Shah (physio & STOTT Pilates): fertility second opinions, pelvic health, and video consults worldwide via WhatsApp.",
+  metaDescription: `International online women's health services with Dr. Charmi Shah (OB-GYN, IVF) and Dr. Zalak Shah (physio & STOTT Pilates). Book via WhatsApp ${CONTACT.phoneE164}.`,
   intro: [
-    "Women's Health Duo offers international video consultations for patients outside India, including NRIs, expats, and families comparing care between countries. Choose obstetric, gynecologic, and fertility services with Dr. Charmi Shah, or women's health physiotherapy and Pilates with Dr. Zalak Shah.",
+    "Book an overseas women's health consult or second opinion by video: Dr. Charmi Shah for OB-GYN, IVF and fertility planning, or Dr. Zalak Shah for pelvic physio and prenatal or postnatal rehab. Women's Health Duo serves NRIs, expats, and families comparing care between countries.",
     "All bookings start on WhatsApp or through our structured Book consultation flow with telemedicine consent. This is not for emergencies. Use local emergency services for urgent symptoms.",
   ],
 } as const;

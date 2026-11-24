@@ -34,6 +34,13 @@ google-indexing-service-account.json
 tools/mcp-gsc/
 tools/claude-seo/
 
+# SEO autopilot working state (context, keyword map, backlog, reports, competitor snaps)
+seo/
+
+# Local agent skills (npx skills install); keep out of git
+.agents/
+skills-lock.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
