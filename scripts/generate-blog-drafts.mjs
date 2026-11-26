@@ -437,7 +437,7 @@ function resolveExplainerCardTexts(built, planArticle) {
 }
 
 /** `built` is the generated article (final title + section headings); `planArticle` supplies the lead. */
-function svgExplainer(built, planArticle) {
+export function svgExplainer(built, planArticle) {
   const title = (built.title || "").slice(0, 72);
   const lead = doctorName(planArticle.doctor_id);
   const alt = built.figures.find((f) => f.src.endsWith(".svg"))?.alt || title;
@@ -638,4 +638,4 @@ export function calendarArticleBodyText(slug: string): string | undefined {
   console.log(`  status  → ${path.relative(ROOT, OUT_STATUS)}`);
 }
 
-main();
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) main();

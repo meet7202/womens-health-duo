@@ -37,7 +37,7 @@ function articleDiagram(slug: string, alt: string, caption: string): ServiceCity
 }
 
 const PRENATAL_CLASS_PHOTO: ServiceCityImage = {
-  src: "/images/classes/prenatal-class-4.jpg",
+  src: "/images/classes/prenatal-class-4.webp",
   alt: "Women's health physiotherapy session explaining pelvic anatomy on a screen to expecting parents",
   caption:
     "A pregnancy education session with Dr. Zalak Shah. Online sessions use the same teaching.",
@@ -46,7 +46,7 @@ const PRENATAL_CLASS_PHOTO: ServiceCityImage = {
 };
 
 const POSTNATAL_CLASS_PHOTO: ServiceCityImage = {
-  src: "/images/classes/postnatal-class-1.jpg",
+  src: "/images/classes/postnatal-class-1.webp",
   alt: "Talk on diastasis recti with a slide comparing a normal abdomen and separated abdominal muscles",
   caption: "Postnatal education on diastasis recti and core recovery.",
   width: 1024,
@@ -54,7 +54,7 @@ const POSTNATAL_CLASS_PHOTO: ServiceCityImage = {
 };
 
 const PILATES_MAT_PHOTO: ServiceCityImage = {
-  src: "/images/classes/pilates-class-3.jpg",
+  src: "/images/classes/pilates-class-3.webp",
   alt: "Woman holding a Pilates teaser position on a mat outdoors",
   caption:
     "Mat Pilates needs only a mat and enough floor space, which is why it works well by video.",
@@ -63,7 +63,7 @@ const PILATES_MAT_PHOTO: ServiceCityImage = {
 };
 
 const PILATES_STUDIO_PHOTO: ServiceCityImage = {
-  src: "/images/classes/pilates-class-5.jpg",
+  src: "/images/classes/pilates-class-5.webp",
   alt: "Woman doing a seated side stretch on a mat in a Pilates studio",
   caption: "Mobility and core work in a Pilates studio.",
   width: 684,

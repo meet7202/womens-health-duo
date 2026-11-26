@@ -77,11 +77,11 @@ export const ZALAK_GROUP_CLASS_CONTENT: Record<ZalakGroupClassKey, ZalakGroupCla
       "Hybrid options are available: start with an online assessment and join offline batches when convenient.",
     ],
     galleryImages: [
-      "/images/classes/prenatal-class-2.jpg",
-      "/images/classes/prenatal-class-4.jpg",
-      "/images/classes/prenatal-class-5.jpg",
-      "/images/classes/prenatal-class-6.jpg",
-      "/images/classes/prenatal-class-7.jpg",
+      "/images/classes/prenatal-class-2.webp",
+      "/images/classes/prenatal-class-4.webp",
+      "/images/classes/prenatal-class-5.webp",
+      "/images/classes/prenatal-class-6.webp",
+      "/images/classes/prenatal-class-7.webp",
     ],
     testimonials: [
       {
@@ -198,9 +198,9 @@ export const ZALAK_GROUP_CLASS_CONTENT: Record<ZalakGroupClassKey, ZalakGroupCla
       "Postnatal classes can be started 6-8 weeks after vaginal birth and 10-12 weeks after c-section, with doctor clearance.",
     ],
     galleryImages: [
-      "/images/classes/postnatal-class-1.jpg",
-      "/images/classes/postnatal-class-2.jpg",
-      "/images/classes/postnatal-class-4.jpg",
+      "/images/classes/postnatal-class-1.webp",
+      "/images/classes/postnatal-class-2.webp",
+      "/images/classes/postnatal-class-4.webp",
     ],
     testimonials: [
       {
@@ -320,11 +320,11 @@ export const ZALAK_GROUP_CLASS_CONTENT: Record<ZalakGroupClassKey, ZalakGroupCla
       "Hybrid packages are available: train online most of the time and add occasional in-person equipment sessions.",
     ],
     galleryImages: [
-      "/images/classes/pilates-class-2.jpg",
-      "/images/classes/pilates-class-3.jpg",
-      "/images/classes/pilates-class-4.jpg",
-      "/images/classes/pilates-class-5.jpg",
-      "/images/classes/pilates-class-6.jpg",
+      "/images/classes/pilates-class-2.webp",
+      "/images/classes/pilates-class-3.webp",
+      "/images/classes/pilates-class-4.webp",
+      "/images/classes/pilates-class-5.webp",
+      "/images/classes/pilates-class-6.webp",
     ],
     testimonials: [
       {

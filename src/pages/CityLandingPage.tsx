@@ -126,6 +126,19 @@ export function CityLandingPage({ cityKey }: CityLandingPageProps) {
           <Link to={ROUTES.drZalak} className="text-sm text-primary underline underline-offset-4">
             Dr. Zalak Shah: full profile
           </Link>
+          {cityKey === "bangalore" || cityKey === "ahmedabad" ? (
+            <>
+              <span className="text-muted-foreground" aria-hidden>
+                ·
+              </span>
+              <Link
+                to="/diastasis-recti"
+                className="text-sm text-primary underline underline-offset-4"
+              >
+                Diastasis recti physiotherapy
+              </Link>
+            </>
+          ) : null}
           <span className="text-muted-foreground" aria-hidden>
             ·
           </span>

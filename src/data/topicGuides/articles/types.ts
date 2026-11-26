@@ -68,6 +68,8 @@ export type CalendarArticleRevision = {
   /** Body fingerprint input for IndexNow change detection. */
   bodyFingerprintText: string;
   publishedAt?: string;
+  /** ISO date a clinician approved this revision. Only set after real confirmation. */
+  reviewedAt?: string;
   /** Only set after real clinician confirmation — do not invent. */
   authorId?: TopicGuideAuthorId;
   reviewerId?: TopicGuideAuthorId;

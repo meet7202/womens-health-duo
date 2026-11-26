@@ -67,6 +67,42 @@ export const GUIDE_SEARCH_SNIPPET_OVERRIDES: Readonly<
     seoTitle: "Postpartum recovery physio: Dr. Zalak",
     metaDescription: `Postpartum recovery physiotherapy with Dr. Zalak Shah (PT): core, pelvic floor, return to exercise. Book via WhatsApp ${CONTACT.phoneE164}.`,
   },
+  pcos: {
+    seoTitle: "PCOS care with Dr. Charmi Shah",
+    metaDescription: `PCOS education with Dr. Charmi Shah (OB-GYN/IVF): cycles, symptoms, fertility pathways. Book via WhatsApp ${CONTACT.phoneE164}.`,
+  },
+  "irregular-periods": {
+    seoTitle: "Irregular periods: Dr. Charmi Shah",
+    metaDescription: `Irregular periods explained with Dr. Charmi Shah (OB-GYN): causes, when to test, telehealth vs urgent care. Book via WhatsApp ${CONTACT.phoneE164}.`,
+  },
+  "painful-periods": {
+    seoTitle: "Painful periods: Dr. Charmi Shah",
+    metaDescription: `Painful periods and dysmenorrhea with Dr. Charmi Shah (OB-GYN): when pain is not “normal”. Book via WhatsApp ${CONTACT.phoneE164}.`,
+  },
+  "heavy-periods": {
+    seoTitle: "Heavy periods: Dr. Charmi Shah",
+    metaDescription: `Heavy periods and menorrhagia with Dr. Charmi Shah (OB-GYN): when flow is too much, anemia signs. Book via WhatsApp ${CONTACT.phoneE164}.`,
+  },
+  "hormonal-imbalance": {
+    seoTitle: "Hormonal imbalance: Dr. Charmi",
+    metaDescription: `Hormonal imbalance education with Dr. Charmi Shah (OB-GYN): cycles, thyroid, perimenopause context. Book via WhatsApp ${CONTACT.phoneE164}.`,
+  },
+  fertility: {
+    seoTitle: "Fertility care with Dr. Charmi Shah",
+    metaDescription: `Fertility and IVF-oriented consults with Dr. Charmi Shah: timing, workup, IUI/IVF orientation. Book via WhatsApp ${CONTACT.phoneE164}.`,
+  },
+  "pregnancy-planning": {
+    seoTitle: "Pregnancy planning: Dr. Charmi Shah",
+    metaDescription: `Preconception and pregnancy planning with Dr. Charmi Shah: folic acid, timing, health review. Book via WhatsApp ${CONTACT.phoneE164}.`,
+  },
+  "online-gynecologist": {
+    seoTitle: "Online gynecologist: Dr. Charmi Shah",
+    metaDescription: `Online gynecologist visits with Dr. Charmi Shah: cycles, fertility, PCOS, menopause education. Book via WhatsApp ${CONTACT.phoneE164}.`,
+  },
+  "when-should-i-see-a-gynecologist": {
+    seoTitle: "When to see a gynecologist",
+    metaDescription: `When to see a gynecologist with Dr. Charmi Shah: bleeding, pain, fertility, screening. Book via WhatsApp ${CONTACT.phoneE164}.`,
+  },
 };
 
 export function guideSearchSnippetOverrideForSlug(
@@ -134,14 +170,16 @@ export const GUIDE_UNIQUENESS_OVERRIDES: Readonly<
     firstSectionHeading: "How does exercise improve women's health?",
   },
   "womens-health-physiotherapy": {
+    // Live body: published hub article in `articles/zalakCareHubs.ts`.
     primaryQuestion: "What is women's health physiotherapy at Women's Health Duo?",
     directAnswer:
-      "Women's health physiotherapy here addresses pregnancy and postpartum recovery, pelvic pain, incontinence when medically appropriate, diastasis-oriented rehab, and return to activity. Dr. Zalak Shah plans education and exercise around your symptoms and goals rather than handing out generic fitness tips.",
+      "Women's health physiotherapy here addresses pregnancy and postpartum recovery, pelvic pain, incontinence when medically appropriate, diastasis recti physiotherapy, and return to activity. Dr. Zalak Shah plans education and exercise around your symptoms and goals rather than handing out generic fitness tips.",
     followOn:
       "Video visits excel at coaching and follow-up; some assessments still need local hands-on care, and we say so when that applies. STOTT Pilates may be integrated when clinically appropriate.",
     firstSectionHeading: "What women's health physiotherapy covers here",
   },
   "prenatal-physiotherapy": {
+    // Live body: published hub article in `articles/zalakCareHubs.ts`.
     primaryQuestion: "What is prenatal physiotherapy?",
     directAnswer:
       "Prenatal physiotherapy focuses on graded exercise, pelvic girdle strategies, back care, breathing practice, and preparing for labor demands while pregnancy changes posture, breathing, and pelvic load.",
@@ -150,14 +188,16 @@ export const GUIDE_UNIQUENESS_OVERRIDES: Readonly<
     firstSectionHeading: "What prenatal physiotherapy addresses",
   },
   "postpartum-recovery": {
+    // Live body: published hub article in `articles/zalakCareHubs.ts`.
     primaryQuestion: "What does postpartum recovery involve?",
     directAnswer:
-      "After birth, sleep debt, hormonal shifts, tissue healing, and new movement demands stack together. Some symptoms settle quickly. Others, such as pelvic pain or diastasis, often benefit from graded rehab rather than rushing high-load exercise.",
+      "After birth, sleep debt, hormonal shifts, tissue healing, and new movement demands stack together. Some symptoms settle quickly. Others, such as pelvic pain or diastasis recti, often benefit from graded rehab rather than rushing high-load exercise.",
     followOn:
-      "Fever, heavy bleeding, chest pain, calf swelling, or thoughts of self-harm need urgent pathways, not exercise tips alone. Dr. Zalak Shah supports safe return-to-exercise timelines after clearance and collaborates with your OB-GYN when red flags appear.",
-    firstSectionHeading: "Postpartum recovery: what this page means",
+      "Fever, heavy bleeding, chest pain, calf swelling, or thoughts of self-harm need urgent pathways, not exercise tips alone. Dr. Zalak Shah supports safe return-to-exercise timelines after clearance and collaborates with your OB-GYN when red flags appear. For abdominal separation rehab specifically, see diastasis recti physiotherapy.",
+    firstSectionHeading: "What postpartum physiotherapy can help",
   },
   "bladder-leakage": {
+    // Live body: published hub article in `articles/zalakCareHubs.ts`.
     primaryQuestion: "What should I know about bladder leakage?",
     directAnswer:
       "Bladder leakage with a cough, sneeze, laugh or lift is often stress incontinence: pressure rises faster than the pelvic floor and urethra can hold. The plan may include assessment-led training, bladder habits, constipation care, or a medical review when infection, blood in urine, or sudden change is present.",
@@ -166,14 +206,16 @@ export const GUIDE_UNIQUENESS_OVERRIDES: Readonly<
     firstSectionHeading: "Bladder leakage in plain language",
   },
   "diastasis-recti": {
-    primaryQuestion: "How does physiotherapy help diastasis recti?",
+    // Live body: published hub article in `articles/zalakCareHubs.ts`.
+    primaryQuestion: "How can we help with diastasis recti?",
     directAnswer:
-      "Physiotherapy for diastasis recti is an assessment and rehab plan, not a definition page. A women's health physiotherapist checks gap width and depth, how the midline behaves with breathing, lifting and daily movement, and whether it domes under load, then builds breath, pressure control, deep-core and pelvic-floor coordination, and graded loading.",
+      "If your tummy still feels soft down the middle, domes when you sit up, or feels unsure when you lift, we can help you understand what your abdominal wall is doing and how to use it more comfortably. Dr. Zalak Shah (PT) looks at the width and depth of the gap, how your midline behaves when you breathe, lift and move through the day, and whether it domes under effort.",
     followOn:
-      "This page is for booking that rehab path with Dr. Zalak Shah (PT) online worldwide or in person in Bengaluru and Ahmedabad. For what the gap is and when a lump needs urgent care, use What Is Diastasis Recti. Many people improve with guided rehab; no timeline is guaranteed, and hernia signs or symptoms that do not settle may need a surgical opinion.",
-    firstSectionHeading: "How physiotherapy helps diastasis recti",
+      "From there we build breathing, pressure control, deep-core and pelvic-floor coordination, and a gradual return to the tasks that matter to you. Book with Dr. Zalak Shah (PT) online worldwide or in person in Bengaluru and Ahmedabad.",
+    firstSectionHeading: "How we help with diastasis recti",
   },
   "pelvic-floor-therapy": {
+    // Live body: published hub article in `articles/zalakCareHubs.ts`.
     primaryQuestion: "What is pelvic floor therapy?",
     directAnswer:
       "Pelvic floor therapy is physiotherapy for the muscles that support the bladder, bowel, and uterus, and that affect sexual comfort and core stability. It can address leakage, urgency, or pelvic pain once an assessment shows whether the floor is too weak, too tense, or not coordinating well.",
