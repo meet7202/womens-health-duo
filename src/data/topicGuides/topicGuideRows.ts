@@ -41,6 +41,7 @@ export const TOPIC_GUIDE_ROWS: TopicGuideRow[] = [
           "what-is-womens-health-physiotherapy",
           "online-womens-health-physiotherapy",
           "what-happens-during-a-physiotherapy-session",
+          "diastasis-recti",
         ],
       },
       "prenatal-physiotherapy": {
@@ -59,6 +60,7 @@ export const TOPIC_GUIDE_ROWS: TopicGuideRow[] = [
           "how-to-recover-after-c-section",
           "when-can-i-exercise-after-delivery",
           "postpartum-back-pain",
+          "diastasis-recti",
         ],
       },
       "pelvic-floor-therapy": {

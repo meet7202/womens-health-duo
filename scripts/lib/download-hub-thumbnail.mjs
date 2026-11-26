@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { setTimeout as delay } from "node:timers/promises";
+import sharp from "sharp";
 
 const UA = "Mozilla/5.0 (compatible; WHD-hub-import/1.0; +https://womenshealthduo.com)";
 const REFERER = "https://www.instagram.com/";
@@ -8,7 +9,7 @@ const REFERER = "https://www.instagram.com/";
 /**
  * Save a hub cover image under `public/images/hub-thumbs/` for reliable on-site posters.
  * @param {{ imageUrl: string; fileBase: string; outDir?: string }} opts
- * @returns {Promise<string | null>} Public path e.g. `/images/hub-thumbs/ig-abc.jpg`
+ * @returns {Promise<string | null>} Public path e.g. `/images/hub-thumbs/ig-abc.webp`
  */
 export async function downloadHubThumbnail({ imageUrl, fileBase, outDir }) {
   const url = String(imageUrl ?? "").trim();
@@ -20,7 +21,7 @@ export async function downloadHubThumbnail({ imageUrl, fileBase, outDir }) {
 
   const dir = outDir ?? path.join(process.cwd(), "public/images/hub-thumbs");
   fs.mkdirSync(dir, { recursive: true });
-  const fileName = `${base}.jpg`;
+  const fileName = `${base}.webp`;
   const absPath = path.join(dir, fileName);
   const publicPath = `/images/hub-thumbs/${fileName}`;
 
@@ -32,7 +33,8 @@ export async function downloadHubThumbnail({ imageUrl, fileBase, outDir }) {
     if (!res.ok) return null;
     const buf = Buffer.from(await res.arrayBuffer());
     if (buf.length < 400) return null;
-    fs.writeFileSync(absPath, buf);
+    const webp = await sharp(buf).webp({ quality: 80, effort: 4 }).toBuffer();
+    fs.writeFileSync(absPath, webp);
     return publicPath;
   } catch {
     return null;

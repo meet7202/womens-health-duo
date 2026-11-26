@@ -5,6 +5,7 @@ import {
   wantsMarkdown,
 } from "./convert";
 import { isLongCachePath, withImmutableCache } from "./cacheHeaders";
+import { legacyJpegRedirect } from "./imageRedirect";
 
 export interface Env {
   ORIGIN_HOST: string;
@@ -81,6 +82,15 @@ function markdownHeaders(
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
+
+    if (request.method === "GET" || request.method === "HEAD") {
+      const moved = await legacyJpegRedirect(url, async (target) => {
+        const found = await fetch(new Request(target, { method: "GET" }), originFetchInit(env));
+        await found.body?.cancel();
+        return found;
+      });
+      if (moved) return moved;
+    }
 
     // Leave /a2a* to whd-a2a-agent (more specific route); still pass original Request to origin path.
     if (isA2aPath(url.pathname)) {

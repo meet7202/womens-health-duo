@@ -127,7 +127,7 @@ export const CITY_PAGES: Record<CityKey, CityPageData> = {
       "Pelvic floor physiotherapy and prenatal physiotherapy in Bengaluru with Dr. Zalak Shah (PT), plus postnatal care and Pilates. WhatsApp +917990550754.",
     h1: "Women's health physiotherapy and Pilates in Bengaluru (Bangalore)",
     intro:
-      "Pelvic floor physiotherapy in Bangalore and prenatal physiotherapy are with Dr. Zalak Shah (PT), in person in Bengaluru. She also sees women for postnatal physiotherapy, diastasis recti, and Pilates on Mat and Reformer. Visits are by appointment, and follow-up can continue online. When you need medical input, Dr. Charmi Shah (OB-GYN, IVF and laparoscopy) consults online and sees patients in person in Mumbai, Ahmedabad and Valsad.",
+      "Pelvic floor physiotherapy in Bangalore and prenatal physiotherapy are with Dr. Zalak Shah (PT), in person in Bengaluru. She also sees women for postnatal physiotherapy, diastasis recti physiotherapy, and Pilates on Mat and Reformer. Visits are by appointment, and follow-up can continue online. When you need medical input, Dr. Charmi Shah (OB-GYN, IVF and laparoscopy) consults online and sees patients in person in Mumbai, Ahmedabad and Valsad.",
     doctors: [
       {
         name: "Dr. Zalak Shah (PT)",
@@ -143,6 +143,7 @@ export const CITY_PAGES: Record<CityKey, CityPageData> = {
     highlights: [
       "Pelvic floor–aware training integrated with physiotherapy assessment",
       "Prenatal and postnatal pathways with Pilates-informed exercise",
+      "Diastasis recti physiotherapy after pregnancy, in clinic or as follow-up online",
       "Mat and Reformer STOTT Pilates for progressive strength and mobility",
       "Shared Women's Health Duo contact for booking and questions",
     ],

@@ -112,7 +112,7 @@ const SERVICES: readonly ServiceTemplate[] = [
       { path: "/what-is-the-pelvic-floor", label: "What is the pelvic floor?" },
     ],
     image: {
-      src: "/images/classes/prenatal-class-4.jpg",
+      src: "/images/classes/prenatal-class-4.webp",
       alt: "Women's health physiotherapy session explaining pelvic anatomy to expecting parents",
       caption: "Pregnancy education with Dr. Zalak Shah. The same teaching is used in her classes.",
       width: 1024,
@@ -138,11 +138,12 @@ const SERVICES: readonly ServiceTemplate[] = [
     ],
     parent: { path: "/postnatal", label: "Postnatal classes" },
     guides: [
+      { path: "/diastasis-recti", label: "Diastasis recti physiotherapy" },
       { path: "/what-is-diastasis-recti", label: "What is diastasis recti?" },
       { path: "/how-to-check-for-diastasis-recti", label: "How to check for diastasis recti" },
     ],
     image: {
-      src: "/images/classes/postnatal-class-1.jpg",
+      src: "/images/classes/postnatal-class-1.webp",
       alt: "Talk on diastasis recti with a slide comparing a normal abdomen and separated abdominal muscles",
       caption: "Postnatal teaching on diastasis recti and core recovery.",
       width: 1024,
@@ -209,7 +210,7 @@ const SERVICES: readonly ServiceTemplate[] = [
       { path: "/pelvic-floor-therapy", label: "Pelvic floor therapy" },
     ],
     image: {
-      src: "/images/classes/pilates-class-5.jpg",
+      src: "/images/classes/pilates-class-5.webp",
       alt: "Woman doing a seated side stretch on a mat in a Pilates studio",
       caption: "Studio movement used alongside women's health physiotherapy.",
       width: 684,
@@ -239,7 +240,7 @@ const SERVICES: readonly ServiceTemplate[] = [
       { path: "/prenatal", label: "Prenatal classes" },
     ],
     image: {
-      src: "/images/classes/pilates-class-3.jpg",
+      src: "/images/classes/pilates-class-3.webp",
       alt: "Woman holding a Pilates teaser position on a mat outdoors",
       caption: "Mat work from Dr. Zalak Shah's Pilates teaching.",
       width: 576,

@@ -14,6 +14,7 @@ import {
   GUIDE_SET_REVIEWED_ON,
   GUIDE_SET_REVIEWERS,
 } from "./clinicalApproval2026-11-20";
+import { extraGuideFigures } from "./extraGuideFigures";
 import { TOPIC_GUIDE_ROWS } from "./topicGuideRows";
 import type {
   TopicGuideAuthorId,
@@ -429,7 +430,7 @@ function buildGuideModel(row: TopicGuideRow): TopicGuidePageModel {
       : undefined;
   const reviewStatus =
     hold ?? (setApproved || reviewerIds?.length ? "approved" : resolveTopicGuideReviewStatus(row));
-  const reviewedAt = setApproved ? GUIDE_SET_REVIEWED_ON : undefined;
+  const reviewedAt = published?.reviewedAt ?? (setApproved ? GUIDE_SET_REVIEWED_ON : undefined);
 
   // Unique calendar body when publicationStatus is published.
   // Drafts keep the live cluster/uniqueness scaffold.
@@ -470,14 +471,19 @@ function buildGuideModel(row: TopicGuideRow): TopicGuidePageModel {
     directAnswer,
     indexable: isTopicGuideIndexable(row),
     calendarArticleId: published?.id ?? row.calendarArticleId,
-    figures: published?.figures?.map((f) => ({
-      src: f.src,
-      srcSet: f.srcSet,
-      alt: f.alt,
-      caption: f.caption,
-      width: f.width,
-      height: f.height,
-    })),
+    figures: (() => {
+      const own =
+        published?.figures?.map((f) => ({
+          src: f.src,
+          srcSet: f.srcSet,
+          alt: f.alt,
+          caption: f.caption,
+          width: f.width,
+          height: f.height,
+        })) ?? [];
+      if (own.length === 0) return undefined;
+      return [...own, ...extraGuideFigures(row.slug, row.cluster, new Set(own.map((f) => f.src)))];
+    })(),
     conversionCopy: published?.conversionCopy,
     conversionPath: published?.conversionPath,
     storytellingNote: published?.storytellingNote,

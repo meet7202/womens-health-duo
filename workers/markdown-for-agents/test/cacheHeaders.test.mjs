@@ -11,7 +11,7 @@ describe("isLongCachePath", () => {
     assert.equal(isLongCachePath("/assets/index-abc123.js"), true);
     assert.equal(isLongCachePath("/fonts/fonts.css"), true);
     assert.equal(isLongCachePath("/fonts/dm-sans-latin-400-normal.woff2"), true);
-    assert.equal(isLongCachePath("/images/hub-thumbs/foo.jpg"), true);
+    assert.equal(isLongCachePath("/images/hub-thumbs/foo.webp"), true);
   });
 
   it("does not match HTML routes", () => {
