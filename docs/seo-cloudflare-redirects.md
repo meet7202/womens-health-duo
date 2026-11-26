@@ -18,10 +18,10 @@ Preserve path and query string. Preferred final host: **HTTPS apex**.
 
 Class photos and Learn thumbnails changed from JPEG to WebP. The markdown Worker (`workers/markdown-for-agents`) returns **301** for the old address once the WebP file is on the site. Until that deploy, the JPEG still loads. Other JPEGs (link preview, Dr. Zalak's portrait URL) are not redirected.
 
-| From | To | Status |
-| --- | --- | --- |
-| `/images/classes/<file>.jpg` | `/images/classes/<file>.webp` | 301 |
-| `/images/hub-thumbs/<file>.jpg` | `/images/hub-thumbs/<file>.webp` | 301 |
+| From                            | To                               | Status |
+| ------------------------------- | -------------------------------- | ------ |
+| `/images/classes/<file>.jpg`    | `/images/classes/<file>.webp`    | 301    |
+| `/images/hub-thumbs/<file>.jpg` | `/images/hub-thumbs/<file>.webp` | 301    |
 
 ## Class aliases (SEO-04)
 
